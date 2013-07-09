@@ -5,14 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - monoHub</title>
+  <title>GitHub + Octopressでブログ作ってみた - monoHub</title>
   <meta name="author" content="Masayuki Ono">
 
   
-  <meta name="description" content="Blog Archive 2013 Google Readerが終わって…
-Jul 07 2013 Octopressへの投稿やdeployをAlfredのWorkflowで
-Jul 07 2013 GitHub + Octopressでブログ作ってみた
-Jul 07 2013 <!-- &hellip;">
+  <meta name="description" content="Markdownで書けてなかなか良い感じかもしれない（´-ω-｀） 導入手順 ここらへん参考に。 GitHub pages + Octopressの導入 最初は適当にMacに入っているRuby 1.7.3やHomebrewで入れた2系でインストールしようとしたらはまって結局Ruby 1.9. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,7 +18,7 @@ Jul 07 2013 <!-- &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mono0926.github.io/blog/archives/">
+  <link rel="canonical" href="http://mono0926.github.io/blog/2013/07/07/github_octopress_blog/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -80,51 +77,146 @@ Jul 07 2013 <!-- &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">GitHub + Octopressでブログ作ってみた</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-07T12:16:00+09:00" pubdate data-updated="true">Jul 7<span>th</span>, 2013</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p>Markdownで書けてなかなか良い感じかもしれない（´-ω-｀）</p>
 
-  
-  <h2>2013</h2>
+<h3>導入手順</h3>
 
-<article>
-  
-<h1><a href="/blog/2013/07/07/google-reader-feedly/">Google Readerが終わって…</a></h1>
-<time datetime="2013-07-07T21:27:00+09:00" pubdate><span class='month'>Jul</span> <span class='day'>07</span> <span class='year'>2013</span></time>
+<p>ここらへん参考に。</p>
 
+<ul>
+<li><a href="http://rcmdnk.github.io/blog/2013/03/07/setup-octopress/">GitHub pages + Octopressの導入</a>
 
-</article>
+<ul>
+<li>最初は適当にMacに入っているRuby 1.7.3やHomebrewで入れた2系でインストールしようとしたらはまって結局Ruby 1.9.3にしたので、初めから素直に従った方がよさげです。</li>
+</ul>
+</li>
+<li>rvmの導入がうまくできなかったので、それだけこれを参考に。
 
-
-
-<article>
-  
-<h1><a href="/blog/2013/07/07/octopress-alfred/">Octopressへの投稿やdeployをAlfredのWorkflowで</a></h1>
-<time datetime="2013-07-07T17:32:00+09:00" pubdate><span class='month'>Jul</span> <span class='day'>07</span> <span class='year'>2013</span></time>
-
-
-</article>
-
+<ul>
+<li><a href="http://jitsu102.hatenablog.com/entry/2012/11/23/162034">(OS X::Mountain Lion) RVMでRubyの環境構築メモ</a></li>
+</ul>
+</li>
+</ul>
 
 
-<article>
-  
-<h1><a href="/blog/2013/07/07/github_octopress_blog/">GitHub + Octopressでブログ作ってみた</a></h1>
-<time datetime="2013-07-07T12:16:00+09:00" pubdate><span class='month'>Jul</span> <span class='day'>07</span> <span class='year'>2013</span></time>
+<h4>個人的な運用</h4>
+
+<ul>
+<li><a href="https://github.com/imathis/octopress">imathis/octopress</a>からForkしてそのままソース管理として利用
+
+<ul>
+<li>下書きなどあっても人に見られちゃうからBitbucket使うっていう人が多いらしいですが、あまり気にならないのでGitHubで一元管理</li>
+</ul>
+</li>
+<li><code>setup_github_pages</code> と入力して、<a href="http://mono0926.github.io">GitHub上のこのページ</a> にデプロイされるように</li>
+</ul>
 
 
-</article>
+<!-- more -->
+
+
+<h4>テーマの変更</h4>
+
+<p>テーマは、<a href="https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes">imathis/octopress</a>から選べますが、あまり有名じゃないので、そんなに選択肢無いです。凝るなら自分で作るべきですかね。
+こぎれいなテーマを適当に選んで使っています。
+導入は簡単で、上記から選んで、下のコマンドですぐ反映されます。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span><span class="nb">cd </span>octopress
+</span><span class='line'><span class="nv">$ </span>git clone GIT_URL .themes/THEME_NAME
+</span><span class='line'><span class="nv">$ </span>rake install<span class="o">[</span><span class="s1">&#39;THEME_NAME&#39;</span><span class="o">]</span>
+</span><span class='line'><span class="nv">$ </span>rake generate
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Markdown 初めて書いた</h3>
+
+<p>なかなか便利ですね(　´･‿･｀)
+このあたりよくまとまっててよかったです。</p>
+
+<ul>
+<li><a href="http://qiita.com/Qiita/items/c686397e4a0f4f11683d">Markdown記法 チートシート</a></li>
+<li><a href="http://qa.atmarkit.co.jp/docs/markdown">QA@ITで使えるMarkdown記法</a></li>
+</ul>
 
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Masayuki Ono</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-07T12:16:00+09:00" pubdate data-updated="true">Jul 7<span>th</span>, 2013</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mono0926.github.io/blog/2013/07/07/github_octopress_blog/" data-via="_mono" data-counturl="http://mono0926.github.io/blog/2013/07/07/github_octopress_blog/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/07/07/octopress-alfred/" title="Next Post: Octopressへの投稿やdeployをAlfredのWorkflowで">Octopressへの投稿やdeployをAlfredのWorkflowで &raquo;</a>
+      
+    </p>
+  </footer>
 </article>
 
 </div>
