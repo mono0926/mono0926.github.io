@@ -1,0 +1,214 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 52.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"rub",
+				"Set Syntax: Ruby"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"synruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"objec",
+				"Set Syntax: Objective-C"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 174.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/mono/Documents/Git/Private/octopress/source/_posts/posts",
+		"/Users/mono/Documents/Git/Private/octopress/source/_posts/2013-07-07-octopress-alfred.markdown",
+		"/Users/mono/Dropbox/Alfred/Alfred.alfredpreferences/workflows/user.workflow.93C81B7F-CBE8-415E-854F-E18A540BE7D7/prepare.sh",
+		"/Users/mono/Documents/Git/Private/SelfPublish/SelfPublisher_IOS/PodFile",
+		"/Users/mono/Documents/Git/Private/CocoaCommonLib/CocoaCommonLib.podspec",
+		"/Users/mono/Documents/Git/Private/CocoaCommonLib/PodFile",
+		"/Users/mono/Documents/Git/Private/octopress/source/_posts/2013-07-07-github_octopress_blog.markdown",
+		"/Users/mono/Documents/Git/Private/octopress/_config.yml",
+		"/Users/mono/Documents/Git/Private/octopress/_deploy/index.html",
+		"/Users/mono/Documents/Git/Private/octopress/source/_includes/article.html",
+		"/Users/mono/Documents/Git/Private/octopress/source/index.html",
+		"/Users/mono/Documents/Git/Private/octopress/source/_layouts/post.html",
+		"/Users/mono/Documents/Git/Private/octopress/source/_layouts/page.html",
+		"/Users/mono/Documents/Git/Private/octopress/source/_layouts/category_index.html",
+		"/Users/mono/Documents/Git/Private/octopress/source/_layouts/default.html",
+		"/Users/mono/Documents/Git/Private/octopress/source/_posts/2013-07-07-github-plus-octopressdeburoguzuo-tutemita.markdown",
+		"/Users/mono/Documents/Git/Private/octopress/source/blog/archives/index.html",
+		"/Users/mono/Dropbox/Scripts/epub.py",
+		"/Users/mono/Documents/Git/Private/SelfPublish/SelfPublisher_IOS/.git/info/exclude",
+		"/Users/mono/Documents/Git/monoHub/index.html",
+		"/Users/mono/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"OCTOPATH",
+			"OCTOPATHOCTOPATHOCTOPATH",
+			"your_username",
+			"mono0926",
+			"section",
+			"you can",
+			"\n",
+			"aaa",
+			"ccc",
+			"aaaa",
+			"aaa",
+			"aa",
+			"aaaaa",
+			"aaaa",
+			"aaa",
+			"aa",
+			"aaaaa",
+			"aaaa",
+			"aaa",
+			"aaaa",
+			"aaa"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 38.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 142.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
