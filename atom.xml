@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[monoHub]]></title>
+  <link href="http://mono0926.github.io/atom.xml" rel="self"/>
+  <link href="http://mono0926.github.io/"/>
+  <updated>2013-07-10T06:33:43+09:00</updated>
+  <id>http://mono0926.github.io/</id>
+  <author>
+    <name><![CDATA[Masayuki Ono]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[test]]></title>
+    <link href="http://mono0926.github.io/blog/2013/07/10/test/"/>
+    <updated>2013-07-10T06:20:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/07/10/test</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Google Readerが終わって…]]></title>
+    <link href="http://mono0926.github.io/blog/2013/07/07/google-reader-feedly/"/>
+    <updated>2013-07-07T21:27:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/07/07/google-reader-feedly</id>
+    <content type="html"><![CDATA[<p>一日に500-1000件消費するくらいのRSSリーダーヘビーユーザーでしたが、意外と困っていません。</p>
+
+<ul>
+<li>Google Reader 終わる前
+
+<ul>
+<li>iPhone: Byline + たまにReeder</li>
+<li>iPad: 同上</li>
+<li>Mac: Reeder</li>
+<li>Web: Google Reader (Windows環境の時など、たまーに見る程度)</li>
+</ul>
+</li>
+<li>Google Reader 終わった後
+
+<ul>
+<li>iPhone: Byline + たまにReeder</li>
+<li>iPad: Byline (Reeder未対応)</li>
+<li>Mac: FeedlyのWebアプリ (Reeder未対応)</li>
+<li>Web: FeedlyのWebアプリ</li>
+</ul>
+</li>
+</ul>
+
+
+<p>と、あまり変わって無い上に、FeedlyのWebアプリの操作感(どこを押せば何が出来るかなど)にあまり慣れていないものの、J(次)・K(前)・V(新しいページで記事開く)のショートカットが一緒なことに気づいてからはほぼノンストレスです（´-ω-｀）</p>
+
+<p>ただ、やっぱりMacでReederを使ってサクサク見ていた感じには劣るので、早くReeder for Macがアップデートされてほしいところです（´・ω・｀）</p>
+
+<p>…とは別にこの機会に、SmartNewsで大衆ネタ・ゴシップ系などは拾い読みしているので、RSSリーダーは技術系ネタに絞って整理したいなとかも考えていたり。なかなか面倒ですが（´-ω-｀）</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Octopressへの投稿やdeployをAlfredのWorkflowで]]></title>
+    <link href="http://mono0926.github.io/blog/2013/07/07/octopress-alfred/"/>
+    <updated>2013-07-07T17:32:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/07/07/octopress-alfred</id>
+    <content type="html"><![CDATA[<p>今日初めてOctopressを触ったら、けっこう気に入ったので、さらに気軽に書ける環境を整えれば捗るのではと思い、AlfredのWorkflowを作ってみました。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># deploy用</span>
+</span><span class='line'><span class="nv">OCTOPATH</span><span class="o">=</span><span class="s1">&#39;/Documents/Git/Private/octopress&#39;</span>
+</span><span class='line'><span class="nb">cd</span> ~/<span class="nv">$OCTOPATH</span>
+</span><span class='line'>rake gen_deploy
+</span><span class='line'>git add .
+</span><span class='line'>git commit -m <span class="s2">&quot;deployed via workflow.&quot;</span>
+</span><span class='line'>git push
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># 投稿用</span>
+</span><span class='line'><span class="nv">OCTOPATH</span><span class="o">=</span><span class="s1">&#39;/Documents/Git/Private/octopress&#39;</span>
+</span><span class='line'><span class="nb">cd</span> ~/<span class="nv">$OCTOPATH</span>
+</span><span class='line'><span class="nv">OCTOPOST</span><span class="o">=</span><span class="k">$(</span>rake new_post<span class="o">[</span><span class="nv">$1</span><span class="o">]</span>| grep -o <span class="s1">&#39;source/_posts/.*&#39;</span><span class="k">)</span>
+</span><span class='line'>open ~/<span class="nv">$OCTOPATH</span>/<span class="nv">$OCTOPOST</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>すんなり出来るかと思いきや、これだけでは動かず、</p>
+
+<blockquote><p>In my bash script I had to add some extras because Alfred runs the bash script in a subshell and in this subshell the rvm environment is not available by default.
+<a href="http://tooh.github.io/blog/2013/04/23/Alfred_workflow_for_Octopress/">Alfred Workflow for Octopress</a></p></blockquote>
+
+<p>とある通り、下記のような設定をする必要があったようです。
+かなりハマりました（´-ω-｀）
+よく分からないけど、別ファイルにしたら動かないので、とりあえず全て冒頭にこれを挟みました（´-ω-｀）</p>
+
+<!-- more -->
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># rv設定</span>
+</span><span class='line'><span class="k">if</span> <span class="o">[[</span> -s <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span> <span class="o">]]</span> ; <span class="k">then</span>
+</span><span class='line'><span class="k">  </span><span class="nb">source</span> <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span>
+</span><span class='line'><span class="k">fi</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>さらに一応previewコマンドも作成</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="k">if</span> <span class="o">[[</span> -s <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span> <span class="o">]]</span> ; <span class="k">then</span>
+</span><span class='line'><span class="k">  </span><span class="nb">source</span> <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span>
+</span><span class='line'><span class="k">fi</span>
+</span><span class='line'><span class="nv">OCTOPATH</span><span class="o">=</span><span class="s1">&#39;/Documents/Git/Private/octopress&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">cd</span> ~/<span class="nv">$OCTOPATH</span>
+</span><span class='line'>rake generate
+</span><span class='line'><span class="c"># open in a browser</span>
+</span><span class='line'>open http://localhost:4000/
+</span><span class='line'>rake preview
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>こちらはコマンドを実行するだけではウインドウが開かれずプロセスがゾンビ状態になってしまうので、Alfredで呼び出す時に</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>open -a Terminal.app preview.sh
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>と少しだけ工夫。</p>
+
+<p><a href="https://github.com/Temikus/alfred-octopress/blob/master/post.sh">Temikus/alfred-octopress</a> など、同じようなもの作っている人もいたり。</p>
+
+<p>とりあえず、これでいつでもランチャー起動して<code>post titleなど</code>と入力すると、記事が生成されて開かれて、書き終わったら<code>preview</code>で確認して、<code>deploy</code>実行すればサイトへの反映とレポジトリへのPushが行われる便利な環境が出来ました。
+(Alfredのテーマもかっこよくして遊んでました。)</p>
+
+<p><img src="http://mono0926.github.io/images/post/post.png" alt="post workflow" /></p>
+
+<h4>Octopress気に入ったけど…</h4>
+
+<p>Qiitaもよく見たらMarkdownでかなり使いやすそう。
+色々ツールもあるし。</p>
+
+<ul>
+<li><a href="http://kobito.qiita.com/">Kobito</a>
+
+<ul>
+<li>Qiitaに投稿出来るクライアントアプリ。同時にGistにスニペット登録も可能。</li>
+</ul>
+</li>
+<li><a href="http://www.gistboxapp.com/">GistBox</a>
+
+<ul>
+<li>Gist用Webアプリ。Chrome App版はネイティブっぽい操作感。</li>
+</ul>
+</li>
+</ul>
+
+
+<p>最近久しく何も書いてなかったけど、あまり脈絡の無い雑多メモなどはこちらで、技術系TipsはQiitaあたりにまとめる習慣付けたい（´・ω・｀）</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[GitHub + Octopressでブログ作ってみた]]></title>
+    <link href="http://mono0926.github.io/blog/2013/07/07/github_octopress_blog/"/>
+    <updated>2013-07-07T12:16:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/07/07/github_octopress_blog</id>
+    <content type="html"><![CDATA[<p>Markdownで書けてなかなか良い感じかもしれない（´-ω-｀）</p>
+
+<h3>導入手順</h3>
+
+<p>ここらへん参考に。</p>
+
+<ul>
+<li><a href="http://rcmdnk.github.io/blog/2013/03/07/setup-octopress/">GitHub pages + Octopressの導入</a>
+
+<ul>
+<li>最初は適当にMacに入っているRuby 1.7.3やHomebrewで入れた2系でインストールしようとしたらはまって結局Ruby 1.9.3にしたので、初めから素直に従った方がよさげです。</li>
+</ul>
+</li>
+<li>rvmの導入がうまくできなかったので、それだけこれを参考に。
+
+<ul>
+<li><a href="http://jitsu102.hatenablog.com/entry/2012/11/23/162034">(OS X::Mountain Lion) RVMでRubyの環境構築メモ</a></li>
+</ul>
+</li>
+</ul>
+
+
+<h4>個人的な運用</h4>
+
+<ul>
+<li><a href="https://github.com/imathis/octopress">imathis/octopress</a>からForkしてそのままソース管理として利用
+
+<ul>
+<li>下書きなどあっても人に見られちゃうからBitbucket使うっていう人が多いらしいですが、あまり気にならないのでGitHubで一元管理</li>
+</ul>
+</li>
+<li><code>setup_github_pages</code> と入力して、<a href="http://mono0926.github.io">GitHub上のこのページ</a> にデプロイされるように</li>
+</ul>
+
+
+<!-- more -->
+
+
+<h4>テーマの変更</h4>
+
+<p>テーマは、<a href="https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes">imathis/octopress</a>から選べますが、あまり有名じゃないので、そんなに選択肢無いです。凝るなら自分で作るべきですかね。
+こぎれいなテーマを適当に選んで使っています。
+導入は簡単で、上記から選んで、下のコマンドですぐ反映されます。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span><span class="nb">cd </span>octopress
+</span><span class='line'><span class="nv">$ </span>git clone GIT_URL .themes/THEME_NAME
+</span><span class='line'><span class="nv">$ </span>rake install<span class="o">[</span><span class="s1">&#39;THEME_NAME&#39;</span><span class="o">]</span>
+</span><span class='line'><span class="nv">$ </span>rake generate
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Markdown 初めて書いた</h3>
+
+<p>なかなか便利ですね(　´･‿･｀)
+このあたりよくまとまっててよかったです。</p>
+
+<ul>
+<li><a href="http://qiita.com/Qiita/items/c686397e4a0f4f11683d">Markdown記法 チートシート</a></li>
+<li><a href="http://qa.atmarkit.co.jp/docs/markdown">QA@ITで使えるMarkdown記法</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

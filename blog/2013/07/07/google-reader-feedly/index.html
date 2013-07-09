@@ -5,12 +5,14 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>monoHub</title>
+  <title>Google Readerが終わって… - monoHub</title>
   <meta name="author" content="Masayuki Ono">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="一日に500-1000件消費するくらいのRSSリーダーヘビーユーザーでしたが、意外と困っていません。 Google Reader 終わる前 iPhone: Byline + たまにReeder
+iPad: 同上
+Mac: Reeder
+Web: Google Reader ( &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mono0926.github.io/">
+  <link rel="canonical" href="http://mono0926.github.io/blog/2013/07/07/google-reader-feedly/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -78,51 +80,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/07/10/test/">Test</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-10T06:20:00+09:00" pubdate data-updated="true">Jul 10<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/07/google-reader-feedly/">Google Readerが終わって…</a></h1>
+      <h1 class="entry-title">Google Readerが終わって…</h1>
     
     
       <p class="meta">
@@ -145,7 +108,7 @@
   </header>
 
 
-  <div class="entry-content"><p>一日に500-1000件消費するくらいのRSSリーダーヘビーユーザーでしたが、意外と困っていません。</p>
+<div class="entry-content"><p>一日に500-1000件消費するくらいのRSSリーダーヘビーユーザーでしたが、意外と困っていません。</p>
 
 <ul>
 <li>Google Reader 終わる前
@@ -175,104 +138,16 @@
 
 <p>…とは別にこの機会に、SmartNewsで大衆ネタ・ゴシップ系などは拾い読みしているので、RSSリーダーは技術系ネタに絞って整理したいなとかも考えていたり。なかなか面倒ですが（´-ω-｀）</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/07/octopress-alfred/">Octopressへの投稿やdeployをAlfredのWorkflowで</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
   
 
+<span class="byline author vcard">Posted by <span class="fn">Masayuki Ono</span></span>
 
-<time datetime="2013-07-07T17:32:00+09:00" pubdate data-updated="true">Jul 7<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>今日初めてOctopressを触ったら、けっこう気に入ったので、さらに気軽に書ける環境を整えれば捗るのではと思い、AlfredのWorkflowを作ってみました。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># deploy用</span>
-</span><span class='line'><span class="nv">OCTOPATH</span><span class="o">=</span><span class="s1">&#39;/Documents/Git/Private/octopress&#39;</span>
-</span><span class='line'><span class="nb">cd</span> ~/<span class="nv">$OCTOPATH</span>
-</span><span class='line'>rake gen_deploy
-</span><span class='line'>git add .
-</span><span class='line'>git commit -m <span class="s2">&quot;deployed via workflow.&quot;</span>
-</span><span class='line'>git push
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># 投稿用</span>
-</span><span class='line'><span class="nv">OCTOPATH</span><span class="o">=</span><span class="s1">&#39;/Documents/Git/Private/octopress&#39;</span>
-</span><span class='line'><span class="nb">cd</span> ~/<span class="nv">$OCTOPATH</span>
-</span><span class='line'><span class="nv">OCTOPOST</span><span class="o">=</span><span class="k">$(</span>rake new_post<span class="o">[</span><span class="nv">$1</span><span class="o">]</span>| grep -o <span class="s1">&#39;source/_posts/.*&#39;</span><span class="k">)</span>
-</span><span class='line'>open ~/<span class="nv">$OCTOPATH</span>/<span class="nv">$OCTOPOST</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>すんなり出来るかと思いきや、これだけでは動かず、</p>
-
-<blockquote><p>In my bash script I had to add some extras because Alfred runs the bash script in a subshell and in this subshell the rvm environment is not available by default.
-<a href="http://tooh.github.io/blog/2013/04/23/Alfred_workflow_for_Octopress/">Alfred Workflow for Octopress</a></p></blockquote>
-
-<p>とある通り、下記のような設定をする必要があったようです。
-かなりハマりました（´-ω-｀）
-よく分からないけど、別ファイルにしたら動かないので、とりあえず全て冒頭にこれを挟みました（´-ω-｀）</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/07/07/octopress-alfred/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/07/github_octopress_blog/">GitHub + Octopressでブログ作ってみた</a></h1>
-    
-    
-      <p class="meta">
-        
 
 
 
@@ -284,65 +159,38 @@
   
 
 
-<time datetime="2013-07-07T12:16:00+09:00" pubdate data-updated="true">Jul 7<span>th</span>, 2013</time>
-        
-      </p>
+<time datetime="2013-07-07T21:27:00+09:00" pubdate data-updated="true">Jul 7<span>th</span>, 2013</time>
+      
+
+
+    </p>
     
-  </header>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mono0926.github.io/blog/2013/07/07/google-reader-feedly/" data-via="_mono" data-counturl="http://mono0926.github.io/blog/2013/07/07/google-reader-feedly/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
 
-
-  <div class="entry-content"><p>Markdownで書けてなかなか良い感じかもしれない（´-ω-｀）</p>
-
-<h3>導入手順</h3>
-
-<p>ここらへん参考に。</p>
-
-<ul>
-<li><a href="http://rcmdnk.github.io/blog/2013/03/07/setup-octopress/">GitHub pages + Octopressの導入</a>
-
-<ul>
-<li>最初は適当にMacに入っているRuby 1.7.3やHomebrewで入れた2系でインストールしようとしたらはまって結局Ruby 1.9.3にしたので、初めから素直に従った方がよさげです。</li>
-</ul>
-</li>
-<li>rvmの導入がうまくできなかったので、それだけこれを参考に。
-
-<ul>
-<li><a href="http://jitsu102.hatenablog.com/entry/2012/11/23/162034">(OS X::Mountain Lion) RVMでRubyの環境構築メモ</a></li>
-</ul>
-</li>
-</ul>
-
-
-<h4>個人的な運用</h4>
-
-<ul>
-<li><a href="https://github.com/imathis/octopress">imathis/octopress</a>からForkしてそのままソース管理として利用
-
-<ul>
-<li>下書きなどあっても人に見られちゃうからBitbucket使うっていう人が多いらしいですが、あまり気にならないのでGitHubで一元管理</li>
-</ul>
-</li>
-<li><code>setup_github_pages</code> と入力して、<a href="http://mono0926.github.io">GitHub上のこのページ</a> にデプロイされるように</li>
-</ul>
-
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/07/07/octopress-alfred/" title="Previous Post: Octopressへの投稿やdeployをAlfredのWorkflowで">&laquo; Octopressへの投稿やdeployをAlfredのWorkflowで</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/07/10/test/" title="Next Post: test">test &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
 
 </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/07/07/github_octopress_blog/">Read on &rarr;</a>
-    </footer>
-  
 
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
 <aside class="sidebar">
   
     <script type="text/javascript"><!--
@@ -381,7 +229,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
+    <li class="loading">Status updating...</li>
   </ul>
   
   <a href="https://github.com/mono0926">@mono0926</a> on GitHub
@@ -422,6 +270,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
   
 </aside>
+
 
     </div>
   </div>
