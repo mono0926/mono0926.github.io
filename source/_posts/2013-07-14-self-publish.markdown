@@ -73,7 +73,7 @@ Linux, Mac, Windowsなどに対応。
 
 #### Amazon洋書
 - [Building Your Book for Kindle](http://www.amazon.com/Building-Your-Book-Kindle-ebook/dp/B007URVZJ6/ref=sr_1_1?s=digital-text&ie=UTF8&qid=1373770883&sr=1-1&keywords=kindlegen)
-  * 無料の公式本。とりあえずリファレンスとこれは目を通したいところ。 
+  * 無料の公式本。Word系のアプリで作って、アップロードするところまでで、かなりボリューム少ない。 
 - [The eBook Design and Development Guide](http://rcm-na.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=mono0926-20&o=1&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=B009G2JMRK)
   * まだほとんど読んでないけど、Kindlegen周りの使い方中心に詳しく書いてありそう。
     - Webで公開中：[The eBook Design and Development Guide](http://bbebooksthailand.com/bb-epub-kindlegen-tutorial.html)
