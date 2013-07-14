@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: reader | monoHub]]></title>
+  <link href="http://mono0926.github.io/blog/categories/reader/atom.xml" rel="self"/>
+  <link href="http://mono0926.github.io/"/>
+  <updated>2013-07-14T11:45:45+09:00</updated>
+  <id>http://mono0926.github.io/</id>
+  <author>
+    <name><![CDATA[Masayuki Ono]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Google Readerが終わって…]]></title>
+    <link href="http://mono0926.github.io/blog/2013/07/07/google-reader-feedly/"/>
+    <updated>2013-07-07T21:27:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/07/07/google-reader-feedly</id>
+    <content type="html"><![CDATA[<p>一日に500-1000件消費するくらいのRSSリーダーヘビーユーザーでしたが、意外と困っていません。</p>
+
+<ul>
+<li>Google Reader 終わる前
+
+<ul>
+<li>iPhone: Byline + たまにReeder</li>
+<li>iPad: 同上</li>
+<li>Mac: Reeder</li>
+<li>Web: Google Reader (Windows環境の時など、たまーに見る程度)</li>
+</ul>
+</li>
+<li>Google Reader 終わった後
+
+<ul>
+<li>iPhone: Byline + たまにReeder</li>
+<li>iPad: Byline (Reeder未対応)</li>
+<li>Mac: FeedlyのWebアプリ (Reeder未対応)</li>
+<li>Web: FeedlyのWebアプリ</li>
+</ul>
+</li>
+</ul>
+
+
+<p>と、あまり変わって無い上に、FeedlyのWebアプリの操作感(どこを押せば何が出来るかなど)にあまり慣れていないものの、J(次)・K(前)・V(新しいページで記事開く)のショートカットが一緒なことに気づいてからはほぼノンストレスです（´-ω-｀）</p>
+
+<p>ただ、やっぱりMacでReederを使ってサクサク見ていた感じには劣るので、早くReeder for Macがアップデートされてほしいところです（´・ω・｀）</p>
+
+<p>…とは別にこの機会に、SmartNewsで大衆ネタ・ゴシップ系などは拾い読みしているので、RSSリーダーは技術系ネタに絞って整理したいなとかも考えていたり。なかなか面倒ですが（´-ω-｀）</p>
+
+<h3>追記</h3>
+
+<p><a href="https://itunes.apple.com/jp/app/readkit/id588726889?l=en&amp;mt=12">ReadKit</a> というアプリが素晴らしく、常用し始めましたヽ(・ω・｀）</p>
+]]></content>
+  </entry>
+  
+</feed>
