@@ -17,7 +17,7 @@ categories: kindle self_publish pandoc
 Amazon謹製の、HTMLやEPUB形式からMobi形式に変換するツール。
 成果物は、MacなどのKindleアプリでも見られるし、[Kindle Previewer](http://www.amazon.com/gp/feature.html/ref=amb_link_359603222_5?ie=UTF8&docId=1000765261&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=center-8&pf_rd_r=05Y1JB4SCG6HF48FKJFX&pf_rd_t=1401&pf_rd_p=1342416142&pf_rd_i=1000765211)で、各プラットフォームでの動作チェック可能。
 
-クラス構造をMobi形式にエクスポートするところまでは出来たけど、いくつか警告が出てたりしてまだ対処出来ていない状態。
+クラス構造を一旦HTMLに落とし込んで、Mobi形式にエクスポートするところまでは出来たけど、いくつか警告が出てたりしてまだ対処出来ていない状態。
 あと、ライセンス的にアプリのサーバー側で使ったりOKなのか気になる。
 
 - リファレンスなど
@@ -68,9 +68,12 @@ Linux, Mac, Windowsなどに対応。
   * 世界一周紀行など書いている人の本。ライブドアブログのEPUBエクスポートを利用。
 
 うーん、作り方がバラバラ。わりとGoogle Documentで作るのが多数派な印象だけど。
+みんなGUIベースだから直接は利用できないけど、参考程度に読んでる。
 
 
 #### Amazon洋書
+- [Building Your Book for Kindle](http://www.amazon.com/Building-Your-Book-Kindle-ebook/dp/B007URVZJ6/ref=sr_1_1?s=digital-text&ie=UTF8&qid=1373770883&sr=1-1&keywords=kindlegen)
+  * 無料の公式本。とりあえずリファレンスとこれは目を通したいところ。 
 - [The eBook Design and Development Guide](http://rcm-na.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=mono0926-20&o=1&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=B009G2JMRK)
   * まだほとんど読んでないけど、Kindlegen周りの使い方中心に詳しく書いてありそう。
     - Webで公開中：[The eBook Design and Development Guide](http://bbebooksthailand.com/bb-epub-kindlegen-tutorial.html)
