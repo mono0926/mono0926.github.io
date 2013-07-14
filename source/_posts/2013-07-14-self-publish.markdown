@@ -77,6 +77,7 @@ Linux, Mac, Windowsなどに対応。
 - [Kindle Formatting Formula: Convert Your Book into a Kindle eBook Format in Less than an Hour](http://rcm-na.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=mono0926-20&o=1&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=B006SBRA1M)
   * 中身見てない。
 - [How to Publish and Sell Your Article on the Kindle: 12 Tips for Short Documents](http://rcm-na.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=mono0926-20&o=1&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=B004MDLKKK)
+  * 中身見てない。
 
 ----------------
 
