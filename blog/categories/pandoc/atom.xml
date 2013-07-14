@@ -4,7 +4,7 @@
   <title><![CDATA[Category: pandoc | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/pandoc/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2013-07-14T11:49:33+09:00</updated>
+  <updated>2013-07-14T12:04:02+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -30,7 +30,7 @@
 <p>Amazon謹製の、HTMLやEPUB形式からMobi形式に変換するツール。
 成果物は、MacなどのKindleアプリでも見られるし、<a href="http://www.amazon.com/gp/feature.html/ref=amb_link_359603222_5?ie=UTF8&amp;docId=1000765261&amp;pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=center-8&amp;pf_rd_r=05Y1JB4SCG6HF48FKJFX&amp;pf_rd_t=1401&amp;pf_rd_p=1342416142&amp;pf_rd_i=1000765211">Kindle Previewer</a>で、各プラットフォームでの動作チェック可能。</p>
 
-<p>クラス構造をMobi形式にエクスポートするところまでは出来たけど、いくつか警告が出てたりしてまだ対処出来ていない状態。
+<p>クラス構造を一旦HTMLに落とし込んで、Mobi形式にエクスポートするところまでは出来たけど、いくつか警告が出てたりしてまだ対処出来ていない状態。
 あと、ライセンス的にアプリのサーバー側で使ったりOKなのか気になる。</p>
 
 <ul>
@@ -126,11 +126,18 @@ Linux, Mac, Windowsなどに対応。</p>
 </ul>
 
 
-<p>うーん、作り方がバラバラ。わりとGoogle Documentで作るのが多数派な印象だけど。</p>
+<p>うーん、作り方がバラバラ。わりとGoogle Documentで作るのが多数派な印象だけど。
+みんなGUIベースだから直接は利用できないけど、参考程度に読んでる。</p>
 
 <h4>Amazon洋書</h4>
 
 <ul>
+<li><a href="http://www.amazon.com/Building-Your-Book-Kindle-ebook/dp/B007URVZJ6/ref=sr_1_1?s=digital-text&amp;ie=UTF8&amp;qid=1373770883&amp;sr=1-1&amp;keywords=kindlegen">Building Your Book for Kindle</a>
+
+<ul>
+<li>無料の公式本。とりあえずリファレンスとこれは目を通したいところ。</li>
+</ul>
+</li>
 <li><a href="http://rcm-na.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=mono0926-20&amp;o=1&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B009G2JMRK">The eBook Design and Development Guide</a>
 
 <ul>
