@@ -3,7 +3,7 @@ layout: post
 title: "Google Readerが終わって…"
 date: 2013-07-07 21:27
 comments: true
-categories:
+categories: google reader
 ---
 
 一日に500-1000件消費するくらいのRSSリーダーヘビーユーザーでしたが、意外と困っていません。
@@ -24,3 +24,7 @@ categories:
 ただ、やっぱりMacでReederを使ってサクサク見ていた感じには劣るので、早くReeder for Macがアップデートされてほしいところです（´・ω・｀）
 
 …とは別にこの機会に、SmartNewsで大衆ネタ・ゴシップ系などは拾い読みしているので、RSSリーダーは技術系ネタに絞って整理したいなとかも考えていたり。なかなか面倒ですが（´-ω-｀）
+
+### 追記
+
+[ReadKit](https://itunes.apple.com/jp/app/readkit/id588726889?l=en&mt=12) というアプリが素晴らしく、常用し始めましたヽ(・ω・｀）

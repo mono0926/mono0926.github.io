@@ -12,7 +12,7 @@ $sidebar-pad-medium: 15px !default;
 $sidebar-pad-wide: 20px !default;
 $sidebar-width-wide: 300px !default;
 
-$indented-lists: false !default;
+$indented-lists: true !default;
 
 $header-font-size: 1em !default;
 $header-padding-top: 1.5em !default;
@@ -147,6 +147,7 @@ body.sidebar-footer {
       padding-top: $pad-medium/2;
       padding-bottom: $pad-medium/2;
       float: left;
+      font-size: 12pt;
     }
   }
   aside.sidebar {
