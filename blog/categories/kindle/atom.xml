@@ -4,7 +4,7 @@
   <title><![CDATA[Category: kindle | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/kindle/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2013-07-14T12:14:38+09:00</updated>
+  <updated>2013-07-14T12:18:13+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -166,7 +166,7 @@ Linux, Mac, Windowsなどに対応。</p>
 
 <hr />
 
-<h3>開発用ライブラリ</h3>
+<h3>JSON周りの開発用ライブラリ(iOS, .NET)</h3>
 
 <p>iPhoneアプリで編集してサーバー(ASP.NET)で変換して返すみたいなことをしているけど、その場合やっぱりJSONでのやり取りかなということで、以下が手軽に出来るようにしたかった。</p>
 
