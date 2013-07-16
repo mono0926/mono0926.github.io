@@ -4,7 +4,7 @@
   <title><![CDATA[Category: pandoc | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/pandoc/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2013-07-17T07:42:38+09:00</updated>
+  <updated>2013-07-17T08:01:21+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -216,32 +216,18 @@ public string Title { get; set; }
 
 <h3>その他リンク</h3>
 
-<p>色々調べる中で目に入ったリンクなど。</p>
-
-<ul>
-<li><a href="http://ebook.itmedia.co.jp/ebook/articles/1107/25/news019.html">無料で使えるEPUB 3作成ソフト／サービスガイド</a>
-
-<ul>
-<li>FUSEe β</li>
-<li>epubpack</li>
-<li>MyBooks.jp</li>
-</ul>
-</li>
-<li><a href="http://nakusou.zatunen.com/sigil.html">GoogleのSigilパワー</a>
-
-<ul>
-<li><a href="https://code.google.com/p/sigil/">sigil</a>というアプリを使う。</li>
-<li><a href="http://sigil.tsukaikata.info/">Sigilの使い方</a></li>
-</ul>
-</li>
-<li><a href="http://iphone.f-tools.net/E-book-Jisui/ePub-Free-Sakusei.html">ePubをフリーで作成できるソフト</a>
-
-<ul>
-<li>chanLP使った方式</li>
-</ul>
-</li>
-</ul>
-
+<p>色々調べる中で目に入ったリンクなど。
+&ndash; <a href="http://conv.denshochan.com/">でんでんコンバーター</a>
+  * Markdown形式のファイルをアップロードすると、ePubに変換してくれるサイト。正直、このAPIが叩けるようになると、変換周りを自前で作らなくてよくなって楽なのだけれど…（´-ω-｀）
+&ndash; <a href="http://ebook.itmedia.co.jp/ebook/articles/1107/25/news019.html">無料で使えるEPUB 3作成ソフト／サービスガイド</a>
+  * FUSEe β
+  * epubpack
+  * MyBooks.jp
+&ndash; <a href="http://nakusou.zatunen.com/sigil.html">GoogleのSigilパワー</a>
+  * <a href="https://code.google.com/p/sigil/">sigil</a>というアプリを使う。
+  &ndash; <a href="http://sigil.tsukaikata.info/">Sigilの使い方</a>
+&ndash; <a href="http://iphone.f-tools.net/E-book-Jisui/ePub-Free-Sakusei.html">ePubをフリーで作成できるソフト</a>
+  * chanLP使った方式</p>
 
 <hr />
 
