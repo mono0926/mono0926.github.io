@@ -2,13 +2,16 @@
 	"folders":
 	[
 		{
-			"path": "/Users/mono/Documents/Git/Private/octopress/source/_posts"
+			"path": "/Users/mono/Documents/Git/Private/monoHub/source/_posts"
 		},
 		{
-			"path": "/Users/mono/Documents/Git/Private/octopress/source/about"
+			"path": "/Users/mono/Documents/Git/Private/monoHub/source/"
 		},
 		{
-			"path": "/Users/mono/Documents/Git/Private/octopress"
+			"path": "/Users/mono/Documents/Git/Private/monoHub/source/about"
+		},
+		{
+			"path": "/Users/mono/Documents/Git/Private/monoHub"
 		}
 	]
 }

@@ -3,7 +3,7 @@ layout: post
 title: "GitHub + Octopressでブログ作ってみた"
 date: 2013-07-07 12:16
 comments: true
-categories:
+categories: github octopress
 ---
 Markdownで書けてなかなか良い感じかもしれない（´-ω-｀）
 
