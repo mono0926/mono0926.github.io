@@ -9,7 +9,9 @@
   <meta name="author" content="Masayuki Ono">
 
   
-  <meta name="description" content="古い記事だけど、[iPhone/iPad] Dropbox API を使ってみた をさらっと見て作業開始。 開発車登録は自力じゃなかなか見つからなかったけど、Dropbox API terms and conditions。 権限の設定などは初回の作成時以外は変更出来ないっぽいので、慎重に。 &hellip;">
+  <meta name="description" content="古い記事だけど、[iPhone/iPad] Dropbox API を使ってみた をさらっと見て作業開始。
+開発車登録は自力じゃなかなか見つからなかったけど、Dropbox API terms and conditions。
+権限の設定などは初回の作成時以外は変更出来ないっぽいので、慎重に。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -85,7 +87,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/07/17/dropbox/">Dropbox 新API使ってみる(書き途中)</a></h1>
+      <h1 class="entry-title"><a href="/blog/2013/07/17/dropbox/">iOS版Dropbox 新API使ってみる</a></h1>
     
     
       <p class="meta">
@@ -108,94 +110,25 @@
   </header>
 
 
-  <div class="entry-content"><p>古い記事だけど、<a href="http://blog.syuhari.jp/archives/2284">[iPhone/iPad] Dropbox API を使ってみた</a> をさらっと見て作業開始。</p>
-
-<p>開発車登録は自力じゃなかなか見つからなかったけど、<a href="https://www.dropbox.com/developers/apply?cont=/developers/apps">Dropbox API terms and conditions</a>。</p>
-
-<p>権限の設定などは初回の作成時以外は変更出来ないっぽいので、慎重に。</p>
+  <div class="entry-content"><p>古い記事だけど、<a href="http://blog.syuhari.jp/archives/2284">[iPhone/iPad] Dropbox API を使ってみた</a> をさらっと見て作業開始。<br/>
+開発車登録は自力じゃなかなか見つからなかったけど、<a href="https://www.dropbox.com/developers/apply?cont=/developers/apps">Dropbox API terms and conditions</a>。<br/>
+権限の設定などは初回の作成時以外は変更出来ないっぽいので、慎重に。</p>
 
 <h3>Drop-ins</h3>
 
-<p><a href="https://www.dropbox.com/developers/dropins/chooser/ios">Using the Chooser (iOS)</a>を読んでみた。</p>
+<p><a href="https://www.dropbox.com/developers/dropins/chooser/ios">Using the Chooser (iOS)</a>を読んでみた。<br/>
+<a href="http://dl.dropboxusercontent.com/s/uf3893wfnk4f3p9/dropbox-ios-chooser-sdk-1.0.zip">Download iOS SDK</a>に同梱のサンプルプロジェクトを実行しながらドキュメント読めばすごく分かりやすい。</p>
 
-<h4>呼び出し</h4>
+<h4>導入</h4>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="cp">#import &lt;DBChooser/DBChooser.h&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didPressChoose</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="p">[[</span><span class="n">DBChooser</span> <span class="n">defaultChooser</span><span class="p">]</span> <span class="nl">openChooserForLinkType:</span><span class="n">DBChooserLinkTypePreview</span> <span class="c1">// 取得出来るURL2種類から選択</span>
-</span><span class='line'>                                    <span class="nl">fromViewController:</span><span class="n">self</span> <span class="nl">completion:</span><span class="o">^</span><span class="p">(</span><span class="n">NSArray</span> <span class="o">*</span><span class="n">results</span><span class="p">)</span>
-</span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="k">if</span> <span class="p">([</span><span class="n">results</span> <span class="n">count</span><span class="p">])</span> <span class="p">{</span>
-</span><span class='line'>            <span class="c1">// Process results from Chooser</span>
-</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>            <span class="c1">// User canceled the action</span>
-</span><span class='line'>        <span class="p">}</span>
-</span><span class='line'>    <span class="p">}];</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
+<p><a href="http://dl.dropboxusercontent.com/s/uf3893wfnk4f3p9/dropbox-ios-chooser-sdk-1.0.zip">Download iOS SDK</a> に入っているDBChooser.framework と DBChooser.bundle を対象のプロジェクトに突っ込むだけ。</p>
 
-
-<ul>
-<li>取得出来るURL2種類
-
-<ul>
-<li>DBChooserLinkTypePreviewlinks</li>
-<li>DBChooserLinkTypeDirectlinks
-
-<ul>
-<li>サーバーにこれを渡す作りにすれば、モバイル端末 &ndash; サーバー通信はちょっとしたJSONで、通信環境の良いサーバーで効率よくダウンロードとかできそう。</li>
-<li>4時間でexpireされるので注意</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-
-<h4>Chooserからファイルを選んだあとの型。</h4>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">@interface</span> <span class="nc">DBChooserResult</span> : <span class="nc">NSObject</span>
-</span><span class='line'><span class="c1">// DBChooserLinkTypeで何が入るか変わる。</span>
-</span><span class='line'><span class="k">@property</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">link</span><span class="p">;</span>
-</span><span class='line'><span class="k">@property</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">name</span><span class="p">;</span>
-</span><span class='line'><span class="k">@property</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">size</span><span class="p">;</span>
-</span><span class='line'><span class="k">@property</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">iconURL</span><span class="p">;</span>
-</span><span class='line'><span class="c1">// 画像や動画の時に3種類の大きさのサムネイル入っている。</span>
-</span><span class='line'><span class="k">@property</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="n">thumbnails</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">@end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>続く</h3>
 </div>
   
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/07/17/dropbox/">続きを読むヽ(・ω・｀）</a>
+    </footer>
   
 
 
@@ -524,7 +457,7 @@ Linux, Mac, Windowsなどに対応。</p>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2013/07/17/dropbox/">Dropbox 新API使ってみる(書き途中)</a>
+        <a href="/blog/2013/07/17/dropbox/">iOS版Dropbox 新API使ってみる</a>
       </li>
     
       <li class="post">
@@ -547,7 +480,7 @@ Linux, Mac, Windowsなどに対応。</p>
 </section>
 <section>
   <h1>Top Categories</h1>
-    <ul id="top-category-list"><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/alfred'>alfred (1)</a></li><li><a href='/blog/categories/self-publish'>self_publish (1)</a></li><li><a href='/blog/categories/kindle'>kindle (1)</a></li><li><a href='/blog/categories/pandoc'>pandoc (1)</a></li><li><a href='/blog/categories/reader'>reader (1)</a></li><li><a href='/blog/categories/google'>google (1)</a></li><li><a href='/blog/categories/dropbox'>dropbox (1)</a></li><li><a href='/blog/categories/github'>github (1)</a></li></ul>
+    <ul id="top-category-list"><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/kindle'>kindle (1)</a></li><li><a href='/blog/categories/pandoc'>pandoc (1)</a></li><li><a href='/blog/categories/self-publish'>self_publish (1)</a></li><li><a href='/blog/categories/dropbox'>dropbox (1)</a></li><li><a href='/blog/categories/alfred'>alfred (1)</a></li><li><a href='/blog/categories/reader'>reader (1)</a></li><li><a href='/blog/categories/google'>google (1)</a></li><li><a href='/blog/categories/api'>api (1)</a></li><li><a href='/blog/categories/github'>github (1)</a></li></ul>
 </section>
 <section>
   <h1>GitHub Repos</h1>
