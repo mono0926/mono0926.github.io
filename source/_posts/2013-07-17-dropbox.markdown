@@ -38,6 +38,7 @@ categories:
   * DBChooserLinkTypePreviewlinks
   * DBChooserLinkTypeDirectlinks
     - サーバーにこれを渡す作りにすれば、モバイル端末 - サーバー通信はちょっとしたJSONで、通信環境の良いサーバーで効率よくダウンロードとかできそう。
+    - 4時間でexpireされるので注意
 
 
 #### Chooserからファイルを選んだあとの型。
