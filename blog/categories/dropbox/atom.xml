@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: dropbox | monoHub]]></title>
+  <link href="http://mono0926.github.io/blog/categories/dropbox/atom.xml" rel="self"/>
+  <link href="http://mono0926.github.io/"/>
+  <updated>2013-07-17T13:16:35+09:00</updated>
+  <id>http://mono0926.github.io/</id>
+  <author>
+    <name><![CDATA[Masayuki Ono]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Dropbox 新API使ってみる(書き途中)]]></title>
+    <link href="http://mono0926.github.io/blog/2013/07/17/dropbox/"/>
+    <updated>2013-07-17T12:51:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/07/17/dropbox</id>
+    <content type="html"><![CDATA[<p>古い記事だけど、<a href="http://blog.syuhari.jp/archives/2284">[iPhone/iPad] Dropbox API を使ってみた</a> をさらっと見て作業開始。</p>
+
+<p>開発車登録は自力じゃなかなか見つからなかったけど、<a href="https://www.dropbox.com/developers/apply?cont=/developers/apps">Dropbox API terms and conditions</a>。</p>
+
+<p>権限の設定などは初回の作成時以外は変更出来ないっぽいので、慎重に。</p>
+
+<h3>Drop-ins</h3>
+
+<p><a href="https://www.dropbox.com/developers/dropins/chooser/ios">Using the Chooser (iOS)</a>を読んでみた。</p>
+
+<h4>呼び出し</h4>
+
+<p>```objective-c</p>
+
+<h1>import &lt;DBChooser/DBChooser.h></h1>
+
+<ul>
+<li><p>(void)didPressChoose
+{
+  [[DBChooser defaultChooser] openChooserForLinkType:DBChooserLinkTypePreview // 取得出来るURL2種類から選択
+                                  fromViewController:self completion:^(NSArray *results)
+  {
+      if ([results count]) {
+          // Process results from Chooser
+      } else {
+          // User canceled the action
+      }
+  }];
+}
+```</p></li>
+<li><p>取得出来るURL2種類</p>
+
+<ul>
+<li>DBChooserLinkTypePreviewlinks</li>
+<li>DBChooserLinkTypeDirectlinks
+
+<ul>
+<li>サーバーにこれを渡す作りにすれば、モバイル端末 &ndash; サーバー通信はちょっとしたJSONで、通信環境の良いサーバーで効率よくダウンロードとかできそう。</li>
+<li>4時間でexpireされるので注意</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Chooserからファイルを選んだあとの型。</h4>
+
+<p>```objective-c
+@interface DBChooserResult : NSObject
+// DBChooserLinkTypeで何が入るか変わる。
+@property NSURL <em>link;
+@property NSString </em>name;
+@property long long size;
+@property NSURL <em>iconURL;
+// 画像や動画の時に3種類の大きさのサムネイル入っている。
+@property NSDictionary </em>thumbnails;</p>
+
+<p>@end
+```</p>
+
+<h3>続く</h3>
+]]></content>
+  </entry>
+  
+</feed>
