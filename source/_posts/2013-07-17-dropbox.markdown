@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "iOS版Dropbox 新API使ってみる"
+title: "iOS版Dropbox 新APIのDrop-ins(Chooser)を使ってみる"
 date: 2013-07-17 12:51
 comments: true
 categories: dropbox api
