@@ -3,7 +3,7 @@ layout: post
 title: "Dropbox 新API使ってみる(書き途中)"
 date: 2013-07-17 12:51
 comments: true
-categories:
+categories: dropbox
 ---
 
 古い記事だけど、[[iPhone/iPad] Dropbox API を使ってみた](http://blog.syuhari.jp/archives/2284) をさらっと見て作業開始。
