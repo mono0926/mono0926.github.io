@@ -4,7 +4,7 @@
   <title><![CDATA[Category: api | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/api/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2013-07-17T22:30:41+09:00</updated>
+  <updated>2013-07-17T22:33:26+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[iOS版Dropbox 新API使ってみる]]></title>
+    <title type="html"><![CDATA[iOS版Dropbox 新APIのDrop-ins(Chooser)を使ってみる]]></title>
     <link href="http://mono0926.github.io/blog/2013/07/17/dropbox/"/>
     <updated>2013-07-17T12:51:00+09:00</updated>
     <id>http://mono0926.github.io/blog/2013/07/17/dropbox</id>
