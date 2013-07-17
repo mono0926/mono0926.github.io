@@ -4,7 +4,7 @@
   <title><![CDATA[monoHub]]></title>
   <link href="http://mono0926.github.io/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2013-07-17T22:33:26+09:00</updated>
+  <updated>2013-07-17T22:39:52+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -19,7 +19,7 @@
     <updated>2013-07-17T12:51:00+09:00</updated>
     <id>http://mono0926.github.io/blog/2013/07/17/dropbox</id>
     <content type="html"><![CDATA[<p>古い記事だけど、<a href="http://blog.syuhari.jp/archives/2284">[iPhone/iPad] Dropbox API を使ってみた</a> をさらっと見て作業開始。<br/>
-開発車登録は自力じゃなかなか見つからなかったけど、<a href="https://www.dropbox.com/developers/apply?cont=/developers/apps">Dropbox API terms and conditions</a>。<br/>
+開発者登録は自力じゃなかなか見つからなかったけど、<a href="https://www.dropbox.com/developers/apply?cont=/developers/apps">Dropbox API terms and conditions</a>。<br/>
 権限の設定などは初回の作成時以外は変更出来ないっぽいので、慎重に。</p>
 
 <h3>Drop-ins</h3>
