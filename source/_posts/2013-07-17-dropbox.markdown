@@ -1,0 +1,56 @@
+---
+layout: post
+title: "Dropbox 新API使ってみる"
+date: 2013-07-17 12:51
+comments: true
+categories:
+---
+
+古い記事だけど、[[iPhone/iPad] Dropbox API を使ってみた](http://blog.syuhari.jp/archives/2284) をさらっと見て作業開始。
+
+開発車登録は自力じゃなかなか見つからなかったけど、[Dropbox API terms and conditions](https://www.dropbox.com/developers/apply?cont=/developers/apps)。
+
+権限の設定などは初回の作成時以外は変更出来ないっぽいので、慎重に。
+
+### Drop-ins
+[Using the Chooser (iOS)](https://www.dropbox.com/developers/dropins/chooser/ios)を読んでみた。
+
+#### 呼び出し
+
+```objective-c
+#import <DBChooser/DBChooser.h>
+
+- (void)didPressChoose
+{
+    [[DBChooser defaultChooser] openChooserForLinkType:DBChooserLinkTypePreview // 取得出来るURL2種類から選択
+                                    fromViewController:self completion:^(NSArray *results)
+    {
+        if ([results count]) {
+            // Process results from Chooser
+        } else {
+            // User canceled the action
+        }
+    }];
+}
+```
+
+- 取得出来るURL2種類
+  * DBChooserLinkTypePreviewlinks
+  * DBChooserLinkTypeDirectlinks
+    - サーバーにこれを渡す作りにすれば、モバイル端末 - サーバー通信はちょっとしたJSONで、通信環境の良いサーバーで効率よくダウンロードとかできそう。
+
+
+#### Chooserからファイルを選んだあとの型。
+
+```objective-c
+@interface DBChooserResult : NSObject
+// DBChooserLinkTypeで何が入るか変わる。
+@property NSURL *link;
+@property NSString *name;
+@property long long size;
+@property NSURL *iconURL;
+// 画像や動画の時に3種類の大きさのサムネイル入っている。
+@property NSDictionary *thumbnails;
+
+@end
+```
