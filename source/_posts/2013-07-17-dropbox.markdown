@@ -91,4 +91,4 @@ categories: dropbox api
 
 サンプルも分かりやすくて、APIとしても使いやすくて素晴らしい。
 このAPIに限らずだけど、Dropboxアプリがインストールされていること前提のアプリと割り切れば色々広がりそう。
-[Drop-ins](https://www.dropbox.com/developers/dropins) にある通りまだ開発中みたいだけど、ChooserだけでなくSaverもあって、アプリ間連携とかもこれで行けたりするかも。(iOSやAndroidはローカルDropboxアプリへの保存は同期的に行いそうだし)
+[Drop-ins](https://www.dropbox.com/developers/dropins) にある通りまだ開発中みたいだけど、ChooserだけでなくSaverもあって、アプリ間連携とかもこれで行けたりするかも。(iOSやAndroidからはローカルDropboxアプリへの保存は同期的に行いそうだし)
