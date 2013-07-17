@@ -4,7 +4,7 @@
   <title><![CDATA[Category: dropbox | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/dropbox/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2013-07-17T22:45:00+09:00</updated>
+  <updated>2013-07-17T22:46:16+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -122,7 +122,7 @@ return NO;
 
 <p>サンプルも分かりやすくて、APIとしても使いやすくて素晴らしい。
 このAPIに限らずだけど、Dropboxアプリがインストールされていること前提のアプリと割り切れば色々広がりそう。
-<a href="https://www.dropbox.com/developers/dropins">Drop-ins</a> にある通りまだ開発中みたいだけど、ChooserだけでなくSaverもあって、アプリ間連携とかもこれで行けたりするかも。(iOSやAndroidはローカルDropboxアプリへの保存は同期的に行いそうだし)</p>
+<a href="https://www.dropbox.com/developers/dropins">Drop-ins</a> にある通りまだ開発中みたいだけど、ChooserだけでなくSaverもあって、アプリ間連携とかもこれで行けたりするかも。(iOSやAndroidからはローカルDropboxアプリへの保存は同期的に行いそうだし)</p>
 ]]></content>
   </entry>
   
