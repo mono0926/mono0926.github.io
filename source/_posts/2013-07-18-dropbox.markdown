@@ -40,7 +40,6 @@ categories: dropbox api
   * DBResolutionSum：適当に足し引きされる
 - RDBと違ってスキーマを持たない
   * KVSに近い感じ。keyと適当な型のvalueのペア。
-
 - Account manager
   * 認証用
 - Datasotores and tables
@@ -140,3 +139,6 @@ DBRecord *firstTask = [tasksTbl insert:@{ @"taskname": @"Buy milk", @"completed"
 ネットワーク状態に応じての同期とか意識しなくて良いし、本来サーバー実装するべきところをSDKに任せられて良い一方、ローカルでのクエリが少し冗長な感じ。  
 サンプルは1テーブルなのに増減監視でごちゃごちゃ処理してて複数テーブルとかその関連とか考え出すと素のままじゃ使うの厳しそう。
 Core Data使えばNSFetchedResultsControllerでコレクション監視がかなり簡潔に書けるところを自前実装じなくちゃいけなくて、自前アプリに導入するならそこらへんうまくフレームワーク化しないと快適に使えない感じ(そんな感じのライブラリ作っていくのも面白そうだけど)。
+
+Apple製品に閉じられるなら、Core Data + iCloudの方がやはり良いなあという感じ（´-ω-｀）
+参考：[iCloud プログラミング入門](http://d.hatena.ne.jp/glass-_-onion/20120728/1343471940)
