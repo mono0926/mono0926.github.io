@@ -52,6 +52,8 @@ categories: dropbox api
 
 #### アカウント認証
 
+他のDropbox APIと同じような定型的な感じ。
+
 ```objective-c
 // AppDelegate
 - (BOOL)application:(UIApplication *)app didFinishLaunchingWithOptions:(NSDictionary *)opts {
@@ -130,7 +132,9 @@ DBRecord *firstTask = [tasksTbl insert:@{ @"taskname": @"Buy milk", @"completed"
 #### ストレージの容量
 
 冒頭に
+
 > リンクしたDropboxには特に新しいファイルなど生成されていない様子
+
 と書いたけど、5MBはユーザーストレージを使わずにアプリケーションごとに割り当てられていて、それを超えるとユーザーストレージ領域を使っていくという感じ。それさえ食い尽くすとリミット。
 ユーザーのストレージ汚さないようにしたい場合は5MB制限に気をつける。 
 
