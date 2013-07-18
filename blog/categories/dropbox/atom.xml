@@ -4,7 +4,7 @@
   <title><![CDATA[Category: dropbox | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/dropbox/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2013-07-18T22:08:56+09:00</updated>
+  <updated>2013-07-18T22:12:44+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -70,13 +70,13 @@
 <li>DBResolutionSum：適当に足し引きされる</li>
 </ul>
 </li>
-<li><p>RDBと違ってスキーマを持たない</p>
+<li>RDBと違ってスキーマを持たない
 
 <ul>
 <li>KVSに近い感じ。keyと適当な型のvalueのペア。</li>
 </ul>
 </li>
-<li><p>Account manager</p>
+<li>Account manager
 
 <ul>
 <li>認証用</li>
@@ -209,6 +209,9 @@ DBRecord *firstTask = [tasksTbl insert:@{ @"taskname": @"Buy milk", @"completed"
 <p>ネットワーク状態に応じての同期とか意識しなくて良いし、本来サーバー実装するべきところをSDKに任せられて良い一方、ローカルでのクエリが少し冗長な感じ。<br/>
 サンプルは1テーブルなのに増減監視でごちゃごちゃ処理してて複数テーブルとかその関連とか考え出すと素のままじゃ使うの厳しそう。
 Core Data使えばNSFetchedResultsControllerでコレクション監視がかなり簡潔に書けるところを自前実装じなくちゃいけなくて、自前アプリに導入するならそこらへんうまくフレームワーク化しないと快適に使えない感じ(そんな感じのライブラリ作っていくのも面白そうだけど)。</p>
+
+<p>Apple製品に閉じられるなら、Core Data + iCloudの方がやはり良いなあという感じ（´-ω-｀）
+参考：<a href="http://d.hatena.ne.jp/glass-_-onion/20120728/1343471940">iCloud プログラミング入門</a></p>
 ]]></content>
   </entry>
   
