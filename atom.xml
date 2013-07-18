@@ -4,7 +4,7 @@
   <title><![CDATA[monoHub]]></title>
   <link href="http://mono0926.github.io/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2013-07-17T22:46:16+09:00</updated>
+  <updated>2013-07-18T22:08:56+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -12,6 +12,232 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[iOSからDropbox新APIのDatastore APIを使ってみる]]></title>
+    <link href="http://mono0926.github.io/blog/2013/07/18/dropbox/"/>
+    <updated>2013-07-18T09:08:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/07/18/dropbox</id>
+    <content type="html"><![CDATA[<h3>サンプルとドキュメント</h3>
+
+<ul>
+<li>サンプル
+
+<ul>
+<li><a href="https://www.dropbox.com/developers/datastore/sdks/ios">Datastore API SDKs</a>からSDKダウンロードすると同梱されてる</li>
+</ul>
+</li>
+<li>ドキュメント
+
+<ul>
+<li><a href="https://www.dropbox.com/developers/datastore/docs/ios">Datastore API for iOS Documentation</a></li>
+</ul>
+</li>
+<li>チュートリアル
+
+<ul>
+<li><a href="https://www.dropbox.com/developers/datastore/tutorial/ios">Using the Datastore API on iOS</a></li>
+</ul>
+</li>
+</ul>
+
+
+<h3>サンプル起動</h3>
+
+<h4>Datastore Examplesのサンプル</h4>
+
+<p>起動後Dropboxの認証を求められて、認証が通るとTODOアプリが開く。
+アイテムの追加とDone状態の切り替えのシンプルなサンプル。
+リンクしたDropboxには特に新しいファイルなど生成されていない様子。</p>
+
+<p>2台目にインストールして認証するとちゃんと1台目で追加したタスクが出てきて、当たり前だけどなんか関心（´-ω-｀）</p>
+
+<!-- more -->
+
+
+<p><img src="http://mono0926.github.io/images/post/todo.png" alt="todo" /></p>
+
+<h3><a href="https://www.dropbox.com/developers/datastore/tutorial/ios">チュートリアル</a>を読み解く</h3>
+
+<ul>
+<li>複数端末間でのコンフリクトは自動的に解消される(挙動を変えるにはフィールドごとにルールを設定出来る)
+
+<ul>
+<li>DBResolutionRemote：リモート優先(デフォルト)</li>
+<li>DBResolutionLocal：ローカル優先</li>
+<li>DBResolutionMax：大きい値優先</li>
+<li>DBResolutionMin：小さい値優先</li>
+<li>DBResolutionSum：適当に足し引きされる</li>
+</ul>
+</li>
+<li><p>RDBと違ってスキーマを持たない</p>
+
+<ul>
+<li>KVSに近い感じ。keyと適当な型のvalueのペア。</li>
+</ul>
+</li>
+<li><p>Account manager</p>
+
+<ul>
+<li>認証用</li>
+</ul>
+</li>
+<li>Datasotores and tables
+
+<ul>
+<li>データベース本体</li>
+<li>オフライン動作可</li>
+<li>オンライン同期するにはsyncを明示的に呼ぶ
+
+<ul>
+<li>トランザクション</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>実装</h3>
+
+<h4>アカウント認証</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="c1">// AppDelegate</span>
+</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">app</span> <span class="nf">didFinishLaunchingWithOptions:</span><span class="p">(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">opts</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">DBAccountManager</span><span class="o">*</span> <span class="n">accountMgr</span> <span class="o">=</span>
+</span><span class='line'>        <span class="p">[[</span><span class="n">DBAccountManager</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithAppKey:</span><span class="s">@&quot;APP_KEY&quot;</span> <span class="nl">secret:</span><span class="s">@&quot;APP_SECRET&quot;</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">DBAccountManager</span> <span class="nl">setSharedManager:</span><span class="n">accountMgr</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="c1">// Some view controller</span>
+</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nf">didPressLink</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">DBAccount</span> <span class="o">*</span><span class="n">account</span> <span class="o">=</span> <span class="p">[[</span><span class="n">DBAccountManager</span> <span class="n">sharedManager</span><span class="p">]</span> <span class="n">linkedAccount</span><span class="p">];</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">account</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;App already linked&quot;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="p">[[</span><span class="n">DBAccountManager</span> <span class="n">sharedManager</span><span class="p">]</span> <span class="nl">linkFromController:</span><span class="n">self</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="c1">// AppDelegate</span>
+</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">app</span> <span class="nf">openURL:</span><span class="p">(</span><span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
+</span><span class='line'>    <span class="nf">sourceApplication:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">source</span> <span class="nf">annotation:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">annotation</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">DBAccount</span> <span class="o">*</span><span class="n">account</span> <span class="o">=</span> <span class="p">[[</span><span class="n">DBAccountManager</span> <span class="n">sharedManager</span><span class="p">]</span> <span class="nl">handleOpenURL:</span><span class="n">url</span><span class="p">];</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">account</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;App linked successfully!&quot;</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">YES</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">NO</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>テーブル作成・取得</h4>
+
+<p>多分無かったら作る、あったら取得みたいな感じ。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="n">DBDatastore</span> <span class="o">*</span><span class="n">store</span> <span class="o">=</span> <span class="p">[</span><span class="n">DBDatastore</span> <span class="nl">openDefaultStoreForAccount:</span><span class="n">account</span> <span class="nl">error:</span><span class="nb">nil</span><span class="p">];</span>
+</span><span class='line'><span class="n">DBTable</span> <span class="o">*</span><span class="n">tasksTbl</span> <span class="o">=</span> <span class="p">[</span><span class="n">store</span> <span class="nl">getTable:</span><span class="s">@&quot;tasks&quot;</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>レコード操作</h4>
+
+<p>同じテーブルに対して、異なるキー・バリューの型突っ込めるらしい。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="n">DBRecord</span> <span class="o">*</span><span class="n">firstTask</span> <span class="o">=</span> <span class="p">[</span><span class="n">tasksTbl</span> <span class="nl">insert:</span><span class="err">@</span><span class="p">{</span> <span class="s">@&quot;taskname&quot;</span><span class="o">:</span> <span class="s">@&quot;Buy milk&quot;</span><span class="p">,</span> <span class="s">@&quot;completed&quot;</span><span class="o">:</span> <span class="err">@</span><span class="n">NO</span> <span class="p">}];</span>
+</span><span class='line'><span class="p">[</span><span class="n">store</span> <span class="nl">sync:</span><span class="nb">nil</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>テーブルのレコードの増減監視</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="p">[</span><span class="n">store</span> <span class="nl">addObserver:</span><span class="n">self</span> <span class="nl">block:</span><span class="o">^</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">store</span><span class="p">.</span><span class="n">status</span> <span class="o">&amp;</span> <span class="n">DBDatastoreIncoming</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">NSDictionary</span> <span class="o">*</span><span class="n">changed</span> <span class="o">=</span> <span class="p">[</span><span class="n">slf</span><span class="p">.</span><span class="n">store</span> <span class="nl">sync:</span><span class="nb">nil</span><span class="p">];</span>
+</span><span class='line'>        <span class="c1">// 何が変わったか調べて処理</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>バリューの型</h4>
+
+<ul>
+<li>String</li>
+<li>Boolean</li>
+<li>Integer</li>
+<li>Floating</li>
+<li>Date</li>
+<li>Bytes
+
+<ul>
+<li>最大100KB</li>
+<li>より大きいサイズはSync APIやfilepathベースで扱うようにとのこと</li>
+</ul>
+</li>
+<li>List</li>
+</ul>
+
+
+<h4>ストレージの容量</h4>
+
+<p>冒頭に</p>
+
+<blockquote><p>リンクしたDropboxには特に新しいファイルなど生成されていない様子
+と書いたけど、5MBはユーザーストレージを使わずにアプリケーションごとに割り当てられていて、それを超えるとユーザーストレージ領域を使っていくという感じ。それさえ食い尽くすとリミット。
+ユーザーのストレージ汚さないようにしたい場合は5MB制限に気をつける。</p></blockquote>
+
+<h3>弄ってみた印象</h3>
+
+<p>ネットワーク状態に応じての同期とか意識しなくて良いし、本来サーバー実装するべきところをSDKに任せられて良い一方、ローカルでのクエリが少し冗長な感じ。<br/>
+サンプルは1テーブルなのに増減監視でごちゃごちゃ処理してて複数テーブルとかその関連とか考え出すと素のままじゃ使うの厳しそう。
+Core Data使えばNSFetchedResultsControllerでコレクション監視がかなり簡潔に書けるところを自前実装じなくちゃいけなくて、自前アプリに導入するならそこらへんうまくフレームワーク化しないと快適に使えない感じ(そんな感じのライブラリ作っていくのも面白そうだけど)。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[iOSからDropbox新APIのDrop-ins(Chooser)を使ってみる]]></title>
