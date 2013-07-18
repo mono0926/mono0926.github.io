@@ -1,0 +1,100 @@
+---
+layout: post
+title: "iOSからDropbox新APIのDatastore APIを使ってみる"
+date: 2013-07-18 09:08
+comments: true
+categories: dropbox api
+---
+
+### サンプルとドキュメント
+
+- サンプル
+  * [Datastore API SDKs](https://www.dropbox.com/developers/datastore/sdks/ios)からSDKダウンロードすると同梱
+- ドキュメント
+  * [Datastore API for iOS Documentation](https://www.dropbox.com/developers/datastore/docs/ios)
+- チュートリアル
+  * [Using the Datastore API on iOS](https://www.dropbox.com/developers/datastore/tutorial/ios)
+
+### サンプル起動
+
+#### Datastore Examples.xcodeproj
+
+起動後Dropboxの認証を求められて、認証が通るとTODOアプリが開く。
+アイテムの追加とDone状態の切り替えのシンプルなサンプル。
+リンクしたDropboxには特に新しいファイルなど生成されていない様子。
+
+![todo](/images/post/todo.png)
+
+
+### チュートリアルを読み解く
+
+- 複数端末間でのコンフリクトは自動的に解消される(後勝ち？)
+- RDBと違ってスキーマを持たない
+  - KVSに近い？？
+
+- Account manager
+  * 認証用
+- Datasotores and tables
+  * データベース本体
+  * オフライン動作可
+  * オンライン同期するにはsyncを明示的に呼ぶ
+    - トランザクション
+- Records
+  *
+
+### 実装
+
+#### アカウント認証
+
+```objective-c
+// AppDelegate
+- (BOOL)application:(UIApplication *)app didFinishLaunchingWithOptions:(NSDictionary *)opts {
+    DBAccountManager* accountMgr =
+        [[DBAccountManager alloc] initWithAppKey:@"APP_KEY" secret:@"APP_SECRET"];
+    [DBAccountManager setSharedManager:accountMgr];
+}
+```
+
+```objective-c
+// Some view controller
+- (IBAction)didPressLink {
+    DBAccount *account = [[DBAccountManager sharedManager] linkedAccount];
+    if (account) {
+        NSLog(@"App already linked");
+    } else {
+        [[DBAccountManager sharedManager] linkFromController:self];
+    }
+}
+```
+
+```objective-c
+// AppDelegate
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url
+    sourceApplication:(NSString *)source annotation:(id)annotation {
+    DBAccount *account = [[DBAccountManager sharedManager] handleOpenURL:url];
+    if (account) {
+        NSLog(@"App linked successfully!");
+        return YES;
+    }
+    return NO;
+}
+```
+
+#### テーブル作成
+
+```objective-c
+DBDatastore *store = [DBDatastore openDefaultStoreForAccount:account error:nil];
+DBTable *tasksTbl = [store getTable:@"tasks"];
+```
+
+#### レコード操作
+
+```objective-c
+DBRecord *firstTask = [tasksTbl insert:@{ @"taskname": @"Buy milk", @"completed": @NO }];
+[store sync:nil];
+```
+
+
+### 使ってみた印象
+
+ネットワーク状態に応じての同期とか意識しなくて良いし、サーバー実装も
