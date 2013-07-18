@@ -4,7 +4,7 @@
   <title><![CDATA[Category: dropbox | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/dropbox/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2013-07-18T22:12:44+09:00</updated>
+  <updated>2013-07-18T22:14:16+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -101,6 +101,8 @@
 <h3>実装</h3>
 
 <h4>アカウント認証</h4>
+
+<p>他のDropbox APIと同じような定型的な感じ。</p>
 
 <p>```objective-c
 // AppDelegate
@@ -200,9 +202,10 @@ DBRecord *firstTask = [tasksTbl insert:@{ @"taskname": @"Buy milk", @"completed"
 
 <p>冒頭に</p>
 
-<blockquote><p>リンクしたDropboxには特に新しいファイルなど生成されていない様子
-と書いたけど、5MBはユーザーストレージを使わずにアプリケーションごとに割り当てられていて、それを超えるとユーザーストレージ領域を使っていくという感じ。それさえ食い尽くすとリミット。
-ユーザーのストレージ汚さないようにしたい場合は5MB制限に気をつける。</p></blockquote>
+<blockquote><p>リンクしたDropboxには特に新しいファイルなど生成されていない様子</p></blockquote>
+
+<p>と書いたけど、5MBはユーザーストレージを使わずにアプリケーションごとに割り当てられていて、それを超えるとユーザーストレージ領域を使っていくという感じ。それさえ食い尽くすとリミット。
+ユーザーのストレージ汚さないようにしたい場合は5MB制限に気をつける。</p>
 
 <h3>弄ってみた印象</h3>
 
