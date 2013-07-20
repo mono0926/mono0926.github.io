@@ -38,7 +38,7 @@ footer: true
 - mail: mono0926@gmail.com
 - Facebook: [mono0926](https://www.facebook.com/mono0926)
 - GitHub: [mono0926](https://github.com/mono0926)
-- Qiita: [mono0926](http://qiita.com/mono0926@github)
+- Qiita: [mono0926](http://qiita.com/mono0926)
 - LinkedIn: [Masayuki Ono](http://www.linkedin.com/profile/view?id=155419528)
 - QIXIL: [mono0926](http://qixil.jp/user/1340)
 - Instagram: [mono0926](http://instagram.com/mono0926)
