@@ -11,9 +11,21 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 52.0,
+		"height": 375.0,
 		"selected_items":
 		[
+			[
+				"place",
+				"Placehold.it: Insert Image"
+			],
+			[
+				"pla",
+				"Placehold.it: Insert Image"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
 			[
 				"install",
 				"Package Control: Install Package"
@@ -51,7 +63,7 @@
 				"Set Syntax: Objective-C"
 			]
 		],
-		"width": 449.0
+		"width": 561.0
 	},
 	"console":
 	{
@@ -68,6 +80,7 @@
 	},
 	"file_history":
 	[
+		"/Users/mono/Documents/Git/Private/monoHub/source/_posts/2013-07-25-leap-motion.markdown",
 		"/Users/mono/Documents/Git/Private/monoHub/source/about/index.markdown",
 		"/Users/mono/Documents/Git/Private/monoHub/source/_posts/2013-07-18-dropbox.markdown",
 		"/Users/mono/Documents/Git/Private/octopress/source/_posts/posts",
