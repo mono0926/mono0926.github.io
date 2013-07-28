@@ -94,6 +94,7 @@ PayPal決済でトータル1万円弱。カード決済用のトータル表示�
 * [LeapMotion(YouTube)](https://www.youtube.com/user/leapmotion)
 * [C#開発者から見たLeap Motion開発のファースト・インプレッション](http://www.buildinsider.net/small/leapmotionfirstimp/01)
 * [Developing for Leap Motion in C# Tutorial (video, slides and code)](http://www.irisclasson.com/2013/05/02/developing-for-leap-motion-in-c-tutorial-video-slides-and-code/)
+* [JavaScriptでLeapMotionアプリを作る方法](http://kray.jp/blog/leap-motion-javascript/)
 
 
 #### Windows 8を操作しているデモ動画
