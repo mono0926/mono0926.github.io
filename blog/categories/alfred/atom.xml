@@ -4,7 +4,7 @@
   <title><![CDATA[Category: alfred | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/alfred/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2013-08-04T12:58:24+09:00</updated>
+  <updated>2013-08-04T13:07:52+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -18,7 +18,7 @@
     <link href="http://mono0926.github.io/blog/2013/08/04/ginger/"/>
     <updated>2013-08-04T12:07:00+09:00</updated>
     <id>http://mono0926.github.io/blog/2013/08/04/ginger</id>
-    <content type="html"><![CDATA[<p><a href="/blog/2013/08/04/ginger/">GingerをAlfredで使えるようにしてみた</a>の続き。</p>
+    <content type="html"><![CDATA[<p><a href="/blog/2013/08/03/ginger/">Ginger APIをPythonで叩いてみた</a>の続き。</p>
 
 <p>元々はAlfredで英文校正が出来るようにしたかったので、ここからが本番。</p>
 
