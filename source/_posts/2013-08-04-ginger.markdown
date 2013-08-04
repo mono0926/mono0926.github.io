@@ -6,7 +6,7 @@ comments: true
 categories: ginger python alfred english
 ---
 
-[GingerをAlfredで使えるようにしてみた](/blog/2013/08/04/ginger/)の続き。
+[Ginger APIをPythonで叩いてみた](/blog/2013/08/03/ginger/)の続き。
 
 元々はAlfredで英文校正が出来るようにしたかったので、ここからが本番。
 

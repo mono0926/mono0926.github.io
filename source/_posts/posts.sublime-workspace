@@ -80,6 +80,9 @@
 	},
 	"file_history":
 	[
+		"/Users/mono/Documents/Git/Private/monoHub/source/_posts/2013-08-03-ginger.markdown",
+		"/Users/mono/Documents/Git/Private/monoHub/source/_posts/2013-08-04-ginger.markdown",
+		"/Users/mono/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/mono/Documents/Git/Private/monoHub/source/_posts/2013-07-25-leap-motion.markdown",
 		"/Users/mono/Documents/Git/Private/monoHub/source/about/index.markdown",
 		"/Users/mono/Documents/Git/Private/monoHub/source/_posts/2013-07-18-dropbox.markdown",
@@ -102,8 +105,7 @@
 		"/Users/mono/Documents/Git/Private/octopress/source/blog/archives/index.html",
 		"/Users/mono/Dropbox/Scripts/epub.py",
 		"/Users/mono/Documents/Git/Private/SelfPublish/SelfPublisher_IOS/.git/info/exclude",
-		"/Users/mono/Documents/Git/monoHub/index.html",
-		"/Users/mono/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings"
+		"/Users/mono/Documents/Git/monoHub/index.html"
 	],
 	"find":
 	{
@@ -111,9 +113,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -121,6 +124,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"2013-08-04-ginger",
 			"OCTOPATH",
 			"OCTOPATHOCTOPATHOCTOPATH",
 			"your_username",
