@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>GitHub + Octopressでブログ作ってみた - monoHub</title>
+  <title>GingerをAlfredで使えるようにしてみた - monoHub</title>
   <meta name="author" content="Masayuki Ono">
 
   
-  <meta name="description" content="Markdownで書けてなかなか良い感じかもしれない（´-ω-｀） 導入手順 ここらへん参考に。 GitHub pages + Octopressの導入 最初は適当にMacに入っているRuby 1.7.3やHomebrewで入れた2系でインストールしようとしたらはまって結局Ruby 1.9. &hellip;">
+  <meta name="description" content="GingerをAlfredで使えるようにしてみたの続き。 元々はAlfredで英文校正が出来るようにしたかったので、ここからが本番。 完成版 こんなのが出来たという紹介から。 校正 ginger というキーワードに続けて英文を打つと、正してくれる。(この場合、冠詞aの抜けが正される。) &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mono0926.github.io/blog/2013/07/07/github_octopress_blog/">
+  <link rel="canonical" href="http://mono0926.github.io/blog/2013/08/04/ginger/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -82,7 +82,7 @@
   
   <header>
     
-      <h1 class="entry-title">GitHub + Octopressでブログ作ってみた</h1>
+      <h1 class="entry-title">GingerをAlfredで使えるようにしてみた</h1>
     
     
       <p class="meta">
@@ -98,78 +98,108 @@
   
 
 
-<time datetime="2013-07-07T12:16:00+09:00" pubdate data-updated="true">Jul 7<span>th</span>, 2013</time>
+<time datetime="2013-08-04T12:07:00+09:00" pubdate data-updated="true">Aug 4<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Markdownで書けてなかなか良い感じかもしれない（´-ω-｀）</p>
+<div class="entry-content"><p><a href="/blog/2013/08/04/ginger/">GingerをAlfredで使えるようにしてみた</a>の続き。</p>
 
-<h3>導入手順</h3>
+<p>元々はAlfredで英文校正が出来るようにしたかったので、ここからが本番。</p>
 
-<p>ここらへん参考に。</p>
+<h3>完成版</h3>
 
-<ul>
-<li><a href="http://rcmdnk.github.io/blog/2013/03/07/setup-octopress/">GitHub pages + Octopressの導入</a>
+<p>こんなのが出来たという紹介から。</p>
 
-<ul>
-<li>最初は適当にMacに入っているRuby 1.7.3やHomebrewで入れた2系でインストールしようとしたらはまって結局Ruby 1.9.3にしたので、初めから素直に従った方がよさげです。</li>
-</ul>
-</li>
-<li>rvmの導入がうまくできなかったので、それだけこれを参考に。
+<h4>校正</h4>
 
-<ul>
-<li><a href="http://jitsu102.hatenablog.com/entry/2012/11/23/162034">(OS X::Mountain Lion) RVMでRubyの環境構築メモ</a></li>
-</ul>
-</li>
-</ul>
+<p>ginger というキーワードに続けて英文を打つと、正してくれる。(この場合、冠詞aの抜けが正される。)</p>
 
+<p><img src="/images/post/ginger1.png" alt="ginger" /></p>
 
-<h4>個人的な運用</h4>
-
-<ul>
-<li><a href="https://github.com/imathis/octopress">imathis/octopress</a>からForkしてそのままソース管理として利用
-
-<ul>
-<li>下書きなどあっても人に見られちゃうからBitbucket使うっていう人が多いらしいですが、あまり気にならないのでGitHubで一元管理</li>
-</ul>
-</li>
-<li><code>setup_github_pages</code> と入力して、<a href="http://mono0926.github.io">GitHub上のこのページ</a> にデプロイされるように</li>
-</ul>
-
+<h4>改善候補一覧</h4>
 
 <!-- more -->
 
 
-<h4>テーマの変更</h4>
+<p>rephraseというキーワードに続けて適当な英文を打つと、より自然な言い回し候補を出してくれる。
+&ldquo;Thank you for your reply&#8221;は、メールの返信とかでよく使うけど、ワンパターン化を避けたい時とかに使えそう。</p>
 
-<p>テーマは、<a href="https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes">imathis/octopress</a>から選べますが、あまり有名じゃないので、そんなに選択肢無いです。凝るなら自分で作るべきですかね。
-こぎれいなテーマを適当に選んで使っています。
-導入は簡単で、上記から選んで、下のコマンドですぐ反映されます。</p>
+<p><img src="/images/post/ginger2.png" alt="ginger" /></p>
+
+<p>ともに、選択状態でエンターを押すと、クリップボードにコピーされて、フォーカスの当たっているアプリにペーストされるので、適当にメールとかエディタとか使いながら自然と正しそうな英文が打てるようになるはず。</p>
+
+<h3>AlfredのWorkflowの作り方</h3>
+
+<p>一応<a href="http://support.alfredapp.com/workflows">ドキュメント</a>はあるけど、肝心なところが書かれていなかったりして、<a href="http://www.alfredforum.com/forum/3-share-your-workflows/">フォーラム</a>で聞いたり、既存のWorkflowのソースを読んで作り方を学ばなければいけない感じ。
+作り方自体は基本簡単だけど、ちょくちょくはまりどころがあって苦労する。</p>
+
+<h4>キーワードの受け取り</h4>
+
+<p>{query}というキーワードでアクセス出来るので、それをスクリプトに引数ととして渡すのが一般的。</p>
+
+<h4>結果の表示</h4>
+
+<p>処理終了時にnotification飛ばしたり、クリップボードにコピーとかはWorkflowのエディタでパーツをつなぎ合わせたりするだけで簡単だけど、上の例みたいに一覧するのはどうやるのかと思っていたら、XMLで標準出力するらしい。
+関係ないechoやprint文があると壊れるので注意。
+ここらへんも、既存のソース読み解いてやっと分かった。それも不慣れなPHPソースがけっこう多くてアレ。</p>
+
+<p>こんな感じのXMLを標準出力すると、Itemの数だけ一覧される。</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span><span class="nb">cd </span>octopress
-</span><span class='line'><span class="nv">$ </span>git clone GIT_URL .themes/THEME_NAME
-</span><span class='line'><span class="nv">$ </span>rake install<span class="o">[</span><span class="s1">&#39;THEME_NAME&#39;</span><span class="o">]</span>
-</span><span class='line'><span class="nv">$ </span>rake generate
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="cp">&lt;?xml version=&quot;1.0&quot; ?&gt;</span>
+</span><span class='line'><span class="nt">&lt;items&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;item</span> <span class="na">arg=</span><span class="s">&quot;I am a programmer and writing bad English. I am Japanese.&quot;</span> <span class="na">uid=</span><span class="s">&quot;d78b56b0-fcb7-11e2-9787-e80688cb3920&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;title&gt;</span>I am a programmer and writing bad English. I am Japanese.<span class="nt">&lt;/title&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;subtitle&gt;</span>Gingered sentence<span class="nt">&lt;/subtitle&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;icon/&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/item&gt;</span>
+</span><span class='line'><span class="nt">&lt;/items&gt;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<h3>Markdown 初めて書いた</h3>
+<p>これも適当に文字列置換したりして作れるけど、PythonでXML組み立てて作る簡単なモジュール作って再利用できるようにしておいた。
+ここらへんの下回りがけっこうこなれていない感。</p>
 
-<p>なかなか便利ですね(　´･‿･｀)
-このあたりよくまとまっててよかったです。</p>
+<h4>インストール可能なパッケージの作り方</h4>
 
-<ul>
-<li><a href="http://qiita.com/Qiita/items/c686397e4a0f4f11683d">Markdown記法 チートシート</a></li>
-<li><a href="http://qa.atmarkit.co.jp/docs/markdown">QA@ITで使えるMarkdown記法</a></li>
-</ul>
+<p>配布されているworkflowは、*.alfredworkflowという形式で、ダブルクリックでインストールできる。</p>
 
+<p>簡単なやり方は自分のworkflowを右クリックしてExportすること。</p>
+
+<p>逆にscript群からコマンドで作りたい場合は、必要なファイルをzip化して拡張子を変えればよい。
+info.plistが必要で、それは多分コマンドラインじゃ作れないから、やっぱり最初はExportの過程が必要だけど、コードとか別管理したいならコマンドラインで修正版作るのがよさげな気がする。</p>
+
+<p>適当にpackage作成スクリプト書いた。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>cp ginger/info.plist .
+</span><span class='line'>cp ginger/*.png .
+</span><span class='line'>zip ginger.zip ginger_driver.py ginger/*.py info.plist *.png workflow/*.py
+</span><span class='line'>rm info.plist *.png
+</span><span class='line'>mv ginger.zip ginger.alfredworkflow
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>こんな管理で良いのか若干謎。</p>
+
+<p>以上、<a href="https://github.com/mono0926/AlfredWorkflow">GitHub</a>で管理するようにした。
+今までworkflowの作り方がよく分からない部分があったり管理が適当だったりしたけど、これからはもっとサクサク作れそう。</p>
+
+<p>今回の成果物：<a href="https://github.com/mono0926/AlfredWorkflow/raw/master/ginger.alfredworkflow">Ginger Workflow</a></p>
 </div>
 
 
@@ -192,12 +222,12 @@
   
 
 
-<time datetime="2013-07-07T12:16:00+09:00" pubdate data-updated="true">Jul 7<span>th</span>, 2013</time>
+<time datetime="2013-08-04T12:07:00+09:00" pubdate data-updated="true">Aug 4<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/github/'>github</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>
+    <a class='category' href='/blog/categories/alfred/'>alfred</a>, <a class='category' href='/blog/categories/english/'>english</a>, <a class='category' href='/blog/categories/ginger/'>ginger</a>, <a class='category' href='/blog/categories/python/'>python</a>
   
 </span>
 
@@ -212,13 +242,13 @@
 
   
 
-<a href="http://mono0926.github.io/blog/2013/07/07/github_octopress_blog/" class="hatena-bookmark-button" data-hatena-bookmark-title="GitHub + Octopressでブログ作ってみた" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+<a href="http://mono0926.github.io/blog/2013/08/04/ginger/" class="hatena-bookmark-button" data-hatena-bookmark-title="GingerをAlfredで使えるようにしてみた" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
 
   
 
 
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mono0926.github.io/blog/2013/07/07/github_octopress_blog/" data-via="_mono" data-counturl="http://mono0926.github.io/blog/2013/07/07/github_octopress_blog/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mono0926.github.io/blog/2013/08/04/ginger/" data-via="_mono" data-counturl="http://mono0926.github.io/blog/2013/08/04/ginger/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -231,8 +261,8 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2013/08/03/ginger/" title="Previous Post: Ginger APIをPythonで叩いてみた">&laquo; Ginger APIをPythonで叩いてみた</a>
       
-        <a class="basic-alignment right" href="/blog/2013/07/07/octopress-alfred/" title="Next Post: Octopressへの投稿やdeployをAlfredのWorkflowで">Octopressへの投稿やdeployをAlfredのWorkflowで &raquo;</a>
       
     </p>
   </footer>
@@ -342,8 +372,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://mono0926.github.io/blog/2013/07/07/github_octopress_blog/';
-        var disqus_url = 'http://mono0926.github.io/blog/2013/07/07/github_octopress_blog/';
+        var disqus_identifier = 'http://mono0926.github.io/blog/2013/08/04/ginger/';
+        var disqus_url = 'http://mono0926.github.io/blog/2013/08/04/ginger/';
         var disqus_script = 'embed.js';
       
     (function () {

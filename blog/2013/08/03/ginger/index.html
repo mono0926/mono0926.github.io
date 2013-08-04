@@ -1,0 +1,562 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Ginger APIをPythonで叩いてみた - monoHub</title>
+  <meta name="author" content="Masayuki Ono">
+
+  
+  <meta name="description" content="そんな有名でも無いけど、Gingerという英文作成支援サービスがある。 もう前置詞に迷わない」──「ネイティブレベル」の英語が書ける英文チェッカー「Ginger」日本上陸という記事などで4月にニュースになって、この手のものが好きな僕はChromeの拡張をすぐ導入してみたけど、 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mono0926.github.io/blog/2013/08/03/ginger/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="monoHub" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-11434295-5']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">monoHub</a></h1>
+  
+    <h2>When I feel like writing something...</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss email">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+    <li><a href="mono0926@gmail.com" rel="subscribe-email" title="subscribe via email">Email</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:mono0926.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Ginger APIをPythonで叩いてみた</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-03T14:58:00+09:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>そんな有名でも無いけど、Gingerという英文作成支援サービスがある。</p>
+
+<p><a href="http://www.itmedia.co.jp/news/articles/1304/24/news120.html">もう前置詞に迷わない」──「ネイティブレベル」の英語が書ける英文チェッカー「Ginger」日本上陸</a>という記事などで4月にニュースになって、この手のものが好きな僕は<a href="https://chrome.google.com/webstore/detail/spell-and-grammar-checker/kdfieneakcjfaiglcfcgkidlkmlijjnh">Chromeの拡張</a>をすぐ導入してみたけど、不必要な時に指摘されたり、必要な時は使い勝手が悪いし、うーんと思ったり。</p>
+
+<h3>Ginger API</h3>
+
+<p>コマンドラインとかで使いたいなあと思って適当にぐぐったら、<a href="http://blog.livedoor.jp/xaicron/archives/54466736.html">Ginger API を試してみた</a>という記事が。
+Gistになぜか<a href="https://gist.github.com/koron/5454500">curlで使ってる例</a>があるみたいで。</p>
+
+<p>GingerのページにはAPIとか無いのになぜだろうと思って、Chromeの開発ツールでリクエストのぞいてみたら、もろにAPI叩いているのがあった。</p>
+
+<p><img src="/images/post/ginger.png" alt="ginger" /></p>
+
+<blockquote><p><a href="http://services.gingersoftware.com/Ginger/correct/json/GingerTheText?callback=C&amp;apiKey=6ae0c3a0-afdc-4532-a810-82ded0054236&amp;lang=US&amp;clientVersion=2.0&amp;text=I+am+programmer.&amp;_1375584239344=">http://services.gingersoftware.com/Ginger/correct/json/GingerTheText?callback=C&amp;apiKey=6ae0c3a0-afdc-4532-a810-82ded0054236&amp;lang=US&amp;clientVersion=2.0&amp;text=I+am+programmer.&amp;_1375584239344=</a></p></blockquote>
+
+<!-- more -->
+
+
+<p>これをブラウザにコピペするとJSONが<code>C()</code>で囲まれたものが出てくるけど、多分JSONP用のパラメーターなので、単にJSON受け取りたい場合は不要。</p>
+
+<p>textパラメーターも適当に削れて、以下でリクエストが可能。
+apiKeyとかもろに出てるけどいいのだろうか(　´･‿･｀)</p>
+
+<blockquote><p><a href="http://services.gingersoftware.com/Ginger/correct/json/GingerTheText?apiKey=6ae0c3a0-afdc-4532-a810-82ded0054236&amp;lang=US&amp;clientVersion=2.0&amp;text=I+am+programmer.">http://services.gingersoftware.com/Ginger/correct/json/GingerTheText?apiKey=6ae0c3a0-afdc-4532-a810-82ded0054236&amp;lang=US&amp;clientVersion=2.0&amp;text=I+am+programmer.</a></p>
+
+<p>{&ldquo;LightGingerTheTextResult&rdquo;:[{&ldquo;Confidence&rdquo;:4,&ldquo;From&rdquo;:5,&ldquo;LrnFrg&rdquo;:&ldquo;I am programmer&rdquo;,&ldquo;LrnFrgOrigIndxs&rdquo;:[{&ldquo;From&rdquo;:5,&ldquo;To&rdquo;:14}],&ldquo;Mistakes&rdquo;:[{&ldquo;CanAddToDict&rdquo;:false,&ldquo;From&rdquo;:5,&ldquo;To&rdquo;:14}],&ldquo;ShouldReplace&rdquo;:true,&ldquo;Suggestions&rdquo;:[{&ldquo;LrnCatId&rdquo;:12,&ldquo;Text&rdquo;:&ldquo;a programmer&rdquo;},{&ldquo;LrnCatId&rdquo;:13,&ldquo;Text&rdquo;:&ldquo;the programmer&rdquo;}],&ldquo;To&rdquo;:14,&ldquo;TopLrnCatId&rdquo;:12,&ldquo;Type&rdquo;:3,&ldquo;UXFrgFrom&rdquo;:0,&ldquo;UXFrgTo&rdquo;:14}]}</p></blockquote>
+
+<p>ざっくりと、間違えている箇所と、その修正例(複数のこともあり)が返ってくる。</p>
+
+<p>と、普通にAPI叩けてしまい、これ使ってよいのだろうかと思いつつ、非公開になったりAPI変わったりすると面倒とか、くらいで私的に使う分には良いのではないかと。
+これでサービス作ったり儲けたりすると黒くなってきそうだけど。</p>
+
+<h3>実用的な英語のフレーズを表示する「Rephrase」という機能</h3>
+
+<p>上記のやつは単に間違えをしてくれるサービスだけど、さらにより自然な言い回し候補を表示してくれるサービスもあったり。</p>
+
+<p><a href="http://gigazine.net/news/20130802-ginger-rephrase/">英文を文脈に合わせて修正する「Ginger」とネイティブ英語に変換する「Rephrase」</a>に書いてあるとおり<a href="http://www.gingersoftware.com/rephrase_jpn">Rephrase</a>に飛ぶと使える。</p>
+
+<p>こちらも同様の手口で簡単にAPIのURLが取得可能。</p>
+
+<blockquote><p><a href="http://ro.gingersoftware.com/rephrase/rephrase?s=Hi%2C%20nice%20to%20meet%20you.&amp;callback=jQuery17204343029616866261_1375585040822&amp;_=1375585300259">http://ro.gingersoftware.com/rephrase/rephrase?s=Hi%2C%20nice%20to%20meet%20you.&amp;callback=jQuery17204343029616866261_1375585040822&amp;_=1375585300259</a></p></blockquote>
+
+<p>同じくcalllback云々は不要だけど、さっきはcallback関数名がCだったのにけっこうフォーマットが違ったり、apiKeyが無かったり、base URLが違ったりとかなり適当な感じ（´・ω・｀）</p>
+
+<p>と、英文を入力するとJSONで結果を受け取れるとこまでは行ったので、Pythonで叩いてみた。</p>
+
+<p>大体こんな感じで、修正後の英文や、改善後の候補群に変換するスクリプトが書けた。
+最近はWebアクセスはrequestsモジュールを使うのがモダンっぽい。</p>
+
+<p>最新版：<a href="https://github.com/mono0926/AlfredWorkflow/blob/master/ginger/ginger.py">Alfred Workflow</a></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c">#!/usr/local/bin/python</span>
+</span><span class='line'><span class="c"># -*- coding: utf-8 -*-</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">requests</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">json</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">sys</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">os</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">GingerSummary</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span><span class='line'>  <span class="sd">&quot;&quot;&quot;Ginger Summary&quot;&quot;&quot;</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">original</span><span class="p">,</span> <span class="n">results</span><span class="p">):</span>
+</span><span class='line'>      <span class="nb">super</span><span class="p">(</span><span class="n">GingerSummary</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+</span><span class='line'>      <span class="bp">self</span><span class="o">.</span><span class="n">original</span> <span class="o">=</span> <span class="n">original</span>
+</span><span class='line'>      <span class="bp">self</span><span class="o">.</span><span class="n">results</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="nb">cmp</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">cmp</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">from_</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">from_</span><span class="p">))</span>
+</span><span class='line'>      <span class="bp">self</span><span class="o">.</span><span class="n">gingered</span> <span class="o">=</span> <span class="bp">None</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>      <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">gingered</span><span class="p">:</span>
+</span><span class='line'>          <span class="bp">self</span><span class="o">.</span><span class="n">_ginger</span><span class="p">()</span>
+</span><span class='line'>      <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">gingered</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">show_detail</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>      <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">results</span><span class="p">:</span>
+</span><span class='line'>          <span class="k">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">_ginger</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>      <span class="n">gingered</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">original</span>
+</span><span class='line'>      <span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span class='line'>      <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">results</span><span class="p">):</span>
+</span><span class='line'>          <span class="n">suggest</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">suggestions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span><span class='line'>          <span class="n">gingered</span> <span class="o">=</span> <span class="s">&#39;{0}{1}{2}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">gingered</span><span class="p">[:</span><span class="n">r</span><span class="o">.</span><span class="n">from_</span><span class="o">+</span><span class="n">offset</span><span class="p">],</span> <span class="n">suggest</span><span class="p">,</span> <span class="n">gingered</span><span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">to</span><span class="o">+</span><span class="mi">1</span><span class="o">+</span><span class="n">offset</span><span class="p">:])</span>
+</span><span class='line'>          <span class="n">offset</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">suggest</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">to</span> <span class="o">-</span> <span class="n">r</span><span class="o">.</span><span class="n">from_</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>      <span class="bp">self</span><span class="o">.</span><span class="n">gingered</span> <span class="o">=</span> <span class="n">gingered</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">GingerResult</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span><span class='line'>  <span class="sd">&quot;&quot;&quot;Ginger Result&quot;&quot;&quot;</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>      <span class="nb">super</span><span class="p">(</span><span class="n">GingerResult</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nd">@classmethod</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">create_from_json</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">json</span><span class="p">):</span>
+</span><span class='line'>      <span class="n">that</span> <span class="o">=</span> <span class="n">GingerResult</span><span class="p">()</span>
+</span><span class='line'>      <span class="n">that</span><span class="o">.</span><span class="n">from_</span> <span class="o">=</span> <span class="n">json</span><span class="p">[</span><span class="s">&#39;From&#39;</span><span class="p">]</span>
+</span><span class='line'>      <span class="n">that</span><span class="o">.</span><span class="n">to</span> <span class="o">=</span> <span class="n">json</span><span class="p">[</span><span class="s">&#39;To&#39;</span><span class="p">]</span>
+</span><span class='line'>      <span class="n">that</span><span class="o">.</span><span class="n">suggestions</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="s">&#39;Text&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">json</span><span class="p">[</span><span class="s">&#39;Suggestions&#39;</span><span class="p">]]</span>
+</span><span class='line'>      <span class="n">that</span><span class="o">.</span><span class="n">should_replace</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">json</span><span class="p">[</span><span class="s">&#39;ShouldReplace&#39;</span><span class="p">])</span>
+</span><span class='line'>      <span class="n">that</span><span class="o">.</span><span class="n">confidence</span> <span class="o">=</span> <span class="n">json</span><span class="p">[</span><span class="s">&#39;Confidence&#39;</span><span class="p">]</span>
+</span><span class='line'>      <span class="k">return</span> <span class="n">that</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>      <span class="k">return</span> <span class="s">&#39;from: {0}, to: {1}, suggestions: [{2}], should_replace: {3}, confidence: {4}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+</span><span class='line'>          <span class="bp">self</span><span class="o">.</span><span class="n">from_</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">to</span><span class="p">,</span> <span class="s">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">suggestions</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">should_replace</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">confidence</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">GingerClient</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span><span class='line'>  <span class="sd">&quot;&quot;&quot;Ginger Client&quot;&quot;&quot;</span>
+</span><span class='line'>  <span class="n">base_url</span> <span class="o">=</span> <span class="s">&#39;http://services.gingersoftware.com/Ginger/correct/json/GingerTheText&#39;</span>
+</span><span class='line'>  <span class="n">api_key</span> <span class="o">=</span> <span class="s">&#39;6ae0c3a0-afdc-4532-a810-82ded0054236&#39;</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sentence</span><span class="p">):</span>
+</span><span class='line'>      <span class="nb">super</span><span class="p">(</span><span class="n">GingerClient</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+</span><span class='line'>      <span class="bp">self</span><span class="o">.</span><span class="n">sentence</span> <span class="o">=</span> <span class="n">sentence</span>
+</span><span class='line'>  
+</span><span class='line'>  <span class="k">def</span> <span class="nf">ginger</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>      <span class="bp">self</span><span class="o">.</span><span class="n">_initialize</span><span class="p">()</span>
+</span><span class='line'>      <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">show_detail</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>      <span class="bp">self</span><span class="o">.</span><span class="n">_initialize</span><span class="p">()</span>
+</span><span class='line'>      <span class="bp">self</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">show_detail</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">_initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>      <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;apiKey&#39;</span><span class="p">:</span><span class="n">GingerClient</span><span class="o">.</span><span class="n">api_key</span><span class="p">,</span> <span class="s">&#39;text&#39;</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">sentence</span><span class="p">,</span> <span class="s">&#39;lang&#39;</span><span class="p">:</span><span class="s">&#39;US&#39;</span><span class="p">,</span> <span class="s">&#39;clientVersion&#39;</span><span class="p">:</span><span class="s">&#39;2.0&#39;</span><span class="p">}</span>
+</span><span class='line'>      <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">GingerClient</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+</span><span class='line'>      <span class="n">results</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="s">&#39;LightGingerTheTextResult&#39;</span><span class="p">]</span>
+</span><span class='line'>      <span class="n">ginger_results</span> <span class="o">=</span> <span class="p">[</span><span class="n">GingerResult</span><span class="o">.</span><span class="n">create_from_json</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">results</span><span class="p">]</span>
+</span><span class='line'>      <span class="bp">self</span><span class="o">.</span><span class="n">summary</span> <span class="o">=</span> <span class="n">GingerSummary</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sentence</span><span class="p">,</span> <span class="n">ginger_results</span><span class="p">)</span>   
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">RephraseClient</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span><span class='line'>  <span class="sd">&quot;&quot;&quot;RephraseClient&quot;&quot;&quot;</span>
+</span><span class='line'>  <span class="n">base_url</span> <span class="o">=</span> <span class="s">&#39;http://ro.gingersoftware.com/rephrase/rephrase&#39;</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sentence</span><span class="p">):</span>
+</span><span class='line'>      <span class="nb">super</span><span class="p">(</span><span class="n">RephraseClient</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+</span><span class='line'>      <span class="bp">self</span><span class="o">.</span><span class="n">sentence</span> <span class="o">=</span> <span class="n">sentence</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">rephrase</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>      <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">RephraseClient</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s">&#39;s&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">sentence</span><span class="p">})</span>
+</span><span class='line'>      <span class="n">results</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="s">&#39;Sentences&#39;</span><span class="p">]</span>
+</span><span class='line'>      <span class="n">texts</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="s">&#39;Sentence&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">results</span><span class="p">]</span>
+</span><span class='line'>      <span class="k">return</span> <span class="n">texts</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>続き：<a href="/blog/2013/08/04/ginger/">GingerをAlfredで使えるようにしてみた</a></h3>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Masayuki Ono</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-03T14:58:00+09:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/alfred/'>alfred</a>, <a class='category' href='/blog/categories/english/'>english</a>, <a class='category' href='/blog/categories/ginger/'>ginger</a>, <a class='category' href='/blog/categories/python/'>python</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+<a data-pocket-label="pocket" data-pocket-count="vertical" class="pocket-btn" data-lang="en"></a>
+<script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
+
+  
+
+<a href="http://mono0926.github.io/blog/2013/08/03/ginger/" class="hatena-bookmark-button" data-hatena-bookmark-title="Ginger APIをPythonで叩いてみた" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+
+  
+
+
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mono0926.github.io/blog/2013/08/03/ginger/" data-via="_mono" data-counturl="http://mono0926.github.io/blog/2013/08/03/ginger/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/07/25/leap-motion/" title="Previous Post: Leap Motionが届いた">&laquo; Leap Motionが届いた</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/08/04/ginger/" title="Next Post: GingerをAlfredで使えるようにしてみた">GingerをAlfredで使えるようにしてみた &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- monoHub250 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:250px;height:250px"
+     data-ad-client="ca-pub-6210106378939404"
+     data-ad-slot="4744810299"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script><section>
+  <h1>About Me</h1>
+  <img src="/images/dog.png">
+  <p><a href="https://www.facebook.com/mono0926">Masayuki Ono</a></p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/08/04/ginger/">GingerをAlfredで使えるようにしてみた</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/08/03/ginger/">Ginger APIをPythonで叩いてみた</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/25/leap-motion/">Leap Motionが届いた</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/19/dropbox/">iOSからDropbox Sync APIを使ってみる</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/18/dropbox/">iOSからDropbox新APIのDatastore APIを使ってみる</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Top Categories</h1>
+    <ul id="top-category-list"><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/python'>python (2)</a></li><li><a href='/blog/categories/pandoc'>pandoc (1)</a></li><li><a href='/blog/categories/kindle'>kindle (1)</a></li><li><a href='/blog/categories/self-publish'>self_publish (1)</a></li><li><a href='/blog/categories/reader'>reader (1)</a></li><li><a href='/blog/categories/google'>google (1)</a></li><li><a href='/blog/categories/leap-motion'>leap_motion (1)</a></li><li><a href='/blog/categories/github'>github (1)</a></li></ul>
+</section>
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/mono0926">@mono0926</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'mono0926',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Masayuki Ono -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  - <span class="credit">Theme by <a href="http://www.gehaxelt.in">Gehaxelt</a></span>
+  <span class="credit">and <a href="http://www.it-solutions-neef.de">IT Solutions Neef</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'monoHub';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://mono0926.github.io/blog/2013/08/03/ginger/';
+        var disqus_url = 'http://mono0926.github.io/blog/2013/08/03/ginger/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: alfred | monoHub]]></title>
-  <link href="http://mono0926.github.io/blog/categories/alfred/atom.xml" rel="self"/>
+  <title><![CDATA[Category: python | monoHub]]></title>
+  <link href="http://mono0926.github.io/blog/categories/python/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
   <updated>2013-08-04T12:58:24+09:00</updated>
   <id>http://mono0926.github.io/</id>
@@ -265,116 +265,6 @@ def rephrase(self):
 <p>```</p>
 
 <h3>続き：<a href="/blog/2013/08/04/ginger/">GingerをAlfredで使えるようにしてみた</a></h3>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Octopressへの投稿やdeployをAlfredのWorkflowで]]></title>
-    <link href="http://mono0926.github.io/blog/2013/07/07/octopress-alfred/"/>
-    <updated>2013-07-07T17:32:00+09:00</updated>
-    <id>http://mono0926.github.io/blog/2013/07/07/octopress-alfred</id>
-    <content type="html"><![CDATA[<p>今日初めてOctopressを触ったら、けっこう気に入ったので、さらに気軽に書ける環境を整えれば捗るのではと思い、AlfredのWorkflowを作ってみました。</p>
-
-<p>```sh</p>
-
-<h1>deploy用</h1>
-
-<p>OCTOPATH=&lsquo;/Documents/Git/Private/octopress&rsquo;
-cd ~/$OCTOPATH
-rake gen_deploy
-git add .
-git commit -m &ldquo;deployed via workflow.&rdquo;
-git push
-```</p>
-
-<p>```sh</p>
-
-<h1>投稿用</h1>
-
-<p>OCTOPATH=&lsquo;/Documents/Git/Private/octopress&rsquo;
-cd ~/$OCTOPATH
-OCTOPOST=$(rake new_post[$1]| grep -o &lsquo;source/_posts/.*&rsquo;)
-open ~/$OCTOPATH/$OCTOPOST
-```</p>
-
-<p>すんなり出来るかと思いきや、これだけでは動かず、</p>
-
-<blockquote><p>In my bash script I had to add some extras because Alfred runs the bash script in a subshell and in this subshell the rvm environment is not available by default.
-<a href="http://tooh.github.io/blog/2013/04/23/Alfred_workflow_for_Octopress/">Alfred Workflow for Octopress</a></p></blockquote>
-
-<p>とある通り、下記のような設定をする必要があったようです。
-かなりハマりました（´-ω-｀）
-よく分からないけど、別ファイルにしたら動かないので、とりあえず全て冒頭にこれを挟みました（´-ω-｀）</p>
-
-<!-- more -->
-
-
-<p>```sh</p>
-
-<h1>rv設定</h1>
-
-<p>if [[ -s &ldquo;$HOME/.rvm/scripts/rvm&rdquo; ]] ; then</p>
-
-<pre><code>source "$HOME/.rvm/scripts/rvm"
-</code></pre>
-
-<p>fi
-```</p>
-
-<p>さらに一応previewコマンドも作成
-```sh
-if [[ -s &ldquo;$HOME/.rvm/scripts/rvm&rdquo; ]] ; then</p>
-
-<pre><code>source "$HOME/.rvm/scripts/rvm"
-</code></pre>
-
-<p>fi
-OCTOPATH=&lsquo;/Documents/Git/Private/octopress&rsquo;</p>
-
-<p>cd ~/$OCTOPATH
-rake generate</p>
-
-<h1>open in a browser</h1>
-
-<p>open <a href="http://localhost:4000/">http://localhost:4000/</a>
-rake preview
-```</p>
-
-<p>こちらはコマンドを実行するだけではウインドウが開かれずプロセスがゾンビ状態になってしまうので、Alfredで呼び出す時に
-<code>sh
-open -a Terminal.app preview.sh
-</code>
-と少しだけ工夫。</p>
-
-<p><a href="https://github.com/Temikus/alfred-octopress/blob/master/post.sh">Temikus/alfred-octopress</a> など、同じようなもの作っている人もいたり。</p>
-
-<p>とりあえず、これでいつでもランチャー起動して<code>post titleなど</code>と入力すると、記事が生成されて開かれて、書き終わったら<code>preview</code>で確認して、<code>deploy</code>実行すればサイトへの反映とレポジトリへのPushが行われる便利な環境が出来ました。
-(Alfredのテーマもかっこよくして遊んでました。)</p>
-
-<p><img src="/images/post/post.png" alt="post workflow" /></p>
-
-<h4>Octopress気に入ったけど…</h4>
-
-<p>Qiitaもよく見たらMarkdownでかなり使いやすそう。
-色々ツールもあるし。</p>
-
-<ul>
-<li><a href="http://kobito.qiita.com/">Kobito</a>
-
-<ul>
-<li>Qiitaに投稿出来るクライアントアプリ。同時にGistにスニペット登録も可能。</li>
-</ul>
-</li>
-<li><a href="http://www.gistboxapp.com/">GistBox</a>
-
-<ul>
-<li>Gist用Webアプリ。Chrome App版はネイティブっぽい操作感。</li>
-</ul>
-</li>
-</ul>
-
-
-<p>最近久しく何も書いてなかったけど、あまり脈絡の無い雑多メモなどはこちらで、技術系TipsはQiitaあたりにまとめる習慣付けたい（´・ω・｀）</p>
 ]]></content>
   </entry>
   
