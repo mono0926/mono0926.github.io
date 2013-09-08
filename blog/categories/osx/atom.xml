@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: osx | monoHub]]></title>
+  <link href="http://mono0926.github.io/blog/categories/osx/atom.xml" rel="self"/>
+  <link href="http://mono0926.github.io/"/>
+  <updated>2013-09-09T07:54:30+09:00</updated>
+  <id>http://mono0926.github.io/</id>
+  <author>
+    <name><![CDATA[Masayuki Ono]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Pythonの環境構築]]></title>
+    <link href="http://mono0926.github.io/blog/2013/09/09/python/"/>
+    <updated>2013-09-09T07:49:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/09/09/python</id>
+    <content type="html"><![CDATA[<p>度々ぐぐったりするので、メモ。
+少しずつ、加筆修正していく。</p>
+
+<p><a href="http://www.sicafe.net/macPackageManageTips/html/homebrewPythonInstall.html">Mac OS X Lion / homebrew にて python の環境を整える</a></p>
+]]></content>
+  </entry>
+  
+</feed>
