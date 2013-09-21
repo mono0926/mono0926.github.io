@@ -9,9 +9,10 @@
   <meta name="author" content="Masayuki Ono">
 
   
-  <meta name="description" content="度々ぐぐったりするので、メモ。
-少しずつ、加筆修正していく。 Mac OS X Lion / homebrew にて python の環境を整える
-">
+  <meta name="description" content="iOS7関連のNDA解禁ということで、色々記事が増えてきたので、メモ。
+少しずつ追記していきながら、落ち着いたところで、集約したような記事書くかも。 iOS 7対応事例 FastCheckin
+iOS6からiOS7への対応
+iOS 7向けアプリ開発時の注意点 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -81,6 +82,54 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/09/21/ios7/">iOS7対応記事のまとめ</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-21T19:55:00+09:00" pubdate data-updated="true">Sep 21<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>iOS7関連のNDA解禁ということで、色々記事が増えてきたので、メモ。
+少しずつ追記していきながら、落ち着いたところで、集約したような記事書くかも。</p>
+
+<ul>
+<li><a href="http://koogawa.hateblo.jp/entry/2013/09/19/025424">iOS 7対応事例 FastCheckin</a></li>
+<li><a href="http://laboyukai.blogspot.jp/2013/09/ios6ios7.html">iOS6からiOS7への対応</a></li>
+<li><a href="http://skyarts.com/blog/jp/skyarts/?p=29327">iOS 7向けアプリ開発時の注意点</a></li>
+<li><a href="http://qiita.com/monoqlo/items/cfc3aa018a5cb7df0deb">iOS7でNavigationBarに入れたSearchBarにキャンセルボタンを出現させる方法</a></li>
+<li><a href="http://qiita.com/hanapage/items/7d58293f5f7234437d79">iOS6 &ndash;> iOS7変更対応</a></li>
+<li><a href="http://qiita.com/ne_ko_/items/5da4b2a247e65431c7cf">iOS 6/7 で UILabel などの見た目がずれるよ〜とお嘆きのあなたへ</a></li>
+<li><a href="http://qiita.com/y_matsuwitter/items/bd41493f098dfa984f2b">CocoapodsとXcode5の組み合わせでエラー出た+解決した</a></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -613,88 +662,6 @@ Linux, Mac, Windowsなどに対応。</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/07/octopress-alfred/">Octopressへの投稿やdeployをAlfredのWorkflowで</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-07T17:32:00+09:00" pubdate data-updated="true">Jul 7<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>今日初めてOctopressを触ったら、けっこう気に入ったので、さらに気軽に書ける環境を整えれば捗るのではと思い、AlfredのWorkflowを作ってみました。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># deploy用</span>
-</span><span class='line'><span class="nv">OCTOPATH</span><span class="o">=</span><span class="s1">&#39;/Documents/Git/Private/octopress&#39;</span>
-</span><span class='line'><span class="nb">cd</span> ~/<span class="nv">$OCTOPATH</span>
-</span><span class='line'>rake gen_deploy
-</span><span class='line'>git add .
-</span><span class='line'>git commit -m <span class="s2">&quot;deployed via workflow.&quot;</span>
-</span><span class='line'>git push
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># 投稿用</span>
-</span><span class='line'><span class="nv">OCTOPATH</span><span class="o">=</span><span class="s1">&#39;/Documents/Git/Private/octopress&#39;</span>
-</span><span class='line'><span class="nb">cd</span> ~/<span class="nv">$OCTOPATH</span>
-</span><span class='line'><span class="nv">OCTOPOST</span><span class="o">=</span><span class="k">$(</span>rake new_post<span class="o">[</span><span class="nv">$1</span><span class="o">]</span>| grep -o <span class="s1">&#39;source/_posts/.*&#39;</span><span class="k">)</span>
-</span><span class='line'>open ~/<span class="nv">$OCTOPATH</span>/<span class="nv">$OCTOPOST</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>すんなり出来るかと思いきや、これだけでは動かず、</p>
-
-<blockquote><p>In my bash script I had to add some extras because Alfred runs the bash script in a subshell and in this subshell the rvm environment is not available by default.
-<a href="http://tooh.github.io/blog/2013/04/23/Alfred_workflow_for_Octopress/">Alfred Workflow for Octopress</a></p></blockquote>
-
-<p>とある通り、下記のような設定をする必要があったようです。
-かなりハマりました（´-ω-｀）
-よく分からないけど、別ファイルにしたら動かないので、とりあえず全て冒頭にこれを挟みました（´-ω-｀）</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/07/07/octopress-alfred/">続きを読むヽ(・ω・｀）</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -723,6 +690,10 @@ Linux, Mac, Windowsなどに対応。</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/09/21/ios7/">iOS7対応記事のまとめ</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/09/09/python/">Pythonの環境構築</a>
       </li>
     
@@ -738,15 +709,11 @@ Linux, Mac, Windowsなどに対応。</p>
         <a href="/blog/2013/07/25/leap-motion/">Leap Motionが届いた</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2013/07/19/dropbox/">iOSからDropbox Sync APIを使ってみる</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Top Categories</h1>
-    <ul id="top-category-list"><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/pandoc'>pandoc (1)</a></li><li><a href='/blog/categories/self-publish'>self_publish (1)</a></li><li><a href='/blog/categories/kindle'>kindle (1)</a></li><li><a href='/blog/categories/leap-motion'>leap_motion (1)</a></li><li><a href='/blog/categories/reader'>reader (1)</a></li><li><a href='/blog/categories/google'>google (1)</a></li><li><a href='/blog/categories/osx'>osx (1)</a></li><li><a href='/blog/categories/github'>github (1)</a></li></ul>
+    <ul id="top-category-list"><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/osx'>OSX (1)</a></li><li><a href='/blog/categories/leap-motion'>leap_motion (1)</a></li><li><a href='/blog/categories/osx'>osx (1)</a></li><li><a href='/blog/categories/ios7'>iOS7 (1)</a></li><li><a href='/blog/categories/pandoc'>pandoc (1)</a></li><li><a href='/blog/categories/self-publish'>self_publish (1)</a></li><li><a href='/blog/categories/kindle'>kindle (1)</a></li><li><a href='/blog/categories/ios'>iOS (1)</a></li></ul>
 </section>
 <section>
   <h1>GitHub Repos</h1>

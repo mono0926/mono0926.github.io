@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: OSX | monoHub]]></title>
-  <link href="http://mono0926.github.io/blog/categories/osx/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Xcode | monoHub]]></title>
+  <link href="http://mono0926.github.io/blog/categories/xcode/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
   <updated>2013-09-21T20:00:22+09:00</updated>
   <id>http://mono0926.github.io/</id>
