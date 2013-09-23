@@ -18,3 +18,4 @@ iOS7関連のNDA解禁ということで、色々記事が増えてきたので�
 - [CocoapodsとXcode5の組み合わせでエラー出た+解決した](http://qiita.com/y_matsuwitter/items/bd41493f098dfa984f2b)
 - [iOS7でステータスバーが被る問題への対応](http://d.hatena.ne.jp/Kazzz/20130923/p1)
 - [iOS7のarm64対応でやったこと](http://blog.livedoor.jp/tek_nishi/archives/8069300.html)
+- [iOS7でナビゲーションバーやステータスバーの文字色を変える](http://qiita.com/yimajo/items/7051af0919b5286aecfe)
