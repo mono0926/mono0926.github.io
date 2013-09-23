@@ -16,3 +16,5 @@ iOS7関連のNDA解禁ということで、色々記事が増えてきたので�
 - [iOS6 -> iOS7変更対応](http://qiita.com/hanapage/items/7d58293f5f7234437d79)
 - [iOS 6/7 で UILabel などの見た目がずれるよ〜とお嘆きのあなたへ](http://qiita.com/ne_ko_/items/5da4b2a247e65431c7cf)
 - [CocoapodsとXcode5の組み合わせでエラー出た+解決した](http://qiita.com/y_matsuwitter/items/bd41493f098dfa984f2b)
+- [iOS7でステータスバーが被る問題への対応](http://d.hatena.ne.jp/Kazzz/20130923/p1)
+- [iOS7のarm64対応でやったこと](http://blog.livedoor.jp/tek_nishi/archives/8069300.html)
