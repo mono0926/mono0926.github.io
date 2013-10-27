@@ -4,7 +4,7 @@
   <title><![CDATA[Category: google | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/google/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2013-09-24T09:29:49+09:00</updated>
+  <updated>2013-10-27T12:13:40+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -12,6 +12,63 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mobile Backend Starter for iOSを試してみた]]></title>
+    <link href="http://mono0926.github.io/blog/2013/10/12/mobilebackendstarterforios/"/>
+    <updated>2013-10-12T18:26:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/10/12/mobilebackendstarterforios</id>
+    <content type="html"><![CDATA[<p>先日iOS版のMobile Backend Starterがリリースされたので、調査。
+まずは、<a href="https://developers.google.com/cloud/samples/mbs/">Mobile Backend Starter</a>に行って、色々眺めてみる。</p>
+
+<p>プッシュ通知の面倒を見てくれるのが目玉だと思うけど、それ以外にも色々できそう。</p>
+
+<ul>
+<li>Optional server-side coding</li>
+<li>Cloud Datastore</li>
+<li>Push Notifications</li>
+<li>Event Driven Programming</li>
+<li>User authentication
+
+<ul>
+<li>Googleアカウントでの認証</li>
+</ul>
+</li>
+<li>Per-object access</li>
+<li>Built to scale
+
+<ul>
+<li>スケール対応だけど、GAEと同じプライスモデルで課金される</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Getting Started</h2>
+
+<p>とりあえずドキュメントのGetting Startedを試してみる。</p>
+
+<h3><a href="https://developers.google.com/cloud/samples/mbs/deploy_backend">Deploy the Backend</a></h3>
+
+<p>cloud.google.com(一時URLなのでリンク出来ない)に飛んで、"Try It Now"をクリック。
+Projectが出来たら、"Mobile sample app"というリンクをクリック。
+数分時間がかかるので、お酒に手を出してしまった（´-ω-｀）</p>
+
+<p>Settingsで「Authentication / Authorization」をOpenにして、以下のyour-project-idを生成したProjectのものに置き換えると、定義されたAPI一覧に飛べる。
+<a href="https://your-project-id.appspot.com/_ah/api/explorer">https://your-project-id.appspot.com/_ah/api/explorer</a></p>
+
+<p>これで、サーバー側の準備が整ったらしい。</p>
+
+<h3><a href="https://developers.google.com/cloud/samples/mbs/ios/">Run the iOS Sample</a></h3>
+
+<p>いきなりXcode4.6で作業するようにと書いてあったけど、多分関係ないのでXcode5で作業。</p>
+
+<p>mbs.mono.com</p>
+
+<p><a href="https://your-project-id.appspot.com/admin/configure.jsp">https://your-project-id.appspot.com/admin/configure.jsp</a>
+<a href="https://boxwood-atom-366.appspot.com/admin/configure.jsp">https://boxwood-atom-366.appspot.com/admin/configure.jsp</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Google Readerが終わって…]]></title>

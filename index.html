@@ -9,10 +9,7 @@
   <meta name="author" content="Masayuki Ono">
 
   
-  <meta name="description" content="iOS7関連のNDA解禁ということで、色々記事が増えてきたので、メモ。
-少しずつ追記していきながら、落ち着いたところで、集約したような記事書くかも。 iOS 7対応事例 FastCheckin
-iOS6からiOS7への対応
-iOS 7向けアプリ開発時の注意点 &hellip;">
+  <meta name="description" content="今持っているMac Proの2010年モデルももう丸3年以上経っていたり、2011年モデルのMac mini(サーバー用)も切り捨てて1本化したいなと思ってたところに、新Mac Proが発表されて、ちょっと考えてたらほしくなってしまった。 購買意欲がそそられた理由 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -88,6 +85,395 @@ iOS 7向けアプリ開発時の注意点 &hellip;">
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2013/10/27/mac-pro/">Mac Proの新モデル(通称ゴミ箱)を買うことにした</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-27T11:24:00+09:00" pubdate data-updated="true">Oct 27<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>今持っているMac Proの2010年モデルももう丸3年以上経っていたり、2011年モデルのMac mini(サーバー用)も切り捨てて1本化したいなと思ってたところに、新Mac Proが発表されて、ちょっと考えてたらほしくなってしまった。</p>
+
+<h2>購買意欲がそそられた理由</h2>
+
+<p>省電力というのが意外と一番大きな理由。
+Mac Proの消費電力が、アイドル時に43 Wということで、常時起動でも700円/月程度で、Mac miniの用途をMac Proに一本化できそう。</p>
+
+<p>新Mac Proを常時起動にすると、Mac Pro1台で下記の用途全てまかなえる。</p>
+
+<ul>
+<li>普段利用(OSX)</li>
+<li>OSXサーバー</li>
+<li>Windows開発機</li>
+<li>Windowsサーバー</li>
+</ul>
+
+
+<p>また必要に応じてiPadやWindows RT機からリモートアクセスとかすると、家には1台 + 持ち歩き用に安価軽量なモバイル端末という、組み合わせができる。
+常時起動なので、ファイルや音楽・動画などメディア系リソースへのアクセスもいつでも出来るし。</p>
+
+<p>今、SSD・フルHDのそこそこ良いWindowsノートも持っているけど、これも次の買い換えでSurface(非Pro)とかにしたりで持ち運び楽かつ買い換えコストも抑えられる。
+そもそも、iPad AirとかでWindows開発環境にアクセスすればいいので、Windowsのモバイル端末は不要になるかも(もちろんネット環境悪いところでは制約が出るけど)。</p>
+
+<h2>ネック</h2>
+
+<p>後述のお金の問題に加えて、以下の作業が面倒。</p>
+
+<h3>増設したHDD</h3>
+
+<p>Mac Proに入れているSSD(256GB)x2・HDD(2TB)x2・HDD(3TB)x1を、新Mac Proだと外に出して繋がないと行けなくなる(SSDのうち1台はメインドライブなので不要だけど)。
+そのケース・ドライブを用意したりとか、その配線が微妙かなあとか、ちょっと悩みどころ。</p>
+
+<h3><a href="http://mono-comp.com/">旧ブログ</a></h3>
+
+<p>今Mac miniで動かしている、IIS + WordPressで構築した<a href="http://mono-comp.com/">旧ブログ</a> の移行が面倒。
+そもそももう更新していないので畳むか、変換スクリプト書いて、こちらのブログに移行してもよいかも。</p>
+
+<h3>その他Windowsサーバー環境移行</h3>
+
+<p><a href="http://apps.microsoft.com/windows/ja-jp/app/amazon-sales-rank/17848073-edbd-462d-abb8-2f77d2a2aadf">Amazon Sales Rank</a>のサーバー環境の移行は、1・2時間くらいで出来そう。</p>
+
+<p>少し前まで、Windows系のソース管理は自前のTFSでやっていたけど、それもGitHubに移行したのであとは特に必要な作業無さそう。</p>
+
+<p>そして、新Mac Proに乗り換えたら仮想マシン立てるつもりなので、その後の移行作業はとても楽になるはず。</p>
+
+<h2>移行コスト</h2>
+
+<p>計算してみたら、デスクトップ系のMac製品は中古相場もあまり高くなく、思っていたよりかかる模様。
+Mac Proはヤフオク見るともっと相場高いので、そちらもありかも。</p>
+
+<ul>
+<li>新Mac Pro：カスタマイズオーダーや、自分でカスタマイズしたり外付け用ドライブ含めて、〜40万円</li>
+<li>Apple Mac Pro MC560J/A (Mid 2010)売却：〜5.8万円 (じゃんぱら価格)</li>
+<li>Mac mini MC815J/A (Mid 2011)売却：〜3.1万円 (じゃんぱら価格)</li>
+</ul>
+
+
+<p>計〜30万円程度かかるので、けっこう高い（´-ω-｀）</p>
+
+<h2>結論</h2>
+
+<p>「Mac Proの新モデル(通称ゴミ箱)を買うことにした」ものの、今はまだ買わない。
+会社のMacBook Pro Retina 15インチ(2012年モデル)と良くも悪くもほぼ性能一緒で快適なので、上記の1台で色々な用途をまかなえること以外は、あまり買い換える理由ないというのが大きい。
+OSも、ハードウェア性能を要求するどころか、逆に同じハードでも快適に動く方向にシフトしてきているし。</p>
+
+<p>というわけで、キリよく5年くらい経った2015年夏くらいに買い換えたい。
+今のMac Proも20万円ちょっと + 色々増設で30万円近くしたけど、5で割るとそんなに高くないし、次のモデルも5年くらい十分持つだろうし、基本的に高価なモバイル端末買わずに済むようになるかなとか考えるとけっこうありかと。</p>
+
+<p>あと、ヤフオクに強気価格(箱無し・メモリ16GB増設済みで15万円など)で出しておいて、運良く売れたら買い換えというのもやろうと思っていたり。
+さすがに手元にMacマシンが無くなるときついので、12月になってMac Proが発売されたらにしよう。</p>
+
+<p>とりあえず3年ちょっと、何一つトラブル無く動いているのは素晴らしいし、外観もかっこいいので、またMac Pro買おうと思った次第。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/10/27/mac-pro/">Mac Pro</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-27T00:00:00+09:00" pubdate data-updated="true">Oct 27<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><!DOCTYPE html><html><head><meta charset="utf-8"><style>html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body{
+  color:#444;
+  font-family:Georgia, Palatino, &#8216;Palatino Linotype&#8217;, Times, &#8216;Times New Roman&#8217;,
+              &#8220;Hiragino Sans GB&#8221;, &#8220;STXihei&#8221;, &#8220;微软雅黑&#8221;, serif;
+  font-size:12px;
+  line-height:1.5em;
+  background:#fefefe;
+  width: 45em;
+  margin: 10px auto;
+  padding: 1em;
+  outline: 1300px solid #FAFAFA;
+}
+
+a{ color: #0645ad; text-decoration:none;}
+a:visited{ color: #0b0080; }
+a:hover{ color: #06e; }
+a:active{ color:#faa700; }
+a:focus{ outline: thin dotted; }
+a:hover, a:active{ outline: 0; }
+
+span.backtick {
+  border:1px solid #EAEAEA;
+  border-radius:3px;
+  background:#F8F8F8;
+  padding:0 3px 0 3px;
+}
+
+::-moz-selection{background:rgba(255,255,0,0.3);color:#000}
+::selection{background:rgba(255,255,0,0.3);color:#000}
+
+a::-moz-selection{background:rgba(255,255,0,0.3);color:#0645ad}
+a::selection{background:rgba(255,255,0,0.3);color:#0645ad}
+
+p{
+margin:1em 0;
+}
+
+img{
+max-width:100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-weight:normal;
+color:#111;
+line-height:1em;
+}
+h4,h5,h6{ font-weight: bold; }
+h1{ font-size:2.5em; }
+h2{ font-size:2em; border-bottom:1px solid silver; padding-bottom: 5px; }
+h3{ font-size:1.5em; }
+h4{ font-size:1.2em; }
+h5{ font-size:1em; }
+h6{ font-size:0.9em; }
+
+blockquote{
+color:#666666;
+margin:0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
+
+
+pre , code, kbd, samp { 
+  color: #000; 
+  font-family: monospace; 
+  font-size: 0.88em; 
+  border-radius:3px;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC; 
+}
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px 12px;}
+pre code { border: 0px !important; padding: 0;}
+code { padding: 0 3px 0 3px; }
+
+b, strong { font-weight: bold; }
+
+dfn { font-style: italic; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 2em; }
+li p:last-child { margin:0 }
+dd { margin: 0 0 0 2em; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+@media only screen and (min-width: 480px) {
+body{font-size:14px;}
+}
+
+@media only screen and (min-width: 768px) {
+body{font-size:16px;}
+}
+
+@media print {
+  * { background: transparent !important; color: black !important; filter:none !important; -ms-filter: none !important; }
+  body{font-size:12pt; max-width:100%; outline:none;}
+  a, a:visited { text-decoration: underline; }
+  hr { height: 1px; border:0; border-bottom:1px solid black; }
+  a[href]:after { content: &#8221; (&#8221; attr(href) &#8220;)&#8221;; }
+  abbr[title]:after { content: &#8221; (&#8221; attr(title) &#8220;)&#8221;; }
+  .ir a:after, a[href^=&#8221;javascript:&#8221;]:after, a[href^=&#8221;#&#8221;]:after { content: &#8220;&#8221;; }
+  pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page :left { margin: 15mm 20mm 15mm 10mm; }
+  @page :right { margin: 15mm 10mm 15mm 20mm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+</style><title>2013-10-27-mac-pro</title></head><body><hr />
+<p>layout: post
+title: &#8220;Mac Proの新モデル(通称ゴミ箱)を買うことにした&#8221;
+date: 2013-10-27 11:24
+comments: true
+categories: osx mac shopping</p>
+<hr />
+<p>今持っているMac Proの2010年モデルももう丸3年以上経っていたり、2011年モデルのMac mini(サーバー用)も切り捨てて1本化したいなと思ってたところに、新Mac Proが発表されて、ちょっと考えてたらほしくなってしまった。</p>
+<h2 id="_1">購買意欲がそそられた理由</h2>
+<p>省電力というのが意外と一番大きな理由。
+Mac Proの消費電力が、アイドル時に43 Wということで、常時起動でも700円/月程度で、Mac miniの用途をMac Proに一本化できそう。</p>
+<p>新Mac Proを常時起動にすると、Mac Pro1台で下記の用途全てまかなえる。</p>
+<ul>
+<li>普段利用</li>
+<li>OSXサーバー</li>
+<li>Windows開発機</li>
+<li>Windowsサーバー</li>
+</ul>
+<p>また必要に応じてiPadやWindows RT機からリモートアクセスとかすると、家には1台 + 持ち歩く安価軽量なモバイル端末という、組み合わせができる。
+常時起動なので、ファイルや音楽・動画などメディア系リソースへのアクセスもいつでも出来るし。</p>
+<p>SSD・フルHDのそこそこ良いWindowsノートも持っているけど、これも次の買い換えでSurface(非Pro)とかにしたりで持ち運び楽かつ買い換えコストも抑えられる。
+そもそも、iPad AirとかでWindows開発環境にアクセスすればいいので、Windowsのモバイル端末は不要になるかも(もちろんネット環境悪いところでは制約が出るけど)。</p>
+<h2 id="_2">ネック</h2>
+<p>後述のお金の問題に加えて、以下の作業が面倒。
+だけど、</p>
+<h3 id="hdd">HDD</h3>
+<p>Mac Proに入れているSSD(256GB)x2・HDD(2TB)x2・HDD(3TB)x1を、新Mac Proだと外に出して繋がないと行けなくなる(SSDのうち1台はメインドライブなので不要だけど)。
+そのケース・ドライブを用意したりとか、その配線が微妙かなあとか、ちょっと悩みどころ。</p>
+<h3 id="_3"><a href="http://mono-comp.com/">旧ブログ</a></h3>
+<p>今Mac miniで動かしている、IIS + WordPressで構築した<a href="http://mono-comp.com/">旧ブログ</a> の移行が面倒。
+そもそももう更新していないので畳むか、変換スクリプト書いて、こちらのブログに移行してもよいかも。</p>
+<h3 id="windows">その他Windowsサーバー環境移行</h3>
+<p><a href="http://apps.microsoft.com/windows/ja-jp/app/amazon-sales-rank/17848073-edbd-462d-abb8-2f77d2a2aadf">Amazon Sales Rank</a>のサーバー環境の移行は、1・2時間くらいで出来そう。</p>
+<p>少し前まで、Windows系のソース管理は自前のTFSでやっていたけど、それもGitHubに移行したのであとは特に必要な作業無さそう。</p>
+<h2 id="_4">予算</h2>
+<p>計算してみたら、思っていたよりかかる模様。</p>
+<ul>
+<li>Mac Proかスタマイズオーダー・自分でカスタマイズしたり外付け用ドライブ含めて〜40万円
+Apple Mac Pro MC560J/A (Mid 2010)売却：〜5.8万円
+Mac mini MC815J/A (Mid 2011)売却：〜3.1万円</li>
+</ul>
+<p>計〜30万円程度かかるので、けっこう高い（´-ω-｀）</p></body></html></div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/10/12/mobilebackendstarterforios/">Mobile Backend Starter for iOSを試してみた</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-12T18:26:00+09:00" pubdate data-updated="true">Oct 12<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>先日iOS版のMobile Backend Starterがリリースされたので、調査。
+まずは、<a href="https://developers.google.com/cloud/samples/mbs/">Mobile Backend Starter</a>に行って、色々眺めてみる。</p>
+
+<p>プッシュ通知の面倒を見てくれるのが目玉だと思うけど、それ以外にも色々できそう。</p>
+
+<ul>
+<li>Optional server-side coding</li>
+<li>Cloud Datastore</li>
+<li>Push Notifications</li>
+<li>Event Driven Programming</li>
+<li>User authentication
+
+<ul>
+<li>Googleアカウントでの認証</li>
+</ul>
+</li>
+<li>Per-object access</li>
+<li>Built to scale
+
+<ul>
+<li>スケール対応だけど、GAEと同じプライスモデルで課金される</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Getting Started</h2>
+
+<p>とりあえずドキュメントのGetting Startedを試してみる。</p>
+
+<h3><a href="https://developers.google.com/cloud/samples/mbs/deploy_backend">Deploy the Backend</a></h3>
+
+<p>cloud.google.com(一時URLなのでリンク出来ない)に飛んで、&#8221;Try It Now&#8221;をクリック。
+Projectが出来たら、&#8221;Mobile sample app&#8221;というリンクをクリック。
+数分時間がかかるので、お酒に手を出してしまった（´-ω-｀）</p>
+
+<p>Settingsで「Authentication / Authorization」をOpenにして、以下のyour-project-idを生成したProjectのものに置き換えると、定義されたAPI一覧に飛べる。
+<a href="https://your-project-id.appspot.com/_ah/api/explorer">https://your-project-id.appspot.com/_ah/api/explorer</a></p>
+
+<p>これで、サーバー側の準備が整ったらしい。</p>
+
+<h3><a href="https://developers.google.com/cloud/samples/mbs/ios/">Run the iOS Sample</a></h3>
+
+<p>いきなりXcode4.6で作業するようにと書いてあったけど、多分関係ないのでXcode5で作業。</p>
+
+<p>mbs.mono.com</p>
+
+<p><a href="https://your-project-id.appspot.com/admin/configure.jsp">https://your-project-id.appspot.com/admin/configure.jsp</a>
+<a href="https://boxwood-atom-366.appspot.com/admin/configure.jsp">https://boxwood-atom-366.appspot.com/admin/configure.jsp</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2013/09/21/ios7/">iOS7対応記事のまとめ</a></h1>
     
     
@@ -125,7 +511,6 @@ iOS 7向けアプリ開発時の注意点 &hellip;">
 <li><a href="http://d.hatena.ne.jp/Kazzz/20130923/p1">iOS7でステータスバーが被る問題への対応</a></li>
 <li><a href="http://blog.livedoor.jp/tek_nishi/archives/8069300.html">iOS7のarm64対応でやったこと</a></li>
 <li><a href="http://qiita.com/yimajo/items/7051af0919b5286aecfe">iOS7でナビゲーションバーやステータスバーの文字色を変える</a></li>
-<li><a href="http://qiita.com/jazzsasori/items/cbd4650684a4f715e199">iOS 7 でステータスバーを隠す方法</a></li>
 </ul>
 
 </div>
@@ -472,200 +857,6 @@ KinectはごくたまにXboxで遊んだりと、なかなか好きなデバイ�
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/17/dropbox/">iOSからDropbox新APIのDrop-ins(Chooser)を使ってみる</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-17T12:51:00+09:00" pubdate data-updated="true">Jul 17<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>古い記事だけど、<a href="http://blog.syuhari.jp/archives/2284">[iPhone/iPad] Dropbox API を使ってみた</a> をさらっと見て作業開始。<br/>
-開発者登録は自力じゃなかなか見つからなかったけど、<a href="https://www.dropbox.com/developers/apply?cont=/developers/apps">Dropbox API terms and conditions</a>。<br/>
-権限の設定などは初回の作成時以外は変更出来ないっぽいので、慎重に。</p>
-
-<h3>Drop-ins</h3>
-
-<p><a href="https://www.dropbox.com/developers/dropins/chooser/ios">Using the Chooser (iOS)</a>を読んでみた。<br/>
-<a href="http://dl.dropboxusercontent.com/s/uf3893wfnk4f3p9/dropbox-ios-chooser-sdk-1.0.zip">Download iOS SDK</a>に同梱のサンプルプロジェクトを実行しながらドキュメント読めばすごく分かりやすい。</p>
-
-<h4>導入</h4>
-
-<p><a href="http://dl.dropboxusercontent.com/s/uf3893wfnk4f3p9/dropbox-ios-chooser-sdk-1.0.zip">Download iOS SDK</a> に入っているDBChooser.framework と DBChooser.bundle を対象のプロジェクトに突っ込むだけ。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/07/17/dropbox/">続きを読むヽ(・ω・｀）</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/14/self-publish/">電子書籍自費出版系情報まとめ</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-14T09:17:00+09:00" pubdate data-updated="true">Jul 14<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>最近、電子書籍系のアプリ開発中で、色々調べています。
-ちょっと情報が頭に乗り切らなくなってきたので、整理。</p>
-
-<hr />
-
-<h3>ツール</h3>
-
-<h4><a href="http://www.amazon.com/gp/feature.html?ie=UTF8&amp;docId=1000765211">Kindlegen</a></h4>
-
-<p>Amazon謹製の、HTMLやEPUB形式からMobi形式に変換するツール。
-成果物は、MacなどのKindleアプリでも見られるし、<a href="http://www.amazon.com/gp/feature.html/ref=amb_link_359603222_5?ie=UTF8&amp;docId=1000765261&amp;pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=center-8&amp;pf_rd_r=05Y1JB4SCG6HF48FKJFX&amp;pf_rd_t=1401&amp;pf_rd_p=1342416142&amp;pf_rd_i=1000765211">Kindle Previewer</a>で、各プラットフォームでの動作チェック可能。</p>
-
-<p>クラス構造を一旦HTMLに落とし込んで、Mobi形式にエクスポートするところまでは出来たけど、いくつか警告が出てたりしてまだ対処出来ていない状態。
-あと、ライセンス的にアプリのサーバー側で使ったりOKなのか気になる。</p>
-
-<ul>
-<li>リファレンスなど
-
-<ul>
-<li><a href="http://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf">Amazon Kindle Publishing Guidelines</a>
-
-<ul>
-<li>和訳：<a href="http://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines_JP.pdf">Amazon Kindle パブリッシング・ガイドライン</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-
-<h4><a href="http://johnmacfarlane.net/pandoc/">Pandoc</a></h4>
-
-<p>ドキュメント形式変換ツール。Markdown, HTMLなどからEPUB, PFDなどなどなど色々変換可能。
-Linux, Mac, Windowsなどに対応。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/07/14/self-publish/">続きを読むヽ(・ω・｀）</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/07/07/google-reader-feedly/">Google Readerが終わって…</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-07-07T21:27:00+09:00" pubdate data-updated="true">Jul 7<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>一日に500-1000件消費するくらいのRSSリーダーヘビーユーザーでしたが、意外と困っていません。</p>
-
-<ul>
-<li>Google Reader 終わる前
-
-<ul>
-<li>iPhone: Byline + たまにReeder</li>
-<li>iPad: 同上</li>
-<li>Mac: Reeder</li>
-<li>Web: Google Reader (Windows環境の時など、たまーに見る程度)</li>
-</ul>
-</li>
-<li>Google Reader 終わった後
-
-<ul>
-<li>iPhone: Byline + たまにReeder</li>
-<li>iPad: Byline (Reeder未対応)</li>
-<li>Mac: FeedlyのWebアプリ (Reeder未対応)</li>
-<li>Web: FeedlyのWebアプリ</li>
-</ul>
-</li>
-</ul>
-
-
-<p>と、あまり変わって無い上に、FeedlyのWebアプリの操作感(どこを押せば何が出来るかなど)にあまり慣れていないものの、J(次)・K(前)・V(新しいページで記事開く)のショートカットが一緒なことに気づいてからはほぼノンストレスです（´-ω-｀）</p>
-
-<p>ただ、やっぱりMacでReederを使ってサクサク見ていた感じには劣るので、早くReeder for Macがアップデートされてほしいところです（´・ω・｀）</p>
-
-<p>…とは別にこの機会に、SmartNewsで大衆ネタ・ゴシップ系などは拾い読みしているので、RSSリーダーは技術系ネタに絞って整理したいなとかも考えていたり。なかなか面倒ですが（´-ω-｀）</p>
-
-<h3>追記</h3>
-
-<p><a href="https://itunes.apple.com/jp/app/readkit/id588726889?l=en&amp;mt=12">ReadKit</a> というアプリが素晴らしく、常用し始めましたヽ(・ω・｀）</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -694,6 +885,18 @@ Linux, Mac, Windowsなどに対応。</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/10/27/mac-pro/">Mac Proの新モデル(通称ゴミ箱)を買うことにした</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/27/mac-pro/">Mac Pro</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/12/mobilebackendstarterforios/">Mobile Backend Starter for iOSを試してみた</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/09/21/ios7/">iOS7対応記事のまとめ</a>
       </li>
     
@@ -701,23 +904,11 @@ Linux, Mac, Windowsなどに対応。</p>
         <a href="/blog/2013/09/09/python/">Pythonの環境構築</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2013/08/04/ginger/">GingerをAlfredで使えるようにしてみた</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/08/03/ginger/">Ginger APIをPythonで叩いてみた</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/25/leap-motion/">Leap Motionが届いた</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Top Categories</h1>
-    <ul id="top-category-list"><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/osx'>OSX (1)</a></li><li><a href='/blog/categories/leap-motion'>leap_motion (1)</a></li><li><a href='/blog/categories/osx'>osx (1)</a></li><li><a href='/blog/categories/ios7'>iOS7 (1)</a></li><li><a href='/blog/categories/pandoc'>pandoc (1)</a></li><li><a href='/blog/categories/self-publish'>self_publish (1)</a></li><li><a href='/blog/categories/kindle'>kindle (1)</a></li><li><a href='/blog/categories/ios'>iOS (1)</a></li></ul>
+    <ul id="top-category-list"><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/ios'>iOS (2)</a></li><li><a href='/blog/categories/google'>google (2)</a></li><li><a href='/blog/categories/osx'>osx (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/leap-motion'>leap_motion (1)</a></li><li><a href='/blog/categories/ios7'>iOS7 (1)</a></li><li><a href='/blog/categories/xcode'>Xcode (1)</a></li><li><a href='/blog/categories/pandoc'>pandoc (1)</a></li><li><a href='/blog/categories/self-publish'>self_publish (1)</a></li></ul>
 </section>
 <section>
   <h1>GitHub Repos</h1>
