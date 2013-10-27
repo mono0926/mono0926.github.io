@@ -19,3 +19,4 @@ iOS7関連のNDA解禁ということで、色々記事が増えてきたので�
 - [iOS7でステータスバーが被る問題への対応](http://d.hatena.ne.jp/Kazzz/20130923/p1)
 - [iOS7のarm64対応でやったこと](http://blog.livedoor.jp/tek_nishi/archives/8069300.html)
 - [iOS7でナビゲーションバーやステータスバーの文字色を変える](http://qiita.com/yimajo/items/7051af0919b5286aecfe)
+- [iOS 7 でステータスバーを隠す方法](http://qiita.com/jazzsasori/items/cbd4650684a4f715e199)
