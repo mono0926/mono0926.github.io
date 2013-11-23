@@ -4,7 +4,7 @@
   <title><![CDATA[Category: haskell | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/haskell/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2013-11-23T19:38:20+09:00</updated>
+  <updated>2013-11-23T21:06:21+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -103,7 +103,7 @@ brew install haskell-platform # これがなんだか理解していない
 <p>コンパイルは<code>ghc --make hoge.hs</code>だけで出来るので、簡単。<code>hs hoge.hs</code>と打つと、以下実行してくれるオレオレコマンドかエイリアスか作ったらさらに手軽になりそう。</p>
 
 <p><code>
-ghc -o hoge hoge.hs
+ghc --make hoge.hs
 ./hoge
 </code></p>
 

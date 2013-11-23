@@ -4,7 +4,7 @@
   <title><![CDATA[monoHub]]></title>
   <link href="http://mono0926.github.io/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2013-11-23T19:38:20+09:00</updated>
+  <updated>2013-11-23T21:06:21+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -106,7 +106,7 @@ Mavericksなどの場合は環境によっては前もって<a href="https://dev
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>ghc -o hoge hoge.hs
+</pre></td><td class='code'><pre><code class=''><span class='line'>ghc --make hoge.hs
 </span><span class='line'>./hoge</span></code></pre></td></tr></table></div></figure>
 
 
