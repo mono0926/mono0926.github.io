@@ -21,6 +21,8 @@ footer: true
 
 ### My Applications
 #### Ripplex Inc.
+- [Scene ありそうでなかった、写真アプリ](http://www.scn.jp/)
+  * [for iPhone](https://itunes.apple.com/jp/app/id688109786?mt=8) (One of the main developers)
 - [guPix](http://www.gupix.com/ja/)
   * for Windows (bug fixes, etc.)
   * for iPhone (some features)
