@@ -4,7 +4,7 @@
   <title><![CDATA[monoHub]]></title>
   <link href="http://mono0926.github.io/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2013-11-23T19:22:42+09:00</updated>
+  <updated>2013-11-23T19:38:20+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -102,7 +102,7 @@ Mavericksなどの場合は環境によっては前もって<a href="https://dev
 <p>これで、ターミナルで<code>ghci</code>と打つと、Haskellのインタプリターが起動するはず。
 今まで、わざわざファイルで書く必要の無い書き捨ての込み入った計算はPythonのインタプリターでやっていた(そこまでする必要の無い程度ならAlfredの電卓で)けど、これからはghciでやろうかなと。</p>
 
-<p>コンパイルは<code>ghc -o hoge hoge.hs</code>だけで出来るので、簡単。<code>hs hoge</code>と打つと、以下実行してくれるオレオレコマンドかエイリアスか作ったらさらに手軽になりそう。</p>
+<p>コンパイルは<code>ghc --make hoge.hs</code>だけで出来るので、簡単。<code>hs hoge.hs</code>と打つと、以下実行してくれるオレオレコマンドかエイリアスか作ったらさらに手軽になりそう。</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
