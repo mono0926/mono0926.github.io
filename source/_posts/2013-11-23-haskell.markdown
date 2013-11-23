@@ -71,7 +71,7 @@ brew install haskell-platform # これがなんだか理解していない
 コンパイルは```ghc --make hoge.hs```だけで出来るので、簡単。```hs hoge.hs```と打つと、以下実行してくれるオレオレコマンドかエイリアスか作ったらさらに手軽になりそう。
 
 ```
-ghc -o hoge hoge.hs
+ghc --make hoge.hs
 ./hoge
 ```
 
