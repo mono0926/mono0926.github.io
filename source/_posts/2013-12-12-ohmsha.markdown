@@ -6,6 +6,8 @@ comments: true
 categories: book haskell programming math software statistics excel
 ---
 
+今日12時までの[オーム社セール](http://estore.ohmsha.co.jp/titles)で色々買ってみた。
+
 ### 数学・統計系
 
 大学とかで勉強したものの、忘れたり応用できていなかったりするので。
