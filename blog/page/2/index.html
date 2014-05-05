@@ -9,8 +9,7 @@
   <meta name="author" content="Masayuki Ono">
 
   
-  <meta name="description" content="Leap Motionを買ってみた。
-多分1年ちょっと前に指先を1/100ミリ単位で捉える3Dモーション入力機器 LEAP、70ドルで予約受付開始 (動画)などの記事を見て、コンセプト動画なのか実動画像なのか知らないけど、すごいなーと思って放置してたけど、今週けっこう話題になってて、 &hellip;">
+  <meta name="description" content="そんな有名でも無いけど、Gingerという英文作成支援サービスがある。 もう前置詞に迷わない」──「ネイティブレベル」の英語が書ける英文チェッカー「Ginger」日本上陸という記事などで4月にニュースになって、この手のものが好きな僕はChromeの拡張をすぐ導入してみたけど、 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +79,60 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/03/ginger/">Ginger APIをPythonで叩いてみた</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-03T14:58:00+09:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>そんな有名でも無いけど、Gingerという英文作成支援サービスがある。</p>
+
+<p><a href="http://www.itmedia.co.jp/news/articles/1304/24/news120.html">もう前置詞に迷わない」──「ネイティブレベル」の英語が書ける英文チェッカー「Ginger」日本上陸</a>という記事などで4月にニュースになって、この手のものが好きな僕は<a href="https://chrome.google.com/webstore/detail/spell-and-grammar-checker/kdfieneakcjfaiglcfcgkidlkmlijjnh">Chromeの拡張</a>をすぐ導入してみたけど、不必要な時に指摘されたり、必要な時は使い勝手が悪いし、うーんと思ったり。</p>
+
+<h3>Ginger API</h3>
+
+<p>コマンドラインとかで使いたいなあと思って適当にぐぐったら、<a href="http://blog.livedoor.jp/xaicron/archives/54466736.html">Ginger API を試してみた</a>という記事が。
+Gistになぜか<a href="https://gist.github.com/koron/5454500">curlで使ってる例</a>があるみたいで。</p>
+
+<p>GingerのページにはAPIとか無いのになぜだろうと思って、Chromeの開発ツールでリクエストのぞいてみたら、もろにAPI叩いているのがあった。</p>
+
+<p><img src="/images/post/ginger.png" alt="ginger" /></p>
+
+<blockquote><p><a href="http://services.gingersoftware.com/Ginger/correct/json/GingerTheText?callback=C&amp;apiKey=6ae0c3a0-afdc-4532-a810-82ded0054236&amp;lang=US&amp;clientVersion=2.0&amp;text=I+am+programmer.&amp;_1375584239344=">http://services.gingersoftware.com/Ginger/correct/json/GingerTheText?callback=C&amp;apiKey=6ae0c3a0-afdc-4532-a810-82ded0054236&amp;lang=US&amp;clientVersion=2.0&amp;text=I+am+programmer.&amp;_1375584239344=</a></p></blockquote>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/08/03/ginger/">続きを読むヽ(・ω・｀）</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -648,6 +701,10 @@ Linux, Mac, Windowsなどに対応。</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/05/05/irkit-nodejs/">Node.jsのIRKitライブラリあったから試してみた</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/05/05/irkit-remote/">IRKitに外からアクセス出来るようにした</a>
       </li>
     
@@ -663,15 +720,11 @@ Linux, Mac, Windowsなどに対応。</p>
         <a href="/blog/2013/12/12/ohmsha/">オーム社セールで色々買ってみた</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2013/11/23/haskell/">Haskell勉強中</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Top Categories</h1>
-    <ul id="top-category-list"><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/irkit'>irkit (2)</a></li><li><a href='/blog/categories/osx'>osx (2)</a></li><li><a href='/blog/categories/haskell'>haskell (2)</a></li><li><a href='/blog/categories/xcode'>Xcode (1)</a></li><li><a href='/blog/categories/c-'>C# (1)</a></li><li><a href='/blog/categories/scala'>scala (1)</a></li><li><a href='/blog/categories/programming'>programming (1)</a></li><li><a href='/blog/categories/shopping'>shopping (1)</a></li></ul>
+    <ul id="top-category-list"><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/irkit'>irkit (3)</a></li><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/nodejs'>nodejs (2)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/osx'>osx (2)</a></li><li><a href='/blog/categories/haskell'>haskell (2)</a></li><li><a href='/blog/categories/xcode'>Xcode (1)</a></li><li><a href='/blog/categories/scala'>scala (1)</a></li><li><a href='/blog/categories/book'>book (1)</a></li><li><a href='/blog/categories/shopping'>shopping (1)</a></li></ul>
 </section>
 <section>
   <h1>GitHub Repos</h1>

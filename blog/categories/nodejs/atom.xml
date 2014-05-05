@@ -4,7 +4,7 @@
   <title><![CDATA[Category: nodejs | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/nodejs/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-05-05T16:12:51+09:00</updated>
+  <updated>2014-05-05T16:51:08+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -12,6 +12,48 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Node.jsのIRKitライブラリあったから試してみた]]></title>
+    <link href="http://mono0926.github.io/blog/2014/05/05/irkit-nodejs/"/>
+    <updated>2014-05-05T16:38:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2014/05/05/irkit-nodejs</id>
+    <content type="html"><![CDATA[<p>せっかく<a href="http://www.amazon.com/gp/product/B00HSO6YD8/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00HSO6YD8&amp;linkCode=as2&amp;tag=mono0926-20&amp;linkId=SIVQ46LXCW3PK3IO">Node.js the Right Way: Practical, Server-Side JavaScript That Scales [Kindle Edition]</a>でNode.jsを勉強したので、IRKitをNode.jsの勉強題材に出来ないかなと思って、とりあえずNode.jsのクライアントライブラリ無いかな？と探したらあったので、叩いてみた。</p>
+
+<h3><a href="https://github.com/dameleon/node-irkit">dameleon/node-irkit</a></h3>
+
+<p>元々IRKitのAPIがシンプルなので、あまりNode.jsを使う必然性感じないけど、まあ勉強に（´-ω-｀）</p>
+
+<p>本1冊やったとはいえ、色々まだ不慣れなので、コード読解にも良いかも。
+ドキュメントは無いものの、テストはちゃんと書かれていたので、それを参考に使ってみた。</p>
+
+<p>まずはインストール。</p>
+
+<p><code>sh
+npm install node-irkit
+</code></p>
+
+<p>とりあえずlocalApiを使ってみた。
+実行する度に、部屋の電気がオンオフされて煩わしいので、テストは違う信号でやろうと思ったなう（´-ω-｀）</p>
+
+<p>```js
+const</p>
+
+<pre><code>irkit = require('node-irkit'),
+localApi = irkit.getLocalApi("http://192.168.0.4"),
+myRoomLight = '{"format":"raw","freq":38,"data":[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}',
+myRoomLightMessage = JSON.parse(myRoomLight);
+</code></pre>
+
+<p>localApi.postMessages(myRoomLightMessage, function(err, res) {</p>
+
+<pre><code>console.log(res); //空
+</code></pre>
+
+<p>});
+```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[IRKitで遊び始めた〜とりあえずTerminalで操作〜]]></title>
