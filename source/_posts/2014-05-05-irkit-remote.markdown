@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "IRKit"
+title: "IRKitに外からアクセス出来るようにした"
 date: 2014-05-05 15:37
 comments: true
 categories: irkit
