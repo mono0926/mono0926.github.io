@@ -5,14 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>オーム社セールで色々買ってみた - monoHub</title>
+  <title>OSXの開発環境を整えた - monoHub</title>
   <meta name="author" content="Masayuki Ono">
 
   
-  <meta name="description" content="今日12時までのオーム社セールで色々買ってみた。 数学・統計系 大学とかで勉強したものの、忘れたり応用できていなかったりするので。 プログラミングのための線形代数
-数学チュートリアル やさしく語る 確率統計
-入門 統計学 ―検定から多変量解析・実験計画法まで―
-Excelで学ぶ統計解析入門 &hellip;">
+  <meta name="description" content="Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。
+Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイッチしたいなとか思ったのが発端(参考: Node. &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,7 +19,7 @@ Excelで学ぶ統計解析入門 &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mono0926.github.io/blog/2013/12/12/ohmsha/">
+  <link rel="canonical" href="http://mono0926.github.io/blog/2014/05/06/renew/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -85,7 +83,7 @@ Excelで学ぶ統計解析入門 &hellip;">
   
   <header>
     
-      <h1 class="entry-title">オーム社セールで色々買ってみた</h1>
+      <h1 class="entry-title">OSXの開発環境を整えた</h1>
     
     
       <p class="meta">
@@ -101,49 +99,78 @@ Excelで学ぶ統計解析入門 &hellip;">
   
 
 
-<time datetime="2013-12-12T08:34:00+09:00" pubdate data-updated="true">Dec 12<span>th</span>, 2013</time>
+<time datetime="2014-05-06T13:24:00+09:00" pubdate data-updated="true">May 6<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>今日12時までの<a href="http://estore.ohmsha.co.jp/titles">オーム社セール</a>で色々買ってみた。</p>
+<div class="entry-content"><p>Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。
+Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイッチしたいなとか思ったのが発端(参考: <a href="http://rdepf.hatenablog.jp/entry/2014/03/07/122337">Node.jsのコールバック地獄をPromiseやGeneratorを使って解消する &ndash; HackerNews翻訳してみた</a>)。</p>
 
-<h3>数学・統計系</h3>
+<p>わりと<code>brew install XXX</code>で雑に各種環境インストールしてたので、これを気に色々直した。</p>
 
-<p>大学とかで勉強したものの、忘れたり応用できていなかったりするので。</p>
+<h2>Homebrewアンインストール</h2>
+
+<p>ゴミが残るのいやだったので、<a href="https://gist.github.com/mxcl/1173223">Uninstall Homebrew</a>でhomebrewをアンインストール。</p>
+
+<!-- more -->
+
+
+<h2>Brewfile導入</h2>
+
+<p>以下など見て便利そうだと思っていたので、Brewfile導入。</p>
 
 <ul>
-<li>プログラミングのための線形代数</li>
-<li>数学チュートリアル やさしく語る 確率統計</li>
-<li>入門 統計学 ―検定から多変量解析・実験計画法まで―</li>
-<li>Excelで学ぶ統計解析入門 Excel2013/2010対応版
+<li><a href="http://www.1x1.jp/blog/2014/04/how-to-setup-application-on-osx.html">Mac OSX をクリーンインストールしてからの環境構築メモ &ndash; Shin x blog</a></li>
+<li><a href="http://blog.livedoor.jp/sonots/archives/35251881.html">「BrewfileでHomebrewパッケージを管理する」をやってみた &ndash; sonots:blog</a></li>
+<li><a href="http://tnakamura.hatenablog.com/entry/2014/04/29/113727">MacBook にインストールしているアプリやツールをメモする代わりに Brewfile を作った &ndash; present</a></li>
+</ul>
+
+
+<p>これだけで一気にインストール出来てとても便利。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew bundle</span></code></pre></td></tr></table></div></figure>
+
+
+<p>僕の：<a href="https://github.com/mono0926/Environment/blob/master/OSX/Brewfile">Environment/OSX/Brewfile at master · mono0926/Environment</a></p>
+
+<p>今後も、Homebrewで何か新しくインストールするときメンテナンスしていくようにしよう。</p>
+
+<h2>その他開発環境</h2>
+
+<p><code>brew install XXX</code>で適当にインストールせずに、バージョンの切り替えが容易なようにした。
+いくつか種類あったけど、基本後発のを導入してみた。</p>
 
 <ul>
-<li>Excelでちゃちゃっと出来るのは大事だと思う</li>
+<li>Python: <a href="https://github.com/yyuu/pyenv">yyuu/pyenv</a></li>
+<li>Ruby: <a href="https://github.com/sstephenson/rbenv">sstephenson/rbenv</a></li>
+<li>Node.js: <a href="https://github.com/creationix/nvm">creationix/nvm</a>
+
+<ul>
+<li>nvmはzshとの相性悪くて日本では<a href="https://github.com/hokaccha/nodebrew">hokaccha/nodebrew</a>がけっこう人気っぽかったけど特に問題無かったのでnvmにした。</li>
 </ul>
 </li>
 </ul>
 
 
-<h3>読み物系</h3>
+<p>諸々雑なところがあるけど、<a href="https://github.com/mono0926/Environment/tree/master/OSX">Environment/OSX at master · mono0926/Environment</a>でセットアップスクリプト管理。</p>
 
-<p>本当はKindleで読みたい類の本だけど（´-ω-｀）</p>
+<h2>IDE導入</h2>
 
-<ul>
-<li>情熱プログラマー ソフトウェア開発者の幸せな生き方</li>
-<li>ソフトウェアの世界でキャリアを築く Making it Big in Software</li>
-</ul>
-
-
-<h3>その他</h3>
+<p>スクリプト系言語は、最近はわりとSublime Textで書いていたけど、やっぱり補完がもう少し聞いてくれないと厳しいので、なるべくIDE使うようにしようと思う。<br/>
+IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれば捗るかなと。<br/>
+今まではNetBeansかたまにEclipseだったけど、乗り換え。少しずつ慣れていこう（´-ω-｀）</p>
 
 <ul>
-<li>マスタリングTCP/IP 入門編 第5版
+<li><a href="http://www.jetbrains.com/webstorm/">WebStorm :: The smartest JavaScript IDE</a></li>
+<li><a href="http://www.jetbrains.com/ruby/">Ruby on Rails IDE :: JetBrains RubyMine</a></li>
+<li><a href="http://www.jetbrains.com/pycharm/">Python IDE &amp; Django IDE for Web developers : JetBrains PyCharm</a>
 
 <ul>
-<li>第4版持ってて自炊済みだけど、安いし新しいのも欲しくなった</li>
+<li>CE版は無料</li>
 </ul>
 </li>
 </ul>
@@ -170,12 +197,12 @@ Excelで学ぶ統計解析入門 &hellip;">
   
 
 
-<time datetime="2013-12-12T08:34:00+09:00" pubdate data-updated="true">Dec 12<span>th</span>, 2013</time>
+<time datetime="2014-05-06T13:24:00+09:00" pubdate data-updated="true">May 6<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/book/'>book</a>, <a class='category' href='/blog/categories/excel/'>excel</a>, <a class='category' href='/blog/categories/haskell/'>haskell</a>, <a class='category' href='/blog/categories/math/'>math</a>, <a class='category' href='/blog/categories/programming/'>programming</a>, <a class='category' href='/blog/categories/software/'>software</a>, <a class='category' href='/blog/categories/statistics/'>statistics</a>
+    <a class='category' href='/blog/categories/osx/'>osx</a>
   
 </span>
 
@@ -190,13 +217,13 @@ Excelで学ぶ統計解析入門 &hellip;">
 
   
 
-<a href="http://mono0926.github.io/blog/2013/12/12/ohmsha/" class="hatena-bookmark-button" data-hatena-bookmark-title="オーム社セールで色々買ってみた" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+<a href="http://mono0926.github.io/blog/2014/05/06/renew/" class="hatena-bookmark-button" data-hatena-bookmark-title="OSXの開発環境を整えた" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
 
   
 
 
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mono0926.github.io/blog/2013/12/12/ohmsha/" data-via="_mono" data-counturl="http://mono0926.github.io/blog/2013/12/12/ohmsha/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mono0926.github.io/blog/2014/05/06/renew/" data-via="_mono" data-counturl="http://mono0926.github.io/blog/2014/05/06/renew/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -209,10 +236,8 @@ Excelで学ぶ統計解析入門 &hellip;">
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/11/23/haskell/" title="Previous Post: Haskell勉強中">&laquo; Haskell勉強中</a>
+        <a class="basic-alignment left" href="/blog/2014/05/05/irkit-nodejs/" title="Previous Post: Node.jsのIRKitライブラリあったから試してみた">&laquo; Node.jsのIRKitライブラリあったから試してみた</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/04/17/love-stamp/" title="Next Post: ラヴさんスタンプをLINE Creators Marketに申請してみた">ラヴさんスタンプをLINE Creators Marketに申請してみた &raquo;</a>
       
     </p>
   </footer>
@@ -325,8 +350,8 @@ Excelで学ぶ統計解析入門 &hellip;">
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://mono0926.github.io/blog/2013/12/12/ohmsha/';
-        var disqus_url = 'http://mono0926.github.io/blog/2013/12/12/ohmsha/';
+        var disqus_identifier = 'http://mono0926.github.io/blog/2014/05/06/renew/';
+        var disqus_url = 'http://mono0926.github.io/blog/2014/05/06/renew/';
         var disqus_script = 'embed.js';
       
     (function () {

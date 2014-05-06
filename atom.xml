@@ -4,7 +4,7 @@
   <title><![CDATA[monoHub]]></title>
   <link href="http://mono0926.github.io/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-05-05T16:51:08+09:00</updated>
+  <updated>2014-05-06T13:55:22+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -12,6 +12,83 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[OSXの開発環境を整えた]]></title>
+    <link href="http://mono0926.github.io/blog/2014/05/06/renew/"/>
+    <updated>2014-05-06T13:24:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2014/05/06/renew</id>
+    <content type="html"><![CDATA[<p>Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。
+Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイッチしたいなとか思ったのが発端(参考: <a href="http://rdepf.hatenablog.jp/entry/2014/03/07/122337">Node.jsのコールバック地獄をPromiseやGeneratorを使って解消する &ndash; HackerNews翻訳してみた</a>)。</p>
+
+<p>わりと<code>brew install XXX</code>で雑に各種環境インストールしてたので、これを気に色々直した。</p>
+
+<h2>Homebrewアンインストール</h2>
+
+<p>ゴミが残るのいやだったので、<a href="https://gist.github.com/mxcl/1173223">Uninstall Homebrew</a>でhomebrewをアンインストール。</p>
+
+<!-- more -->
+
+
+<h2>Brewfile導入</h2>
+
+<p>以下など見て便利そうだと思っていたので、Brewfile導入。</p>
+
+<ul>
+<li><a href="http://www.1x1.jp/blog/2014/04/how-to-setup-application-on-osx.html">Mac OSX をクリーンインストールしてからの環境構築メモ &ndash; Shin x blog</a></li>
+<li><a href="http://blog.livedoor.jp/sonots/archives/35251881.html">「BrewfileでHomebrewパッケージを管理する」をやってみた &ndash; sonots:blog</a></li>
+<li><a href="http://tnakamura.hatenablog.com/entry/2014/04/29/113727">MacBook にインストールしているアプリやツールをメモする代わりに Brewfile を作った &ndash; present</a></li>
+</ul>
+
+
+<p>これだけで一気にインストール出来てとても便利。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew bundle</span></code></pre></td></tr></table></div></figure>
+
+
+<p>僕の：<a href="https://github.com/mono0926/Environment/blob/master/OSX/Brewfile">Environment/OSX/Brewfile at master · mono0926/Environment</a></p>
+
+<p>今後も、Homebrewで何か新しくインストールするときメンテナンスしていくようにしよう。</p>
+
+<h2>その他開発環境</h2>
+
+<p><code>brew install XXX</code>で適当にインストールせずに、バージョンの切り替えが容易なようにした。
+いくつか種類あったけど、基本後発のを導入してみた。</p>
+
+<ul>
+<li>Python: <a href="https://github.com/yyuu/pyenv">yyuu/pyenv</a></li>
+<li>Ruby: <a href="https://github.com/sstephenson/rbenv">sstephenson/rbenv</a></li>
+<li>Node.js: <a href="https://github.com/creationix/nvm">creationix/nvm</a>
+
+<ul>
+<li>nvmはzshとの相性悪くて日本では<a href="https://github.com/hokaccha/nodebrew">hokaccha/nodebrew</a>がけっこう人気っぽかったけど特に問題無かったのでnvmにした。</li>
+</ul>
+</li>
+</ul>
+
+
+<p>諸々雑なところがあるけど、<a href="https://github.com/mono0926/Environment/tree/master/OSX">Environment/OSX at master · mono0926/Environment</a>でセットアップスクリプト管理。</p>
+
+<h2>IDE導入</h2>
+
+<p>スクリプト系言語は、最近はわりとSublime Textで書いていたけど、やっぱり補完がもう少し聞いてくれないと厳しいので、なるべくIDE使うようにしようと思う。<br/>
+IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれば捗るかなと。<br/>
+今まではNetBeansかたまにEclipseだったけど、乗り換え。少しずつ慣れていこう（´-ω-｀）</p>
+
+<ul>
+<li><a href="http://www.jetbrains.com/webstorm/">WebStorm :: The smartest JavaScript IDE</a></li>
+<li><a href="http://www.jetbrains.com/ruby/">Ruby on Rails IDE :: JetBrains RubyMine</a></li>
+<li><a href="http://www.jetbrains.com/pycharm/">Python IDE &amp; Django IDE for Web developers : JetBrains PyCharm</a>
+
+<ul>
+<li>CE版は無料</li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Node.jsのIRKitライブラリあったから試してみた]]></title>
