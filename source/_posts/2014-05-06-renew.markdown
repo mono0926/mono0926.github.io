@@ -7,7 +7,8 @@ categories: osx
 ---
 
 Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。
-Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイッチしたいなとか思ったのが発端(参考: [Node.jsのコールバック地獄をPromiseやGeneratorを使って解消する - HackerNews翻訳してみた](http://rdepf.hatenablog.jp/entry/2014/03/07/122337))。
+Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイッチしたいなとか思ったのが発端。  
+参考: [Node.jsのコールバック地獄をPromiseやGeneratorを使って解消する - HackerNews翻訳してみた](http://rdepf.hatenablog.jp/entry/2014/03/07/122337)
 
 わりと`brew install XXX`で雑に各種環境インストールしてたので、これを気に色々直した。
 
