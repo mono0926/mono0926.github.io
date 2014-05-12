@@ -9,9 +9,7 @@
   <meta name="author" content="Masayuki Ono">
 
   
-  <meta name="description" content="Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。
-Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイッチしたいなとか思ったのが発端。
-参考: Node. &hellip;">
+  <meta name="description" content="GoCon/2014spring.rst at master · GoCon/GoConに備えて、とりあえずgolangのセットアップと、暇なときにA Tour of Goをやっておこうかと(　´･‿･｀) gvmセットアップ moovweb/gvmに書いてある通りにやった。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -81,6 +79,75 @@ Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイ�
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/05/13/golang/">Golangの環境構築</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-13T03:23:00+09:00" pubdate data-updated="true">May 13<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="https://github.com/GoCon/GoCon/blob/master/2014spring.rst">GoCon/2014spring.rst at master · GoCon/GoCon</a>に備えて、とりあえずgolangのセットアップと、暇なときに<a href="http://tour.golang.org/#1">A Tour of Go</a>をやっておこうかと(　´･‿･｀)</p>
+
+<h2>gvmセットアップ</h2>
+
+<p><a href="https://github.com/moovweb/gvm">moovweb/gvm</a>に書いてある通りにやった。
+mercurialのインストールが必要だったので、Brewfileに追記しておいた。</p>
+
+<p>あと、`gvm install go1&#8217;に失敗したので、ここに書いてある対応で何とかなった。</p>
+
+<p>普通に<code>brew install go</code>のが楽だけど、ちょっとがんばった（´-ω-｀）</p>
+
+<h2>実行</h2>
+
+<p>以下を実行。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>package main
+</span><span class='line'>import "fmt"
+</span><span class='line'>func main() {
+</span><span class='line'>    fmt.Printf("Hello world!")
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://mono0926.com/blog/2014/05/06/renew/">OSXの開発環境を整えた &ndash; monoHub</a>でJetBrainのIDEいくつかインストールしてたけど、<a href="http://www.jetbrains.com/idea/">IntelliJ IDEA — The Best Java and Polyglot IDE</a>で全部包含してるのね、情弱つらたん（´-ω-｀）</p>
+
+<p>まあそこそこのお値段だし、適当に色々試用して、良かったら最終的にUltimate Edtion買おうかな（´-ω-｀）
+Web StormでもGoのプラグインインストール出来たけど、SDKの設定とかうまく出来なかったりぐぐったりして出た説明と違うからCommunity Edition版のIntelliJでやった。</p>
+
+<p>実行できたけど、<code>go build hoge.go</code>で生成されるような実行ファイルが生成出来なくて謎(　´･‿･｀)<br/>
+GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分からなくてつらたん（´-ω-｀）</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -649,45 +716,6 @@ Mac Proの消費電力が、アイドル時に43 Wということで、常時起
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/09/09/python/">Pythonの環境構築</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-09-09T07:49:00+09:00" pubdate data-updated="true">Sep 9<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>度々ぐぐったりするので、メモ。
-少しずつ、加筆修正していく。</p>
-
-<p><a href="http://www.sicafe.net/macPackageManageTips/html/homebrewPythonInstall.html">Mac OS X Lion / homebrew にて python の環境を整える</a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -716,6 +744,10 @@ Mac Proの消費電力が、アイドル時に43 Wということで、常時起
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/05/13/golang/">golangの環境構築</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/05/06/renew/">OSXの開発環境を整えた</a>
       </li>
     
@@ -731,15 +763,11 @@ Mac Proの消費電力が、アイドル時に43 Wということで、常時起
         <a href="/blog/2014/05/05/irkit/">IRKitで遊び始めた〜とりあえずTerminalで操作〜</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2014/04/17/love-stamp/">ラヴさんスタンプをLINE Creators Marketに申請してみた</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Top Categories</h1>
-    <ul id="top-category-list"><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/irkit'>irkit (3)</a></li><li><a href='/blog/categories/osx'>osx (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/nodejs'>nodejs (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/haskell'>haskell (2)</a></li><li><a href='/blog/categories/xcode'>Xcode (1)</a></li><li><a href='/blog/categories/scala'>scala (1)</a></li><li><a href='/blog/categories/book'>book (1)</a></li><li><a href='/blog/categories/shopping'>shopping (1)</a></li></ul>
+    <ul id="top-category-list"><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/osx'>osx (3)</a></li><li><a href='/blog/categories/irkit'>irkit (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/nodejs'>nodejs (2)</a></li><li><a href='/blog/categories/haskell'>haskell (2)</a></li><li><a href='/blog/categories/osx'>OSX (1)</a></li><li><a href='/blog/categories/c-'>C# (1)</a></li><li><a href='/blog/categories/scala'>scala (1)</a></li><li><a href='/blog/categories/programming'>programming (1)</a></li></ul>
 </section>
 <section>
   <h1>GitHub Repos</h1>

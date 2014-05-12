@@ -4,7 +4,7 @@
   <title><![CDATA[monoHub]]></title>
   <link href="http://mono0926.github.io/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-05-06T13:55:53+09:00</updated>
+  <updated>2014-05-13T05:07:11+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -12,6 +12,48 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[golangの環境構築]]></title>
+    <link href="http://mono0926.github.io/blog/2014/05/13/golang/"/>
+    <updated>2014-05-13T03:23:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2014/05/13/golang</id>
+    <content type="html"><![CDATA[<p><a href="https://github.com/GoCon/GoCon/blob/master/2014spring.rst">GoCon/2014spring.rst at master · GoCon/GoCon</a>に備えて、とりあえずgolangのセットアップと、暇なときに<a href="http://tour.golang.org/#1">A Tour of Go</a>をやっておこうかと(　´･‿･｀)</p>
+
+<h2>gvmセットアップ</h2>
+
+<p><a href="https://github.com/moovweb/gvm">moovweb/gvm</a>に書いてある通りにやった。
+mercurialのインストールが必要だったので、Brewfileに追記しておいた。</p>
+
+<p>あと、`gvm install go1&#8217;に失敗したので、ここに書いてある対応で何とかなった。</p>
+
+<p>普通に<code>brew install go</code>のが楽だけど、ちょっとがんばった（´-ω-｀）</p>
+
+<h2>実行</h2>
+
+<p>以下を実行。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>package main
+</span><span class='line'>import "fmt"
+</span><span class='line'>func main() {
+</span><span class='line'>    fmt.Printf("Hello world!")
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://mono0926.com/blog/2014/05/06/renew/">OSXの開発環境を整えた &ndash; monoHub</a>でJetBrainのIDEいくつかインストールしてたけど、<a href="http://www.jetbrains.com/idea/">IntelliJ IDEA — The Best Java and Polyglot IDE</a>で全部包含してるのね、情弱つらたん（´-ω-｀）</p>
+
+<p>まあそこそこのお値段だし、適当に色々試用して、良かったら最終的にUltimate Edtion買おうかな（´-ω-｀）
+Web StormでもGoのプラグインインストール出来たけど、SDKの設定とかうまく出来なかったりぐぐったりして出た説明と違うからCommunity Edition版のIntelliJでやった。</p>
+
+<p>実行できたけど、<code>go build hoge.go</code>で生成されるような実行ファイルが生成出来なくて謎(　´･‿･｀)<br/>
+GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分からなくてつらたん（´-ω-｀）</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[OSXの開発環境を整えた]]></title>
@@ -1992,79 +2034,6 @@ Linux, Mac, Windowsなどに対応。</p>
 
 
 <p>最近久しく何も書いてなかったけど、あまり脈絡の無い雑多メモなどはこちらで、技術系TipsはQiitaあたりにまとめる習慣付けたい（´・ω・｀）</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[GitHub + Octopressでブログ作ってみた]]></title>
-    <link href="http://mono0926.github.io/blog/2013/07/07/github_octopress_blog/"/>
-    <updated>2013-07-07T12:16:00+09:00</updated>
-    <id>http://mono0926.github.io/blog/2013/07/07/github_octopress_blog</id>
-    <content type="html"><![CDATA[<p>Markdownで書けてなかなか良い感じかもしれない（´-ω-｀）</p>
-
-<h3>導入手順</h3>
-
-<p>ここらへん参考に。</p>
-
-<ul>
-<li><a href="http://rcmdnk.github.io/blog/2013/03/07/setup-octopress/">GitHub pages + Octopressの導入</a>
-
-<ul>
-<li>最初は適当にMacに入っているRuby 1.7.3やHomebrewで入れた2系でインストールしようとしたらはまって結局Ruby 1.9.3にしたので、初めから素直に従った方がよさげです。</li>
-</ul>
-</li>
-<li>rvmの導入がうまくできなかったので、それだけこれを参考に。
-
-<ul>
-<li><a href="http://jitsu102.hatenablog.com/entry/2012/11/23/162034">(OS X::Mountain Lion) RVMでRubyの環境構築メモ</a></li>
-</ul>
-</li>
-</ul>
-
-
-<h4>個人的な運用</h4>
-
-<ul>
-<li><a href="https://github.com/imathis/octopress">imathis/octopress</a>からForkしてそのままソース管理として利用
-
-<ul>
-<li>下書きなどあっても人に見られちゃうからBitbucket使うっていう人が多いらしいですが、あまり気にならないのでGitHubで一元管理</li>
-</ul>
-</li>
-<li><code>setup_github_pages</code> と入力して、<a href="http://mono0926.github.io">GitHub上のこのページ</a> にデプロイされるように</li>
-</ul>
-
-
-<!-- more -->
-
-
-<h4>テーマの変更</h4>
-
-<p>テーマは、<a href="https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes">imathis/octopress</a>から選べますが、あまり有名じゃないので、そんなに選択肢無いです。凝るなら自分で作るべきですかね。
-こぎれいなテーマを適当に選んで使っています。
-導入は簡単で、上記から選んで、下のコマンドですぐ反映されます。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span><span class="nb">cd </span>octopress
-</span><span class='line'><span class="nv">$ </span>git clone GIT_URL .themes/THEME_NAME
-</span><span class='line'><span class="nv">$ </span>rake install<span class="o">[</span><span class="s1">&#39;THEME_NAME&#39;</span><span class="o">]</span>
-</span><span class='line'><span class="nv">$ </span>rake generate
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>Markdown 初めて書いた</h3>
-
-<p>なかなか便利ですね(　´･‿･｀)
-このあたりよくまとまっててよかったです。</p>
-
-<ul>
-<li><a href="http://qiita.com/Qiita/items/c686397e4a0f4f11683d">Markdown記法 チートシート</a></li>
-<li><a href="http://qa.atmarkit.co.jp/docs/markdown">QA@ITで使えるMarkdown記法</a></li>
-</ul>
-
 ]]></content>
   </entry>
   
