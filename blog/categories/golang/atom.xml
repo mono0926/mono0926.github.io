@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: golang | monoHub]]></title>
+  <link href="http://mono0926.github.io/blog/categories/golang/atom.xml" rel="self"/>
+  <link href="http://mono0926.github.io/"/>
+  <updated>2014-05-13T04:58:32+09:00</updated>
+  <id>http://mono0926.github.io/</id>
+  <author>
+    <name><![CDATA[Masayuki Ono]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[golangの環境構築]]></title>
+    <link href="http://mono0926.github.io/blog/2014/05/13/golang/"/>
+    <updated>2014-05-13T03:23:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2014/05/13/golang</id>
+    <content type="html"><![CDATA[<p><a href="https://github.com/GoCon/GoCon/blob/master/2014spring.rst">GoCon/2014spring.rst at master · GoCon/GoCon</a>に備えて、とりあえずgolangのセットアップと、暇なときに<a href="http://tour.golang.org/#1">A Tour of Go</a>をやっておこうかと(　´･‿･｀)</p>
+
+<h2>gvmセットアップ</h2>
+
+<p><a href="https://github.com/moovweb/gvm">moovweb/gvm</a>に書いてある通りにやった。
+mercurialのインストールが必要だったので、Brewfileに追記しておいた。</p>
+
+<p>あと、`gvm install go1'に失敗したので、ここに書いてある対応で何とかなった。</p>
+
+<p>普通に<code>brew install go</code>のが楽だけど、ちょっとがんばった（´-ω-｀）</p>
+
+<h2>実行</h2>
+
+<p>以下を実行。</p>
+
+<p>```go
+package main
+import &ldquo;fmt&rdquo;
+func main() {</p>
+
+<pre><code>fmt.Printf("Hello world!")
+</code></pre>
+
+<p>}
+```</p>
+
+<p><a href="http://mono0926.com/blog/2014/05/06/renew/">OSXの開発環境を整えた &ndash; monoHub</a>でJetBrainのIDEいくつかインストールしてたけど、<a href="http://www.jetbrains.com/idea/">IntelliJ IDEA — The Best Java and Polyglot IDE</a>で全部包含してるのね、情弱つらたん（´-ω-｀）</p>
+
+<p>まあそこそこのお値段だし、適当に色々試用して、良かったら最終的にUltimate Edtion買おうかな（´-ω-｀）
+Web StormでもGoのプラグインインストール出来たけど、SDKの設定とかうまく出来なかったりぐぐったりして出た説明と違うからCommunity Edition版のIntelliJでやった。</p>
+
+<p>実行できたけど、<code>go build hoge.go</code>で生成されるような実行ファイルが生成出来なくて謎(　´･‿･｀)<br/>
+GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分からなくてつらたん（´-ω-｀）</p>
+]]></content>
+  </entry>
+  
+</feed>
