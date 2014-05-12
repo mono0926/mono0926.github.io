@@ -21,7 +21,7 @@ mercurialのインストールが必要だったので、Brewfileに追記して
 
 以下を実行。
 
-```go
+```
 package main
 import "fmt"
 func main() {
