@@ -4,7 +4,7 @@
   <title><![CDATA[monoHub]]></title>
   <link href="http://mono0926.github.io/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-05-13T05:07:11+09:00</updated>
+  <updated>2013-12-12T08:52:51+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -12,440 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[golangの環境構築]]></title>
-    <link href="http://mono0926.github.io/blog/2014/05/13/golang/"/>
-    <updated>2014-05-13T03:23:00+09:00</updated>
-    <id>http://mono0926.github.io/blog/2014/05/13/golang</id>
-    <content type="html"><![CDATA[<p><a href="https://github.com/GoCon/GoCon/blob/master/2014spring.rst">GoCon/2014spring.rst at master · GoCon/GoCon</a>に備えて、とりあえずgolangのセットアップと、暇なときに<a href="http://tour.golang.org/#1">A Tour of Go</a>をやっておこうかと(　´･‿･｀)</p>
-
-<h2>gvmセットアップ</h2>
-
-<p><a href="https://github.com/moovweb/gvm">moovweb/gvm</a>に書いてある通りにやった。
-mercurialのインストールが必要だったので、Brewfileに追記しておいた。</p>
-
-<p>あと、`gvm install go1&#8217;に失敗したので、ここに書いてある対応で何とかなった。</p>
-
-<p>普通に<code>brew install go</code>のが楽だけど、ちょっとがんばった（´-ω-｀）</p>
-
-<h2>実行</h2>
-
-<p>以下を実行。</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>package main
-</span><span class='line'>import "fmt"
-</span><span class='line'>func main() {
-</span><span class='line'>    fmt.Printf("Hello world!")
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<p><a href="http://mono0926.com/blog/2014/05/06/renew/">OSXの開発環境を整えた &ndash; monoHub</a>でJetBrainのIDEいくつかインストールしてたけど、<a href="http://www.jetbrains.com/idea/">IntelliJ IDEA — The Best Java and Polyglot IDE</a>で全部包含してるのね、情弱つらたん（´-ω-｀）</p>
-
-<p>まあそこそこのお値段だし、適当に色々試用して、良かったら最終的にUltimate Edtion買おうかな（´-ω-｀）
-Web StormでもGoのプラグインインストール出来たけど、SDKの設定とかうまく出来なかったりぐぐったりして出た説明と違うからCommunity Edition版のIntelliJでやった。</p>
-
-<p>実行できたけど、<code>go build hoge.go</code>で生成されるような実行ファイルが生成出来なくて謎(　´･‿･｀)<br/>
-GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分からなくてつらたん（´-ω-｀）</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[OSXの開発環境を整えた]]></title>
-    <link href="http://mono0926.github.io/blog/2014/05/06/renew/"/>
-    <updated>2014-05-06T13:24:00+09:00</updated>
-    <id>http://mono0926.github.io/blog/2014/05/06/renew</id>
-    <content type="html"><![CDATA[<p>Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。
-Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイッチしたいなとか思ったのが発端。<br/>
-参考: <a href="http://rdepf.hatenablog.jp/entry/2014/03/07/122337">Node.jsのコールバック地獄をPromiseやGeneratorを使って解消する &ndash; HackerNews翻訳してみた</a></p>
-
-<p>わりと<code>brew install XXX</code>で雑に各種環境インストールしてたので、これを気に色々直した。</p>
-
-<h2>Homebrewアンインストール</h2>
-
-<p>ゴミが残るのいやだったので、<a href="https://gist.github.com/mxcl/1173223">Uninstall Homebrew</a>でhomebrewをアンインストール。</p>
-
-<!-- more -->
-
-
-<h2>Brewfile導入</h2>
-
-<p>以下など見て便利そうだと思っていたので、Brewfile導入。</p>
-
-<ul>
-<li><a href="http://www.1x1.jp/blog/2014/04/how-to-setup-application-on-osx.html">Mac OSX をクリーンインストールしてからの環境構築メモ &ndash; Shin x blog</a></li>
-<li><a href="http://blog.livedoor.jp/sonots/archives/35251881.html">「BrewfileでHomebrewパッケージを管理する」をやってみた &ndash; sonots:blog</a></li>
-<li><a href="http://tnakamura.hatenablog.com/entry/2014/04/29/113727">MacBook にインストールしているアプリやツールをメモする代わりに Brewfile を作った &ndash; present</a></li>
-</ul>
-
-
-<p>これだけで一気にインストール出来てとても便利。</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>brew bundle</span></code></pre></td></tr></table></div></figure>
-
-
-<p>僕の：<a href="https://github.com/mono0926/Environment/blob/master/OSX/Brewfile">Environment/OSX/Brewfile at master · mono0926/Environment</a></p>
-
-<p>今後も、Homebrewで何か新しくインストールするときメンテナンスしていくようにしよう。</p>
-
-<h2>その他開発環境</h2>
-
-<p><code>brew install XXX</code>で適当にインストールせずに、バージョンの切り替えが容易なようにした。
-いくつか種類あったけど、基本後発のを導入してみた。</p>
-
-<ul>
-<li>Python: <a href="https://github.com/yyuu/pyenv">yyuu/pyenv</a></li>
-<li>Ruby: <a href="https://github.com/sstephenson/rbenv">sstephenson/rbenv</a></li>
-<li>Node.js: <a href="https://github.com/creationix/nvm">creationix/nvm</a>
-
-<ul>
-<li>nvmはzshとの相性悪くて日本では<a href="https://github.com/hokaccha/nodebrew">hokaccha/nodebrew</a>がけっこう人気っぽかったけど特に問題無かったのでnvmにした。</li>
-</ul>
-</li>
-</ul>
-
-
-<p>諸々雑なところがあるけど、<a href="https://github.com/mono0926/Environment/tree/master/OSX">Environment/OSX at master · mono0926/Environment</a>でセットアップスクリプト管理。</p>
-
-<h2>IDE導入</h2>
-
-<p>スクリプト系言語は、最近はわりとSublime Textで書いていたけど、やっぱり補完がもう少し聞いてくれないと厳しいので、なるべくIDE使うようにしようと思う。<br/>
-IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれば捗るかなと。<br/>
-今まではNetBeansかたまにEclipseだったけど、乗り換え。少しずつ慣れていこう（´-ω-｀）</p>
-
-<ul>
-<li><a href="http://www.jetbrains.com/webstorm/">WebStorm :: The smartest JavaScript IDE</a></li>
-<li><a href="http://www.jetbrains.com/ruby/">Ruby on Rails IDE :: JetBrains RubyMine</a></li>
-<li><a href="http://www.jetbrains.com/pycharm/">Python IDE &amp; Django IDE for Web developers : JetBrains PyCharm</a>
-
-<ul>
-<li>CE版は無料</li>
-</ul>
-</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Node.jsのIRKitライブラリあったから試してみた]]></title>
-    <link href="http://mono0926.github.io/blog/2014/05/05/irkit-nodejs/"/>
-    <updated>2014-05-05T16:38:00+09:00</updated>
-    <id>http://mono0926.github.io/blog/2014/05/05/irkit-nodejs</id>
-    <content type="html"><![CDATA[<p>せっかく<a href="http://www.amazon.com/gp/product/B00HSO6YD8/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00HSO6YD8&amp;linkCode=as2&amp;tag=mono0926-20&amp;linkId=SIVQ46LXCW3PK3IO">Node.js the Right Way: Practical, Server-Side JavaScript That Scales [Kindle Edition]</a>でNode.jsを勉強したので、IRKitをNode.jsの勉強題材に出来ないかなと思って、とりあえずNode.jsのクライアントライブラリ無いかな？と探したらあったので、叩いてみた。</p>
-
-<h3><a href="https://github.com/dameleon/node-irkit">dameleon/node-irkit</a></h3>
-
-<p>元々IRKitのAPIがシンプルなので、あまりNode.jsを使う必然性感じないけど、まあ勉強に（´-ω-｀）</p>
-
-<p>本1冊やったとはいえ、色々まだ不慣れなので、コード読解にも良いかも。
-ドキュメントは無いものの、テストはちゃんと書かれていたので、それを参考に使ってみた。</p>
-
-<p>まずはインストール。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>npm install node-irkit
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>とりあえずlocalApiを使ってみた。
-実行する度に、部屋の電気がオンオフされて煩わしいので、テストは違う信号でやろうと思ったなう（´-ω-｀）</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span>
-</span><span class='line'>    <span class="nx">irkit</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;node-irkit&#39;</span><span class="p">),</span>
-</span><span class='line'>    <span class="nx">localApi</span> <span class="o">=</span> <span class="nx">irkit</span><span class="p">.</span><span class="nx">getLocalApi</span><span class="p">(</span><span class="s2">&quot;http://192.168.0.4&quot;</span><span class="p">),</span>
-</span><span class='line'>    <span class="nx">myRoomLight</span> <span class="o">=</span> <span class="s1">&#39;{&quot;format&quot;:&quot;raw&quot;,&quot;freq&quot;:38,&quot;data&quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">myRoomLightMessage</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">myRoomLight</span><span class="p">);</span>
-</span><span class='line'><span class="nx">localApi</span><span class="p">.</span><span class="nx">postMessages</span><span class="p">(</span><span class="nx">myRoomLightMessage</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span> <span class="c1">//空</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[IRKitに外からアクセス出来るようにした]]></title>
-    <link href="http://mono0926.github.io/blog/2014/05/05/irkit-remote/"/>
-    <updated>2014-05-05T15:37:00+09:00</updated>
-    <id>http://mono0926.github.io/blog/2014/05/05/irkit-remote</id>
-    <content type="html"><![CDATA[<p>前回の<a href="http://mono0926.com/blog/2014/05/05/irkit/">IRKitで遊び始めた〜とりあえずTerminalで操作〜 &ndash; monoHub</a>の続き。</p>
-
-<p>前回触った<a href="http://getirkit.com/#IRKit-Device-API">IRKit Device HTTP API</a>は同じWiFi内から操作するためのもので、外からアクセスするときは<a href="http://getirkit.com/#IRKit-Internet-API">IRKit Internet HTTP API</a>を叩くことになる。</p>
-
-<h2>IRKit Internet HTTP APIを叩けるように準備</h2>
-
-<p>まずは、clienttokenを取得。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>Pro:~ mono<span class="nv">$ </span>curl -i http://192.168.0.4/keys -d <span class="s1">&#39;&#39;</span>
-</span><span class='line'>HTTP/1.0 200 OK
-</span><span class='line'>Access-Control-Allow-Origin: *
-</span><span class='line'>Server: IRKit/1.3.5.0.gce6ac15
-</span><span class='line'>Content-Type: text/plain
-</span><span class='line'>
-</span><span class='line'><span class="o">{</span><span class="s2">&quot;clienttoken&quot;</span>:<span class="s2">&quot;**************************&quot;</span><span class="o">}</span> <span class="c">#伏せています</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>取得したclienttokenを元に、deviceidとclientkeyを取得。</p>
-
-<!-- more -->
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>Pro:~ mono<span class="nv">$ </span>curl -i -d <span class="s2">&quot;clienttoken=**************************&quot;</span> <span class="s2">&quot;https://api.getirkit.com/1/keys&quot;</span>
-</span><span class='line'>HTTP/1.1 200 OK
-</span><span class='line'>Server: ngx_openresty
-</span><span class='line'>Date: Mon, 05 May 2014 06:44:32 GMT
-</span><span class='line'>Content-Type: application/json; <span class="nv">charset</span><span class="o">=</span>utf-8
-</span><span class='line'>Content-Length: 94
-</span><span class='line'>Connection: keep-alive
-</span><span class='line'>Access-Control-Allow-Origin: *
-</span><span class='line'>Access-Control-Allow-Headers: X-Requested-With
-</span><span class='line'>X-Content-Type-Options: nosniff
-</span><span class='line'>
-</span><span class='line'><span class="o">{</span><span class="s2">&quot;deviceid&quot;</span>:<span class="s2">&quot;XXXXXXXXXXXXXXXXXXXXXX&quot;</span>,<span class="s2">&quot;clientkey&quot;</span>:<span class="s2">&quot;YYYYYYYYYYYYYYYYYYYYY&quot;</span><span class="o">}</span> <span class="c">#伏せています</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Internet HTTP APIを使ってみる</h2>
-
-<p>deviceid・clientkey・家のライトのオンオフ信号を<a href="https://api.getirkit.com/1/messages">https://api.getirkit.com/1/messages</a> にポストすると、ちゃんと反応した、素晴らしい(　´･‿･｀)</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>curl -i <span class="s2">&quot;https://api.getirkit.com/1/messages&quot;</span> <span class="se">\</span>
-</span><span class='line'>     -d <span class="s1">&#39;clientkey=YYYYYYYYYYYYYYYYYYYYY&#39;</span> <span class="se">\</span>
-</span><span class='line'>     -d <span class="s1">&#39;deviceid=XXXXXXXXXXXXXXXXXXXXXX&#39;</span> <span class="se">\</span>
-</span><span class='line'>     -d <span class="s1">&#39;message={&quot;format&quot;:&quot;raw&quot;,&quot;freq&quot;:38,&quot;data&quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>上記操作で、IRKitサーバーがIRKit端末にアクセス出来るようになって、認証すれば外部から操作出来るようになるって感じかなあ。
-特に、deviceid・clientkeyは漏れるとまずいですね（´-ω-｀）</p>
-
-<h2>ついでにapiKeyを取得</h2>
-
-<p>iPhoneアプリを作ったりするのに使う用のkeyを取得するAPIもあったので、ついでに叩いてみた。
-入力したメールアドレスに確認メールが来て、無事にapiKeyゲット。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>Pro:~ mono<span class="nv">$ </span>curl -i -d <span class="s2">&quot;email=xxxxxx@gmail.com&quot;</span> <span class="s2">&quot;https://api.getirkit.com/1/apps&quot;</span>
-</span><span class='line'>HTTP/1.1 200 OK
-</span><span class='line'>Server: ngx_openresty
-</span><span class='line'>Date: Mon, 05 May 2014 07:00:31 GMT
-</span><span class='line'>Content-Type: application/json; <span class="nv">charset</span><span class="o">=</span>utf-8
-</span><span class='line'>Content-Length: 92
-</span><span class='line'>Connection: keep-alive
-</span><span class='line'>Access-Control-Allow-Origin: *
-</span><span class='line'>Access-Control-Allow-Headers: X-Requested-With
-</span><span class='line'>X-Content-Type-Options: nosniff
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>このapiKitと<a href="https://github.com/irkit/ios-sdk">irkit/ios-sdk</a>でiPhoneアプリ簡単に作れるみたいだけど、<a href="https://github.com/irkit/ios-sdk">irkit/ios-sdk</a>とかでけっこう充分だったりするし、どうしよう（´-ω-｀）<br/>
-やるならiBeaconと組み合わせたいけど、手軽で安いのがまだない感じ（´-ω-｀）<br/>
-<a href="http://estimote.com/">Estimote Beacons — real world context for your apps</a>は洗練されてる感じだけど、$99/3個と割高感が否めない（´-ω-｀）</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[IRKitで遊び始めた〜とりあえずTerminalで操作〜]]></title>
-    <link href="http://mono0926.github.io/blog/2014/05/05/irkit/"/>
-    <updated>2014-05-05T14:22:00+09:00</updated>
-    <id>http://mono0926.github.io/blog/2014/05/05/irkit</id>
-    <content type="html"><![CDATA[<p>冬場忙しかったりで既存アプリで部屋のリモコン登録する程度しかいじれてなかったけど、最近ようやく落ち着いてきたので、<a href="http://www.amazon.co.jp/gp/product/B00H91KK26/ref=as_li_ss_tl?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=B00H91KK26&amp;linkCode=as2&amp;tag=mono0926-22">IRKit</a>で遊んでみる(　´･‿･｀)</p>
-
-<h2>セットアップ</h2>
-
-<p><a href="http://getirkit.com/">IRKit &ndash; Open Source WiFi Connected Infrared Remote Controller</a>を参考に、諸々設定。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># dns-sdコマンドで、IRKitのインスタンス名取得。</span>
-</span><span class='line'>Pro:b4 mono<span class="nv">$ </span>dns-sd -B _irkit._tcp
-</span><span class='line'>Browsing <span class="k">for </span>_irkit._tcp
-</span><span class='line'>DATE: ---Mon 05 May 2014---
-</span><span class='line'>14:41:16.669  ...STARTING...
-</span><span class='line'>Timestamp     A/R    Flags  <span class="k">if </span>Domain               Service Type         Instance Name
-</span><span class='line'>14:41:16.880  Add        2   4 local.               _irkit._tcp.         iRKitA2C4
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<!-- more -->
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># インスタンス名から、IPアドレス取得</span>
-</span><span class='line'>Pro:b4 mono<span class="nv">$ </span>dns-sd -G v4 irkita2c4.local
-</span><span class='line'>DATE: ---Mon 05 May 2014---
-</span><span class='line'>14:41:43.565  ...STARTING...
-</span><span class='line'>Timestamp     A/R Flags <span class="k">if </span>Hostname                               Address                                      TTL
-</span><span class='line'>14:41:43.566  Add     2  4 irkita2c4.local.                       192.168.0.4                                  10
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># IPアドレスからMACアドレスを調べる(もっとスマートなやり方ある？)</span>
-</span><span class='line'><span class="c"># とりあえずping</span>
-</span><span class='line'>Pro:~ mono<span class="nv">$ </span>ping 192.168.0.4
-</span><span class='line'>PING 192.168.0.4 <span class="o">(</span>192.168.0.4<span class="o">)</span>: 56 data bytes
-</span><span class='line'>64 bytes from 192.168.0.4: <span class="nv">icmp_seq</span><span class="o">=</span>0 <span class="nv">ttl</span><span class="o">=</span>255 <span class="nb">time</span><span class="o">=</span>3.958 ms
-</span><span class='line'><span class="c"># arpで確認</span>
-</span><span class='line'>Pro:~ mono<span class="nv">$ </span>arp -a
-</span><span class='line'>? <span class="o">(</span>192.168.0.4<span class="o">)</span> at 20:f8:5e:a6:a2:c4 on en0 ifscope <span class="o">[</span>ethernet<span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>ルーターの設定で、固定IPを今さらながら割り当ててみる。
-これで、家の中では安心して<code>192.168.0.4</code>でアクセス出来るようになった（´-ω-｀）</p>
-
-<h2>Terminalから操作</h2>
-
-<p>普通にリモコンを操作して、その赤外線の範囲内にIRKitが入っていると、青いライトが点滅して、赤外線の信号を取得したことを示してくれる。</p>
-
-<p>そこで、curlすると、その信号が分かる。
-うちのNECのLEDシーリングライトのオンオフボタンを押した後だとこんな感じ。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>Pro:~ mono<span class="nv">$ </span>curl -i http://192.168.0.4/messages
-</span><span class='line'>HTTP/1.0 200 OK
-</span><span class='line'>Access-Control-Allow-Origin: *
-</span><span class='line'>Server: IRKit/1.3.5.0.gce6ac15
-</span><span class='line'>Content-Type: text/plain
-</span><span class='line'>
-</span><span class='line'><span class="o">{</span><span class="s2">&quot;format&quot;</span>:<span class="s2">&quot;raw&quot;</span>,<span class="s2">&quot;freq&quot;</span>:38,<span class="s2">&quot;data&quot;</span>:<span class="o">[</span>17421,9061,935,1232,1037,3458,1037,1232,935,1232,935,1232,1037,1190,1037,1190,1037,3458,1037,3458,1037,1037,1037,3458,1037,3458,1037,1150,1037,3341,1073,3341,1073,1232,935,3458,935,3458,935,1232,1037,3341,935,1190,1073,3458,935,1190,1002,3458,1073,1073,1073,1190,1037,3458,1037,1190,1190,3228,968,1190,1073,3341,1073,1190,1002<span class="o">]}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>これをPOSTすれば、リモコンオンオフボタンと同じ信号をIRKitが発行してくれる。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>curl -i http://192.168.0.4/messages -d <span class="s1">&#39;{&quot;format&quot;:&quot;raw&quot;,&quot;freq&quot;:38,&quot;data&quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>つまり、これをaliasなりシェルスクリプトにしておけば、もうそれだけでキーボードでライトのオンオフが出来るようになる。</p>
-
-<p>楽ちん過ぎる、素晴らしい（´-ω-｀）</p>
-
-<p>ちなみに、うちではこんな風に部屋の真ん中あたりの壁に、両面テープ付けて配置してる。これでも、受信感度の悪い一部機器は反応しなかったりで悩み中。
-その機器は、添付のリモコンでもけっこう近くで方向もけっこう合わせないと反応しないので、IRKitのせいではないのだけれど。</p>
-
-<p><img src="http://mono0926.github.io/images/post/irkit.jpg" alt="irkit" /></p>
-
-<p>8,000円切る価格で完成度高くて、色々弄りやすいの素晴らしい(　´･‿･｀)</p>
-
-<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=mono0926-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=B00H91KK26" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
-
-
-<p>リモコンが付いていないサーキュレーターとかは、この、コンセントのオンオフをリモコンで切り替えられるやつを買おうかな（´-ω-｀）</p>
-
-<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=mono0926-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=B0013L6ACM" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
-
-
-<p>外からアクセス出来るようにしたり、WEBアプリやiPhoneアプリでもっと便利にしていきたいところ(　´･‿･｀)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[ラヴさんスタンプをLINE Creators Marketに申請してみた]]></title>
-    <link href="http://mono0926.github.io/blog/2014/04/17/love-stamp/"/>
-    <updated>2014-04-17T22:06:00+09:00</updated>
-    <id>http://mono0926.github.io/blog/2014/04/17/love-stamp</id>
-    <content type="html"><![CDATA[<p>2月下旬に発表され、本日受付を開始した<a href="https://creator.line.me/">LINE Creators Market</a>に、自作スタンプを申請してみました。</p>
-
-<p><img src="http://mono0926.github.io/images/post/love_stamp.png" alt="ラヴさんスタンプ" /></p>
-
-<p>思えば、3月上旬くらいに、当時IllustratorやPhotoshopを勉強していたこともあり、その演習にちょうどいいのでは？と思いつき、挫折しそうと思いつつ着手したのが始まりでした。</p>
-
-<p>朝3時前に起きて出社前に5枚くらい描く時もあれば、しばらく間が空いてしまう時もありつつ。
-そんなにスムーズに絵を描けない中、40枚は正直すごくしんどかったです（´-ω-｀）</p>
-
-<p>なんやかんやで、色々な人に励まされたり助けて貰いながら、完成にこぎつけられてとても嬉しいです(　´･‿･｀)</p>
-
-<p>色々雑なところがありつつ、申請は通ってほしいなー、というところです。
-無事に5月にマーケットに上がることを祈ります。
-改良アップデートや続編とかも作りたいなーと思ったり。
-今回はローンチリリースを目指していたため締め切りがつらたんだったけど、次はもう少しゆとりをもってやりたいところです（´-ω-｀）</p>
-
-<p><a href="http://a.scn.jp/s/0VrEMIHAB">ラヴさんスタンプ公開アルバム</a>を勤めている会社のサービス<a href="http://www.scn.jp/">「Scene ありそうでなかった、写真アプリ」</a>のアルバムとして作ったので、そこでパラパラスタンプ見たりフィードバックとかいただけたら嬉しいです(　´･‿･｀)</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[オーム社セールで色々買ってみた]]></title>
@@ -2034,6 +1600,79 @@ Linux, Mac, Windowsなどに対応。</p>
 
 
 <p>最近久しく何も書いてなかったけど、あまり脈絡の無い雑多メモなどはこちらで、技術系TipsはQiitaあたりにまとめる習慣付けたい（´・ω・｀）</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[GitHub + Octopressでブログ作ってみた]]></title>
+    <link href="http://mono0926.github.io/blog/2013/07/07/github_octopress_blog/"/>
+    <updated>2013-07-07T12:16:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/07/07/github_octopress_blog</id>
+    <content type="html"><![CDATA[<p>Markdownで書けてなかなか良い感じかもしれない（´-ω-｀）</p>
+
+<h3>導入手順</h3>
+
+<p>ここらへん参考に。</p>
+
+<ul>
+<li><a href="http://rcmdnk.github.io/blog/2013/03/07/setup-octopress/">GitHub pages + Octopressの導入</a>
+
+<ul>
+<li>最初は適当にMacに入っているRuby 1.7.3やHomebrewで入れた2系でインストールしようとしたらはまって結局Ruby 1.9.3にしたので、初めから素直に従った方がよさげです。</li>
+</ul>
+</li>
+<li>rvmの導入がうまくできなかったので、それだけこれを参考に。
+
+<ul>
+<li><a href="http://jitsu102.hatenablog.com/entry/2012/11/23/162034">(OS X::Mountain Lion) RVMでRubyの環境構築メモ</a></li>
+</ul>
+</li>
+</ul>
+
+
+<h4>個人的な運用</h4>
+
+<ul>
+<li><a href="https://github.com/imathis/octopress">imathis/octopress</a>からForkしてそのままソース管理として利用
+
+<ul>
+<li>下書きなどあっても人に見られちゃうからBitbucket使うっていう人が多いらしいですが、あまり気にならないのでGitHubで一元管理</li>
+</ul>
+</li>
+<li><code>setup_github_pages</code> と入力して、<a href="http://mono0926.github.io">GitHub上のこのページ</a> にデプロイされるように</li>
+</ul>
+
+
+<!-- more -->
+
+
+<h4>テーマの変更</h4>
+
+<p>テーマは、<a href="https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes">imathis/octopress</a>から選べますが、あまり有名じゃないので、そんなに選択肢無いです。凝るなら自分で作るべきですかね。
+こぎれいなテーマを適当に選んで使っています。
+導入は簡単で、上記から選んで、下のコマンドですぐ反映されます。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span><span class="nb">cd </span>octopress
+</span><span class='line'><span class="nv">$ </span>git clone GIT_URL .themes/THEME_NAME
+</span><span class='line'><span class="nv">$ </span>rake install<span class="o">[</span><span class="s1">&#39;THEME_NAME&#39;</span><span class="o">]</span>
+</span><span class='line'><span class="nv">$ </span>rake generate
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Markdown 初めて書いた</h3>
+
+<p>なかなか便利ですね(　´･‿･｀)
+このあたりよくまとまっててよかったです。</p>
+
+<ul>
+<li><a href="http://qiita.com/Qiita/items/c686397e4a0f4f11683d">Markdown記法 チートシート</a></li>
+<li><a href="http://qa.atmarkit.co.jp/docs/markdown">QA@ITで使えるMarkdown記法</a></li>
+</ul>
+
 ]]></content>
   </entry>
   

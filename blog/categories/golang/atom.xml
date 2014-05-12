@@ -4,7 +4,7 @@
   <title><![CDATA[Category: golang | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/golang/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-05-13T05:07:11+09:00</updated>
+  <updated>2014-05-13T08:00:55+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -25,7 +25,7 @@
 <p><a href="https://github.com/moovweb/gvm">moovweb/gvm</a>に書いてある通りにやった。
 mercurialのインストールが必要だったので、Brewfileに追記しておいた。</p>
 
-<p>あと、`gvm install go1'に失敗したので、ここに書いてある対応で何とかなった。</p>
+<p>あと、<code>gvm install go1</code>に失敗したので、<a href="https://github.com/moovweb/gvm/issues/38#issuecomment-39842170">Issues on OSX · Issue #38 · moovweb/gvm</a>に書いてある対応で何とかなった。</p>
 
 <p>普通に<code>brew install go</code>のが楽だけど、ちょっとがんばった（´-ω-｀）</p>
 

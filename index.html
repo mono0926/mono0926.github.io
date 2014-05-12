@@ -9,7 +9,10 @@
   <meta name="author" content="Masayuki Ono">
 
   
-  <meta name="description" content="GoCon/2014spring.rst at master · GoCon/GoConに備えて、とりあえずgolangのセットアップと、暇なときにA Tour of Goをやっておこうかと(　´･‿･｀) gvmセットアップ moovweb/gvmに書いてある通りにやった。 &hellip;">
+  <meta name="description" content="今日12時までのオーム社セールで色々買ってみた。 数学・統計系 大学とかで勉強したものの、忘れたり応用できていなかったりするので。 プログラミングのための線形代数
+数学チュートリアル やさしく語る 確率統計
+入門 統計学 ―検定から多変量解析・実験計画法まで―
+Excelで学ぶ統計解析入門 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,378 +82,6 @@
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/05/13/golang/">Golangの環境構築</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-13T03:23:00+09:00" pubdate data-updated="true">May 13<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="https://github.com/GoCon/GoCon/blob/master/2014spring.rst">GoCon/2014spring.rst at master · GoCon/GoCon</a>に備えて、とりあえずgolangのセットアップと、暇なときに<a href="http://tour.golang.org/#1">A Tour of Go</a>をやっておこうかと(　´･‿･｀)</p>
-
-<h2>gvmセットアップ</h2>
-
-<p><a href="https://github.com/moovweb/gvm">moovweb/gvm</a>に書いてある通りにやった。
-mercurialのインストールが必要だったので、Brewfileに追記しておいた。</p>
-
-<p>あと、`gvm install go1&#8217;に失敗したので、ここに書いてある対応で何とかなった。</p>
-
-<p>普通に<code>brew install go</code>のが楽だけど、ちょっとがんばった（´-ω-｀）</p>
-
-<h2>実行</h2>
-
-<p>以下を実行。</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>package main
-</span><span class='line'>import "fmt"
-</span><span class='line'>func main() {
-</span><span class='line'>    fmt.Printf("Hello world!")
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<p><a href="http://mono0926.com/blog/2014/05/06/renew/">OSXの開発環境を整えた &ndash; monoHub</a>でJetBrainのIDEいくつかインストールしてたけど、<a href="http://www.jetbrains.com/idea/">IntelliJ IDEA — The Best Java and Polyglot IDE</a>で全部包含してるのね、情弱つらたん（´-ω-｀）</p>
-
-<p>まあそこそこのお値段だし、適当に色々試用して、良かったら最終的にUltimate Edtion買おうかな（´-ω-｀）
-Web StormでもGoのプラグインインストール出来たけど、SDKの設定とかうまく出来なかったりぐぐったりして出た説明と違うからCommunity Edition版のIntelliJでやった。</p>
-
-<p>実行できたけど、<code>go build hoge.go</code>で生成されるような実行ファイルが生成出来なくて謎(　´･‿･｀)<br/>
-GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分からなくてつらたん（´-ω-｀）</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/05/06/renew/">OSXの開発環境を整えた</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-06T13:24:00+09:00" pubdate data-updated="true">May 6<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。
-Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイッチしたいなとか思ったのが発端。<br/>
-参考: <a href="http://rdepf.hatenablog.jp/entry/2014/03/07/122337">Node.jsのコールバック地獄をPromiseやGeneratorを使って解消する &ndash; HackerNews翻訳してみた</a></p>
-
-<p>わりと<code>brew install XXX</code>で雑に各種環境インストールしてたので、これを気に色々直した。</p>
-
-<h2>Homebrewアンインストール</h2>
-
-<p>ゴミが残るのいやだったので、<a href="https://gist.github.com/mxcl/1173223">Uninstall Homebrew</a>でhomebrewをアンインストール。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/05/06/renew/">続きを読むヽ(・ω・｀）</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/05/05/irkit-nodejs/">Node.jsのIRKitライブラリあったから試してみた</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-05T16:38:00+09:00" pubdate data-updated="true">May 5<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>せっかく<a href="http://www.amazon.com/gp/product/B00HSO6YD8/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00HSO6YD8&amp;linkCode=as2&amp;tag=mono0926-20&amp;linkId=SIVQ46LXCW3PK3IO">Node.js the Right Way: Practical, Server-Side JavaScript That Scales [Kindle Edition]</a>でNode.jsを勉強したので、IRKitをNode.jsの勉強題材に出来ないかなと思って、とりあえずNode.jsのクライアントライブラリ無いかな？と探したらあったので、叩いてみた。</p>
-
-<h3><a href="https://github.com/dameleon/node-irkit">dameleon/node-irkit</a></h3>
-
-<p>元々IRKitのAPIがシンプルなので、あまりNode.jsを使う必然性感じないけど、まあ勉強に（´-ω-｀）</p>
-
-<p>本1冊やったとはいえ、色々まだ不慣れなので、コード読解にも良いかも。
-ドキュメントは無いものの、テストはちゃんと書かれていたので、それを参考に使ってみた。</p>
-
-<p>まずはインストール。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>npm install node-irkit
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>とりあえずlocalApiを使ってみた。
-実行する度に、部屋の電気がオンオフされて煩わしいので、テストは違う信号でやろうと思ったなう（´-ω-｀）</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span>
-</span><span class='line'>    <span class="nx">irkit</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;node-irkit&#39;</span><span class="p">),</span>
-</span><span class='line'>    <span class="nx">localApi</span> <span class="o">=</span> <span class="nx">irkit</span><span class="p">.</span><span class="nx">getLocalApi</span><span class="p">(</span><span class="s2">&quot;http://192.168.0.4&quot;</span><span class="p">),</span>
-</span><span class='line'>    <span class="nx">myRoomLight</span> <span class="o">=</span> <span class="s1">&#39;{&quot;format&quot;:&quot;raw&quot;,&quot;freq&quot;:38,&quot;data&quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">myRoomLightMessage</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">myRoomLight</span><span class="p">);</span>
-</span><span class='line'><span class="nx">localApi</span><span class="p">.</span><span class="nx">postMessages</span><span class="p">(</span><span class="nx">myRoomLightMessage</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span> <span class="c1">//空</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/05/05/irkit-remote/">IRKitに外からアクセス出来るようにした</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-05T15:37:00+09:00" pubdate data-updated="true">May 5<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>前回の<a href="http://mono0926.com/blog/2014/05/05/irkit/">IRKitで遊び始めた〜とりあえずTerminalで操作〜 &ndash; monoHub</a>の続き。</p>
-
-<p>前回触った<a href="http://getirkit.com/#IRKit-Device-API">IRKit Device HTTP API</a>は同じWiFi内から操作するためのもので、外からアクセスするときは<a href="http://getirkit.com/#IRKit-Internet-API">IRKit Internet HTTP API</a>を叩くことになる。</p>
-
-<h2>IRKit Internet HTTP APIを叩けるように準備</h2>
-
-<p>まずは、clienttokenを取得。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>Pro:~ mono<span class="nv">$ </span>curl -i http://192.168.0.4/keys -d <span class="s1">&#39;&#39;</span>
-</span><span class='line'>HTTP/1.0 200 OK
-</span><span class='line'>Access-Control-Allow-Origin: *
-</span><span class='line'>Server: IRKit/1.3.5.0.gce6ac15
-</span><span class='line'>Content-Type: text/plain
-</span><span class='line'>
-</span><span class='line'><span class="o">{</span><span class="s2">&quot;clienttoken&quot;</span>:<span class="s2">&quot;**************************&quot;</span><span class="o">}</span> <span class="c">#伏せています</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>取得したclienttokenを元に、deviceidとclientkeyを取得。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/05/05/irkit-remote/">続きを読むヽ(・ω・｀）</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/05/05/irkit/">IRKitで遊び始めた〜とりあえずTerminalで操作〜</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-05T14:22:00+09:00" pubdate data-updated="true">May 5<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>冬場忙しかったりで既存アプリで部屋のリモコン登録する程度しかいじれてなかったけど、最近ようやく落ち着いてきたので、<a href="http://www.amazon.co.jp/gp/product/B00H91KK26/ref=as_li_ss_tl?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=B00H91KK26&amp;linkCode=as2&amp;tag=mono0926-22">IRKit</a>で遊んでみる(　´･‿･｀)</p>
-
-<h2>セットアップ</h2>
-
-<p><a href="http://getirkit.com/">IRKit &ndash; Open Source WiFi Connected Infrared Remote Controller</a>を参考に、諸々設定。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># dns-sdコマンドで、IRKitのインスタンス名取得。</span>
-</span><span class='line'>Pro:b4 mono<span class="nv">$ </span>dns-sd -B _irkit._tcp
-</span><span class='line'>Browsing <span class="k">for </span>_irkit._tcp
-</span><span class='line'>DATE: ---Mon 05 May 2014---
-</span><span class='line'>14:41:16.669  ...STARTING...
-</span><span class='line'>Timestamp     A/R    Flags  <span class="k">if </span>Domain               Service Type         Instance Name
-</span><span class='line'>14:41:16.880  Add        2   4 local.               _irkit._tcp.         iRKitA2C4
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/05/05/irkit/">続きを読むヽ(・ω・｀）</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/17/love-stamp/">ラヴさんスタンプをLINE Creators Marketに申請してみた</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-17T22:06:00+09:00" pubdate data-updated="true">Apr 17<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>2月下旬に発表され、本日受付を開始した<a href="https://creator.line.me/">LINE Creators Market</a>に、自作スタンプを申請してみました。</p>
-
-<p><img src="/images/post/love_stamp.png" alt="ラヴさんスタンプ" /></p>
-
-<p>思えば、3月上旬くらいに、当時IllustratorやPhotoshopを勉強していたこともあり、その演習にちょうどいいのでは？と思いつき、挫折しそうと思いつつ着手したのが始まりでした。</p>
-
-<p>朝3時前に起きて出社前に5枚くらい描く時もあれば、しばらく間が空いてしまう時もありつつ。
-そんなにスムーズに絵を描けない中、40枚は正直すごくしんどかったです（´-ω-｀）</p>
-
-<p>なんやかんやで、色々な人に励まされたり助けて貰いながら、完成にこぎつけられてとても嬉しいです(　´･‿･｀)</p>
-
-<p>色々雑なところがありつつ、申請は通ってほしいなー、というところです。
-無事に5月にマーケットに上がることを祈ります。
-改良アップデートや続編とかも作りたいなーと思ったり。
-今回はローンチリリースを目指していたため締め切りがつらたんだったけど、次はもう少しゆとりをもってやりたいところです（´-ω-｀）</p>
-
-<p><a href="http://a.scn.jp/s/0VrEMIHAB">ラヴさんスタンプ公開アルバム</a>を勤めている会社のサービス<a href="http://www.scn.jp/">「Scene ありそうでなかった、写真アプリ」</a>のアルバムとして作ったので、そこでパラパラスタンプ見たりフィードバックとかいただけたら嬉しいです(　´･‿･｀)</p>
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -716,6 +347,343 @@ Mac Proの消費電力が、アイドル時に43 Wということで、常時起
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/09/09/python/">Pythonの環境構築</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-09T07:49:00+09:00" pubdate data-updated="true">Sep 9<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>度々ぐぐったりするので、メモ。
+少しずつ、加筆修正していく。</p>
+
+<p><a href="http://www.sicafe.net/macPackageManageTips/html/homebrewPythonInstall.html">Mac OS X Lion / homebrew にて python の環境を整える</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/04/ginger/">GingerをAlfredで使えるようにしてみた</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-04T12:07:00+09:00" pubdate data-updated="true">Aug 4<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="/blog/2013/08/03/ginger/">Ginger APIをPythonで叩いてみた</a>の続き。</p>
+
+<p>元々はAlfredで英文校正が出来るようにしたかったので、ここからが本番。</p>
+
+<h3>完成版</h3>
+
+<p>こんなのが出来たという紹介から。</p>
+
+<h4>校正</h4>
+
+<p>ginger というキーワードに続けて英文を打つと、正してくれる。(この場合、冠詞aの抜けが正される。)</p>
+
+<p><img src="/images/post/ginger1.png" alt="ginger" /></p>
+
+<h4>改善候補一覧</h4>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/08/04/ginger/">続きを読むヽ(・ω・｀）</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/03/ginger/">Ginger APIをPythonで叩いてみた</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-03T14:58:00+09:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>そんな有名でも無いけど、Gingerという英文作成支援サービスがある。</p>
+
+<p><a href="http://www.itmedia.co.jp/news/articles/1304/24/news120.html">もう前置詞に迷わない」──「ネイティブレベル」の英語が書ける英文チェッカー「Ginger」日本上陸</a>という記事などで4月にニュースになって、この手のものが好きな僕は<a href="https://chrome.google.com/webstore/detail/spell-and-grammar-checker/kdfieneakcjfaiglcfcgkidlkmlijjnh">Chromeの拡張</a>をすぐ導入してみたけど、不必要な時に指摘されたり、必要な時は使い勝手が悪いし、うーんと思ったり。</p>
+
+<h3>Ginger API</h3>
+
+<p>コマンドラインとかで使いたいなあと思って適当にぐぐったら、<a href="http://blog.livedoor.jp/xaicron/archives/54466736.html">Ginger API を試してみた</a>という記事が。
+Gistになぜか<a href="https://gist.github.com/koron/5454500">curlで使ってる例</a>があるみたいで。</p>
+
+<p>GingerのページにはAPIとか無いのになぜだろうと思って、Chromeの開発ツールでリクエストのぞいてみたら、もろにAPI叩いているのがあった。</p>
+
+<p><img src="/images/post/ginger.png" alt="ginger" /></p>
+
+<blockquote><p><a href="http://services.gingersoftware.com/Ginger/correct/json/GingerTheText?callback=C&amp;apiKey=6ae0c3a0-afdc-4532-a810-82ded0054236&amp;lang=US&amp;clientVersion=2.0&amp;text=I+am+programmer.&amp;_1375584239344=">http://services.gingersoftware.com/Ginger/correct/json/GingerTheText?callback=C&amp;apiKey=6ae0c3a0-afdc-4532-a810-82ded0054236&amp;lang=US&amp;clientVersion=2.0&amp;text=I+am+programmer.&amp;_1375584239344=</a></p></blockquote>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/08/03/ginger/">続きを読むヽ(・ω・｀）</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/25/leap-motion/">Leap Motionが届いた</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-25T07:50:00+09:00" pubdate data-updated="true">Jul 25<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Leap Motionを買ってみた。<br/>
+多分1年ちょっと前に<a href="http://japanese.engadget.com/2012/05/21/1-100-3d-leap-70/">指先を1/100ミリ単位で捉える3Dモーション入力機器 LEAP、70ドルで予約受付開始 (動画)</a>などの記事を見て、コンセプト動画なのか実動画像なのか知らないけど、すごいなーと思って放置してたけど、今週けっこう話題になってて、記事とか読んでたらいつの間にかポチってた感じ。</p>
+
+<p>ハード的には、劣化版Kinect？とかも思ったけど、対象距離が近距離な<a href="http://www.amazon.co.jp/gp/product/B0074BN0VO/ref=as_li_ss_tl?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=B0074BN0VO&amp;linkCode=as2&amp;tag=mono0926-22">Kinect for Windows</a>は少しお高いし、設置の制約あるし、とか思ってとりあえず今回はこっち。
+KinectはごくたまにXboxで遊んだりと、なかなか好きなデバイス。</p>
+
+<p>Leap Motionって何？とかどんなことできるの？とかについては下の動画見れば大体分かる。</p>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/3b4w749Tud8" frameborder="0" allowfullscreen></iframe>
+
+
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/07/25/leap-motion/">続きを読むヽ(・ω・｀）</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/19/dropbox/">iOSからDropbox Sync APIを使ってみる</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-19T12:40:00+09:00" pubdate data-updated="true">Jul 19<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>Dropbox Sync APIとは</h3>
+
+<h3>サンプルとドキュメント</h3>
+
+<ul>
+<li>サンプル
+
+<ul>
+<li><a href="https://www.dropbox.com/developers/datastore/sdks/ios">Datastore API SDKs</a>からSDKダウンロードすると同梱されてる</li>
+</ul>
+</li>
+<li>ドキュメント
+
+<ul>
+<li><a href="https://www.dropbox.com/developers/datastore/docs/ios">Datastore API for iOS Documentation</a></li>
+</ul>
+</li>
+<li>チュートリアル
+
+<ul>
+<li><a href="https://www.dropbox.com/developers/sync/start/ios">Using the Sync API on iOS</a></li>
+</ul>
+</li>
+</ul>
+
+
+<h3>サンプル起動</h3>
+
+<h4>Files Examplesのサンプル</h4>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/18/dropbox/">iOSからDropbox新APIのDatastore APIを使ってみる</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-18T09:08:00+09:00" pubdate data-updated="true">Jul 18<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>サンプルとドキュメント</h3>
+
+<ul>
+<li>サンプル
+
+<ul>
+<li><a href="https://www.dropbox.com/developers/datastore/sdks/ios">Datastore API SDKs</a>からSDKダウンロードすると同梱されてる</li>
+</ul>
+</li>
+<li>ドキュメント
+
+<ul>
+<li><a href="https://www.dropbox.com/developers/datastore/docs/ios">Datastore API for iOS Documentation</a></li>
+</ul>
+</li>
+<li>チュートリアル
+
+<ul>
+<li><a href="https://www.dropbox.com/developers/datastore/tutorial/ios">Using the Datastore API on iOS</a></li>
+</ul>
+</li>
+</ul>
+
+
+<h3>サンプル起動</h3>
+
+<h4>Datastore Examplesのサンプル</h4>
+
+<p>起動後Dropboxの認証を求められて、認証が通るとTODOアプリが開く。
+アイテムの追加とDone状態の切り替えのシンプルなサンプル。
+リンクしたDropboxには特に新しいファイルなど生成されていない様子。</p>
+
+<p>2台目にインストールして認証するとちゃんと1台目で追加したタスクが出てきて、当たり前だけどなんか関心（´-ω-｀）</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/07/18/dropbox/">続きを読むヽ(・ω・｀）</a>
+    </footer>
+  
+
+
+    </article>
+  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -744,30 +712,30 @@ Mac Proの消費電力が、アイドル時に43 Wということで、常時起
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/05/13/golang/">golangの環境構築</a>
+        <a href="/blog/2013/12/12/ohmsha/">オーム社セールで色々買ってみた</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2014/05/06/renew/">OSXの開発環境を整えた</a>
+        <a href="/blog/2013/11/23/haskell/">Haskell勉強中</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2014/05/05/irkit-nodejs/">Node.jsのIRKitライブラリあったから試してみた</a>
+        <a href="/blog/2013/10/27/mac-pro/">Mac Proの新モデル(通称ゴミ箱)を買うことにした</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2014/05/05/irkit-remote/">IRKitに外からアクセス出来るようにした</a>
+        <a href="/blog/2013/09/21/ios7/">iOS7対応記事のまとめ</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2014/05/05/irkit/">IRKitで遊び始めた〜とりあえずTerminalで操作〜</a>
+        <a href="/blog/2013/09/09/python/">Pythonの環境構築</a>
       </li>
     
   </ul>
 </section>
 <section>
   <h1>Top Categories</h1>
-    <ul id="top-category-list"><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/osx'>osx (3)</a></li><li><a href='/blog/categories/irkit'>irkit (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/nodejs'>nodejs (2)</a></li><li><a href='/blog/categories/haskell'>haskell (2)</a></li><li><a href='/blog/categories/osx'>OSX (1)</a></li><li><a href='/blog/categories/c-'>C# (1)</a></li><li><a href='/blog/categories/scala'>scala (1)</a></li><li><a href='/blog/categories/programming'>programming (1)</a></li></ul>
+    <ul id="top-category-list"><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/osx'>osx (2)</a></li><li><a href='/blog/categories/haskell'>haskell (2)</a></li><li><a href='/blog/categories/ios7'>iOS7 (1)</a></li><li><a href='/blog/categories/mac'>mac (1)</a></li><li><a href='/blog/categories/osx'>OSX (1)</a></li><li><a href='/blog/categories/xcode'>Xcode (1)</a></li><li><a href='/blog/categories/ios'>iOS (1)</a></li><li><a href='/blog/categories/shopping'>shopping (1)</a></li></ul>
 </section>
 <section>
   <h1>GitHub Repos</h1>
@@ -805,7 +773,7 @@ Mac Proの消費電力が、アイドル時に43 Wということで、常時起
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Masayuki Ono -
+  Copyright &copy; 2013 - Masayuki Ono -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
   - <span class="credit">Theme by <a href="http://www.gehaxelt.in">Gehaxelt</a></span>
   <span class="credit">and <a href="http://www.it-solutions-neef.de">IT Solutions Neef</a></span>
