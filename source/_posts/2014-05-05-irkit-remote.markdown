@@ -14,7 +14,7 @@ categories: irkit
 
 まずは、clienttokenを取得。
 
-```sh
+```
 Pro:~ mono$ curl -i http://192.168.0.4/keys -d ''
 HTTP/1.0 200 OK
 Access-Control-Allow-Origin: *
@@ -28,7 +28,7 @@ Content-Type: text/plain
 
 <!-- more -->
 
-```sh
+```
 Pro:~ mono$ curl -i -d "clienttoken=**************************" "https://api.getirkit.com/1/keys"
 HTTP/1.1 200 OK
 Server: ngx_openresty
@@ -47,7 +47,7 @@ X-Content-Type-Options: nosniff
 
 deviceid・clientkey・家のライトのオンオフ信号をhttps://api.getirkit.com/1/messages にポストすると、ちゃんと反応した、素晴らしい(　´･‿･｀)
 
-```sh
+```
 curl -i "https://api.getirkit.com/1/messages" \
      -d 'clientkey=YYYYYYYYYYYYYYYYYYYYY' \
      -d 'deviceid=XXXXXXXXXXXXXXXXXXXXXX' \
@@ -62,7 +62,7 @@ curl -i "https://api.getirkit.com/1/messages" \
 iPhoneアプリを作ったりするのに使う用のkeyを取得するAPIもあったので、ついでに叩いてみた。
 入力したメールアドレスに確認メールが来て、無事にapiKeyゲット。
 
-```sh
+```
 Pro:~ mono$ curl -i -d "email=xxxxxx@gmail.com" "https://api.getirkit.com/1/apps"
 HTTP/1.1 200 OK
 Server: ngx_openresty

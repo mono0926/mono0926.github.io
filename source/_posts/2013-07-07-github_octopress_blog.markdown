@@ -28,7 +28,7 @@ Markdownで書けてなかなか良い感じかもしれない（´-ω-｀）
 こぎれいなテーマを適当に選んで使っています。
 導入は簡単で、上記から選んで、下のコマンドですぐ反映されます。
 
-```sh
+```
 $ cd octopress
 $ git clone GIT_URL .themes/THEME_NAME
 $ rake install['THEME_NAME']

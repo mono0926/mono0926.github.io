@@ -12,7 +12,7 @@ categories: irkit nodejs
 
 [IRKit - Open Source WiFi Connected Infrared Remote Controller](http://getirkit.com/)を参考に、諸々設定。
 
-```sh
+```
 # dns-sdコマンドで、IRKitのインスタンス名取得。
 Pro:b4 mono$ dns-sd -B _irkit._tcp
 Browsing for _irkit._tcp
@@ -24,7 +24,7 @@ Timestamp     A/R    Flags  if Domain               Service Type         Instanc
 
 <!-- more -->
 
-```sh
+```
 # インスタンス名から、IPアドレス取得
 Pro:b4 mono$ dns-sd -G v4 irkita2c4.local
 DATE: ---Mon 05 May 2014---
@@ -33,7 +33,7 @@ Timestamp     A/R Flags if Hostname                               Address       
 14:41:43.566  Add     2  4 irkita2c4.local.                       192.168.0.4                                  10
 ```
 
-```sh
+```
 # IPアドレスからMACアドレスを調べる(もっとスマートなやり方ある？)
 # とりあえずping
 Pro:~ mono$ ping 192.168.0.4
@@ -55,7 +55,7 @@ Pro:~ mono$ arp -a
 そこで、curlすると、その信号が分かる。
 うちのNECのLEDシーリングライトのオンオフボタンを押した後だとこんな感じ。
 
-```sh
+```
 Pro:~ mono$ curl -i http://192.168.0.4/messages
 HTTP/1.0 200 OK
 Access-Control-Allow-Origin: *
@@ -66,7 +66,7 @@ Content-Type: text/plain
 ```
 
 これをPOSTすれば、リモコンオンオフボタンと同じ信号をIRKitが発行してくれる。
-```sh
+```
 curl -i http://192.168.0.4/messages -d '{"format":"raw","freq":38,"data":[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}'
 ```
 
