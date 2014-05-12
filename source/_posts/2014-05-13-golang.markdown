@@ -13,7 +13,7 @@ categories: golang
 [moovweb/gvm](https://github.com/moovweb/gvm)に書いてある通りにやった。
 mercurialのインストールが必要だったので、Brewfileに追記しておいた。
 
-あと、`gvm install go1'に失敗したので、ここに書いてある対応で何とかなった。
+あと、`gvm install go1`に失敗したので、[Issues on OSX · Issue #38 · moovweb/gvm](https://github.com/moovweb/gvm/issues/38#issuecomment-39842170)に書いてある対応で何とかなった。
 
 普通に`brew install go`のが楽だけど、ちょっとがんばった（´-ω-｀）
 
