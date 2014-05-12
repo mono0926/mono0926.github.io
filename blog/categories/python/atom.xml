@@ -4,7 +4,7 @@
   <title><![CDATA[Category: python | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/python/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-05-13T08:04:00+09:00</updated>
+  <updated>2014-05-13T08:21:46+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -73,7 +73,7 @@
 
 <p>こんな感じのXMLを標準出力すると、Itemの数だけ一覧される。</p>
 
-<p>```xml
+<p>```
 &lt;?xml version=&ldquo;1.0&rdquo; ?>
 <items>
   <item arg="I am a programmer and writing bad English. I am Japanese." uid="d78b56b0-fcb7-11e2-9787-e80688cb3920"></p>
@@ -101,7 +101,7 @@ info.plistが必要で、それは多分コマンドラインじゃ作れない�
 
 <p>適当にpackage作成スクリプト書いた。</p>
 
-<p><code>sh
+<p><code>
 cp ginger/info.plist .
 cp ginger/*.png .
 zip ginger.zip ginger_driver.py ginger/*.py info.plist *.png workflow/*.py

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: alfred | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/alfred/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-05-13T08:04:00+09:00</updated>
+  <updated>2014-05-13T08:21:46+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -61,7 +61,7 @@
 
 <p>こんな感じのXMLを標準出力すると、Itemの数だけ一覧される。</p>
 
-<p>```xml
+<p>```
 &lt;?xml version=&ldquo;1.0&rdquo; ?>
 <items>
   <item arg="I am a programmer and writing bad English. I am Japanese." uid="d78b56b0-fcb7-11e2-9787-e80688cb3920"></p>
@@ -89,7 +89,7 @@ info.plistが必要で、それは多分コマンドラインじゃ作れない�
 
 <p>適当にpackage作成スクリプト書いた。</p>
 
-<p><code>sh
+<p><code>
 cp ginger/info.plist .
 cp ginger/*.png .
 zip ginger.zip ginger_driver.py ginger/*.py info.plist *.png workflow/*.py
@@ -275,7 +275,7 @@ def rephrase(self):
     <id>http://mono0926.github.io/blog/2013/07/07/octopress-alfred</id>
     <content type="html"><![CDATA[<p>今日初めてOctopressを触ったら、けっこう気に入ったので、さらに気軽に書ける環境を整えれば捗るのではと思い、AlfredのWorkflowを作ってみました。</p>
 
-<p>```sh</p>
+<p>```</p>
 
 <h1>deploy用</h1>
 
@@ -287,7 +287,7 @@ git commit -m &ldquo;deployed via workflow.&rdquo;
 git push
 ```</p>
 
-<p>```sh</p>
+<p>```</p>
 
 <h1>投稿用</h1>
 
@@ -309,7 +309,7 @@ open ~/$OCTOPATH/$OCTOPOST
 <!-- more -->
 
 
-<p>```sh</p>
+<p>```</p>
 
 <h1>rv設定</h1>
 
@@ -322,7 +322,7 @@ open ~/$OCTOPATH/$OCTOPOST
 ```</p>
 
 <p>さらに一応previewコマンドも作成
-```sh
+```
 if [[ -s &ldquo;$HOME/.rvm/scripts/rvm&rdquo; ]] ; then</p>
 
 <pre><code>source "$HOME/.rvm/scripts/rvm"
@@ -341,7 +341,7 @@ rake preview
 ```</p>
 
 <p>こちらはコマンドを実行するだけではウインドウが開かれずプロセスがゾンビ状態になってしまうので、Alfredで呼び出す時に
-<code>sh
+<code>
 open -a Terminal.app preview.sh
 </code>
 と少しだけ工夫。</p>
