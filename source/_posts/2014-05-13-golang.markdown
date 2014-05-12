@@ -36,3 +36,5 @@ Web StormでもGoのプラグインインストール出来たけど、SDKの設
 
 実行できたけど、`go build hoge.go`で生成されるような実行ファイルが生成出来なくて謎(　´･‿･｀)  
 GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分からなくてつらたん（´-ω-｀）
+
+あと、[ıɥɔınʎ (yabuchin_y) on Twitter](https://twitter.com/yabuchin_y)さんに[GopherCasts](https://gophercasts.io/)を教えてもらった(　´･‿･｀)
