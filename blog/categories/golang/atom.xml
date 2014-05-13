@@ -4,7 +4,7 @@
   <title><![CDATA[Category: golang | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/golang/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-05-13T08:21:46+09:00</updated>
+  <updated>2014-05-13T09:08:51+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -29,6 +29,9 @@ mercurialのインストールが必要だったので、Brewfileに追記して
 
 <p>普通に<code>brew install go</code>のが楽だけど、ちょっとがんばった（´-ω-｀）</p>
 
+<!-- more -->
+
+
 <h2>実行</h2>
 
 <p>以下を実行。</p>
@@ -51,6 +54,16 @@ Web StormでもGoのプラグインインストール出来たけど、SDKの設
 
 <p>実行できたけど、<code>go build hoge.go</code>で生成されるような実行ファイルが生成出来なくて謎(　´･‿･｀)<br/>
 GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分からなくてつらたん（´-ω-｀）</p>
+
+<h3>解決</h3>
+
+<ul>
+<li><a href="https://github.com/go-lang-plugin-org/go-lang-idea-plugin/blob/master/Missing%20ENV.md">go-lang-idea-plugin/Missing ENV.md at master · go-lang-plugin-org/go-lang-idea-plugin</a>を参考に設定したら、警告ダイアログが出なくなった。</li>
+<li>Run Configurationsで、Build before runにチェックを付けてディレクトリをbinに設定したら、実行ファイルも生成されるようになった。</li>
+</ul>
+
+
+<p><img src="/images/post/go.png" alt="go" /></p>
 
 <p>あと、<a href="https://twitter.com/yabuchin_y">ıɥɔınʎ (yabuchin_y) on Twitter</a>さんに<a href="https://gophercasts.io/">GopherCasts</a>を教えてもらった(　´･‿･｀)</p>
 ]]></content>
