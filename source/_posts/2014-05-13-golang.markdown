@@ -46,4 +46,8 @@ GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分�
 
 ![go](/images/post/go.png)
 
+ただ、多分IntelliJがGoのデバッグ実行に対応していない？(無反応)のがつらたん（´-ω-｀）
+[Support for debugging · Issue #25 · go-lang-plugin-org/go-lang-idea-plugin](https://github.com/go-lang-plugin-org/go-lang-idea-plugin/issues/25)を見ると、GAEプロジェクトのみ対応？？よく分からない（´-ω-｀）
+
+
 あと、[ıɥɔınʎ (yabuchin_y) on Twitter](https://twitter.com/yabuchin_y)さんに[GopherCasts](https://gophercasts.io/)を教えてもらった(　´･‿･｀)
