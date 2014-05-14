@@ -31,11 +31,16 @@ JadeとStylusは記法いくつか覚えらればわりとサクサク書けて�
 - [Node.js - Jadeの記法について（あまりまとまっていない） - Qiita](http://qiita.com/sasaplus1/items/189560f80cf337d40fdf)
 - [Jade Template Syntax Documentation by Example](http://naltatis.github.io/jade-syntax-docs/)
 
-##
-
-
-
 
 一気に色々やると破綻しそうかと心配だったけど、意外とスムーズに出来たのは良かった。
 
-AngularJS、シングルページアプリケーション周りの機能はまだ終えてないから、また続きやろう（´-ω-｀）
+AngularJS、[AngularJS使い方メモ - Qiita](http://qiita.com/opengl-8080/items/2fe0a20c314b1c824cc5)の「ページの一部に動的にテンプレートを読み込む」くらいまでで、まだシングルページアプリケーション周りの機能は終えてないから、また続きやろう（´-ω-｀）
+
+
+## コード
+
+<script src="https://gist.github.com/mono0926/30e00a6a26498eff5973.js"></script>
+
+<script src="https://gist.github.com/mono0926/2e8b58d3003f1fcbfa1c.js"></script>
+
+<script src="https://gist.github.com/mono0926/780a92e2fe8c7c80e80f.js"></script>
