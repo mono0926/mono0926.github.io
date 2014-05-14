@@ -11,7 +11,7 @@ categories: angularjs jade stylus
 #### [サンプル](http://ice-me.herokuapp.com/angular#/)
 
 AngularJSはけっこうリッチなライブラリで、全部身につけるのはしばらくかかりそうだけど、今日主要な機能はざっくり書けるようになった感(　´･‿･｀)
-[vue.js](http://vuejs.org/)と迷ったけど、[borisyankov/DefinitelyTyped](https://github.com/borisyankov/DefinitelyTyped)にまだ無かったし、とりあえず今メジャーなAngularJSやっとこうか、という感じ。
+[Vue.js](http://vuejs.org/)と迷ったけど、[borisyankov/DefinitelyTyped](https://github.com/borisyankov/DefinitelyTyped)にまだ無かったし、とりあえず今メジャーなAngularJSやっとこうか、という感じ。
 
 JadeとStylusは記法いくつか覚えらればわりとサクサク書けて、気に入った。これ系いくつかあるけど、どれがいいんですかね。あまり比較検討せずに決めてしまった。
 
