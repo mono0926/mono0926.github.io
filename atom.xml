@@ -4,7 +4,7 @@
   <title><![CDATA[monoHub]]></title>
   <link href="http://mono0926.github.io/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2013-07-10T07:39:27+09:00</updated>
+  <updated>2014-05-13T09:12:02+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -12,6 +12,1864 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[golangの環境構築]]></title>
+    <link href="http://mono0926.github.io/blog/2014/05/13/golang/"/>
+    <updated>2014-05-13T03:23:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2014/05/13/golang</id>
+    <content type="html"><![CDATA[<p><a href="https://github.com/GoCon/GoCon/blob/master/2014spring.rst">GoCon/2014spring.rst at master · GoCon/GoCon</a>に備えて、とりあえずgolangのセットアップと、暇なときに<a href="http://tour.golang.org/#1">A Tour of Go</a>をやっておこうかと(　´･‿･｀)</p>
+
+<h2>gvmセットアップ</h2>
+
+<p><a href="https://github.com/moovweb/gvm">moovweb/gvm</a>に書いてある通りにやった。
+mercurialのインストールが必要だったので、Brewfileに追記しておいた。</p>
+
+<p>あと、<code>gvm install go1</code>に失敗したので、<a href="https://github.com/moovweb/gvm/issues/38#issuecomment-39842170">Issues on OSX · Issue #38 · moovweb/gvm</a>に書いてある対応で何とかなった。</p>
+
+<p>普通に<code>brew install go</code>のが楽だけど、ちょっとがんばった（´-ω-｀）</p>
+
+<!-- more -->
+
+
+<h2>実行</h2>
+
+<p>以下を実行。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>package main
+</span><span class='line'>import "fmt"
+</span><span class='line'>func main() {
+</span><span class='line'>    fmt.Printf("Hello world!")
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://mono0926.com/blog/2014/05/06/renew/">OSXの開発環境を整えた &ndash; monoHub</a>でJetBrainのIDEいくつかインストールしてたけど、<a href="http://www.jetbrains.com/idea/">IntelliJ IDEA — The Best Java and Polyglot IDE</a>で全部包含してるのね、情弱つらたん（´-ω-｀）</p>
+
+<p>まあそこそこのお値段だし、適当に色々試用して、良かったら最終的にUltimate Edtion買おうかな（´-ω-｀）
+Web StormでもGoのプラグインインストール出来たけど、SDKの設定とかうまく出来なかったりぐぐったりして出た説明と違うからCommunity Edition版のIntelliJでやった。</p>
+
+<p>実行できたけど、<code>go build hoge.go</code>で生成されるような実行ファイルが生成出来なくて謎(　´･‿･｀)<br/>
+GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分からなくてつらたん（´-ω-｀）</p>
+
+<h3>解決</h3>
+
+<ul>
+<li><a href="https://github.com/go-lang-plugin-org/go-lang-idea-plugin/blob/master/Missing%20ENV.md">go-lang-idea-plugin/Missing ENV.md at master · go-lang-plugin-org/go-lang-idea-plugin</a>を参考に設定したら、警告ダイアログが出なくなった。</li>
+<li>Run Configurationsで、Build before runにチェックを付けてディレクトリをbinに設定したら、実行ファイルも生成されるようになった。</li>
+</ul>
+
+
+<p><img src="http://mono0926.github.io/images/post/go.png" alt="go" /></p>
+
+<p>ただ、多分IntelliJがGoのデバッグ実行に対応していない？(無反応)のがつらたん（´-ω-｀）
+<a href="https://github.com/go-lang-plugin-org/go-lang-idea-plugin/issues/25">Support for debugging · Issue #25 · go-lang-plugin-org/go-lang-idea-plugin</a>を見ると、GAEプロジェクトのみ対応？？よく分からない（´-ω-｀）</p>
+
+<p>あと、<a href="https://twitter.com/yabuchin_y">ıɥɔınʎ (yabuchin_y) on Twitter</a>さんに<a href="https://gophercasts.io/">GopherCasts</a>を教えてもらった(　´･‿･｀)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[OSXの開発環境を整えた]]></title>
+    <link href="http://mono0926.github.io/blog/2014/05/06/renew/"/>
+    <updated>2014-05-06T13:24:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2014/05/06/renew</id>
+    <content type="html"><![CDATA[<p>Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。
+Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイッチしたいなとか思ったのが発端。<br/>
+参考: <a href="http://rdepf.hatenablog.jp/entry/2014/03/07/122337">Node.jsのコールバック地獄をPromiseやGeneratorを使って解消する &ndash; HackerNews翻訳してみた</a></p>
+
+<p>わりと<code>brew install XXX</code>で雑に各種環境インストールしてたので、これを気に色々直した。</p>
+
+<h2>Homebrewアンインストール</h2>
+
+<p>ゴミが残るのいやだったので、<a href="https://gist.github.com/mxcl/1173223">Uninstall Homebrew</a>でhomebrewをアンインストール。</p>
+
+<!-- more -->
+
+
+<h2>Brewfile導入</h2>
+
+<p>以下など見て便利そうだと思っていたので、Brewfile導入。</p>
+
+<ul>
+<li><a href="http://www.1x1.jp/blog/2014/04/how-to-setup-application-on-osx.html">Mac OSX をクリーンインストールしてからの環境構築メモ &ndash; Shin x blog</a></li>
+<li><a href="http://blog.livedoor.jp/sonots/archives/35251881.html">「BrewfileでHomebrewパッケージを管理する」をやってみた &ndash; sonots:blog</a></li>
+<li><a href="http://tnakamura.hatenablog.com/entry/2014/04/29/113727">MacBook にインストールしているアプリやツールをメモする代わりに Brewfile を作った &ndash; present</a></li>
+</ul>
+
+
+<p>これだけで一気にインストール出来てとても便利。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew bundle</span></code></pre></td></tr></table></div></figure>
+
+
+<p>僕の：<a href="https://github.com/mono0926/Environment/blob/master/OSX/Brewfile">Environment/OSX/Brewfile at master · mono0926/Environment</a></p>
+
+<p>今後も、Homebrewで何か新しくインストールするときメンテナンスしていくようにしよう。</p>
+
+<h2>その他開発環境</h2>
+
+<p><code>brew install XXX</code>で適当にインストールせずに、バージョンの切り替えが容易なようにした。
+いくつか種類あったけど、基本後発のを導入してみた。</p>
+
+<ul>
+<li>Python: <a href="https://github.com/yyuu/pyenv">yyuu/pyenv</a></li>
+<li>Ruby: <a href="https://github.com/sstephenson/rbenv">sstephenson/rbenv</a></li>
+<li>Node.js: <a href="https://github.com/creationix/nvm">creationix/nvm</a>
+
+<ul>
+<li>nvmはzshとの相性悪くて日本では<a href="https://github.com/hokaccha/nodebrew">hokaccha/nodebrew</a>がけっこう人気っぽかったけど特に問題無かったのでnvmにした。</li>
+</ul>
+</li>
+</ul>
+
+
+<p>諸々雑なところがあるけど、<a href="https://github.com/mono0926/Environment/tree/master/OSX">Environment/OSX at master · mono0926/Environment</a>でセットアップスクリプト管理。</p>
+
+<h2>IDE導入</h2>
+
+<p>スクリプト系言語は、最近はわりとSublime Textで書いていたけど、やっぱり補完がもう少し聞いてくれないと厳しいので、なるべくIDE使うようにしようと思う。<br/>
+IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれば捗るかなと。<br/>
+今まではNetBeansかたまにEclipseだったけど、乗り換え。少しずつ慣れていこう（´-ω-｀）</p>
+
+<ul>
+<li><a href="http://www.jetbrains.com/webstorm/">WebStorm :: The smartest JavaScript IDE</a></li>
+<li><a href="http://www.jetbrains.com/ruby/">Ruby on Rails IDE :: JetBrains RubyMine</a></li>
+<li><a href="http://www.jetbrains.com/pycharm/">Python IDE &amp; Django IDE for Web developers : JetBrains PyCharm</a>
+
+<ul>
+<li>CE版は無料</li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Node.jsのIRKitライブラリあったから試してみた]]></title>
+    <link href="http://mono0926.github.io/blog/2014/05/05/irkit-nodejs/"/>
+    <updated>2014-05-05T16:38:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2014/05/05/irkit-nodejs</id>
+    <content type="html"><![CDATA[<p>せっかく<a href="http://www.amazon.com/gp/product/B00HSO6YD8/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00HSO6YD8&amp;linkCode=as2&amp;tag=mono0926-20&amp;linkId=SIVQ46LXCW3PK3IO">Node.js the Right Way: Practical, Server-Side JavaScript That Scales [Kindle Edition]</a>でNode.jsを勉強したので、IRKitをNode.jsの勉強題材に出来ないかなと思って、とりあえずNode.jsのクライアントライブラリ無いかな？と探したらあったので、叩いてみた。</p>
+
+<h3><a href="https://github.com/dameleon/node-irkit">dameleon/node-irkit</a></h3>
+
+<p>元々IRKitのAPIがシンプルなので、あまりNode.jsを使う必然性感じないけど、まあ勉強に（´-ω-｀）</p>
+
+<p>本1冊やったとはいえ、色々まだ不慣れなので、コード読解にも良いかも。
+ドキュメントは無いものの、テストはちゃんと書かれていたので、それを参考に使ってみた。</p>
+
+<p>まずはインストール。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>npm install node-irkit</span></code></pre></td></tr></table></div></figure>
+
+
+<p>とりあえずlocalApiを使ってみた。
+実行する度に、部屋の電気がオンオフされて煩わしいので、テストは違う信号でやろうと思ったなう（´-ω-｀）</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>const
+</span><span class='line'>    irkit = require('node-irkit'),
+</span><span class='line'>    localApi = irkit.getLocalApi("http://192.168.0.4"),
+</span><span class='line'>    myRoomLight = '{"format":"raw","freq":38,"data":[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}',
+</span><span class='line'>    myRoomLightMessage = JSON.parse(myRoomLight);
+</span><span class='line'>localApi.postMessages(myRoomLightMessage, function(err, res) {
+</span><span class='line'>    console.log(res); //空
+</span><span class='line'>});</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[IRKitに外からアクセス出来るようにした]]></title>
+    <link href="http://mono0926.github.io/blog/2014/05/05/irkit-remote/"/>
+    <updated>2014-05-05T15:37:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2014/05/05/irkit-remote</id>
+    <content type="html"><![CDATA[<p>前回の<a href="http://mono0926.com/blog/2014/05/05/irkit/">IRKitで遊び始めた〜とりあえずTerminalで操作〜 &ndash; monoHub</a>の続き。</p>
+
+<p>前回触った<a href="http://getirkit.com/#IRKit-Device-API">IRKit Device HTTP API</a>は同じWiFi内から操作するためのもので、外からアクセスするときは<a href="http://getirkit.com/#IRKit-Internet-API">IRKit Internet HTTP API</a>を叩くことになる。</p>
+
+<h2>IRKit Internet HTTP APIを叩けるように準備</h2>
+
+<p>まずは、clienttokenを取得。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Pro:~ mono$ curl -i http://192.168.0.4/keys -d ''
+</span><span class='line'>HTTP/1.0 200 OK
+</span><span class='line'>Access-Control-Allow-Origin: *
+</span><span class='line'>Server: IRKit/1.3.5.0.gce6ac15
+</span><span class='line'>Content-Type: text/plain
+</span><span class='line'>
+</span><span class='line'>{"clienttoken":"**************************"} #伏せています</span></code></pre></td></tr></table></div></figure>
+
+
+<p>取得したclienttokenを元に、deviceidとclientkeyを取得。</p>
+
+<!-- more -->
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Pro:~ mono$ curl -i -d "clienttoken=**************************" "https://api.getirkit.com/1/keys"
+</span><span class='line'>HTTP/1.1 200 OK
+</span><span class='line'>Server: ngx_openresty
+</span><span class='line'>Date: Mon, 05 May 2014 06:44:32 GMT
+</span><span class='line'>Content-Type: application/json; charset=utf-8
+</span><span class='line'>Content-Length: 94
+</span><span class='line'>Connection: keep-alive
+</span><span class='line'>Access-Control-Allow-Origin: *
+</span><span class='line'>Access-Control-Allow-Headers: X-Requested-With
+</span><span class='line'>X-Content-Type-Options: nosniff
+</span><span class='line'>
+</span><span class='line'>{"deviceid":"XXXXXXXXXXXXXXXXXXXXXX","clientkey":"YYYYYYYYYYYYYYYYYYYYY"} #伏せています</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Internet HTTP APIを使ってみる</h2>
+
+<p>deviceid・clientkey・家のライトのオンオフ信号を<a href="https://api.getirkit.com/1/messages">https://api.getirkit.com/1/messages</a> にポストすると、ちゃんと反応した、素晴らしい(　´･‿･｀)</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -i "https://api.getirkit.com/1/messages" \
+</span><span class='line'>     -d 'clientkey=YYYYYYYYYYYYYYYYYYYYY' \
+</span><span class='line'>     -d 'deviceid=XXXXXXXXXXXXXXXXXXXXXX' \
+</span><span class='line'>     -d 'message={"format":"raw","freq":38,"data":[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>上記操作で、IRKitサーバーがIRKit端末にアクセス出来るようになって、認証すれば外部から操作出来るようになるって感じかなあ。
+特に、deviceid・clientkeyは漏れるとまずいですね（´-ω-｀）</p>
+
+<h2>ついでにapiKeyを取得</h2>
+
+<p>iPhoneアプリを作ったりするのに使う用のkeyを取得するAPIもあったので、ついでに叩いてみた。
+入力したメールアドレスに確認メールが来て、無事にapiKeyゲット。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Pro:~ mono$ curl -i -d "email=xxxxxx@gmail.com" "https://api.getirkit.com/1/apps"
+</span><span class='line'>HTTP/1.1 200 OK
+</span><span class='line'>Server: ngx_openresty
+</span><span class='line'>Date: Mon, 05 May 2014 07:00:31 GMT
+</span><span class='line'>Content-Type: application/json; charset=utf-8
+</span><span class='line'>Content-Length: 92
+</span><span class='line'>Connection: keep-alive
+</span><span class='line'>Access-Control-Allow-Origin: *
+</span><span class='line'>Access-Control-Allow-Headers: X-Requested-With
+</span><span class='line'>X-Content-Type-Options: nosniff</span></code></pre></td></tr></table></div></figure>
+
+
+<p>このapiKitと<a href="https://github.com/irkit/ios-sdk">irkit/ios-sdk</a>でiPhoneアプリ簡単に作れるみたいだけど、<a href="https://github.com/irkit/ios-sdk">irkit/ios-sdk</a>とかでけっこう充分だったりするし、どうしよう（´-ω-｀）<br/>
+やるならiBeaconと組み合わせたいけど、手軽で安いのがまだない感じ（´-ω-｀）<br/>
+<a href="http://estimote.com/">Estimote Beacons — real world context for your apps</a>は洗練されてる感じだけど、$99/3個と割高感が否めない（´-ω-｀）</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[IRKitで遊び始めた〜とりあえずTerminalで操作〜]]></title>
+    <link href="http://mono0926.github.io/blog/2014/05/05/irkit/"/>
+    <updated>2014-05-05T14:22:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2014/05/05/irkit</id>
+    <content type="html"><![CDATA[<p>冬場忙しかったりで既存アプリで部屋のリモコン登録する程度しかいじれてなかったけど、最近ようやく落ち着いてきたので、<a href="http://www.amazon.co.jp/gp/product/B00H91KK26/ref=as_li_ss_tl?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=B00H91KK26&amp;linkCode=as2&amp;tag=mono0926-22">IRKit</a>で遊んでみる(　´･‿･｀)</p>
+
+<h2>セットアップ</h2>
+
+<p><a href="http://getirkit.com/">IRKit &ndash; Open Source WiFi Connected Infrared Remote Controller</a>を参考に、諸々設定。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># dns-sdコマンドで、IRKitのインスタンス名取得。
+</span><span class='line'>Pro:b4 mono$ dns-sd -B _irkit._tcp
+</span><span class='line'>Browsing for _irkit._tcp
+</span><span class='line'>DATE: ---Mon 05 May 2014---
+</span><span class='line'>14:41:16.669  ...STARTING...
+</span><span class='line'>Timestamp     A/R    Flags  if Domain               Service Type         Instance Name
+</span><span class='line'>14:41:16.880  Add        2   4 local.               _irkit._tcp.         iRKitA2C4</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!-- more -->
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># インスタンス名から、IPアドレス取得
+</span><span class='line'>Pro:b4 mono$ dns-sd -G v4 irkita2c4.local
+</span><span class='line'>DATE: ---Mon 05 May 2014---
+</span><span class='line'>14:41:43.565  ...STARTING...
+</span><span class='line'>Timestamp     A/R Flags if Hostname                               Address                                      TTL
+</span><span class='line'>14:41:43.566  Add     2  4 irkita2c4.local.                       192.168.0.4                                  10</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># IPアドレスからMACアドレスを調べる(もっとスマートなやり方ある？)
+</span><span class='line'># とりあえずping
+</span><span class='line'>Pro:~ mono$ ping 192.168.0.4
+</span><span class='line'>PING 192.168.0.4 (192.168.0.4): 56 data bytes
+</span><span class='line'>64 bytes from 192.168.0.4: icmp_seq=0 ttl=255 time=3.958 ms
+</span><span class='line'># arpで確認
+</span><span class='line'>Pro:~ mono$ arp -a
+</span><span class='line'>? (192.168.0.4) at 20:f8:5e:a6:a2:c4 on en0 ifscope [ethernet]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ルーターの設定で、固定IPを今さらながら割り当ててみる。
+これで、家の中では安心して<code>192.168.0.4</code>でアクセス出来るようになった（´-ω-｀）</p>
+
+<h2>Terminalから操作</h2>
+
+<p>普通にリモコンを操作して、その赤外線の範囲内にIRKitが入っていると、青いライトが点滅して、赤外線の信号を取得したことを示してくれる。</p>
+
+<p>そこで、curlすると、その信号が分かる。
+うちのNECのLEDシーリングライトのオンオフボタンを押した後だとこんな感じ。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Pro:~ mono$ curl -i http://192.168.0.4/messages
+</span><span class='line'>HTTP/1.0 200 OK
+</span><span class='line'>Access-Control-Allow-Origin: *
+</span><span class='line'>Server: IRKit/1.3.5.0.gce6ac15
+</span><span class='line'>Content-Type: text/plain
+</span><span class='line'>
+</span><span class='line'>{"format":"raw","freq":38,"data":[17421,9061,935,1232,1037,3458,1037,1232,935,1232,935,1232,1037,1190,1037,1190,1037,3458,1037,3458,1037,1037,1037,3458,1037,3458,1037,1150,1037,3341,1073,3341,1073,1232,935,3458,935,3458,935,1232,1037,3341,935,1190,1073,3458,935,1190,1002,3458,1073,1073,1073,1190,1037,3458,1037,1190,1190,3228,968,1190,1073,3341,1073,1190,1002]}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>これをPOSTすれば、リモコンオンオフボタンと同じ信号をIRKitが発行してくれる。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -i http://192.168.0.4/messages -d '{"format":"raw","freq":38,"data":[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>つまり、これをaliasなりシェルスクリプトにしておけば、もうそれだけでキーボードでライトのオンオフが出来るようになる。</p>
+
+<p>楽ちん過ぎる、素晴らしい（´-ω-｀）</p>
+
+<p>ちなみに、うちではこんな風に部屋の真ん中あたりの壁に、両面テープ付けて配置してる。これでも、受信感度の悪い一部機器は反応しなかったりで悩み中。
+その機器は、添付のリモコンでもけっこう近くで方向もけっこう合わせないと反応しないので、IRKitのせいではないのだけれど。</p>
+
+<p><img src="http://mono0926.github.io/images/post/irkit.jpg" alt="irkit" /></p>
+
+<p>8,000円切る価格で完成度高くて、色々弄りやすいの素晴らしい(　´･‿･｀)</p>
+
+<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=mono0926-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=B00H91KK26" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+
+<p>リモコンが付いていないサーキュレーターとかは、この、コンセントのオンオフをリモコンで切り替えられるやつを買おうかな（´-ω-｀）</p>
+
+<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=mono0926-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=B0013L6ACM" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+
+
+<p>外からアクセス出来るようにしたり、WEBアプリやiPhoneアプリでもっと便利にしていきたいところ(　´･‿･｀)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ラヴさんスタンプをLINE Creators Marketに申請してみた]]></title>
+    <link href="http://mono0926.github.io/blog/2014/04/17/love-stamp/"/>
+    <updated>2014-04-17T22:06:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2014/04/17/love-stamp</id>
+    <content type="html"><![CDATA[<p>2月下旬に発表され、本日受付を開始した<a href="https://creator.line.me/">LINE Creators Market</a>に、自作スタンプを申請してみました。</p>
+
+<p><img src="http://mono0926.github.io/images/post/love_stamp.png" alt="ラヴさんスタンプ" /></p>
+
+<p>思えば、3月上旬くらいに、当時IllustratorやPhotoshopを勉強していたこともあり、その演習にちょうどいいのでは？と思いつき、挫折しそうと思いつつ着手したのが始まりでした。</p>
+
+<p>朝3時前に起きて出社前に5枚くらい描く時もあれば、しばらく間が空いてしまう時もありつつ。
+そんなにスムーズに絵を描けない中、40枚は正直すごくしんどかったです（´-ω-｀）</p>
+
+<p>なんやかんやで、色々な人に励まされたり助けて貰いながら、完成にこぎつけられてとても嬉しいです(　´･‿･｀)</p>
+
+<p>色々雑なところがありつつ、申請は通ってほしいなー、というところです。
+無事に5月にマーケットに上がることを祈ります。
+改良アップデートや続編とかも作りたいなーと思ったり。
+今回はローンチリリースを目指していたため締め切りがつらたんだったけど、次はもう少しゆとりをもってやりたいところです（´-ω-｀）</p>
+
+<p><a href="http://a.scn.jp/s/0VrEMIHAB">ラヴさんスタンプ公開アルバム</a>を勤めている会社のサービス<a href="http://www.scn.jp/">「Scene ありそうでなかった、写真アプリ」</a>のアルバムとして作ったので、そこでパラパラスタンプ見たりフィードバックとかいただけたら嬉しいです(　´･‿･｀)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[オーム社セールで色々買ってみた]]></title>
+    <link href="http://mono0926.github.io/blog/2013/12/12/ohmsha/"/>
+    <updated>2013-12-12T08:34:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/12/12/ohmsha</id>
+    <content type="html"><![CDATA[<p>今日12時までの<a href="http://estore.ohmsha.co.jp/titles">オーム社セール</a>で色々買ってみた。</p>
+
+<h3>数学・統計系</h3>
+
+<p>大学とかで勉強したものの、忘れたり応用できていなかったりするので。</p>
+
+<ul>
+<li>プログラミングのための線形代数</li>
+<li>数学チュートリアル やさしく語る 確率統計</li>
+<li>入門 統計学 ―検定から多変量解析・実験計画法まで―</li>
+<li>Excelで学ぶ統計解析入門 Excel2013/2010対応版
+
+<ul>
+<li>Excelでちゃちゃっと出来るのは大事だと思う</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>読み物系</h3>
+
+<p>本当はKindleで読みたい類の本だけど（´-ω-｀）</p>
+
+<ul>
+<li>情熱プログラマー ソフトウェア開発者の幸せな生き方</li>
+<li>ソフトウェアの世界でキャリアを築く Making it Big in Software</li>
+</ul>
+
+
+<h3>その他</h3>
+
+<ul>
+<li>マスタリングTCP/IP 入門編 第5版
+
+<ul>
+<li>第4版持ってて自炊済みだけど、安いし新しいのも欲しくなった</li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Haskell勉強中]]></title>
+    <link href="http://mono0926.github.io/blog/2013/11/23/haskell/"/>
+    <updated>2013-11-23T18:02:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/11/23/haskell</id>
+    <content type="html"><![CDATA[<p>2週間くらい前からHaskell勉強中。</p>
+
+<p>各種言語使ってきて、今の本業(Objective-C)や一番得意な言語(C#)以外にも久々に手を出したいなと思って以下を検討。</p>
+
+<ul>
+<li>LL系(Pythonなど)をもう少し自由に使えるように
+
+<ul>
+<li>ベターな書き方やモジュール知らずに冗長な記述になっていそう</li>
+<li>日頃の自動化が捗りそう</li>
+</ul>
+</li>
+<li>ネイティブ系
+
+<ul>
+<li>C言語が最低限しか書けない上に段々忘れていったりもしている</li>
+<li>ネイティブ系(コンパイル型・非VM)で書かなきゃいけない時とか手駒がない</li>
+<li>とはいいつつCもC++も積極的に書きたくないのでやるとしたら下記のいずれか
+
+<ul>
+<li>Go</li>
+<li>D言語</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>関数型
+
+<ul>
+<li>C#でLINQとかラムダ式とか慣れたけど、関数型の書き方を一部取り入れたオブジェクト指向という感じで、純粋関数型言語を学びたい</li>
+<li><a href="https://github.com/jgm/pandoc">pandoc</a>というドキュメント変換ツールのソース理解とか改変とかしたいと思いつつHaskellで書かれていて全然分からない</li>
+</ul>
+</li>
+</ul>
+
+
+<!-- more -->
+
+
+<p>まあどれでも良いかなあと思いつつ、Scalaとかも勉強したいとか思っていたのもあり関数型かなあと、とりあえずKindleで安く手に入る<a href="http://www.amazon.co.jp/gp/product/B00BOBYZTQ/ref=as_li_ss_tl?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=B00BOBYZTQ&amp;linkCode=as2&amp;tag=mono0926-22">Guide to ScalaーScalaプログラミング入門</a>をざっと読んだ。
+結果、C#と大して変わらず(Scalaの方がより関数型っぽいけど)、ちゃんと勉強するなら純粋関数型言語だなあと思い、pandocの理解にも繋がるしHaskellを勉強することに。</p>
+
+<p>コンパイル型といえども、記述もシンプルでコンパイル簡単なので、今Pythonとかで簡単な自動化スクリプト書いている代替にもなるかなと。</p>
+
+<h2>勉強計画</h2>
+
+<h3><a href="http://www.amazon.co.jp/gp/product/B009RO80XY/ref=as_li_ss_tl?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=B009RO80XY&amp;linkCode=as2&amp;tag=mono0926-22">すごいHaskellたのしく学ぼう!</a></h3>
+
+<p>少し前に話題になっていたこの本をまず読むことに。
+洋書にするか迷ったけど、せっかく和書のKindle版もあるのでそれに頼った。</p>
+
+<p>そして、オンライン版はフリーで読めることもさっき知ったり：<a href="http://learnyouahaskell.com/">Learn You a Haskell for Great Good!</a></p>
+
+<p>フリーということは…と思って探したら、<a href="https://github.com/igstan/learn-you-a-haskell-kindle.git">Kindle用のファイルを生成出来るプロジェクト</a>もあったり。
+ただ、本に出てくるソースコード集が見つからず、まあいいか。</p>
+
+<p>本の前半は、Haskellの構文に慣れるのに少し苦労しつつ、後半のアプリカティブのあたりでけっこう理解が怪しくなってきた（´-ω-｀）
+理論が理解出来ていなくてしっくりこないところが一部あるものの、コードの挙動などは何とか読み解けているのでまだなんとかいけるはず。</p>
+
+<h3>その後</h3>
+
+<p><a href="http://www.amazon.com/gp/product/B00DWJ1BIG/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00DWJ1BIG&amp;linkCode=as2&amp;tag=mono0926-20">Parallel and Concurrent Programming in Haskell</a>が面白そうなので、次に読みたいところ。並列/並行処理周りがまだ弱い気がするのでその勉強もかねて。</p>
+
+<p>あと、個人的に同じ本を繰り返し読むのが苦手(それが大事なのは理解している)なので、代わりに<a href="http://itpro.nikkeibp.co.jp/article/COLUMN/20060915/248215/">本物のプログラマはHaskellを使う</a>とか読んで曖昧なところの理解を深めて行ければ。</p>
+
+<h2>実行環境</h2>
+
+<h3>GHCインストール</h3>
+
+<p>色々処理系があるようだけど、標準のGHCを導入。
+よく分からないけど、Homebrewで良いかと、以下を実行してインストール。
+Mavericksなどの場合は環境によっては前もって<a href="https://developer.apple.com/downloads/index.action">Command Line Tools</a>のインストールをしないとビルド失敗したりするはず。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew update
+</span><span class='line'>brew install haskell
+</span><span class='line'>brew install haskell-platform # これがなんだか理解していない</span></code></pre></td></tr></table></div></figure>
+
+
+<p>これで、ターミナルで<code>ghci</code>と打つと、Haskellのインタプリターが起動するはず。
+今まで、わざわざファイルで書く必要の無い書き捨ての込み入った計算はPythonのインタプリターでやっていた(そこまでする必要の無い程度ならAlfredの電卓で)けど、これからはghciでやろうかなと。</p>
+
+<p>コンパイルは<code>ghc --make hoge.hs</code>だけで出来るので、簡単。<code>hs hoge.hs</code>と打つと、以下実行してくれるオレオレコマンドかエイリアスか作ったらさらに手軽になりそう。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ghc --make hoge.hs
+</span><span class='line'>./hoge</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>IDEの導入</h3>
+
+<p><a href="http://neue.cc/2010/01/04_233.html">neue cc &ndash; Haskell用IDE 「Leksah」の紹介と導入方法</a>を見てLeksahをインストールすることに。
+すごく簡単なプログラムならSublime Textでもいいかなと思いつつ、やはりちゃんとした補完機能など欲しいので。</p>
+
+<p>インストール直後に出てくるダイアログのソースのパスには、Homebrewでのインストール時にダウンロードされていた以下のソースをどこかに展開したディレクトリを指定すると標準ライブラリのメタデータ作ったりソース参照が楽になったりするみたい。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/Library/Caches/Homebrew/ghc-7.6.3.tar.bz2</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Candyオプション(一部の文字が数学的記号に置換表示される)がインストール直後は文字化けしていたけど、お気に入りの<a href="http://save.sys.t.u-tokyo.ac.jp/~yusa/fonts/ricty.html">Ricty</a>にしたら直った。</p>
+
+<p>実は本を読んでいただけで、まだほとんどコード書いていないけど、そろそろ書き慣れていきたいところ。
+何か目先の題材が欲しいけど思いつかず（´・ω・｀）</p>
+
+<p>テスト書くと言語仕様とか挙動とかの理解がけっこう捗るので、そこらへんも調べつつ進めていきたいところ。
+とりあえずLeksahのサンプルコードがQuickCheck(prep_の接頭辞がテスト対象になる)を使っててそれでよいかなと。</p>
+
+<p>久々にブログ書いたけど、Octopress + 自動化したおかげで、Webページをコピーする時以外キーボードだけで書けてなかなか快適（´-ω-｀）</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mac Proの新モデル(通称ゴミ箱)を買うことにした]]></title>
+    <link href="http://mono0926.github.io/blog/2013/10/27/mac-pro/"/>
+    <updated>2013-10-27T11:24:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/10/27/mac-pro</id>
+    <content type="html"><![CDATA[<p>今持っているMac Proの2010年モデルももう丸3年以上経っていたり、2011年モデルのMac mini(サーバー用)も切り捨てて1本化したいなと思ってたところに、新Mac Proが発表されて、ちょっと考えてたらほしくなってしまった。</p>
+
+<h2>購買意欲がそそられた理由</h2>
+
+<p>省電力というのが意外と一番大きな理由。
+Mac Proの消費電力が、アイドル時に43 Wということで、常時起動でも700円/月程度で、Mac miniの用途をMac Proに一本化できそう。</p>
+
+<p>新Mac Proを常時起動にすると、Mac Pro1台で下記の用途全てまかなえる。</p>
+
+<ul>
+<li>普段利用(OSX)</li>
+<li>OSXサーバー</li>
+<li>Windows開発機</li>
+<li>Windowsサーバー</li>
+</ul>
+
+
+<p>また必要に応じてiPadやWindows RT機からリモートアクセスとかすると、家には1台 + 持ち歩き用に安価軽量なモバイル端末という、組み合わせができる。
+常時起動なので、ファイルや音楽・動画などメディア系リソースへのアクセスもいつでも出来るし。</p>
+
+<p>今、SSD・フルHDのそこそこ良いWindowsノートも持っているけど、これも次の買い換えでSurface(非Pro)とかにしたりで持ち運び楽かつ買い換えコストも抑えられる。
+そもそも、iPad AirとかでWindows開発環境にアクセスすればいいので、Windowsのモバイル端末は不要になるかも(もちろんネット環境悪いところでは制約が出るけど)。</p>
+
+<!-- more -->
+
+
+<h2>ネック</h2>
+
+<p>後述のお金の問題に加えて、以下の作業が面倒。</p>
+
+<h3>増設したHDD</h3>
+
+<p>Mac Proに入れているSSD(256GB)x2・HDD(2TB)x2・HDD(3TB)x1を、新Mac Proだと外に出して繋がないと行けなくなる(SSDのうち1台はメインドライブなので不要だけど)。
+そのケース・ドライブを用意したりとか、その配線が微妙かなあとか、ちょっと悩みどころ。</p>
+
+<h3><a href="http://mono-comp.com/">旧ブログ</a></h3>
+
+<p>今Mac miniで動かしている、IIS + WordPressで構築した<a href="http://mono-comp.com/">旧ブログ</a> の移行が面倒。
+そもそももう更新していないので畳むか、変換スクリプト書いて、こちらのブログに移行してもよいかも。</p>
+
+<h3>その他Windowsサーバー環境移行</h3>
+
+<p><a href="http://apps.microsoft.com/windows/ja-jp/app/amazon-sales-rank/17848073-edbd-462d-abb8-2f77d2a2aadf">Amazon Sales Rank</a>のサーバー環境の移行は、1・2時間くらいで出来そう。</p>
+
+<p>少し前まで、Windows系のソース管理は自前のTFSでやっていたけど、それもGitHubに移行したのであとは特に必要な作業無さそう。</p>
+
+<p>そして、新Mac Proに乗り換えたら仮想マシン立てるつもりなので、その後の移行作業はとても楽になるはず。</p>
+
+<h2>移行コスト</h2>
+
+<p>計算してみたら、デスクトップ系のMac製品は中古相場もあまり高くなく、思っていたよりかかる模様。
+Mac Proはヤフオク見るともっと相場高いので、そちらもありかも。</p>
+
+<ul>
+<li>新Mac Pro：カスタマイズオーダーや、自分でカスタマイズしたり外付け用ドライブ含めて、〜40万円</li>
+<li>Apple Mac Pro MC560J/A (Mid 2010)売却：〜5.8万円 (じゃんぱら価格)</li>
+<li>Mac mini MC815J/A (Mid 2011)売却：〜3.1万円 (じゃんぱら価格)</li>
+</ul>
+
+
+<p>計〜30万円程度かかるので、けっこう高い（´-ω-｀）</p>
+
+<h2>結論</h2>
+
+<p>「Mac Proの新モデル(通称ゴミ箱)を買うことにした」ものの、今はまだ買わない。
+会社のMacBook Pro Retina 15インチ(2012年モデル)と良くも悪くもほぼ性能一緒で快適なので、上記の1台で色々な用途をまかなえること以外は、あまり買い換える理由ないというのが大きい。
+OSも、ハードウェア性能を要求するどころか、逆に同じハードでも快適に動く方向にシフトしてきているし。</p>
+
+<p>というわけで、キリよく5年くらい経った2015年夏くらいに買い換えたい。
+今のMac Proも20万円ちょっと + 色々増設で30万円近くしたけど、5で割るとそんなに高くないし、次のモデルも5年くらい十分持つだろうし、基本的に高価なモバイル端末買わずに済むようになるかなとか考えるとけっこうありかと。</p>
+
+<p>あと、ヤフオクに強気価格(箱無し・メモリ16GB増設済みで15万円など)で出しておいて、運良く売れたら買い換えというのもやろうと思っていたり。
+さすがに手元にMacマシンが無くなるときついので、12月になってMac Proが発売されたらにしよう。</p>
+
+<p>とりあえず3年ちょっと、何一つトラブル無く動いているのは素晴らしいし、外観もかっこいいので、またMac Pro買おうと思った次第。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[iOS7対応記事のまとめ]]></title>
+    <link href="http://mono0926.github.io/blog/2013/09/21/ios7/"/>
+    <updated>2013-09-21T19:55:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/09/21/ios7</id>
+    <content type="html"><![CDATA[<p>iOS7関連のNDA解禁ということで、色々記事が増えてきたので、メモ。
+少しずつ追記していきながら、落ち着いたところで、集約したような記事書くかも。</p>
+
+<ul>
+<li><a href="http://koogawa.hateblo.jp/entry/2013/09/19/025424">iOS 7対応事例 FastCheckin</a></li>
+<li><a href="http://laboyukai.blogspot.jp/2013/09/ios6ios7.html">iOS6からiOS7への対応</a></li>
+<li><a href="http://skyarts.com/blog/jp/skyarts/?p=29327">iOS 7向けアプリ開発時の注意点</a></li>
+<li><a href="http://qiita.com/monoqlo/items/cfc3aa018a5cb7df0deb">iOS7でNavigationBarに入れたSearchBarにキャンセルボタンを出現させる方法</a></li>
+<li><a href="http://qiita.com/hanapage/items/7d58293f5f7234437d79">iOS6 &ndash;> iOS7変更対応</a></li>
+<li><a href="http://qiita.com/ne_ko_/items/5da4b2a247e65431c7cf">iOS 6/7 で UILabel などの見た目がずれるよ〜とお嘆きのあなたへ</a></li>
+<li><a href="http://qiita.com/y_matsuwitter/items/bd41493f098dfa984f2b">CocoapodsとXcode5の組み合わせでエラー出た+解決した</a></li>
+<li><a href="http://d.hatena.ne.jp/Kazzz/20130923/p1">iOS7でステータスバーが被る問題への対応</a></li>
+<li><a href="http://blog.livedoor.jp/tek_nishi/archives/8069300.html">iOS7のarm64対応でやったこと</a></li>
+<li><a href="http://qiita.com/yimajo/items/7051af0919b5286aecfe">iOS7でナビゲーションバーやステータスバーの文字色を変える</a></li>
+<li><a href="http://qiita.com/jazzsasori/items/cbd4650684a4f715e199">iOS 7 でステータスバーを隠す方法</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Pythonの環境構築]]></title>
+    <link href="http://mono0926.github.io/blog/2013/09/09/python/"/>
+    <updated>2013-09-09T07:49:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/09/09/python</id>
+    <content type="html"><![CDATA[<p>度々ぐぐったりするので、メモ。
+少しずつ、加筆修正していく。</p>
+
+<p><a href="http://www.sicafe.net/macPackageManageTips/html/homebrewPythonInstall.html">Mac OS X Lion / homebrew にて python の環境を整える</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[GingerをAlfredで使えるようにしてみた]]></title>
+    <link href="http://mono0926.github.io/blog/2013/08/04/ginger/"/>
+    <updated>2013-08-04T12:07:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/08/04/ginger</id>
+    <content type="html"><![CDATA[<p><a href="http://mono0926.github.io/blog/2013/08/03/ginger/">Ginger APIをPythonで叩いてみた</a>の続き。</p>
+
+<p>元々はAlfredで英文校正が出来るようにしたかったので、ここからが本番。</p>
+
+<h3>完成版</h3>
+
+<p>こんなのが出来たという紹介から。</p>
+
+<h4>校正</h4>
+
+<p>ginger というキーワードに続けて英文を打つと、正してくれる。(この場合、冠詞aの抜けが正される。)</p>
+
+<p><img src="http://mono0926.github.io/images/post/ginger1.png" alt="ginger" /></p>
+
+<h4>改善候補一覧</h4>
+
+<!-- more -->
+
+
+<p>rephraseというキーワードに続けて適当な英文を打つと、より自然な言い回し候補を出してくれる。
+&ldquo;Thank you for your reply&#8221;は、メールの返信とかでよく使うけど、ワンパターン化を避けたい時とかに使えそう。</p>
+
+<p><img src="http://mono0926.github.io/images/post/ginger2.png" alt="ginger" /></p>
+
+<p>ともに、選択状態でエンターを押すと、クリップボードにコピーされて、フォーカスの当たっているアプリにペーストされるので、適当にメールとかエディタとか使いながら自然と正しそうな英文が打てるようになるはず。</p>
+
+<h3>AlfredのWorkflowの作り方</h3>
+
+<p>一応<a href="http://support.alfredapp.com/workflows">ドキュメント</a>はあるけど、肝心なところが書かれていなかったりして、<a href="http://www.alfredforum.com/forum/3-share-your-workflows/">フォーラム</a>で聞いたり、既存のWorkflowのソースを読んで作り方を学ばなければいけない感じ。
+作り方自体は基本簡単だけど、ちょくちょくはまりどころがあって苦労する。</p>
+
+<h4>キーワードの受け取り</h4>
+
+<p>{query}というキーワードでアクセス出来るので、それをスクリプトに引数ととして渡すのが一般的。</p>
+
+<h4>結果の表示</h4>
+
+<p>処理終了時にnotification飛ばしたり、クリップボードにコピーとかはWorkflowのエディタでパーツをつなぎ合わせたりするだけで簡単だけど、上の例みたいに一覧するのはどうやるのかと思っていたら、XMLで標準出力するらしい。
+関係ないechoやprint文があると壊れるので注意。
+ここらへんも、既存のソース読み解いてやっと分かった。それも不慣れなPHPソースがけっこう多くてアレ。</p>
+
+<p>こんな感じのXMLを標準出力すると、Itemの数だけ一覧される。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;?xml version="1.0" ?&gt;
+</span><span class='line'>&lt;items&gt;
+</span><span class='line'>  &lt;item arg="I am a programmer and writing bad English. I am Japanese." uid="d78b56b0-fcb7-11e2-9787-e80688cb3920"&gt;
+</span><span class='line'>    &lt;title&gt;I am a programmer and writing bad English. I am Japanese.&lt;/title&gt;
+</span><span class='line'>    &lt;subtitle&gt;Gingered sentence&lt;/subtitle&gt;
+</span><span class='line'>    &lt;icon/&gt;
+</span><span class='line'>  &lt;/item&gt;
+</span><span class='line'>&lt;/items&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>これも適当に文字列置換したりして作れるけど、PythonでXML組み立てて作る簡単なモジュール作って再利用できるようにしておいた。
+ここらへんの下回りがけっこうこなれていない感。</p>
+
+<h4>インストール可能なパッケージの作り方</h4>
+
+<p>配布されているworkflowは、*.alfredworkflowという形式で、ダブルクリックでインストールできる。</p>
+
+<p>簡単なやり方は自分のworkflowを右クリックしてExportすること。</p>
+
+<p>逆にscript群からコマンドで作りたい場合は、必要なファイルをzip化して拡張子を変えればよい。
+info.plistが必要で、それは多分コマンドラインじゃ作れないから、やっぱり最初はExportの過程が必要だけど、コードとか別管理したいならコマンドラインで修正版作るのがよさげな気がする。</p>
+
+<p>適当にpackage作成スクリプト書いた。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cp ginger/info.plist .
+</span><span class='line'>cp ginger/*.png .
+</span><span class='line'>zip ginger.zip ginger_driver.py ginger/*.py info.plist *.png workflow/*.py
+</span><span class='line'>rm info.plist *.png
+</span><span class='line'>mv ginger.zip ginger.alfredworkflow</span></code></pre></td></tr></table></div></figure>
+
+
+<p>こんな管理で良いのか若干謎。</p>
+
+<p>以上、<a href="https://github.com/mono0926/AlfredWorkflow">GitHub</a>で管理するようにした。
+今までworkflowの作り方がよく分からない部分があったり管理が適当だったりしたけど、これからはもっとサクサク作れそう。</p>
+
+<p>今回の成果物：<a href="https://github.com/mono0926/AlfredWorkflow/raw/master/ginger.alfredworkflow">Ginger Workflow</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ginger APIをPythonで叩いてみた]]></title>
+    <link href="http://mono0926.github.io/blog/2013/08/03/ginger/"/>
+    <updated>2013-08-03T14:58:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/08/03/ginger</id>
+    <content type="html"><![CDATA[<p>そんな有名でも無いけど、Gingerという英文作成支援サービスがある。</p>
+
+<p><a href="http://www.itmedia.co.jp/news/articles/1304/24/news120.html">もう前置詞に迷わない」──「ネイティブレベル」の英語が書ける英文チェッカー「Ginger」日本上陸</a>という記事などで4月にニュースになって、この手のものが好きな僕は<a href="https://chrome.google.com/webstore/detail/spell-and-grammar-checker/kdfieneakcjfaiglcfcgkidlkmlijjnh">Chromeの拡張</a>をすぐ導入してみたけど、不必要な時に指摘されたり、必要な時は使い勝手が悪いし、うーんと思ったり。</p>
+
+<h3>Ginger API</h3>
+
+<p>コマンドラインとかで使いたいなあと思って適当にぐぐったら、<a href="http://blog.livedoor.jp/xaicron/archives/54466736.html">Ginger API を試してみた</a>という記事が。
+Gistになぜか<a href="https://gist.github.com/koron/5454500">curlで使ってる例</a>があるみたいで。</p>
+
+<p>GingerのページにはAPIとか無いのになぜだろうと思って、Chromeの開発ツールでリクエストのぞいてみたら、もろにAPI叩いているのがあった。</p>
+
+<p><img src="http://mono0926.github.io/images/post/ginger.png" alt="ginger" /></p>
+
+<blockquote><p><a href="http://services.gingersoftware.com/Ginger/correct/json/GingerTheText?callback=C&amp;apiKey=6ae0c3a0-afdc-4532-a810-82ded0054236&amp;lang=US&amp;clientVersion=2.0&amp;text=I+am+programmer.&amp;_1375584239344=">http://services.gingersoftware.com/Ginger/correct/json/GingerTheText?callback=C&amp;apiKey=6ae0c3a0-afdc-4532-a810-82ded0054236&amp;lang=US&amp;clientVersion=2.0&amp;text=I+am+programmer.&amp;_1375584239344=</a></p></blockquote>
+
+<!-- more -->
+
+
+<p>これをブラウザにコピペするとJSONが<code>C()</code>で囲まれたものが出てくるけど、多分JSONP用のパラメーターなので、単にJSON受け取りたい場合は不要。</p>
+
+<p>textパラメーターも適当に削れて、以下でリクエストが可能。
+apiKeyとかもろに出てるけどいいのだろうか(　´･‿･｀)</p>
+
+<blockquote><p><a href="http://services.gingersoftware.com/Ginger/correct/json/GingerTheText?apiKey=6ae0c3a0-afdc-4532-a810-82ded0054236&amp;lang=US&amp;clientVersion=2.0&amp;text=I+am+programmer.">http://services.gingersoftware.com/Ginger/correct/json/GingerTheText?apiKey=6ae0c3a0-afdc-4532-a810-82ded0054236&amp;lang=US&amp;clientVersion=2.0&amp;text=I+am+programmer.</a></p>
+
+<p>{&ldquo;LightGingerTheTextResult&rdquo;:[{&ldquo;Confidence&rdquo;:4,&ldquo;From&rdquo;:5,&ldquo;LrnFrg&rdquo;:&ldquo;I am programmer&rdquo;,&ldquo;LrnFrgOrigIndxs&rdquo;:[{&ldquo;From&rdquo;:5,&ldquo;To&rdquo;:14}],&ldquo;Mistakes&rdquo;:[{&ldquo;CanAddToDict&rdquo;:false,&ldquo;From&rdquo;:5,&ldquo;To&rdquo;:14}],&ldquo;ShouldReplace&rdquo;:true,&ldquo;Suggestions&rdquo;:[{&ldquo;LrnCatId&rdquo;:12,&ldquo;Text&rdquo;:&ldquo;a programmer&rdquo;},{&ldquo;LrnCatId&rdquo;:13,&ldquo;Text&rdquo;:&ldquo;the programmer&rdquo;}],&ldquo;To&rdquo;:14,&ldquo;TopLrnCatId&rdquo;:12,&ldquo;Type&rdquo;:3,&ldquo;UXFrgFrom&rdquo;:0,&ldquo;UXFrgTo&rdquo;:14}]}</p></blockquote>
+
+<p>ざっくりと、間違えている箇所と、その修正例(複数のこともあり)が返ってくる。</p>
+
+<p>と、普通にAPI叩けてしまい、これ使ってよいのだろうかと思いつつ、非公開になったりAPI変わったりすると面倒とか、くらいで私的に使う分には良いのではないかと。
+これでサービス作ったり儲けたりすると黒くなってきそうだけど。</p>
+
+<h3>実用的な英語のフレーズを表示する「Rephrase」という機能</h3>
+
+<p>上記のやつは単に間違えをしてくれるサービスだけど、さらにより自然な言い回し候補を表示してくれるサービスもあったり。</p>
+
+<p><a href="http://gigazine.net/news/20130802-ginger-rephrase/">英文を文脈に合わせて修正する「Ginger」とネイティブ英語に変換する「Rephrase」</a>に書いてあるとおり<a href="http://www.gingersoftware.com/rephrase_jpn">Rephrase</a>に飛ぶと使える。</p>
+
+<p>こちらも同様の手口で簡単にAPIのURLが取得可能。</p>
+
+<blockquote><p><a href="http://ro.gingersoftware.com/rephrase/rephrase?s=Hi%2C%20nice%20to%20meet%20you.&amp;callback=jQuery17204343029616866261_1375585040822&amp;_=1375585300259">http://ro.gingersoftware.com/rephrase/rephrase?s=Hi%2C%20nice%20to%20meet%20you.&amp;callback=jQuery17204343029616866261_1375585040822&amp;_=1375585300259</a></p></blockquote>
+
+<p>同じくcalllback云々は不要だけど、さっきはcallback関数名がCだったのにけっこうフォーマットが違ったり、apiKeyが無かったり、base URLが違ったりとかなり適当な感じ（´・ω・｀）</p>
+
+<p>と、英文を入力するとJSONで結果を受け取れるとこまでは行ったので、Pythonで叩いてみた。</p>
+
+<p>大体こんな感じで、修正後の英文や、改善後の候補群に変換するスクリプトが書けた。
+最近はWebアクセスはrequestsモジュールを使うのがモダンっぽい。</p>
+
+<p>最新版：<a href="https://github.com/mono0926/AlfredWorkflow/blob/master/ginger/ginger.py">Alfred Workflow</a></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c">#!/usr/local/bin/python</span>
+</span><span class='line'><span class="c"># -*- coding: utf-8 -*-</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">requests</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">json</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">sys</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">os</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">GingerSummary</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span><span class='line'>  <span class="sd">&quot;&quot;&quot;Ginger Summary&quot;&quot;&quot;</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">original</span><span class="p">,</span> <span class="n">results</span><span class="p">):</span>
+</span><span class='line'>      <span class="nb">super</span><span class="p">(</span><span class="n">GingerSummary</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+</span><span class='line'>      <span class="bp">self</span><span class="o">.</span><span class="n">original</span> <span class="o">=</span> <span class="n">original</span>
+</span><span class='line'>      <span class="bp">self</span><span class="o">.</span><span class="n">results</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="nb">cmp</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">cmp</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">from_</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">from_</span><span class="p">))</span>
+</span><span class='line'>      <span class="bp">self</span><span class="o">.</span><span class="n">gingered</span> <span class="o">=</span> <span class="bp">None</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>      <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">gingered</span><span class="p">:</span>
+</span><span class='line'>          <span class="bp">self</span><span class="o">.</span><span class="n">_ginger</span><span class="p">()</span>
+</span><span class='line'>      <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">gingered</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">show_detail</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>      <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">results</span><span class="p">:</span>
+</span><span class='line'>          <span class="k">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">_ginger</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>      <span class="n">gingered</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">original</span>
+</span><span class='line'>      <span class="n">offset</span> <span class="o">=</span> <span class="mi">0</span>
+</span><span class='line'>      <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">results</span><span class="p">):</span>
+</span><span class='line'>          <span class="n">suggest</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">suggestions</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span><span class='line'>          <span class="n">gingered</span> <span class="o">=</span> <span class="s">&#39;{0}{1}{2}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">gingered</span><span class="p">[:</span><span class="n">r</span><span class="o">.</span><span class="n">from_</span><span class="o">+</span><span class="n">offset</span><span class="p">],</span> <span class="n">suggest</span><span class="p">,</span> <span class="n">gingered</span><span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">to</span><span class="o">+</span><span class="mi">1</span><span class="o">+</span><span class="n">offset</span><span class="p">:])</span>
+</span><span class='line'>          <span class="n">offset</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">suggest</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">to</span> <span class="o">-</span> <span class="n">r</span><span class="o">.</span><span class="n">from_</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</span><span class='line'>      <span class="bp">self</span><span class="o">.</span><span class="n">gingered</span> <span class="o">=</span> <span class="n">gingered</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">GingerResult</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span><span class='line'>  <span class="sd">&quot;&quot;&quot;Ginger Result&quot;&quot;&quot;</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>      <span class="nb">super</span><span class="p">(</span><span class="n">GingerResult</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nd">@classmethod</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">create_from_json</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">json</span><span class="p">):</span>
+</span><span class='line'>      <span class="n">that</span> <span class="o">=</span> <span class="n">GingerResult</span><span class="p">()</span>
+</span><span class='line'>      <span class="n">that</span><span class="o">.</span><span class="n">from_</span> <span class="o">=</span> <span class="n">json</span><span class="p">[</span><span class="s">&#39;From&#39;</span><span class="p">]</span>
+</span><span class='line'>      <span class="n">that</span><span class="o">.</span><span class="n">to</span> <span class="o">=</span> <span class="n">json</span><span class="p">[</span><span class="s">&#39;To&#39;</span><span class="p">]</span>
+</span><span class='line'>      <span class="n">that</span><span class="o">.</span><span class="n">suggestions</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="s">&#39;Text&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">json</span><span class="p">[</span><span class="s">&#39;Suggestions&#39;</span><span class="p">]]</span>
+</span><span class='line'>      <span class="n">that</span><span class="o">.</span><span class="n">should_replace</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">json</span><span class="p">[</span><span class="s">&#39;ShouldReplace&#39;</span><span class="p">])</span>
+</span><span class='line'>      <span class="n">that</span><span class="o">.</span><span class="n">confidence</span> <span class="o">=</span> <span class="n">json</span><span class="p">[</span><span class="s">&#39;Confidence&#39;</span><span class="p">]</span>
+</span><span class='line'>      <span class="k">return</span> <span class="n">that</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>      <span class="k">return</span> <span class="s">&#39;from: {0}, to: {1}, suggestions: [{2}], should_replace: {3}, confidence: {4}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+</span><span class='line'>          <span class="bp">self</span><span class="o">.</span><span class="n">from_</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">to</span><span class="p">,</span> <span class="s">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">suggestions</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">should_replace</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">confidence</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">GingerClient</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span><span class='line'>  <span class="sd">&quot;&quot;&quot;Ginger Client&quot;&quot;&quot;</span>
+</span><span class='line'>  <span class="n">base_url</span> <span class="o">=</span> <span class="s">&#39;http://services.gingersoftware.com/Ginger/correct/json/GingerTheText&#39;</span>
+</span><span class='line'>  <span class="n">api_key</span> <span class="o">=</span> <span class="s">&#39;6ae0c3a0-afdc-4532-a810-82ded0054236&#39;</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sentence</span><span class="p">):</span>
+</span><span class='line'>      <span class="nb">super</span><span class="p">(</span><span class="n">GingerClient</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+</span><span class='line'>      <span class="bp">self</span><span class="o">.</span><span class="n">sentence</span> <span class="o">=</span> <span class="n">sentence</span>
+</span><span class='line'>  
+</span><span class='line'>  <span class="k">def</span> <span class="nf">ginger</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>      <span class="bp">self</span><span class="o">.</span><span class="n">_initialize</span><span class="p">()</span>
+</span><span class='line'>      <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">process</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">show_detail</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>      <span class="bp">self</span><span class="o">.</span><span class="n">_initialize</span><span class="p">()</span>
+</span><span class='line'>      <span class="bp">self</span><span class="o">.</span><span class="n">summary</span><span class="o">.</span><span class="n">show_detail</span><span class="p">()</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">_initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>      <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;apiKey&#39;</span><span class="p">:</span><span class="n">GingerClient</span><span class="o">.</span><span class="n">api_key</span><span class="p">,</span> <span class="s">&#39;text&#39;</span><span class="p">:</span><span class="bp">self</span><span class="o">.</span><span class="n">sentence</span><span class="p">,</span> <span class="s">&#39;lang&#39;</span><span class="p">:</span><span class="s">&#39;US&#39;</span><span class="p">,</span> <span class="s">&#39;clientVersion&#39;</span><span class="p">:</span><span class="s">&#39;2.0&#39;</span><span class="p">}</span>
+</span><span class='line'>      <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">GingerClient</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+</span><span class='line'>      <span class="n">results</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="s">&#39;LightGingerTheTextResult&#39;</span><span class="p">]</span>
+</span><span class='line'>      <span class="n">ginger_results</span> <span class="o">=</span> <span class="p">[</span><span class="n">GingerResult</span><span class="o">.</span><span class="n">create_from_json</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">results</span><span class="p">]</span>
+</span><span class='line'>      <span class="bp">self</span><span class="o">.</span><span class="n">summary</span> <span class="o">=</span> <span class="n">GingerSummary</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sentence</span><span class="p">,</span> <span class="n">ginger_results</span><span class="p">)</span>   
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">RephraseClient</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span><span class='line'>  <span class="sd">&quot;&quot;&quot;RephraseClient&quot;&quot;&quot;</span>
+</span><span class='line'>  <span class="n">base_url</span> <span class="o">=</span> <span class="s">&#39;http://ro.gingersoftware.com/rephrase/rephrase&#39;</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sentence</span><span class="p">):</span>
+</span><span class='line'>      <span class="nb">super</span><span class="p">(</span><span class="n">RephraseClient</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+</span><span class='line'>      <span class="bp">self</span><span class="o">.</span><span class="n">sentence</span> <span class="o">=</span> <span class="n">sentence</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">rephrase</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>      <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">RephraseClient</span><span class="o">.</span><span class="n">base_url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s">&#39;s&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">sentence</span><span class="p">})</span>
+</span><span class='line'>      <span class="n">results</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)[</span><span class="s">&#39;Sentences&#39;</span><span class="p">]</span>
+</span><span class='line'>      <span class="n">texts</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="s">&#39;Sentence&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">results</span><span class="p">]</span>
+</span><span class='line'>      <span class="k">return</span> <span class="n">texts</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>続き：<a href="http://mono0926.github.io/blog/2013/08/04/ginger/">GingerをAlfredで使えるようにしてみた</a></h3>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Leap Motionが届いた]]></title>
+    <link href="http://mono0926.github.io/blog/2013/07/25/leap-motion/"/>
+    <updated>2013-07-25T07:50:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/07/25/leap-motion</id>
+    <content type="html"><![CDATA[<p>Leap Motionを買ってみた。<br/>
+多分1年ちょっと前に<a href="http://japanese.engadget.com/2012/05/21/1-100-3d-leap-70/">指先を1/100ミリ単位で捉える3Dモーション入力機器 LEAP、70ドルで予約受付開始 (動画)</a>などの記事を見て、コンセプト動画なのか実動画像なのか知らないけど、すごいなーと思って放置してたけど、今週けっこう話題になってて、記事とか読んでたらいつの間にかポチってた感じ。</p>
+
+<p>ハード的には、劣化版Kinect？とかも思ったけど、対象距離が近距離な<a href="http://www.amazon.co.jp/gp/product/B0074BN0VO/ref=as_li_ss_tl?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=B0074BN0VO&amp;linkCode=as2&amp;tag=mono0926-22">Kinect for Windows</a>は少しお高いし、設置の制約あるし、とか思ってとりあえず今回はこっち。
+KinectはごくたまにXboxで遊んだりと、なかなか好きなデバイス。</p>
+
+<p>Leap Motionって何？とかどんなことできるの？とかについては下の動画見れば大体分かる。</p>
+
+<iframe width="560" height="315" src="http://mono0926.github.io//www.youtube.com/embed/3b4w749Tud8" frameborder="0" allowfullscreen></iframe>
+
+
+
+
+<!-- more -->
+
+
+<h3>届くまで</h3>
+
+<p>実は、いいなーと思いつつも購入をためらっていたけど、偶然<a href="">BetterTouchTool</a>のアップデートが走ってリリース文章見ていたら、Leap Motionの文字があって、「おっ!」と思いそのまま買ってしまった感じ。
+今見たら、<a href="http://blog.boastr.net/?page_id=3023">紹介ブログ</a>があった。
+元々愛用しているツールだけど、こういう早くて先進的な対応は好感度上がる。
+OSもアプリもわりとリリース文には目を通している(利用者目線でも開発目線でも読んでいるとけっこう有用に思う)けど、良いきっかけになってよかった。</p>
+
+<p><a href="https://www.leapmotion.com/product">この購入サイト</a>で購入。
+PayPal決済でトータル1万円弱。カード決済用のトータル表示より安かったような(見間違えかも)。</p>
+
+<p>入荷や発送の関係でしばらく待つかなーと思っていたら、翌朝発送しましたメールが来てびっくり。
+<a href="http://www.fedex.com/us/">FedEx</a>という郵送会社だった。
+たまに海外購入はするけど、多分初めての利用。
+翌々日に届くとのこと。お早い。</p>
+
+<p>というわけで、一昨日の晩に頼んだLeap Motionが到着。</p>
+
+<h3>簡単なレビュー</h3>
+
+<p>詳細なレビューとかはすでにけっこうあるので、下記参照。</p>
+
+<ul>
+<li><a href="http://techwave.jp/archives/leap-motion-1st-review.html">Leap Motion は本当に革新的なUIデバイスなのか? 本体レビューとその雑感【@maskin】</a></li>
+<li><a href="http://gigazine.net/news/20130723-leap-motion-store-airspace-launched/">手と指の動きを感知して奥行きまで含めた立体的な操作ができる「Leap Motion」は一体何がすごいのかまとめ</a></li>
+</ul>
+
+
+<h4>開封まで</h4>
+
+<p>シンプルな箱。</p>
+
+<p><img src="http://mono0926.github.io/images/leap1.jpg" alt="leap1" /></p>
+
+<p>本体とUSBケーブルとしょぼい冊子だけ。</p>
+
+<p><img src="http://mono0926.github.io/images/leap2.jpg" alt="leap2" /></p>
+
+<p>ガムくらいの大きさ。</p>
+
+<p><img src="http://mono0926.github.io/images/leap3.jpg" alt="leap3" /></p>
+
+<h4>セットアップ</h4>
+
+<p>マニュアル無いから適当にググったら、<a href="https://www.leapmotion.com/setup">このセットアップサイト</a>でドライバ&amp;アプリをインストールするとのこと。(あとで見たらボール紙みたいなものにそのURL書いてあったけど)</p>
+
+<p>そこにたどり着けばすごく簡単で、ぽちぽちっと適当にインストールしてチュートリアルで試用する感じ。</p>
+
+<h3>どうやって使おう</h3>
+
+<p>とりあえずBetterTouchToolと組み合わせて、良い感じに普段使い出来ないか試してみてるところ。
+人差し指をクルクルすると、音量上げ下げしたり、手を叩くとスリープするようにしたりして、意外と実用的に使えそう。</p>
+
+<p>↓YouTubeにアップしてみた。</p>
+
+<iframe width="420" height="315" src="http://mono0926.github.io//www.youtube.com/embed/rFNnymc967w" frameborder="0" allowfullscreen></iframe>
+
+
+<p>セッティングはMagic Trackpadのジェスチャー登録するような感じでとても簡単。若干認識が微妙だけど、ハードウェア性能とソフトウェアとどっちのせいかは不明。現状でもそんなに悪くないし、今後のソフトウェア改良に期待は持てる感じはしてる。</p>
+
+<p>あと、<a href="https://airspace.leapmotion.com/">アプリストア「Airspace」</a>とかのアプリで遊んでみようとも思うけど、ゲーム系はすぐ飽きちゃいそう…（´-ω-｀）</p>
+
+<p>というわけでまだあまり弄れてないけど、これから色々遊んでみたり、開発にも手を出していきたいなと思ったり。</p>
+
+<p><a href="https://www.leapmotion.com/developers">開発リソース</a>はけっこう整っている感。
+これ系の開発は結構前にカメラ + OpenCVを少しやった程度だったりして、個人的にはけっこう苦労しそうだけど（´-ω-｀）</p>
+
+<ul>
+<li>SDK</li>
+<li><a href="https://developer.leapmotion.com/docs">Documentation</a>
+
+<ul>
+<li>C++</li>
+<li>Java</li>
+<li>Python</li>
+<li>C#</li>
+<li>JavaScript</li>
+<li>Objective-C (この一覧には明記されていないけど対応してる)</li>
+</ul>
+</li>
+<li><a href="https://developer.leapmotion.com/forums">Forums</a></li>
+<li><a href="https://www.youtube.com/user/leapmotion">LeapMotion(YouTube)</a></li>
+<li><a href="http://www.buildinsider.net/small/leapmotionfirstimp/01">C#開発者から見たLeap Motion開発のファースト・インプレッション</a></li>
+<li><a href="http://www.irisclasson.com/2013/05/02/developing-for-leap-motion-in-c-tutorial-video-slides-and-code/">Developing for Leap Motion in C# Tutorial (video, slides and code)</a></li>
+<li><a href="http://kray.jp/blog/leap-motion-javascript/">JavaScriptでLeapMotionアプリを作る方法</a></li>
+</ul>
+
+
+<h4>Windows 8を操作しているデモ動画</h4>
+
+<p>なかなか操作の相性が良さそう。動画を見ただけだと実はタッチよりも快適？とか思ったり。</p>
+
+<iframe width="560" height="315" src="http://mono0926.github.io//www.youtube.com/embed/21LtA5-wiwU" frameborder="0" allowfullscreen></iframe>
+
+
+<h4>Google Earthを操作する様子</h4>
+
+<iframe width="560" height="315" src="http://mono0926.github.io//www.youtube.com/embed/RebX7YEn3GQ" frameborder="0" allowfullscreen></iframe>
+
+
+<p>しばらく遊べそうなおもちゃが手に入ってとても嬉しい（´-ω-｀）</p>
+
+<p>とりあえず、直近の悩みは明日会社に持って行って、積極的に披露するか、色々ジェスチャーして気づかれるのを待つか(あるいは頭がおかしくなったと思われるか)どうしよう（´-ω-｀）</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[iOSからDropbox Sync APIを使ってみる]]></title>
+    <link href="http://mono0926.github.io/blog/2013/07/19/dropbox/"/>
+    <updated>2013-07-19T12:40:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/07/19/dropbox</id>
+    <content type="html"><![CDATA[<h3>Dropbox Sync APIとは</h3>
+
+<h3>サンプルとドキュメント</h3>
+
+<ul>
+<li>サンプル
+
+<ul>
+<li><a href="https://www.dropbox.com/developers/datastore/sdks/ios">Datastore API SDKs</a>からSDKダウンロードすると同梱されてる</li>
+</ul>
+</li>
+<li>ドキュメント
+
+<ul>
+<li><a href="https://www.dropbox.com/developers/datastore/docs/ios">Datastore API for iOS Documentation</a></li>
+</ul>
+</li>
+<li>チュートリアル
+
+<ul>
+<li><a href="https://www.dropbox.com/developers/sync/start/ios">Using the Sync API on iOS</a></li>
+</ul>
+</li>
+</ul>
+
+
+<h3>サンプル起動</h3>
+
+<h4>Files Examplesのサンプル</h4>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[iOSからDropbox新APIのDatastore APIを使ってみる]]></title>
+    <link href="http://mono0926.github.io/blog/2013/07/18/dropbox/"/>
+    <updated>2013-07-18T09:08:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/07/18/dropbox</id>
+    <content type="html"><![CDATA[<h3>サンプルとドキュメント</h3>
+
+<ul>
+<li>サンプル
+
+<ul>
+<li><a href="https://www.dropbox.com/developers/datastore/sdks/ios">Datastore API SDKs</a>からSDKダウンロードすると同梱されてる</li>
+</ul>
+</li>
+<li>ドキュメント
+
+<ul>
+<li><a href="https://www.dropbox.com/developers/datastore/docs/ios">Datastore API for iOS Documentation</a></li>
+</ul>
+</li>
+<li>チュートリアル
+
+<ul>
+<li><a href="https://www.dropbox.com/developers/datastore/tutorial/ios">Using the Datastore API on iOS</a></li>
+</ul>
+</li>
+</ul>
+
+
+<h3>サンプル起動</h3>
+
+<h4>Datastore Examplesのサンプル</h4>
+
+<p>起動後Dropboxの認証を求められて、認証が通るとTODOアプリが開く。
+アイテムの追加とDone状態の切り替えのシンプルなサンプル。
+リンクしたDropboxには特に新しいファイルなど生成されていない様子。</p>
+
+<p>2台目にインストールして認証するとちゃんと1台目で追加したタスクが出てきて、当たり前だけどなんか関心（´-ω-｀）</p>
+
+<!-- more -->
+
+
+<p><img src="http://mono0926.github.io/images/post/todo.png" alt="todo" /></p>
+
+<h3><a href="https://www.dropbox.com/developers/datastore/tutorial/ios">チュートリアル</a>を読み解く</h3>
+
+<ul>
+<li>複数端末間でのコンフリクトは自動的に解消される(挙動を変えるにはフィールドごとにルールを設定出来る)
+
+<ul>
+<li>DBResolutionRemote：リモート優先(デフォルト)</li>
+<li>DBResolutionLocal：ローカル優先</li>
+<li>DBResolutionMax：大きい値優先</li>
+<li>DBResolutionMin：小さい値優先</li>
+<li>DBResolutionSum：適当に足し引きされる</li>
+</ul>
+</li>
+<li>RDBと違ってスキーマを持たない
+
+<ul>
+<li>KVSに近い感じ。keyと適当な型のvalueのペア。</li>
+</ul>
+</li>
+<li>Account manager
+
+<ul>
+<li>認証用</li>
+</ul>
+</li>
+<li>Datasotores and tables
+
+<ul>
+<li>データベース本体</li>
+<li>オフライン動作可</li>
+<li>オンライン同期するにはsyncを明示的に呼ぶ
+
+<ul>
+<li>トランザクション</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>実装</h3>
+
+<h4>アカウント認証</h4>
+
+<p>他のDropbox APIと同じような定型的な感じ。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="c1">// AppDelegate</span>
+</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">app</span> <span class="nf">didFinishLaunchingWithOptions:</span><span class="p">(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="nv">opts</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">DBAccountManager</span><span class="o">*</span> <span class="n">accountMgr</span> <span class="o">=</span>
+</span><span class='line'>        <span class="p">[[</span><span class="n">DBAccountManager</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithAppKey:</span><span class="s">@&quot;APP_KEY&quot;</span> <span class="nl">secret:</span><span class="s">@&quot;APP_SECRET&quot;</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">DBAccountManager</span> <span class="nl">setSharedManager:</span><span class="n">accountMgr</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="c1">// Some view controller</span>
+</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">IBAction</span><span class="p">)</span><span class="nf">didPressLink</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">DBAccount</span> <span class="o">*</span><span class="n">account</span> <span class="o">=</span> <span class="p">[[</span><span class="n">DBAccountManager</span> <span class="n">sharedManager</span><span class="p">]</span> <span class="n">linkedAccount</span><span class="p">];</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">account</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;App already linked&quot;</span><span class="p">);</span>
+</span><span class='line'>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>        <span class="p">[[</span><span class="n">DBAccountManager</span> <span class="n">sharedManager</span><span class="p">]</span> <span class="nl">linkFromController:</span><span class="n">self</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="c1">// AppDelegate</span>
+</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">app</span> <span class="nf">openURL:</span><span class="p">(</span><span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
+</span><span class='line'>    <span class="nf">sourceApplication:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">source</span> <span class="nf">annotation:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">annotation</span> <span class="p">{</span>
+</span><span class='line'>    <span class="n">DBAccount</span> <span class="o">*</span><span class="n">account</span> <span class="o">=</span> <span class="p">[[</span><span class="n">DBAccountManager</span> <span class="n">sharedManager</span><span class="p">]</span> <span class="nl">handleOpenURL:</span><span class="n">url</span><span class="p">];</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">account</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;App linked successfully!&quot;</span><span class="p">);</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">YES</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">NO</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>テーブル作成・取得</h4>
+
+<p>多分無かったら作る、あったら取得みたいな感じ。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="n">DBDatastore</span> <span class="o">*</span><span class="n">store</span> <span class="o">=</span> <span class="p">[</span><span class="n">DBDatastore</span> <span class="nl">openDefaultStoreForAccount:</span><span class="n">account</span> <span class="nl">error:</span><span class="nb">nil</span><span class="p">];</span>
+</span><span class='line'><span class="n">DBTable</span> <span class="o">*</span><span class="n">tasksTbl</span> <span class="o">=</span> <span class="p">[</span><span class="n">store</span> <span class="nl">getTable:</span><span class="s">@&quot;tasks&quot;</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>レコード操作</h4>
+
+<p>同じテーブルに対して、異なるキー・バリューの型突っ込めるらしい。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="n">DBRecord</span> <span class="o">*</span><span class="n">firstTask</span> <span class="o">=</span> <span class="p">[</span><span class="n">tasksTbl</span> <span class="nl">insert:</span><span class="err">@</span><span class="p">{</span> <span class="s">@&quot;taskname&quot;</span><span class="o">:</span> <span class="s">@&quot;Buy milk&quot;</span><span class="p">,</span> <span class="s">@&quot;completed&quot;</span><span class="o">:</span> <span class="err">@</span><span class="n">NO</span> <span class="p">}];</span>
+</span><span class='line'><span class="p">[</span><span class="n">store</span> <span class="nl">sync:</span><span class="nb">nil</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>テーブルのレコードの増減監視</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="p">[</span><span class="n">store</span> <span class="nl">addObserver:</span><span class="n">self</span> <span class="nl">block:</span><span class="o">^</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">(</span><span class="n">store</span><span class="p">.</span><span class="n">status</span> <span class="o">&amp;</span> <span class="n">DBDatastoreIncoming</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="n">NSDictionary</span> <span class="o">*</span><span class="n">changed</span> <span class="o">=</span> <span class="p">[</span><span class="n">slf</span><span class="p">.</span><span class="n">store</span> <span class="nl">sync:</span><span class="nb">nil</span><span class="p">];</span>
+</span><span class='line'>        <span class="c1">// 何が変わったか調べて処理</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'><span class="p">}];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>バリューの型</h4>
+
+<ul>
+<li>String</li>
+<li>Boolean</li>
+<li>Integer</li>
+<li>Floating</li>
+<li>Date</li>
+<li>Bytes
+
+<ul>
+<li>最大100KB</li>
+<li>より大きいサイズはSync APIやfilepathベースで扱うようにとのこと</li>
+</ul>
+</li>
+<li>List</li>
+</ul>
+
+
+<h4>ストレージの容量</h4>
+
+<p>冒頭に</p>
+
+<blockquote><p>リンクしたDropboxには特に新しいファイルなど生成されていない様子</p></blockquote>
+
+<p>と書いたけど、5MBはユーザーストレージを使わずにアプリケーションごとに割り当てられていて、それを超えるとユーザーストレージ領域を使っていくという感じ。それさえ食い尽くすとリミット。
+ユーザーのストレージ汚さないようにしたい場合は5MB制限に気をつける。</p>
+
+<h3>弄ってみた印象</h3>
+
+<p>ネットワーク状態に応じての同期とか意識しなくて良いし、本来サーバー実装するべきところをSDKに任せられて良い一方、ローカルでのクエリが少し冗長な感じ。<br/>
+サンプルは1テーブルなのに増減監視でごちゃごちゃ処理してて複数テーブルとかその関連とか考え出すと素のままじゃ使うの厳しそう。
+Core Data使えばNSFetchedResultsControllerでコレクション監視がかなり簡潔に書けるところを自前実装じなくちゃいけなくて、自前アプリに導入するならそこらへんうまくフレームワーク化しないと快適に使えない感じ(そんな感じのライブラリ作っていくのも面白そうだけど)。</p>
+
+<p>Apple製品に閉じられるなら、Core Data + iCloudの方がやはり良いなあという感じ（´-ω-｀）
+参考：<a href="http://d.hatena.ne.jp/glass-_-onion/20120728/1343471940">iCloud プログラミング入門</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[iOSからDropbox新APIのDrop-ins(Chooser)を使ってみる]]></title>
+    <link href="http://mono0926.github.io/blog/2013/07/17/dropbox/"/>
+    <updated>2013-07-17T12:51:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/07/17/dropbox</id>
+    <content type="html"><![CDATA[<p>古い記事だけど、<a href="http://blog.syuhari.jp/archives/2284">[iPhone/iPad] Dropbox API を使ってみた</a> をさらっと見て作業開始。<br/>
+開発者登録は自力じゃなかなか見つからなかったけど、<a href="https://www.dropbox.com/developers/apply?cont=/developers/apps">Dropbox API terms and conditions</a>。<br/>
+権限の設定などは初回の作成時以外は変更出来ないっぽいので、慎重に。</p>
+
+<h3>Drop-ins</h3>
+
+<p><a href="https://www.dropbox.com/developers/dropins/chooser/ios">Using the Chooser (iOS)</a>を読んでみた。<br/>
+<a href="http://dl.dropboxusercontent.com/s/uf3893wfnk4f3p9/dropbox-ios-chooser-sdk-1.0.zip">Download iOS SDK</a>に同梱のサンプルプロジェクトを実行しながらドキュメント読めばすごく分かりやすい。</p>
+
+<h4>導入</h4>
+
+<p><a href="http://dl.dropboxusercontent.com/s/uf3893wfnk4f3p9/dropbox-ios-chooser-sdk-1.0.zip">Download iOS SDK</a> に入っているDBChooser.framework と DBChooser.bundle を対象のプロジェクトに突っ込むだけ。</p>
+
+<!-- more -->
+
+
+<h4>AppKey指定</h4>
+
+<p>唯一躓きそうなのがAppKeyで、サンプルには元々おそらくサンプル用のkeyがURL Schemesに入っていてそのまま実行できちゃうけど、自分のアプリに適用する場合はちゃんと自分のkeyを指定する必要あり。
+プロジェクトのセッティングのTARGETSのURL TypesのURL Schemesに指定するわけだけど、db-というプレフィックスの後に<a href="https://www.dropbox.com/developers/apps">App Console</a>のDrop-insタイプのアプリのkeyを入れる形式。不正なAppKeyを指定するとChooser起動のタイミングで落ちる。</p>
+
+<p><img src="http://mono0926.github.io/images/post/dropin.png" alt="projetc setting" /></p>
+
+<h4>呼び出し</h4>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="cp">#import &lt;DBChooser/DBChooser.h&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didPressChoose</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="c1">// 複数のkeyを使う場合はdefaultChooserの代わりにkeyを指定して初期化</span>
+</span><span class='line'>    <span class="p">[[</span><span class="n">DBChooser</span> <span class="n">defaultChooser</span><span class="p">]</span> <span class="nl">openChooserForLinkType:</span><span class="n">DBChooserLinkTypePreview</span> <span class="c1">// 取得出来るURL2種類から選択</span>
+</span><span class='line'>                                    <span class="nl">fromViewController:</span><span class="n">self</span> <span class="nl">completion:</span><span class="o">^</span><span class="p">(</span><span class="n">NSArray</span> <span class="o">*</span><span class="n">results</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span> <span class="p">([</span><span class="n">results</span> <span class="n">count</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>            <span class="c1">// Process results from Chooser</span>
+</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>            <span class="c1">// User canceled the action</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">}];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>取得出来るURL2種類
+
+<ul>
+<li>DBChooserLinkTypePreviewlinks
+
+<ul>
+<li>文字通りプレビュー。色々アクションを選べる。</li>
+</ul>
+</li>
+<li>DBChooserLinkTypeDirectlinks
+
+<ul>
+<li>データに直接アクセス出来るリンク</li>
+<li>サーバーにこれを渡す作りにすれば、モバイル端末 &ndash; サーバー通信はちょっとしたJSONで、通信環境の良いサーバーで効率よくダウンロードとかできそう。</li>
+<li>4時間でexpireされるので注意</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Chooserからファイルを選んだあと</h4>
+
+<h5>AppDelegateの以下が呼ばれる</h5>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">openURL:</span><span class="p">(</span><span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span> <span class="nf">sourceApplication:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">sourceApplication</span> <span class="nf">annotation:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">annotation</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="c1">// urlに色々詰め込まれている</span>
+</span><span class='line'>    <span class="c1">// 複数のkeyを使う場合はdefaultChooserの代わりにkeyを指定して初期化</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">([[</span><span class="n">DBChooser</span> <span class="n">defaultChooser</span><span class="p">]</span> <span class="nl">handleOpenURL:</span><span class="n">url</span><span class="p">])</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">YES</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">NO</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h5>urlがパースされて以下のDBChooserResultのarrayにマッピングされるイメージ</h5>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">@interface</span> <span class="nc">DBChooserResult</span> : <span class="nc">NSObject</span>
+</span><span class='line'><span class="c1">// DBChooserLinkTypeで何が入るか変わる。</span>
+</span><span class='line'><span class="k">@property</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">link</span><span class="p">;</span>
+</span><span class='line'><span class="k">@property</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">name</span><span class="p">;</span>
+</span><span class='line'><span class="k">@property</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">size</span><span class="p">;</span>
+</span><span class='line'><span class="k">@property</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">iconURL</span><span class="p">;</span>
+</span><span class='line'><span class="c1">// 画像や動画の時に3種類(64x64px・200x200px・640x480px)の大きさのサムネイルURLが入っている。</span>
+</span><span class='line'><span class="k">@property</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="n">thumbnails</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">@end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>まとめ</h3>
+
+<p>サンプルも分かりやすくて、APIとしても使いやすくて素晴らしい。
+このAPIに限らずだけど、Dropboxアプリがインストールされていること前提のアプリと割り切れば色々広がりそう。
+<a href="https://www.dropbox.com/developers/dropins">Drop-ins</a> にある通りまだ開発中みたいだけど、ChooserだけでなくSaverもあって、アプリ間連携とかもこれで行けたりするかも。(iOSやAndroidからはローカルDropboxアプリへの保存は同期的に行いそうだし)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[電子書籍自費出版系情報まとめ]]></title>
+    <link href="http://mono0926.github.io/blog/2013/07/14/self-publish/"/>
+    <updated>2013-07-14T09:17:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/07/14/self-publish</id>
+    <content type="html"><![CDATA[<p>最近、電子書籍系のアプリ開発中で、色々調べています。
+ちょっと情報が頭に乗り切らなくなってきたので、整理。</p>
+
+<hr />
+
+<h3>ツール</h3>
+
+<h4><a href="http://www.amazon.com/gp/feature.html?ie=UTF8&amp;docId=1000765211">Kindlegen</a></h4>
+
+<p>Amazon謹製の、HTMLやEPUB形式からMobi形式に変換するツール。
+成果物は、MacなどのKindleアプリでも見られるし、<a href="http://www.amazon.com/gp/feature.html/ref=amb_link_359603222_5?ie=UTF8&amp;docId=1000765261&amp;pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=center-8&amp;pf_rd_r=05Y1JB4SCG6HF48FKJFX&amp;pf_rd_t=1401&amp;pf_rd_p=1342416142&amp;pf_rd_i=1000765211">Kindle Previewer</a>で、各プラットフォームでの動作チェック可能。</p>
+
+<p>クラス構造を一旦HTMLに落とし込んで、Mobi形式にエクスポートするところまでは出来たけど、いくつか警告が出てたりしてまだ対処出来ていない状態。
+あと、ライセンス的にアプリのサーバー側で使ったりOKなのか気になる。</p>
+
+<ul>
+<li>リファレンスなど
+
+<ul>
+<li><a href="http://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf">Amazon Kindle Publishing Guidelines</a>
+
+<ul>
+<li>和訳：<a href="http://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines_JP.pdf">Amazon Kindle パブリッシング・ガイドライン</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h4><a href="http://johnmacfarlane.net/pandoc/">Pandoc</a></h4>
+
+<p>ドキュメント形式変換ツール。Markdown, HTMLなどからEPUB, PFDなどなどなど色々変換可能。
+Linux, Mac, Windowsなどに対応。</p>
+
+<!-- more -->
+
+
+<ul>
+<li>リファレンスなど
+
+<ul>
+<li><a href="https://github.com/jgm/pandoc">ソース(GitHub)</a></li>
+<li><a href="http://johnmacfarlane.net/pandoc/README.html">Pandoc User’s Guide</a>
+
+<ul>
+<li>使い方がたくさん書いてある。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<p>例えばMarkdown形式からEPUB形式にしたいときの、タイトルや筆者などのメタ情報とかこう書いたりするらしい。まだ色々調べ中。
+これを使って、クラス構造をEPUB形式でエクスポートできるところまでは出来たけど、細かい詰めがまだまだ（´-ω-｀）縦書きとか出来るのだろうか…。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>% title
+</span><span class='line'>% author(s) (separated by semicolons)
+</span><span class='line'>% date</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>参考
+
+<ul>
+<li><a href="http://qiita.com/sky_y/items/80bcd0f353ef5b8980ee">多様なフォーマットに対応！ドキュメント変換ツールPandocを知ろう</a>
+
+<ul>
+<li>素晴らしい説明</li>
+</ul>
+</li>
+<li><a href="http://d.hatena.ne.jp/tweeeety/20130607/1370591989">githubとかにあるMarkdown形式のﾌｧｲﾙをhtmlとかEPUBとかに変換する</a></li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<h3>本</h3>
+
+<h4>Amazon和書</h4>
+
+<ul>
+<li><a href="http://www.amazon.co.jp/gp/product/B009XKLTGW/ref=as_li_ss_tl?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=B009XKLTGW&amp;linkCode=as2&amp;tag=mono0926-22">Kindle自費出版ガイド 米アマゾンの先例から学ぶ電子書籍の作り方</a>
+
+<ul>
+<li>Google Documentを使った作成法指南</li>
+<li>Webで最新版を無料公開中：<a href="http://kdpguide.hatenablog.com/entry/2013/03/25/234230">「Kindle 自費出版ガイド 米アマゾンの先例から学ぶ 電子書籍の作り方」(前半)</a></li>
+</ul>
+</li>
+<li><a href="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=mono0926-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B00AGZ1X3C">アマゾンで売る！　一番簡単な電子書籍の作り方</a>
+
+<ul>
+<li>Google Documentは参考程度に、aozoraEpub3やSigilを利用</li>
+</ul>
+</li>
+<li><a href="http://www.amazon.co.jp/gp/product/B00DNRE77O/ref=wms_ohs_product?ie=UTF8&amp;psc=1">一万冊売ってわかった！電子書籍を売る方法</a>
+
+<ul>
+<li>世界一周紀行など書いている人の本。ライブドアブログのEPUBエクスポートを利用。</li>
+</ul>
+</li>
+</ul>
+
+
+<p>うーん、作り方がバラバラ。わりとGoogle Documentで作るのが多数派な印象だけど。
+みんなGUIベースだから直接は利用できないけど、参考程度に読んでる。</p>
+
+<h4>Amazon洋書</h4>
+
+<ul>
+<li><a href="http://www.amazon.com/Building-Your-Book-Kindle-ebook/dp/B007URVZJ6/ref=sr_1_1?s=digital-text&amp;ie=UTF8&amp;qid=1373770883&amp;sr=1-1&amp;keywords=kindlegen">Building Your Book for Kindle</a>
+
+<ul>
+<li>無料の公式本。Word系のアプリで作ってHTML出力して、アップロードするところまでで、かなりボリューム少ないけど、一読しておいた方が良い内容。</li>
+</ul>
+</li>
+<li><a href="http://rcm-na.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=mono0926-20&amp;o=1&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B009G2JMRK">The eBook Design and Development Guide</a>
+
+<ul>
+<li>まだほとんど読んでないけど、Kindlegen周りの使い方中心に詳しく書いてありそう。
+
+<ul>
+<li>Webで公開中：<a href="http://bbebooksthailand.com/bb-epub-kindlegen-tutorial.html">The eBook Design and Development Guide</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="http://rcm-na.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=mono0926-20&amp;o=1&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B006SBRA1M">Kindle Formatting Formula: Convert Your Book into a Kindle eBook Format in Less than an Hour</a>
+
+<ul>
+<li>中身見てない。</li>
+</ul>
+</li>
+<li><a href="http://rcm-na.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=mono0926-20&amp;o=1&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B004MDLKKK">How to Publish and Sell Your Article on the Kindle: 12 Tips for Short Documents</a>
+
+<ul>
+<li>中身見てない。</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<h3>JSON周りの開発用ライブラリ(iOS, .NET)</h3>
+
+<p>iPhoneアプリで編集してサーバー(ASP.NET)で変換して返すみたいなことをしているけど、その場合やっぱりJSONでのやり取りかなということで、以下が手軽に出来るようにしたかった。</p>
+
+<ul>
+<li>Objective-CのクラスからJSONへ変換</li>
+<li>JSONからC#のクラスへマッピング</li>
+</ul>
+
+
+<h4>Objective-CのクラスからJSONへ変換</h4>
+
+<p><a href="https://github.com/github/Mantle">Mantle</a>というライブラリでさくっとできた。もちろんCocoaPods対応なので導入も楽。</p>
+
+<ul>
+<li>JSON化したいクラスで<code>MTLModel&lt;MTLJSONSerializing&gt;</code>を継承</li>
+<li>オブジェクトのプロパティ名とJSONのプロパティ名のマッピング</li>
+<li>配列構造のプロパティに対しては、その定義</li>
+<li>上記の設定をしとけば定型的な数行でJSON化</li>
+</ul>
+
+
+<script src="https://gist.github.com/mono0926/5992878.js"></script>
+
+
+
+
+<script src="https://gist.github.com/mono0926/5992916.js"></script>
+
+
+<h4>JSONからC#のクラスへマッピング</h4>
+
+<p><a href="http://neue.cc/2011/12/10_357.html">.NETの標準シリアライザ(XML/JSON)の使い分けまとめ</a> にあるとおり、<code>DataContractJsonSerializer</code>を使用。
+ちなみに上記サイトは僕の作ったこのブックマークレットで目に優しくなります。</p>
+
+<script src="https://gist.github.com/mono0926/5992885.js"></script>
+
+
+<p>基本的にはクラスに<code>DataContract</code>属性、プロパティに<code>DataMember</code>を付けるだけと楽ちん（´-ω-｀）
+強いていえば、大文字小文字マッピングの設定を忘れずに。</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='csharp'><span class='line'><span class="na">[DataMember(Name = &quot;title&quot;)]</span>
+</span><span class='line'><span class="k">public</span> <span class="kt">string</span> <span class="n">Title</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h3>その他リンク</h3>
+
+<p>色々調べる中で目に入ったリンクなど。</p>
+
+<ul>
+<li><a href="http://conv.denshochan.com/">でんでんコンバーター</a>
+
+<ul>
+<li>Markdown形式のファイルをアップロードすると、ePubに変換してくれるサイト。正直、このAPIが叩けるようになると、変換周りを自前で作らなくてよくなって楽なのだけれど…（´-ω-｀）</li>
+</ul>
+</li>
+<li><a href="http://ebook.itmedia.co.jp/ebook/articles/1107/25/news019.html">無料で使えるEPUB 3作成ソフト／サービスガイド</a>
+
+<ul>
+<li>FUSEe β</li>
+<li>epubpack</li>
+<li>MyBooks.jp</li>
+</ul>
+</li>
+<li><a href="http://nakusou.zatunen.com/sigil.html">GoogleのSigilパワー</a>
+
+<ul>
+<li><a href="https://code.google.com/p/sigil/">sigil</a>というアプリを使う。</li>
+<li><a href="http://sigil.tsukaikata.info/">Sigilの使い方</a></li>
+</ul>
+</li>
+<li><a href="http://iphone.f-tools.net/E-book-Jisui/ePub-Free-Sakusei.html">ePubをフリーで作成できるソフト</a>
+
+<ul>
+<li>chanLP使った方式</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<h3>所感</h3>
+
+<p>色々調べごとが多くて、開発自体がなかなか進まない（´-ω-｀）</p>
+
+<p>あと、<a href="https://www.dropbox.com/developers">Dropbox API</a> が今回良い感じに組み合わせられそうで、ちょっと検討中。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Google Readerが終わって…]]></title>
@@ -47,6 +1905,10 @@
 <p>ただ、やっぱりMacでReederを使ってサクサク見ていた感じには劣るので、早くReeder for Macがアップデートされてほしいところです（´・ω・｀）</p>
 
 <p>…とは別にこの機会に、SmartNewsで大衆ネタ・ゴシップ系などは拾い読みしているので、RSSリーダーは技術系ネタに絞って整理したいなとかも考えていたり。なかなか面倒ですが（´-ω-｀）</p>
+
+<h3>追記</h3>
+
+<p><a href="https://itunes.apple.com/jp/app/readkit/id588726889?l=en&amp;mt=12">ReadKit</a> というアプリが素晴らしく、常用し始めましたヽ(・ω・｀）</p>
 ]]></content>
   </entry>
   
@@ -57,36 +1919,34 @@
     <id>http://mono0926.github.io/blog/2013/07/07/octopress-alfred</id>
     <content type="html"><![CDATA[<p>今日初めてOctopressを触ったら、けっこう気に入ったので、さらに気軽に書ける環境を整えれば捗るのではと思い、AlfredのWorkflowを作ってみました。</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># deploy用</span>
-</span><span class='line'><span class="nv">OCTOPATH</span><span class="o">=</span><span class="s1">&#39;/Documents/Git/Private/octopress&#39;</span>
-</span><span class='line'><span class="nb">cd</span> ~/<span class="nv">$OCTOPATH</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># deploy用
+</span><span class='line'>OCTOPATH='/Documents/Git/Private/octopress'
+</span><span class='line'>cd ~/$OCTOPATH
 </span><span class='line'>rake gen_deploy
 </span><span class='line'>git add .
-</span><span class='line'>git commit -m <span class="s2">&quot;deployed via workflow.&quot;</span>
-</span><span class='line'>git push
-</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>git commit -m "deployed via workflow."
+</span><span class='line'>git push</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># 投稿用</span>
-</span><span class='line'><span class="nv">OCTOPATH</span><span class="o">=</span><span class="s1">&#39;/Documents/Git/Private/octopress&#39;</span>
-</span><span class='line'><span class="nb">cd</span> ~/<span class="nv">$OCTOPATH</span>
-</span><span class='line'><span class="nv">OCTOPOST</span><span class="o">=</span><span class="k">$(</span>rake new_post<span class="o">[</span><span class="nv">$1</span><span class="o">]</span>| grep -o <span class="s1">&#39;source/_posts/.*&#39;</span><span class="k">)</span>
-</span><span class='line'>open ~/<span class="nv">$OCTOPATH</span>/<span class="nv">$OCTOPOST</span>
-</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'># 投稿用
+</span><span class='line'>OCTOPATH='/Documents/Git/Private/octopress'
+</span><span class='line'>cd ~/$OCTOPATH
+</span><span class='line'>OCTOPOST=$(rake new_post[$1]| grep -o 'source/_posts/.*')
+</span><span class='line'>open ~/$OCTOPATH/$OCTOPOST</span></code></pre></td></tr></table></div></figure>
 
 
 <p>すんなり出来るかと思いきや、これだけでは動かず、</p>
@@ -103,20 +1963,19 @@
 
 
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># rv設定</span>
-</span><span class='line'><span class="k">if</span> <span class="o">[[</span> -s <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span> <span class="o">]]</span> ; <span class="k">then</span>
-</span><span class='line'><span class="k">  </span><span class="nb">source</span> <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span>
-</span><span class='line'><span class="k">fi</span>
-</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'># rv設定
+</span><span class='line'>if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
+</span><span class='line'>  source "$HOME/.rvm/scripts/rvm"
+</span><span class='line'>fi</span></code></pre></td></tr></table></div></figure>
 
 
 <p>さらに一応previewコマンドも作成</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -126,24 +1985,22 @@
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
 <span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="k">if</span> <span class="o">[[</span> -s <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span> <span class="o">]]</span> ; <span class="k">then</span>
-</span><span class='line'><span class="k">  </span><span class="nb">source</span> <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span>
-</span><span class='line'><span class="k">fi</span>
-</span><span class='line'><span class="nv">OCTOPATH</span><span class="o">=</span><span class="s1">&#39;/Documents/Git/Private/octopress&#39;</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
+</span><span class='line'>  source "$HOME/.rvm/scripts/rvm"
+</span><span class='line'>fi
+</span><span class='line'>OCTOPATH='/Documents/Git/Private/octopress'
 </span><span class='line'>
-</span><span class='line'><span class="nb">cd</span> ~/<span class="nv">$OCTOPATH</span>
+</span><span class='line'>cd ~/$OCTOPATH
 </span><span class='line'>rake generate
-</span><span class='line'><span class="c"># open in a browser</span>
+</span><span class='line'># open in a browser
 </span><span class='line'>open http://localhost:4000/
-</span><span class='line'>rake preview
-</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>rake preview</span></code></pre></td></tr></table></div></figure>
 
 
 <p>こちらはコマンドを実行するだけではウインドウが開かれずプロセスがゾンビ状態になってしまうので、Alfredで呼び出す時に</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>open -a Terminal.app preview.sh
-</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>open -a Terminal.app preview.sh</span></code></pre></td></tr></table></div></figure>
 
 
 <p>と少しだけ工夫。</p>
@@ -177,79 +2034,6 @@
 
 
 <p>最近久しく何も書いてなかったけど、あまり脈絡の無い雑多メモなどはこちらで、技術系TipsはQiitaあたりにまとめる習慣付けたい（´・ω・｀）</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[GitHub + Octopressでブログ作ってみた]]></title>
-    <link href="http://mono0926.github.io/blog/2013/07/07/github_octopress_blog/"/>
-    <updated>2013-07-07T12:16:00+09:00</updated>
-    <id>http://mono0926.github.io/blog/2013/07/07/github_octopress_blog</id>
-    <content type="html"><![CDATA[<p>Markdownで書けてなかなか良い感じかもしれない（´-ω-｀）</p>
-
-<h3>導入手順</h3>
-
-<p>ここらへん参考に。</p>
-
-<ul>
-<li><a href="http://rcmdnk.github.io/blog/2013/03/07/setup-octopress/">GitHub pages + Octopressの導入</a>
-
-<ul>
-<li>最初は適当にMacに入っているRuby 1.7.3やHomebrewで入れた2系でインストールしようとしたらはまって結局Ruby 1.9.3にしたので、初めから素直に従った方がよさげです。</li>
-</ul>
-</li>
-<li>rvmの導入がうまくできなかったので、それだけこれを参考に。
-
-<ul>
-<li><a href="http://jitsu102.hatenablog.com/entry/2012/11/23/162034">(OS X::Mountain Lion) RVMでRubyの環境構築メモ</a></li>
-</ul>
-</li>
-</ul>
-
-
-<h4>個人的な運用</h4>
-
-<ul>
-<li><a href="https://github.com/imathis/octopress">imathis/octopress</a>からForkしてそのままソース管理として利用
-
-<ul>
-<li>下書きなどあっても人に見られちゃうからBitbucket使うっていう人が多いらしいですが、あまり気にならないのでGitHubで一元管理</li>
-</ul>
-</li>
-<li><code>setup_github_pages</code> と入力して、<a href="http://mono0926.github.io">GitHub上のこのページ</a> にデプロイされるように</li>
-</ul>
-
-
-<!-- more -->
-
-
-<h4>テーマの変更</h4>
-
-<p>テーマは、<a href="https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes">imathis/octopress</a>から選べますが、あまり有名じゃないので、そんなに選択肢無いです。凝るなら自分で作るべきですかね。
-こぎれいなテーマを適当に選んで使っています。
-導入は簡単で、上記から選んで、下のコマンドですぐ反映されます。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span><span class="nb">cd </span>octopress
-</span><span class='line'><span class="nv">$ </span>git clone GIT_URL .themes/THEME_NAME
-</span><span class='line'><span class="nv">$ </span>rake install<span class="o">[</span><span class="s1">&#39;THEME_NAME&#39;</span><span class="o">]</span>
-</span><span class='line'><span class="nv">$ </span>rake generate
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>Markdown 初めて書いた</h3>
-
-<p>なかなか便利ですね(　´･‿･｀)
-このあたりよくまとまっててよかったです。</p>
-
-<ul>
-<li><a href="http://qiita.com/Qiita/items/c686397e4a0f4f11683d">Markdown記法 チートシート</a></li>
-<li><a href="http://qa.atmarkit.co.jp/docs/markdown">QA@ITで使えるMarkdown記法</a></li>
-</ul>
-
 ]]></content>
   </entry>
   

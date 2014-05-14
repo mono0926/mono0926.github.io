@@ -1,0 +1,850 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>monoHub</title>
+  <meta name="author" content="Masayuki Ono">
+
+  
+  <meta name="description" content="度々ぐぐったりするので、メモ。
+少しずつ、加筆修正していく。 Mac OS X Lion / homebrew にて python の環境を整える
+">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mono0926.github.io/blog/page/2/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="monoHub" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-11434295-5']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'httpss://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">monoHub</a></h1>
+  
+    <h2>When I feel like writing something...</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss email">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+    <li><a href="mono0926@gmail.com" rel="subscribe-email" title="subscribe via email">Email</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:mono0926.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/09/09/python/">Pythonの環境構築</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-09T07:49:00+09:00" pubdate data-updated="true">Sep 9<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>度々ぐぐったりするので、メモ。
+少しずつ、加筆修正していく。</p>
+
+<p><a href="http://www.sicafe.net/macPackageManageTips/html/homebrewPythonInstall.html">Mac OS X Lion / homebrew にて python の環境を整える</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/04/ginger/">GingerをAlfredで使えるようにしてみた</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-04T12:07:00+09:00" pubdate data-updated="true">Aug 4<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="/blog/2013/08/03/ginger/">Ginger APIをPythonで叩いてみた</a>の続き。</p>
+
+<p>元々はAlfredで英文校正が出来るようにしたかったので、ここからが本番。</p>
+
+<h3>完成版</h3>
+
+<p>こんなのが出来たという紹介から。</p>
+
+<h4>校正</h4>
+
+<p>ginger というキーワードに続けて英文を打つと、正してくれる。(この場合、冠詞aの抜けが正される。)</p>
+
+<p><img src="/images/post/ginger1.png" alt="ginger" /></p>
+
+<h4>改善候補一覧</h4>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/08/04/ginger/">続きを読むヽ(・ω・｀）</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/03/ginger/">Ginger APIをPythonで叩いてみた</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-03T14:58:00+09:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>そんな有名でも無いけど、Gingerという英文作成支援サービスがある。</p>
+
+<p><a href="http://www.itmedia.co.jp/news/articles/1304/24/news120.html">もう前置詞に迷わない」──「ネイティブレベル」の英語が書ける英文チェッカー「Ginger」日本上陸</a>という記事などで4月にニュースになって、この手のものが好きな僕は<a href="https://chrome.google.com/webstore/detail/spell-and-grammar-checker/kdfieneakcjfaiglcfcgkidlkmlijjnh">Chromeの拡張</a>をすぐ導入してみたけど、不必要な時に指摘されたり、必要な時は使い勝手が悪いし、うーんと思ったり。</p>
+
+<h3>Ginger API</h3>
+
+<p>コマンドラインとかで使いたいなあと思って適当にぐぐったら、<a href="http://blog.livedoor.jp/xaicron/archives/54466736.html">Ginger API を試してみた</a>という記事が。
+Gistになぜか<a href="https://gist.github.com/koron/5454500">curlで使ってる例</a>があるみたいで。</p>
+
+<p>GingerのページにはAPIとか無いのになぜだろうと思って、Chromeの開発ツールでリクエストのぞいてみたら、もろにAPI叩いているのがあった。</p>
+
+<p><img src="/images/post/ginger.png" alt="ginger" /></p>
+
+<blockquote><p><a href="http://services.gingersoftware.com/Ginger/correct/json/GingerTheText?callback=C&amp;apiKey=6ae0c3a0-afdc-4532-a810-82ded0054236&amp;lang=US&amp;clientVersion=2.0&amp;text=I+am+programmer.&amp;_1375584239344=">http://services.gingersoftware.com/Ginger/correct/json/GingerTheText?callback=C&amp;apiKey=6ae0c3a0-afdc-4532-a810-82ded0054236&amp;lang=US&amp;clientVersion=2.0&amp;text=I+am+programmer.&amp;_1375584239344=</a></p></blockquote>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/08/03/ginger/">続きを読むヽ(・ω・｀）</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/25/leap-motion/">Leap Motionが届いた</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-25T07:50:00+09:00" pubdate data-updated="true">Jul 25<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Leap Motionを買ってみた。<br/>
+多分1年ちょっと前に<a href="http://japanese.engadget.com/2012/05/21/1-100-3d-leap-70/">指先を1/100ミリ単位で捉える3Dモーション入力機器 LEAP、70ドルで予約受付開始 (動画)</a>などの記事を見て、コンセプト動画なのか実動画像なのか知らないけど、すごいなーと思って放置してたけど、今週けっこう話題になってて、記事とか読んでたらいつの間にかポチってた感じ。</p>
+
+<p>ハード的には、劣化版Kinect？とかも思ったけど、対象距離が近距離な<a href="http://www.amazon.co.jp/gp/product/B0074BN0VO/ref=as_li_ss_tl?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=B0074BN0VO&amp;linkCode=as2&amp;tag=mono0926-22">Kinect for Windows</a>は少しお高いし、設置の制約あるし、とか思ってとりあえず今回はこっち。
+KinectはごくたまにXboxで遊んだりと、なかなか好きなデバイス。</p>
+
+<p>Leap Motionって何？とかどんなことできるの？とかについては下の動画見れば大体分かる。</p>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/3b4w749Tud8" frameborder="0" allowfullscreen></iframe>
+
+
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/07/25/leap-motion/">続きを読むヽ(・ω・｀）</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/19/dropbox/">iOSからDropbox Sync APIを使ってみる</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-19T12:40:00+09:00" pubdate data-updated="true">Jul 19<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>Dropbox Sync APIとは</h3>
+
+<h3>サンプルとドキュメント</h3>
+
+<ul>
+<li>サンプル
+
+<ul>
+<li><a href="https://www.dropbox.com/developers/datastore/sdks/ios">Datastore API SDKs</a>からSDKダウンロードすると同梱されてる</li>
+</ul>
+</li>
+<li>ドキュメント
+
+<ul>
+<li><a href="https://www.dropbox.com/developers/datastore/docs/ios">Datastore API for iOS Documentation</a></li>
+</ul>
+</li>
+<li>チュートリアル
+
+<ul>
+<li><a href="https://www.dropbox.com/developers/sync/start/ios">Using the Sync API on iOS</a></li>
+</ul>
+</li>
+</ul>
+
+
+<h3>サンプル起動</h3>
+
+<h4>Files Examplesのサンプル</h4>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/18/dropbox/">iOSからDropbox新APIのDatastore APIを使ってみる</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-18T09:08:00+09:00" pubdate data-updated="true">Jul 18<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>サンプルとドキュメント</h3>
+
+<ul>
+<li>サンプル
+
+<ul>
+<li><a href="https://www.dropbox.com/developers/datastore/sdks/ios">Datastore API SDKs</a>からSDKダウンロードすると同梱されてる</li>
+</ul>
+</li>
+<li>ドキュメント
+
+<ul>
+<li><a href="https://www.dropbox.com/developers/datastore/docs/ios">Datastore API for iOS Documentation</a></li>
+</ul>
+</li>
+<li>チュートリアル
+
+<ul>
+<li><a href="https://www.dropbox.com/developers/datastore/tutorial/ios">Using the Datastore API on iOS</a></li>
+</ul>
+</li>
+</ul>
+
+
+<h3>サンプル起動</h3>
+
+<h4>Datastore Examplesのサンプル</h4>
+
+<p>起動後Dropboxの認証を求められて、認証が通るとTODOアプリが開く。
+アイテムの追加とDone状態の切り替えのシンプルなサンプル。
+リンクしたDropboxには特に新しいファイルなど生成されていない様子。</p>
+
+<p>2台目にインストールして認証するとちゃんと1台目で追加したタスクが出てきて、当たり前だけどなんか関心（´-ω-｀）</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/07/18/dropbox/">続きを読むヽ(・ω・｀）</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/17/dropbox/">iOSからDropbox新APIのDrop-ins(Chooser)を使ってみる</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-17T12:51:00+09:00" pubdate data-updated="true">Jul 17<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>古い記事だけど、<a href="http://blog.syuhari.jp/archives/2284">[iPhone/iPad] Dropbox API を使ってみた</a> をさらっと見て作業開始。<br/>
+開発者登録は自力じゃなかなか見つからなかったけど、<a href="https://www.dropbox.com/developers/apply?cont=/developers/apps">Dropbox API terms and conditions</a>。<br/>
+権限の設定などは初回の作成時以外は変更出来ないっぽいので、慎重に。</p>
+
+<h3>Drop-ins</h3>
+
+<p><a href="https://www.dropbox.com/developers/dropins/chooser/ios">Using the Chooser (iOS)</a>を読んでみた。<br/>
+<a href="http://dl.dropboxusercontent.com/s/uf3893wfnk4f3p9/dropbox-ios-chooser-sdk-1.0.zip">Download iOS SDK</a>に同梱のサンプルプロジェクトを実行しながらドキュメント読めばすごく分かりやすい。</p>
+
+<h4>導入</h4>
+
+<p><a href="http://dl.dropboxusercontent.com/s/uf3893wfnk4f3p9/dropbox-ios-chooser-sdk-1.0.zip">Download iOS SDK</a> に入っているDBChooser.framework と DBChooser.bundle を対象のプロジェクトに突っ込むだけ。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/07/17/dropbox/">続きを読むヽ(・ω・｀）</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/14/self-publish/">電子書籍自費出版系情報まとめ</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-14T09:17:00+09:00" pubdate data-updated="true">Jul 14<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>最近、電子書籍系のアプリ開発中で、色々調べています。
+ちょっと情報が頭に乗り切らなくなってきたので、整理。</p>
+
+<hr />
+
+<h3>ツール</h3>
+
+<h4><a href="http://www.amazon.com/gp/feature.html?ie=UTF8&amp;docId=1000765211">Kindlegen</a></h4>
+
+<p>Amazon謹製の、HTMLやEPUB形式からMobi形式に変換するツール。
+成果物は、MacなどのKindleアプリでも見られるし、<a href="http://www.amazon.com/gp/feature.html/ref=amb_link_359603222_5?ie=UTF8&amp;docId=1000765261&amp;pf_rd_m=ATVPDKIKX0DER&amp;pf_rd_s=center-8&amp;pf_rd_r=05Y1JB4SCG6HF48FKJFX&amp;pf_rd_t=1401&amp;pf_rd_p=1342416142&amp;pf_rd_i=1000765211">Kindle Previewer</a>で、各プラットフォームでの動作チェック可能。</p>
+
+<p>クラス構造を一旦HTMLに落とし込んで、Mobi形式にエクスポートするところまでは出来たけど、いくつか警告が出てたりしてまだ対処出来ていない状態。
+あと、ライセンス的にアプリのサーバー側で使ったりOKなのか気になる。</p>
+
+<ul>
+<li>リファレンスなど
+
+<ul>
+<li><a href="http://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf">Amazon Kindle Publishing Guidelines</a>
+
+<ul>
+<li>和訳：<a href="http://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines_JP.pdf">Amazon Kindle パブリッシング・ガイドライン</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h4><a href="http://johnmacfarlane.net/pandoc/">Pandoc</a></h4>
+
+<p>ドキュメント形式変換ツール。Markdown, HTMLなどからEPUB, PFDなどなどなど色々変換可能。
+Linux, Mac, Windowsなどに対応。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/07/14/self-publish/">続きを読むヽ(・ω・｀）</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/07/google-reader-feedly/">Google Readerが終わって…</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-07T21:27:00+09:00" pubdate data-updated="true">Jul 7<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>一日に500-1000件消費するくらいのRSSリーダーヘビーユーザーでしたが、意外と困っていません。</p>
+
+<ul>
+<li>Google Reader 終わる前
+
+<ul>
+<li>iPhone: Byline + たまにReeder</li>
+<li>iPad: 同上</li>
+<li>Mac: Reeder</li>
+<li>Web: Google Reader (Windows環境の時など、たまーに見る程度)</li>
+</ul>
+</li>
+<li>Google Reader 終わった後
+
+<ul>
+<li>iPhone: Byline + たまにReeder</li>
+<li>iPad: Byline (Reeder未対応)</li>
+<li>Mac: FeedlyのWebアプリ (Reeder未対応)</li>
+<li>Web: FeedlyのWebアプリ</li>
+</ul>
+</li>
+</ul>
+
+
+<p>と、あまり変わって無い上に、FeedlyのWebアプリの操作感(どこを押せば何が出来るかなど)にあまり慣れていないものの、J(次)・K(前)・V(新しいページで記事開く)のショートカットが一緒なことに気づいてからはほぼノンストレスです（´-ω-｀）</p>
+
+<p>ただ、やっぱりMacでReederを使ってサクサク見ていた感じには劣るので、早くReeder for Macがアップデートされてほしいところです（´・ω・｀）</p>
+
+<p>…とは別にこの機会に、SmartNewsで大衆ネタ・ゴシップ系などは拾い読みしているので、RSSリーダーは技術系ネタに絞って整理したいなとかも考えていたり。なかなか面倒ですが（´-ω-｀）</p>
+
+<h3>追記</h3>
+
+<p><a href="https://itunes.apple.com/jp/app/readkit/id588726889?l=en&amp;mt=12">ReadKit</a> というアプリが素晴らしく、常用し始めましたヽ(・ω・｀）</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/07/octopress-alfred/">Octopressへの投稿やdeployをAlfredのWorkflowで</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-07T17:32:00+09:00" pubdate data-updated="true">Jul 7<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>今日初めてOctopressを触ったら、けっこう気に入ったので、さらに気軽に書ける環境を整えれば捗るのではと思い、AlfredのWorkflowを作ってみました。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># deploy用
+</span><span class='line'>OCTOPATH='/Documents/Git/Private/octopress'
+</span><span class='line'>cd ~/$OCTOPATH
+</span><span class='line'>rake gen_deploy
+</span><span class='line'>git add .
+</span><span class='line'>git commit -m "deployed via workflow."
+</span><span class='line'>git push</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># 投稿用
+</span><span class='line'>OCTOPATH='/Documents/Git/Private/octopress'
+</span><span class='line'>cd ~/$OCTOPATH
+</span><span class='line'>OCTOPOST=$(rake new_post[$1]| grep -o 'source/_posts/.*')
+</span><span class='line'>open ~/$OCTOPATH/$OCTOPOST</span></code></pre></td></tr></table></div></figure>
+
+
+<p>すんなり出来るかと思いきや、これだけでは動かず、</p>
+
+<blockquote><p>In my bash script I had to add some extras because Alfred runs the bash script in a subshell and in this subshell the rvm environment is not available by default.
+<a href="http://tooh.github.io/blog/2013/04/23/Alfred_workflow_for_Octopress/">Alfred Workflow for Octopress</a></p></blockquote>
+
+<p>とある通り、下記のような設定をする必要があったようです。
+かなりハマりました（´-ω-｀）
+よく分からないけど、別ファイルにしたら動かないので、とりあえず全て冒頭にこれを挟みました（´-ω-｀）</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/07/07/octopress-alfred/">続きを読むヽ(・ω・｀）</a>
+    </footer>
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/3/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- monoHub250 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:250px;height:250px"
+     data-ad-client="ca-pub-6210106378939404"
+     data-ad-slot="4744810299"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script><section>
+  <h1>About Me</h1>
+  <img src="/images/dog.png">
+  <p><a href="https://www.facebook.com/mono0926">Masayuki Ono</a></p>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/13/golang/">golangの環境構築</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/06/renew/">OSXの開発環境を整えた</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/05/irkit-nodejs/">Node.jsのIRKitライブラリあったから試してみた</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/05/irkit-remote/">IRKitに外からアクセス出来るようにした</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/05/irkit/">IRKitで遊び始めた〜とりあえずTerminalで操作〜</a>
+      </li>
+    
+  </ul>
+</section>
+<section>
+  <h1>Top Categories</h1>
+    <ul id="top-category-list"><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/osx'>osx (3)</a></li><li><a href='/blog/categories/irkit'>irkit (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/nodejs'>nodejs (2)</a></li><li><a href='/blog/categories/haskell'>haskell (2)</a></li><li><a href='/blog/categories/osx'>OSX (1)</a></li><li><a href='/blog/categories/c-'>C# (1)</a></li><li><a href='/blog/categories/scala'>scala (1)</a></li><li><a href='/blog/categories/programming'>programming (1)</a></li></ul>
+</section>
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/mono0926">@mono0926</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'mono0926',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Masayuki Ono -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  - <span class="credit">Theme by <a href="http://www.gehaxelt.in">Gehaxelt</a></span>
+  <span class="credit">and <a href="http://www.it-solutions-neef.de">IT Solutions Neef</a></span>
+
+<!-- Start of Amazon Publisher Studio Loader -->    <script>  window.amznpubstudioTag = "mono0926-22";  </script>    <!-- Do not modify the following code ! -->  <script async="true" type="text/javascript" src="http://ps-jp.amazon-adsystem.com/domains/mono0926-22_0ca349e7-1149-4166-8671-9755a720bfd2.js" charset="UTF-8"></script>    <!-- End of Amazon Publisher Studio Loader -->  
+  
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'monoHub';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

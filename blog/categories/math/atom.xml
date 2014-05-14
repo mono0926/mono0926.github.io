@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: math | monoHub]]></title>
+  <link href="http://mono0926.github.io/blog/categories/math/atom.xml" rel="self"/>
+  <link href="http://mono0926.github.io/"/>
+  <updated>2014-05-13T09:12:02+09:00</updated>
+  <id>http://mono0926.github.io/</id>
+  <author>
+    <name><![CDATA[Masayuki Ono]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[オーム社セールで色々買ってみた]]></title>
+    <link href="http://mono0926.github.io/blog/2013/12/12/ohmsha/"/>
+    <updated>2013-12-12T08:34:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/12/12/ohmsha</id>
+    <content type="html"><![CDATA[<p>今日12時までの<a href="http://estore.ohmsha.co.jp/titles">オーム社セール</a>で色々買ってみた。</p>
+
+<h3>数学・統計系</h3>
+
+<p>大学とかで勉強したものの、忘れたり応用できていなかったりするので。</p>
+
+<ul>
+<li>プログラミングのための線形代数</li>
+<li>数学チュートリアル やさしく語る 確率統計</li>
+<li>入門 統計学 ―検定から多変量解析・実験計画法まで―</li>
+<li>Excelで学ぶ統計解析入門 Excel2013/2010対応版
+
+<ul>
+<li>Excelでちゃちゃっと出来るのは大事だと思う</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>読み物系</h3>
+
+<p>本当はKindleで読みたい類の本だけど（´-ω-｀）</p>
+
+<ul>
+<li>情熱プログラマー ソフトウェア開発者の幸せな生き方</li>
+<li>ソフトウェアの世界でキャリアを築く Making it Big in Software</li>
+</ul>
+
+
+<h3>その他</h3>
+
+<ul>
+<li>マスタリングTCP/IP 入門編 第5版
+
+<ul>
+<li>第4版持ってて自炊済みだけど、安いし新しいのも欲しくなった</li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: english | monoHub]]></title>
+  <link href="http://mono0926.github.io/blog/categories/english/atom.xml" rel="self"/>
+  <link href="http://mono0926.github.io/"/>
+  <updated>2014-05-13T09:12:02+09:00</updated>
+  <id>http://mono0926.github.io/</id>
+  <author>
+    <name><![CDATA[Masayuki Ono]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[GingerをAlfredで使えるようにしてみた]]></title>
+    <link href="http://mono0926.github.io/blog/2013/08/04/ginger/"/>
+    <updated>2013-08-04T12:07:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/08/04/ginger</id>
+    <content type="html"><![CDATA[<p><a href="/blog/2013/08/03/ginger/">Ginger APIをPythonで叩いてみた</a>の続き。</p>
+
+<p>元々はAlfredで英文校正が出来るようにしたかったので、ここからが本番。</p>
+
+<h3>完成版</h3>
+
+<p>こんなのが出来たという紹介から。</p>
+
+<h4>校正</h4>
+
+<p>ginger というキーワードに続けて英文を打つと、正してくれる。(この場合、冠詞aの抜けが正される。)</p>
+
+<p><img src="/images/post/ginger1.png" alt="ginger" /></p>
+
+<h4>改善候補一覧</h4>
+
+<!-- more -->
+
+
+<p>rephraseというキーワードに続けて適当な英文を打つと、より自然な言い回し候補を出してくれる。
+&ldquo;Thank you for your reply"は、メールの返信とかでよく使うけど、ワンパターン化を避けたい時とかに使えそう。</p>
+
+<p><img src="/images/post/ginger2.png" alt="ginger" /></p>
+
+<p>ともに、選択状態でエンターを押すと、クリップボードにコピーされて、フォーカスの当たっているアプリにペーストされるので、適当にメールとかエディタとか使いながら自然と正しそうな英文が打てるようになるはず。</p>
+
+<h3>AlfredのWorkflowの作り方</h3>
+
+<p>一応<a href="http://support.alfredapp.com/workflows">ドキュメント</a>はあるけど、肝心なところが書かれていなかったりして、<a href="http://www.alfredforum.com/forum/3-share-your-workflows/">フォーラム</a>で聞いたり、既存のWorkflowのソースを読んで作り方を学ばなければいけない感じ。
+作り方自体は基本簡単だけど、ちょくちょくはまりどころがあって苦労する。</p>
+
+<h4>キーワードの受け取り</h4>
+
+<p>{query}というキーワードでアクセス出来るので、それをスクリプトに引数ととして渡すのが一般的。</p>
+
+<h4>結果の表示</h4>
+
+<p>処理終了時にnotification飛ばしたり、クリップボードにコピーとかはWorkflowのエディタでパーツをつなぎ合わせたりするだけで簡単だけど、上の例みたいに一覧するのはどうやるのかと思っていたら、XMLで標準出力するらしい。
+関係ないechoやprint文があると壊れるので注意。
+ここらへんも、既存のソース読み解いてやっと分かった。それも不慣れなPHPソースがけっこう多くてアレ。</p>
+
+<p>こんな感じのXMLを標準出力すると、Itemの数だけ一覧される。</p>
+
+<p>```
+&lt;?xml version=&ldquo;1.0&rdquo; ?>
+<items>
+  <item arg="I am a programmer and writing bad English. I am Japanese." uid="d78b56b0-fcb7-11e2-9787-e80688cb3920"></p>
+
+<pre><code>&lt;title&gt;I am a programmer and writing bad English. I am Japanese.&lt;/title&gt;
+&lt;subtitle&gt;Gingered sentence&lt;/subtitle&gt;
+&lt;icon/&gt;
+</code></pre>
+
+<p>  </item>
+</items>
+```</p>
+
+<p>これも適当に文字列置換したりして作れるけど、PythonでXML組み立てて作る簡単なモジュール作って再利用できるようにしておいた。
+ここらへんの下回りがけっこうこなれていない感。</p>
+
+<h4>インストール可能なパッケージの作り方</h4>
+
+<p>配布されているworkflowは、*.alfredworkflowという形式で、ダブルクリックでインストールできる。</p>
+
+<p>簡単なやり方は自分のworkflowを右クリックしてExportすること。</p>
+
+<p>逆にscript群からコマンドで作りたい場合は、必要なファイルをzip化して拡張子を変えればよい。
+info.plistが必要で、それは多分コマンドラインじゃ作れないから、やっぱり最初はExportの過程が必要だけど、コードとか別管理したいならコマンドラインで修正版作るのがよさげな気がする。</p>
+
+<p>適当にpackage作成スクリプト書いた。</p>
+
+<p><code>
+cp ginger/info.plist .
+cp ginger/*.png .
+zip ginger.zip ginger_driver.py ginger/*.py info.plist *.png workflow/*.py
+rm info.plist *.png
+mv ginger.zip ginger.alfredworkflow
+</code></p>
+
+<p>こんな管理で良いのか若干謎。</p>
+
+<p>以上、<a href="https://github.com/mono0926/AlfredWorkflow">GitHub</a>で管理するようにした。
+今までworkflowの作り方がよく分からない部分があったり管理が適当だったりしたけど、これからはもっとサクサク作れそう。</p>
+
+<p>今回の成果物：<a href="https://github.com/mono0926/AlfredWorkflow/raw/master/ginger.alfredworkflow">Ginger Workflow</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ginger APIをPythonで叩いてみた]]></title>
+    <link href="http://mono0926.github.io/blog/2013/08/03/ginger/"/>
+    <updated>2013-08-03T14:58:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/08/03/ginger</id>
+    <content type="html"><![CDATA[<p>そんな有名でも無いけど、Gingerという英文作成支援サービスがある。</p>
+
+<p><a href="http://www.itmedia.co.jp/news/articles/1304/24/news120.html">もう前置詞に迷わない」──「ネイティブレベル」の英語が書ける英文チェッカー「Ginger」日本上陸</a>という記事などで4月にニュースになって、この手のものが好きな僕は<a href="https://chrome.google.com/webstore/detail/spell-and-grammar-checker/kdfieneakcjfaiglcfcgkidlkmlijjnh">Chromeの拡張</a>をすぐ導入してみたけど、不必要な時に指摘されたり、必要な時は使い勝手が悪いし、うーんと思ったり。</p>
+
+<h3>Ginger API</h3>
+
+<p>コマンドラインとかで使いたいなあと思って適当にぐぐったら、<a href="http://blog.livedoor.jp/xaicron/archives/54466736.html">Ginger API を試してみた</a>という記事が。
+Gistになぜか<a href="https://gist.github.com/koron/5454500">curlで使ってる例</a>があるみたいで。</p>
+
+<p>GingerのページにはAPIとか無いのになぜだろうと思って、Chromeの開発ツールでリクエストのぞいてみたら、もろにAPI叩いているのがあった。</p>
+
+<p><img src="/images/post/ginger.png" alt="ginger" /></p>
+
+<blockquote><p><a href="http://services.gingersoftware.com/Ginger/correct/json/GingerTheText?callback=C&amp;apiKey=6ae0c3a0-afdc-4532-a810-82ded0054236&amp;lang=US&amp;clientVersion=2.0&amp;text=I+am+programmer.&amp;_1375584239344=">http://services.gingersoftware.com/Ginger/correct/json/GingerTheText?callback=C&amp;apiKey=6ae0c3a0-afdc-4532-a810-82ded0054236&amp;lang=US&amp;clientVersion=2.0&amp;text=I+am+programmer.&amp;_1375584239344=</a></p></blockquote>
+
+<!-- more -->
+
+
+<p>これをブラウザにコピペするとJSONが<code>C()</code>で囲まれたものが出てくるけど、多分JSONP用のパラメーターなので、単にJSON受け取りたい場合は不要。</p>
+
+<p>textパラメーターも適当に削れて、以下でリクエストが可能。
+apiKeyとかもろに出てるけどいいのだろうか(　´･‿･｀)</p>
+
+<blockquote><p><a href="http://services.gingersoftware.com/Ginger/correct/json/GingerTheText?apiKey=6ae0c3a0-afdc-4532-a810-82ded0054236&amp;lang=US&amp;clientVersion=2.0&amp;text=I+am+programmer.">http://services.gingersoftware.com/Ginger/correct/json/GingerTheText?apiKey=6ae0c3a0-afdc-4532-a810-82ded0054236&amp;lang=US&amp;clientVersion=2.0&amp;text=I+am+programmer.</a></p>
+
+<p>{&ldquo;LightGingerTheTextResult&rdquo;:[{&ldquo;Confidence&rdquo;:4,&ldquo;From&rdquo;:5,&ldquo;LrnFrg&rdquo;:&ldquo;I am programmer&rdquo;,&ldquo;LrnFrgOrigIndxs&rdquo;:[{&ldquo;From&rdquo;:5,&ldquo;To&rdquo;:14}],&ldquo;Mistakes&rdquo;:[{&ldquo;CanAddToDict&rdquo;:false,&ldquo;From&rdquo;:5,&ldquo;To&rdquo;:14}],&ldquo;ShouldReplace&rdquo;:true,&ldquo;Suggestions&rdquo;:[{&ldquo;LrnCatId&rdquo;:12,&ldquo;Text&rdquo;:&ldquo;a programmer&rdquo;},{&ldquo;LrnCatId&rdquo;:13,&ldquo;Text&rdquo;:&ldquo;the programmer&rdquo;}],&ldquo;To&rdquo;:14,&ldquo;TopLrnCatId&rdquo;:12,&ldquo;Type&rdquo;:3,&ldquo;UXFrgFrom&rdquo;:0,&ldquo;UXFrgTo&rdquo;:14}]}</p></blockquote>
+
+<p>ざっくりと、間違えている箇所と、その修正例(複数のこともあり)が返ってくる。</p>
+
+<p>と、普通にAPI叩けてしまい、これ使ってよいのだろうかと思いつつ、非公開になったりAPI変わったりすると面倒とか、くらいで私的に使う分には良いのではないかと。
+これでサービス作ったり儲けたりすると黒くなってきそうだけど。</p>
+
+<h3>実用的な英語のフレーズを表示する「Rephrase」という機能</h3>
+
+<p>上記のやつは単に間違えをしてくれるサービスだけど、さらにより自然な言い回し候補を表示してくれるサービスもあったり。</p>
+
+<p><a href="http://gigazine.net/news/20130802-ginger-rephrase/">英文を文脈に合わせて修正する「Ginger」とネイティブ英語に変換する「Rephrase」</a>に書いてあるとおり<a href="http://www.gingersoftware.com/rephrase_jpn">Rephrase</a>に飛ぶと使える。</p>
+
+<p>こちらも同様の手口で簡単にAPIのURLが取得可能。</p>
+
+<blockquote><p><a href="http://ro.gingersoftware.com/rephrase/rephrase?s=Hi%2C%20nice%20to%20meet%20you.&amp;callback=jQuery17204343029616866261_1375585040822&amp;_=1375585300259">http://ro.gingersoftware.com/rephrase/rephrase?s=Hi%2C%20nice%20to%20meet%20you.&amp;callback=jQuery17204343029616866261_1375585040822&amp;_=1375585300259</a></p></blockquote>
+
+<p>同じくcalllback云々は不要だけど、さっきはcallback関数名がCだったのにけっこうフォーマットが違ったり、apiKeyが無かったり、base URLが違ったりとかなり適当な感じ（´・ω・｀）</p>
+
+<p>と、英文を入力するとJSONで結果を受け取れるとこまでは行ったので、Pythonで叩いてみた。</p>
+
+<p>大体こんな感じで、修正後の英文や、改善後の候補群に変換するスクリプトが書けた。
+最近はWebアクセスはrequestsモジュールを使うのがモダンっぽい。</p>
+
+<p>最新版：<a href="https://github.com/mono0926/AlfredWorkflow/blob/master/ginger/ginger.py">Alfred Workflow</a></p>
+
+<p>```python</p>
+
+<h1>!/usr/local/bin/python</h1>
+
+<h1>&ndash;<em>&ndash; coding: utf-8 &ndash;</em>&ndash;</h1>
+
+<p>import requests
+import json
+import sys
+import os</p>
+
+<p>class GingerSummary(object):</p>
+
+<pre><code>"""Ginger Summary"""
+def __init__(self, original, results):
+    super(GingerSummary, self).__init__()
+    self.original = original
+    self.results = sorted(results, cmp=lambda x, y: cmp(x.from_, y.from_))
+    self.gingered = None
+
+def process(self):
+    if not self.gingered:
+        self._ginger()
+    return self.gingered;
+
+def show_detail(self):
+    for r in self.results:
+        print(r)
+
+def _ginger(self):
+    gingered = self.original
+    offset = 0
+    for i, r in enumerate(self.results):
+        suggest = r.suggestions[0]
+        gingered = '{0}{1}{2}'.format(gingered[:r.from_+offset], suggest, gingered[r.to+1+offset:])
+        offset += len(suggest) - (r.to - r.from_ + 1)
+    self.gingered = gingered
+</code></pre>
+
+<p>class GingerResult(object):</p>
+
+<pre><code>"""Ginger Result"""
+def __init__(self):
+    super(GingerResult, self).__init__()
+
+@classmethod
+def create_from_json(cls, json):
+    that = GingerResult()
+    that.from_ = json['From']
+    that.to = json['To']
+    that.suggestions = [x['Text'] for x in json['Suggestions']]
+    that.should_replace = bool(json['ShouldReplace'])
+    that.confidence = json['Confidence']
+    return that
+
+def __str__(self):
+    return 'from: {0}, to: {1}, suggestions: [{2}], should_replace: {3}, confidence: {4}'.format(
+        self.from_, self.to, ', '.join(self.suggestions), self.should_replace, self.confidence)
+</code></pre>
+
+<p>class GingerClient(object):</p>
+
+<pre><code>"""Ginger Client"""
+base_url = 'http://services.gingersoftware.com/Ginger/correct/json/GingerTheText'
+api_key = '6ae0c3a0-afdc-4532-a810-82ded0054236'
+def __init__(self, sentence):
+    super(GingerClient, self).__init__()
+    self.sentence = sentence
+
+def ginger(self):
+    self._initialize()
+    return self.summary.process()
+
+def show_detail(self):
+    self._initialize()
+    self.summary.show_detail()
+
+def _initialize(self):
+    params = {'apiKey':GingerClient.api_key, 'text':self.sentence, 'lang':'US', 'clientVersion':'2.0'}
+    response = requests.get(GingerClient.base_url, params=params)
+    results = json.loads(response.text)['LightGingerTheTextResult']
+    ginger_results = [GingerResult.create_from_json(x) for x in results]
+    self.summary = GingerSummary(self.sentence, ginger_results) 
+</code></pre>
+
+<p>class RephraseClient(object):</p>
+
+<pre><code>"""RephraseClient"""
+base_url = 'http://ro.gingersoftware.com/rephrase/rephrase'
+def __init__(self, sentence):
+    super(RephraseClient, self).__init__()
+    self.sentence = sentence
+
+def rephrase(self):
+    response = requests.get(RephraseClient.base_url, params={'s': self.sentence})
+    results = json.loads(response.text)['Sentences']
+    texts = [x['Sentence'] for x in results]
+    return texts
+</code></pre>
+
+<p>```</p>
+
+<h3>続き：<a href="/blog/2013/08/04/ginger/">GingerをAlfredで使えるようにしてみた</a></h3>
+]]></content>
+  </entry>
+  
+</feed>
