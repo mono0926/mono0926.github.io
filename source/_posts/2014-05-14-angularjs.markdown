@@ -8,7 +8,7 @@ categories: angularjs jade stylus
 
 最近Web系の勉強してて、Node.js・Express・Redis・Herokuなどサーバーサイド周り弄ってたけど、そろそろフロントエンドもという感じで色々やってみた。
 
-#### [サンプル](http://ice-me.herokuapp.com/angular#/)
+### [サンプル置いとく](http://ice-me.herokuapp.com/angular#/)
 
 AngularJSはけっこうリッチなライブラリで、全部身につけるのはしばらくかかりそうだけど、今日主要な機能はざっくり書けるようになった感(　´･‿･｀)
 [Vue.js](http://vuejs.org/)と迷ったけど、[borisyankov/DefinitelyTyped](https://github.com/borisyankov/DefinitelyTyped)にまだ無かったし、とりあえず今メジャーなAngularJSやっとこうか、という感じ。
