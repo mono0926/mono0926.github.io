@@ -4,7 +4,7 @@
   <title><![CDATA[Category: jade | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/jade/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-05-14T20:27:36+09:00</updated>
+  <updated>2014-05-14T20:28:51+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -23,7 +23,7 @@
 <h4><a href="http://ice-me.herokuapp.com/angular#/">サンプル</a></h4>
 
 <p>AngularJSはけっこうリッチなライブラリで、全部身につけるのはしばらくかかりそうだけど、今日主要な機能はざっくり書けるようになった感(　´･‿･｀)
-<a href="http://vuejs.org/">vue.js</a>と迷ったけど、<a href="https://github.com/borisyankov/DefinitelyTyped">borisyankov/DefinitelyTyped</a>にまだ無かったし、とりあえず今メジャーなAngularJSやっとこうか、という感じ。</p>
+<a href="http://vuejs.org/">Vue.js</a>と迷ったけど、<a href="https://github.com/borisyankov/DefinitelyTyped">borisyankov/DefinitelyTyped</a>にまだ無かったし、とりあえず今メジャーなAngularJSやっとこうか、という感じ。</p>
 
 <p>JadeとStylusは記法いくつか覚えらればわりとサクサク書けて、気に入った。これ系いくつかあるけど、どれがいいんですかね。あまり比較検討せずに決めてしまった。</p>
 
