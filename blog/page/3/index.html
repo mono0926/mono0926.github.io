@@ -9,7 +9,15 @@
   <meta name="author" content="Masayuki Ono">
 
   
-  <meta name="description" content="Markdownで書けてなかなか良い感じかもしれない（´-ω-｀） 導入手順 ここらへん参考に。 GitHub pages + Octopressの導入 最初は適当にMacに入っているRuby 1.7.3やHomebrewで入れた2系でインストールしようとしたらはまって結局Ruby 1.9. &hellip;">
+  <meta name="description" content="今日初めてOctopressを触ったら、けっこう気に入ったので、さらに気軽に書ける環境を整えれば捗るのではと思い、AlfredのWorkflowを作ってみました。 1
+2
+3
+4
+5
+6
+7
+# deploy用
+OCTOPATH='/Documents/Git/Private/octopress &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +87,86 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/07/octopress-alfred/">Octopressへの投稿やdeployをAlfredのWorkflowで</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-07T17:32:00+09:00" pubdate data-updated="true">Jul 7<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>今日初めてOctopressを触ったら、けっこう気に入ったので、さらに気軽に書ける環境を整えれば捗るのではと思い、AlfredのWorkflowを作ってみました。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># deploy用
+</span><span class='line'>OCTOPATH='/Documents/Git/Private/octopress'
+</span><span class='line'>cd ~/$OCTOPATH
+</span><span class='line'>rake gen_deploy
+</span><span class='line'>git add .
+</span><span class='line'>git commit -m "deployed via workflow."
+</span><span class='line'>git push</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># 投稿用
+</span><span class='line'>OCTOPATH='/Documents/Git/Private/octopress'
+</span><span class='line'>cd ~/$OCTOPATH
+</span><span class='line'>OCTOPOST=$(rake new_post[$1]| grep -o 'source/_posts/.*')
+</span><span class='line'>open ~/$OCTOPATH/$OCTOPOST</span></code></pre></td></tr></table></div></figure>
+
+
+<p>すんなり出来るかと思いきや、これだけでは動かず、</p>
+
+<blockquote><p>In my bash script I had to add some extras because Alfred runs the bash script in a subshell and in this subshell the rvm environment is not available by default.
+<a href="http://tooh.github.io/blog/2013/04/23/Alfred_workflow_for_Octopress/">Alfred Workflow for Octopress</a></p></blockquote>
+
+<p>とある通り、下記のような設定をする必要があったようです。
+かなりハマりました（´-ω-｀）
+よく分からないけど、別ファイルにしたら動かないので、とりあえず全て冒頭にこれを挟みました（´-ω-｀）</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/07/07/octopress-alfred/">続きを読むヽ(・ω・｀）</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -182,6 +270,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/05/14/angularjs/">TypeScript・AngularJS・Jade・Stylusでサンプルコード</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/05/13/golang/">golangの環境構築</a>
       </li>
     
@@ -197,15 +289,11 @@
         <a href="/blog/2014/05/05/irkit-remote/">IRKitに外からアクセス出来るようにした</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2014/05/05/irkit/">IRKitで遊び始めた〜とりあえずTerminalで操作〜</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Top Categories</h1>
-    <ul id="top-category-list"><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/osx'>osx (3)</a></li><li><a href='/blog/categories/irkit'>irkit (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/nodejs'>nodejs (2)</a></li><li><a href='/blog/categories/haskell'>haskell (2)</a></li><li><a href='/blog/categories/osx'>OSX (1)</a></li><li><a href='/blog/categories/c-'>C# (1)</a></li><li><a href='/blog/categories/scala'>scala (1)</a></li><li><a href='/blog/categories/programming'>programming (1)</a></li></ul>
+    <ul id="top-category-list"><li><a href='/blog/categories/irkit'>irkit (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/osx'>osx (3)</a></li><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/nodejs'>nodejs (2)</a></li><li><a href='/blog/categories/haskell'>haskell (2)</a></li><li><a href='/blog/categories/mac'>mac (1)</a></li><li><a href='/blog/categories/math'>math (1)</a></li><li><a href='/blog/categories/programming'>programming (1)</a></li><li><a href='/blog/categories/book'>book (1)</a></li></ul>
 </section>
 <section>
   <h1>GitHub Repos</h1>
