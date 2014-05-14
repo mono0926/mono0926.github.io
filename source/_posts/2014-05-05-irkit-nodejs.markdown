@@ -20,14 +20,14 @@ categories: irkit nodejs
 
 まずはインストール。
 
-```sh
+```
 npm install node-irkit
 ```
 
 とりあえずlocalApiを使ってみた。
 実行する度に、部屋の電気がオンオフされて煩わしいので、テストは違う信号でやろうと思ったなう（´-ω-｀）
 
-```js
+```
 const
     irkit = require('node-irkit'),
     localApi = irkit.getLocalApi("http://192.168.0.4"),

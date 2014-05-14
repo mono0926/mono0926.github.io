@@ -9,7 +9,7 @@ categories: octopress alfred
 今日初めてOctopressを触ったら、けっこう気に入ったので、さらに気軽に書ける環境を整えれば捗るのではと思い、AlfredのWorkflowを作ってみました。
 
 
-```sh
+```
 # deploy用
 OCTOPATH='/Documents/Git/Private/octopress'
 cd ~/$OCTOPATH
@@ -19,7 +19,7 @@ git commit -m "deployed via workflow."
 git push
 ```
 
-```sh
+```
 # 投稿用
 OCTOPATH='/Documents/Git/Private/octopress'
 cd ~/$OCTOPATH
@@ -38,7 +38,7 @@ open ~/$OCTOPATH/$OCTOPOST
 
 <!-- more -->
 
-```sh
+```
 # rv設定
 if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
 	source "$HOME/.rvm/scripts/rvm"
@@ -46,7 +46,7 @@ fi
 ```
 
 さらに一応previewコマンドも作成
-```sh
+```
 if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
 	source "$HOME/.rvm/scripts/rvm"
 fi
@@ -60,7 +60,7 @@ rake preview
 ```
 
 こちらはコマンドを実行するだけではウインドウが開かれずプロセスがゾンビ状態になってしまうので、Alfredで呼び出す時に
-```sh
+```
 open -a Terminal.app preview.sh
 ```
 と少しだけ工夫。
