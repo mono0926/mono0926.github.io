@@ -115,16 +115,35 @@
 <p><a href="https://github.com/moovweb/gvm">moovweb/gvm</a>に書いてある通りにやった。
 mercurialのインストールが必要だったので、Brewfileに追記しておいた。</p>
 
-<p>あと、<code>gvm install go1</code>に失敗したので、<a href="https://github.com/moovweb/gvm/issues/38#issuecomment-39842170">Issues on OSX · Issue #38 · moovweb/gvm</a>に書いてある対応で何とかなった。</p>
+<p>あと、`gvm install go1&#8217;に失敗したので、ここに書いてある対応で何とかなった。</p>
 
 <p>普通に<code>brew install go</code>のが楽だけど、ちょっとがんばった（´-ω-｀）</p>
 
+<h2>実行</h2>
+
+<p>以下を実行。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>package main
+</span><span class='line'>import "fmt"
+</span><span class='line'>func main() {
+</span><span class='line'>    fmt.Printf("Hello world!")
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="http://mono0926.com/blog/2014/05/06/renew/">OSXの開発環境を整えた &ndash; monoHub</a>でJetBrainのIDEいくつかインストールしてたけど、<a href="http://www.jetbrains.com/idea/">IntelliJ IDEA — The Best Java and Polyglot IDE</a>で全部包含してるのね、情弱つらたん（´-ω-｀）</p>
+
+<p>まあそこそこのお値段だし、適当に色々試用して、良かったら最終的にUltimate Edtion買おうかな（´-ω-｀）
+Web StormでもGoのプラグインインストール出来たけど、SDKの設定とかうまく出来なかったりぐぐったりして出た説明と違うからCommunity Edition版のIntelliJでやった。</p>
+
+<p>実行できたけど、<code>go build hoge.go</code>で生成されるような実行ファイルが生成出来なくて謎(　´･‿･｀)<br/>
+GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分からなくてつらたん（´-ω-｀）</p>
 </div>
   
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/05/13/golang/">続きを読むヽ(・ω・｀）</a>
-    </footer>
   
 
 
@@ -218,14 +237,15 @@ Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイ�
 
 <p>まずはインストール。</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>npm install node-irkit</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>npm install node-irkit
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>とりあえずlocalApiを使ってみた。
 実行する度に、部屋の電気がオンオフされて煩わしいので、テストは違う信号でやろうと思ったなう（´-ω-｀）</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -233,14 +253,15 @@ Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイ�
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>const
-</span><span class='line'>    irkit = require('node-irkit'),
-</span><span class='line'>    localApi = irkit.getLocalApi("http://192.168.0.4"),
-</span><span class='line'>    myRoomLight = '{"format":"raw","freq":38,"data":[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}',
-</span><span class='line'>    myRoomLightMessage = JSON.parse(myRoomLight);
-</span><span class='line'>localApi.postMessages(myRoomLightMessage, function(err, res) {
-</span><span class='line'>    console.log(res); //空
-</span><span class='line'>});</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span>
+</span><span class='line'>    <span class="nx">irkit</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;node-irkit&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="nx">localApi</span> <span class="o">=</span> <span class="nx">irkit</span><span class="p">.</span><span class="nx">getLocalApi</span><span class="p">(</span><span class="s2">&quot;http://192.168.0.4&quot;</span><span class="p">),</span>
+</span><span class='line'>    <span class="nx">myRoomLight</span> <span class="o">=</span> <span class="s1">&#39;{&quot;format&quot;:&quot;raw&quot;,&quot;freq&quot;:38,&quot;data&quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">myRoomLightMessage</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">myRoomLight</span><span class="p">);</span>
+</span><span class='line'><span class="nx">localApi</span><span class="p">.</span><span class="nx">postMessages</span><span class="p">(</span><span class="nx">myRoomLightMessage</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span> <span class="c1">//空</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
 
 </div>
   
@@ -285,20 +306,21 @@ Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイ�
 
 <p>まずは、clienttokenを取得。</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Pro:~ mono$ curl -i http://192.168.0.4/keys -d ''
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>Pro:~ mono<span class="nv">$ </span>curl -i http://192.168.0.4/keys -d <span class="s1">&#39;&#39;</span>
 </span><span class='line'>HTTP/1.0 200 OK
 </span><span class='line'>Access-Control-Allow-Origin: *
 </span><span class='line'>Server: IRKit/1.3.5.0.gce6ac15
 </span><span class='line'>Content-Type: text/plain
 </span><span class='line'>
-</span><span class='line'>{"clienttoken":"**************************"} #伏せています</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'><span class="o">{</span><span class="s2">&quot;clienttoken&quot;</span>:<span class="s2">&quot;**************************&quot;</span><span class="o">}</span> <span class="c">#伏せています</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>取得したclienttokenを元に、deviceidとclientkeyを取得。</p>
@@ -348,20 +370,21 @@ Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイ�
 
 <p><a href="http://getirkit.com/">IRKit &ndash; Open Source WiFi Connected Infrared Remote Controller</a>を参考に、諸々設定。</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># dns-sdコマンドで、IRKitのインスタンス名取得。
-</span><span class='line'>Pro:b4 mono$ dns-sd -B _irkit._tcp
-</span><span class='line'>Browsing for _irkit._tcp
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># dns-sdコマンドで、IRKitのインスタンス名取得。</span>
+</span><span class='line'>Pro:b4 mono<span class="nv">$ </span>dns-sd -B _irkit._tcp
+</span><span class='line'>Browsing <span class="k">for </span>_irkit._tcp
 </span><span class='line'>DATE: ---Mon 05 May 2014---
 </span><span class='line'>14:41:16.669  ...STARTING...
-</span><span class='line'>Timestamp     A/R    Flags  if Domain               Service Type         Instance Name
-</span><span class='line'>14:41:16.880  Add        2   4 local.               _irkit._tcp.         iRKitA2C4</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>Timestamp     A/R    Flags  <span class="k">if </span>Domain               Service Type         Instance Name
+</span><span class='line'>14:41:16.880  Add        2   4 local.               _irkit._tcp.         iRKitA2C4
+</span></code></pre></td></tr></table></div></figure>
 
 
 

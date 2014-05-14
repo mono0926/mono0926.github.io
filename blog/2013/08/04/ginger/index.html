@@ -148,7 +148,7 @@
 
 <p>こんな感じのXMLを標準出力すると、Itemの数だけ一覧される。</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -156,14 +156,15 @@
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;?xml version="1.0" ?&gt;
-</span><span class='line'>&lt;items&gt;
-</span><span class='line'>  &lt;item arg="I am a programmer and writing bad English. I am Japanese." uid="d78b56b0-fcb7-11e2-9787-e80688cb3920"&gt;
-</span><span class='line'>    &lt;title&gt;I am a programmer and writing bad English. I am Japanese.&lt;/title&gt;
-</span><span class='line'>    &lt;subtitle&gt;Gingered sentence&lt;/subtitle&gt;
-</span><span class='line'>    &lt;icon/&gt;
-</span><span class='line'>  &lt;/item&gt;
-</span><span class='line'>&lt;/items&gt;</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="cp">&lt;?xml version=&quot;1.0&quot; ?&gt;</span>
+</span><span class='line'><span class="nt">&lt;items&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;item</span> <span class="na">arg=</span><span class="s">&quot;I am a programmer and writing bad English. I am Japanese.&quot;</span> <span class="na">uid=</span><span class="s">&quot;d78b56b0-fcb7-11e2-9787-e80688cb3920&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;title&gt;</span>I am a programmer and writing bad English. I am Japanese.<span class="nt">&lt;/title&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;subtitle&gt;</span>Gingered sentence<span class="nt">&lt;/subtitle&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;icon/&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/item&gt;</span>
+</span><span class='line'><span class="nt">&lt;/items&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>これも適当に文字列置換したりして作れるけど、PythonでXML組み立てて作る簡単なモジュール作って再利用できるようにしておいた。
@@ -180,16 +181,17 @@ info.plistが必要で、それは多分コマンドラインじゃ作れない�
 
 <p>適当にpackage作成スクリプト書いた。</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cp ginger/info.plist .
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>cp ginger/info.plist .
 </span><span class='line'>cp ginger/*.png .
 </span><span class='line'>zip ginger.zip ginger_driver.py ginger/*.py info.plist *.png workflow/*.py
 </span><span class='line'>rm info.plist *.png
-</span><span class='line'>mv ginger.zip ginger.alfredworkflow</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>mv ginger.zip ginger.alfredworkflow
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>こんな管理で良いのか若干謎。</p>

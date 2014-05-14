@@ -643,34 +643,36 @@ Linux, Mac, Windowsなどに対応。</p>
 
   <div class="entry-content"><p>今日初めてOctopressを触ったら、けっこう気に入ったので、さらに気軽に書ける環境を整えれば捗るのではと思い、AlfredのWorkflowを作ってみました。</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># deploy用
-</span><span class='line'>OCTOPATH='/Documents/Git/Private/octopress'
-</span><span class='line'>cd ~/$OCTOPATH
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># deploy用</span>
+</span><span class='line'><span class="nv">OCTOPATH</span><span class="o">=</span><span class="s1">&#39;/Documents/Git/Private/octopress&#39;</span>
+</span><span class='line'><span class="nb">cd</span> ~/<span class="nv">$OCTOPATH</span>
 </span><span class='line'>rake gen_deploy
 </span><span class='line'>git add .
-</span><span class='line'>git commit -m "deployed via workflow."
-</span><span class='line'>git push</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>git commit -m <span class="s2">&quot;deployed via workflow.&quot;</span>
+</span><span class='line'>git push
+</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># 投稿用
-</span><span class='line'>OCTOPATH='/Documents/Git/Private/octopress'
-</span><span class='line'>cd ~/$OCTOPATH
-</span><span class='line'>OCTOPOST=$(rake new_post[$1]| grep -o 'source/_posts/.*')
-</span><span class='line'>open ~/$OCTOPATH/$OCTOPOST</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># 投稿用</span>
+</span><span class='line'><span class="nv">OCTOPATH</span><span class="o">=</span><span class="s1">&#39;/Documents/Git/Private/octopress&#39;</span>
+</span><span class='line'><span class="nb">cd</span> ~/<span class="nv">$OCTOPATH</span>
+</span><span class='line'><span class="nv">OCTOPOST</span><span class="o">=</span><span class="k">$(</span>rake new_post<span class="o">[</span><span class="nv">$1</span><span class="o">]</span>| grep -o <span class="s1">&#39;source/_posts/.*&#39;</span><span class="k">)</span>
+</span><span class='line'>open ~/<span class="nv">$OCTOPATH</span>/<span class="nv">$OCTOPOST</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>すんなり出来るかと思いきや、これだけでは動かず、</p>

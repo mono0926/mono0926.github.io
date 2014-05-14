@@ -4,7 +4,7 @@
   <title><![CDATA[Category: irkit | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/irkit/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-05-13T09:12:02+09:00</updated>
+  <updated>2014-05-13T05:07:11+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -29,14 +29,14 @@
 
 <p>まずはインストール。</p>
 
-<p><code>
+<p><code>sh
 npm install node-irkit
 </code></p>
 
 <p>とりあえずlocalApiを使ってみた。
 実行する度に、部屋の電気がオンオフされて煩わしいので、テストは違う信号でやろうと思ったなう（´-ω-｀）</p>
 
-<p>```
+<p>```js
 const</p>
 
 <pre><code>irkit = require('node-irkit'),
@@ -68,7 +68,7 @@ myRoomLightMessage = JSON.parse(myRoomLight);
 
 <p>まずは、clienttokenを取得。</p>
 
-<p>`&ldquo;
+<p>`&ldquo;sh
 Pro:~ mono$ curl -i <a href="http://192.168.0.4/keys">http://192.168.0.4/keys</a> -d &rdquo;
 HTTP/1.0 200 OK
 Access-Control-Allow-Origin: *
@@ -83,7 +83,7 @@ Content-Type: text/plain</p>
 <!-- more -->
 
 
-<p>```
+<p>```sh
 Pro:~ mono$ curl -i -d &ldquo;clienttoken=**************************&rdquo; &ldquo;<a href="https://api.getirkit.com/1/keys">https://api.getirkit.com/1/keys</a>&rdquo;
 HTTP/1.1 200 OK
 Server: ngx_openresty
@@ -102,7 +102,7 @@ X-Content-Type-Options: nosniff</p>
 
 <p>deviceid・clientkey・家のライトのオンオフ信号を<a href="https://api.getirkit.com/1/messages">https://api.getirkit.com/1/messages</a> にポストすると、ちゃんと反応した、素晴らしい(　´･‿･｀)</p>
 
-<p>```
+<p>```sh
 curl -i &ldquo;<a href="https://api.getirkit.com/1/messages">https://api.getirkit.com/1/messages</a>&rdquo; \</p>
 
 <pre><code> -d 'clientkey=YYYYYYYYYYYYYYYYYYYYY' \
@@ -120,7 +120,7 @@ curl -i &ldquo;<a href="https://api.getirkit.com/1/messages">https://api.getirki
 <p>iPhoneアプリを作ったりするのに使う用のkeyを取得するAPIもあったので、ついでに叩いてみた。
 入力したメールアドレスに確認メールが来て、無事にapiKeyゲット。</p>
 
-<p><code>
+<p><code>sh
 Pro:~ mono$ curl -i -d "email=xxxxxx@gmail.com" "https://api.getirkit.com/1/apps"
 HTTP/1.1 200 OK
 Server: ngx_openresty
@@ -150,7 +150,7 @@ X-Content-Type-Options: nosniff
 
 <p><a href="http://getirkit.com/">IRKit &ndash; Open Source WiFi Connected Infrared Remote Controller</a>を参考に、諸々設定。</p>
 
-<p>```</p>
+<p>```sh</p>
 
 <h1>dns-sdコマンドで、IRKitのインスタンス名取得。</h1>
 
@@ -165,7 +165,7 @@ Timestamp     A/R    Flags  if Domain               Service Type         Instanc
 <!-- more -->
 
 
-<p>```</p>
+<p>```sh</p>
 
 <h1>インスタンス名から、IPアドレス取得</h1>
 
@@ -176,7 +176,7 @@ Timestamp     A/R Flags if Hostname                               Address       
 14:41:43.566  Add     2  4 irkita2c4.local.                       192.168.0.4                                  10
 ```</p>
 
-<p>```</p>
+<p>```sh</p>
 
 <h1>IPアドレスからMACアドレスを調べる(もっとスマートなやり方ある？)</h1>
 
@@ -202,7 +202,7 @@ PING 192.168.0.4 (192.168.0.4): 56 data bytes
 <p>そこで、curlすると、その信号が分かる。
 うちのNECのLEDシーリングライトのオンオフボタンを押した後だとこんな感じ。</p>
 
-<p>```
+<p>```sh
 Pro:~ mono$ curl -i <a href="http://192.168.0.4/messages">http://192.168.0.4/messages</a>
 HTTP/1.0 200 OK
 Access-Control-Allow-Origin: *
@@ -213,7 +213,7 @@ Content-Type: text/plain</p>
 ```</p>
 
 <p>これをPOSTすれば、リモコンオンオフボタンと同じ信号をIRKitが発行してくれる。
-<code>
+<code>sh
 curl -i http://192.168.0.4/messages -d '{"format":"raw","freq":38,"data":[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}'
 </code></p>
 
