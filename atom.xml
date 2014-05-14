@@ -4,7 +4,7 @@
   <title><![CDATA[monoHub]]></title>
   <link href="http://mono0926.github.io/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-05-14T20:28:51+09:00</updated>
+  <updated>2014-05-14T20:29:36+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -20,7 +20,7 @@
     <id>http://mono0926.github.io/blog/2014/05/14/angularjs</id>
     <content type="html"><![CDATA[<p>最近Web系の勉強してて、Node.js・Express・Redis・Herokuなどサーバーサイド周り弄ってたけど、そろそろフロントエンドもという感じで色々やってみた。</p>
 
-<h4><a href="http://ice-me.herokuapp.com/angular#/">サンプル</a></h4>
+<h3><a href="http://ice-me.herokuapp.com/angular#/">サンプル置いとく</a></h3>
 
 <p>AngularJSはけっこうリッチなライブラリで、全部身につけるのはしばらくかかりそうだけど、今日主要な機能はざっくり書けるようになった感(　´･‿･｀)
 <a href="http://vuejs.org/">Vue.js</a>と迷ったけど、<a href="https://github.com/borisyankov/DefinitelyTyped">borisyankov/DefinitelyTyped</a>にまだ無かったし、とりあえず今メジャーなAngularJSやっとこうか、という感じ。</p>
