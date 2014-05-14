@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-05-13T05:07:11+09:00</updated>
+  <updated>2014-05-14T20:14:51+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -20,7 +20,7 @@
     <id>http://mono0926.github.io/blog/2013/07/07/octopress-alfred</id>
     <content type="html"><![CDATA[<p>今日初めてOctopressを触ったら、けっこう気に入ったので、さらに気軽に書ける環境を整えれば捗るのではと思い、AlfredのWorkflowを作ってみました。</p>
 
-<p>```sh</p>
+<p>```</p>
 
 <h1>deploy用</h1>
 
@@ -32,7 +32,7 @@ git commit -m &ldquo;deployed via workflow.&rdquo;
 git push
 ```</p>
 
-<p>```sh</p>
+<p>```</p>
 
 <h1>投稿用</h1>
 
@@ -54,7 +54,7 @@ open ~/$OCTOPATH/$OCTOPOST
 <!-- more -->
 
 
-<p>```sh</p>
+<p>```</p>
 
 <h1>rv設定</h1>
 
@@ -67,7 +67,7 @@ open ~/$OCTOPATH/$OCTOPOST
 ```</p>
 
 <p>さらに一応previewコマンドも作成
-```sh
+```
 if [[ -s &ldquo;$HOME/.rvm/scripts/rvm&rdquo; ]] ; then</p>
 
 <pre><code>source "$HOME/.rvm/scripts/rvm"
@@ -86,7 +86,7 @@ rake preview
 ```</p>
 
 <p>こちらはコマンドを実行するだけではウインドウが開かれずプロセスがゾンビ状態になってしまうので、Alfredで呼び出す時に
-<code>sh
+<code>
 open -a Terminal.app preview.sh
 </code>
 と少しだけ工夫。</p>
@@ -172,7 +172,7 @@ open -a Terminal.app preview.sh
 こぎれいなテーマを適当に選んで使っています。
 導入は簡単で、上記から選んで、下のコマンドですぐ反映されます。</p>
 
-<p><code>sh
+<p><code>
 $ cd octopress
 $ git clone GIT_URL .themes/THEME_NAME
 $ rake install['THEME_NAME']

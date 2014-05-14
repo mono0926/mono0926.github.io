@@ -17,7 +17,7 @@
 6
 7
 # deploy用
-OCTOPATH=&#39;/Documents/Git/Private/ &hellip;">
+OCTOPATH='/Documents/Git/Private/octopress &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -115,36 +115,34 @@ OCTOPATH=&#39;/Documents/Git/Private/ &hellip;">
 
 <div class="entry-content"><p>今日初めてOctopressを触ったら、けっこう気に入ったので、さらに気軽に書ける環境を整えれば捗るのではと思い、AlfredのWorkflowを作ってみました。</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># deploy用</span>
-</span><span class='line'><span class="nv">OCTOPATH</span><span class="o">=</span><span class="s1">&#39;/Documents/Git/Private/octopress&#39;</span>
-</span><span class='line'><span class="nb">cd</span> ~/<span class="nv">$OCTOPATH</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># deploy用
+</span><span class='line'>OCTOPATH='/Documents/Git/Private/octopress'
+</span><span class='line'>cd ~/$OCTOPATH
 </span><span class='line'>rake gen_deploy
 </span><span class='line'>git add .
-</span><span class='line'>git commit -m <span class="s2">&quot;deployed via workflow.&quot;</span>
-</span><span class='line'>git push
-</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>git commit -m "deployed via workflow."
+</span><span class='line'>git push</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># 投稿用</span>
-</span><span class='line'><span class="nv">OCTOPATH</span><span class="o">=</span><span class="s1">&#39;/Documents/Git/Private/octopress&#39;</span>
-</span><span class='line'><span class="nb">cd</span> ~/<span class="nv">$OCTOPATH</span>
-</span><span class='line'><span class="nv">OCTOPOST</span><span class="o">=</span><span class="k">$(</span>rake new_post<span class="o">[</span><span class="nv">$1</span><span class="o">]</span>| grep -o <span class="s1">&#39;source/_posts/.*&#39;</span><span class="k">)</span>
-</span><span class='line'>open ~/<span class="nv">$OCTOPATH</span>/<span class="nv">$OCTOPOST</span>
-</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'># 投稿用
+</span><span class='line'>OCTOPATH='/Documents/Git/Private/octopress'
+</span><span class='line'>cd ~/$OCTOPATH
+</span><span class='line'>OCTOPOST=$(rake new_post[$1]| grep -o 'source/_posts/.*')
+</span><span class='line'>open ~/$OCTOPATH/$OCTOPOST</span></code></pre></td></tr></table></div></figure>
 
 
 <p>すんなり出来るかと思いきや、これだけでは動かず、</p>
@@ -161,20 +159,19 @@ OCTOPATH=&#39;/Documents/Git/Private/ &hellip;">
 
 
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># rv設定</span>
-</span><span class='line'><span class="k">if</span> <span class="o">[[</span> -s <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span> <span class="o">]]</span> ; <span class="k">then</span>
-</span><span class='line'><span class="k">  </span><span class="nb">source</span> <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span>
-</span><span class='line'><span class="k">fi</span>
-</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'># rv設定
+</span><span class='line'>if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
+</span><span class='line'>  source "$HOME/.rvm/scripts/rvm"
+</span><span class='line'>fi</span></code></pre></td></tr></table></div></figure>
 
 
 <p>さらに一応previewコマンドも作成</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -184,24 +181,22 @@ OCTOPATH=&#39;/Documents/Git/Private/ &hellip;">
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
 <span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="k">if</span> <span class="o">[[</span> -s <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span> <span class="o">]]</span> ; <span class="k">then</span>
-</span><span class='line'><span class="k">  </span><span class="nb">source</span> <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span>
-</span><span class='line'><span class="k">fi</span>
-</span><span class='line'><span class="nv">OCTOPATH</span><span class="o">=</span><span class="s1">&#39;/Documents/Git/Private/octopress&#39;</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then
+</span><span class='line'>  source "$HOME/.rvm/scripts/rvm"
+</span><span class='line'>fi
+</span><span class='line'>OCTOPATH='/Documents/Git/Private/octopress'
 </span><span class='line'>
-</span><span class='line'><span class="nb">cd</span> ~/<span class="nv">$OCTOPATH</span>
+</span><span class='line'>cd ~/$OCTOPATH
 </span><span class='line'>rake generate
-</span><span class='line'><span class="c"># open in a browser</span>
+</span><span class='line'># open in a browser
 </span><span class='line'>open http://localhost:4000/
-</span><span class='line'>rake preview
-</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>rake preview</span></code></pre></td></tr></table></div></figure>
 
 
 <p>こちらはコマンドを実行するだけではウインドウが開かれずプロセスがゾンビ状態になってしまうので、Alfredで呼び出す時に</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>open -a Terminal.app preview.sh
-</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>open -a Terminal.app preview.sh</span></code></pre></td></tr></table></div></figure>
 
 
 <p>と少しだけ工夫。</p>
@@ -333,6 +328,10 @@ OCTOPATH=&#39;/Documents/Git/Private/ &hellip;">
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/05/14/angularjs/">TypeScript・AngularJS・Jade・Stylusでサンプルコード</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/05/13/golang/">golangの環境構築</a>
       </li>
     
@@ -348,15 +347,11 @@ OCTOPATH=&#39;/Documents/Git/Private/ &hellip;">
         <a href="/blog/2014/05/05/irkit-remote/">IRKitに外からアクセス出来るようにした</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2014/05/05/irkit/">IRKitで遊び始めた〜とりあえずTerminalで操作〜</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Top Categories</h1>
-    <ul id="top-category-list"><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/osx'>osx (3)</a></li><li><a href='/blog/categories/irkit'>irkit (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/nodejs'>nodejs (2)</a></li><li><a href='/blog/categories/haskell'>haskell (2)</a></li><li><a href='/blog/categories/osx'>OSX (1)</a></li><li><a href='/blog/categories/c-'>C# (1)</a></li><li><a href='/blog/categories/scala'>scala (1)</a></li><li><a href='/blog/categories/programming'>programming (1)</a></li></ul>
+    <ul id="top-category-list"><li><a href='/blog/categories/irkit'>irkit (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/osx'>osx (3)</a></li><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/nodejs'>nodejs (2)</a></li><li><a href='/blog/categories/haskell'>haskell (2)</a></li><li><a href='/blog/categories/mac'>mac (1)</a></li><li><a href='/blog/categories/math'>math (1)</a></li><li><a href='/blog/categories/programming'>programming (1)</a></li><li><a href='/blog/categories/book'>book (1)</a></li></ul>
 </section>
 <section>
   <h1>GitHub Repos</h1>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: golang | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/golang/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-05-13T05:07:11+09:00</updated>
+  <updated>2014-05-14T20:14:51+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -25,9 +25,12 @@
 <p><a href="https://github.com/moovweb/gvm">moovweb/gvm</a>に書いてある通りにやった。
 mercurialのインストールが必要だったので、Brewfileに追記しておいた。</p>
 
-<p>あと、`gvm install go1'に失敗したので、ここに書いてある対応で何とかなった。</p>
+<p>あと、<code>gvm install go1</code>に失敗したので、<a href="https://github.com/moovweb/gvm/issues/38#issuecomment-39842170">Issues on OSX · Issue #38 · moovweb/gvm</a>に書いてある対応で何とかなった。</p>
 
 <p>普通に<code>brew install go</code>のが楽だけど、ちょっとがんばった（´-ω-｀）</p>
+
+<!-- more -->
+
 
 <h2>実行</h2>
 
@@ -51,6 +54,21 @@ Web StormでもGoのプラグインインストール出来たけど、SDKの設
 
 <p>実行できたけど、<code>go build hoge.go</code>で生成されるような実行ファイルが生成出来なくて謎(　´･‿･｀)<br/>
 GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分からなくてつらたん（´-ω-｀）</p>
+
+<h3>解決</h3>
+
+<ul>
+<li><a href="https://github.com/go-lang-plugin-org/go-lang-idea-plugin/blob/master/Missing%20ENV.md">go-lang-idea-plugin/Missing ENV.md at master · go-lang-plugin-org/go-lang-idea-plugin</a>を参考に設定したら、警告ダイアログが出なくなった。</li>
+<li>Run Configurationsで、Build before runにチェックを付けてディレクトリをbinに設定したら、実行ファイルも生成されるようになった。</li>
+</ul>
+
+
+<p><img src="/images/post/go.png" alt="go" /></p>
+
+<p>ただ、多分IntelliJがGoのデバッグ実行に対応していない？(無反応)のがつらたん（´-ω-｀）
+<a href="https://github.com/go-lang-plugin-org/go-lang-idea-plugin/issues/25">Support for debugging · Issue #25 · go-lang-plugin-org/go-lang-idea-plugin</a>を見ると、GAEプロジェクトのみ対応？？よく分からない（´-ω-｀）</p>
+
+<p>あと、<a href="https://twitter.com/yabuchin_y">ıɥɔınʎ (yabuchin_y) on Twitter</a>さんに<a href="https://gophercasts.io/">GopherCasts</a>を教えてもらった(　´･‿･｀)</p>
 ]]></content>
   </entry>
   

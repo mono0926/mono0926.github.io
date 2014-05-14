@@ -112,9 +112,12 @@
 <p><a href="https://github.com/moovweb/gvm">moovweb/gvm</a>に書いてある通りにやった。
 mercurialのインストールが必要だったので、Brewfileに追記しておいた。</p>
 
-<p>あと、`gvm install go1&#8217;に失敗したので、ここに書いてある対応で何とかなった。</p>
+<p>あと、<code>gvm install go1</code>に失敗したので、<a href="https://github.com/moovweb/gvm/issues/38#issuecomment-39842170">Issues on OSX · Issue #38 · moovweb/gvm</a>に書いてある対応で何とかなった。</p>
 
 <p>普通に<code>brew install go</code>のが楽だけど、ちょっとがんばった（´-ω-｀）</p>
+
+<!-- more -->
+
 
 <h2>実行</h2>
 
@@ -139,6 +142,21 @@ Web StormでもGoのプラグインインストール出来たけど、SDKの設
 
 <p>実行できたけど、<code>go build hoge.go</code>で生成されるような実行ファイルが生成出来なくて謎(　´･‿･｀)<br/>
 GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分からなくてつらたん（´-ω-｀）</p>
+
+<h3>解決</h3>
+
+<ul>
+<li><a href="https://github.com/go-lang-plugin-org/go-lang-idea-plugin/blob/master/Missing%20ENV.md">go-lang-idea-plugin/Missing ENV.md at master · go-lang-plugin-org/go-lang-idea-plugin</a>を参考に設定したら、警告ダイアログが出なくなった。</li>
+<li>Run Configurationsで、Build before runにチェックを付けてディレクトリをbinに設定したら、実行ファイルも生成されるようになった。</li>
+</ul>
+
+
+<p><img src="/images/post/go.png" alt="go" /></p>
+
+<p>ただ、多分IntelliJがGoのデバッグ実行に対応していない？(無反応)のがつらたん（´-ω-｀）
+<a href="https://github.com/go-lang-plugin-org/go-lang-idea-plugin/issues/25">Support for debugging · Issue #25 · go-lang-plugin-org/go-lang-idea-plugin</a>を見ると、GAEプロジェクトのみ対応？？よく分からない（´-ω-｀）</p>
+
+<p>あと、<a href="https://twitter.com/yabuchin_y">ıɥɔınʎ (yabuchin_y) on Twitter</a>さんに<a href="https://gophercasts.io/">GopherCasts</a>を教えてもらった(　´･‿･｀)</p>
 </div>
 
 
@@ -203,6 +221,8 @@ GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分�
         <a class="basic-alignment left" href="/blog/2014/05/06/renew/" title="Previous Post: OSXの開発環境を整えた">&laquo; OSXの開発環境を整えた</a>
       
       
+        <a class="basic-alignment right" href="/blog/2014/05/14/angularjs/" title="Next Post: TypeScript・AngularJS・Jade・Stylusでサンプルコード">TypeScript・AngularJS・Jade・Stylusでサンプルコード &raquo;</a>
+      
     </p>
   </footer>
 </article>
@@ -235,6 +255,10 @@ GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分�
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/05/14/angularjs/">TypeScript・AngularJS・Jade・Stylusでサンプルコード</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/05/13/golang/">golangの環境構築</a>
       </li>
     
@@ -250,15 +274,11 @@ GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分�
         <a href="/blog/2014/05/05/irkit-remote/">IRKitに外からアクセス出来るようにした</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2014/05/05/irkit/">IRKitで遊び始めた〜とりあえずTerminalで操作〜</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Top Categories</h1>
-    <ul id="top-category-list"><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/osx'>osx (3)</a></li><li><a href='/blog/categories/irkit'>irkit (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/nodejs'>nodejs (2)</a></li><li><a href='/blog/categories/haskell'>haskell (2)</a></li><li><a href='/blog/categories/osx'>OSX (1)</a></li><li><a href='/blog/categories/c-'>C# (1)</a></li><li><a href='/blog/categories/scala'>scala (1)</a></li><li><a href='/blog/categories/programming'>programming (1)</a></li></ul>
+    <ul id="top-category-list"><li><a href='/blog/categories/irkit'>irkit (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/osx'>osx (3)</a></li><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/nodejs'>nodejs (2)</a></li><li><a href='/blog/categories/haskell'>haskell (2)</a></li><li><a href='/blog/categories/mac'>mac (1)</a></li><li><a href='/blog/categories/math'>math (1)</a></li><li><a href='/blog/categories/programming'>programming (1)</a></li><li><a href='/blog/categories/book'>book (1)</a></li></ul>
 </section>
 <section>
   <h1>GitHub Repos</h1>

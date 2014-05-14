@@ -4,7 +4,7 @@
   <title><![CDATA[monoHub]]></title>
   <link href="http://mono0926.github.io/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-05-13T05:07:11+09:00</updated>
+  <updated>2014-05-14T20:14:51+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[TypeScript・AngularJS・Jade・Stylusでサンプルコード]]></title>
+    <link href="http://mono0926.github.io/blog/2014/05/14/angularjs/"/>
+    <updated>2014-05-14T15:35:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2014/05/14/angularjs</id>
+    <content type="html"><![CDATA[<p>最近Web系の勉強してて、Node.js・Express・Redis・Herokuなどサーバーサイド周り弄ってたけど、そろそろフロントエンドもという感じで色々やってみた。</p>
+
+<h4><a href="http://ice-me.herokuapp.com/angular#/">サンプル</a></h4>
+
+<p>AngularJSはけっこうリッチなライブラリで、全部身につけるのはしばらくかかりそうだけど、今日主要な機能はざっくり書けるようになった感(　´･‿･｀)
+<a href="http://vuejs.org/">vue.js</a>と迷ったけど、<a href="https://github.com/borisyankov/DefinitelyTyped">borisyankov/DefinitelyTyped</a>にまだ無かったし、とりあえず今メジャーなAngularJSやっとこうか、という感じ。</p>
+
+<p>JadeとStylusは記法いくつか覚えらればわりとサクサク書けて、気に入った。これ系いくつかあるけど、どれがいいんですかね。あまり比較検討せずに決めてしまった。</p>
+
+<ul>
+<li>AngularJS: MVW(Model-View-Whatever)フレームワークというらしい。Whatever=厳密に定義しない、みたいな意味らしい。JS・HTML周りのスパゲッティコード解消。MV*とかはともかく、とりあえずバインディング機構あるのが嬉しい。</li>
+<li>Jade: HTMLの簡易記法 + αの機能</li>
+<li>Stylus: SASS・LESSの後発版みたいな感じ？</li>
+</ul>
+
+
+<!-- more -->
+
+
+<h2>資料</h2>
+
+<ul>
+<li><a href="http://qiita.com/opengl-8080/items/2fe0a20c314b1c824cc5">AngularJS使い方メモ &ndash; Qiita</a></li>
+<li><a href="http://qiita.com/icoxfog417/items/2ac773c33a8b34288551">AngularJS &ndash; お前のAngular.jsはもうMVCではない。と言われないためのTutorial &ndash; Qiita</a></li>
+<li><a href="http://qiita.com/zoetro/items/a45dbc18bb2b22e944b2">AngularJSのMVWパターンを理解する &ndash; Qiita</a></li>
+<li><a href="https://docs.angularjs.org/guide/concepts">AngularJS: Developer Guide: Conceptual Overview</a></li>
+<li><a href="http://qiita.com/sasaplus1/items/189560f80cf337d40fdf">Node.js &ndash; Jadeの記法について（あまりまとまっていない） &ndash; Qiita</a></li>
+<li><a href="http://naltatis.github.io/jade-syntax-docs/">Jade Template Syntax Documentation by Example</a></li>
+</ul>
+
+
+<h1>#</h1>
+
+<p>一気に色々やると破綻しそうかと心配だったけど、意外とスムーズに出来たのは良かった。</p>
+
+<p>AngularJS、シングルページアプリケーション周りの機能はまだ終えてないから、また続きやろう（´-ω-｀）</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[golangの環境構築]]></title>
@@ -25,9 +69,12 @@
 <p><a href="https://github.com/moovweb/gvm">moovweb/gvm</a>に書いてある通りにやった。
 mercurialのインストールが必要だったので、Brewfileに追記しておいた。</p>
 
-<p>あと、`gvm install go1&#8217;に失敗したので、ここに書いてある対応で何とかなった。</p>
+<p>あと、<code>gvm install go1</code>に失敗したので、<a href="https://github.com/moovweb/gvm/issues/38#issuecomment-39842170">Issues on OSX · Issue #38 · moovweb/gvm</a>に書いてある対応で何とかなった。</p>
 
 <p>普通に<code>brew install go</code>のが楽だけど、ちょっとがんばった（´-ω-｀）</p>
+
+<!-- more -->
+
 
 <h2>実行</h2>
 
@@ -52,6 +99,21 @@ Web StormでもGoのプラグインインストール出来たけど、SDKの設
 
 <p>実行できたけど、<code>go build hoge.go</code>で生成されるような実行ファイルが生成出来なくて謎(　´･‿･｀)<br/>
 GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分からなくてつらたん（´-ω-｀）</p>
+
+<h3>解決</h3>
+
+<ul>
+<li><a href="https://github.com/go-lang-plugin-org/go-lang-idea-plugin/blob/master/Missing%20ENV.md">go-lang-idea-plugin/Missing ENV.md at master · go-lang-plugin-org/go-lang-idea-plugin</a>を参考に設定したら、警告ダイアログが出なくなった。</li>
+<li>Run Configurationsで、Build before runにチェックを付けてディレクトリをbinに設定したら、実行ファイルも生成されるようになった。</li>
+</ul>
+
+
+<p><img src="http://mono0926.github.io/images/post/go.png" alt="go" /></p>
+
+<p>ただ、多分IntelliJがGoのデバッグ実行に対応していない？(無反応)のがつらたん（´-ω-｀）
+<a href="https://github.com/go-lang-plugin-org/go-lang-idea-plugin/issues/25">Support for debugging · Issue #25 · go-lang-plugin-org/go-lang-idea-plugin</a>を見ると、GAEプロジェクトのみ対応？？よく分からない（´-ω-｀）</p>
+
+<p>あと、<a href="https://twitter.com/yabuchin_y">ıɥɔınʎ (yabuchin_y) on Twitter</a>さんに<a href="https://gophercasts.io/">GopherCasts</a>を教えてもらった(　´･‿･｀)</p>
 ]]></content>
   </entry>
   
@@ -149,15 +211,14 @@ IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれ
 
 <p>まずはインストール。</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>npm install node-irkit
-</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>npm install node-irkit</span></code></pre></td></tr></table></div></figure>
 
 
 <p>とりあえずlocalApiを使ってみた。
 実行する度に、部屋の電気がオンオフされて煩わしいので、テストは違う信号でやろうと思ったなう（´-ω-｀）</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -165,15 +226,14 @@ IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれ
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span>
-</span><span class='line'>    <span class="nx">irkit</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;node-irkit&#39;</span><span class="p">),</span>
-</span><span class='line'>    <span class="nx">localApi</span> <span class="o">=</span> <span class="nx">irkit</span><span class="p">.</span><span class="nx">getLocalApi</span><span class="p">(</span><span class="s2">&quot;http://192.168.0.4&quot;</span><span class="p">),</span>
-</span><span class='line'>    <span class="nx">myRoomLight</span> <span class="o">=</span> <span class="s1">&#39;{&quot;format&quot;:&quot;raw&quot;,&quot;freq&quot;:38,&quot;data&quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">myRoomLightMessage</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">myRoomLight</span><span class="p">);</span>
-</span><span class='line'><span class="nx">localApi</span><span class="p">.</span><span class="nx">postMessages</span><span class="p">(</span><span class="nx">myRoomLightMessage</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span> <span class="c1">//空</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>const
+</span><span class='line'>    irkit = require('node-irkit'),
+</span><span class='line'>    localApi = irkit.getLocalApi("http://192.168.0.4"),
+</span><span class='line'>    myRoomLight = '{"format":"raw","freq":38,"data":[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}',
+</span><span class='line'>    myRoomLightMessage = JSON.parse(myRoomLight);
+</span><span class='line'>localApi.postMessages(myRoomLightMessage, function(err, res) {
+</span><span class='line'>    console.log(res); //空
+</span><span class='line'>});</span></code></pre></td></tr></table></div></figure>
 
 ]]></content>
   </entry>
@@ -191,21 +251,20 @@ IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれ
 
 <p>まずは、clienttokenを取得。</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>Pro:~ mono<span class="nv">$ </span>curl -i http://192.168.0.4/keys -d <span class="s1">&#39;&#39;</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Pro:~ mono$ curl -i http://192.168.0.4/keys -d ''
 </span><span class='line'>HTTP/1.0 200 OK
 </span><span class='line'>Access-Control-Allow-Origin: *
 </span><span class='line'>Server: IRKit/1.3.5.0.gce6ac15
 </span><span class='line'>Content-Type: text/plain
 </span><span class='line'>
-</span><span class='line'><span class="o">{</span><span class="s2">&quot;clienttoken&quot;</span>:<span class="s2">&quot;**************************&quot;</span><span class="o">}</span> <span class="c">#伏せています</span>
-</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>{"clienttoken":"**************************"} #伏せています</span></code></pre></td></tr></table></div></figure>
 
 
 <p>取得したclienttokenを元に、deviceidとclientkeyを取得。</p>
@@ -215,7 +274,7 @@ IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれ
 
 
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -227,34 +286,32 @@ IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれ
 <span class='line-number'>10</span>
 <span class='line-number'>11</span>
 <span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>Pro:~ mono<span class="nv">$ </span>curl -i -d <span class="s2">&quot;clienttoken=**************************&quot;</span> <span class="s2">&quot;https://api.getirkit.com/1/keys&quot;</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Pro:~ mono$ curl -i -d "clienttoken=**************************" "https://api.getirkit.com/1/keys"
 </span><span class='line'>HTTP/1.1 200 OK
 </span><span class='line'>Server: ngx_openresty
 </span><span class='line'>Date: Mon, 05 May 2014 06:44:32 GMT
-</span><span class='line'>Content-Type: application/json; <span class="nv">charset</span><span class="o">=</span>utf-8
+</span><span class='line'>Content-Type: application/json; charset=utf-8
 </span><span class='line'>Content-Length: 94
 </span><span class='line'>Connection: keep-alive
 </span><span class='line'>Access-Control-Allow-Origin: *
 </span><span class='line'>Access-Control-Allow-Headers: X-Requested-With
 </span><span class='line'>X-Content-Type-Options: nosniff
 </span><span class='line'>
-</span><span class='line'><span class="o">{</span><span class="s2">&quot;deviceid&quot;</span>:<span class="s2">&quot;XXXXXXXXXXXXXXXXXXXXXX&quot;</span>,<span class="s2">&quot;clientkey&quot;</span>:<span class="s2">&quot;YYYYYYYYYYYYYYYYYYYYY&quot;</span><span class="o">}</span> <span class="c">#伏せています</span>
-</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>{"deviceid":"XXXXXXXXXXXXXXXXXXXXXX","clientkey":"YYYYYYYYYYYYYYYYYYYYY"} #伏せています</span></code></pre></td></tr></table></div></figure>
 
 
 <h2>Internet HTTP APIを使ってみる</h2>
 
 <p>deviceid・clientkey・家のライトのオンオフ信号を<a href="https://api.getirkit.com/1/messages">https://api.getirkit.com/1/messages</a> にポストすると、ちゃんと反応した、素晴らしい(　´･‿･｀)</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>curl -i <span class="s2">&quot;https://api.getirkit.com/1/messages&quot;</span> <span class="se">\</span>
-</span><span class='line'>     -d <span class="s1">&#39;clientkey=YYYYYYYYYYYYYYYYYYYYY&#39;</span> <span class="se">\</span>
-</span><span class='line'>     -d <span class="s1">&#39;deviceid=XXXXXXXXXXXXXXXXXXXXXX&#39;</span> <span class="se">\</span>
-</span><span class='line'>     -d <span class="s1">&#39;message={&quot;format&quot;:&quot;raw&quot;,&quot;freq&quot;:38,&quot;data&quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -i "https://api.getirkit.com/1/messages" \
+</span><span class='line'>     -d 'clientkey=YYYYYYYYYYYYYYYYYYYYY' \
+</span><span class='line'>     -d 'deviceid=XXXXXXXXXXXXXXXXXXXXXX' \
+</span><span class='line'>     -d 'message={"format":"raw","freq":38,"data":[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}'</span></code></pre></td></tr></table></div></figure>
 
 
 <p>上記操作で、IRKitサーバーがIRKit端末にアクセス出来るようになって、認証すれば外部から操作出来るようになるって感じかなあ。
@@ -265,7 +322,7 @@ IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれ
 <p>iPhoneアプリを作ったりするのに使う用のkeyを取得するAPIもあったので、ついでに叩いてみた。
 入力したメールアドレスに確認メールが来て、無事にapiKeyゲット。</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -275,17 +332,16 @@ IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれ
 <span class='line-number'>8</span>
 <span class='line-number'>9</span>
 <span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>Pro:~ mono<span class="nv">$ </span>curl -i -d <span class="s2">&quot;email=xxxxxx@gmail.com&quot;</span> <span class="s2">&quot;https://api.getirkit.com/1/apps&quot;</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Pro:~ mono$ curl -i -d "email=xxxxxx@gmail.com" "https://api.getirkit.com/1/apps"
 </span><span class='line'>HTTP/1.1 200 OK
 </span><span class='line'>Server: ngx_openresty
 </span><span class='line'>Date: Mon, 05 May 2014 07:00:31 GMT
-</span><span class='line'>Content-Type: application/json; <span class="nv">charset</span><span class="o">=</span>utf-8
+</span><span class='line'>Content-Type: application/json; charset=utf-8
 </span><span class='line'>Content-Length: 92
 </span><span class='line'>Connection: keep-alive
 </span><span class='line'>Access-Control-Allow-Origin: *
 </span><span class='line'>Access-Control-Allow-Headers: X-Requested-With
-</span><span class='line'>X-Content-Type-Options: nosniff
-</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>X-Content-Type-Options: nosniff</span></code></pre></td></tr></table></div></figure>
 
 
 <p>このapiKitと<a href="https://github.com/irkit/ios-sdk">irkit/ios-sdk</a>でiPhoneアプリ簡単に作れるみたいだけど、<a href="https://github.com/irkit/ios-sdk">irkit/ios-sdk</a>とかでけっこう充分だったりするし、どうしよう（´-ω-｀）<br/>
@@ -305,21 +361,20 @@ IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれ
 
 <p><a href="http://getirkit.com/">IRKit &ndash; Open Source WiFi Connected Infrared Remote Controller</a>を参考に、諸々設定。</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># dns-sdコマンドで、IRKitのインスタンス名取得。</span>
-</span><span class='line'>Pro:b4 mono<span class="nv">$ </span>dns-sd -B _irkit._tcp
-</span><span class='line'>Browsing <span class="k">for </span>_irkit._tcp
+</pre></td><td class='code'><pre><code class=''><span class='line'># dns-sdコマンドで、IRKitのインスタンス名取得。
+</span><span class='line'>Pro:b4 mono$ dns-sd -B _irkit._tcp
+</span><span class='line'>Browsing for _irkit._tcp
 </span><span class='line'>DATE: ---Mon 05 May 2014---
 </span><span class='line'>14:41:16.669  ...STARTING...
-</span><span class='line'>Timestamp     A/R    Flags  <span class="k">if </span>Domain               Service Type         Instance Name
-</span><span class='line'>14:41:16.880  Add        2   4 local.               _irkit._tcp.         iRKitA2C4
-</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>Timestamp     A/R    Flags  if Domain               Service Type         Instance Name
+</span><span class='line'>14:41:16.880  Add        2   4 local.               _irkit._tcp.         iRKitA2C4</span></code></pre></td></tr></table></div></figure>
 
 
 
@@ -329,24 +384,23 @@ IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれ
 
 
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># インスタンス名から、IPアドレス取得</span>
-</span><span class='line'>Pro:b4 mono<span class="nv">$ </span>dns-sd -G v4 irkita2c4.local
+</pre></td><td class='code'><pre><code class=''><span class='line'># インスタンス名から、IPアドレス取得
+</span><span class='line'>Pro:b4 mono$ dns-sd -G v4 irkita2c4.local
 </span><span class='line'>DATE: ---Mon 05 May 2014---
 </span><span class='line'>14:41:43.565  ...STARTING...
-</span><span class='line'>Timestamp     A/R Flags <span class="k">if </span>Hostname                               Address                                      TTL
-</span><span class='line'>14:41:43.566  Add     2  4 irkita2c4.local.                       192.168.0.4                                  10
-</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>Timestamp     A/R Flags if Hostname                               Address                                      TTL
+</span><span class='line'>14:41:43.566  Add     2  4 irkita2c4.local.                       192.168.0.4                                  10</span></code></pre></td></tr></table></div></figure>
 
 
 
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -354,15 +408,14 @@ IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれ
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># IPアドレスからMACアドレスを調べる(もっとスマートなやり方ある？)</span>
-</span><span class='line'><span class="c"># とりあえずping</span>
-</span><span class='line'>Pro:~ mono<span class="nv">$ </span>ping 192.168.0.4
-</span><span class='line'>PING 192.168.0.4 <span class="o">(</span>192.168.0.4<span class="o">)</span>: 56 data bytes
-</span><span class='line'>64 bytes from 192.168.0.4: <span class="nv">icmp_seq</span><span class="o">=</span>0 <span class="nv">ttl</span><span class="o">=</span>255 <span class="nb">time</span><span class="o">=</span>3.958 ms
-</span><span class='line'><span class="c"># arpで確認</span>
-</span><span class='line'>Pro:~ mono<span class="nv">$ </span>arp -a
-</span><span class='line'>? <span class="o">(</span>192.168.0.4<span class="o">)</span> at 20:f8:5e:a6:a2:c4 on en0 ifscope <span class="o">[</span>ethernet<span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'># IPアドレスからMACアドレスを調べる(もっとスマートなやり方ある？)
+</span><span class='line'># とりあえずping
+</span><span class='line'>Pro:~ mono$ ping 192.168.0.4
+</span><span class='line'>PING 192.168.0.4 (192.168.0.4): 56 data bytes
+</span><span class='line'>64 bytes from 192.168.0.4: icmp_seq=0 ttl=255 time=3.958 ms
+</span><span class='line'># arpで確認
+</span><span class='line'>Pro:~ mono$ arp -a
+</span><span class='line'>? (192.168.0.4) at 20:f8:5e:a6:a2:c4 on en0 ifscope [ethernet]</span></code></pre></td></tr></table></div></figure>
 
 
 <p>ルーターの設定で、固定IPを今さらながら割り当ててみる。
@@ -375,28 +428,26 @@ IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれ
 <p>そこで、curlすると、その信号が分かる。
 うちのNECのLEDシーリングライトのオンオフボタンを押した後だとこんな感じ。</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>Pro:~ mono<span class="nv">$ </span>curl -i http://192.168.0.4/messages
+</pre></td><td class='code'><pre><code class=''><span class='line'>Pro:~ mono$ curl -i http://192.168.0.4/messages
 </span><span class='line'>HTTP/1.0 200 OK
 </span><span class='line'>Access-Control-Allow-Origin: *
 </span><span class='line'>Server: IRKit/1.3.5.0.gce6ac15
 </span><span class='line'>Content-Type: text/plain
 </span><span class='line'>
-</span><span class='line'><span class="o">{</span><span class="s2">&quot;format&quot;</span>:<span class="s2">&quot;raw&quot;</span>,<span class="s2">&quot;freq&quot;</span>:38,<span class="s2">&quot;data&quot;</span>:<span class="o">[</span>17421,9061,935,1232,1037,3458,1037,1232,935,1232,935,1232,1037,1190,1037,1190,1037,3458,1037,3458,1037,1037,1037,3458,1037,3458,1037,1150,1037,3341,1073,3341,1073,1232,935,3458,935,3458,935,1232,1037,3341,935,1190,1073,3458,935,1190,1002,3458,1073,1073,1073,1190,1037,3458,1037,1190,1190,3228,968,1190,1073,3341,1073,1190,1002<span class="o">]}</span>
-</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>{"format":"raw","freq":38,"data":[17421,9061,935,1232,1037,3458,1037,1232,935,1232,935,1232,1037,1190,1037,1190,1037,3458,1037,3458,1037,1037,1037,3458,1037,3458,1037,1150,1037,3341,1073,3341,1073,1232,935,3458,935,3458,935,1232,1037,3341,935,1190,1073,3458,935,1190,1002,3458,1073,1073,1073,1190,1037,3458,1037,1190,1190,3228,968,1190,1073,3341,1073,1190,1002]}</span></code></pre></td></tr></table></div></figure>
 
 
 <p>これをPOSTすれば、リモコンオンオフボタンと同じ信号をIRKitが発行してくれる。</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>curl -i http://192.168.0.4/messages -d <span class="s1">&#39;{&quot;format&quot;:&quot;raw&quot;,&quot;freq&quot;:38,&quot;data&quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}&#39;</span>
-</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -i http://192.168.0.4/messages -d '{"format":"raw","freq":38,"data":[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}'</span></code></pre></td></tr></table></div></figure>
 
 
 <p>つまり、これをaliasなりシェルスクリプトにしておけば、もうそれだけでキーボードでライトのオンオフが出来るようになる。</p>
@@ -783,7 +834,7 @@ OSも、ハードウェア性能を要求するどころか、逆に同じハー
 
 <p>こんな感じのXMLを標準出力すると、Itemの数だけ一覧される。</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -791,15 +842,14 @@ OSも、ハードウェア性能を要求するどころか、逆に同じハー
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="cp">&lt;?xml version=&quot;1.0&quot; ?&gt;</span>
-</span><span class='line'><span class="nt">&lt;items&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;item</span> <span class="na">arg=</span><span class="s">&quot;I am a programmer and writing bad English. I am Japanese.&quot;</span> <span class="na">uid=</span><span class="s">&quot;d78b56b0-fcb7-11e2-9787-e80688cb3920&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;title&gt;</span>I am a programmer and writing bad English. I am Japanese.<span class="nt">&lt;/title&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;subtitle&gt;</span>Gingered sentence<span class="nt">&lt;/subtitle&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;icon/&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;/item&gt;</span>
-</span><span class='line'><span class="nt">&lt;/items&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;?xml version="1.0" ?&gt;
+</span><span class='line'>&lt;items&gt;
+</span><span class='line'>  &lt;item arg="I am a programmer and writing bad English. I am Japanese." uid="d78b56b0-fcb7-11e2-9787-e80688cb3920"&gt;
+</span><span class='line'>    &lt;title&gt;I am a programmer and writing bad English. I am Japanese.&lt;/title&gt;
+</span><span class='line'>    &lt;subtitle&gt;Gingered sentence&lt;/subtitle&gt;
+</span><span class='line'>    &lt;icon/&gt;
+</span><span class='line'>  &lt;/item&gt;
+</span><span class='line'>&lt;/items&gt;</span></code></pre></td></tr></table></div></figure>
 
 
 <p>これも適当に文字列置換したりして作れるけど、PythonでXML組み立てて作る簡単なモジュール作って再利用できるようにしておいた。
@@ -816,17 +866,16 @@ info.plistが必要で、それは多分コマンドラインじゃ作れない�
 
 <p>適当にpackage作成スクリプト書いた。</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
 <span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>cp ginger/info.plist .
+</pre></td><td class='code'><pre><code class=''><span class='line'>cp ginger/info.plist .
 </span><span class='line'>cp ginger/*.png .
 </span><span class='line'>zip ginger.zip ginger_driver.py ginger/*.py info.plist *.png workflow/*.py
 </span><span class='line'>rm info.plist *.png
-</span><span class='line'>mv ginger.zip ginger.alfredworkflow
-</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>mv ginger.zip ginger.alfredworkflow</span></code></pre></td></tr></table></div></figure>
 
 
 <p>こんな管理で良いのか若干謎。</p>
@@ -1904,136 +1953,6 @@ Linux, Mac, Windowsなどに対応。</p>
 <h3>追記</h3>
 
 <p><a href="https://itunes.apple.com/jp/app/readkit/id588726889?l=en&amp;mt=12">ReadKit</a> というアプリが素晴らしく、常用し始めましたヽ(・ω・｀）</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Octopressへの投稿やdeployをAlfredのWorkflowで]]></title>
-    <link href="http://mono0926.github.io/blog/2013/07/07/octopress-alfred/"/>
-    <updated>2013-07-07T17:32:00+09:00</updated>
-    <id>http://mono0926.github.io/blog/2013/07/07/octopress-alfred</id>
-    <content type="html"><![CDATA[<p>今日初めてOctopressを触ったら、けっこう気に入ったので、さらに気軽に書ける環境を整えれば捗るのではと思い、AlfredのWorkflowを作ってみました。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># deploy用</span>
-</span><span class='line'><span class="nv">OCTOPATH</span><span class="o">=</span><span class="s1">&#39;/Documents/Git/Private/octopress&#39;</span>
-</span><span class='line'><span class="nb">cd</span> ~/<span class="nv">$OCTOPATH</span>
-</span><span class='line'>rake gen_deploy
-</span><span class='line'>git add .
-</span><span class='line'>git commit -m <span class="s2">&quot;deployed via workflow.&quot;</span>
-</span><span class='line'>git push
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># 投稿用</span>
-</span><span class='line'><span class="nv">OCTOPATH</span><span class="o">=</span><span class="s1">&#39;/Documents/Git/Private/octopress&#39;</span>
-</span><span class='line'><span class="nb">cd</span> ~/<span class="nv">$OCTOPATH</span>
-</span><span class='line'><span class="nv">OCTOPOST</span><span class="o">=</span><span class="k">$(</span>rake new_post<span class="o">[</span><span class="nv">$1</span><span class="o">]</span>| grep -o <span class="s1">&#39;source/_posts/.*&#39;</span><span class="k">)</span>
-</span><span class='line'>open ~/<span class="nv">$OCTOPATH</span>/<span class="nv">$OCTOPOST</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>すんなり出来るかと思いきや、これだけでは動かず、</p>
-
-<blockquote><p>In my bash script I had to add some extras because Alfred runs the bash script in a subshell and in this subshell the rvm environment is not available by default.
-<a href="http://tooh.github.io/blog/2013/04/23/Alfred_workflow_for_Octopress/">Alfred Workflow for Octopress</a></p></blockquote>
-
-<p>とある通り、下記のような設定をする必要があったようです。
-かなりハマりました（´-ω-｀）
-よく分からないけど、別ファイルにしたら動かないので、とりあえず全て冒頭にこれを挟みました（´-ω-｀）</p>
-
-<!-- more -->
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c"># rv設定</span>
-</span><span class='line'><span class="k">if</span> <span class="o">[[</span> -s <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span> <span class="o">]]</span> ; <span class="k">then</span>
-</span><span class='line'><span class="k">  </span><span class="nb">source</span> <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span>
-</span><span class='line'><span class="k">fi</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>さらに一応previewコマンドも作成</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="k">if</span> <span class="o">[[</span> -s <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span> <span class="o">]]</span> ; <span class="k">then</span>
-</span><span class='line'><span class="k">  </span><span class="nb">source</span> <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span>
-</span><span class='line'><span class="k">fi</span>
-</span><span class='line'><span class="nv">OCTOPATH</span><span class="o">=</span><span class="s1">&#39;/Documents/Git/Private/octopress&#39;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nb">cd</span> ~/<span class="nv">$OCTOPATH</span>
-</span><span class='line'>rake generate
-</span><span class='line'><span class="c"># open in a browser</span>
-</span><span class='line'>open http://localhost:4000/
-</span><span class='line'>rake preview
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>こちらはコマンドを実行するだけではウインドウが開かれずプロセスがゾンビ状態になってしまうので、Alfredで呼び出す時に</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>open -a Terminal.app preview.sh
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>と少しだけ工夫。</p>
-
-<p><a href="https://github.com/Temikus/alfred-octopress/blob/master/post.sh">Temikus/alfred-octopress</a> など、同じようなもの作っている人もいたり。</p>
-
-<p>とりあえず、これでいつでもランチャー起動して<code>post titleなど</code>と入力すると、記事が生成されて開かれて、書き終わったら<code>preview</code>で確認して、<code>deploy</code>実行すればサイトへの反映とレポジトリへのPushが行われる便利な環境が出来ました。
-(Alfredのテーマもかっこよくして遊んでました。)</p>
-
-<p><img src="http://mono0926.github.io/images/post/post.png" alt="post workflow" /></p>
-
-<h4>Octopress気に入ったけど…</h4>
-
-<p>Qiitaもよく見たらMarkdownでかなり使いやすそう。
-色々ツールもあるし。</p>
-
-<ul>
-<li><a href="http://kobito.qiita.com/">Kobito</a>
-
-<ul>
-<li>Qiitaに投稿出来るクライアントアプリ。同時にGistにスニペット登録も可能。</li>
-</ul>
-</li>
-<li><a href="http://www.gistboxapp.com/">GistBox</a>
-
-<ul>
-<li>Gist用Webアプリ。Chrome App版はネイティブっぽい操作感。</li>
-</ul>
-</li>
-</ul>
-
-
-<p>最近久しく何も書いてなかったけど、あまり脈絡の無い雑多メモなどはこちらで、技術系TipsはQiitaあたりにまとめる習慣付けたい（´・ω・｀）</p>
 ]]></content>
   </entry>
   

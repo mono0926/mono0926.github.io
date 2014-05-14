@@ -116,15 +116,14 @@
 
 <p>まずはインストール。</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='sh'><span class='line'>npm install node-irkit
-</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>npm install node-irkit</span></code></pre></td></tr></table></div></figure>
 
 
 <p>とりあえずlocalApiを使ってみた。
 実行する度に、部屋の電気がオンオフされて煩わしいので、テストは違う信号でやろうと思ったなう（´-ω-｀）</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -132,15 +131,14 @@
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="kr">const</span>
-</span><span class='line'>    <span class="nx">irkit</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;node-irkit&#39;</span><span class="p">),</span>
-</span><span class='line'>    <span class="nx">localApi</span> <span class="o">=</span> <span class="nx">irkit</span><span class="p">.</span><span class="nx">getLocalApi</span><span class="p">(</span><span class="s2">&quot;http://192.168.0.4&quot;</span><span class="p">),</span>
-</span><span class='line'>    <span class="nx">myRoomLight</span> <span class="o">=</span> <span class="s1">&#39;{&quot;format&quot;:&quot;raw&quot;,&quot;freq&quot;:38,&quot;data&quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}&#39;</span><span class="p">,</span>
-</span><span class='line'>    <span class="nx">myRoomLightMessage</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">myRoomLight</span><span class="p">);</span>
-</span><span class='line'><span class="nx">localApi</span><span class="p">.</span><span class="nx">postMessages</span><span class="p">(</span><span class="nx">myRoomLightMessage</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span> <span class="c1">//空</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>const
+</span><span class='line'>    irkit = require('node-irkit'),
+</span><span class='line'>    localApi = irkit.getLocalApi("http://192.168.0.4"),
+</span><span class='line'>    myRoomLight = '{"format":"raw","freq":38,"data":[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}',
+</span><span class='line'>    myRoomLightMessage = JSON.parse(myRoomLight);
+</span><span class='line'>localApi.postMessages(myRoomLightMessage, function(err, res) {
+</span><span class='line'>    console.log(res); //空
+</span><span class='line'>});</span></code></pre></td></tr></table></div></figure>
 
 </div>
 
@@ -240,6 +238,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/05/14/angularjs/">TypeScript・AngularJS・Jade・Stylusでサンプルコード</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/05/13/golang/">golangの環境構築</a>
       </li>
     
@@ -255,15 +257,11 @@
         <a href="/blog/2014/05/05/irkit-remote/">IRKitに外からアクセス出来るようにした</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2014/05/05/irkit/">IRKitで遊び始めた〜とりあえずTerminalで操作〜</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Top Categories</h1>
-    <ul id="top-category-list"><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/osx'>osx (3)</a></li><li><a href='/blog/categories/irkit'>irkit (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/nodejs'>nodejs (2)</a></li><li><a href='/blog/categories/haskell'>haskell (2)</a></li><li><a href='/blog/categories/osx'>OSX (1)</a></li><li><a href='/blog/categories/c-'>C# (1)</a></li><li><a href='/blog/categories/scala'>scala (1)</a></li><li><a href='/blog/categories/programming'>programming (1)</a></li></ul>
+    <ul id="top-category-list"><li><a href='/blog/categories/irkit'>irkit (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/osx'>osx (3)</a></li><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/nodejs'>nodejs (2)</a></li><li><a href='/blog/categories/haskell'>haskell (2)</a></li><li><a href='/blog/categories/mac'>mac (1)</a></li><li><a href='/blog/categories/math'>math (1)</a></li><li><a href='/blog/categories/programming'>programming (1)</a></li><li><a href='/blog/categories/book'>book (1)</a></li></ul>
 </section>
 <section>
   <h1>GitHub Repos</h1>
