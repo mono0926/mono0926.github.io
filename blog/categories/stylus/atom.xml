@@ -4,7 +4,7 @@
   <title><![CDATA[Category: stylus | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/stylus/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-05-14T20:14:51+09:00</updated>
+  <updated>2014-05-14T20:19:14+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -49,11 +49,24 @@
 </ul>
 
 
-<h1>#</h1>
-
 <p>一気に色々やると破綻しそうかと心配だったけど、意外とスムーズに出来たのは良かった。</p>
 
-<p>AngularJS、シングルページアプリケーション周りの機能はまだ終えてないから、また続きやろう（´-ω-｀）</p>
+<p>AngularJS、<a href="http://qiita.com/opengl-8080/items/2fe0a20c314b1c824cc5">AngularJS使い方メモ &ndash; Qiita</a>の「ページの一部に動的にテンプレートを読み込む」くらいまでで、まだシングルページアプリケーション周りの機能は終えてないから、また続きやろう（´-ω-｀）</p>
+
+<h2>コード</h2>
+
+<script src="https://gist.github.com/mono0926/30e00a6a26498eff5973.js"></script>
+
+
+
+
+<script src="https://gist.github.com/mono0926/2e8b58d3003f1fcbfa1c.js"></script>
+
+
+
+
+<script src="https://gist.github.com/mono0926/780a92e2fe8c7c80e80f.js"></script>
+
 ]]></content>
   </entry>
   
