@@ -9,7 +9,8 @@
   <meta name="author" content="Masayuki Ono">
 
   
-  <meta name="description" content="NodeJS + Express + Stylus + Jade + AngularJS + Redisなどなどで、簡単なTODOアプリ作った。 TypeScriptリファレンス Ver.1.0対応のサンプルを参考に、アレンジした感じ(オリジナルはSQLiteなど使用)。 &hellip;">
+  <meta name="description" content="
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -30,16 +31,17 @@
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
   
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-11434295-5']);
+    _gaq.push(['_trackPageview']);
 
-  ga('create', 'UA-11434295-7', 'mono0926.com');
-  ga('send', 'pageview');
-
-</script>
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'httpss://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
 
 
 </head>
@@ -84,7 +86,7 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/05/26/todo/">NodeJS + Express + Stylus + Jade + AngularJS + Redisなどなどで、簡単なTODOアプリ</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/05/27/diary/">Diary</a></h1>
     
     
       <p class="meta">
@@ -100,34 +102,14 @@
   
 
 
-<time datetime="2014-05-26T08:27:00+09:00" pubdate data-updated="true">May 26<span>th</span>, 2014</time>
+<time datetime="2014-05-27T21:38:00+09:00" pubdate data-updated="true">May 27<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>NodeJS + Express + Stylus + Jade + AngularJS + Redisなどなどで、<a href="http://ice-me.herokuapp.com/todos">簡単なTODOアプリ</a>作った。</p>
-
-<p><a href="http://www.amazon.co.jp/gp/product/484433588X/ref=as_li_ss_tl?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=484433588X&amp;linkCode=as2&amp;tag=mono0926-22">TypeScriptリファレンス Ver.1.0対応</a>のサンプルを参考に、アレンジした感じ(オリジナルはSQLiteなど使用)。</p>
-
-<p>Redisでのデータの持ち方は<a href="http://redis.shibu.jp/tutorial/">ケーススタディ — redis 2.0.3 documentation</a>である程度分かったけど、なかなか迷うところや困るところも多いので、Redis入門読んでじっくり勉強中。
-<a href="http://ice-me.herokuapp.com/todos">TODOアプリ</a>では、なんとか動作自体は出来たけど、ちょっとしっくり来ないところもあったり。</p>
-
-<p><a href="http://www.amazon.co.jp/gp/product/B00HSC64P8/ref=as_li_ss_il?ie=UTF8&camp=247&creative=7399&creativeASIN=B00HSC64P8&linkCode=as2&tag=mono0926-22"><img border="0" src="http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00HSC64P8&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=mono0926-22" ></a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=mono0926-22&l=as2&o=9&a=B00HSC64P8" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
-
-<p>「Redis入門」というタイトルだけど、原書は<a href="http://www.amazon.com/gp/product/1617290858/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1617290858&amp;linkCode=as2&amp;tag=mono0926-20&amp;linkId=TTS6QNHCUFJDJESI">Redis in Action</a>なだけあって、けっこう歯ごたえのある内容。一通り理解して手を動かせば、RedisやKVSのパラダイムに慣れられそう。</p>
-
-<p>サーバーサイドは外部モジュール使ってるけど(<code>import xxx = require('yyy')</code>形式)、クライアント側は内部モジュール形式で書いて手動で下記を実行して連結しているのも微妙なので、改善したい（´-ω-｀）他はWebStormで普通に実行したり、herokuへのデプロイはGitのPUSHで出来て楽なのだけれど（´-ω-｀）</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>tsc @compile.tscparams</span></code></pre></td></tr></table></div></figure>
-
-
-<p>AngularJSとJadeのおかげで、HTML部分がすごくクリーンになっているのはとても良い感じ(　´･‿･｀)</p>
-
-<script src="https://gist.github.com/mono0926/3ee7f4c5016e88a6c6a3.js"></script>
-
+  <div class="entry-content">
 </div>
   
   
@@ -717,7 +699,7 @@ Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイ�
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/05/26/todo/">NodeJS + Express + Stylus + Jade + AngularJS + Redisなどなどで、簡単なTODOアプリ</a>
+        <a href="/blog/2014/05/27/diary/">diary</a>
       </li>
     
       <li class="post">
@@ -740,7 +722,7 @@ Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイ�
 </section>
 <section>
   <h1>Top Categories</h1>
-    <ul id="top-category-list"><li><a href='/blog/categories/irkit'>irkit (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/osx'>osx (3)</a></li><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/haskell'>haskell (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/nodejs'>nodejs (2)</a></li><li><a href='/blog/categories/scala'>scala (1)</a></li><li><a href='/blog/categories/design'>design (1)</a></li><li><a href='/blog/categories/love'>love (1)</a></li><li><a href='/blog/categories/stamp'>stamp (1)</a></li></ul>
+    <ul id="top-category-list"><li><a href='/blog/categories/irkit'>irkit (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/osx'>osx (3)</a></li><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/nodejs'>nodejs (2)</a></li><li><a href='/blog/categories/haskell'>haskell (2)</a></li><li><a href='/blog/categories/mac'>mac (1)</a></li><li><a href='/blog/categories/math'>math (1)</a></li><li><a href='/blog/categories/programming'>programming (1)</a></li><li><a href='/blog/categories/book'>book (1)</a></li></ul>
 </section>
 <section>
   <h1>GitHub Repos</h1>
