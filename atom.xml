@@ -4,7 +4,7 @@
   <title><![CDATA[monoHub]]></title>
   <link href="http://mono0926.github.io/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-05-27T21:43:41+09:00</updated>
+  <updated>2014-05-29T22:07:43+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[RescueTimeを昨日から使い始めた]]></title>
+    <link href="http://mono0926.github.io/blog/2014/05/29/rescuetime/"/>
+    <updated>2014-05-29T21:48:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2014/05/29/rescuetime</id>
+    <content type="html"><![CDATA[<p><a href="https://www.rescuetime.com">RescueTime</a>を昨日から使い始めたけど、素晴らしい。
+多少カスタマイズ出来るけど、ほぼ初期設定で、すごく良い感じにデスクワークの統計を取ってくれる。
+そんなのがあるとかは、<a href="http://www.lifehacker.jp/2009/03/rescuetime.html">『RescueTime』で、お仕事状況をすべてチェック（無料） : ライフハッカー［日本版］</a>などで知りつつスルーしてたけど、<a href="https://twitter.com/PocketHits">PocketHits (PocketHits) on Twitter</a>で流れてきた<a href="http://www.businessinsider.com/productivity-hacks-from-startup-execs-2014-5?utm_source=pocket&amp;utm_medium=twitter&amp;utm_campaign=pockethits">Productivity Hacks From Startup Execs &ndash; Business Insider</a>を見て試してみたらはまった感じ。</p>
+
+<p>学生時代にライフログの研究していたのもあって、こういう生活のデジタルデータを集めるのはすごく興味がありました。
+でも、例えばわりと最近流行りの腕に巻いて生活強度を計るようなデバイスとかGPSで移動経路を取得するのは、結局運動パターン的には平日ほぼ毎日変わり映えの無いものに帰着するし、たまに動くと別にデータを見せられるまでもなく自覚しているし、という感じでしっくり来なかった。</p>
+
+<p>しかし、日々のデスクワークをデータで表示してくれるのは、けっこう変化合って面白いし、自分の行動へのフィードバックにもなると感じたり。</p>
+
+<p>本日の活動はこんな感じ。
+フルで、パソコンに向かっていると1時間当たりの分母は60分になるけど、移動中や退席中などデスクを離れていると分母自体が減ります。</p>
+
+<p><img src="http://mono0926.github.io/images/post/RescueTime.png" alt="RescueTime" /></p>
+
+<p>今朝は4時くらいから開発系とニュース記事閲覧をして、会社に移動して色々しつつ、ちょっとニュース見て息抜きしてまた仕事復帰して昼休みなり、昼休み明けはゆるめに仕事開始しつつ、夕方前後に再びピークに持って行って帰るみたいな感じで、かなりキレイにログが取れてる。</p>
+
+<p>今日はXXXが多すぎたなとか、今日はよくがんばったとか、あるいは週や月の統計を見るとさらに色々自分のペースを客観的に見れそうで楽しみ。</p>
+
+<p>ここまで良い感じに見せられると、productivityやsoftware developmentの数値を上げてハイスコア狙いたくなるなど、ゲーミフィケーション的な要素もあったり。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[日記]]></title>
@@ -1569,150 +1596,6 @@ Core Data使えばNSFetchedResultsControllerでコレクション監視がかな
 
 <p>Apple製品に閉じられるなら、Core Data + iCloudの方がやはり良いなあという感じ（´-ω-｀）
 参考：<a href="http://d.hatena.ne.jp/glass-_-onion/20120728/1343471940">iCloud プログラミング入門</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[iOSからDropbox新APIのDrop-ins(Chooser)を使ってみる]]></title>
-    <link href="http://mono0926.github.io/blog/2013/07/17/dropbox/"/>
-    <updated>2013-07-17T12:51:00+09:00</updated>
-    <id>http://mono0926.github.io/blog/2013/07/17/dropbox</id>
-    <content type="html"><![CDATA[<p>古い記事だけど、<a href="http://blog.syuhari.jp/archives/2284">[iPhone/iPad] Dropbox API を使ってみた</a> をさらっと見て作業開始。<br/>
-開発者登録は自力じゃなかなか見つからなかったけど、<a href="https://www.dropbox.com/developers/apply?cont=/developers/apps">Dropbox API terms and conditions</a>。<br/>
-権限の設定などは初回の作成時以外は変更出来ないっぽいので、慎重に。</p>
-
-<h3>Drop-ins</h3>
-
-<p><a href="https://www.dropbox.com/developers/dropins/chooser/ios">Using the Chooser (iOS)</a>を読んでみた。<br/>
-<a href="http://dl.dropboxusercontent.com/s/uf3893wfnk4f3p9/dropbox-ios-chooser-sdk-1.0.zip">Download iOS SDK</a>に同梱のサンプルプロジェクトを実行しながらドキュメント読めばすごく分かりやすい。</p>
-
-<h4>導入</h4>
-
-<p><a href="http://dl.dropboxusercontent.com/s/uf3893wfnk4f3p9/dropbox-ios-chooser-sdk-1.0.zip">Download iOS SDK</a> に入っているDBChooser.framework と DBChooser.bundle を対象のプロジェクトに突っ込むだけ。</p>
-
-<!-- more -->
-
-
-<h4>AppKey指定</h4>
-
-<p>唯一躓きそうなのがAppKeyで、サンプルには元々おそらくサンプル用のkeyがURL Schemesに入っていてそのまま実行できちゃうけど、自分のアプリに適用する場合はちゃんと自分のkeyを指定する必要あり。
-プロジェクトのセッティングのTARGETSのURL TypesのURL Schemesに指定するわけだけど、db-というプレフィックスの後に<a href="https://www.dropbox.com/developers/apps">App Console</a>のDrop-insタイプのアプリのkeyを入れる形式。不正なAppKeyを指定するとChooser起動のタイミングで落ちる。</p>
-
-<p><img src="http://mono0926.github.io/images/post/dropin.png" alt="projetc setting" /></p>
-
-<h4>呼び出し</h4>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="cp">#import &lt;DBChooser/DBChooser.h&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didPressChoose</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="c1">// 複数のkeyを使う場合はdefaultChooserの代わりにkeyを指定して初期化</span>
-</span><span class='line'>    <span class="p">[[</span><span class="n">DBChooser</span> <span class="n">defaultChooser</span><span class="p">]</span> <span class="nl">openChooserForLinkType:</span><span class="n">DBChooserLinkTypePreview</span> <span class="c1">// 取得出来るURL2種類から選択</span>
-</span><span class='line'>                                    <span class="nl">fromViewController:</span><span class="n">self</span> <span class="nl">completion:</span><span class="o">^</span><span class="p">(</span><span class="n">NSArray</span> <span class="o">*</span><span class="n">results</span><span class="p">)</span>
-</span><span class='line'>    <span class="p">{</span>
-</span><span class='line'>        <span class="k">if</span> <span class="p">([</span><span class="n">results</span> <span class="n">count</span><span class="p">])</span> <span class="p">{</span>
-</span><span class='line'>            <span class="c1">// Process results from Chooser</span>
-</span><span class='line'>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span><span class='line'>            <span class="c1">// User canceled the action</span>
-</span><span class='line'>        <span class="p">}</span>
-</span><span class='line'>    <span class="p">}];</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li>取得出来るURL2種類
-
-<ul>
-<li>DBChooserLinkTypePreviewlinks
-
-<ul>
-<li>文字通りプレビュー。色々アクションを選べる。</li>
-</ul>
-</li>
-<li>DBChooserLinkTypeDirectlinks
-
-<ul>
-<li>データに直接アクセス出来るリンク</li>
-<li>サーバーにこれを渡す作りにすれば、モバイル端末 &ndash; サーバー通信はちょっとしたJSONで、通信環境の良いサーバーで効率よくダウンロードとかできそう。</li>
-<li>4時間でexpireされるので注意</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-
-<h4>Chooserからファイルを選んだあと</h4>
-
-<h5>AppDelegateの以下が呼ばれる</h5>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">openURL:</span><span class="p">(</span><span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span> <span class="nf">sourceApplication:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">sourceApplication</span> <span class="nf">annotation:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">annotation</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="c1">// urlに色々詰め込まれている</span>
-</span><span class='line'>    <span class="c1">// 複数のkeyを使う場合はdefaultChooserの代わりにkeyを指定して初期化</span>
-</span><span class='line'>    <span class="k">if</span> <span class="p">([[</span><span class="n">DBChooser</span> <span class="n">defaultChooser</span><span class="p">]</span> <span class="nl">handleOpenURL:</span><span class="n">url</span><span class="p">])</span> <span class="p">{</span>
-</span><span class='line'>        <span class="k">return</span> <span class="n">YES</span><span class="p">;</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'>    <span class="k">return</span> <span class="n">NO</span><span class="p">;</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h5>urlがパースされて以下のDBChooserResultのarrayにマッピングされるイメージ</h5>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='objective-c'><span class='line'><span class="k">@interface</span> <span class="nc">DBChooserResult</span> : <span class="nc">NSObject</span>
-</span><span class='line'><span class="c1">// DBChooserLinkTypeで何が入るか変わる。</span>
-</span><span class='line'><span class="k">@property</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">link</span><span class="p">;</span>
-</span><span class='line'><span class="k">@property</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">name</span><span class="p">;</span>
-</span><span class='line'><span class="k">@property</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">size</span><span class="p">;</span>
-</span><span class='line'><span class="k">@property</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">iconURL</span><span class="p">;</span>
-</span><span class='line'><span class="c1">// 画像や動画の時に3種類(64x64px・200x200px・640x480px)の大きさのサムネイルURLが入っている。</span>
-</span><span class='line'><span class="k">@property</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="n">thumbnails</span><span class="p">;</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">@end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>まとめ</h3>
-
-<p>サンプルも分かりやすくて、APIとしても使いやすくて素晴らしい。
-このAPIに限らずだけど、Dropboxアプリがインストールされていること前提のアプリと割り切れば色々広がりそう。
-<a href="https://www.dropbox.com/developers/dropins">Drop-ins</a> にある通りまだ開発中みたいだけど、ChooserだけでなくSaverもあって、アプリ間連携とかもこれで行けたりするかも。(iOSやAndroidからはローカルDropboxアプリへの保存は同期的に行いそうだし)</p>
 ]]></content>
   </entry>
   
