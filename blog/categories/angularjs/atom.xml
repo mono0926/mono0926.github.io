@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: angularjs | monoHub]]></title>
+  <title><![CDATA[Category: AngularJS | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/angularjs/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-05-29T22:09:42+09:00</updated>
+  <updated>2014-05-29T22:10:59+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -14,58 +14,29 @@
 
   
   <entry>
-    <title type="html"><![CDATA[TypeScript・AngularJS・Jade・Stylusでサンプルコード]]></title>
-    <link href="http://mono0926.github.io/blog/2014/05/14/angularjs/"/>
-    <updated>2014-05-14T15:35:00+09:00</updated>
-    <id>http://mono0926.github.io/blog/2014/05/14/angularjs</id>
-    <content type="html"><![CDATA[<p>最近Web系の勉強してて、Node.js・Express・Redis・Herokuなどサーバーサイド周り弄ってたけど、そろそろフロントエンドもという感じで色々やってみた。</p>
+    <title type="html"><![CDATA[NodeJS + Express + Stylus + Jade + AngularJS + Redisなどなどで、簡単なTODOアプリ]]></title>
+    <link href="http://mono0926.github.io/blog/2014/05/26/todo/"/>
+    <updated>2014-05-26T08:27:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2014/05/26/todo</id>
+    <content type="html"><![CDATA[<p>NodeJS + Express + Stylus + Jade + AngularJS + Redisなどなどで、<a href="http://ice-me.herokuapp.com/todos">簡単なTODOアプリ</a>作った。</p>
 
-<h3><a href="http://ice-me.herokuapp.com/angular#/">サンプル置いとく</a></h3>
+<p><a href="http://www.amazon.co.jp/gp/product/484433588X/ref=as_li_ss_tl?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=484433588X&amp;linkCode=as2&amp;tag=mono0926-22">TypeScriptリファレンス Ver.1.0対応</a>のサンプルを参考に、アレンジした感じ(オリジナルはSQLiteなど使用)。</p>
 
-<p>AngularJSはけっこうリッチなライブラリで、全部身につけるのはしばらくかかりそうだけど、今日主要な機能はざっくり書けるようになった感(　´･‿･｀)
-<a href="http://vuejs.org/">Vue.js</a>と迷ったけど、<a href="https://github.com/borisyankov/DefinitelyTyped">borisyankov/DefinitelyTyped</a>にまだ無かったし、とりあえず今メジャーなAngularJSやっとこうか、という感じ。</p>
+<p>Redisでのデータの持ち方は<a href="http://redis.shibu.jp/tutorial/">ケーススタディ — redis 2.0.3 documentation</a>である程度分かったけど、なかなか迷うところや困るところも多いので、Redis入門読んでじっくり勉強中。
+<a href="http://ice-me.herokuapp.com/todos">TODOアプリ</a>では、なんとか動作自体は出来たけど、ちょっとしっくり来ないところもあったり。</p>
 
-<p>JadeとStylusは記法いくつか覚えらればわりとサクサク書けて、気に入った。これ系いくつかあるけど、どれがいいんですかね。あまり比較検討せずに決めてしまった。</p>
+<p><a href="http://www.amazon.co.jp/gp/product/B00HSC64P8/ref=as_li_ss_il?ie=UTF8&camp=247&creative=7399&creativeASIN=B00HSC64P8&linkCode=as2&tag=mono0926-22"><img border="0" src="http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00HSC64P8&Format=_SL160_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=mono0926-22" ></a><img src="http://ir-jp.amazon-adsystem.com/e/ir?t=mono0926-22&l=as2&o=9&a=B00HSC64P8" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
 
-<ul>
-<li>AngularJS: MVW(Model-View-Whatever)フレームワークというらしい。Whatever=厳密に定義しない、みたいな意味らしい。JS・HTML周りのスパゲッティコード解消。MV*とかはともかく、とりあえずバインディング機構あるのが嬉しい。</li>
-<li>Jade: HTMLの簡易記法 + αの機能</li>
-<li>Stylus: SASS・LESSの後発版みたいな感じ？</li>
-</ul>
+<p>「Redis入門」というタイトルだけど、原書は<a href="http://www.amazon.com/gp/product/1617290858/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1617290858&amp;linkCode=as2&amp;tag=mono0926-20&amp;linkId=TTS6QNHCUFJDJESI">Redis in Action</a>なだけあって、けっこう歯ごたえのある内容。一通り理解して手を動かせば、RedisやKVSのパラダイムに慣れられそう。</p>
 
+<p>サーバーサイドは外部モジュール使ってるけど(<code>import xxx = require('yyy')</code>形式)、クライアント側は内部モジュール形式で書いて手動で下記を実行して連結しているのも微妙なので、改善したい（´-ω-｀）他はWebStormで普通に実行したり、herokuへのデプロイはGitのPUSHで出来て楽なのだけれど（´-ω-｀）
+<code>
+tsc @compile.tscparams
+</code></p>
 
-<!-- more -->
+<p>AngularJSとJadeのおかげで、HTML部分がすごくクリーンになっているのはとても良い感じ(　´･‿･｀)</p>
 
-
-<h2>資料</h2>
-
-<ul>
-<li><a href="http://qiita.com/opengl-8080/items/2fe0a20c314b1c824cc5">AngularJS使い方メモ &ndash; Qiita</a></li>
-<li><a href="http://qiita.com/icoxfog417/items/2ac773c33a8b34288551">AngularJS &ndash; お前のAngular.jsはもうMVCではない。と言われないためのTutorial &ndash; Qiita</a></li>
-<li><a href="http://qiita.com/zoetro/items/a45dbc18bb2b22e944b2">AngularJSのMVWパターンを理解する &ndash; Qiita</a></li>
-<li><a href="https://docs.angularjs.org/guide/concepts">AngularJS: Developer Guide: Conceptual Overview</a></li>
-<li><a href="http://qiita.com/sasaplus1/items/189560f80cf337d40fdf">Node.js &ndash; Jadeの記法について（あまりまとまっていない） &ndash; Qiita</a></li>
-<li><a href="http://naltatis.github.io/jade-syntax-docs/">Jade Template Syntax Documentation by Example</a></li>
-</ul>
-
-
-<p>一気に色々やると破綻しそうかと心配だったけど、意外とスムーズに出来たのは良かった。</p>
-
-<p>AngularJS、<a href="http://qiita.com/opengl-8080/items/2fe0a20c314b1c824cc5">AngularJS使い方メモ &ndash; Qiita</a>の「ページの一部に動的にテンプレートを読み込む」くらいまでで、まだシングルページアプリケーション周りの機能は終えてないから、また続きやろう（´-ω-｀）</p>
-
-<h2>コード</h2>
-
-<script src="https://gist.github.com/mono0926/30e00a6a26498eff5973.js"></script>
-
-
-
-
-<script src="https://gist.github.com/mono0926/2e8b58d3003f1fcbfa1c.js"></script>
-
-
-
-
-<script src="https://gist.github.com/mono0926/780a92e2fe8c7c80e80f.js"></script>
+<script src="https://gist.github.com/mono0926/3ee7f4c5016e88a6c6a3.js"></script>
 
 ]]></content>
   </entry>
