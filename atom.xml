@@ -4,7 +4,7 @@
   <title><![CDATA[monoHub]]></title>
   <link href="http://mono0926.github.io/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-06-04T04:10:53+09:00</updated>
+  <updated>2014-06-04T04:11:49+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[yosemite]]></title>
+    <title type="html"><![CDATA[OSX 10.10(Yosemite)やiOS 8にアップデートして困ったこと]]></title>
     <link href="http://mono0926.github.io/blog/2014/06/04/yosemite/"/>
     <updated>2014-06-04T03:43:00+09:00</updated>
     <id>http://mono0926.github.io/blog/2014/06/04/yosemite</id>
