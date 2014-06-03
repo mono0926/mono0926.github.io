@@ -43,6 +43,10 @@ sudo /sbin/kextload '/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboar
 <blockquote class="twitter-tweet" lang="en"><p>Calm down everybody, Alfred isn’t going anywhere (but up) in OS X Yosemite :) <a href="http://t.co/wh1mMnxrkt">http://t.co/wh1mMnxrkt</a></p>&mdash; Alfred App (@alfredapp) <a href="https://twitter.com/alfredapp/statuses/473517537939185665">June 2, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+
+ただ、Yosemiteはインストールにすごく時間がかかって、残り4分で数十分固まったようになった(大量のファイルコピーなどしている模様・同様の報告多数)ので、失敗したかと思いけっこう怖かったです(　´･‿･｀)
+
+
 ## iOS 8にアップデートして困ったこと
 
 ### iPhoneで[1Password](https://agilebits.com/onepassword)が同期できなくなってクラッシュする
