@@ -46,6 +46,21 @@ sudo /sbin/kextload '/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboar
 
 ただ、Yosemiteはインストールにすごく時間がかかって、残り4分で数十分固まったようになった(大量のファイルコピーなどしている模様・同様の報告多数)ので、失敗したかと思いけっこう怖かったです(　´･‿･｀)
 
+## (多分)Xcode 6インストール後に困ったこと
+
+### Homebrewが動かなくなってしまった
+
+```
+/usr/local/bin/brew: /usr/local/Library/brew.rb: /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby: bad interpreter: No such file or directory
+```
+
+`brew doctor`さえ動かない状態。
+
+ログに書いてあるとおりSystemのRubyのバージョンが変わったのかーと思いつつ、`/usr/local/Library/brew.rb`の以下の`1.8`の箇所を`2.0`にすれば直った。
+
+```
+#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -W0
+```
 
 ## iOS 8にアップデートして困ったこと
 
