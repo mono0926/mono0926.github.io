@@ -1,0 +1,70 @@
+---
+layout: post
+title: "yosemite"
+date: 2014-06-04 03:43
+comments: true
+categories: OSX 10.10(Yosemite)やiOS 8にアップデートして困ったこと
+---
+
+例のごとく、何も考えずにメインマシンをOSX 10.10(Yosemite)・iOS 8にしてしまいましたが、いくつか細かいトラブルが。
+でも概ね問題無く使えていて満足（´-ω-｀）
+
+NDAに気をつけつつ困ったことや解決法など(　´･‿･｀)
+
+
+## OSX 10.10(Yosemite)にアップデートして困ったこと
+
+### [PCKeyboardHack](https://github.com/tekezo/PCKeyboardHack)が起動しない
+
+去年もこれで困ったことを思い出しました。
+Realforceでスペースの両隣のキーでの日本語入力切り替えが効かずにとても不便です。
+Apple純正キーボードだと問題ないですが。
+
+と思いつつ、Issuesを覗いたら、[Add 10.10 support #31](https://github.com/tekezo/PCKeyboardHack/issues/31)ですんなり解決(　´･‿･｀)
+
+何も考えずこれを打ったら問題無く動くように。
+
+
+```
+sudo /sbin/kextload '/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboardHack.10.9.signed.kext'
+```
+
+### [BetterTouchTool](http://blog.boastr.net/)が起動しない
+
+<!-- more -->
+
+これも[OS X 10.10 Yosemite » BetterTouchTool, BetterSnapTool & SecondBar](http://blog.boastr.net/os-x-10-10-yosemite/)にすでに記事が上がっていて、現時点ではまだダウンロード出来ないけどまもなく対応版がリリースされる模様。
+
+> BetterTouchTool crashes on startup, but I already identified the issue and will fix it tomorrow.
+
+
+[Alfred](http://www.alfredapp.com/)も、Keynotes直後にすぐこんなポスト投稿するなど、どこも動きが速くて素晴らしい(　´･‿･｀)
+
+<blockquote class="twitter-tweet" lang="en"><p>Calm down everybody, Alfred isn’t going anywhere (but up) in OS X Yosemite :) <a href="http://t.co/wh1mMnxrkt">http://t.co/wh1mMnxrkt</a></p>&mdash; Alfred App (@alfredapp) <a href="https://twitter.com/alfredapp/statuses/473517537939185665">June 2, 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+## iOS 8にアップデートして困ったこと
+
+### iPhoneで[1Password](https://agilebits.com/onepassword)が同期できなくなってクラッシュする
+
+けっこう依存度が高いので、これけっこう困る(　´･‿･｀)
+Beta版使っているのが悪いししばらく我慢かなあと思っていたら、すでに問題認識しているらしく、わりと前向きな対応してもらえそうな雰囲気(　´･‿･｀)
+ついでに秋くらいに指紋認証でアンロックも実装してくれることを期待(　´･‿･｀)
+
+<blockquote class="twitter-tweet" lang="en"><p>iOS 8 folks, there sure are a lot of you using the beta! I’m a bit…broken. Sorry. My devs are working on it!&#10;&#10;[…]</p>&mdash; 1Password Beta (@1PasswordBeta) <a href="https://twitter.com/1PasswordBeta/statuses/473747191228399616">June 3, 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+### LINEスタンプが買えない・使えない
+
+買おうとするとエラーになってしまうし、使おうとすると進捗ダイアログが終わらない（´-ω-｀）けっこう困る（´-ω-｀）
+[申請中の個人スタンプ](http://a.scn.jp/s/0VrEMIHAB)も買えないし使えなくなりそう（´・д・｀）
+これに関しては調べても困っている人はいても解決手段は現状無さそう。
+
+とりあえずパソコン版でしのごう（´-ω-｀）
+
+iOS 8については、あとはクラッシュ率が高いとかですかね。
+NDAで細かいところは書けないけど、使用感も特に大きな変化無く(　´･‿･｀)
+
+
+というわけで、ちょくちょく問題はありつつ、最新の環境楽しめているので、アップデートして良かった(　´･‿･｀)
+趣味みたいなもののあので、仮想環境とか検証機とかで試しても個人的にはあまり意味がなく、やはり普段マシンで楽しんでこそと思う(　´･‿･｀)
