@@ -46,8 +46,6 @@ sudo /sbin/kextload '/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboar
 
 ただ、Yosemiteはインストールにすごく時間がかかって、残り4分で数十分固まったようになった(大量のファイルコピーなどしている模様・同様の報告多数)ので、失敗したかと思いけっこう怖かったです(　´･‿･｀)
 
-## (多分)Xcode 6インストール後に困ったこと
-
 ### Homebrewが動かなくなってしまった
 
 ```
@@ -66,6 +64,14 @@ sudo /sbin/kextload '/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboar
 とはいえ、この編集をしないとbrewコマンド自体効かないし…と困りつつ、`2.0`に編集して`brew update`するや否や`1.8`に戻せばPULLのタイミングでは変更無し状態になってうまくいった(　´･‿･｀)
 ちょっと不便だけど、そんなにする操作じゃないし、こんな運用でしばらく我慢しよう(　´･‿･｀)
 
+### Sleepでクラッシュ
+
+まだきちんと確かめてないけど、Sleep後に起こそうとしたら再起動がかかって、こんなログが出てた。
+Sleep後だったのは偶然かも。
+
+```
+panic(cpu 7 caller 0xffffff801600f06c): "TLB invalidation IPI timeout: " "CPU(s) failed to respond to interrupts, unresponsive CPU bitmap: 0x3d, NMIPI acks: orig: 0x0, now: 0x0"@/SourceCache/xnu/xnu-2738.0.0.0.5/osfmk/x86_64/pmap.c:2470
+```
 
 ## iOS 8にアップデートして困ったこと
 
