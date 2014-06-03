@@ -62,6 +62,11 @@ sudo /sbin/kextload '/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboar
 #!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -W0
 ```
 
+しかし、この編集後に`brew update`をすると、ローカルの変更が原因でPULL出来ないと怒られる（´-ω-｀）
+とはいえ、この編集をしないとbrewコマンド自体効かないし…と困りつつ、`2.0`に編集して`brew update`するや否や`1.8`に戻せばPULLのタイミングでは変更無し状態になってうまくいった(　´･‿･｀)
+ちょっと不便だけど、そんなにする操作じゃないし、こんな運用でしばらく我慢しよう(　´･‿･｀)
+
+
 ## iOS 8にアップデートして困ったこと
 
 ### iPhoneで[1Password](https://agilebits.com/onepassword)が同期できなくなってクラッシュする
