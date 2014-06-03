@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ios8 | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/ios8/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-06-04T04:43:58+09:00</updated>
+  <updated>2014-06-04T04:48:03+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -75,6 +75,10 @@ sudo /sbin/kextload '/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboar
 <h1>!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -W0</h1>
 
 <p>```</p>
+
+<p>しかし、この編集後に<code>brew update</code>をすると、ローカルの変更が原因でPULL出来ないと怒られる（´-ω-｀）
+とはいえ、この編集をしないとbrewコマンド自体効かないし…と困りつつ、<code>2.0</code>に編集して<code>brew update</code>するや否や<code>1.8</code>に戻せばPULLのタイミングでは変更無し状態になってうまくいった(　´･‿･｀)
+ちょっと不便だけど、そんなにする操作じゃないし、こんな運用でしばらく我慢しよう(　´･‿･｀)</p>
 
 <h2>iOS 8にアップデートして困ったこと</h2>
 
