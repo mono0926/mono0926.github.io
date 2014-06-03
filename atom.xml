@@ -4,7 +4,7 @@
   <title><![CDATA[monoHub]]></title>
   <link href="http://mono0926.github.io/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-06-04T05:48:13+09:00</updated>
+  <updated>2014-06-04T06:43:47+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -58,8 +58,6 @@ Apple純正キーボードだと問題ないですが。</p>
 
 <p>ただ、Yosemiteはインストールにすごく時間がかかって、残り4分で数十分固まったようになった(大量のファイルコピーなどしている模様・同様の報告多数)ので、失敗したかと思いけっこう怖かったです(　´･‿･｀)</p>
 
-<h2>(多分)Xcode 6インストール後に困ったこと</h2>
-
 <h3>Homebrewが動かなくなってしまった</h3>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -77,6 +75,15 @@ Apple純正キーボードだと問題ないですが。</p>
 <p>しかし、この編集後に<code>brew update</code>をすると、ローカルの変更が原因でPULL出来ないと怒られる（´-ω-｀）
 とはいえ、この編集をしないとbrewコマンド自体効かないし…と困りつつ、<code>2.0</code>に編集して<code>brew update</code>するや否や<code>1.8</code>に戻せばPULLのタイミングでは変更無し状態になってうまくいった(　´･‿･｀)
 ちょっと不便だけど、そんなにする操作じゃないし、こんな運用でしばらく我慢しよう(　´･‿･｀)</p>
+
+<h3>Sleepでクラッシュ</h3>
+
+<p>まだきちんと確かめてないけど、Sleep後に起こそうとしたら再起動がかかって、こんなログが出てた。
+Sleep後だったのは偶然かも。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>panic(cpu 7 caller 0xffffff801600f06c): "TLB invalidation IPI timeout: " "CPU(s) failed to respond to interrupts, unresponsive CPU bitmap: 0x3d, NMIPI acks: orig: 0x0, now: 0x0"@/SourceCache/xnu/xnu-2738.0.0.0.5/osfmk/x86_64/pmap.c:2470</span></code></pre></td></tr></table></div></figure>
+
 
 <h2>iOS 8にアップデートして困ったこと</h2>
 
