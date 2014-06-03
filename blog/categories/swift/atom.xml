@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: swift | monoHub]]></title>
+  <link href="http://mono0926.github.io/blog/categories/swift/atom.xml" rel="self"/>
+  <link href="http://mono0926.github.io/"/>
+  <updated>2014-06-03T13:20:40+09:00</updated>
+  <id>http://mono0926.github.io/</id>
+  <author>
+    <name><![CDATA[Masayuki Ono]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[SwiftでラヴさんWEBアルバムを開くだけのアプリ作った]]></title>
+    <link href="http://mono0926.github.io/blog/2014/06/03/swift/"/>
+    <updated>2014-06-03T12:57:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2014/06/03/swift</id>
+    <content type="html"><![CDATA[<p>昼休みに、<a href="https://github.com/mono0926/SwiftSample">SwiftでラヴさんWEBアルバムを開くだけのアプリ</a>作った。</p>
+
+<p>Swiftもそうだけど、Xcode 6も色々変わってて面白い(　´･‿･｀)</p>
+]]></content>
+  </entry>
+  
+</feed>
