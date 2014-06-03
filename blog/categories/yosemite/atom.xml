@@ -4,7 +4,7 @@
   <title><![CDATA[Category: yosemite | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/yosemite/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-06-04T04:28:13+09:00</updated>
+  <updated>2014-06-04T04:43:58+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -57,6 +57,24 @@ sudo /sbin/kextload '/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboar
 
 
 <p>ただ、Yosemiteはインストールにすごく時間がかかって、残り4分で数十分固まったようになった(大量のファイルコピーなどしている模様・同様の報告多数)ので、失敗したかと思いけっこう怖かったです(　´･‿･｀)</p>
+
+<h2>(多分)Xcode 6インストール後に困ったこと</h2>
+
+<h3>Homebrewが動かなくなってしまった</h3>
+
+<p><code>
+/usr/local/bin/brew: /usr/local/Library/brew.rb: /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby: bad interpreter: No such file or directory
+</code></p>
+
+<p><code>brew doctor</code>さえ動かない状態。</p>
+
+<p>ログに書いてあるとおりSystemのRubyのバージョンが変わったのかーと思いつつ、<code>/usr/local/Library/brew.rb</code>の以下の<code>1.8</code>の箇所を<code>2.0</code>にすれば直った。</p>
+
+<p>```</p>
+
+<h1>!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -W0</h1>
+
+<p>```</p>
 
 <h2>iOS 8にアップデートして困ったこと</h2>
 
