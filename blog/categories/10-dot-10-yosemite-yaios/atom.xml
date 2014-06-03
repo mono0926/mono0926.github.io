@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 10.10(Yosemite)やiOS | monoHub]]></title>
+  <link href="http://mono0926.github.io/blog/categories/10-dot-10-yosemite-yaios/atom.xml" rel="self"/>
+  <link href="http://mono0926.github.io/"/>
+  <updated>2014-06-04T04:10:53+09:00</updated>
+  <id>http://mono0926.github.io/</id>
+  <author>
+    <name><![CDATA[Masayuki Ono]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[yosemite]]></title>
+    <link href="http://mono0926.github.io/blog/2014/06/04/yosemite/"/>
+    <updated>2014-06-04T03:43:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2014/06/04/yosemite</id>
+    <content type="html"><![CDATA[<p>例のごとく、何も考えずにメインマシンをOSX 10.10(Yosemite)・iOS 8にしてしまいましたが、いくつか細かいトラブルが。
+でも概ね問題無く使えていて満足（´-ω-｀）</p>
+
+<p>NDAに気をつけつつ困ったことや解決法など(　´･‿･｀)</p>
+
+<h2>OSX 10.10(Yosemite)にアップデートして困ったこと</h2>
+
+<h3><a href="https://github.com/tekezo/PCKeyboardHack">PCKeyboardHack</a>が起動しない</h3>
+
+<p>去年もこれで困ったことを思い出しました。
+Realforceでスペースの両隣のキーでの日本語入力切り替えが効かずにとても不便です。
+Apple純正キーボードだと問題ないですが。</p>
+
+<p>と思いつつ、Issuesを覗いたら、<a href="https://github.com/tekezo/PCKeyboardHack/issues/31">Add 10.10 support #31</a>ですんなり解決(　´･‿･｀)</p>
+
+<p>何も考えずこれを打ったら問題無く動くように。</p>
+
+<p><code>
+sudo /sbin/kextload '/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboardHack.10.9.signed.kext'
+</code></p>
+
+<h3><a href="http://blog.boastr.net/">BetterTouchTool</a>が起動しない</h3>
+
+<!-- more -->
+
+
+<p>これも<a href="http://blog.boastr.net/os-x-10-10-yosemite/">OS X 10.10 Yosemite » BetterTouchTool, BetterSnapTool &amp; SecondBar</a>にすでに記事が上がっていて、現時点ではまだダウンロード出来ないけどまもなく対応版がリリースされる模様。</p>
+
+<blockquote><p>BetterTouchTool crashes on startup, but I already identified the issue and will fix it tomorrow.</p></blockquote>
+
+<p><a href="http://www.alfredapp.com/">Alfred</a>も、Keynotes直後にすぐこんなポスト投稿するなど、どこも動きが速くて素晴らしい(　´･‿･｀)</p>
+
+<blockquote class="twitter-tweet" lang="en"><p>Calm down everybody, Alfred isn’t going anywhere (but up) in OS X Yosemite :) <a href="http://t.co/wh1mMnxrkt">http://t.co/wh1mMnxrkt</a></p>&mdash; Alfred App (@alfredapp) <a href="https://twitter.com/alfredapp/statuses/473517537939185665">June 2, 2014</a></blockquote>
+
+
+<script async src="http://mono0926.github.io//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<h2>iOS 8にアップデートして困ったこと</h2>
+
+<h3>iPhoneで<a href="https://agilebits.com/onepassword">1Password</a>が同期できなくなってクラッシュする</h3>
+
+<p>けっこう依存度が高いので、これけっこう困る(　´･‿･｀)
+Beta版使っているのが悪いししばらく我慢かなあと思っていたら、すでに問題認識しているらしく、わりと前向きな対応してもらえそうな雰囲気(　´･‿･｀)
+ついでに秋くらいに指紋認証でアンロックも実装してくれることを期待(　´･‿･｀)</p>
+
+<blockquote class="twitter-tweet" lang="en"><p>iOS 8 folks, there sure are a lot of you using the beta! I’m a bit…broken. Sorry. My devs are working on it!&#10;&#10;[…]</p>&mdash; 1Password Beta (@1PasswordBeta) <a href="https://twitter.com/1PasswordBeta/statuses/473747191228399616">June 3, 2014</a></blockquote>
+
+
+<script async src="http://mono0926.github.io//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<h3>LINEスタンプが買えない・使えない</h3>
+
+<p>買おうとするとエラーになってしまうし、使おうとすると進捗ダイアログが終わらない（´-ω-｀）けっこう困る（´-ω-｀）
+<a href="http://a.scn.jp/s/0VrEMIHAB">申請中の個人スタンプ</a>も買えないし使えなくなりそう（´・д・｀）
+これに関しては調べても困っている人はいても解決手段は現状無さそう。</p>
+
+<p>とりあえずパソコン版でしのごう（´-ω-｀）</p>
+
+<p>iOS 8については、あとはクラッシュ率が高いとかですかね。
+NDAで細かいところは書けないけど、使用感も特に大きな変化無く(　´･‿･｀)</p>
+
+<p>というわけで、ちょくちょく問題はありつつ、最新の環境楽しめているので、アップデートして良かった(　´･‿･｀)
+趣味みたいなもののあので、仮想環境とか検証機とかで試しても個人的にはあまり意味がなく、やはり普段マシンで楽しんでこそと思う(　´･‿･｀)</p>
+]]></content>
+  </entry>
+  
+</feed>

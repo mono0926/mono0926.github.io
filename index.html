@@ -9,8 +9,8 @@
   <meta name="author" content="Masayuki Ono">
 
   
-  <meta name="description" content="昼休みに、Swiftで、ラヴさんWEBアルバムを開くだけのアプリ作った。 Swiftもそうだけど、Xcode 6も色々変わってて面白い(　´･‿･｀)
-">
+  <meta name="description" content="例のごとく、何も考えずにメインマシンをOSX 10.10(Yosemite)・iOS 8にしてしまいましたが、いくつか細かいトラブルが。
+でも概ね問題無く使えていて満足（´-ω-｀） NDAに気をつけつつ困ったことや解決法など(　´･‿･｀) OSX 10.10(Yosemite) &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +79,68 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/06/04/yosemite/">Yosemite</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-04T03:43:00+09:00" pubdate data-updated="true">Jun 4<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>例のごとく、何も考えずにメインマシンをOSX 10.10(Yosemite)・iOS 8にしてしまいましたが、いくつか細かいトラブルが。
+でも概ね問題無く使えていて満足（´-ω-｀）</p>
+
+<p>NDAに気をつけつつ困ったことや解決法など(　´･‿･｀)</p>
+
+<h2>OSX 10.10(Yosemite)にアップデートして困ったこと</h2>
+
+<h3><a href="https://github.com/tekezo/PCKeyboardHack">PCKeyboardHack</a>が起動しない</h3>
+
+<p>去年もこれで困ったことを思い出しました。
+Realforceでスペースの両隣のキーでの日本語入力切り替えが効かずにとても不便です。
+Apple純正キーボードだと問題ないですが。</p>
+
+<p>と思いつつ、Issuesを覗いたら、<a href="https://github.com/tekezo/PCKeyboardHack/issues/31">Add 10.10 support #31</a>ですんなり解決(　´･‿･｀)</p>
+
+<p>何も考えずこれを打ったら問題無く動くように。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo /sbin/kextload '/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboardHack.10.9.signed.kext'</span></code></pre></td></tr></table></div></figure>
+
+
+<h3><a href="http://blog.boastr.net/">BetterTouchTool</a>が起動しない</h3>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/06/04/yosemite/">続きを読むヽ(・ω・｀）</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -563,69 +625,6 @@ Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイ�
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/05/05/irkit/">IRKitで遊び始めた〜とりあえずTerminalで操作〜</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-05T14:22:00+09:00" pubdate data-updated="true">May 5<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>冬場忙しかったりで既存アプリで部屋のリモコン登録する程度しかいじれてなかったけど、最近ようやく落ち着いてきたので、<a href="http://www.amazon.co.jp/gp/product/B00H91KK26/ref=as_li_ss_tl?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=B00H91KK26&amp;linkCode=as2&amp;tag=mono0926-22">IRKit</a>で遊んでみる(　´･‿･｀)</p>
-
-<h2>セットアップ</h2>
-
-<p><a href="http://getirkit.com/">IRKit &ndash; Open Source WiFi Connected Infrared Remote Controller</a>を参考に、諸々設定。</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># dns-sdコマンドで、IRKitのインスタンス名取得。
-</span><span class='line'>Pro:b4 mono$ dns-sd -B _irkit._tcp
-</span><span class='line'>Browsing for _irkit._tcp
-</span><span class='line'>DATE: ---Mon 05 May 2014---
-</span><span class='line'>14:41:16.669  ...STARTING...
-</span><span class='line'>Timestamp     A/R    Flags  if Domain               Service Type         Instance Name
-</span><span class='line'>14:41:16.880  Add        2   4 local.               _irkit._tcp.         iRKitA2C4</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/05/05/irkit/">続きを読むヽ(・ω・｀）</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -654,6 +653,10 @@ Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイ�
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/06/04/yosemite/">yosemite</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/06/03/swift/">SwiftでラヴさんWEBアルバムを開くだけのアプリ作った</a>
       </li>
     
@@ -669,15 +672,11 @@ Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイ�
         <a href="/blog/2014/05/26/todo/">NodeJS + Express + Stylus + Jade + AngularJS + Redisなどなどで、簡単なTODOアプリ</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2014/05/14/angularjs/">TypeScript・AngularJS・Jade・Stylusでサンプルコード</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Top Categories</h1>
-    <ul id="top-category-list"><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/irkit'>irkit (3)</a></li><li><a href='/blog/categories/osx'>osx (3)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/haskell'>haskell (2)</a></li><li><a href='/blog/categories/stamp'>stamp (2)</a></li><li><a href='/blog/categories/love'>love (2)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/nodejs'>nodejs (2)</a></li><li><a href='/blog/categories/book'>book (1)</a></li><li><a href='/blog/categories/angularjs'>angularjs (1)</a></li></ul>
+    <ul id="top-category-list"><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/irkit'>irkit (3)</a></li><li><a href='/blog/categories/osx'>osx (3)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/osx'>OSX (2)</a></li><li><a href='/blog/categories/haskell'>haskell (2)</a></li><li><a href='/blog/categories/stamp'>stamp (2)</a></li><li><a href='/blog/categories/love'>love (2)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/nodejs'>nodejs (2)</a></li><li><a href='/blog/categories/programming'>programming (1)</a></li></ul>
 </section>
 <section>
   <h1>GitHub Repos</h1>
