@@ -16,6 +16,8 @@ NDAに気をつけつつ困ったことや解決法など(　´･‿･｀)
 
 ### [PCKeyboardHack](https://github.com/tekezo/PCKeyboardHack)が起動しない
 
+#### 【追記】[PCKeyboardHack-10.7.0](https://pqrs.org/macosx/keyremap4macbook/files/PCKeyboardHack-10.7.0.dmg)がリリースされました！
+
 去年もこれで困ったことを思い出しました。
 Realforceでスペースの両隣のキーでの日本語入力切り替えが効かずにとても不便です。
 Apple純正キーボードだと問題ないですが。
@@ -24,7 +26,6 @@ Apple純正キーボードだと問題ないですが。
 
 何も考えずこれを打ったら問題無く動くように。
 
-
 ```
 sudo /sbin/kextload '/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboardHack.10.9.signed.kext'
 ```
@@ -32,6 +33,8 @@ sudo /sbin/kextload '/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboar
 ### [BetterTouchTool](http://blog.boastr.net/)が起動しない
 
 <!-- more -->
+
+#### 【追記】[Yosemite対応版のBetterTouchTool](http://boastr.net/releases/btt0.997.zip)がダウンロード出来るようになりました！
 
 これも[OS X 10.10 Yosemite » BetterTouchTool, BetterSnapTool & SecondBar](http://blog.boastr.net/os-x-10-10-yosemite/)にすでに記事が上がっていて、現時点ではまだダウンロード出来ないけどまもなく対応版がリリースされる模様。
 
@@ -64,7 +67,7 @@ sudo /sbin/kextload '/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboar
 とはいえ、この編集をしないとbrewコマンド自体効かないし…と困りつつ、`2.0`に編集して`brew update`するや否や`1.8`に戻せばPULLのタイミングでは変更無し状態になってうまくいった(　´･‿･｀)
 ちょっと不便だけど、そんなにする操作じゃないし、こんな運用でしばらく我慢しよう(　´･‿･｀)
 
-### Sleepでクラッシュ
+### ~~Sleepでクラッシュ~~Sleep時にクラッシュしたのは偶然だったっぽい
 
 まだきちんと確かめてないけど、Sleep後に起こそうとしたら再起動がかかって、こんなログが出てた。
 Sleep後だったのは偶然かも。
