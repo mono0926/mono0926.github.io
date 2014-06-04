@@ -4,7 +4,7 @@
   <title><![CDATA[monoHub]]></title>
   <link href="http://mono0926.github.io/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-06-04T11:42:37+09:00</updated>
+  <updated>2014-06-05T04:09:24+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -12,26 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[ラヴさんLINEスタンプがリリースされましたヽ(・ω・｀）]]></title>
-    <link href="http://mono0926.github.io/blog/2014/06/04/stamp/"/>
-    <updated>2014-06-04T11:31:00+09:00</updated>
-    <id>http://mono0926.github.io/blog/2014/06/04/stamp</id>
-    <content type="html"><![CDATA[<p>ようやく、ラヴさんLINEスタンプがリリースされました(　´･‿･｀)</p>
-
-<p>初日に登録して2000番台半ばだったのに1ヶ月半くらい待たされてつらたんでしたが、幸いリジェクト食らうこともなくリリースにこぎ着けられました(　´･‿･｀)</p>
-
-<p>こちらから購入出来ますのでよろしくお願いします(　´･‿･｀)<br/>
-<a href="https://store.line.me/stickershop/detail?packageId=1000854">https://store.line.me/stickershop/detail?packageId=1000854</a></p>
-
-<p>ご購入お待ちしております(　´･‿･｀)</p>
-
-<p><img src="http://mono0926.github.io/images/post/mate.png" alt="love" /></p>
-
-<p><a href="http://a.scn.jp/s/0VrEMIHAB">SceneのWEBアルバム</a>からも引き続き見られます。</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[OSX 10.10(Yosemite)やiOS 8にアップデートして困ったこと]]></title>
@@ -46,6 +26,8 @@
 <h2>OSX 10.10(Yosemite)にアップデートして困ったこと</h2>
 
 <h3><a href="https://github.com/tekezo/PCKeyboardHack">PCKeyboardHack</a>が起動しない</h3>
+
+<h4>【追記】<a href="https://pqrs.org/macosx/keyremap4macbook/files/PCKeyboardHack-10.7.0.dmg">PCKeyboardHack-10.7.0</a>がリリースされました！</h4>
 
 <p>去年もこれで困ったことを思い出しました。
 Realforceでスペースの両隣のキーでの日本語入力切り替えが効かずにとても不便です。
@@ -63,6 +45,8 @@ Apple純正キーボードだと問題ないですが。</p>
 
 <!-- more -->
 
+
+<h4>【追記】<a href="http://boastr.net/releases/btt0.997.zip">Yosemite対応版のBetterTouchTool</a>がダウンロード出来るようになりました！</h4>
 
 <p>これも<a href="http://blog.boastr.net/os-x-10-10-yosemite/">OS X 10.10 Yosemite » BetterTouchTool, BetterSnapTool &amp; SecondBar</a>にすでに記事が上がっていて、現時点ではまだダウンロード出来ないけどまもなく対応版がリリースされる模様。</p>
 
@@ -96,7 +80,7 @@ Apple純正キーボードだと問題ないですが。</p>
 とはいえ、この編集をしないとbrewコマンド自体効かないし…と困りつつ、<code>2.0</code>に編集して<code>brew update</code>するや否や<code>1.8</code>に戻せばPULLのタイミングでは変更無し状態になってうまくいった(　´･‿･｀)
 ちょっと不便だけど、そんなにする操作じゃないし、こんな運用でしばらく我慢しよう(　´･‿･｀)</p>
 
-<h3>Sleepでクラッシュ</h3>
+<h3><del>Sleepでクラッシュ</del>Sleep時にクラッシュしたのは偶然だったっぽい</h3>
 
 <p>まだきちんと確かめてないけど、Sleep後に起こそうとしたら再起動がかかって、こんなログが出てた。
 Sleep後だったのは偶然かも。</p>
@@ -1350,6 +1334,132 @@ apiKeyとかもろに出てるけどいいのだろうか(　´･‿･｀)</p>
 
 
 <h3>続き：<a href="http://mono0926.github.io/blog/2013/08/04/ginger/">GingerをAlfredで使えるようにしてみた</a></h3>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Leap Motionが届いた]]></title>
+    <link href="http://mono0926.github.io/blog/2013/07/25/leap-motion/"/>
+    <updated>2013-07-25T07:50:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/07/25/leap-motion</id>
+    <content type="html"><![CDATA[<p>Leap Motionを買ってみた。<br/>
+多分1年ちょっと前に<a href="http://japanese.engadget.com/2012/05/21/1-100-3d-leap-70/">指先を1/100ミリ単位で捉える3Dモーション入力機器 LEAP、70ドルで予約受付開始 (動画)</a>などの記事を見て、コンセプト動画なのか実動画像なのか知らないけど、すごいなーと思って放置してたけど、今週けっこう話題になってて、記事とか読んでたらいつの間にかポチってた感じ。</p>
+
+<p>ハード的には、劣化版Kinect？とかも思ったけど、対象距離が近距離な<a href="http://www.amazon.co.jp/gp/product/B0074BN0VO/ref=as_li_ss_tl?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=B0074BN0VO&amp;linkCode=as2&amp;tag=mono0926-22">Kinect for Windows</a>は少しお高いし、設置の制約あるし、とか思ってとりあえず今回はこっち。
+KinectはごくたまにXboxで遊んだりと、なかなか好きなデバイス。</p>
+
+<p>Leap Motionって何？とかどんなことできるの？とかについては下の動画見れば大体分かる。</p>
+
+<iframe width="560" height="315" src="http://mono0926.github.io//www.youtube.com/embed/3b4w749Tud8" frameborder="0" allowfullscreen></iframe>
+
+
+
+
+<!-- more -->
+
+
+<h3>届くまで</h3>
+
+<p>実は、いいなーと思いつつも購入をためらっていたけど、偶然<a href="">BetterTouchTool</a>のアップデートが走ってリリース文章見ていたら、Leap Motionの文字があって、「おっ!」と思いそのまま買ってしまった感じ。
+今見たら、<a href="http://blog.boastr.net/?page_id=3023">紹介ブログ</a>があった。
+元々愛用しているツールだけど、こういう早くて先進的な対応は好感度上がる。
+OSもアプリもわりとリリース文には目を通している(利用者目線でも開発目線でも読んでいるとけっこう有用に思う)けど、良いきっかけになってよかった。</p>
+
+<p><a href="https://www.leapmotion.com/product">この購入サイト</a>で購入。
+PayPal決済でトータル1万円弱。カード決済用のトータル表示より安かったような(見間違えかも)。</p>
+
+<p>入荷や発送の関係でしばらく待つかなーと思っていたら、翌朝発送しましたメールが来てびっくり。
+<a href="http://www.fedex.com/us/">FedEx</a>という郵送会社だった。
+たまに海外購入はするけど、多分初めての利用。
+翌々日に届くとのこと。お早い。</p>
+
+<p>というわけで、一昨日の晩に頼んだLeap Motionが到着。</p>
+
+<h3>簡単なレビュー</h3>
+
+<p>詳細なレビューとかはすでにけっこうあるので、下記参照。</p>
+
+<ul>
+<li><a href="http://techwave.jp/archives/leap-motion-1st-review.html">Leap Motion は本当に革新的なUIデバイスなのか? 本体レビューとその雑感【@maskin】</a></li>
+<li><a href="http://gigazine.net/news/20130723-leap-motion-store-airspace-launched/">手と指の動きを感知して奥行きまで含めた立体的な操作ができる「Leap Motion」は一体何がすごいのかまとめ</a></li>
+</ul>
+
+
+<h4>開封まで</h4>
+
+<p>シンプルな箱。</p>
+
+<p><img src="http://mono0926.github.io/images/leap1.jpg" alt="leap1" /></p>
+
+<p>本体とUSBケーブルとしょぼい冊子だけ。</p>
+
+<p><img src="http://mono0926.github.io/images/leap2.jpg" alt="leap2" /></p>
+
+<p>ガムくらいの大きさ。</p>
+
+<p><img src="http://mono0926.github.io/images/leap3.jpg" alt="leap3" /></p>
+
+<h4>セットアップ</h4>
+
+<p>マニュアル無いから適当にググったら、<a href="https://www.leapmotion.com/setup">このセットアップサイト</a>でドライバ&amp;アプリをインストールするとのこと。(あとで見たらボール紙みたいなものにそのURL書いてあったけど)</p>
+
+<p>そこにたどり着けばすごく簡単で、ぽちぽちっと適当にインストールしてチュートリアルで試用する感じ。</p>
+
+<h3>どうやって使おう</h3>
+
+<p>とりあえずBetterTouchToolと組み合わせて、良い感じに普段使い出来ないか試してみてるところ。
+人差し指をクルクルすると、音量上げ下げしたり、手を叩くとスリープするようにしたりして、意外と実用的に使えそう。</p>
+
+<p>↓YouTubeにアップしてみた。</p>
+
+<iframe width="420" height="315" src="http://mono0926.github.io//www.youtube.com/embed/rFNnymc967w" frameborder="0" allowfullscreen></iframe>
+
+
+<p>セッティングはMagic Trackpadのジェスチャー登録するような感じでとても簡単。若干認識が微妙だけど、ハードウェア性能とソフトウェアとどっちのせいかは不明。現状でもそんなに悪くないし、今後のソフトウェア改良に期待は持てる感じはしてる。</p>
+
+<p>あと、<a href="https://airspace.leapmotion.com/">アプリストア「Airspace」</a>とかのアプリで遊んでみようとも思うけど、ゲーム系はすぐ飽きちゃいそう…（´-ω-｀）</p>
+
+<p>というわけでまだあまり弄れてないけど、これから色々遊んでみたり、開発にも手を出していきたいなと思ったり。</p>
+
+<p><a href="https://www.leapmotion.com/developers">開発リソース</a>はけっこう整っている感。
+これ系の開発は結構前にカメラ + OpenCVを少しやった程度だったりして、個人的にはけっこう苦労しそうだけど（´-ω-｀）</p>
+
+<ul>
+<li>SDK</li>
+<li><a href="https://developer.leapmotion.com/docs">Documentation</a>
+
+<ul>
+<li>C++</li>
+<li>Java</li>
+<li>Python</li>
+<li>C#</li>
+<li>JavaScript</li>
+<li>Objective-C (この一覧には明記されていないけど対応してる)</li>
+</ul>
+</li>
+<li><a href="https://developer.leapmotion.com/forums">Forums</a></li>
+<li><a href="https://www.youtube.com/user/leapmotion">LeapMotion(YouTube)</a></li>
+<li><a href="http://www.buildinsider.net/small/leapmotionfirstimp/01">C#開発者から見たLeap Motion開発のファースト・インプレッション</a></li>
+<li><a href="http://www.irisclasson.com/2013/05/02/developing-for-leap-motion-in-c-tutorial-video-slides-and-code/">Developing for Leap Motion in C# Tutorial (video, slides and code)</a></li>
+<li><a href="http://kray.jp/blog/leap-motion-javascript/">JavaScriptでLeapMotionアプリを作る方法</a></li>
+</ul>
+
+
+<h4>Windows 8を操作しているデモ動画</h4>
+
+<p>なかなか操作の相性が良さそう。動画を見ただけだと実はタッチよりも快適？とか思ったり。</p>
+
+<iframe width="560" height="315" src="http://mono0926.github.io//www.youtube.com/embed/21LtA5-wiwU" frameborder="0" allowfullscreen></iframe>
+
+
+<h4>Google Earthを操作する様子</h4>
+
+<iframe width="560" height="315" src="http://mono0926.github.io//www.youtube.com/embed/RebX7YEn3GQ" frameborder="0" allowfullscreen></iframe>
+
+
+<p>しばらく遊べそうなおもちゃが手に入ってとても嬉しい（´-ω-｀）</p>
+
+<p>とりあえず、直近の悩みは明日会社に持って行って、積極的に披露するか、色々ジェスチャーして気づかれるのを待つか(あるいは頭がおかしくなったと思われるか)どうしよう（´-ω-｀）</p>
 ]]></content>
   </entry>
   

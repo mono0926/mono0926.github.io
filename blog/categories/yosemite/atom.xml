@@ -4,7 +4,7 @@
   <title><![CDATA[Category: yosemite | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/yosemite/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-06-04T11:42:42+09:00</updated>
+  <updated>2014-06-05T04:09:24+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -27,6 +27,8 @@
 
 <h3><a href="https://github.com/tekezo/PCKeyboardHack">PCKeyboardHack</a>が起動しない</h3>
 
+<h4>【追記】<a href="https://pqrs.org/macosx/keyremap4macbook/files/PCKeyboardHack-10.7.0.dmg">PCKeyboardHack-10.7.0</a>がリリースされました！</h4>
+
 <p>去年もこれで困ったことを思い出しました。
 Realforceでスペースの両隣のキーでの日本語入力切り替えが効かずにとても不便です。
 Apple純正キーボードだと問題ないですが。</p>
@@ -43,6 +45,8 @@ sudo /sbin/kextload '/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboar
 
 <!-- more -->
 
+
+<h4>【追記】<a href="http://boastr.net/releases/btt0.997.zip">Yosemite対応版のBetterTouchTool</a>がダウンロード出来るようになりました！</h4>
 
 <p>これも<a href="http://blog.boastr.net/os-x-10-10-yosemite/">OS X 10.10 Yosemite » BetterTouchTool, BetterSnapTool &amp; SecondBar</a>にすでに記事が上がっていて、現時点ではまだダウンロード出来ないけどまもなく対応版がリリースされる模様。</p>
 
@@ -78,7 +82,7 @@ sudo /sbin/kextload '/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboar
 とはいえ、この編集をしないとbrewコマンド自体効かないし…と困りつつ、<code>2.0</code>に編集して<code>brew update</code>するや否や<code>1.8</code>に戻せばPULLのタイミングでは変更無し状態になってうまくいった(　´･‿･｀)
 ちょっと不便だけど、そんなにする操作じゃないし、こんな運用でしばらく我慢しよう(　´･‿･｀)</p>
 
-<h3>Sleepでクラッシュ</h3>
+<h3><del>Sleepでクラッシュ</del>Sleep時にクラッシュしたのは偶然だったっぽい</h3>
 
 <p>まだきちんと確かめてないけど、Sleep後に起こそうとしたら再起動がかかって、こんなログが出てた。
 Sleep後だったのは偶然かも。</p>
