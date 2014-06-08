@@ -36,6 +36,11 @@ footer: true
     - [3つの目標 | meet-win(ミートウィン）](http://www.meet-win.com/?p=2785)
 
 
+### LINEクリエイターズスタンプ
+####[ラヴさんスタンプ](https://store.line.me/stickershop/detail?packageId=1000854)
+- 愛犬(ラブラドール・レトリーバー)をモデルにしたスタンプです。
+
+
 ### Contacts
 - mail: mono0926@gmail.com
 - Facebook: [mono0926](https://www.facebook.com/mono0926)
