@@ -4,7 +4,7 @@
   <title><![CDATA[monoHub]]></title>
   <link href="http://mono0926.github.io/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-06-08T18:49:02+09:00</updated>
+  <updated>2014-06-11T03:21:51+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[LINEクリエイターズスタンプ公開1週間の収益推移]]></title>
+    <link href="http://mono0926.github.io/blog/2014/06/11/stamp/"/>
+    <updated>2014-06-11T03:09:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2014/06/11/stamp</id>
+    <content type="html"><![CDATA[<p>ラヴさんLINEスタンプが公開されて昨日で、ちょうど1週間経ちましたが、収益はこんな推移でした。<br/>
+<a href="https://store.line.me/stickershop/detail?packageId=1000854">https://store.line.me/stickershop/detail?packageId=1000854</a></p>
+
+<p>愛犬(ラブラドール・レトリーバー)のラヴさんをモデルにしたスタンプです。</p>
+
+<p><img src="http://mono0926.github.io/images/post/stamp.png" alt="love" /></p>
+
+<p>4日目までは、公開されたことをお知らせしたりいくつか販促行為していましたが、ネタ切れなどなどの理由により、5日目からはほぼ放置してました。</p>
+
+<!-- more -->
+
+
+<p>5日目から売上もかなり落ち込み、初動の勢いや販促などないと虫の息かと思いきや、7日目に少し盛り返して、このくらいじわじわ売れれば嬉しいなと思ったり(　´･‿･｀)</p>
+
+<p><img src="http://mono0926.github.io/images/post/stamp2.png" alt="love" /></p>
+
+<p>個人的にもけっこう便利に使っているので、ぽちっていただけるととても嬉しいです(　´･‿･｀)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[ラヴさんLINEスタンプ初日売上]]></title>
@@ -1040,107 +1065,6 @@ OSも、ハードウェア性能を要求するどころか、逆に同じハー
 少しずつ、加筆修正していく。</p>
 
 <p><a href="http://www.sicafe.net/macPackageManageTips/html/homebrewPythonInstall.html">Mac OS X Lion / homebrew にて python の環境を整える</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[GingerをAlfredで使えるようにしてみた]]></title>
-    <link href="http://mono0926.github.io/blog/2013/08/04/ginger/"/>
-    <updated>2013-08-04T12:07:00+09:00</updated>
-    <id>http://mono0926.github.io/blog/2013/08/04/ginger</id>
-    <content type="html"><![CDATA[<p><a href="http://mono0926.github.io/blog/2013/08/03/ginger/">Ginger APIをPythonで叩いてみた</a>の続き。</p>
-
-<p>元々はAlfredで英文校正が出来るようにしたかったので、ここからが本番。</p>
-
-<h3>完成版</h3>
-
-<p>こんなのが出来たという紹介から。</p>
-
-<h4>校正</h4>
-
-<p>ginger というキーワードに続けて英文を打つと、正してくれる。(この場合、冠詞aの抜けが正される。)</p>
-
-<p><img src="http://mono0926.github.io/images/post/ginger1.png" alt="ginger" /></p>
-
-<h4>改善候補一覧</h4>
-
-<!-- more -->
-
-
-<p>rephraseというキーワードに続けて適当な英文を打つと、より自然な言い回し候補を出してくれる。
-&ldquo;Thank you for your reply&#8221;は、メールの返信とかでよく使うけど、ワンパターン化を避けたい時とかに使えそう。</p>
-
-<p><img src="http://mono0926.github.io/images/post/ginger2.png" alt="ginger" /></p>
-
-<p>ともに、選択状態でエンターを押すと、クリップボードにコピーされて、フォーカスの当たっているアプリにペーストされるので、適当にメールとかエディタとか使いながら自然と正しそうな英文が打てるようになるはず。</p>
-
-<h3>AlfredのWorkflowの作り方</h3>
-
-<p>一応<a href="http://support.alfredapp.com/workflows">ドキュメント</a>はあるけど、肝心なところが書かれていなかったりして、<a href="http://www.alfredforum.com/forum/3-share-your-workflows/">フォーラム</a>で聞いたり、既存のWorkflowのソースを読んで作り方を学ばなければいけない感じ。
-作り方自体は基本簡単だけど、ちょくちょくはまりどころがあって苦労する。</p>
-
-<h4>キーワードの受け取り</h4>
-
-<p>{query}というキーワードでアクセス出来るので、それをスクリプトに引数ととして渡すのが一般的。</p>
-
-<h4>結果の表示</h4>
-
-<p>処理終了時にnotification飛ばしたり、クリップボードにコピーとかはWorkflowのエディタでパーツをつなぎ合わせたりするだけで簡単だけど、上の例みたいに一覧するのはどうやるのかと思っていたら、XMLで標準出力するらしい。
-関係ないechoやprint文があると壊れるので注意。
-ここらへんも、既存のソース読み解いてやっと分かった。それも不慣れなPHPソースがけっこう多くてアレ。</p>
-
-<p>こんな感じのXMLを標準出力すると、Itemの数だけ一覧される。</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;?xml version="1.0" ?&gt;
-</span><span class='line'>&lt;items&gt;
-</span><span class='line'>  &lt;item arg="I am a programmer and writing bad English. I am Japanese." uid="d78b56b0-fcb7-11e2-9787-e80688cb3920"&gt;
-</span><span class='line'>    &lt;title&gt;I am a programmer and writing bad English. I am Japanese.&lt;/title&gt;
-</span><span class='line'>    &lt;subtitle&gt;Gingered sentence&lt;/subtitle&gt;
-</span><span class='line'>    &lt;icon/&gt;
-</span><span class='line'>  &lt;/item&gt;
-</span><span class='line'>&lt;/items&gt;</span></code></pre></td></tr></table></div></figure>
-
-
-<p>これも適当に文字列置換したりして作れるけど、PythonでXML組み立てて作る簡単なモジュール作って再利用できるようにしておいた。
-ここらへんの下回りがけっこうこなれていない感。</p>
-
-<h4>インストール可能なパッケージの作り方</h4>
-
-<p>配布されているworkflowは、*.alfredworkflowという形式で、ダブルクリックでインストールできる。</p>
-
-<p>簡単なやり方は自分のworkflowを右クリックしてExportすること。</p>
-
-<p>逆にscript群からコマンドで作りたい場合は、必要なファイルをzip化して拡張子を変えればよい。
-info.plistが必要で、それは多分コマンドラインじゃ作れないから、やっぱり最初はExportの過程が必要だけど、コードとか別管理したいならコマンドラインで修正版作るのがよさげな気がする。</p>
-
-<p>適当にpackage作成スクリプト書いた。</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cp ginger/info.plist .
-</span><span class='line'>cp ginger/*.png .
-</span><span class='line'>zip ginger.zip ginger_driver.py ginger/*.py info.plist *.png workflow/*.py
-</span><span class='line'>rm info.plist *.png
-</span><span class='line'>mv ginger.zip ginger.alfredworkflow</span></code></pre></td></tr></table></div></figure>
-
-
-<p>こんな管理で良いのか若干謎。</p>
-
-<p>以上、<a href="https://github.com/mono0926/AlfredWorkflow">GitHub</a>で管理するようにした。
-今までworkflowの作り方がよく分からない部分があったり管理が適当だったりしたけど、これからはもっとサクサク作れそう。</p>
-
-<p>今回の成果物：<a href="https://github.com/mono0926/AlfredWorkflow/raw/master/ginger.alfredworkflow">Ginger Workflow</a></p>
 ]]></content>
   </entry>
   
