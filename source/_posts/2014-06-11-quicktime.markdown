@@ -23,7 +23,7 @@ iPhoneのPodcastアプリでは再生スピードをコントロール出来て�
 
 上記までだと、一々ファイルをFinderで開いて、QuickTime Player 7で起動するという手順が必要なので、Automatorを使って省力化してみる。
 
-```applescript
+```
 tell application "iTunes"
 	pause
 	--iTunesで選択中・再生中のファイルおよびその再生位置を保持
