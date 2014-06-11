@@ -11,6 +11,8 @@ iPhoneのPodcastアプリでは再生スピードをコントロール出来て�
 
 ## QuickTime Player 7のインストール
 
+<!-- more -->
+
 新しめのOSXに標準インストールされているQuickTimeはかっこいいけど機能がしょぼいので、再生スピードを変えるにはQuickTime Player 7をインストールする必要がある。
 
 幸いまだ[QuickTime Player 7](http://support.apple.com/kb/DL923?viewlocale=ja_JP)からダウンロード出来る。
