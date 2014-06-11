@@ -4,7 +4,7 @@
   <title><![CDATA[monoHub]]></title>
   <link href="http://mono0926.github.io/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-06-11T22:06:13+09:00</updated>
+  <updated>2014-06-11T22:07:07+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -22,6 +22,9 @@
 本当はiTunesに閉じて実現したいところだけど、それはちょっと難しそう。</p>
 
 <h2>QuickTime Player 7のインストール</h2>
+
+<!-- more -->
+
 
 <p>新しめのOSXに標準インストールされているQuickTimeはかっこいいけど機能がしょぼいので、再生スピードを変えるにはQuickTime Player 7をインストールする必要がある。</p>
 
