@@ -4,7 +4,7 @@
   <title><![CDATA[Category: yosemite | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/yosemite/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-06-13T07:48:17+09:00</updated>
+  <updated>2014-06-13T07:49:45+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -94,6 +94,8 @@ panic(cpu 7 caller 0xffffff801600f06c): "TLB invalidation IPI timeout: " "CPU(s)
 <h2>iOS 8にアップデートして困ったこと</h2>
 
 <h3>iPhoneで<a href="https://agilebits.com/onepassword">1Password</a>が同期できなくなってクラッシュする</h3>
+
+<h4>【追記】<a href="http://mono0926.com/blog/2014/06/13/password/">iOS8で1Passwordが使えるようになった &ndash; monoHub</a>で解決（｀・ω・´）</h4>
 
 <p>けっこう依存度が高いので、これけっこう困る(　´･‿･｀)
 Beta版使っているのが悪いししばらく我慢かなあと思っていたら、すでに問題認識しているらしく、わりと前向きな対応してもらえそうな雰囲気(　´･‿･｀)

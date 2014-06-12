@@ -4,7 +4,7 @@
   <title><![CDATA[monoHub]]></title>
   <link href="http://mono0926.github.io/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-06-13T07:48:17+09:00</updated>
+  <updated>2014-06-13T07:49:45+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -30,7 +30,7 @@
 
 <p>そこで、数日前に<a href="https://agilebits.com/beta_signups/newsletter">AgileBits Beta Newsletter</a>に登録して待っていたら、今日メールが届きました。</p>
 
-<p>メールが来たので、それに従って、HockyApp ConfigのProfileをインストールしたら、ベータ版がインストール出来る状態になりました。</p>
+<p>それに従って、HockyApp ConfigのProfileをインストールした後、1Passwordのベータ版がインストール出来ました。</p>
 
 <p><img src="http://mono0926.github.io/images/post/1password.png" alt="love" /></p>
 
@@ -262,6 +262,8 @@ Sleep後だったのは偶然かも。</p>
 <h2>iOS 8にアップデートして困ったこと</h2>
 
 <h3>iPhoneで<a href="https://agilebits.com/onepassword">1Password</a>が同期できなくなってクラッシュする</h3>
+
+<h4>【追記】<a href="http://mono0926.com/blog/2014/06/13/password/">iOS8で1Passwordが使えるようになった &ndash; monoHub</a>で解決（｀・ω・´）</h4>
 
 <p>けっこう依存度が高いので、これけっこう困る(　´･‿･｀)
 Beta版使っているのが悪いししばらく我慢かなあと思っていたら、すでに問題認識しているらしく、わりと前向きな対応してもらえそうな雰囲気(　´･‿･｀)
