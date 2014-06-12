@@ -9,7 +9,7 @@
   <meta name="author" content="Masayuki Ono">
 
   
-  <meta name="description" content="GoCon/2014spring.rst at master · GoCon/GoConに備えて、とりあえずgolangのセットアップと、暇なときにA Tour of Goをやっておこうかと(　´･‿･｀) gvmセットアップ moovweb/gvmに書いてある通りにやった。 &hellip;">
+  <meta name="description" content="最近Web系の勉強してて、Node.js・Express・Redis・Herokuなどサーバーサイド周り弄ってたけど、そろそろフロントエンドもという感じで色々やってみた。 サンプル置いとく AngularJSはけっこうリッチなライブラリで、全部身につけるのはしばらくかかりそうだけど、 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +79,61 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/05/14/angularjs/">TypeScript・AngularJS・Jade・Stylusでサンプルコード</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-14T15:35:00+09:00" pubdate data-updated="true">May 14<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>最近Web系の勉強してて、Node.js・Express・Redis・Herokuなどサーバーサイド周り弄ってたけど、そろそろフロントエンドもという感じで色々やってみた。</p>
+
+<h3><a href="http://ice-me.herokuapp.com/angular#/">サンプル置いとく</a></h3>
+
+<p>AngularJSはけっこうリッチなライブラリで、全部身につけるのはしばらくかかりそうだけど、今日主要な機能はざっくり書けるようになった感(　´･‿･｀)
+<a href="http://vuejs.org/">Vue.js</a>と迷ったけど、<a href="https://github.com/borisyankov/DefinitelyTyped">borisyankov/DefinitelyTyped</a>にまだ無かったし、とりあえず今メジャーなAngularJSやっとこうか、という感じ。</p>
+
+<p>JadeとStylusは記法いくつか覚えらればわりとサクサク書けて、気に入った。これ系いくつかあるけど、どれがいいんですかね。あまり比較検討せずに決めてしまった。</p>
+
+<ul>
+<li>AngularJS: MVW(Model-View-Whatever)フレームワークというらしい。Whatever=厳密に定義しない、みたいな意味らしい。JS・HTML周りのスパゲッティコード解消。MV*とかはともかく、とりあえずバインディング機構あるのが嬉しい。</li>
+<li>Jade: HTMLの簡易記法 + αの機能</li>
+<li>Stylus: SASS・LESSの後発版みたいな感じ？</li>
+</ul>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/05/14/angularjs/">続きを読むヽ(・ω・｀）</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -641,58 +696,6 @@ Mac Proの消費電力が、アイドル時に43 Wということで、常時起
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/09/21/ios7/">iOS7対応記事のまとめ</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-09-21T19:55:00+09:00" pubdate data-updated="true">Sep 21<span>st</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>iOS7関連のNDA解禁ということで、色々記事が増えてきたので、メモ。
-少しずつ追記していきながら、落ち着いたところで、集約したような記事書くかも。</p>
-
-<ul>
-<li><a href="http://koogawa.hateblo.jp/entry/2013/09/19/025424">iOS 7対応事例 FastCheckin</a></li>
-<li><a href="http://laboyukai.blogspot.jp/2013/09/ios6ios7.html">iOS6からiOS7への対応</a></li>
-<li><a href="http://skyarts.com/blog/jp/skyarts/?p=29327">iOS 7向けアプリ開発時の注意点</a></li>
-<li><a href="http://qiita.com/monoqlo/items/cfc3aa018a5cb7df0deb">iOS7でNavigationBarに入れたSearchBarにキャンセルボタンを出現させる方法</a></li>
-<li><a href="http://qiita.com/hanapage/items/7d58293f5f7234437d79">iOS6 &ndash;> iOS7変更対応</a></li>
-<li><a href="http://qiita.com/ne_ko_/items/5da4b2a247e65431c7cf">iOS 6/7 で UILabel などの見た目がずれるよ〜とお嘆きのあなたへ</a></li>
-<li><a href="http://qiita.com/y_matsuwitter/items/bd41493f098dfa984f2b">CocoapodsとXcode5の組み合わせでエラー出た+解決した</a></li>
-<li><a href="http://d.hatena.ne.jp/Kazzz/20130923/p1">iOS7でステータスバーが被る問題への対応</a></li>
-<li><a href="http://blog.livedoor.jp/tek_nishi/archives/8069300.html">iOS7のarm64対応でやったこと</a></li>
-<li><a href="http://qiita.com/yimajo/items/7051af0919b5286aecfe">iOS7でナビゲーションバーやステータスバーの文字色を変える</a></li>
-<li><a href="http://qiita.com/jazzsasori/items/cbd4650684a4f715e199">iOS 7 でステータスバーを隠す方法</a></li>
-</ul>
-
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -723,6 +726,10 @@ Mac Proの消費電力が、アイドル時に43 Wということで、常時起
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/06/13/password/">iOS8で1Passwordが使えるようになった</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/06/11/quicktime/">iTunesの動画や音楽の再生スピードを変える方法</a>
       </li>
     
@@ -738,15 +745,11 @@ Mac Proの消費電力が、アイドル時に43 Wということで、常時起
         <a href="/blog/2014/06/04/stamp/">愛犬ラヴさんLINEスタンプがリリースされましたヽ(・ω・｀）</a>
       </li>
     
-      <li class="post">
-        <a href="/blog/2014/06/04/yosemite/">OSX 10.10(Yosemite)やiOS 8にアップデートして困ったこと</a>
-      </li>
-    
   </ul>
 </section>
 <section>
   <h1>Top Categories</h1>
-    <ul id="top-category-list"><li><a href='/blog/categories/stamp'>stamp (5)</a></li><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/irkit'>irkit (3)</a></li><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/osx'>osx (3)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/line'>line (2)</a></li><li><a href='/blog/categories/osx'>OSX (2)</a></li><li><a href='/blog/categories/haskell'>haskell (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/love'>love (2)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/nodejs'>nodejs (2)</a></li></ul>
+    <ul id="top-category-list"><li><a href='/blog/categories/stamp'>stamp (5)</a></li><li><a href='/blog/categories/api'>api (3)</a></li><li><a href='/blog/categories/dropbox'>dropbox (3)</a></li><li><a href='/blog/categories/alfred'>alfred (3)</a></li><li><a href='/blog/categories/irkit'>irkit (3)</a></li><li><a href='/blog/categories/osx'>osx (3)</a></li><li><a href='/blog/categories/python'>python (3)</a></li><li><a href='/blog/categories/line'>line (2)</a></li><li><a href='/blog/categories/english'>english (2)</a></li><li><a href='/blog/categories/ios8'>ios8 (2)</a></li><li><a href='/blog/categories/osx'>OSX (2)</a></li><li><a href='/blog/categories/haskell'>haskell (2)</a></li><li><a href='/blog/categories/ginger'>ginger (2)</a></li><li><a href='/blog/categories/love'>love (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li></ul>
 </section>
 <section>
   <h1>GitHub Repos</h1>
