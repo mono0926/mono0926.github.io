@@ -11,7 +11,7 @@ footer: true
 
 愛犬(ラブラドール・レトリーバー)をモデルにしたスタンプです。  
 こちらから購入出来ますのでよろしくお願いします(　´･‿･｀)  
-https://store.line.me/stickershop/detail?packageId=1000854
+http://bit.ly/love-stamp
 
 ご購入お待ちしております(　´･‿･｀)
 
