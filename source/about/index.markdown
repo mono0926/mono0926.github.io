@@ -37,7 +37,7 @@ footer: true
 
 
 ### LINEクリエイターズスタンプ
-####[ラヴさんスタンプ](https://store.line.me/stickershop/detail?packageId=1000854)
+####[ラヴさんスタンプ](http://bit.ly/love-stamp)
 - 愛犬(ラブラドール・レトリーバー)をモデルにしたスタンプです。
 
 
