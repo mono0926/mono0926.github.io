@@ -4,7 +4,7 @@
   <title><![CDATA[Category: golang | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/golang/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-10-20T13:30:33+09:00</updated>
+  <updated>2014-10-20T13:46:54+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -183,7 +183,7 @@ error出たときのハンドリングとして統一的にやっていたので
 <p>2日目夕方くらいに発表されましたが、入選ならずで残念でした。<br/>
 ちょくちょくサービスダウンしてて不安定だったのが響いたかも（´-ω-｀）<br/>
 皆さん(特にやぶさん)、お疲れさまでした。<br/>
-つらたんでしたが、楽しかったです、Goの勉強にもなったし(　´･‿･｀)
+つらたんでしたが、楽しかったです、Goの勉強にもなったし(　´･‿･｀)<br/>
 24時間コンテスト系はきついですが、また似たようなの参戦しましょう。</p>
 ]]></content>
   </entry>
