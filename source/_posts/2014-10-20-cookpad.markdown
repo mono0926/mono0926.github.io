@@ -37,7 +37,7 @@ categories: cookpad contest golang
 - Facebookイベント作成: [クックパッド 第5回 開発コンテスト24](https://www.facebook.com/events/718375174865939/)
 - Slack用意
 	- 自宅警備もする必要があるので、オンライン上でやりとりして開発
-- yah○○のBASE6で打ち合わせ
+- yah○○のBASE6で打ち合わせ(ひつじさんからのご招待)
 	- ここで[のんたん☆](https://www.facebook.com/nozomi.fuzimoto)の参戦決定（｀・ω・´）
 
 ![](/images/post/base6_1.jpg)
