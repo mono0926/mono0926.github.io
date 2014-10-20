@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "第5回 開発コンテスト24に参戦した話"
+title: "クックパッド第5回 開発コンテスト24に参戦した話"
 date: 2014-10-20 12:30
 comments: true
 categories: cookpad contest golang
