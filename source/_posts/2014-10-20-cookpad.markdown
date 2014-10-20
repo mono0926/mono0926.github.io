@@ -6,7 +6,7 @@ comments: true
 categories: cookpad contest golang
 ---
 
-先日も[ISUCONコンテスト予選](http://isucon.net/)に出たばかりですが、土日に
+先日も[ISUCONコンテスト予選](http://isucon.net/)に出たばかりですが、土日(10月18-19日)に
 [クックパッドの「第5回 開発コンテスト24」](https://info.cookpad.com/24contest_5)に参戦しました。
 
 [勝手にアニバーサリー ～なんでもない日を、あの人との記念日に。～](http://kinen.yabuchin.com/)が成果物です。
