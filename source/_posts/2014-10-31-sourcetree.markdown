@@ -86,7 +86,7 @@ File.write(message_file, newmessage)
 
 ## 実際に使って見て
 
-昨日から活用し初めましたがすこぶる快適です(　´･‿･｀)
+先週から活用し初めましたがすこぶる快適です(　´･‿･｀)
 
 [@yabuchin_y](https://twitter.com/yabuchin_y)さん、ありがとうございました(　´･‿･｀)
 
