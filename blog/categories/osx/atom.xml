@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: OSX | monoHub]]></title>
+  <title><![CDATA[Category: osx | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/osx/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-10-20T19:14:44+09:00</updated>
+  <updated>2014-11-04T08:11:21+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -14,93 +14,175 @@
 
   
   <entry>
-    <title type="html"><![CDATA[iTunesの動画や音楽の再生スピードを変える方法]]></title>
-    <link href="http://mono0926.github.io/blog/2014/06/11/quicktime/"/>
-    <updated>2014-06-11T22:02:00+09:00</updated>
-    <id>http://mono0926.github.io/blog/2014/06/11/quicktime</id>
-    <content type="html"><![CDATA[<p>iPhoneのPodcastアプリでは再生スピードをコントロール出来て便利なのに、iTunesではその機能が無いので、AppleScriptなど使って出来るようにしてみた。
-本当はiTunesに閉じて実現したいところだけど、それはちょっと難しそう。</p>
+    <title type="html"><![CDATA[OSXの開発環境を整えた]]></title>
+    <link href="http://mono0926.github.io/blog/2014/05/06/renew/"/>
+    <updated>2014-05-06T13:24:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2014/05/06/renew</id>
+    <content type="html"><![CDATA[<p>Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。
+Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイッチしたいなとか思ったのが発端。<br/>
+参考: <a href="http://rdepf.hatenablog.jp/entry/2014/03/07/122337">Node.jsのコールバック地獄をPromiseやGeneratorを使って解消する &ndash; HackerNews翻訳してみた</a></p>
 
-<h2>QuickTime Player 7のインストール</h2>
+<p>わりと<code>brew install XXX</code>で雑に各種環境インストールしてたので、これを気に色々直した。</p>
+
+<h2>Homebrewアンインストール</h2>
+
+<p>ゴミが残るのいやだったので、<a href="https://gist.github.com/mxcl/1173223">Uninstall Homebrew</a>でhomebrewをアンインストール。</p>
 
 <!-- more -->
 
 
-<p>新しめのOSXに標準インストールされているQuickTimeはかっこいいけど機能がしょぼいので、再生スピードを変えるにはQuickTime Player 7をインストールする必要がある。</p>
+<h2>Brewfile導入</h2>
 
-<p>幸いまだ<a href="http://support.apple.com/kb/DL923?viewlocale=ja_JP">QuickTime Player 7</a>からダウンロード出来る。</p>
+<p>以下など見て便利そうだと思っていたので、Brewfile導入。</p>
 
-<blockquote><p>QuickTim 7 は、 Snow Leopard および OS X Lion 上で QTVR、対話型の QuickTime ムービー、MIDI などの古いメディアフォーマットをサポートしています。また、QuickTime Pro の機能を有効にするための QuickTime 7 Pro の登録コードを使用できます。</p></blockquote>
+<ul>
+<li><a href="http://www.1x1.jp/blog/2014/04/how-to-setup-application-on-osx.html">Mac OSX をクリーンインストールしてからの環境構築メモ &ndash; Shin x blog</a></li>
+<li><a href="http://blog.livedoor.jp/sonots/archives/35251881.html">「BrewfileでHomebrewパッケージを管理する」をやってみた &ndash; sonots:blog</a></li>
+<li><a href="http://tnakamura.hatenablog.com/entry/2014/04/29/113727">MacBook にインストールしているアプリやツールをメモする代わりに Brewfile を作った &ndash; present</a></li>
+</ul>
 
-<p>とりあえずQucikTime 7をインストールして、「Show A/V Control」(Command + K)で再生スピードなどコントロール出来るウインドウが開くので、機能的にはここまでで完結。</p>
 
-<h2>Automatorでアプリ化</h2>
+<p>これだけで一気にインストール出来てとても便利。</p>
 
-<p>上記までだと、一々ファイルをFinderで開いて、QuickTime Player 7で起動するという手順が必要なので、Automatorを使って省力化してみる。</p>
+<p><code>
+brew bundle
+</code></p>
 
-<p>```
-tell application &ldquo;iTunes&rdquo;</p>
+<p>僕の：<a href="https://github.com/mono0926/Environment/blob/master/OSX/Brewfile">Environment/OSX/Brewfile at master · mono0926/Environment</a></p>
 
-<pre><code>pause
---iTunesで選択中・再生中のファイルおよびその再生位置を保持
-set my_track to location of selection
-set my_seconds to player position
-</code></pre>
+<p>今後も、Homebrewで何か新しくインストールするときメンテナンスしていくようにしよう。</p>
 
-<p>end tell
-tell application &ldquo;QuickTime Player 7&rdquo;</p>
+<h2>その他開発環境</h2>
 
-<pre><code>open my_track
-set my_movie to first document
-set ts to time scale of my_movie
---とりあえず1.5倍に
-set rate of my_movie to 1.5
-</code></pre>
+<p><code>brew install XXX</code>で適当にインストールせずに、バージョンの切り替えが容易なようにした。
+いくつか種類あったけど、基本後発のを導入してみた。</p>
 
-<p>end tell
-```</p>
+<ul>
+<li>Python: <a href="https://github.com/yyuu/pyenv">yyuu/pyenv</a></li>
+<li>Ruby: <a href="https://github.com/sstephenson/rbenv">sstephenson/rbenv</a></li>
+<li>Node.js: <a href="https://github.com/creationix/nvm">creationix/nvm</a>
 
-<p>これをアプリとして保存してDockなどの配置しておけば、iTunesで曲を選択中あるいは再生中の状態で、実行するとQuick Time 7が起動して、その曲を1.5倍速再生してくれる。アプリ形式だと、倍速の数字を指定するパスが無いが、「Show A/V Control」ウインドウを開けば一応あとから変更可能。</p>
+<ul>
+<li>nvmはzshとの相性悪くて日本では<a href="https://github.com/hokaccha/nodebrew">hokaccha/nodebrew</a>がけっこう人気っぽかったけど特に問題無かったのでnvmにした。</li>
+</ul>
+</li>
+</ul>
 
-<p><a href="https://github.com/mono0926/AppleScript">GitHub</a>の<a href="https://github.com/mono0926/AppleScript/raw/master/ChangeSpeed.zip">ChangeSpeed</a>からダウンロードできます。</p>
 
-<h2>AlfredのWorkflow化</h2>
+<p>諸々雑なところがあるけど、<a href="https://github.com/mono0926/Environment/tree/master/OSX">Environment/OSX at master · mono0926/Environment</a>でセットアップスクリプト管理。</p>
 
-<p>Automatorでアプリ化の方法だと、Dockクリックしたりが面倒なのと、倍速の数字を与えられないので、それをAlfredのWorkflowで解消。
-コードとしては、上記のものに、Alfredのオプション引数を与えるようにした(無指定の場合は同じく1.5倍速)程度でほとんどそのまま。
-AppleScriptを実行するWorkflowを新規作成するだけ。
-個人的にはこっちを使おうかな。</p>
+<h2>IDE導入</h2>
 
-<p><a href="https://github.com/mono0926/AlfredWorkflow">GitHub</a>の<a href="https://github.com/mono0926/AlfredWorkflow/raw/master/changeSpeed/ChangeITunesSpeed.alfredworkflow">ChangeITunesSpeed.alfredworkflow</a>からダウンロード出来ます。</p>
+<p>スクリプト系言語は、最近はわりとSublime Textで書いていたけど、やっぱり補完がもう少し聞いてくれないと厳しいので、なるべくIDE使うようにしようと思う。<br/>
+IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれば捗るかなと。<br/>
+今まではNetBeansかたまにEclipseだったけど、乗り換え。少しずつ慣れていこう（´-ω-｀）</p>
 
-<p>今まで出来なくて不便に感じていたMac上での可変速再生が実現して、満足（´-ω-｀）</p>
+<ul>
+<li><a href="http://www.jetbrains.com/webstorm/">WebStorm :: The smartest JavaScript IDE</a></li>
+<li><a href="http://www.jetbrains.com/ruby/">Ruby on Rails IDE :: JetBrains RubyMine</a></li>
+<li><a href="http://www.jetbrains.com/pycharm/">Python IDE &amp; Django IDE for Web developers : JetBrains PyCharm</a>
 
-<p>YosemiteでJavaScriptでAppleScript書けるようになったので、リリースしたら書き換えたい(　´･‿･｀)</p>
+<ul>
+<li>CE版は無料</li>
+</ul>
+</li>
+</ul>
+
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[iOS7対応記事のまとめ]]></title>
-    <link href="http://mono0926.github.io/blog/2013/09/21/ios7/"/>
-    <updated>2013-09-21T19:55:00+09:00</updated>
-    <id>http://mono0926.github.io/blog/2013/09/21/ios7</id>
-    <content type="html"><![CDATA[<p>iOS7関連のNDA解禁ということで、色々記事が増えてきたので、メモ。
-少しずつ追記していきながら、落ち着いたところで、集約したような記事書くかも。</p>
+    <title type="html"><![CDATA[Mac Proの新モデル(通称ゴミ箱)を買うことにした]]></title>
+    <link href="http://mono0926.github.io/blog/2013/10/27/mac-pro/"/>
+    <updated>2013-10-27T11:24:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/10/27/mac-pro</id>
+    <content type="html"><![CDATA[<p>今持っているMac Proの2010年モデルももう丸3年以上経っていたり、2011年モデルのMac mini(サーバー用)も切り捨てて1本化したいなと思ってたところに、新Mac Proが発表されて、ちょっと考えてたらほしくなってしまった。</p>
+
+<h2>購買意欲がそそられた理由</h2>
+
+<p>省電力というのが意外と一番大きな理由。
+Mac Proの消費電力が、アイドル時に43 Wということで、常時起動でも700円/月程度で、Mac miniの用途をMac Proに一本化できそう。</p>
+
+<p>新Mac Proを常時起動にすると、Mac Pro1台で下記の用途全てまかなえる。</p>
 
 <ul>
-<li><a href="http://koogawa.hateblo.jp/entry/2013/09/19/025424">iOS 7対応事例 FastCheckin</a></li>
-<li><a href="http://laboyukai.blogspot.jp/2013/09/ios6ios7.html">iOS6からiOS7への対応</a></li>
-<li><a href="http://skyarts.com/blog/jp/skyarts/?p=29327">iOS 7向けアプリ開発時の注意点</a></li>
-<li><a href="http://qiita.com/monoqlo/items/cfc3aa018a5cb7df0deb">iOS7でNavigationBarに入れたSearchBarにキャンセルボタンを出現させる方法</a></li>
-<li><a href="http://qiita.com/hanapage/items/7d58293f5f7234437d79">iOS6 &ndash;> iOS7変更対応</a></li>
-<li><a href="http://qiita.com/ne_ko_/items/5da4b2a247e65431c7cf">iOS 6/7 で UILabel などの見た目がずれるよ〜とお嘆きのあなたへ</a></li>
-<li><a href="http://qiita.com/y_matsuwitter/items/bd41493f098dfa984f2b">CocoapodsとXcode5の組み合わせでエラー出た+解決した</a></li>
-<li><a href="http://d.hatena.ne.jp/Kazzz/20130923/p1">iOS7でステータスバーが被る問題への対応</a></li>
-<li><a href="http://blog.livedoor.jp/tek_nishi/archives/8069300.html">iOS7のarm64対応でやったこと</a></li>
-<li><a href="http://qiita.com/yimajo/items/7051af0919b5286aecfe">iOS7でナビゲーションバーやステータスバーの文字色を変える</a></li>
-<li><a href="http://qiita.com/jazzsasori/items/cbd4650684a4f715e199">iOS 7 でステータスバーを隠す方法</a></li>
+<li>普段利用(OSX)</li>
+<li>OSXサーバー</li>
+<li>Windows開発機</li>
+<li>Windowsサーバー</li>
 </ul>
 
+
+<p>また必要に応じてiPadやWindows RT機からリモートアクセスとかすると、家には1台 + 持ち歩き用に安価軽量なモバイル端末という、組み合わせができる。
+常時起動なので、ファイルや音楽・動画などメディア系リソースへのアクセスもいつでも出来るし。</p>
+
+<p>今、SSD・フルHDのそこそこ良いWindowsノートも持っているけど、これも次の買い換えでSurface(非Pro)とかにしたりで持ち運び楽かつ買い換えコストも抑えられる。
+そもそも、iPad AirとかでWindows開発環境にアクセスすればいいので、Windowsのモバイル端末は不要になるかも(もちろんネット環境悪いところでは制約が出るけど)。</p>
+
+<!-- more -->
+
+
+<h2>ネック</h2>
+
+<p>後述のお金の問題に加えて、以下の作業が面倒。</p>
+
+<h3>増設したHDD</h3>
+
+<p>Mac Proに入れているSSD(256GB)x2・HDD(2TB)x2・HDD(3TB)x1を、新Mac Proだと外に出して繋がないと行けなくなる(SSDのうち1台はメインドライブなので不要だけど)。
+そのケース・ドライブを用意したりとか、その配線が微妙かなあとか、ちょっと悩みどころ。</p>
+
+<h3><a href="http://mono-comp.com/">旧ブログ</a></h3>
+
+<p>今Mac miniで動かしている、IIS + WordPressで構築した<a href="http://mono-comp.com/">旧ブログ</a> の移行が面倒。
+そもそももう更新していないので畳むか、変換スクリプト書いて、こちらのブログに移行してもよいかも。</p>
+
+<h3>その他Windowsサーバー環境移行</h3>
+
+<p><a href="http://apps.microsoft.com/windows/ja-jp/app/amazon-sales-rank/17848073-edbd-462d-abb8-2f77d2a2aadf">Amazon Sales Rank</a>のサーバー環境の移行は、1・2時間くらいで出来そう。</p>
+
+<p>少し前まで、Windows系のソース管理は自前のTFSでやっていたけど、それもGitHubに移行したのであとは特に必要な作業無さそう。</p>
+
+<p>そして、新Mac Proに乗り換えたら仮想マシン立てるつもりなので、その後の移行作業はとても楽になるはず。</p>
+
+<h2>移行コスト</h2>
+
+<p>計算してみたら、デスクトップ系のMac製品は中古相場もあまり高くなく、思っていたよりかかる模様。
+Mac Proはヤフオク見るともっと相場高いので、そちらもありかも。</p>
+
+<ul>
+<li>新Mac Pro：カスタマイズオーダーや、自分でカスタマイズしたり外付け用ドライブ含めて、〜40万円</li>
+<li>Apple Mac Pro MC560J/A (Mid 2010)売却：〜5.8万円 (じゃんぱら価格)</li>
+<li>Mac mini MC815J/A (Mid 2011)売却：〜3.1万円 (じゃんぱら価格)</li>
+</ul>
+
+
+<p>計〜30万円程度かかるので、けっこう高い（´-ω-｀）</p>
+
+<h2>結論</h2>
+
+<p>「Mac Proの新モデル(通称ゴミ箱)を買うことにした」ものの、今はまだ買わない。
+会社のMacBook Pro Retina 15インチ(2012年モデル)と良くも悪くもほぼ性能一緒で快適なので、上記の1台で色々な用途をまかなえること以外は、あまり買い換える理由ないというのが大きい。
+OSも、ハードウェア性能を要求するどころか、逆に同じハードでも快適に動く方向にシフトしてきているし。</p>
+
+<p>というわけで、キリよく5年くらい経った2015年夏くらいに買い換えたい。
+今のMac Proも20万円ちょっと + 色々増設で30万円近くしたけど、5で割るとそんなに高くないし、次のモデルも5年くらい十分持つだろうし、基本的に高価なモバイル端末買わずに済むようになるかなとか考えるとけっこうありかと。</p>
+
+<p>あと、ヤフオクに強気価格(箱無し・メモリ16GB増設済みで15万円など)で出しておいて、運良く売れたら買い換えというのもやろうと思っていたり。
+さすがに手元にMacマシンが無くなるときついので、12月になってMac Proが発売されたらにしよう。</p>
+
+<p>とりあえず3年ちょっと、何一つトラブル無く動いているのは素晴らしいし、外観もかっこいいので、またMac Pro買おうと思った次第。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Pythonの環境構築]]></title>
+    <link href="http://mono0926.github.io/blog/2013/09/09/python/"/>
+    <updated>2013-09-09T07:49:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2013/09/09/python</id>
+    <content type="html"><![CDATA[<p>度々ぐぐったりするので、メモ。
+少しずつ、加筆修正していく。</p>
+
+<p><a href="http://www.sicafe.net/macPackageManageTips/html/homebrewPythonInstall.html">Mac OS X Lion / homebrew にて python の環境を整える</a></p>
 ]]></content>
   </entry>
   

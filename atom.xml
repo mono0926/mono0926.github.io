@@ -4,7 +4,7 @@
   <title><![CDATA[monoHub]]></title>
   <link href="http://mono0926.github.io/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-10-20T19:14:44+09:00</updated>
+  <updated>2014-11-04T08:11:15+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -12,6 +12,125 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[SourceTreeでブランチ名をコミットメッセージの先頭に自動挿入]]></title>
+    <link href="http://mono0926.github.io/blog/2014/10/31/sourcetree/"/>
+    <updated>2014-10-31T12:36:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2014/10/31/sourcetree</id>
+    <content type="html"><![CDATA[<p>Git便利ですね。今やこれ無しで開発は無理、というレベルです。</p>
+
+<p>そんな日々使っているGitですが、何かしらのツールでタスクやIssueを作ってそのIDをfeatureブランチ名としている運用は多いと思います。</p>
+
+<p>その場合、コミットメッセージにそのIDが含まれているとコミットとタスクを紐づけてくれるので、コミットメッセージの先頭にブランチ名を挿入することが多いはずです。</p>
+
+<p>それを打つのが一々面倒だしたまにミスして違うタスクに紐付かれちゃうし、で少し困っていました。</p>
+
+<p>コマンドラインで作業している場合は、以下のようなにGitの<code>prepare-commit-msg</code>フックを利用することで、コミットメッセージ作成時に自動挿入させることが可能です。</p>
+
+<ul>
+<li><a href="http://qiita.com/ykyk1218/items/4c17eef472ae8c31991f">Gitでcommitした時にブランチ名をcommitメッセージに自動でいれる &ndash; Qiita</a></li>
+</ul>
+
+
+<p>ただ、SourceTreeで試そうとしたら、動いてくれず、調べたところ非対応のようです。</p>
+
+<ul>
+<li><a href="https://answers.atlassian.com/questions/169399/sourcetree-and-git-prepare-commit-msg">SourceTree and git prepare-commit-msg &ndash; Atlassian Answers</a></li>
+</ul>
+
+
+<p><a href="https://twitter.com/yabuchin_y">@yabuchin_y</a>さんに相談したら、<code>commit-msg</code>で書き換えてしまえばいけるのでは？ということで作ってもらえました。</p>
+
+<p>(僕はこの時点で、<code>commit-msg</code>はバリデーションフェーズ的なもので、書き換えは不可能なのでは？と思って諦めてしまいそうでした。)</p>
+
+<h2>設定手順</h2>
+
+<!-- more -->
+
+
+<h3>コミットメッセージのテンプレートを作成して指定の文章が自動挿入されるようにする</h3>
+
+<p>以下を、特定のレポジトリルートで実行。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># $HOME/.gitmessage.txtの置き場所は自由です
+</span><span class='line'># グローバルな設定としたい場合は、--globalオプションを付ける
+</span><span class='line'>git config commit.template $HOME/.gitmessage.txt</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># .gitmessage.txtの中身(末尾に半角スペースを入れておくこと推奨)
+</span><span class='line'>[branchname]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>これで、コミットメッセージ作成時に、<code>[branchname]</code>が先頭に自動挿入されます。</p>
+
+<h3>コミット後に[branchname]がブランチ名へ書き換えられるようにする</h3>
+
+<p><code>commit-msg</code>フックを利用します。</p>
+
+<p>以下を特定のレポジトリの<code>.git/hooks/commit-msg</code>として配置します。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#!/usr/bin/env ruby
+</span><span class='line'>message_file = ARGV[0]
+</span><span class='line'>message = File.read(message_file, :encoding =&gt; Encoding::UTF_8)
+</span><span class='line'>
+</span><span class='line'>current_branch = `git branch | grep '*'`.chomp.sub('* ', '')
+</span><span class='line'>current_branch = current_branch[current_branch.rindex("/")+1 .. current_branch.length]
+</span><span class='line'>
+</span><span class='line'>newmessage = message.sub(/\[branchname\]/, current_branch)
+</span><span class='line'>
+</span><span class='line'>File.write(message_file, newmessage)</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>feature/hoge/#35</code>などとなっている場合、<code>[branchname]</code>部分が<code>#35</code>と置換されるような処理をしています。
+用途に応じて適宜書き換えてください。</p>
+
+<h2>挙動</h2>
+
+<p>文章だけではイメージが沸きにくいかもしれないので、スクリーンショット貼っておきます。</p>
+
+<h3>コミットメッセージを入れようとすると先頭に[branchname]が自動挿入</h3>
+
+<p><img src="http://mono0926.github.io/images/post/st1.png" alt="" /></p>
+
+<p>そのままその後にメッセージを入れてコミットします。</p>
+
+<h3>[branchname]が置換されてブランチ名になってくれます</h3>
+
+<p><img src="http://mono0926.github.io/images/post/st2.png" alt="" /></p>
+
+<h2>実際に使って見て</h2>
+
+<p>昨日から活用し初めましたがすこぶる快適です(　´･‿･｀)</p>
+
+<p><a href="https://twitter.com/yabuchin_y">@yabuchin_y</a>さん、ありがとうございました(　´･‿･｀)</p>
+
+<h3>参考リンク</h3>
+
+<ul>
+<li><a href="http://git-scm.com/book/ja/v1/Git-%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA-Git-%E3%83%95%E3%83%83%E3%82%AF">Git &ndash; Git フック</a></li>
+<li><a href="http://qiita.com/khlizard/items/dfe1ec9d82c0ed5da7c6">Git hooks まとめ &ndash; Qiita</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[クックパッド第5回 開発コンテスト24に参戦した話]]></title>
@@ -1066,31 +1185,6 @@ IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれ
 
 
 <p>外からアクセス出来るようにしたり、WEBアプリやiPhoneアプリでもっと便利にしていきたいところ(　´･‿･｀)</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[ラヴさんスタンプをLINE Creators Marketに申請してみた]]></title>
-    <link href="http://mono0926.github.io/blog/2014/04/17/love-stamp/"/>
-    <updated>2014-04-17T22:06:00+09:00</updated>
-    <id>http://mono0926.github.io/blog/2014/04/17/love-stamp</id>
-    <content type="html"><![CDATA[<p>2月下旬に発表され、本日受付を開始した<a href="https://creator.line.me/">LINE Creators Market</a>に、自作スタンプを申請してみました。</p>
-
-<p><img src="http://mono0926.github.io/images/post/love_stamp.png" alt="ラヴさんスタンプ" /></p>
-
-<p>思えば、3月上旬くらいに、当時IllustratorやPhotoshopを勉強していたこともあり、その演習にちょうどいいのでは？と思いつき、挫折しそうと思いつつ着手したのが始まりでした。</p>
-
-<p>朝3時前に起きて出社前に5枚くらい描く時もあれば、しばらく間が空いてしまう時もありつつ。
-そんなにスムーズに絵を描けない中、40枚は正直すごくしんどかったです（´-ω-｀）</p>
-
-<p>なんやかんやで、色々な人に励まされたり助けて貰いながら、完成にこぎつけられてとても嬉しいです(　´･‿･｀)</p>
-
-<p>色々雑なところがありつつ、申請は通ってほしいなー、というところです。
-無事に5月にマーケットに上がることを祈ります。
-改良アップデートや続編とかも作りたいなーと思ったり。
-今回はローンチリリースを目指していたため締め切りがつらたんだったけど、次はもう少しゆとりをもってやりたいところです（´-ω-｀）</p>
-
-<p><a href="http://a.scn.jp/s/0VrEMIHAB">ラヴさんスタンプ公開アルバム</a>を勤めている会社のサービス<a href="http://www.scn.jp/">「Scene ありそうでなかった、写真アプリ」</a>のアルバムとして作ったので、そこでパラパラスタンプ見たりフィードバックとかいただけたら嬉しいです(　´･‿･｀)</p>
 ]]></content>
   </entry>
   
