@@ -4,7 +4,7 @@
   <title><![CDATA[Category: sourcetree | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/sourcetree/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-11-04T08:11:57+09:00</updated>
+  <updated>2014-11-04T08:13:18+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -111,7 +111,7 @@ current_branch = current_branch[current_branch.rindex(&ldquo;/&rdquo;)+1 .. curr
 
 <h2>実際に使って見て</h2>
 
-<p>昨日から活用し初めましたがすこぶる快適です(　´･‿･｀)</p>
+<p>先週から活用し初めましたがすこぶる快適です(　´･‿･｀)</p>
 
 <p><a href="https://twitter.com/yabuchin_y">@yabuchin_y</a>さん、ありがとうございました(　´･‿･｀)</p>
 
