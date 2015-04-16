@@ -9,8 +9,7 @@
   <meta name="author" content="Masayuki Ono">
 
   
-  <meta name="description" content="
-">
+  <meta name="description" content="Git便利ですね。今やこれ無しで開発は無理、というレベルです。 そんな日々使っているGitですが、何かしらのツールでタスクやIssueを作ってそのIDをfeatureブランチ名としている運用は多いと思います。 その場合、 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,53 +79,6 @@
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/04/16/applewatch/">Applewatch</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-04-16T11:46:00+09:00" pubdate data-updated="true">Apr 16<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- monoHub page -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-6210106378939404"
-     data-ad-slot="1442476294"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-
-  <div class="entry-content">
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -719,6 +671,81 @@
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/06/04/yosemite/">OSX 10.10(Yosemite)やiOS 8にアップデートして困ったこと</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-04T03:43:00+09:00" pubdate data-updated="true">Jun 4<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- monoHub page -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-6210106378939404"
+     data-ad-slot="1442476294"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+  <div class="entry-content"><p>例のごとく、何も考えずにメインマシンをOSX 10.10(Yosemite)・iOS 8にしてしまいましたが、いくつか細かいトラブルが。
+でも概ね問題無く使えていて満足（´-ω-｀）</p>
+
+<p>NDAに気をつけつつ困ったことや解決法など(　´･‿･｀)</p>
+
+<h2>OSX 10.10(Yosemite)にアップデートして困ったこと</h2>
+
+<h3><a href="https://github.com/tekezo/PCKeyboardHack">PCKeyboardHack</a>が起動しない</h3>
+
+<h4>【追記】<a href="https://pqrs.org/macosx/keyremap4macbook/files/PCKeyboardHack-10.7.0.dmg">PCKeyboardHack-10.7.0</a>がリリースされました！</h4>
+
+<p>去年もこれで困ったことを思い出しました。
+Realforceでスペースの両隣のキーでの日本語入力切り替えが効かずにとても不便です。
+Apple純正キーボードだと問題ないですが。</p>
+
+<p>と思いつつ、Issuesを覗いたら、<a href="https://github.com/tekezo/PCKeyboardHack/issues/31">Add 10.10 support #31</a>ですんなり解決(　´･‿･｀)</p>
+
+<p>何も考えずこれを打ったら問題無く動くように。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo /sbin/kextload '/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboardHack.10.9.signed.kext'</span></code></pre></td></tr></table></div></figure>
+
+
+<h3><a href="http://blog.boastr.net/">BetterTouchTool</a>が起動しない</h3>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/06/04/yosemite/">続きを読むヽ(・ω・｀）</a>
+    </footer>
+  
+
+
+    </article>
+  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -747,10 +774,6 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2015/04/16/applewatch/">applewatch</a>
-      </li>
-    
-      <li class="post">
         <a href="/blog/2014/10/31/sourcetree/">SourceTreeでブランチ名をコミットメッセージの先頭に自動挿入</a>
       </li>
     
@@ -764,6 +787,10 @@
     
       <li class="post">
         <a href="/blog/2014/07/01/stamp/">ラヴ様LINEスタンプ6月売り上げ</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/13/password/">iOS8で1Passwordが使えるようになった</a>
       </li>
     
   </ul>
