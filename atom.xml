@@ -4,7 +4,7 @@
   <title><![CDATA[monoHub]]></title>
   <link href="http://mono0926.github.io/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-11-04T08:13:18+09:00</updated>
+  <updated>2015-04-16T11:49:54+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[applewatch]]></title>
+    <link href="http://mono0926.github.io/blog/2015/04/16/applewatch/"/>
+    <updated>2015-04-16T11:46:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2015/04/16/applewatch</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[SourceTreeでブランチ名をコミットメッセージの先頭に自動挿入]]></title>
@@ -1062,129 +1071,6 @@ IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれ
 <p>このapiKitと<a href="https://github.com/irkit/ios-sdk">irkit/ios-sdk</a>でiPhoneアプリ簡単に作れるみたいだけど、<a href="https://github.com/irkit/ios-sdk">irkit/ios-sdk</a>とかでけっこう充分だったりするし、どうしよう（´-ω-｀）<br/>
 やるならiBeaconと組み合わせたいけど、手軽で安いのがまだない感じ（´-ω-｀）<br/>
 <a href="http://estimote.com/">Estimote Beacons — real world context for your apps</a>は洗練されてる感じだけど、$99/3個と割高感が否めない（´-ω-｀）</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[IRKitで遊び始めた〜とりあえずTerminalで操作〜]]></title>
-    <link href="http://mono0926.github.io/blog/2014/05/05/irkit/"/>
-    <updated>2014-05-05T14:22:00+09:00</updated>
-    <id>http://mono0926.github.io/blog/2014/05/05/irkit</id>
-    <content type="html"><![CDATA[<p>冬場忙しかったりで既存アプリで部屋のリモコン登録する程度しかいじれてなかったけど、最近ようやく落ち着いてきたので、<a href="http://www.amazon.co.jp/gp/product/B00H91KK26/ref=as_li_ss_tl?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=B00H91KK26&amp;linkCode=as2&amp;tag=mono0926-22">IRKit</a>で遊んでみる(　´･‿･｀)</p>
-
-<h2>セットアップ</h2>
-
-<p><a href="http://getirkit.com/">IRKit &ndash; Open Source WiFi Connected Infrared Remote Controller</a>を参考に、諸々設定。</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># dns-sdコマンドで、IRKitのインスタンス名取得。
-</span><span class='line'>Pro:b4 mono$ dns-sd -B _irkit._tcp
-</span><span class='line'>Browsing for _irkit._tcp
-</span><span class='line'>DATE: ---Mon 05 May 2014---
-</span><span class='line'>14:41:16.669  ...STARTING...
-</span><span class='line'>Timestamp     A/R    Flags  if Domain               Service Type         Instance Name
-</span><span class='line'>14:41:16.880  Add        2   4 local.               _irkit._tcp.         iRKitA2C4</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<!-- more -->
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># インスタンス名から、IPアドレス取得
-</span><span class='line'>Pro:b4 mono$ dns-sd -G v4 irkita2c4.local
-</span><span class='line'>DATE: ---Mon 05 May 2014---
-</span><span class='line'>14:41:43.565  ...STARTING...
-</span><span class='line'>Timestamp     A/R Flags if Hostname                               Address                                      TTL
-</span><span class='line'>14:41:43.566  Add     2  4 irkita2c4.local.                       192.168.0.4                                  10</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># IPアドレスからMACアドレスを調べる(もっとスマートなやり方ある？)
-</span><span class='line'># とりあえずping
-</span><span class='line'>Pro:~ mono$ ping 192.168.0.4
-</span><span class='line'>PING 192.168.0.4 (192.168.0.4): 56 data bytes
-</span><span class='line'>64 bytes from 192.168.0.4: icmp_seq=0 ttl=255 time=3.958 ms
-</span><span class='line'># arpで確認
-</span><span class='line'>Pro:~ mono$ arp -a
-</span><span class='line'>? (192.168.0.4) at 20:f8:5e:a6:a2:c4 on en0 ifscope [ethernet]</span></code></pre></td></tr></table></div></figure>
-
-
-<p>ルーターの設定で、固定IPを今さらながら割り当ててみる。
-これで、家の中では安心して<code>192.168.0.4</code>でアクセス出来るようになった（´-ω-｀）</p>
-
-<h2>Terminalから操作</h2>
-
-<p>普通にリモコンを操作して、その赤外線の範囲内にIRKitが入っていると、青いライトが点滅して、赤外線の信号を取得したことを示してくれる。</p>
-
-<p>そこで、curlすると、その信号が分かる。
-うちのNECのLEDシーリングライトのオンオフボタンを押した後だとこんな感じ。</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Pro:~ mono$ curl -i http://192.168.0.4/messages
-</span><span class='line'>HTTP/1.0 200 OK
-</span><span class='line'>Access-Control-Allow-Origin: *
-</span><span class='line'>Server: IRKit/1.3.5.0.gce6ac15
-</span><span class='line'>Content-Type: text/plain
-</span><span class='line'>
-</span><span class='line'>{"format":"raw","freq":38,"data":[17421,9061,935,1232,1037,3458,1037,1232,935,1232,935,1232,1037,1190,1037,1190,1037,3458,1037,3458,1037,1037,1037,3458,1037,3458,1037,1150,1037,3341,1073,3341,1073,1232,935,3458,935,3458,935,1232,1037,3341,935,1190,1073,3458,935,1190,1002,3458,1073,1073,1073,1190,1037,3458,1037,1190,1190,3228,968,1190,1073,3341,1073,1190,1002]}</span></code></pre></td></tr></table></div></figure>
-
-
-<p>これをPOSTすれば、リモコンオンオフボタンと同じ信号をIRKitが発行してくれる。</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>curl -i http://192.168.0.4/messages -d '{"format":"raw","freq":38,"data":[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}'</span></code></pre></td></tr></table></div></figure>
-
-
-<p>つまり、これをaliasなりシェルスクリプトにしておけば、もうそれだけでキーボードでライトのオンオフが出来るようになる。</p>
-
-<p>楽ちん過ぎる、素晴らしい（´-ω-｀）</p>
-
-<p>ちなみに、うちではこんな風に部屋の真ん中あたりの壁に、両面テープ付けて配置してる。これでも、受信感度の悪い一部機器は反応しなかったりで悩み中。
-その機器は、添付のリモコンでもけっこう近くで方向もけっこう合わせないと反応しないので、IRKitのせいではないのだけれど。</p>
-
-<p><img src="http://mono0926.github.io/images/post/irkit.jpg" alt="irkit" /></p>
-
-<p>8,000円切る価格で完成度高くて、色々弄りやすいの素晴らしい(　´･‿･｀)</p>
-
-<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=mono0926-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=B00H91KK26" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
-
-
-<p>リモコンが付いていないサーキュレーターとかは、この、コンセントのオンオフをリモコンで切り替えられるやつを買おうかな（´-ω-｀）</p>
-
-<iframe src="http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=mono0926-22&o=9&p=8&l=as4&m=amazon&f=ifr&ref=ss_til&asins=B0013L6ACM" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
-
-
-<p>外からアクセス出来るようにしたり、WEBアプリやiPhoneアプリでもっと便利にしていきたいところ(　´･‿･｀)</p>
 ]]></content>
   </entry>
   
