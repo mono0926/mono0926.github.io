@@ -9,7 +9,7 @@
   <meta name="author" content="Masayuki Ono">
 
   
-  <meta name="description" content="前回のIRKitで遊び始めた〜とりあえずTerminalで操作〜 &ndash; monoHubの続き。 前回触ったIRKit Device HTTP APIは同じWiFi内から操作するためのもので、外からアクセスするときはIRKit Internet HTTP APIを叩くことになる。 &hellip;">
+  <meta name="description" content="冬場忙しかったりで既存アプリで部屋のリモコン登録する程度しかいじれてなかったけど、最近ようやく落ち着いてきたので、IRKitで遊んでみる(　´･‿･｀) セットアップ IRKit &ndash; Open Source WiFi Connected Infrared Remote &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,82 +79,6 @@
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/05/05/irkit-remote/">IRKitに外からアクセス出来るようにした</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-05T15:37:00+09:00" pubdate data-updated="true">May 5<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- monoHub page -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-6210106378939404"
-     data-ad-slot="1442476294"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-
-  <div class="entry-content"><p>前回の<a href="http://mono0926.com/blog/2014/05/05/irkit/">IRKitで遊び始めた〜とりあえずTerminalで操作〜 &ndash; monoHub</a>の続き。</p>
-
-<p>前回触った<a href="http://getirkit.com/#IRKit-Device-API">IRKit Device HTTP API</a>は同じWiFi内から操作するためのもので、外からアクセスするときは<a href="http://getirkit.com/#IRKit-Internet-API">IRKit Internet HTTP API</a>を叩くことになる。</p>
-
-<h2>IRKit Internet HTTP APIを叩けるように準備</h2>
-
-<p>まずは、clienttokenを取得。</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Pro:~ mono$ curl -i http://192.168.0.4/keys -d ''
-</span><span class='line'>HTTP/1.0 200 OK
-</span><span class='line'>Access-Control-Allow-Origin: *
-</span><span class='line'>Server: IRKit/1.3.5.0.gce6ac15
-</span><span class='line'>Content-Type: text/plain
-</span><span class='line'>
-</span><span class='line'>{"clienttoken":"**************************"} #伏せています</span></code></pre></td></tr></table></div></figure>
-
-
-<p>取得したclienttokenを元に、deviceidとclientkeyを取得。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/05/05/irkit-remote/">続きを読むヽ(・ω・｀）</a>
-    </footer>
-  
-
-
-    </article>
   
   
     <article>
@@ -782,6 +706,69 @@ Gistになぜか<a href="https://gist.github.com/koron/5454500">curlで使って
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/07/25/leap-motion/">Leap Motionが届いた</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-25T07:50:00+09:00" pubdate data-updated="true">Jul 25<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- monoHub page -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-6210106378939404"
+     data-ad-slot="1442476294"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+  <div class="entry-content"><p>Leap Motionを買ってみた。<br/>
+多分1年ちょっと前に<a href="http://japanese.engadget.com/2012/05/21/1-100-3d-leap-70/">指先を1/100ミリ単位で捉える3Dモーション入力機器 LEAP、70ドルで予約受付開始 (動画)</a>などの記事を見て、コンセプト動画なのか実動画像なのか知らないけど、すごいなーと思って放置してたけど、今週けっこう話題になってて、記事とか読んでたらいつの間にかポチってた感じ。</p>
+
+<p>ハード的には、劣化版Kinect？とかも思ったけど、対象距離が近距離な<a href="http://www.amazon.co.jp/gp/product/B0074BN0VO/ref=as_li_ss_tl?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=B0074BN0VO&amp;linkCode=as2&amp;tag=mono0926-22">Kinect for Windows</a>は少しお高いし、設置の制約あるし、とか思ってとりあえず今回はこっち。
+KinectはごくたまにXboxで遊んだりと、なかなか好きなデバイス。</p>
+
+<p>Leap Motionって何？とかどんなことできるの？とかについては下の動画見れば大体分かる。</p>
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/3b4w749Tud8" frameborder="0" allowfullscreen></iframe>
+
+
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/07/25/leap-motion/">続きを読むヽ(・ω・｀）</a>
+    </footer>
+  
+
+
+    </article>
+  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -812,10 +799,6 @@ Gistになぜか<a href="https://gist.github.com/koron/5454500">curlで使って
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2015/04/25/movie-test/">movie_test</a>
-      </li>
-    
-      <li class="post">
         <a href="/blog/2015/04/16/kindle/">kindle</a>
       </li>
     
@@ -829,6 +812,10 @@ Gistになぜか<a href="https://gist.github.com/koron/5454500">curlで使って
     
       <li class="post">
         <a href="/blog/2014/10/05/swift-lt/">iOS 8/Swift エンジニア勉強会資料公開しました</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/07/01/stamp/">ラヴ様LINEスタンプ6月売り上げ</a>
       </li>
     
   </ul>

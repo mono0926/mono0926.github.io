@@ -4,7 +4,7 @@
   <title><![CDATA[monoHub]]></title>
   <link href="http://mono0926.github.io/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2015-04-25T15:47:40+09:00</updated>
+  <updated>2015-04-25T16:17:49+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -12,27 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[movie_test]]></title>
-    <link href="http://mono0926.github.io/blog/2015/04/25/movie-test/"/>
-    <updated>2015-04-25T15:44:00+09:00</updated>
-    <id>http://mono0926.github.io/blog/2015/04/25/movie-test</id>
-    <content type="html"><![CDATA[<div id="fb-root"></div>
-
-
-<script>(function(d, s, id) {  var js, fjs = d.getElementsByTagName(s)[0];  if (d.getElementById(id)) return;  js = d.createElement(s); js.id = id;  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";  fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
-
-
-<div class="fb-video" data-allowfullscreen="true" data-href="/peppaichan/videos/vb.892271160837572/897089460355742/?type=1"><div class="fb-xfbml-parse-ignore"><blockquote cite="/peppaichan/videos/897089460355742/"><a href="http://mono0926.github.io/peppaichan/videos/897089460355742/"></a><p>たくさんの人にお触りいただいてます！</p>Posted by <a href="https://www.facebook.com/peppaichan">ペッパイちゃん</a> on Friday, April 24, 2015</blockquote></div></div>
-
-
-
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/2Q-DZv3qGC0" frameborder="0" allowfullscreen></iframe>
-
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[kindle]]></title>
@@ -980,6 +959,118 @@ IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれ
 </span><span class='line'>    console.log(res); //空
 </span><span class='line'>});</span></code></pre></td></tr></table></div></figure>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[IRKitに外からアクセス出来るようにした]]></title>
+    <link href="http://mono0926.github.io/blog/2014/05/05/irkit-remote/"/>
+    <updated>2014-05-05T15:37:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2014/05/05/irkit-remote</id>
+    <content type="html"><![CDATA[<p>前回の<a href="http://mono0926.com/blog/2014/05/05/irkit/">IRKitで遊び始めた〜とりあえずTerminalで操作〜 &ndash; monoHub</a>の続き。</p>
+
+<p>前回触った<a href="http://getirkit.com/#IRKit-Device-API">IRKit Device HTTP API</a>は同じWiFi内から操作するためのもので、外からアクセスするときは<a href="http://getirkit.com/#IRKit-Internet-API">IRKit Internet HTTP API</a>を叩くことになる。</p>
+
+<h2>IRKit Internet HTTP APIを叩けるように準備</h2>
+
+<p>まずは、clienttokenを取得。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Pro:~ mono$ curl -i http://192.168.0.4/keys -d ''
+</span><span class='line'>HTTP/1.0 200 OK
+</span><span class='line'>Access-Control-Allow-Origin: *
+</span><span class='line'>Server: IRKit/1.3.5.0.gce6ac15
+</span><span class='line'>Content-Type: text/plain
+</span><span class='line'>
+</span><span class='line'>{"clienttoken":"**************************"} #伏せています</span></code></pre></td></tr></table></div></figure>
+
+
+<p>取得したclienttokenを元に、deviceidとclientkeyを取得。</p>
+
+<!-- more -->
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Pro:~ mono$ curl -i -d "clienttoken=**************************" "https://api.getirkit.com/1/keys"
+</span><span class='line'>HTTP/1.1 200 OK
+</span><span class='line'>Server: ngx_openresty
+</span><span class='line'>Date: Mon, 05 May 2014 06:44:32 GMT
+</span><span class='line'>Content-Type: application/json; charset=utf-8
+</span><span class='line'>Content-Length: 94
+</span><span class='line'>Connection: keep-alive
+</span><span class='line'>Access-Control-Allow-Origin: *
+</span><span class='line'>Access-Control-Allow-Headers: X-Requested-With
+</span><span class='line'>X-Content-Type-Options: nosniff
+</span><span class='line'>
+</span><span class='line'>{"deviceid":"XXXXXXXXXXXXXXXXXXXXXX","clientkey":"YYYYYYYYYYYYYYYYYYYYY"} #伏せています</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Internet HTTP APIを使ってみる</h2>
+
+<p>deviceid・clientkey・家のライトのオンオフ信号を<a href="https://api.getirkit.com/1/messages">https://api.getirkit.com/1/messages</a> にポストすると、ちゃんと反応した、素晴らしい(　´･‿･｀)</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>curl -i "https://api.getirkit.com/1/messages" \
+</span><span class='line'>     -d 'clientkey=YYYYYYYYYYYYYYYYYYYYY' \
+</span><span class='line'>     -d 'deviceid=XXXXXXXXXXXXXXXXXXXXXX' \
+</span><span class='line'>     -d 'message={"format":"raw","freq":38,"data":[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>上記操作で、IRKitサーバーがIRKit端末にアクセス出来るようになって、認証すれば外部から操作出来るようになるって感じかなあ。
+特に、deviceid・clientkeyは漏れるとまずいですね（´-ω-｀）</p>
+
+<h2>ついでにapiKeyを取得</h2>
+
+<p>iPhoneアプリを作ったりするのに使う用のkeyを取得するAPIもあったので、ついでに叩いてみた。
+入力したメールアドレスに確認メールが来て、無事にapiKeyゲット。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Pro:~ mono$ curl -i -d "email=xxxxxx@gmail.com" "https://api.getirkit.com/1/apps"
+</span><span class='line'>HTTP/1.1 200 OK
+</span><span class='line'>Server: ngx_openresty
+</span><span class='line'>Date: Mon, 05 May 2014 07:00:31 GMT
+</span><span class='line'>Content-Type: application/json; charset=utf-8
+</span><span class='line'>Content-Length: 92
+</span><span class='line'>Connection: keep-alive
+</span><span class='line'>Access-Control-Allow-Origin: *
+</span><span class='line'>Access-Control-Allow-Headers: X-Requested-With
+</span><span class='line'>X-Content-Type-Options: nosniff</span></code></pre></td></tr></table></div></figure>
+
+
+<p>このapiKitと<a href="https://github.com/irkit/ios-sdk">irkit/ios-sdk</a>でiPhoneアプリ簡単に作れるみたいだけど、<a href="https://github.com/irkit/ios-sdk">irkit/ios-sdk</a>とかでけっこう充分だったりするし、どうしよう（´-ω-｀）<br/>
+やるならiBeaconと組み合わせたいけど、手軽で安いのがまだない感じ（´-ω-｀）<br/>
+<a href="http://estimote.com/">Estimote Beacons — real world context for your apps</a>は洗練されてる感じだけど、$99/3個と割高感が否めない（´-ω-｀）</p>
 ]]></content>
   </entry>
   
