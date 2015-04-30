@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+<link rel="stylesheet" href="/css/normalize.css">
+<link rel="stylesheet" href="/css/skeleton.css">
+<link rel="stylesheet" href="/css/custom.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="mono-log">
+<title>Node.jsのIRKitライブラリあったから試してみた - mono-log</title>
+</head>
+<body>
+
+<div class="container">
+
+	<header role="banner">
+		<div class="header-logo">
+			<a href="/"><img src="/images/love.png" width="60" height="60"></a>
+		</div>
+		
+	</header>
+
+
+	<main role="main">
+		<article itemscope itemtype="http://schema.org/BlogPosting">
+			<h1 class="entry-title" itemprop="headline">Node.jsのIRKitライブラリあったから試してみた</h1>
+			<span class="entry-meta"><time itemprop="datePublished" datetime="2014-05-05">May 05, 2014</time></span>
+			<section itemprop="entry-text">
+				
+
+<p>せっかく<a href="http://www.amazon.com/gp/product/B00HSO6YD8/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00HSO6YD8&amp;linkCode=as2&amp;tag=mono0926-20&amp;linkId=SIVQ46LXCW3PK3IO">Node.js the Right Way: Practical, Server-Side JavaScript That Scales [Kindle Edition]</a>でNode.jsを勉強したので、IRKitをNode.jsの勉強題材に出来ないかなと思って、とりあえずNode.jsのクライアントライブラリ無いかな？と探したらあったので、叩いてみた。</p>
+
+<h3 id="dameleon-node-irkit-https-github-com-dameleon-node-irkit:fb9e6c9b3f57a37d5b1579e678201432"><a href="https://github.com/dameleon/node-irkit">dameleon/node-irkit</a></h3>
+
+<p>元々IRKitのAPIがシンプルなので、あまりNode.jsを使う必然性感じないけど、まあ勉強に（´-ω-｀）</p>
+
+<p>本1冊やったとはいえ、色々まだ不慣れなので、コード読解にも良いかも。
+ドキュメントは無いものの、テストはちゃんと書かれていたので、それを参考に使ってみた。</p>
+
+<p>まずはインストール。</p>
+
+<pre><code>npm install node-irkit
+</code></pre>
+
+<p>とりあえずlocalApiを使ってみた。
+実行する度に、部屋の電気がオンオフされて煩わしいので、テストは違う信号でやろうと思ったなう（´-ω-｀）</p>
+
+<pre><code>const
+    irkit = require('node-irkit'),
+    localApi = irkit.getLocalApi(&quot;http://192.168.0.4&quot;),
+    myRoomLight = '{&quot;format&quot;:&quot;raw&quot;,&quot;freq&quot;:38,&quot;data&quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}',
+    myRoomLightMessage = JSON.parse(myRoomLight);
+localApi.postMessages(myRoomLightMessage, function(err, res) {
+    console.log(res); //空
+});
+</code></pre>
+
+			</section>
+		</article>
+	</main>
+
+
+	<footer role="contentinfo">
+		<div class="hr"></div>
+		<div class="footer-link">
+			<a href="mailto:mono0926@gmail.com" target="_blank">Email</a></span>
+			<a href="https://twitter.com/_mono" target="_blank">Twitter</a></span>
+			<a href="https://www.facebook.com/mono0926" target="_blank">Facebook</a></span>
+			<a href="https://github.com/mono0926" target="_blank">GitHub</a></span>
+		</div>
+		<div class="copyright">Copyright &copy; Masayuki Ono All right reserved.</div>
+	</footer>
+
+</div>
+
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-11434295-7', 'auto');
+	ga('send', 'pageview');
+</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

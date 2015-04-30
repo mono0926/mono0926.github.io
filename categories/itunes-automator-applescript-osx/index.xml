@@ -11,16 +11,16 @@
     
     <item>
       <title>iTunesの動画や音楽の再生スピードを変える方法</title>
-      <link>http://mono0926.com/blog/2014/06/11/2014-06-11-quicktime/</link>
+      <link>http://mono0926.com/blog/2014/06/11/quicktime/</link>
       <pubDate>Wed, 11 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/06/11/2014-06-11-quicktime/</guid>
+      <guid>http://mono0926.com/blog/2014/06/11/quicktime/</guid>
       <description>
 
 &lt;p&gt;iPhoneのPodcastアプリでは再生スピードをコントロール出来て便利なのに、iTunesではその機能が無いので、AppleScriptなど使って出来るようにしてみた。
 本当はiTunesに閉じて実現したいところだけど、それはちょっと難しそう。&lt;/p&gt;
 
-&lt;h2 id=&#34;quicktime-player-7のインストール:df6df5f0e7209f0e5cdee31149179e48&#34;&gt;QuickTime Player 7のインストール&lt;/h2&gt;
+&lt;h2 id=&#34;quicktime-player-7のインストール:2f8c250e353e1b3ac334d422e8922532&#34;&gt;QuickTime Player 7のインストール&lt;/h2&gt;
 
 &lt;!-- more --&gt;
 
@@ -34,7 +34,7 @@
 
 &lt;p&gt;とりあえずQucikTime 7をインストールして、「Show A/V Control」(Command + K)で再生スピードなどコントロール出来るウインドウが開くので、機能的にはここまでで完結。&lt;/p&gt;
 
-&lt;h2 id=&#34;automatorでアプリ化:df6df5f0e7209f0e5cdee31149179e48&#34;&gt;Automatorでアプリ化&lt;/h2&gt;
+&lt;h2 id=&#34;automatorでアプリ化:2f8c250e353e1b3ac334d422e8922532&#34;&gt;Automatorでアプリ化&lt;/h2&gt;
 
 &lt;p&gt;上記までだと、一々ファイルをFinderで開いて、QuickTime Player 7で起動するという手順が必要なので、Automatorを使って省力化してみる。&lt;/p&gt;
 
@@ -57,7 +57,7 @@ end tell
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/mono0926/AppleScript&#34;&gt;GitHub&lt;/a&gt;の&lt;a href=&#34;https://github.com/mono0926/AppleScript/raw/master/ChangeSpeed.zip&#34;&gt;ChangeSpeed&lt;/a&gt;からダウンロードできます。&lt;/p&gt;
 
-&lt;h2 id=&#34;alfredのworkflow化:df6df5f0e7209f0e5cdee31149179e48&#34;&gt;AlfredのWorkflow化&lt;/h2&gt;
+&lt;h2 id=&#34;alfredのworkflow化:2f8c250e353e1b3ac334d422e8922532&#34;&gt;AlfredのWorkflow化&lt;/h2&gt;
 
 &lt;p&gt;Automatorでアプリ化の方法だと、Dockクリックしたりが面倒なのと、倍速の数字を与えられないので、それをAlfredのWorkflowで解消。
 コードとしては、上記のものに、Alfredのオプション引数を与えるようにした(無指定の場合は同じく1.5倍速)程度でほとんどそのまま。

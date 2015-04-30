@@ -11,10 +11,10 @@
     
     <item>
       <title>OSX 10.10(Yosemite)やiOS 8にアップデートして困ったこと</title>
-      <link>http://mono0926.com/blog/2014/06/04/2014-06-04-yosemite/</link>
+      <link>http://mono0926.com/blog/2014/06/04/yosemite/</link>
       <pubDate>Wed, 04 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/06/04/2014-06-04-yosemite/</guid>
+      <guid>http://mono0926.com/blog/2014/06/04/yosemite/</guid>
       <description>
 
 &lt;p&gt;例のごとく、何も考えずにメインマシンをOSX 10.10(Yosemite)・iOS 8にしてしまいましたが、いくつか細かいトラブルが。
@@ -22,11 +22,11 @@
 
 &lt;p&gt;NDAに気をつけつつ困ったことや解決法など(　´･‿･｀)&lt;/p&gt;
 
-&lt;h2 id=&#34;osx-10-10-yosemite-にアップデートして困ったこと:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;OSX 10.10(Yosemite)にアップデートして困ったこと&lt;/h2&gt;
+&lt;h2 id=&#34;osx-10-10-yosemite-にアップデートして困ったこと:f2238a5657d5384caa3f8d23d6640654&#34;&gt;OSX 10.10(Yosemite)にアップデートして困ったこと&lt;/h2&gt;
 
-&lt;h3 id=&#34;pckeyboardhack-https-github-com-tekezo-pckeyboardhack-が起動しない:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;&lt;a href=&#34;https://github.com/tekezo/PCKeyboardHack&#34;&gt;PCKeyboardHack&lt;/a&gt;が起動しない&lt;/h3&gt;
+&lt;h3 id=&#34;pckeyboardhack-https-github-com-tekezo-pckeyboardhack-が起動しない:f2238a5657d5384caa3f8d23d6640654&#34;&gt;&lt;a href=&#34;https://github.com/tekezo/PCKeyboardHack&#34;&gt;PCKeyboardHack&lt;/a&gt;が起動しない&lt;/h3&gt;
 
-&lt;h4 id=&#34;追記-pckeyboardhack-10-7-0-https-pqrs-org-macosx-keyremap4macbook-files-pckeyboardhack-10-7-0-dmg-がリリースされました:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;【追記】&lt;a href=&#34;https://pqrs.org/macosx/keyremap4macbook/files/PCKeyboardHack-10.7.0.dmg&#34;&gt;PCKeyboardHack-10.7.0&lt;/a&gt;がリリースされました！&lt;/h4&gt;
+&lt;h4 id=&#34;追記-pckeyboardhack-10-7-0-https-pqrs-org-macosx-keyremap4macbook-files-pckeyboardhack-10-7-0-dmg-がリリースされました:f2238a5657d5384caa3f8d23d6640654&#34;&gt;【追記】&lt;a href=&#34;https://pqrs.org/macosx/keyremap4macbook/files/PCKeyboardHack-10.7.0.dmg&#34;&gt;PCKeyboardHack-10.7.0&lt;/a&gt;がリリースされました！&lt;/h4&gt;
 
 &lt;p&gt;去年もこれで困ったことを思い出しました。
 Realforceでスペースの両隣のキーでの日本語入力切り替えが効かずにとても不便です。
@@ -39,11 +39,11 @@ Apple純正キーボードだと問題ないですが。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo /sbin/kextload &#39;/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboardHack.10.9.signed.kext&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;bettertouchtool-http-blog-boastr-net-が起動しない:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;&lt;a href=&#34;http://blog.boastr.net/&#34;&gt;BetterTouchTool&lt;/a&gt;が起動しない&lt;/h3&gt;
+&lt;h3 id=&#34;bettertouchtool-http-blog-boastr-net-が起動しない:f2238a5657d5384caa3f8d23d6640654&#34;&gt;&lt;a href=&#34;http://blog.boastr.net/&#34;&gt;BetterTouchTool&lt;/a&gt;が起動しない&lt;/h3&gt;
 
 &lt;!-- more --&gt;
 
-&lt;h4 id=&#34;追記-yosemite対応版のbettertouchtool-http-boastr-net-releases-btt0-997-zip-がダウンロード出来るようになりました:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;【追記】&lt;a href=&#34;http://boastr.net/releases/btt0.997.zip&#34;&gt;Yosemite対応版のBetterTouchTool&lt;/a&gt;がダウンロード出来るようになりました！&lt;/h4&gt;
+&lt;h4 id=&#34;追記-yosemite対応版のbettertouchtool-http-boastr-net-releases-btt0-997-zip-がダウンロード出来るようになりました:f2238a5657d5384caa3f8d23d6640654&#34;&gt;【追記】&lt;a href=&#34;http://boastr.net/releases/btt0.997.zip&#34;&gt;Yosemite対応版のBetterTouchTool&lt;/a&gt;がダウンロード出来るようになりました！&lt;/h4&gt;
 
 &lt;p&gt;これも&lt;a href=&#34;http://blog.boastr.net/os-x-10-10-yosemite/&#34;&gt;OS X 10.10 Yosemite » BetterTouchTool, BetterSnapTool &amp;amp; SecondBar&lt;/a&gt;にすでに記事が上がっていて、現時点ではまだダウンロード出来ないけどまもなく対応版がリリースされる模様。&lt;/p&gt;
 
@@ -58,7 +58,7 @@ Apple純正キーボードだと問題ないですが。&lt;/p&gt;
 
 &lt;p&gt;ただ、Yosemiteはインストールにすごく時間がかかって、残り4分で数十分固まったようになった(大量のファイルコピーなどしている模様・同様の報告多数)ので、失敗したかと思いけっこう怖かったです(　´･‿･｀)&lt;/p&gt;
 
-&lt;h3 id=&#34;homebrewが動かなくなってしまった:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;Homebrewが動かなくなってしまった&lt;/h3&gt;
+&lt;h3 id=&#34;homebrewが動かなくなってしまった:f2238a5657d5384caa3f8d23d6640654&#34;&gt;Homebrewが動かなくなってしまった&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;/usr/local/bin/brew: /usr/local/Library/brew.rb: /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby: bad interpreter: No such file or directory
 &lt;/code&gt;&lt;/pre&gt;
@@ -74,7 +74,7 @@ Apple純正キーボードだと問題ないですが。&lt;/p&gt;
 とはいえ、この編集をしないとbrewコマンド自体効かないし…と困りつつ、&lt;code&gt;2.0&lt;/code&gt;に編集して&lt;code&gt;brew update&lt;/code&gt;するや否や&lt;code&gt;1.8&lt;/code&gt;に戻せばPULLのタイミングでは変更無し状態になってうまくいった(　´･‿･｀)
 ちょっと不便だけど、そんなにする操作じゃないし、こんな運用でしばらく我慢しよう(　´･‿･｀)&lt;/p&gt;
 
-&lt;h3 id=&#34;sleepでクラッシュ-sleep時にクラッシュしたのは偶然だったっぽい:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;&lt;del&gt;Sleepでクラッシュ&lt;/del&gt;Sleep時にクラッシュしたのは偶然だったっぽい&lt;/h3&gt;
+&lt;h3 id=&#34;sleepでクラッシュ-sleep時にクラッシュしたのは偶然だったっぽい:f2238a5657d5384caa3f8d23d6640654&#34;&gt;&lt;del&gt;Sleepでクラッシュ&lt;/del&gt;Sleep時にクラッシュしたのは偶然だったっぽい&lt;/h3&gt;
 
 &lt;p&gt;まだきちんと確かめてないけど、Sleep後に起こそうとしたら再起動がかかって、こんなログが出てた。
 Sleep後だったのは偶然かも。&lt;/p&gt;
@@ -82,11 +82,11 @@ Sleep後だったのは偶然かも。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;panic(cpu 7 caller 0xffffff801600f06c): &amp;quot;TLB invalidation IPI timeout: &amp;quot; &amp;quot;CPU(s) failed to respond to interrupts, unresponsive CPU bitmap: 0x3d, NMIPI acks: orig: 0x0, now: 0x0&amp;quot;@/SourceCache/xnu/xnu-2738.0.0.0.5/osfmk/x86_64/pmap.c:2470
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;ios-8にアップデートして困ったこと:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;iOS 8にアップデートして困ったこと&lt;/h2&gt;
+&lt;h2 id=&#34;ios-8にアップデートして困ったこと:f2238a5657d5384caa3f8d23d6640654&#34;&gt;iOS 8にアップデートして困ったこと&lt;/h2&gt;
 
-&lt;h3 id=&#34;iphoneで-1password-https-agilebits-com-onepassword-が同期できなくなってクラッシュする:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;iPhoneで&lt;a href=&#34;https://agilebits.com/onepassword&#34;&gt;1Password&lt;/a&gt;が同期できなくなってクラッシュする&lt;/h3&gt;
+&lt;h3 id=&#34;iphoneで-1password-https-agilebits-com-onepassword-が同期できなくなってクラッシュする:f2238a5657d5384caa3f8d23d6640654&#34;&gt;iPhoneで&lt;a href=&#34;https://agilebits.com/onepassword&#34;&gt;1Password&lt;/a&gt;が同期できなくなってクラッシュする&lt;/h3&gt;
 
-&lt;h4 id=&#34;追記-ios8で1passwordが使えるようになった-monohub-http-mono0926-com-blog-2014-06-13-password-で解決-ω:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;【追記】&lt;a href=&#34;http://mono0926.com/blog/2014/06/13/password/&#34;&gt;iOS8で1Passwordが使えるようになった - monoHub&lt;/a&gt;で解決（｀・ω・´）&lt;/h4&gt;
+&lt;h4 id=&#34;追記-ios8で1passwordが使えるようになった-monohub-http-mono0926-com-blog-2014-06-13-password-で解決-ω:f2238a5657d5384caa3f8d23d6640654&#34;&gt;【追記】&lt;a href=&#34;http://mono0926.com/blog/2014/06/13/password/&#34;&gt;iOS8で1Passwordが使えるようになった - monoHub&lt;/a&gt;で解決（｀・ω・´）&lt;/h4&gt;
 
 &lt;p&gt;けっこう依存度が高いので、これけっこう困る(　´･‿･｀)
 Beta版使っているのが悪いししばらく我慢かなあと思っていたら、すでに問題認識しているらしく、わりと前向きな対応してもらえそうな雰囲気(　´･‿･｀)
@@ -95,7 +95,7 @@ Beta版使っているのが悪いししばらく我慢かなあと思ってい�
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;en&#34;&gt;&lt;p&gt;iOS 8 folks, there sure are a lot of you using the beta! I’m a bit…broken. Sorry. My devs are working on it!&amp;#10;&amp;#10;[…]&lt;/p&gt;&amp;mdash; 1Password Beta (@1PasswordBeta) &lt;a href=&#34;https://twitter.com/1PasswordBeta/statuses/473747191228399616&#34;&gt;June 3, 2014&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;lineスタンプが買えない-使えない:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;LINEスタンプが買えない・使えない&lt;/h3&gt;
+&lt;h3 id=&#34;lineスタンプが買えない-使えない:f2238a5657d5384caa3f8d23d6640654&#34;&gt;LINEスタンプが買えない・使えない&lt;/h3&gt;
 
 &lt;p&gt;買おうとするとエラーになってしまうし、使おうとすると進捗ダイアログが終わらない（´-ω-｀）けっこう困る（´-ω-｀）
 &lt;a href=&#34;http://a.scn.jp/s/0VrEMIHAB&#34;&gt;申請中の個人スタンプ&lt;/a&gt;も買えないし使えなくなりそう（´・д・｀）
@@ -103,7 +103,7 @@ Beta版使っているのが悪いししばらく我慢かなあと思ってい�
 
 &lt;p&gt;とりあえずパソコン版でしのごう（´-ω-｀）Yosemite上のLINEは問題無いし。&lt;/p&gt;
 
-&lt;h3 id=&#34;tweetbot:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;Tweetbot&lt;/h3&gt;
+&lt;h3 id=&#34;tweetbot:f2238a5657d5384caa3f8d23d6640654&#34;&gt;Tweetbot&lt;/h3&gt;
 
 &lt;p&gt;UI周りかなりがんばってるのが裏目に出て、動作がボロボロ。
 特に、URLをPocketに保存出来ないのがつらたん。

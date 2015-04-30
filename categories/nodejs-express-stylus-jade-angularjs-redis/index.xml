@@ -11,10 +11,10 @@
     
     <item>
       <title>NodeJS &#43; Express &#43; Stylus &#43; Jade &#43; AngularJS &#43; Redisなどなどで、簡単なTODOアプリ</title>
-      <link>http://mono0926.com/blog/2014/05/26/2014-05-26-todo/</link>
+      <link>http://mono0926.com/blog/2014/05/26/todo/</link>
       <pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/26/2014-05-26-todo/</guid>
+      <guid>http://mono0926.com/blog/2014/05/26/todo/</guid>
       <description>&lt;p&gt;NodeJS + Express + Stylus + Jade + AngularJS + Redisなどなどで、&lt;a href=&#34;http://ice-me.herokuapp.com/todos&#34;&gt;簡単なTODOアプリ&lt;/a&gt;作った。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/gp/product/484433588X/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=484433588X&amp;amp;linkCode=as2&amp;amp;tag=mono0926-22&#34;&gt;TypeScriptリファレンス Ver.1.0対応&lt;/a&gt;のサンプルを参考に、アレンジした感じ(オリジナルはSQLiteなど使用)。&lt;/p&gt;

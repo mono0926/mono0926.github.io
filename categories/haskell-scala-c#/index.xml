@@ -11,10 +11,10 @@
     
     <item>
       <title>Haskell勉強中</title>
-      <link>http://mono0926.com/blog/2013/11/23/2013-11-23-haskell/</link>
+      <link>http://mono0926.com/blog/2013/11/23/haskell/</link>
       <pubDate>Sat, 23 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2013/11/23/2013-11-23-haskell/</guid>
+      <guid>http://mono0926.com/blog/2013/11/23/haskell/</guid>
       <description>
 
 &lt;p&gt;2週間くらい前からHaskell勉強中。&lt;/p&gt;
@@ -52,9 +52,9 @@
 
 &lt;p&gt;コンパイル型といえども、記述もシンプルでコンパイル簡単なので、今Pythonとかで簡単な自動化スクリプト書いている代替にもなるかなと。&lt;/p&gt;
 
-&lt;h2 id=&#34;勉強計画:4be2e2a58585e27ee20ac6c578385219&#34;&gt;勉強計画&lt;/h2&gt;
+&lt;h2 id=&#34;勉強計画:7ecb4046cd87d8ce2aec99271f135471&#34;&gt;勉強計画&lt;/h2&gt;
 
-&lt;h3 id=&#34;すごいhaskellたのしく学ぼう-http-www-amazon-co-jp-gp-product-b009ro80xy-ref-as-li-ss-tl-ie-utf8-camp-247-creative-7399-creativeasin-b009ro80xy-linkcode-as2-tag-mono0926-22:4be2e2a58585e27ee20ac6c578385219&#34;&gt;&lt;a href=&#34;http://www.amazon.co.jp/gp/product/B009RO80XY/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=B009RO80XY&amp;amp;linkCode=as2&amp;amp;tag=mono0926-22&#34;&gt;すごいHaskellたのしく学ぼう!&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;すごいhaskellたのしく学ぼう-http-www-amazon-co-jp-gp-product-b009ro80xy-ref-as-li-ss-tl-ie-utf8-camp-247-creative-7399-creativeasin-b009ro80xy-linkcode-as2-tag-mono0926-22:7ecb4046cd87d8ce2aec99271f135471&#34;&gt;&lt;a href=&#34;http://www.amazon.co.jp/gp/product/B009RO80XY/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=B009RO80XY&amp;amp;linkCode=as2&amp;amp;tag=mono0926-22&#34;&gt;すごいHaskellたのしく学ぼう!&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;少し前に話題になっていたこの本をまず読むことに。
 洋書にするか迷ったけど、せっかく和書のKindle版もあるのでそれに頼った。&lt;/p&gt;
@@ -67,15 +67,15 @@
 &lt;p&gt;本の前半は、Haskellの構文に慣れるのに少し苦労しつつ、後半のアプリカティブのあたりでけっこう理解が怪しくなってきた（´-ω-｀）
 理論が理解出来ていなくてしっくりこないところが一部あるものの、コードの挙動などは何とか読み解けているのでまだなんとかいけるはず。&lt;/p&gt;
 
-&lt;h3 id=&#34;その後:4be2e2a58585e27ee20ac6c578385219&#34;&gt;その後&lt;/h3&gt;
+&lt;h3 id=&#34;その後:7ecb4046cd87d8ce2aec99271f135471&#34;&gt;その後&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.amazon.com/gp/product/B00DWJ1BIG/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B00DWJ1BIG&amp;amp;linkCode=as2&amp;amp;tag=mono0926-20&#34;&gt;Parallel and Concurrent Programming in Haskell&lt;/a&gt;が面白そうなので、次に読みたいところ。並列/並行処理周りがまだ弱い気がするのでその勉強もかねて。&lt;/p&gt;
 
 &lt;p&gt;あと、個人的に同じ本を繰り返し読むのが苦手(それが大事なのは理解している)なので、代わりに&lt;a href=&#34;http://itpro.nikkeibp.co.jp/article/COLUMN/20060915/248215/&#34;&gt;本物のプログラマはHaskellを使う&lt;/a&gt;とか読んで曖昧なところの理解を深めて行ければ。&lt;/p&gt;
 
-&lt;h2 id=&#34;実行環境:4be2e2a58585e27ee20ac6c578385219&#34;&gt;実行環境&lt;/h2&gt;
+&lt;h2 id=&#34;実行環境:7ecb4046cd87d8ce2aec99271f135471&#34;&gt;実行環境&lt;/h2&gt;
 
-&lt;h3 id=&#34;ghcインストール:4be2e2a58585e27ee20ac6c578385219&#34;&gt;GHCインストール&lt;/h3&gt;
+&lt;h3 id=&#34;ghcインストール:7ecb4046cd87d8ce2aec99271f135471&#34;&gt;GHCインストール&lt;/h3&gt;
 
 &lt;p&gt;色々処理系があるようだけど、標準のGHCを導入。
 よく分からないけど、Homebrewで良いかと、以下を実行してインストール。
@@ -95,7 +95,7 @@ brew install haskell-platform # これがなんだか理解していない
 ./hoge
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;ideの導入:4be2e2a58585e27ee20ac6c578385219&#34;&gt;IDEの導入&lt;/h3&gt;
+&lt;h3 id=&#34;ideの導入:7ecb4046cd87d8ce2aec99271f135471&#34;&gt;IDEの導入&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://neue.cc/2010/01/04_233.html&#34;&gt;neue cc - Haskell用IDE 「Leksah」の紹介と導入方法&lt;/a&gt;を見てLeksahをインストールすることに。
 すごく簡単なプログラムならSublime Textでもいいかなと思いつつ、やはりちゃんとした補完機能など欲しいので。&lt;/p&gt;

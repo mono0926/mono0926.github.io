@@ -11,15 +11,15 @@
     
     <item>
       <title>IRKitで遊び始めた〜とりあえずTerminalで操作〜</title>
-      <link>http://mono0926.com/blog/2014/05/05/2014-05-05-irkit/</link>
+      <link>http://mono0926.com/blog/2014/05/05/irkit/</link>
       <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/05/2014-05-05-irkit/</guid>
+      <guid>http://mono0926.com/blog/2014/05/05/irkit/</guid>
       <description>
 
 &lt;p&gt;冬場忙しかったりで既存アプリで部屋のリモコン登録する程度しかいじれてなかったけど、最近ようやく落ち着いてきたので、&lt;a href=&#34;http://www.amazon.co.jp/gp/product/B00H91KK26/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=B00H91KK26&amp;amp;linkCode=as2&amp;amp;tag=mono0926-22&#34;&gt;IRKit&lt;/a&gt;で遊んでみる(　´･‿･｀)&lt;/p&gt;
 
-&lt;h2 id=&#34;セットアップ:06dc85592abe03d83c34089180b1ca62&#34;&gt;セットアップ&lt;/h2&gt;
+&lt;h2 id=&#34;セットアップ:b1567300f9c156a049940414df8efe7b&#34;&gt;セットアップ&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://getirkit.com/&#34;&gt;IRKit - Open Source WiFi Connected Infrared Remote Controller&lt;/a&gt;を参考に、諸々設定。&lt;/p&gt;
 
@@ -55,7 +55,7 @@ Pro:~ mono$ arp -a
 &lt;p&gt;ルーターの設定で、固定IPを今さらながら割り当ててみる。
 これで、家の中では安心して&lt;code&gt;192.168.0.4&lt;/code&gt;でアクセス出来るようになった（´-ω-｀）&lt;/p&gt;
 
-&lt;h2 id=&#34;terminalから操作:06dc85592abe03d83c34089180b1ca62&#34;&gt;Terminalから操作&lt;/h2&gt;
+&lt;h2 id=&#34;terminalから操作:b1567300f9c156a049940414df8efe7b&#34;&gt;Terminalから操作&lt;/h2&gt;
 
 &lt;p&gt;普通にリモコンを操作して、その赤外線の範囲内にIRKitが入っていると、青いライトが点滅して、赤外線の信号を取得したことを示してくれる。&lt;/p&gt;
 
@@ -100,15 +100,15 @@ Content-Type: text/plain
     
     <item>
       <title>Node.jsのIRKitライブラリあったから試してみた</title>
-      <link>http://mono0926.com/blog/2014/05/05/2014-05-05-irkit-nodejs/</link>
+      <link>http://mono0926.com/blog/2014/05/05/irkit-nodejs/</link>
       <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/05/2014-05-05-irkit-nodejs/</guid>
+      <guid>http://mono0926.com/blog/2014/05/05/irkit-nodejs/</guid>
       <description>
 
 &lt;p&gt;せっかく&lt;a href=&#34;http://www.amazon.com/gp/product/B00HSO6YD8/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B00HSO6YD8&amp;amp;linkCode=as2&amp;amp;tag=mono0926-20&amp;amp;linkId=SIVQ46LXCW3PK3IO&#34;&gt;Node.js the Right Way: Practical, Server-Side JavaScript That Scales [Kindle Edition]&lt;/a&gt;でNode.jsを勉強したので、IRKitをNode.jsの勉強題材に出来ないかなと思って、とりあえずNode.jsのクライアントライブラリ無いかな？と探したらあったので、叩いてみた。&lt;/p&gt;
 
-&lt;h3 id=&#34;dameleon-node-irkit-https-github-com-dameleon-node-irkit:c338d628af23927c5e322334855f0f3d&#34;&gt;&lt;a href=&#34;https://github.com/dameleon/node-irkit&#34;&gt;dameleon/node-irkit&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;dameleon-node-irkit-https-github-com-dameleon-node-irkit:fb9e6c9b3f57a37d5b1579e678201432&#34;&gt;&lt;a href=&#34;https://github.com/dameleon/node-irkit&#34;&gt;dameleon/node-irkit&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;元々IRKitのAPIがシンプルなので、あまりNode.jsを使う必然性感じないけど、まあ勉強に（´-ω-｀）&lt;/p&gt;
 

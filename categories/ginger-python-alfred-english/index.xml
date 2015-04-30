@@ -11,28 +11,28 @@
     
     <item>
       <title>GingerをAlfredで使えるようにしてみた</title>
-      <link>http://mono0926.com/blog/2013/08/04/2013-08-04-ginger/</link>
+      <link>http://mono0926.com/blog/2013/08/04/ginger/</link>
       <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2013/08/04/2013-08-04-ginger/</guid>
+      <guid>http://mono0926.com/blog/2013/08/04/ginger/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;http://mono0926.com/blog/2013/08/03/ginger/&#34;&gt;Ginger APIをPythonで叩いてみた&lt;/a&gt;の続き。&lt;/p&gt;
 
 &lt;p&gt;元々はAlfredで英文校正が出来るようにしたかったので、ここからが本番。&lt;/p&gt;
 
-&lt;h3 id=&#34;完成版:fbfd9e0860d5c7872b2a9c91f6a52207&#34;&gt;完成版&lt;/h3&gt;
+&lt;h3 id=&#34;完成版:6982ba537ea9b38026c6dcf8fa9c1024&#34;&gt;完成版&lt;/h3&gt;
 
 &lt;p&gt;こんなのが出来たという紹介から。&lt;/p&gt;
 
-&lt;h4 id=&#34;校正:fbfd9e0860d5c7872b2a9c91f6a52207&#34;&gt;校正&lt;/h4&gt;
+&lt;h4 id=&#34;校正:6982ba537ea9b38026c6dcf8fa9c1024&#34;&gt;校正&lt;/h4&gt;
 
 &lt;p&gt;ginger というキーワードに続けて英文を打つと、正してくれる。(この場合、冠詞aの抜けが正される。)&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/ginger1.png&#34; alt=&#34;ginger&#34; /&gt;
 &lt;/p&gt;
 
-&lt;h4 id=&#34;改善候補一覧:fbfd9e0860d5c7872b2a9c91f6a52207&#34;&gt;改善候補一覧&lt;/h4&gt;
+&lt;h4 id=&#34;改善候補一覧:6982ba537ea9b38026c6dcf8fa9c1024&#34;&gt;改善候補一覧&lt;/h4&gt;
 
 &lt;!-- more --&gt;
 
@@ -44,16 +44,16 @@
 
 &lt;p&gt;ともに、選択状態でエンターを押すと、クリップボードにコピーされて、フォーカスの当たっているアプリにペーストされるので、適当にメールとかエディタとか使いながら自然と正しそうな英文が打てるようになるはず。&lt;/p&gt;
 
-&lt;h3 id=&#34;alfredのworkflowの作り方:fbfd9e0860d5c7872b2a9c91f6a52207&#34;&gt;AlfredのWorkflowの作り方&lt;/h3&gt;
+&lt;h3 id=&#34;alfredのworkflowの作り方:6982ba537ea9b38026c6dcf8fa9c1024&#34;&gt;AlfredのWorkflowの作り方&lt;/h3&gt;
 
 &lt;p&gt;一応&lt;a href=&#34;http://support.alfredapp.com/workflows&#34;&gt;ドキュメント&lt;/a&gt;はあるけど、肝心なところが書かれていなかったりして、&lt;a href=&#34;http://www.alfredforum.com/forum/3-share-your-workflows/&#34;&gt;フォーラム&lt;/a&gt;で聞いたり、既存のWorkflowのソースを読んで作り方を学ばなければいけない感じ。
 作り方自体は基本簡単だけど、ちょくちょくはまりどころがあって苦労する。&lt;/p&gt;
 
-&lt;h4 id=&#34;キーワードの受け取り:fbfd9e0860d5c7872b2a9c91f6a52207&#34;&gt;キーワードの受け取り&lt;/h4&gt;
+&lt;h4 id=&#34;キーワードの受け取り:6982ba537ea9b38026c6dcf8fa9c1024&#34;&gt;キーワードの受け取り&lt;/h4&gt;
 
 &lt;p&gt;{query}というキーワードでアクセス出来るので、それをスクリプトに引数ととして渡すのが一般的。&lt;/p&gt;
 
-&lt;h4 id=&#34;結果の表示:fbfd9e0860d5c7872b2a9c91f6a52207&#34;&gt;結果の表示&lt;/h4&gt;
+&lt;h4 id=&#34;結果の表示:6982ba537ea9b38026c6dcf8fa9c1024&#34;&gt;結果の表示&lt;/h4&gt;
 
 &lt;p&gt;処理終了時にnotification飛ばしたり、クリップボードにコピーとかはWorkflowのエディタでパーツをつなぎ合わせたりするだけで簡単だけど、上の例みたいに一覧するのはどうやるのかと思っていたら、XMLで標準出力するらしい。
 関係ないechoやprint文があると壊れるので注意。
@@ -74,7 +74,7 @@
 &lt;p&gt;これも適当に文字列置換したりして作れるけど、PythonでXML組み立てて作る簡単なモジュール作って再利用できるようにしておいた。
 ここらへんの下回りがけっこうこなれていない感。&lt;/p&gt;
 
-&lt;h4 id=&#34;インストール可能なパッケージの作り方:fbfd9e0860d5c7872b2a9c91f6a52207&#34;&gt;インストール可能なパッケージの作り方&lt;/h4&gt;
+&lt;h4 id=&#34;インストール可能なパッケージの作り方:6982ba537ea9b38026c6dcf8fa9c1024&#34;&gt;インストール可能なパッケージの作り方&lt;/h4&gt;
 
 &lt;p&gt;配布されているworkflowは、*.alfredworkflowという形式で、ダブルクリックでインストールできる。&lt;/p&gt;
 

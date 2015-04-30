@@ -11,17 +11,17 @@
     
     <item>
       <title>IRKitに外からアクセス出来るようにした</title>
-      <link>http://mono0926.com/blog/2014/05/05/2014-05-05-irkit-remote/</link>
+      <link>http://mono0926.com/blog/2014/05/05/irkit-remote/</link>
       <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/05/2014-05-05-irkit-remote/</guid>
+      <guid>http://mono0926.com/blog/2014/05/05/irkit-remote/</guid>
       <description>
 
 &lt;p&gt;前回の&lt;a href=&#34;http://mono0926.com/blog/2014/05/05/irkit/&#34;&gt;IRKitで遊び始めた〜とりあえずTerminalで操作〜 - monoHub&lt;/a&gt;の続き。&lt;/p&gt;
 
 &lt;p&gt;前回触った&lt;a href=&#34;http://getirkit.com/#IRKit-Device-API&#34;&gt;IRKit Device HTTP API&lt;/a&gt;は同じWiFi内から操作するためのもので、外からアクセスするときは&lt;a href=&#34;http://getirkit.com/#IRKit-Internet-API&#34;&gt;IRKit Internet HTTP API&lt;/a&gt;を叩くことになる。&lt;/p&gt;
 
-&lt;h2 id=&#34;irkit-internet-http-apiを叩けるように準備:5d8e90fe8a0a2368638010d84e1be72c&#34;&gt;IRKit Internet HTTP APIを叩けるように準備&lt;/h2&gt;
+&lt;h2 id=&#34;irkit-internet-http-apiを叩けるように準備:a4ad3d8d5b83373b6f000eb6be4ade0b&#34;&gt;IRKit Internet HTTP APIを叩けるように準備&lt;/h2&gt;
 
 &lt;p&gt;まずは、clienttokenを取得。&lt;/p&gt;
 
@@ -52,7 +52,7 @@ X-Content-Type-Options: nosniff
 {&amp;quot;deviceid&amp;quot;:&amp;quot;XXXXXXXXXXXXXXXXXXXXXX&amp;quot;,&amp;quot;clientkey&amp;quot;:&amp;quot;YYYYYYYYYYYYYYYYYYYYY&amp;quot;} #伏せています
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;internet-http-apiを使ってみる:5d8e90fe8a0a2368638010d84e1be72c&#34;&gt;Internet HTTP APIを使ってみる&lt;/h2&gt;
+&lt;h2 id=&#34;internet-http-apiを使ってみる:a4ad3d8d5b83373b6f000eb6be4ade0b&#34;&gt;Internet HTTP APIを使ってみる&lt;/h2&gt;
 
 &lt;p&gt;deviceid・clientkey・家のライトのオンオフ信号を&lt;a href=&#34;https://api.getirkit.com/1/messages&#34;&gt;https://api.getirkit.com/1/messages&lt;/a&gt; にポストすると、ちゃんと反応した、素晴らしい(　´･‿･｀)&lt;/p&gt;
 
@@ -65,7 +65,7 @@ X-Content-Type-Options: nosniff
 &lt;p&gt;上記操作で、IRKitサーバーがIRKit端末にアクセス出来るようになって、認証すれば外部から操作出来るようになるって感じかなあ。
 特に、deviceid・clientkeyは漏れるとまずいですね（´-ω-｀）&lt;/p&gt;
 
-&lt;h2 id=&#34;ついでにapikeyを取得:5d8e90fe8a0a2368638010d84e1be72c&#34;&gt;ついでにapiKeyを取得&lt;/h2&gt;
+&lt;h2 id=&#34;ついでにapikeyを取得:a4ad3d8d5b83373b6f000eb6be4ade0b&#34;&gt;ついでにapiKeyを取得&lt;/h2&gt;
 
 &lt;p&gt;iPhoneアプリを作ったりするのに使う用のkeyを取得するAPIもあったので、ついでに叩いてみた。
 入力したメールアドレスに確認メールが来て、無事にapiKeyゲット。&lt;/p&gt;

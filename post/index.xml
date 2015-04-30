@@ -11,10 +11,10 @@
     
     <item>
       <title>SourceTreeでブランチ名をコミットメッセージの先頭に自動挿入</title>
-      <link>http://mono0926.com/blog/2014/10/31/2014-10-31-sourcetree/</link>
+      <link>http://mono0926.com/blog/2014/10/31/sourcetree/</link>
       <pubDate>Fri, 31 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/10/31/2014-10-31-sourcetree/</guid>
+      <guid>http://mono0926.com/blog/2014/10/31/sourcetree/</guid>
       <description>
 
 &lt;p&gt;Git便利ですね。今やこれ無しで開発は無理、というレベルです。&lt;/p&gt;
@@ -41,11 +41,11 @@
 
 &lt;p&gt;(僕はこの時点で、&lt;code&gt;commit-msg&lt;/code&gt;はバリデーションフェーズ的なもので、書き換えは不可能なのでは？と思って諦めてしまいそうでした。)&lt;/p&gt;
 
-&lt;h2 id=&#34;設定手順:6005f26feb4f23e1dcff7e3467d41f66&#34;&gt;設定手順&lt;/h2&gt;
+&lt;h2 id=&#34;設定手順:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;設定手順&lt;/h2&gt;
 
 &lt;!-- more --&gt;
 
-&lt;h3 id=&#34;コミットメッセージのテンプレートを作成して指定の文章が自動挿入されるようにする:6005f26feb4f23e1dcff7e3467d41f66&#34;&gt;コミットメッセージのテンプレートを作成して指定の文章が自動挿入されるようにする&lt;/h3&gt;
+&lt;h3 id=&#34;コミットメッセージのテンプレートを作成して指定の文章が自動挿入されるようにする:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;コミットメッセージのテンプレートを作成して指定の文章が自動挿入されるようにする&lt;/h3&gt;
 
 &lt;p&gt;以下を、特定のレポジトリルートで実行。&lt;/p&gt;
 
@@ -60,7 +60,7 @@ git config commit.template $HOME/.gitmessage.txt
 
 &lt;p&gt;これで、コミットメッセージ作成時に、&lt;code&gt;[branchname]&lt;/code&gt;が先頭に自動挿入されます。&lt;/p&gt;
 
-&lt;h3 id=&#34;コミット後に-branchname-がブランチ名へ書き換えられるようにする:6005f26feb4f23e1dcff7e3467d41f66&#34;&gt;コミット後に[branchname]がブランチ名へ書き換えられるようにする&lt;/h3&gt;
+&lt;h3 id=&#34;コミット後に-branchname-がブランチ名へ書き換えられるようにする:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;コミット後に[branchname]がブランチ名へ書き換えられるようにする&lt;/h3&gt;
 
 &lt;p&gt;&lt;code&gt;commit-msg&lt;/code&gt;フックを利用します。&lt;/p&gt;
 
@@ -81,29 +81,29 @@ File.write(message_file, newmessage)
 &lt;p&gt;&lt;code&gt;feature/hoge/#35&lt;/code&gt;などとなっている場合、&lt;code&gt;[branchname]&lt;/code&gt;部分が&lt;code&gt;#35&lt;/code&gt;と置換されるような処理をしています。
 用途に応じて適宜書き換えてください。&lt;/p&gt;
 
-&lt;h2 id=&#34;挙動:6005f26feb4f23e1dcff7e3467d41f66&#34;&gt;挙動&lt;/h2&gt;
+&lt;h2 id=&#34;挙動:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;挙動&lt;/h2&gt;
 
 &lt;p&gt;文章だけではイメージが沸きにくいかもしれないので、スクリーンショット貼っておきます。&lt;/p&gt;
 
-&lt;h3 id=&#34;コミットメッセージを入れようとすると先頭に-branchname-が自動挿入:6005f26feb4f23e1dcff7e3467d41f66&#34;&gt;コミットメッセージを入れようとすると先頭に[branchname]が自動挿入&lt;/h3&gt;
+&lt;h3 id=&#34;コミットメッセージを入れようとすると先頭に-branchname-が自動挿入:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;コミットメッセージを入れようとすると先頭に[branchname]が自動挿入&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/st1.png&#34; alt=&#34;&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;そのままその後にメッセージを入れてコミットします。&lt;/p&gt;
 
-&lt;h3 id=&#34;branchname-が置換されてブランチ名になってくれます:6005f26feb4f23e1dcff7e3467d41f66&#34;&gt;[branchname]が置換されてブランチ名になってくれます&lt;/h3&gt;
+&lt;h3 id=&#34;branchname-が置換されてブランチ名になってくれます:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;[branchname]が置換されてブランチ名になってくれます&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/st2.png&#34; alt=&#34;&#34; /&gt;
 &lt;/p&gt;
 
-&lt;h2 id=&#34;実際に使って見て:6005f26feb4f23e1dcff7e3467d41f66&#34;&gt;実際に使って見て&lt;/h2&gt;
+&lt;h2 id=&#34;実際に使って見て:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;実際に使って見て&lt;/h2&gt;
 
 &lt;p&gt;先週から活用し初めましたがすこぶる快適です(　´･‿･｀)&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://twitter.com/yabuchin_y&#34;&gt;@yabuchin_y&lt;/a&gt;さん、ありがとうございました(　´･‿･｀)&lt;/p&gt;
 
-&lt;h3 id=&#34;参考リンク:6005f26feb4f23e1dcff7e3467d41f66&#34;&gt;参考リンク&lt;/h3&gt;
+&lt;h3 id=&#34;参考リンク:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;参考リンク&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://git-scm.com/book/ja/v1/Git-%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA-Git-%E3%83%95%E3%83%83%E3%82%AF&#34;&gt;Git - Git フック&lt;/a&gt;&lt;/li&gt;
@@ -114,10 +114,10 @@ File.write(message_file, newmessage)
     
     <item>
       <title>クックパッド第5回 開発コンテスト24に参戦した話</title>
-      <link>http://mono0926.com/blog/2014/10/20/2014-10-20-cookpad/</link>
+      <link>http://mono0926.com/blog/2014/10/20/cookpad/</link>
       <pubDate>Mon, 20 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/10/20/2014-10-20-cookpad/</guid>
+      <guid>http://mono0926.com/blog/2014/10/20/cookpad/</guid>
       <description>
 
 &lt;p&gt;先日も&lt;a href=&#34;http://isucon.net/&#34;&gt;ISUCONコンテスト予選&lt;/a&gt;に出たばかりですが、土日(10月18-19日)に
@@ -126,7 +126,7 @@ File.write(message_file, newmessage)
 &lt;p&gt;&lt;a href=&#34;http://kinen.yabuchin.com/&#34;&gt;勝手にアニバーサリー ～なんでもない日を、あの人との記念日に。～&lt;/a&gt;が成果物です。
 ちなみに、タイトルは僕が初め適当に提案したのが意外と良かったらしくそのまま採用されました（｀・ω・´）&lt;/p&gt;
 
-&lt;h2 id=&#34;メンバー:1b0a3e8188cd1975d06f6307158f7cb9&#34;&gt;メンバー&lt;/h2&gt;
+&lt;h2 id=&#34;メンバー:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;メンバー&lt;/h2&gt;
 
 &lt;p&gt;こんな感じのバランスの良いメンバーが集まりました(　´･‿･｀)&lt;/p&gt;
 
@@ -160,7 +160,7 @@ File.write(message_file, newmessage)
 
 &lt;p&gt;僕が平均年齢くらいの華やかなメンバーでした。&lt;/p&gt;
 
-&lt;h2 id=&#34;当日まで:1b0a3e8188cd1975d06f6307158f7cb9&#34;&gt;当日まで&lt;/h2&gt;
+&lt;h2 id=&#34;当日まで:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;当日まで&lt;/h2&gt;
 
 &lt;!-- more --&gt;
 
@@ -188,11 +188,11 @@ File.write(message_file, newmessage)
 &lt;img src=&#34;http://mono0926.com/images/post/base6_4.jpg&#34; alt=&#34;&#34; /&gt;
 &lt;/p&gt;
 
-&lt;h2 id=&#34;当日:1b0a3e8188cd1975d06f6307158f7cb9&#34;&gt;当日&lt;/h2&gt;
+&lt;h2 id=&#34;当日:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;当日&lt;/h2&gt;
 
 &lt;p&gt;去年も&lt;a href=&#34;http://about.me/yomei&#34;&gt;余命チェッカー&lt;/a&gt;で参戦してたので、大体勝手は分かっていました。&lt;/p&gt;
 
-&lt;h3 id=&#34;朝9時:1b0a3e8188cd1975d06f6307158f7cb9&#34;&gt;朝9時&lt;/h3&gt;
+&lt;h3 id=&#34;朝9時:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;朝9時&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://info.cookpad.com/24contest_5&#34;&gt;クックパッドの「第5回 開発コンテスト24」&lt;/a&gt;をリロードして、お題が「誰かと話すキッカケを作るサービス」であることを把握。&lt;/p&gt;
 
@@ -203,11 +203,11 @@ File.write(message_file, newmessage)
 &lt;p&gt;具体的には、Twitterで過去に絡んだ人たちに、そのやり取りのキーワードを抽出して○○記念日のメッセージを投げるみたいな。
 (Twitterに限らずもっと膨らませたかったけど、実装コストの兼ね合いもあり)&lt;/p&gt;
 
-&lt;h3 id=&#34;1日目昼:1b0a3e8188cd1975d06f6307158f7cb9&#34;&gt;1日目昼&lt;/h3&gt;
+&lt;h3 id=&#34;1日目昼:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;1日目昼&lt;/h3&gt;
 
 &lt;p&gt;作るものが決まったので、もう少し仕様や画面を詰めるような相談をしたり、出来るところは実装始めたり。&lt;/p&gt;
 
-&lt;h4 id=&#34;やぶさん達はいつの間にかお寿司屋さん行ってました-д:1b0a3e8188cd1975d06f6307158f7cb9&#34;&gt;やぶさん達はいつの間にかお寿司屋さん行ってました（´・д・｀）&lt;/h4&gt;
+&lt;h4 id=&#34;やぶさん達はいつの間にかお寿司屋さん行ってました-д:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;やぶさん達はいつの間にかお寿司屋さん行ってました（´・д・｀）&lt;/h4&gt;
 
 &lt;p&gt;僕は不慣れなGo言語での以下の2点の実装法を手短に調べて、うんいけそうみたいな感触を得ました。&lt;/p&gt;
 
@@ -230,12 +230,12 @@ File.write(message_file, newmessage)
 
 &lt;p&gt;僕はキャラクター &lt;a href=&#34;https://twitter.com/kinenn_bi&#34;&gt;アニバちゃんのTwitterアカウント&lt;/a&gt;作って遊んだりしてました(　´･‿･｀)&lt;/p&gt;
 
-&lt;h3 id=&#34;1日目夜:1b0a3e8188cd1975d06f6307158f7cb9&#34;&gt;1日目夜&lt;/h3&gt;
+&lt;h3 id=&#34;1日目夜:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;1日目夜&lt;/h3&gt;
 
 &lt;p&gt;夜になると、またみんな戻ってきて、僕も黙々と実装。&lt;br /&gt;
 Twitter認証周りはやぶさんにお願いして、僕は過去のやり取りを取得して良い感じの記念日を作るところをガリガリGoで書いていました。&lt;/p&gt;
 
-&lt;h3 id=&#34;深夜:1b0a3e8188cd1975d06f6307158f7cb9&#34;&gt;深夜&lt;/h3&gt;
+&lt;h3 id=&#34;深夜:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;深夜&lt;/h3&gt;
 
 &lt;p&gt;引き続きみんなゴリゴリ実装したりデザイン作ったり。&lt;/p&gt;
 
@@ -246,7 +246,7 @@ Twitter認証周りはやぶさんにお願いして、僕は過去のやり取�
 &lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/misawa.png&#34; alt=&#34;&#34; /&gt;
 &lt;/p&gt;
 
-&lt;h3 id=&#34;2日目朝:1b0a3e8188cd1975d06f6307158f7cb9&#34;&gt;2日目朝&lt;/h3&gt;
+&lt;h3 id=&#34;2日目朝:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;2日目朝&lt;/h3&gt;
 
 &lt;p&gt;7時くらいに起きました。&lt;br /&gt;
 やぶさん(完徹)以外は皆寝てました。&lt;br /&gt;
@@ -259,7 +259,7 @@ Twitter認証周りはやぶさんにお願いして、僕は過去のやり取�
 
 &lt;p&gt;30分くらい前にフォームの入力し始めるドタバタ感がありつつ、無事に応募完了。&lt;/p&gt;
 
-&lt;h3 id=&#34;9時の提出後のドタバタ:1b0a3e8188cd1975d06f6307158f7cb9&#34;&gt;9時の提出後のドタバタ&lt;/h3&gt;
+&lt;h3 id=&#34;9時の提出後のドタバタ:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;9時の提出後のドタバタ&lt;/h3&gt;
 
 &lt;p&gt;なんかよく落ちるみたいな問題があって、対応。
 特に、僕が&lt;code&gt;log.Fatalln&lt;/code&gt;しちゃってたのがインパクト大きかった模様。&lt;/p&gt;
@@ -272,7 +272,7 @@ error出たときのハンドリングとして統一的にやっていたので
 
 &lt;p&gt;と思いきや、まだ1箇所認証周りで落ちるところがあとで発覚して、あまり深く調べず今でもまだ直ってません（´・ω・｀）&lt;/p&gt;
 
-&lt;h3 id=&#34;結果:1b0a3e8188cd1975d06f6307158f7cb9&#34;&gt;結果&lt;/h3&gt;
+&lt;h3 id=&#34;結果:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;結果&lt;/h3&gt;
 
 &lt;p&gt;2日目夕方くらいに発表されましたが、入選ならずで残念でした。&lt;br /&gt;
 ちょくちょくサービスダウンしてて不安定だったのが響いたかも（´-ω-｀）&lt;br /&gt;
@@ -284,10 +284,10 @@ error出たときのハンドリングとして統一的にやっていたので
     
     <item>
       <title>iOS 8/Swift エンジニア勉強会資料公開しました</title>
-      <link>http://mono0926.com/blog/2014/10/05/2014-10-05-swift-lt/</link>
+      <link>http://mono0926.com/blog/2014/10/05/swift-lt/</link>
       <pubDate>Sun, 05 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/10/05/2014-10-05-swift-lt/</guid>
+      <guid>http://mono0926.com/blog/2014/10/05/swift-lt/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://connpass.com/event/8629/&#34;&gt;iOS 8/Swift エンジニア勉強会&lt;/a&gt;が台風で延期になったので、手元にいつまでもあってもしょうもないので資料公開しました(　´･‿･｀)&lt;/p&gt;
 
 &lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/39879908&#34; width=&#34;427&#34; height=&#34;356&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;https://www.slideshare.net/mono0926/lt-yahoo&#34; title=&#34;Xcode 6で利用可能になった ベクター画像リソースを 深掘り&#34; target=&#34;_blank&#34;&gt;Xcode 6で利用可能になった ベクター画像リソースを 深掘り&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;http://www.slideshare.net/mono0926&#34; target=&#34;_blank&#34;&gt;Masayuki Ono&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
@@ -303,10 +303,10 @@ error出たときのハンドリングとして統一的にやっていたので
     
     <item>
       <title>ラヴ様LINEスタンプ6月売り上げ</title>
-      <link>http://mono0926.com/blog/2014/07/01/2014-07-01-stamp/</link>
+      <link>http://mono0926.com/blog/2014/07/01/stamp/</link>
       <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/07/01/2014-07-01-stamp/</guid>
+      <guid>http://mono0926.com/blog/2014/07/01/stamp/</guid>
       <description>&lt;p&gt;先月6月の4日昼から公開された愛犬ラヴ様のLINEスタンプですが、6月売り上げが確定しました。
 &lt;a href=&#34;http://bit.ly/love-stamp&#34;&gt;http://bit.ly/love-stamp&lt;/a&gt;&lt;/p&gt;
 
@@ -323,10 +323,10 @@ error出たときのハンドリングとして統一的にやっていたので
     
     <item>
       <title>iOS8で1Passwordが使えるようになった</title>
-      <link>http://mono0926.com/blog/2014/06/13/2014-06-13-password/</link>
+      <link>http://mono0926.com/blog/2014/06/13/password/</link>
       <pubDate>Fri, 13 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/06/13/2014-06-13-password/</guid>
+      <guid>http://mono0926.com/blog/2014/06/13/password/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://mono0926.com/blog/2014/06/04/yosemite/&#34;&gt;OSX 10.10(Yosemite)やiOS 8にアップデートして困ったこと - monoHub&lt;/a&gt;で書いた通り、iOS 8にして以来、&lt;a href=&#34;https://agilebits.com/onepassword/ios&#34;&gt;1Password&lt;/a&gt;が使えなくてつらたんでした（´-ω-｀）&lt;/p&gt;
 
 &lt;p&gt;しかし、ベータ版なら使えるという情報が。&lt;/p&gt;
@@ -348,44 +348,17 @@ error出たときのハンドリングとして統一的にやっていたので
     </item>
     
     <item>
-      <title>LINEクリエイターズスタンプ公開1週間の収益推移</title>
-      <link>http://mono0926.com/blog/2014/06/11/2014-06-11-stamp/</link>
-      <pubDate>Wed, 11 Jun 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://mono0926.com/blog/2014/06/11/2014-06-11-stamp/</guid>
-      <description>&lt;p&gt;ラヴさんLINEスタンプが公開されて昨日で、ちょうど1週間経ちましたが、収益はこんな推移でした。&lt;br /&gt;
-&lt;a href=&#34;http://bit.ly/love-stamp&#34;&gt;http://bit.ly/love-stamp&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;愛犬(ラブラドール・レトリーバー)のラヴさんをモデルにしたスタンプです。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/stamp.png&#34; alt=&#34;love&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;4日目までは、公開されたことをお知らせしたりいくつか販促行為していましたが、ネタ切れなどなどの理由により、5日目からはほぼ放置してました。&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;5日目から売上もかなり落ち込み、初動の勢いや販促などないと虫の息かと思いきや、7日目に少し盛り返して、このくらいじわじわ売れれば嬉しいなと思ったり(　´･‿･｀)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/stamp2.png&#34; alt=&#34;love&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;個人的にもけっこう便利に使っているので、ぽちっていただけるととても嬉しいです(　´･‿･｀)&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>iTunesの動画や音楽の再生スピードを変える方法</title>
-      <link>http://mono0926.com/blog/2014/06/11/2014-06-11-quicktime/</link>
+      <link>http://mono0926.com/blog/2014/06/11/quicktime/</link>
       <pubDate>Wed, 11 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/06/11/2014-06-11-quicktime/</guid>
+      <guid>http://mono0926.com/blog/2014/06/11/quicktime/</guid>
       <description>
 
 &lt;p&gt;iPhoneのPodcastアプリでは再生スピードをコントロール出来て便利なのに、iTunesではその機能が無いので、AppleScriptなど使って出来るようにしてみた。
 本当はiTunesに閉じて実現したいところだけど、それはちょっと難しそう。&lt;/p&gt;
 
-&lt;h2 id=&#34;quicktime-player-7のインストール:df6df5f0e7209f0e5cdee31149179e48&#34;&gt;QuickTime Player 7のインストール&lt;/h2&gt;
+&lt;h2 id=&#34;quicktime-player-7のインストール:2f8c250e353e1b3ac334d422e8922532&#34;&gt;QuickTime Player 7のインストール&lt;/h2&gt;
 
 &lt;!-- more --&gt;
 
@@ -399,7 +372,7 @@ error出たときのハンドリングとして統一的にやっていたので
 
 &lt;p&gt;とりあえずQucikTime 7をインストールして、「Show A/V Control」(Command + K)で再生スピードなどコントロール出来るウインドウが開くので、機能的にはここまでで完結。&lt;/p&gt;
 
-&lt;h2 id=&#34;automatorでアプリ化:df6df5f0e7209f0e5cdee31149179e48&#34;&gt;Automatorでアプリ化&lt;/h2&gt;
+&lt;h2 id=&#34;automatorでアプリ化:2f8c250e353e1b3ac334d422e8922532&#34;&gt;Automatorでアプリ化&lt;/h2&gt;
 
 &lt;p&gt;上記までだと、一々ファイルをFinderで開いて、QuickTime Player 7で起動するという手順が必要なので、Automatorを使って省力化してみる。&lt;/p&gt;
 
@@ -422,7 +395,7 @@ end tell
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/mono0926/AppleScript&#34;&gt;GitHub&lt;/a&gt;の&lt;a href=&#34;https://github.com/mono0926/AppleScript/raw/master/ChangeSpeed.zip&#34;&gt;ChangeSpeed&lt;/a&gt;からダウンロードできます。&lt;/p&gt;
 
-&lt;h2 id=&#34;alfredのworkflow化:df6df5f0e7209f0e5cdee31149179e48&#34;&gt;AlfredのWorkflow化&lt;/h2&gt;
+&lt;h2 id=&#34;alfredのworkflow化:2f8c250e353e1b3ac334d422e8922532&#34;&gt;AlfredのWorkflow化&lt;/h2&gt;
 
 &lt;p&gt;Automatorでアプリ化の方法だと、Dockクリックしたりが面倒なのと、倍速の数字を与えられないので、それをAlfredのWorkflowで解消。
 コードとしては、上記のものに、Alfredのオプション引数を与えるようにした(無指定の場合は同じく1.5倍速)程度でほとんどそのまま。
@@ -438,36 +411,11 @@ AppleScriptを実行するWorkflowを新規作成するだけ。
     </item>
     
     <item>
-      <title>ラヴさんLINEスタンプ初日売上</title>
-      <link>http://mono0926.com/blog/2014/06/05/2014-06-05-stamp/</link>
-      <pubDate>Thu, 05 Jun 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://mono0926.com/blog/2014/06/05/2014-06-05-stamp/</guid>
-      <description>&lt;p&gt;昨日ようやく審査が終わってリリースされた&lt;a href=&#34;http://bit.ly/love-stamp&#34;&gt;ラヴさんLINEスタンプ&lt;/a&gt;ですが、初日はこんな感じで、日付変わってからの購入も含めると18個くらい買っていただけました(　´･‿･｀)&lt;br /&gt;
-ありがとうございます(　´･‿･｀)&lt;br /&gt;
-愛犬(ラブラドール・レトリーバー)をモデルにしたスタンプです。&lt;/p&gt;
-
-&lt;iframe height=371 width=600 src=&#34;//docs.google.com/spreadsheets/d/1aUnZ1YRlG-ayHbG2g52AU1WXv083oQ6SuBHtVtoVDi4/gviz/chartiframe?oid=1450462305&#34; seamless frameborder=0 scrolling=no&gt;&lt;/iframe&gt;
-
-&lt;p&gt;どんだけ効果あるか分からないけど、&lt;a href=&#34;https://ghorus.com/projects/198&#34;&gt;GHORUSにもラヴさんスタンプ登録&lt;/a&gt;しておいたので、応援していただけると嬉しいです(　´･‿･｀)&lt;/p&gt;
-
-&lt;p&gt;あと、&lt;a href=&#34;http://www.stampers.me/stamp/1092&#34;&gt;ラヴさん (ラブラドール) by MONO Stampers（スタンパーズ）&lt;/a&gt;もイイネとかしていただけると喜びます(　´･‿･｀)&lt;/p&gt;
-
-&lt;p&gt;しかし、クリエイターズスタンプは検索も出来ないし、&lt;a href=&#34;http://bit.ly/love-stamp&#34;&gt;ラヴさんLINEスタンプ&lt;/a&gt;からの購入も敷居が高いし、誰か知り合いが使っているのを気に入ってタップしてポチる以外の導線がほとんど期待出来ないのが残念(　´･‿･｀)
-ランキング上位に行けば違うのでしょうが（´-ω-｀）&lt;/p&gt;
-
-&lt;p&gt;ラヴさんスタンプ作成に使ったペンタブくらいは売り上げたい(　´･‿･｀)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/gp/product/B00EUVTVVY/ref=as_li_ss_il?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=B00EUVTVVY&amp;linkCode=as2&amp;tag=mono0926-22&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B00EUVTVVY&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=mono0926-22&#34; &gt;&lt;/a&gt;&lt;img src=&#34;http://ir-jp.amazon-adsystem.com/e/ir?t=mono0926-22&amp;l=as2&amp;o=9&amp;a=B00EUVTVVY&#34; width=&#34;1&#34; height=&#34;1&#34; border=&#34;0&#34; alt=&#34;&#34; style=&#34;border:none !important; margin:0px !important;&#34; /&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>OSX 10.10(Yosemite)やiOS 8にアップデートして困ったこと</title>
-      <link>http://mono0926.com/blog/2014/06/04/2014-06-04-yosemite/</link>
+      <link>http://mono0926.com/blog/2014/06/04/yosemite/</link>
       <pubDate>Wed, 04 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/06/04/2014-06-04-yosemite/</guid>
+      <guid>http://mono0926.com/blog/2014/06/04/yosemite/</guid>
       <description>
 
 &lt;p&gt;例のごとく、何も考えずにメインマシンをOSX 10.10(Yosemite)・iOS 8にしてしまいましたが、いくつか細かいトラブルが。
@@ -475,11 +423,11 @@ AppleScriptを実行するWorkflowを新規作成するだけ。
 
 &lt;p&gt;NDAに気をつけつつ困ったことや解決法など(　´･‿･｀)&lt;/p&gt;
 
-&lt;h2 id=&#34;osx-10-10-yosemite-にアップデートして困ったこと:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;OSX 10.10(Yosemite)にアップデートして困ったこと&lt;/h2&gt;
+&lt;h2 id=&#34;osx-10-10-yosemite-にアップデートして困ったこと:f2238a5657d5384caa3f8d23d6640654&#34;&gt;OSX 10.10(Yosemite)にアップデートして困ったこと&lt;/h2&gt;
 
-&lt;h3 id=&#34;pckeyboardhack-https-github-com-tekezo-pckeyboardhack-が起動しない:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;&lt;a href=&#34;https://github.com/tekezo/PCKeyboardHack&#34;&gt;PCKeyboardHack&lt;/a&gt;が起動しない&lt;/h3&gt;
+&lt;h3 id=&#34;pckeyboardhack-https-github-com-tekezo-pckeyboardhack-が起動しない:f2238a5657d5384caa3f8d23d6640654&#34;&gt;&lt;a href=&#34;https://github.com/tekezo/PCKeyboardHack&#34;&gt;PCKeyboardHack&lt;/a&gt;が起動しない&lt;/h3&gt;
 
-&lt;h4 id=&#34;追記-pckeyboardhack-10-7-0-https-pqrs-org-macosx-keyremap4macbook-files-pckeyboardhack-10-7-0-dmg-がリリースされました:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;【追記】&lt;a href=&#34;https://pqrs.org/macosx/keyremap4macbook/files/PCKeyboardHack-10.7.0.dmg&#34;&gt;PCKeyboardHack-10.7.0&lt;/a&gt;がリリースされました！&lt;/h4&gt;
+&lt;h4 id=&#34;追記-pckeyboardhack-10-7-0-https-pqrs-org-macosx-keyremap4macbook-files-pckeyboardhack-10-7-0-dmg-がリリースされました:f2238a5657d5384caa3f8d23d6640654&#34;&gt;【追記】&lt;a href=&#34;https://pqrs.org/macosx/keyremap4macbook/files/PCKeyboardHack-10.7.0.dmg&#34;&gt;PCKeyboardHack-10.7.0&lt;/a&gt;がリリースされました！&lt;/h4&gt;
 
 &lt;p&gt;去年もこれで困ったことを思い出しました。
 Realforceでスペースの両隣のキーでの日本語入力切り替えが効かずにとても不便です。
@@ -492,11 +440,11 @@ Apple純正キーボードだと問題ないですが。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sudo /sbin/kextload &#39;/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboardHack.10.9.signed.kext&#39;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h3 id=&#34;bettertouchtool-http-blog-boastr-net-が起動しない:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;&lt;a href=&#34;http://blog.boastr.net/&#34;&gt;BetterTouchTool&lt;/a&gt;が起動しない&lt;/h3&gt;
+&lt;h3 id=&#34;bettertouchtool-http-blog-boastr-net-が起動しない:f2238a5657d5384caa3f8d23d6640654&#34;&gt;&lt;a href=&#34;http://blog.boastr.net/&#34;&gt;BetterTouchTool&lt;/a&gt;が起動しない&lt;/h3&gt;
 
 &lt;!-- more --&gt;
 
-&lt;h4 id=&#34;追記-yosemite対応版のbettertouchtool-http-boastr-net-releases-btt0-997-zip-がダウンロード出来るようになりました:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;【追記】&lt;a href=&#34;http://boastr.net/releases/btt0.997.zip&#34;&gt;Yosemite対応版のBetterTouchTool&lt;/a&gt;がダウンロード出来るようになりました！&lt;/h4&gt;
+&lt;h4 id=&#34;追記-yosemite対応版のbettertouchtool-http-boastr-net-releases-btt0-997-zip-がダウンロード出来るようになりました:f2238a5657d5384caa3f8d23d6640654&#34;&gt;【追記】&lt;a href=&#34;http://boastr.net/releases/btt0.997.zip&#34;&gt;Yosemite対応版のBetterTouchTool&lt;/a&gt;がダウンロード出来るようになりました！&lt;/h4&gt;
 
 &lt;p&gt;これも&lt;a href=&#34;http://blog.boastr.net/os-x-10-10-yosemite/&#34;&gt;OS X 10.10 Yosemite » BetterTouchTool, BetterSnapTool &amp;amp; SecondBar&lt;/a&gt;にすでに記事が上がっていて、現時点ではまだダウンロード出来ないけどまもなく対応版がリリースされる模様。&lt;/p&gt;
 
@@ -511,7 +459,7 @@ Apple純正キーボードだと問題ないですが。&lt;/p&gt;
 
 &lt;p&gt;ただ、Yosemiteはインストールにすごく時間がかかって、残り4分で数十分固まったようになった(大量のファイルコピーなどしている模様・同様の報告多数)ので、失敗したかと思いけっこう怖かったです(　´･‿･｀)&lt;/p&gt;
 
-&lt;h3 id=&#34;homebrewが動かなくなってしまった:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;Homebrewが動かなくなってしまった&lt;/h3&gt;
+&lt;h3 id=&#34;homebrewが動かなくなってしまった:f2238a5657d5384caa3f8d23d6640654&#34;&gt;Homebrewが動かなくなってしまった&lt;/h3&gt;
 
 &lt;pre&gt;&lt;code&gt;/usr/local/bin/brew: /usr/local/Library/brew.rb: /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby: bad interpreter: No such file or directory
 &lt;/code&gt;&lt;/pre&gt;
@@ -527,7 +475,7 @@ Apple純正キーボードだと問題ないですが。&lt;/p&gt;
 とはいえ、この編集をしないとbrewコマンド自体効かないし…と困りつつ、&lt;code&gt;2.0&lt;/code&gt;に編集して&lt;code&gt;brew update&lt;/code&gt;するや否や&lt;code&gt;1.8&lt;/code&gt;に戻せばPULLのタイミングでは変更無し状態になってうまくいった(　´･‿･｀)
 ちょっと不便だけど、そんなにする操作じゃないし、こんな運用でしばらく我慢しよう(　´･‿･｀)&lt;/p&gt;
 
-&lt;h3 id=&#34;sleepでクラッシュ-sleep時にクラッシュしたのは偶然だったっぽい:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;&lt;del&gt;Sleepでクラッシュ&lt;/del&gt;Sleep時にクラッシュしたのは偶然だったっぽい&lt;/h3&gt;
+&lt;h3 id=&#34;sleepでクラッシュ-sleep時にクラッシュしたのは偶然だったっぽい:f2238a5657d5384caa3f8d23d6640654&#34;&gt;&lt;del&gt;Sleepでクラッシュ&lt;/del&gt;Sleep時にクラッシュしたのは偶然だったっぽい&lt;/h3&gt;
 
 &lt;p&gt;まだきちんと確かめてないけど、Sleep後に起こそうとしたら再起動がかかって、こんなログが出てた。
 Sleep後だったのは偶然かも。&lt;/p&gt;
@@ -535,11 +483,11 @@ Sleep後だったのは偶然かも。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;panic(cpu 7 caller 0xffffff801600f06c): &amp;quot;TLB invalidation IPI timeout: &amp;quot; &amp;quot;CPU(s) failed to respond to interrupts, unresponsive CPU bitmap: 0x3d, NMIPI acks: orig: 0x0, now: 0x0&amp;quot;@/SourceCache/xnu/xnu-2738.0.0.0.5/osfmk/x86_64/pmap.c:2470
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;ios-8にアップデートして困ったこと:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;iOS 8にアップデートして困ったこと&lt;/h2&gt;
+&lt;h2 id=&#34;ios-8にアップデートして困ったこと:f2238a5657d5384caa3f8d23d6640654&#34;&gt;iOS 8にアップデートして困ったこと&lt;/h2&gt;
 
-&lt;h3 id=&#34;iphoneで-1password-https-agilebits-com-onepassword-が同期できなくなってクラッシュする:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;iPhoneで&lt;a href=&#34;https://agilebits.com/onepassword&#34;&gt;1Password&lt;/a&gt;が同期できなくなってクラッシュする&lt;/h3&gt;
+&lt;h3 id=&#34;iphoneで-1password-https-agilebits-com-onepassword-が同期できなくなってクラッシュする:f2238a5657d5384caa3f8d23d6640654&#34;&gt;iPhoneで&lt;a href=&#34;https://agilebits.com/onepassword&#34;&gt;1Password&lt;/a&gt;が同期できなくなってクラッシュする&lt;/h3&gt;
 
-&lt;h4 id=&#34;追記-ios8で1passwordが使えるようになった-monohub-http-mono0926-com-blog-2014-06-13-password-で解決-ω:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;【追記】&lt;a href=&#34;http://mono0926.com/blog/2014/06/13/password/&#34;&gt;iOS8で1Passwordが使えるようになった - monoHub&lt;/a&gt;で解決（｀・ω・´）&lt;/h4&gt;
+&lt;h4 id=&#34;追記-ios8で1passwordが使えるようになった-monohub-http-mono0926-com-blog-2014-06-13-password-で解決-ω:f2238a5657d5384caa3f8d23d6640654&#34;&gt;【追記】&lt;a href=&#34;http://mono0926.com/blog/2014/06/13/password/&#34;&gt;iOS8で1Passwordが使えるようになった - monoHub&lt;/a&gt;で解決（｀・ω・´）&lt;/h4&gt;
 
 &lt;p&gt;けっこう依存度が高いので、これけっこう困る(　´･‿･｀)
 Beta版使っているのが悪いししばらく我慢かなあと思っていたら、すでに問題認識しているらしく、わりと前向きな対応してもらえそうな雰囲気(　´･‿･｀)
@@ -548,7 +496,7 @@ Beta版使っているのが悪いししばらく我慢かなあと思ってい�
 &lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;en&#34;&gt;&lt;p&gt;iOS 8 folks, there sure are a lot of you using the beta! I’m a bit…broken. Sorry. My devs are working on it!&amp;#10;&amp;#10;[…]&lt;/p&gt;&amp;mdash; 1Password Beta (@1PasswordBeta) &lt;a href=&#34;https://twitter.com/1PasswordBeta/statuses/473747191228399616&#34;&gt;June 3, 2014&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;lineスタンプが買えない-使えない:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;LINEスタンプが買えない・使えない&lt;/h3&gt;
+&lt;h3 id=&#34;lineスタンプが買えない-使えない:f2238a5657d5384caa3f8d23d6640654&#34;&gt;LINEスタンプが買えない・使えない&lt;/h3&gt;
 
 &lt;p&gt;買おうとするとエラーになってしまうし、使おうとすると進捗ダイアログが終わらない（´-ω-｀）けっこう困る（´-ω-｀）
 &lt;a href=&#34;http://a.scn.jp/s/0VrEMIHAB&#34;&gt;申請中の個人スタンプ&lt;/a&gt;も買えないし使えなくなりそう（´・д・｀）
@@ -556,7 +504,7 @@ Beta版使っているのが悪いししばらく我慢かなあと思ってい�
 
 &lt;p&gt;とりあえずパソコン版でしのごう（´-ω-｀）Yosemite上のLINEは問題無いし。&lt;/p&gt;
 
-&lt;h3 id=&#34;tweetbot:d24f6b228d4e78712f5f56df9a72be21&#34;&gt;Tweetbot&lt;/h3&gt;
+&lt;h3 id=&#34;tweetbot:f2238a5657d5384caa3f8d23d6640654&#34;&gt;Tweetbot&lt;/h3&gt;
 
 &lt;p&gt;UI周りかなりがんばってるのが裏目に出て、動作がボロボロ。
 特に、URLをPocketに保存出来ないのがつらたん。
@@ -571,34 +519,11 @@ NDAで細かいところは書けないけど、使用感も特に大きな変�
     </item>
     
     <item>
-      <title>愛犬ラヴさんLINEスタンプがリリースされましたヽ(・ω・｀）</title>
-      <link>http://mono0926.com/blog/2014/06/04/2014-06-04-stamp/</link>
-      <pubDate>Wed, 04 Jun 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://mono0926.com/blog/2014/06/04/2014-06-04-stamp/</guid>
-      <description>&lt;p&gt;ようやく、ラヴさんLINEスタンプがリリースされました(　´･‿･｀)&lt;br /&gt;
-愛犬(ラブラドール・レトリーバー)をモデルにしたスタンプです。&lt;/p&gt;
-
-&lt;p&gt;初日に登録して2000番台半ばだったのに1ヶ月半くらい待たされてつらたんでしたが、幸いリジェクト食らうこともなくリリースにこぎ着けられました(　´･‿･｀)&lt;/p&gt;
-
-&lt;p&gt;こちらから購入出来ますのでよろしくお願いします(　´･‿･｀)&lt;br /&gt;
-&lt;a href=&#34;http://bit.ly/love-stamp&#34;&gt;http://bit.ly/love-stamp&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;ご購入お待ちしております(　´･‿･｀)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/mate.png&#34; alt=&#34;love&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://a.scn.jp/s/0VrEMIHAB&#34;&gt;SceneのWEBアルバム&lt;/a&gt;からも引き続き見られます。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>SwiftでラヴさんWEBアルバムを開くだけのアプリ作った</title>
-      <link>http://mono0926.com/blog/2014/06/03/2014-06-03-swift/</link>
+      <link>http://mono0926.com/blog/2014/06/03/swift/</link>
       <pubDate>Tue, 03 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/06/03/2014-06-03-swift/</guid>
+      <guid>http://mono0926.com/blog/2014/06/03/swift/</guid>
       <description>&lt;p&gt;昼休みに、&lt;a href=&#34;https://developer.apple.com/swift/&#34;&gt;Swift&lt;/a&gt;で、&lt;a href=&#34;https://github.com/mono0926/SwiftSample&#34;&gt;ラヴさんWEBアルバムを開くだけのアプリ&lt;/a&gt;作った。&lt;/p&gt;
 
 &lt;p&gt;Swiftもそうだけど、Xcode 6も色々変わってて面白い(　´･‿･｀)&lt;/p&gt;
@@ -607,10 +532,10 @@ NDAで細かいところは書けないけど、使用感も特に大きな変�
     
     <item>
       <title>RescueTimeを昨日から使い始めた</title>
-      <link>http://mono0926.com/blog/2014/05/29/2014-05-29-rescuetime/</link>
+      <link>http://mono0926.com/blog/2014/05/29/rescuetime/</link>
       <pubDate>Thu, 29 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/29/2014-05-29-rescuetime/</guid>
+      <guid>http://mono0926.com/blog/2014/05/29/rescuetime/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.rescuetime.com&#34;&gt;RescueTime&lt;/a&gt;を昨日から使い始めたけど、素晴らしい。
 多少カスタマイズ出来るけど、ほぼ初期設定で、すごく良い感じにデスクワークの統計を取ってくれる。
 そんなのがあるとかは、&lt;a href=&#34;http://www.lifehacker.jp/2009/03/rescuetime.html&#34;&gt;『RescueTime』で、お仕事状況をすべてチェック（無料） : ライフハッカー［日本版］&lt;/a&gt;などで知りつつスルーしてたけど、&lt;a href=&#34;https://twitter.com/PocketHits&#34;&gt;PocketHits (PocketHits) on Twitter&lt;/a&gt;で流れてきた&lt;a href=&#34;http://www.businessinsider.com/productivity-hacks-from-startup-execs-2014-5?utm_source=pocket&amp;amp;utm_medium=twitter&amp;amp;utm_campaign=pockethits&#34;&gt;Productivity Hacks From Startup Execs - Business Insider&lt;/a&gt;を見て試してみたらはまった感じ。&lt;/p&gt;
@@ -647,20 +572,20 @@ NDAで細かいところは書けないけど、使用感も特に大きな変�
     
     <item>
       <title>日記</title>
-      <link>http://mono0926.com/blog/2014/05/27/2014-05-27-diary/</link>
+      <link>http://mono0926.com/blog/2014/05/27/diary/</link>
       <pubDate>Tue, 27 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/27/2014-05-27-diary/</guid>
+      <guid>http://mono0926.com/blog/2014/05/27/diary/</guid>
       <description>&lt;p&gt;GitHub Pages + Octopress + Alfredで作った自前コマンドのおかげで、キーボード操作だけでブログ更新出来るので、こんな感じに毎日何か書くのも良いかも(　´･‿･｀)&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>NodeJS &#43; Express &#43; Stylus &#43; Jade &#43; AngularJS &#43; Redisなどなどで、簡単なTODOアプリ</title>
-      <link>http://mono0926.com/blog/2014/05/26/2014-05-26-todo/</link>
+      <link>http://mono0926.com/blog/2014/05/26/todo/</link>
       <pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/26/2014-05-26-todo/</guid>
+      <guid>http://mono0926.com/blog/2014/05/26/todo/</guid>
       <description>&lt;p&gt;NodeJS + Express + Stylus + Jade + AngularJS + Redisなどなどで、&lt;a href=&#34;http://ice-me.herokuapp.com/todos&#34;&gt;簡単なTODOアプリ&lt;/a&gt;作った。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/gp/product/484433588X/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=484433588X&amp;amp;linkCode=as2&amp;amp;tag=mono0926-22&#34;&gt;TypeScriptリファレンス Ver.1.0対応&lt;/a&gt;のサンプルを参考に、アレンジした感じ(オリジナルはSQLiteなど使用)。&lt;/p&gt;
@@ -685,15 +610,15 @@ NDAで細かいところは書けないけど、使用感も特に大きな変�
     
     <item>
       <title>TypeScript・AngularJS・Jade・Stylusでサンプルコード</title>
-      <link>http://mono0926.com/blog/2014/05/14/2014-05-14-angularjs/</link>
+      <link>http://mono0926.com/blog/2014/05/14/angularjs/</link>
       <pubDate>Wed, 14 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/14/2014-05-14-angularjs/</guid>
+      <guid>http://mono0926.com/blog/2014/05/14/angularjs/</guid>
       <description>
 
 &lt;p&gt;最近Web系の勉強してて、Node.js・Express・Redis・Herokuなどサーバーサイド周り弄ってたけど、そろそろフロントエンドもという感じで色々やってみた。&lt;/p&gt;
 
-&lt;h3 id=&#34;サンプル置いとく-http-ice-me-herokuapp-com-angular:73fe863b8a2e90a8b6b81825360ced2e&#34;&gt;&lt;a href=&#34;http://ice-me.herokuapp.com/angular#/&#34;&gt;サンプル置いとく&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;サンプル置いとく-http-ice-me-herokuapp-com-angular:cd1b7a9a52bc143e9e26faa4af35e3f6&#34;&gt;&lt;a href=&#34;http://ice-me.herokuapp.com/angular#/&#34;&gt;サンプル置いとく&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;AngularJSはけっこうリッチなライブラリで、全部身につけるのはしばらくかかりそうだけど、今日主要な機能はざっくり書けるようになった感(　´･‿･｀)
 &lt;a href=&#34;http://vuejs.org/&#34;&gt;Vue.js&lt;/a&gt;と迷ったけど、&lt;a href=&#34;https://github.com/borisyankov/DefinitelyTyped&#34;&gt;borisyankov/DefinitelyTyped&lt;/a&gt;にまだ無かったし、とりあえず今メジャーなAngularJSやっとこうか、という感じ。&lt;/p&gt;
@@ -708,7 +633,7 @@ NDAで細かいところは書けないけど、使用感も特に大きな変�
 
 &lt;!-- more --&gt;
 
-&lt;h2 id=&#34;資料:73fe863b8a2e90a8b6b81825360ced2e&#34;&gt;資料&lt;/h2&gt;
+&lt;h2 id=&#34;資料:cd1b7a9a52bc143e9e26faa4af35e3f6&#34;&gt;資料&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://qiita.com/opengl-8080/items/2fe0a20c314b1c824cc5&#34;&gt;AngularJS使い方メモ - Qiita&lt;/a&gt;&lt;/li&gt;
@@ -723,13 +648,233 @@ NDAで細かいところは書けないけど、使用感も特に大きな変�
 
 &lt;p&gt;AngularJS、&lt;a href=&#34;http://qiita.com/opengl-8080/items/2fe0a20c314b1c824cc5&#34;&gt;AngularJS使い方メモ - Qiita&lt;/a&gt;の「ページの一部に動的にテンプレートを読み込む」くらいまでで、まだシングルページアプリケーション周りの機能は終えてないから、また続きやろう（´-ω-｀）&lt;/p&gt;
 
-&lt;h2 id=&#34;コード:73fe863b8a2e90a8b6b81825360ced2e&#34;&gt;コード&lt;/h2&gt;
+&lt;h2 id=&#34;コード:cd1b7a9a52bc143e9e26faa4af35e3f6&#34;&gt;コード&lt;/h2&gt;
 
 &lt;script src=&#34;https://gist.github.com/mono0926/30e00a6a26498eff5973.js&#34;&gt;&lt;/script&gt;
 
 &lt;script src=&#34;https://gist.github.com/mono0926/2e8b58d3003f1fcbfa1c.js&#34;&gt;&lt;/script&gt;
 
 &lt;script src=&#34;https://gist.github.com/mono0926/780a92e2fe8c7c80e80f.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>golangの環境構築</title>
+      <link>http://mono0926.com/blog/2014/05/13/golang/</link>
+      <pubDate>Tue, 13 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2014/05/13/golang/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/GoCon/GoCon/blob/master/2014spring.rst&#34;&gt;GoCon/2014spring.rst at master · GoCon/GoCon&lt;/a&gt;に備えて、とりあえずgolangのセットアップと、暇なときに&lt;a href=&#34;http://tour.golang.org/#1&#34;&gt;A Tour of Go&lt;/a&gt;をやっておこうかと(　´･‿･｀)&lt;/p&gt;
+
+&lt;h2 id=&#34;gvmセットアップ:ed67c3356329c447f68f2ff6b67b3daf&#34;&gt;gvmセットアップ&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/moovweb/gvm&#34;&gt;moovweb/gvm&lt;/a&gt;に書いてある通りにやった。
+mercurialのインストールが必要だったので、Brewfileに追記しておいた。&lt;/p&gt;
+
+&lt;p&gt;あと、&lt;code&gt;gvm install go1&lt;/code&gt;に失敗したので、&lt;a href=&#34;https://github.com/moovweb/gvm/issues/38#issuecomment-39842170&#34;&gt;Issues on OSX · Issue #38 · moovweb/gvm&lt;/a&gt;に書いてある対応で何とかなった。&lt;/p&gt;
+
+&lt;p&gt;普通に&lt;code&gt;brew install go&lt;/code&gt;のが楽だけど、ちょっとがんばった（´-ω-｀）&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;実行:ed67c3356329c447f68f2ff6b67b3daf&#34;&gt;実行&lt;/h2&gt;
+
+&lt;p&gt;以下を実行。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;package main
+import &amp;quot;fmt&amp;quot;
+func main() {
+    fmt.Printf(&amp;quot;Hello world!&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mono0926.com/blog/2014/05/06/renew/&#34;&gt;OSXの開発環境を整えた - monoHub&lt;/a&gt;でJetBrainのIDEいくつかインストールしてたけど、&lt;a href=&#34;http://www.jetbrains.com/idea/&#34;&gt;IntelliJ IDEA — The Best Java and Polyglot IDE&lt;/a&gt;で全部包含してるのね、情弱つらたん（´-ω-｀）&lt;/p&gt;
+
+&lt;p&gt;まあそこそこのお値段だし、適当に色々試用して、良かったら最終的にUltimate Edtion買おうかな（´-ω-｀）
+Web StormでもGoのプラグインインストール出来たけど、SDKの設定とかうまく出来なかったりぐぐったりして出た説明と違うからCommunity Edition版のIntelliJでやった。&lt;/p&gt;
+
+&lt;p&gt;実行できたけど、&lt;code&gt;go build hoge.go&lt;/code&gt;で生成されるような実行ファイルが生成出来なくて謎(　´･‿･｀)&lt;br /&gt;
+GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分からなくてつらたん（´-ω-｀）&lt;/p&gt;
+
+&lt;h3 id=&#34;解決:ed67c3356329c447f68f2ff6b67b3daf&#34;&gt;解決&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/go-lang-plugin-org/go-lang-idea-plugin/blob/master/Missing%20ENV.md&#34;&gt;go-lang-idea-plugin/Missing ENV.md at master · go-lang-plugin-org/go-lang-idea-plugin&lt;/a&gt;を参考に設定したら、警告ダイアログが出なくなった。&lt;/li&gt;
+&lt;li&gt;Run Configurationsで、Build before runにチェックを付けてディレクトリをbinに設定したら、実行ファイルも生成されるようになった。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/go.png&#34; alt=&#34;go&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;ただ、多分IntelliJがGoのデバッグ実行に対応していない？(無反応)のがつらたん（´-ω-｀）
+&lt;a href=&#34;https://github.com/go-lang-plugin-org/go-lang-idea-plugin/issues/25&#34;&gt;Support for debugging · Issue #25 · go-lang-plugin-org/go-lang-idea-plugin&lt;/a&gt;を見ると、GAEプロジェクトのみ対応？？よく分からない（´-ω-｀）&lt;/p&gt;
+
+&lt;p&gt;あと、&lt;a href=&#34;https://twitter.com/yabuchin_y&#34;&gt;ıɥɔınʎ (yabuchin_y) on Twitter&lt;/a&gt;さんに&lt;a href=&#34;https://gophercasts.io/&#34;&gt;GopherCasts&lt;/a&gt;を教えてもらった(　´･‿･｀)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>OSXの開発環境を整えた</title>
+      <link>http://mono0926.com/blog/2014/05/06/renew/</link>
+      <pubDate>Tue, 06 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2014/05/06/renew/</guid>
+      <description>
+
+&lt;p&gt;Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。
+Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイッチしたいなとか思ったのが発端。&lt;br /&gt;
+参考: &lt;a href=&#34;http://rdepf.hatenablog.jp/entry/2014/03/07/122337&#34;&gt;Node.jsのコールバック地獄をPromiseやGeneratorを使って解消する - HackerNews翻訳してみた&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;わりと&lt;code&gt;brew install XXX&lt;/code&gt;で雑に各種環境インストールしてたので、これを気に色々直した。&lt;/p&gt;
+
+&lt;h2 id=&#34;homebrewアンインストール:e4940d6974c012c0c770280b21490de7&#34;&gt;Homebrewアンインストール&lt;/h2&gt;
+
+&lt;p&gt;ゴミが残るのいやだったので、&lt;a href=&#34;https://gist.github.com/mxcl/1173223&#34;&gt;Uninstall Homebrew&lt;/a&gt;でhomebrewをアンインストール。&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;brewfile導入:e4940d6974c012c0c770280b21490de7&#34;&gt;Brewfile導入&lt;/h2&gt;
+
+&lt;p&gt;以下など見て便利そうだと思っていたので、Brewfile導入。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.1x1.jp/blog/2014/04/how-to-setup-application-on-osx.html&#34;&gt;Mac OSX をクリーンインストールしてからの環境構築メモ - Shin x blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.livedoor.jp/sonots/archives/35251881.html&#34;&gt;「BrewfileでHomebrewパッケージを管理する」をやってみた - sonots:blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tnakamura.hatenablog.com/entry/2014/04/29/113727&#34;&gt;MacBook にインストールしているアプリやツールをメモする代わりに Brewfile を作った - present&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;これだけで一気にインストール出来てとても便利。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;brew bundle
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;僕の：&lt;a href=&#34;https://github.com/mono0926/Environment/blob/master/OSX/Brewfile&#34;&gt;Environment/OSX/Brewfile at master · mono0926/Environment&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;今後も、Homebrewで何か新しくインストールするときメンテナンスしていくようにしよう。&lt;/p&gt;
+
+&lt;h2 id=&#34;その他開発環境:e4940d6974c012c0c770280b21490de7&#34;&gt;その他開発環境&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;brew install XXX&lt;/code&gt;で適当にインストールせずに、バージョンの切り替えが容易なようにした。
+いくつか種類あったけど、基本後発のを導入してみた。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Python: &lt;a href=&#34;https://github.com/yyuu/pyenv&#34;&gt;yyuu/pyenv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ruby: &lt;a href=&#34;https://github.com/sstephenson/rbenv&#34;&gt;sstephenson/rbenv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Node.js: &lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;creationix/nvm&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;nvmはzshとの相性悪くて日本では&lt;a href=&#34;https://github.com/hokaccha/nodebrew&#34;&gt;hokaccha/nodebrew&lt;/a&gt;がけっこう人気っぽかったけど特に問題無かったのでnvmにした。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;諸々雑なところがあるけど、&lt;a href=&#34;https://github.com/mono0926/Environment/tree/master/OSX&#34;&gt;Environment/OSX at master · mono0926/Environment&lt;/a&gt;でセットアップスクリプト管理。&lt;/p&gt;
+
+&lt;h2 id=&#34;ide導入:e4940d6974c012c0c770280b21490de7&#34;&gt;IDE導入&lt;/h2&gt;
+
+&lt;p&gt;スクリプト系言語は、最近はわりとSublime Textで書いていたけど、やっぱり補完がもう少し聞いてくれないと厳しいので、なるべくIDE使うようにしようと思う。&lt;br /&gt;
+IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれば捗るかなと。&lt;br /&gt;
+今まではNetBeansかたまにEclipseだったけど、乗り換え。少しずつ慣れていこう（´-ω-｀）&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.jetbrains.com/webstorm/&#34;&gt;WebStorm :: The smartest JavaScript IDE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.jetbrains.com/ruby/&#34;&gt;Ruby on Rails IDE :: JetBrains RubyMine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.jetbrains.com/pycharm/&#34;&gt;Python IDE &amp;amp; Django IDE for Web developers : JetBrains PyCharm&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;CE版は無料&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IRKitで遊び始めた〜とりあえずTerminalで操作〜</title>
+      <link>http://mono0926.com/blog/2014/05/05/irkit/</link>
+      <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2014/05/05/irkit/</guid>
+      <description>
+
+&lt;p&gt;冬場忙しかったりで既存アプリで部屋のリモコン登録する程度しかいじれてなかったけど、最近ようやく落ち着いてきたので、&lt;a href=&#34;http://www.amazon.co.jp/gp/product/B00H91KK26/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=B00H91KK26&amp;amp;linkCode=as2&amp;amp;tag=mono0926-22&#34;&gt;IRKit&lt;/a&gt;で遊んでみる(　´･‿･｀)&lt;/p&gt;
+
+&lt;h2 id=&#34;セットアップ:b1567300f9c156a049940414df8efe7b&#34;&gt;セットアップ&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://getirkit.com/&#34;&gt;IRKit - Open Source WiFi Connected Infrared Remote Controller&lt;/a&gt;を参考に、諸々設定。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# dns-sdコマンドで、IRKitのインスタンス名取得。
+Pro:b4 mono$ dns-sd -B _irkit._tcp
+Browsing for _irkit._tcp
+DATE: ---Mon 05 May 2014---
+14:41:16.669  ...STARTING...
+Timestamp     A/R    Flags  if Domain               Service Type         Instance Name
+14:41:16.880  Add        2   4 local.               _irkit._tcp.         iRKitA2C4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;!-- more --&gt;
+
+&lt;pre&gt;&lt;code&gt;# インスタンス名から、IPアドレス取得
+Pro:b4 mono$ dns-sd -G v4 irkita2c4.local
+DATE: ---Mon 05 May 2014---
+14:41:43.565  ...STARTING...
+Timestamp     A/R Flags if Hostname                               Address                                      TTL
+14:41:43.566  Add     2  4 irkita2c4.local.                       192.168.0.4                                  10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;# IPアドレスからMACアドレスを調べる(もっとスマートなやり方ある？)
+# とりあえずping
+Pro:~ mono$ ping 192.168.0.4
+PING 192.168.0.4 (192.168.0.4): 56 data bytes
+64 bytes from 192.168.0.4: icmp_seq=0 ttl=255 time=3.958 ms
+# arpで確認
+Pro:~ mono$ arp -a
+? (192.168.0.4) at 20:f8:5e:a6:a2:c4 on en0 ifscope [ethernet]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ルーターの設定で、固定IPを今さらながら割り当ててみる。
+これで、家の中では安心して&lt;code&gt;192.168.0.4&lt;/code&gt;でアクセス出来るようになった（´-ω-｀）&lt;/p&gt;
+
+&lt;h2 id=&#34;terminalから操作:b1567300f9c156a049940414df8efe7b&#34;&gt;Terminalから操作&lt;/h2&gt;
+
+&lt;p&gt;普通にリモコンを操作して、その赤外線の範囲内にIRKitが入っていると、青いライトが点滅して、赤外線の信号を取得したことを示してくれる。&lt;/p&gt;
+
+&lt;p&gt;そこで、curlすると、その信号が分かる。
+うちのNECのLEDシーリングライトのオンオフボタンを押した後だとこんな感じ。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Pro:~ mono$ curl -i http://192.168.0.4/messages
+HTTP/1.0 200 OK
+Access-Control-Allow-Origin: *
+Server: IRKit/1.3.5.0.gce6ac15
+Content-Type: text/plain
+
+{&amp;quot;format&amp;quot;:&amp;quot;raw&amp;quot;,&amp;quot;freq&amp;quot;:38,&amp;quot;data&amp;quot;:[17421,9061,935,1232,1037,3458,1037,1232,935,1232,935,1232,1037,1190,1037,1190,1037,3458,1037,3458,1037,1037,1037,3458,1037,3458,1037,1150,1037,3341,1073,3341,1073,1232,935,3458,935,3458,935,1232,1037,3341,935,1190,1073,3458,935,1190,1002,3458,1073,1073,1073,1190,1037,3458,1037,1190,1190,3228,968,1190,1073,3341,1073,1190,1002]}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これをPOSTすれば、リモコンオンオフボタンと同じ信号をIRKitが発行してくれる。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;curl -i http://192.168.0.4/messages -d &#39;{&amp;quot;format&amp;quot;:&amp;quot;raw&amp;quot;,&amp;quot;freq&amp;quot;:38,&amp;quot;data&amp;quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;つまり、これをaliasなりシェルスクリプトにしておけば、もうそれだけでキーボードでライトのオンオフが出来るようになる。&lt;/p&gt;
+
+&lt;p&gt;楽ちん過ぎる、素晴らしい（´-ω-｀）&lt;/p&gt;
+
+&lt;p&gt;ちなみに、うちではこんな風に部屋の真ん中あたりの壁に、両面テープ付けて配置してる。これでも、受信感度の悪い一部機器は反応しなかったりで悩み中。
+その機器は、添付のリモコンでもけっこう近くで方向もけっこう合わせないと反応しないので、IRKitのせいではないのだけれど。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/irkit.jpg&#34; alt=&#34;irkit&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;8,000円切る価格で完成度高くて、色々弄りやすいの素晴らしい(　´･‿･｀)&lt;/p&gt;
+
+&lt;iframe src=&#34;http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=mono0926-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B00H91KK26&#34; style=&#34;width:120px;height:240px;&#34; scrolling=&#34;no&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;リモコンが付いていないサーキュレーターとかは、この、コンセントのオンオフをリモコンで切り替えられるやつを買おうかな（´-ω-｀）&lt;/p&gt;
+
+&lt;iframe src=&#34;http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=mono0926-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B0013L6ACM&#34; style=&#34;width:120px;height:240px;&#34; scrolling=&#34;no&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;外からアクセス出来るようにしたり、WEBアプリやiPhoneアプリでもっと便利にしていきたいところ(　´･‿･｀)&lt;/p&gt;
 </description>
     </item>
     

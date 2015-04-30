@@ -11,15 +11,15 @@
     
     <item>
       <title>golangの環境構築</title>
-      <link>http://mono0926.com/blog/2014/05/13/2014-05-13-golang/</link>
+      <link>http://mono0926.com/blog/2014/05/13/golang/</link>
       <pubDate>Tue, 13 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/13/2014-05-13-golang/</guid>
+      <guid>http://mono0926.com/blog/2014/05/13/golang/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/GoCon/GoCon/blob/master/2014spring.rst&#34;&gt;GoCon/2014spring.rst at master · GoCon/GoCon&lt;/a&gt;に備えて、とりあえずgolangのセットアップと、暇なときに&lt;a href=&#34;http://tour.golang.org/#1&#34;&gt;A Tour of Go&lt;/a&gt;をやっておこうかと(　´･‿･｀)&lt;/p&gt;
 
-&lt;h2 id=&#34;gvmセットアップ:9c2fd6ba8b2fe8193126a579600e839c&#34;&gt;gvmセットアップ&lt;/h2&gt;
+&lt;h2 id=&#34;gvmセットアップ:ed67c3356329c447f68f2ff6b67b3daf&#34;&gt;gvmセットアップ&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/moovweb/gvm&#34;&gt;moovweb/gvm&lt;/a&gt;に書いてある通りにやった。
 mercurialのインストールが必要だったので、Brewfileに追記しておいた。&lt;/p&gt;
@@ -30,7 +30,7 @@ mercurialのインストールが必要だったので、Brewfileに追記して
 
 &lt;!-- more --&gt;
 
-&lt;h2 id=&#34;実行:9c2fd6ba8b2fe8193126a579600e839c&#34;&gt;実行&lt;/h2&gt;
+&lt;h2 id=&#34;実行:ed67c3356329c447f68f2ff6b67b3daf&#34;&gt;実行&lt;/h2&gt;
 
 &lt;p&gt;以下を実行。&lt;/p&gt;
 
@@ -49,7 +49,7 @@ Web StormでもGoのプラグインインストール出来たけど、SDKの設
 &lt;p&gt;実行できたけど、&lt;code&gt;go build hoge.go&lt;/code&gt;で生成されるような実行ファイルが生成出来なくて謎(　´･‿･｀)&lt;br /&gt;
 GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分からなくてつらたん（´-ω-｀）&lt;/p&gt;
 
-&lt;h3 id=&#34;解決:9c2fd6ba8b2fe8193126a579600e839c&#34;&gt;解決&lt;/h3&gt;
+&lt;h3 id=&#34;解決:ed67c3356329c447f68f2ff6b67b3daf&#34;&gt;解決&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/go-lang-plugin-org/go-lang-idea-plugin/blob/master/Missing%20ENV.md&#34;&gt;go-lang-idea-plugin/Missing ENV.md at master · go-lang-plugin-org/go-lang-idea-plugin&lt;/a&gt;を参考に設定したら、警告ダイアログが出なくなった。&lt;/li&gt;

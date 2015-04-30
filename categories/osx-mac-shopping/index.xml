@@ -11,15 +11,15 @@
     
     <item>
       <title>Mac Proの新モデル(通称ゴミ箱)を買うことにした</title>
-      <link>http://mono0926.com/blog/2013/10/27/2013-10-27-mac-pro/</link>
+      <link>http://mono0926.com/blog/2013/10/27/mac-pro/</link>
       <pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2013/10/27/2013-10-27-mac-pro/</guid>
+      <guid>http://mono0926.com/blog/2013/10/27/mac-pro/</guid>
       <description>
 
 &lt;p&gt;今持っているMac Proの2010年モデルももう丸3年以上経っていたり、2011年モデルのMac mini(サーバー用)も切り捨てて1本化したいなと思ってたところに、新Mac Proが発表されて、ちょっと考えてたらほしくなってしまった。&lt;/p&gt;
 
-&lt;h2 id=&#34;購買意欲がそそられた理由:2684a12ec9ddf1516a4d0deb14d26c67&#34;&gt;購買意欲がそそられた理由&lt;/h2&gt;
+&lt;h2 id=&#34;購買意欲がそそられた理由:bd86cf0b57a7ccb27fc58e68a5ddc1e2&#34;&gt;購買意欲がそそられた理由&lt;/h2&gt;
 
 &lt;p&gt;省電力というのが意外と一番大きな理由。
 Mac Proの消費電力が、アイドル時に43 Wということで、常時起動でも700円/月程度で、Mac miniの用途をMac Proに一本化できそう。&lt;/p&gt;
@@ -41,21 +41,21 @@ Mac Proの消費電力が、アイドル時に43 Wということで、常時起
 
 &lt;!-- more --&gt;
 
-&lt;h2 id=&#34;ネック:2684a12ec9ddf1516a4d0deb14d26c67&#34;&gt;ネック&lt;/h2&gt;
+&lt;h2 id=&#34;ネック:bd86cf0b57a7ccb27fc58e68a5ddc1e2&#34;&gt;ネック&lt;/h2&gt;
 
 &lt;p&gt;後述のお金の問題に加えて、以下の作業が面倒。&lt;/p&gt;
 
-&lt;h3 id=&#34;増設したhdd:2684a12ec9ddf1516a4d0deb14d26c67&#34;&gt;増設したHDD&lt;/h3&gt;
+&lt;h3 id=&#34;増設したhdd:bd86cf0b57a7ccb27fc58e68a5ddc1e2&#34;&gt;増設したHDD&lt;/h3&gt;
 
 &lt;p&gt;Mac Proに入れているSSD(256GB)x2・HDD(2TB)x2・HDD(3TB)x1を、新Mac Proだと外に出して繋がないと行けなくなる(SSDのうち1台はメインドライブなので不要だけど)。
 そのケース・ドライブを用意したりとか、その配線が微妙かなあとか、ちょっと悩みどころ。&lt;/p&gt;
 
-&lt;h3 id=&#34;旧ブログ-http-mono-comp-com:2684a12ec9ddf1516a4d0deb14d26c67&#34;&gt;&lt;a href=&#34;http://mono-comp.com/&#34;&gt;旧ブログ&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;旧ブログ-http-mono-comp-com:bd86cf0b57a7ccb27fc58e68a5ddc1e2&#34;&gt;&lt;a href=&#34;http://mono-comp.com/&#34;&gt;旧ブログ&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;今Mac miniで動かしている、IIS + WordPressで構築した&lt;a href=&#34;http://mono-comp.com/&#34;&gt;旧ブログ&lt;/a&gt; の移行が面倒。
 そもそももう更新していないので畳むか、変換スクリプト書いて、こちらのブログに移行してもよいかも。&lt;/p&gt;
 
-&lt;h3 id=&#34;その他windowsサーバー環境移行:2684a12ec9ddf1516a4d0deb14d26c67&#34;&gt;その他Windowsサーバー環境移行&lt;/h3&gt;
+&lt;h3 id=&#34;その他windowsサーバー環境移行:bd86cf0b57a7ccb27fc58e68a5ddc1e2&#34;&gt;その他Windowsサーバー環境移行&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://apps.microsoft.com/windows/ja-jp/app/amazon-sales-rank/17848073-edbd-462d-abb8-2f77d2a2aadf&#34;&gt;Amazon Sales Rank&lt;/a&gt;のサーバー環境の移行は、1・2時間くらいで出来そう。&lt;/p&gt;
 
@@ -63,7 +63,7 @@ Mac Proの消費電力が、アイドル時に43 Wということで、常時起
 
 &lt;p&gt;そして、新Mac Proに乗り換えたら仮想マシン立てるつもりなので、その後の移行作業はとても楽になるはず。&lt;/p&gt;
 
-&lt;h2 id=&#34;移行コスト:2684a12ec9ddf1516a4d0deb14d26c67&#34;&gt;移行コスト&lt;/h2&gt;
+&lt;h2 id=&#34;移行コスト:bd86cf0b57a7ccb27fc58e68a5ddc1e2&#34;&gt;移行コスト&lt;/h2&gt;
 
 &lt;p&gt;計算してみたら、デスクトップ系のMac製品は中古相場もあまり高くなく、思っていたよりかかる模様。
 Mac Proはヤフオク見るともっと相場高いので、そちらもありかも。&lt;/p&gt;
@@ -76,7 +76,7 @@ Mac Proはヤフオク見るともっと相場高いので、そちらもあり�
 
 &lt;p&gt;計〜30万円程度かかるので、けっこう高い（´-ω-｀）&lt;/p&gt;
 
-&lt;h2 id=&#34;結論:2684a12ec9ddf1516a4d0deb14d26c67&#34;&gt;結論&lt;/h2&gt;
+&lt;h2 id=&#34;結論:bd86cf0b57a7ccb27fc58e68a5ddc1e2&#34;&gt;結論&lt;/h2&gt;
 
 &lt;p&gt;「Mac Proの新モデル(通称ゴミ箱)を買うことにした」ものの、今はまだ買わない。
 会社のMacBook Pro Retina 15インチ(2012年モデル)と良くも悪くもほぼ性能一緒で快適なので、上記の1台で色々な用途をまかなえること以外は、あまり買い換える理由ないというのが大きい。

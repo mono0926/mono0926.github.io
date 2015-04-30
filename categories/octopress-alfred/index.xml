@@ -11,10 +11,10 @@
     
     <item>
       <title>Octopressへの投稿やdeployをAlfredのWorkflowで</title>
-      <link>http://mono0926.com/blog/2013/07/07/2013-07-07-octopress-alfred/</link>
+      <link>http://mono0926.com/blog/2013/07/07/octopress-alfred/</link>
       <pubDate>Sun, 07 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2013/07/07/2013-07-07-octopress-alfred/</guid>
+      <guid>http://mono0926.com/blog/2013/07/07/octopress-alfred/</guid>
       <description>
 
 &lt;p&gt;今日初めてOctopressを触ったら、けっこう気に入ったので、さらに気軽に書ける環境を整えれば捗るのではと思い、AlfredのWorkflowを作ってみました。&lt;/p&gt;
@@ -83,7 +83,7 @@ rake preview
 &lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/post.png&#34; alt=&#34;post workflow&#34; /&gt;
 &lt;/p&gt;
 
-&lt;h4 id=&#34;octopress気に入ったけど:7b23e2bd66e0223e9a8cd20d09e7c7c5&#34;&gt;Octopress気に入ったけど…&lt;/h4&gt;
+&lt;h4 id=&#34;octopress気に入ったけど:641b1723ac00cebbf1ffb348bd5d5d56&#34;&gt;Octopress気に入ったけど…&lt;/h4&gt;
 
 &lt;p&gt;Qiitaもよく見たらMarkdownでかなり使いやすそう。
 色々ツールもあるし。&lt;/p&gt;
