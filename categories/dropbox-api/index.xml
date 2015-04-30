@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dropbox Api on mono-log</title>
+    <link>http://mono0926.com/categories/dropbox-api/</link>
+    <description>Recent content in Dropbox Api on mono-log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 19 Jul 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://mono0926.com/categories/dropbox-api/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>iOSからDropbox Sync APIを使ってみる</title>
+      <link>http://mono0926.com/blog/2013/07/19/2013-07-19-dropbox/</link>
+      <pubDate>Fri, 19 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2013/07/19/2013-07-19-dropbox/</guid>
+      <description>
+
+&lt;h3 id=&#34;dropbox-sync-apiとは:ccfc0d125142adab16f9f14ddbbf1d46&#34;&gt;Dropbox Sync APIとは&lt;/h3&gt;
+
+&lt;h3 id=&#34;サンプルとドキュメント:ccfc0d125142adab16f9f14ddbbf1d46&#34;&gt;サンプルとドキュメント&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;サンプル
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.dropbox.com/developers/datastore/sdks/ios&#34;&gt;Datastore API SDKs&lt;/a&gt;からSDKダウンロードすると同梱されてる&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ドキュメント
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.dropbox.com/developers/datastore/docs/ios&#34;&gt;Datastore API for iOS Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;チュートリアル
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.dropbox.com/developers/sync/start/ios&#34;&gt;Using the Sync API on iOS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;サンプル起動:ccfc0d125142adab16f9f14ddbbf1d46&#34;&gt;サンプル起動&lt;/h3&gt;
+
+&lt;h4 id=&#34;files-examplesのサンプル:ccfc0d125142adab16f9f14ddbbf1d46&#34;&gt;Files Examplesのサンプル&lt;/h4&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>iOSからDropbox新APIのDatastore APIを使ってみる</title>
+      <link>http://mono0926.com/blog/2013/07/18/2013-07-18-dropbox/</link>
+      <pubDate>Thu, 18 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2013/07/18/2013-07-18-dropbox/</guid>
+      <description>
+
+&lt;h3 id=&#34;サンプルとドキュメント:a122102cf8bfc794929bb1df9254c887&#34;&gt;サンプルとドキュメント&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;サンプル
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.dropbox.com/developers/datastore/sdks/ios&#34;&gt;Datastore API SDKs&lt;/a&gt;からSDKダウンロードすると同梱されてる&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ドキュメント
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.dropbox.com/developers/datastore/docs/ios&#34;&gt;Datastore API for iOS Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;チュートリアル
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.dropbox.com/developers/datastore/tutorial/ios&#34;&gt;Using the Datastore API on iOS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;サンプル起動:a122102cf8bfc794929bb1df9254c887&#34;&gt;サンプル起動&lt;/h3&gt;
+
+&lt;h4 id=&#34;datastore-examplesのサンプル:a122102cf8bfc794929bb1df9254c887&#34;&gt;Datastore Examplesのサンプル&lt;/h4&gt;
+
+&lt;p&gt;起動後Dropboxの認証を求められて、認証が通るとTODOアプリが開く。
+アイテムの追加とDone状態の切り替えのシンプルなサンプル。
+リンクしたDropboxには特に新しいファイルなど生成されていない様子。&lt;/p&gt;
+
+&lt;p&gt;2台目にインストールして認証するとちゃんと1台目で追加したタスクが出てきて、当たり前だけどなんか関心（´-ω-｀）&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/todo.png&#34; alt=&#34;todo&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;チュートリアル-https-www-dropbox-com-developers-datastore-tutorial-ios-を読み解く:a122102cf8bfc794929bb1df9254c887&#34;&gt;&lt;a href=&#34;https://www.dropbox.com/developers/datastore/tutorial/ios&#34;&gt;チュートリアル&lt;/a&gt;を読み解く&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;複数端末間でのコンフリクトは自動的に解消される(挙動を変えるにはフィールドごとにルールを設定出来る)
+
+&lt;ul&gt;
+&lt;li&gt;DBResolutionRemote：リモート優先(デフォルト)&lt;/li&gt;
+&lt;li&gt;DBResolutionLocal：ローカル優先&lt;/li&gt;
+&lt;li&gt;DBResolutionMax：大きい値優先&lt;/li&gt;
+&lt;li&gt;DBResolutionMin：小さい値優先&lt;/li&gt;
+&lt;li&gt;DBResolutionSum：適当に足し引きされる&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;RDBと違ってスキーマを持たない
+
+&lt;ul&gt;
+&lt;li&gt;KVSに近い感じ。keyと適当な型のvalueのペア。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Account manager
+
+&lt;ul&gt;
+&lt;li&gt;認証用&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Datasotores and tables
+
+&lt;ul&gt;
+&lt;li&gt;データベース本体&lt;/li&gt;
+&lt;li&gt;オフライン動作可&lt;/li&gt;
+&lt;li&gt;オンライン同期するにはsyncを明示的に呼ぶ&lt;/li&gt;
+&lt;li&gt;トランザクション&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;実装:a122102cf8bfc794929bb1df9254c887&#34;&gt;実装&lt;/h3&gt;
+
+&lt;h4 id=&#34;アカウント認証:a122102cf8bfc794929bb1df9254c887&#34;&gt;アカウント認証&lt;/h4&gt;
+
+&lt;p&gt;他のDropbox APIと同じような定型的な感じ。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objective-c&#34;&gt;// AppDelegate
+- (BOOL)application:(UIApplication *)app didFinishLaunchingWithOptions:(NSDictionary *)opts {
+    DBAccountManager* accountMgr =
+        [[DBAccountManager alloc] initWithAppKey:@&amp;quot;APP_KEY&amp;quot; secret:@&amp;quot;APP_SECRET&amp;quot;];
+    [DBAccountManager setSharedManager:accountMgr];
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objective-c&#34;&gt;// Some view controller
+- (IBAction)didPressLink {
+    DBAccount *account = [[DBAccountManager sharedManager] linkedAccount];
+    if (account) {
+        NSLog(@&amp;quot;App already linked&amp;quot;);
+    } else {
+        [[DBAccountManager sharedManager] linkFromController:self];
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objective-c&#34;&gt;// AppDelegate
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url
+    sourceApplication:(NSString *)source annotation:(id)annotation {
+    DBAccount *account = [[DBAccountManager sharedManager] handleOpenURL:url];
+    if (account) {
+        NSLog(@&amp;quot;App linked successfully!&amp;quot;);
+        return YES;
+    }
+    return NO;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;テーブル作成-取得:a122102cf8bfc794929bb1df9254c887&#34;&gt;テーブル作成・取得&lt;/h4&gt;
+
+&lt;p&gt;多分無かったら作る、あったら取得みたいな感じ。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objective-c&#34;&gt;DBDatastore *store = [DBDatastore openDefaultStoreForAccount:account error:nil];
+DBTable *tasksTbl = [store getTable:@&amp;quot;tasks&amp;quot;];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;レコード操作:a122102cf8bfc794929bb1df9254c887&#34;&gt;レコード操作&lt;/h4&gt;
+
+&lt;p&gt;同じテーブルに対して、異なるキー・バリューの型突っ込めるらしい。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objective-c&#34;&gt;DBRecord *firstTask = [tasksTbl insert:@{ @&amp;quot;taskname&amp;quot;: @&amp;quot;Buy milk&amp;quot;, @&amp;quot;completed&amp;quot;: @NO }];
+[store sync:nil];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;テーブルのレコードの増減監視:a122102cf8bfc794929bb1df9254c887&#34;&gt;テーブルのレコードの増減監視&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objective-c&#34;&gt;[store addObserver:self block:^() {
+    if (store.status &amp;amp; DBDatastoreIncoming) {
+        NSDictionary *changed = [slf.store sync:nil];
+        // 何が変わったか調べて処理
+    }
+}];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;バリューの型:a122102cf8bfc794929bb1df9254c887&#34;&gt;バリューの型&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;String&lt;/li&gt;
+&lt;li&gt;Boolean&lt;/li&gt;
+&lt;li&gt;Integer&lt;/li&gt;
+&lt;li&gt;Floating&lt;/li&gt;
+&lt;li&gt;Date&lt;/li&gt;
+&lt;li&gt;Bytes
+
+&lt;ul&gt;
+&lt;li&gt;最大100KB&lt;/li&gt;
+&lt;li&gt;より大きいサイズはSync APIやfilepathベースで扱うようにとのこと&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;List&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;ストレージの容量:a122102cf8bfc794929bb1df9254c887&#34;&gt;ストレージの容量&lt;/h4&gt;
+
+&lt;p&gt;冒頭に&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;リンクしたDropboxには特に新しいファイルなど生成されていない様子&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;と書いたけど、5MBはユーザーストレージを使わずにアプリケーションごとに割り当てられていて、それを超えるとユーザーストレージ領域を使っていくという感じ。それさえ食い尽くすとリミット。
+ユーザーのストレージ汚さないようにしたい場合は5MB制限に気をつける。&lt;/p&gt;
+
+&lt;h3 id=&#34;弄ってみた印象:a122102cf8bfc794929bb1df9254c887&#34;&gt;弄ってみた印象&lt;/h3&gt;
+
+&lt;p&gt;ネットワーク状態に応じての同期とか意識しなくて良いし、本来サーバー実装するべきところをSDKに任せられて良い一方、ローカルでのクエリが少し冗長な感じ。&lt;br /&gt;
+サンプルは1テーブルなのに増減監視でごちゃごちゃ処理してて複数テーブルとかその関連とか考え出すと素のままじゃ使うの厳しそう。
+Core Data使えばNSFetchedResultsControllerでコレクション監視がかなり簡潔に書けるところを自前実装じなくちゃいけなくて、自前アプリに導入するならそこらへんうまくフレームワーク化しないと快適に使えない感じ(そんな感じのライブラリ作っていくのも面白そうだけど)。&lt;/p&gt;
+
+&lt;p&gt;Apple製品に閉じられるなら、Core Data + iCloudの方がやはり良いなあという感じ（´-ω-｀）
+参考：&lt;a href=&#34;http://d.hatena.ne.jp/glass-_-onion/20120728/1343471940&#34;&gt;iCloud プログラミング入門&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>iOSからDropbox新APIのDrop-ins(Chooser)を使ってみる</title>
+      <link>http://mono0926.com/blog/2013/07/17/2013-07-17-dropbox/</link>
+      <pubDate>Wed, 17 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2013/07/17/2013-07-17-dropbox/</guid>
+      <description>
+
+&lt;p&gt;古い記事だけど、&lt;a href=&#34;http://blog.syuhari.jp/archives/2284&#34;&gt;[iPhone/iPad] Dropbox API を使ってみた&lt;/a&gt; をさらっと見て作業開始。&lt;br /&gt;
+開発者登録は自力じゃなかなか見つからなかったけど、&lt;a href=&#34;https://www.dropbox.com/developers/apply?cont=/developers/apps&#34;&gt;Dropbox API terms and conditions&lt;/a&gt;。&lt;br /&gt;
+権限の設定などは初回の作成時以外は変更出来ないっぽいので、慎重に。&lt;/p&gt;
+
+&lt;h3 id=&#34;drop-ins:a4b9e9edbe90096142a5a5ba44956bcd&#34;&gt;Drop-ins&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.dropbox.com/developers/dropins/chooser/ios&#34;&gt;Using the Chooser (iOS)&lt;/a&gt;を読んでみた。&lt;br /&gt;
+&lt;a href=&#34;http://dl.dropboxusercontent.com/s/uf3893wfnk4f3p9/dropbox-ios-chooser-sdk-1.0.zip&#34;&gt;Download iOS SDK&lt;/a&gt;に同梱のサンプルプロジェクトを実行しながらドキュメント読めばすごく分かりやすい。&lt;/p&gt;
+
+&lt;h4 id=&#34;導入:a4b9e9edbe90096142a5a5ba44956bcd&#34;&gt;導入&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dl.dropboxusercontent.com/s/uf3893wfnk4f3p9/dropbox-ios-chooser-sdk-1.0.zip&#34;&gt;Download iOS SDK&lt;/a&gt; に入っているDBChooser.framework と DBChooser.bundle を対象のプロジェクトに突っ込むだけ。&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h4 id=&#34;appkey指定:a4b9e9edbe90096142a5a5ba44956bcd&#34;&gt;AppKey指定&lt;/h4&gt;
+
+&lt;p&gt;唯一躓きそうなのがAppKeyで、サンプルには元々おそらくサンプル用のkeyがURL Schemesに入っていてそのまま実行できちゃうけど、自分のアプリに適用する場合はちゃんと自分のkeyを指定する必要あり。
+プロジェクトのセッティングのTARGETSのURL TypesのURL Schemesに指定するわけだけど、db-というプレフィックスの後に&lt;a href=&#34;https://www.dropbox.com/developers/apps&#34;&gt;App Console&lt;/a&gt;のDrop-insタイプのアプリのkeyを入れる形式。不正なAppKeyを指定するとChooser起動のタイミングで落ちる。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/dropin.png&#34; alt=&#34;projetc setting&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h4 id=&#34;呼び出し:a4b9e9edbe90096142a5a5ba44956bcd&#34;&gt;呼び出し&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objective-c&#34;&gt;#import &amp;lt;DBChooser/DBChooser.h&amp;gt;
+
+- (void)didPressChoose
+{
+    // 複数のkeyを使う場合はdefaultChooserの代わりにkeyを指定して初期化
+    [[DBChooser defaultChooser] openChooserForLinkType:DBChooserLinkTypePreview // 取得出来るURL2種類から選択
+                                    fromViewController:self completion:^(NSArray *results)
+    {
+        if ([results count]) {
+            // Process results from Chooser
+        } else {
+            // User canceled the action
+        }
+    }];
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;取得出来るURL2種類
+
+&lt;ul&gt;
+&lt;li&gt;DBChooserLinkTypePreviewlinks&lt;/li&gt;
+&lt;li&gt;文字通りプレビュー。色々アクションを選べる。&lt;/li&gt;
+&lt;li&gt;DBChooserLinkTypeDirectlinks&lt;/li&gt;
+&lt;li&gt;データに直接アクセス出来るリンク&lt;/li&gt;
+&lt;li&gt;サーバーにこれを渡す作りにすれば、モバイル端末 - サーバー通信はちょっとしたJSONで、通信環境の良いサーバーで効率よくダウンロードとかできそう。&lt;/li&gt;
+&lt;li&gt;4時間でexpireされるので注意&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;chooserからファイルを選んだあと:a4b9e9edbe90096142a5a5ba44956bcd&#34;&gt;Chooserからファイルを選んだあと&lt;/h4&gt;
+
+&lt;h5 id=&#34;appdelegateの以下が呼ばれる:a4b9e9edbe90096142a5a5ba44956bcd&#34;&gt;AppDelegateの以下が呼ばれる&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objective-c&#34;&gt;- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    // urlに色々詰め込まれている
+    // 複数のkeyを使う場合はdefaultChooserの代わりにkeyを指定して初期化
+    if ([[DBChooser defaultChooser] handleOpenURL:url]) {
+        return YES;
+    }
+    return NO;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&#34;urlがパースされて以下のdbchooserresultのarrayにマッピングされるイメージ:a4b9e9edbe90096142a5a5ba44956bcd&#34;&gt;urlがパースされて以下のDBChooserResultのarrayにマッピングされるイメージ&lt;/h5&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-objective-c&#34;&gt;@interface DBChooserResult : NSObject
+// DBChooserLinkTypeで何が入るか変わる。
+@property NSURL *link;
+@property NSString *name;
+@property long long size;
+@property NSURL *iconURL;
+// 画像や動画の時に3種類(64x64px・200x200px・640x480px)の大きさのサムネイルURLが入っている。
+@property NSDictionary *thumbnails;
+
+@end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;まとめ:a4b9e9edbe90096142a5a5ba44956bcd&#34;&gt;まとめ&lt;/h3&gt;
+
+&lt;p&gt;サンプルも分かりやすくて、APIとしても使いやすくて素晴らしい。
+このAPIに限らずだけど、Dropboxアプリがインストールされていること前提のアプリと割り切れば色々広がりそう。
+&lt;a href=&#34;https://www.dropbox.com/developers/dropins&#34;&gt;Drop-ins&lt;/a&gt; にある通りまだ開発中みたいだけど、ChooserだけでなくSaverもあって、アプリ間連携とかもこれで行けたりするかも。(iOSやAndroidからはローカルDropboxアプリへの保存は同期的に行いそうだし)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

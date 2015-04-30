@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+<link rel="stylesheet" href="/css/normalize.css">
+<link rel="stylesheet" href="/css/skeleton.css">
+<link rel="stylesheet" href="/css/custom.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="mono-log">
+<title>iOSからDropbox新APIのDrop-ins(Chooser)を使ってみる - mono-log</title>
+</head>
+<body>
+
+<div class="container">
+
+	<header role="banner">
+		<div class="header-logo">
+			<a href="/"><img src="/images/love.png" width="60" height="60"></a>
+		</div>
+		
+	</header>
+
+
+	<main role="main">
+		<article itemscope itemtype="http://schema.org/BlogPosting">
+			<h1 class="entry-title" itemprop="headline">iOSからDropbox新APIのDrop-ins(Chooser)を使ってみる</h1>
+			<span class="entry-meta"><time itemprop="datePublished" datetime="2013-07-17">July 17, 2013</time></span>
+			<section itemprop="entry-text">
+				
+
+<p>古い記事だけど、<a href="http://blog.syuhari.jp/archives/2284">[iPhone/iPad] Dropbox API を使ってみた</a> をさらっと見て作業開始。<br />
+開発者登録は自力じゃなかなか見つからなかったけど、<a href="https://www.dropbox.com/developers/apply?cont=/developers/apps">Dropbox API terms and conditions</a>。<br />
+権限の設定などは初回の作成時以外は変更出来ないっぽいので、慎重に。</p>
+
+<h3 id="drop-ins:a4b9e9edbe90096142a5a5ba44956bcd">Drop-ins</h3>
+
+<p><a href="https://www.dropbox.com/developers/dropins/chooser/ios">Using the Chooser (iOS)</a>を読んでみた。<br />
+<a href="http://dl.dropboxusercontent.com/s/uf3893wfnk4f3p9/dropbox-ios-chooser-sdk-1.0.zip">Download iOS SDK</a>に同梱のサンプルプロジェクトを実行しながらドキュメント読めばすごく分かりやすい。</p>
+
+<h4 id="導入:a4b9e9edbe90096142a5a5ba44956bcd">導入</h4>
+
+<p><a href="http://dl.dropboxusercontent.com/s/uf3893wfnk4f3p9/dropbox-ios-chooser-sdk-1.0.zip">Download iOS SDK</a> に入っているDBChooser.framework と DBChooser.bundle を対象のプロジェクトに突っ込むだけ。</p>
+
+<!-- more -->
+
+<h4 id="appkey指定:a4b9e9edbe90096142a5a5ba44956bcd">AppKey指定</h4>
+
+<p>唯一躓きそうなのがAppKeyで、サンプルには元々おそらくサンプル用のkeyがURL Schemesに入っていてそのまま実行できちゃうけど、自分のアプリに適用する場合はちゃんと自分のkeyを指定する必要あり。
+プロジェクトのセッティングのTARGETSのURL TypesのURL Schemesに指定するわけだけど、db-というプレフィックスの後に<a href="https://www.dropbox.com/developers/apps">App Console</a>のDrop-insタイプのアプリのkeyを入れる形式。不正なAppKeyを指定するとChooser起動のタイミングで落ちる。</p>
+
+<p><img src="/images/post/dropin.png" alt="projetc setting" />
+</p>
+
+<h4 id="呼び出し:a4b9e9edbe90096142a5a5ba44956bcd">呼び出し</h4>
+
+<pre><code class="language-objective-c">#import &lt;DBChooser/DBChooser.h&gt;
+
+- (void)didPressChoose
+{
+    // 複数のkeyを使う場合はdefaultChooserの代わりにkeyを指定して初期化
+    [[DBChooser defaultChooser] openChooserForLinkType:DBChooserLinkTypePreview // 取得出来るURL2種類から選択
+                                    fromViewController:self completion:^(NSArray *results)
+    {
+        if ([results count]) {
+            // Process results from Chooser
+        } else {
+            // User canceled the action
+        }
+    }];
+}
+</code></pre>
+
+<ul>
+<li>取得出来るURL2種類
+
+<ul>
+<li>DBChooserLinkTypePreviewlinks</li>
+<li>文字通りプレビュー。色々アクションを選べる。</li>
+<li>DBChooserLinkTypeDirectlinks</li>
+<li>データに直接アクセス出来るリンク</li>
+<li>サーバーにこれを渡す作りにすれば、モバイル端末 - サーバー通信はちょっとしたJSONで、通信環境の良いサーバーで効率よくダウンロードとかできそう。</li>
+<li>4時間でexpireされるので注意</li>
+</ul></li>
+</ul>
+
+<h4 id="chooserからファイルを選んだあと:a4b9e9edbe90096142a5a5ba44956bcd">Chooserからファイルを選んだあと</h4>
+
+<h5 id="appdelegateの以下が呼ばれる:a4b9e9edbe90096142a5a5ba44956bcd">AppDelegateの以下が呼ばれる</h5>
+
+<pre><code class="language-objective-c">- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    // urlに色々詰め込まれている
+    // 複数のkeyを使う場合はdefaultChooserの代わりにkeyを指定して初期化
+    if ([[DBChooser defaultChooser] handleOpenURL:url]) {
+        return YES;
+    }
+    return NO;
+}
+</code></pre>
+
+<h5 id="urlがパースされて以下のdbchooserresultのarrayにマッピングされるイメージ:a4b9e9edbe90096142a5a5ba44956bcd">urlがパースされて以下のDBChooserResultのarrayにマッピングされるイメージ</h5>
+
+<pre><code class="language-objective-c">@interface DBChooserResult : NSObject
+// DBChooserLinkTypeで何が入るか変わる。
+@property NSURL *link;
+@property NSString *name;
+@property long long size;
+@property NSURL *iconURL;
+// 画像や動画の時に3種類(64x64px・200x200px・640x480px)の大きさのサムネイルURLが入っている。
+@property NSDictionary *thumbnails;
+
+@end
+</code></pre>
+
+<h3 id="まとめ:a4b9e9edbe90096142a5a5ba44956bcd">まとめ</h3>
+
+<p>サンプルも分かりやすくて、APIとしても使いやすくて素晴らしい。
+このAPIに限らずだけど、Dropboxアプリがインストールされていること前提のアプリと割り切れば色々広がりそう。
+<a href="https://www.dropbox.com/developers/dropins">Drop-ins</a> にある通りまだ開発中みたいだけど、ChooserだけでなくSaverもあって、アプリ間連携とかもこれで行けたりするかも。(iOSやAndroidからはローカルDropboxアプリへの保存は同期的に行いそうだし)</p>
+
+			</section>
+		</article>
+	</main>
+
+
+	<footer role="contentinfo">
+		<div class="hr"></div>
+		<div class="footer-link">
+			<a href="mailto:mono0926@gmail.com" target="_blank">Email</a></span>
+			<a href="https://twitter.com/_mono" target="_blank">Twitter</a></span>
+			<a href="https://www.facebook.com/mono0926" target="_blank">Facebook</a></span>
+			<a href="https://github.com/mono0926" target="_blank">GitHub</a></span>
+		</div>
+		<div class="copyright">Copyright &copy; Masayuki Ono All right reserved.</div>
+	</footer>
+
+</div>
+
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-11434295-7', 'auto');
+	ga('send', 'pageview');
+</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

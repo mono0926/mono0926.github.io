@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Haskell Scala C# on mono-log</title>
+    <link>http://mono0926.com/categories/haskell-scala-c/</link>
+    <description>Recent content in Haskell Scala C# on mono-log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 23 Nov 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://mono0926.com/categories/haskell-scala-c" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Haskell勉強中</title>
+      <link>http://mono0926.com/blog/2013/11/23/2013-11-23-haskell/</link>
+      <pubDate>Sat, 23 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2013/11/23/2013-11-23-haskell/</guid>
+      <description>
+
+&lt;p&gt;2週間くらい前からHaskell勉強中。&lt;/p&gt;
+
+&lt;p&gt;各種言語使ってきて、今の本業(Objective-C)や一番得意な言語(C#)以外にも久々に手を出したいなと思って以下を検討。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;LL系(Pythonなど)をもう少し自由に使えるように
+
+&lt;ul&gt;
+&lt;li&gt;ベターな書き方やモジュール知らずに冗長な記述になっていそう&lt;/li&gt;
+&lt;li&gt;日頃の自動化が捗りそう&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ネイティブ系
+
+&lt;ul&gt;
+&lt;li&gt;C言語が最低限しか書けない上に段々忘れていったりもしている&lt;/li&gt;
+&lt;li&gt;ネイティブ系(コンパイル型・非VM)で書かなきゃいけない時とか手駒がない&lt;/li&gt;
+&lt;li&gt;とはいいつつCもC++も積極的に書きたくないのでやるとしたら下記のいずれか&lt;/li&gt;
+&lt;li&gt;Go&lt;/li&gt;
+&lt;li&gt;D言語&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;関数型
+
+&lt;ul&gt;
+&lt;li&gt;C#でLINQとかラムダ式とか慣れたけど、関数型の書き方を一部取り入れたオブジェクト指向という感じで、純粋関数型言語を学びたい&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jgm/pandoc&#34;&gt;pandoc&lt;/a&gt;というドキュメント変換ツールのソース理解とか改変とかしたいと思いつつHaskellで書かれていて全然分からない&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;まあどれでも良いかなあと思いつつ、Scalaとかも勉強したいとか思っていたのもあり関数型かなあと、とりあえずKindleで安く手に入る&lt;a href=&#34;http://www.amazon.co.jp/gp/product/B00BOBYZTQ/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=B00BOBYZTQ&amp;amp;linkCode=as2&amp;amp;tag=mono0926-22&#34;&gt;Guide to ScalaーScalaプログラミング入門&lt;/a&gt;をざっと読んだ。
+結果、C#と大して変わらず(Scalaの方がより関数型っぽいけど)、ちゃんと勉強するなら純粋関数型言語だなあと思い、pandocの理解にも繋がるしHaskellを勉強することに。&lt;/p&gt;
+
+&lt;p&gt;コンパイル型といえども、記述もシンプルでコンパイル簡単なので、今Pythonとかで簡単な自動化スクリプト書いている代替にもなるかなと。&lt;/p&gt;
+
+&lt;h2 id=&#34;勉強計画:4be2e2a58585e27ee20ac6c578385219&#34;&gt;勉強計画&lt;/h2&gt;
+
+&lt;h3 id=&#34;すごいhaskellたのしく学ぼう-http-www-amazon-co-jp-gp-product-b009ro80xy-ref-as-li-ss-tl-ie-utf8-camp-247-creative-7399-creativeasin-b009ro80xy-linkcode-as2-tag-mono0926-22:4be2e2a58585e27ee20ac6c578385219&#34;&gt;&lt;a href=&#34;http://www.amazon.co.jp/gp/product/B009RO80XY/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=B009RO80XY&amp;amp;linkCode=as2&amp;amp;tag=mono0926-22&#34;&gt;すごいHaskellたのしく学ぼう!&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;少し前に話題になっていたこの本をまず読むことに。
+洋書にするか迷ったけど、せっかく和書のKindle版もあるのでそれに頼った。&lt;/p&gt;
+
+&lt;p&gt;そして、オンライン版はフリーで読めることもさっき知ったり：&lt;a href=&#34;http://learnyouahaskell.com/&#34;&gt;Learn You a Haskell for Great Good!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;フリーということは…と思って探したら、&lt;a href=&#34;https://github.com/igstan/learn-you-a-haskell-kindle.git&#34;&gt;Kindle用のファイルを生成出来るプロジェクト&lt;/a&gt;もあったり。
+ただ、本に出てくるソースコード集が見つからず、まあいいか。&lt;/p&gt;
+
+&lt;p&gt;本の前半は、Haskellの構文に慣れるのに少し苦労しつつ、後半のアプリカティブのあたりでけっこう理解が怪しくなってきた（´-ω-｀）
+理論が理解出来ていなくてしっくりこないところが一部あるものの、コードの挙動などは何とか読み解けているのでまだなんとかいけるはず。&lt;/p&gt;
+
+&lt;h3 id=&#34;その後:4be2e2a58585e27ee20ac6c578385219&#34;&gt;その後&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.amazon.com/gp/product/B00DWJ1BIG/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B00DWJ1BIG&amp;amp;linkCode=as2&amp;amp;tag=mono0926-20&#34;&gt;Parallel and Concurrent Programming in Haskell&lt;/a&gt;が面白そうなので、次に読みたいところ。並列/並行処理周りがまだ弱い気がするのでその勉強もかねて。&lt;/p&gt;
+
+&lt;p&gt;あと、個人的に同じ本を繰り返し読むのが苦手(それが大事なのは理解している)なので、代わりに&lt;a href=&#34;http://itpro.nikkeibp.co.jp/article/COLUMN/20060915/248215/&#34;&gt;本物のプログラマはHaskellを使う&lt;/a&gt;とか読んで曖昧なところの理解を深めて行ければ。&lt;/p&gt;
+
+&lt;h2 id=&#34;実行環境:4be2e2a58585e27ee20ac6c578385219&#34;&gt;実行環境&lt;/h2&gt;
+
+&lt;h3 id=&#34;ghcインストール:4be2e2a58585e27ee20ac6c578385219&#34;&gt;GHCインストール&lt;/h3&gt;
+
+&lt;p&gt;色々処理系があるようだけど、標準のGHCを導入。
+よく分からないけど、Homebrewで良いかと、以下を実行してインストール。
+Mavericksなどの場合は環境によっては前もって&lt;a href=&#34;https://developer.apple.com/downloads/index.action&#34;&gt;Command Line Tools&lt;/a&gt;のインストールをしないとビルド失敗したりするはず。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;brew update
+brew install haskell
+brew install haskell-platform # これがなんだか理解していない
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これで、ターミナルで&lt;code&gt;ghci&lt;/code&gt;と打つと、Haskellのインタプリターが起動するはず。
+今まで、わざわざファイルで書く必要の無い書き捨ての込み入った計算はPythonのインタプリターでやっていた(そこまでする必要の無い程度ならAlfredの電卓で)けど、これからはghciでやろうかなと。&lt;/p&gt;
+
+&lt;p&gt;コンパイルは&lt;code&gt;ghc --make hoge.hs&lt;/code&gt;だけで出来るので、簡単。&lt;code&gt;hs hoge.hs&lt;/code&gt;と打つと、以下実行してくれるオレオレコマンドかエイリアスか作ったらさらに手軽になりそう。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ghc --make hoge.hs
+./hoge
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;ideの導入:4be2e2a58585e27ee20ac6c578385219&#34;&gt;IDEの導入&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://neue.cc/2010/01/04_233.html&#34;&gt;neue cc - Haskell用IDE 「Leksah」の紹介と導入方法&lt;/a&gt;を見てLeksahをインストールすることに。
+すごく簡単なプログラムならSublime Textでもいいかなと思いつつ、やはりちゃんとした補完機能など欲しいので。&lt;/p&gt;
+
+&lt;p&gt;インストール直後に出てくるダイアログのソースのパスには、Homebrewでのインストール時にダウンロードされていた以下のソースをどこかに展開したディレクトリを指定すると標準ライブラリのメタデータ作ったりソース参照が楽になったりするみたい。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/Library/Caches/Homebrew/ghc-7.6.3.tar.bz2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Candyオプション(一部の文字が数学的記号に置換表示される)がインストール直後は文字化けしていたけど、お気に入りの&lt;a href=&#34;http://save.sys.t.u-tokyo.ac.jp/~yusa/fonts/ricty.html&#34;&gt;Ricty&lt;/a&gt;にしたら直った。&lt;/p&gt;
+
+&lt;p&gt;実は本を読んでいただけで、まだほとんどコード書いていないけど、そろそろ書き慣れていきたいところ。
+何か目先の題材が欲しいけど思いつかず（´・ω・｀）&lt;/p&gt;
+
+&lt;p&gt;テスト書くと言語仕様とか挙動とかの理解がけっこう捗るので、そこらへんも調べつつ進めていきたいところ。
+とりあえずLeksahのサンプルコードがQuickCheck(prep_の接頭辞がテスト対象になる)を使っててそれでよいかなと。&lt;/p&gt;
+
+&lt;p&gt;久々にブログ書いたけど、Octopress + 自動化したおかげで、Webページをコピーする時以外キーボードだけで書けてなかなか快適（´-ω-｀）&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

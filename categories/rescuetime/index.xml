@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rescuetime on mono-log</title>
+    <link>http://mono0926.com/categories/rescuetime/</link>
+    <description>Recent content in Rescuetime on mono-log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 29 May 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://mono0926.com/categories/rescuetime/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>RescueTimeを昨日から使い始めた</title>
+      <link>http://mono0926.com/blog/2014/05/29/2014-05-29-rescuetime/</link>
+      <pubDate>Thu, 29 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2014/05/29/2014-05-29-rescuetime/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.rescuetime.com&#34;&gt;RescueTime&lt;/a&gt;を昨日から使い始めたけど、素晴らしい。
+多少カスタマイズ出来るけど、ほぼ初期設定で、すごく良い感じにデスクワークの統計を取ってくれる。
+そんなのがあるとかは、&lt;a href=&#34;http://www.lifehacker.jp/2009/03/rescuetime.html&#34;&gt;『RescueTime』で、お仕事状況をすべてチェック（無料） : ライフハッカー［日本版］&lt;/a&gt;などで知りつつスルーしてたけど、&lt;a href=&#34;https://twitter.com/PocketHits&#34;&gt;PocketHits (PocketHits) on Twitter&lt;/a&gt;で流れてきた&lt;a href=&#34;http://www.businessinsider.com/productivity-hacks-from-startup-execs-2014-5?utm_source=pocket&amp;amp;utm_medium=twitter&amp;amp;utm_campaign=pockethits&#34;&gt;Productivity Hacks From Startup Execs - Business Insider&lt;/a&gt;を見て試してみたらはまった感じ。&lt;/p&gt;
+
+&lt;p&gt;学生時代にライフログの研究していたのもあって、こういう生活のデジタルデータを集めるのはすごく興味がありました。
+でも、例えばわりと最近流行りの腕に巻いて生活強度を計るようなデバイスとかGPSで移動経路を取得するのは、結局運動パターン的には平日ほぼ毎日変わり映えの無いものに帰着するし、たまに動くと別にデータを見せられるまでもなく自覚しているし、という感じでしっくり来なかった。&lt;/p&gt;
+
+&lt;p&gt;しかし、日々のデスクワークをデータで表示してくれるのは、けっこう変化あって面白いし、自分の行動へのフィードバックにもなると感じたり。&lt;/p&gt;
+
+&lt;p&gt;本日の活動はこんな感じ。
+フルでパソコンに向かっていると1時間当たりの分母は60分になるけど、移動中や退席中などデスクを離れていると分母自体が減ります。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/RescueTime.png&#34; alt=&#34;RescueTime&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;今朝は自宅で4時くらいから開発系作業とまったりニュース記事閲覧をして、会社に移動して仕事しつつ、ちょっとニュース見て息抜きしてまた仕事復帰して昼休みになり、昼休み明けはゆるめに仕事開始しつつ、夕方前後に再びピークに持っていって帰るみたいな感じで、かなりキレイにログが取れてる。&lt;/p&gt;
+
+&lt;p&gt;今日はXXXが多すぎたなとか、今日はよくがんばったとか、あるいは週や月の統計を見るとさらに色々自分のペースを客観的に見れそうで楽しみ。&lt;/p&gt;
+
+&lt;p&gt;ここまで良い感じに見せられると、productivityやsoftware developmentの数値を上げてハイスコア狙いたくなるなど、ゲーミフィケーション的な要素もあったり。&lt;/p&gt;
+
+&lt;p&gt;目標も自分で設定出来て、今日は、生産的な時間・開発に費やせた時間・気が散った時間、ともに目標値を超えて良かった。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/summary.png&#34; alt=&#34;summary&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;というわけで、しばらく続けようと思う。
+続けること自体は何の負担も無くて素晴らしい。
+ただ、スコアを高く維持しようとしてると、捗る一方疲れてきそうな懸念もあり（´-ω-｀）&lt;/p&gt;
+
+&lt;p&gt;時間を気にしすぎると、ただいるだけで実際の成果を伴わないとかありがちだけど(残業代目当ての無駄な残業など)、これはその質自体も評価されるから、自然とそれも防げるような感じになっているように思う。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

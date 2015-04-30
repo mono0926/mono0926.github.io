@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+<link rel="stylesheet" href="/css/normalize.css">
+<link rel="stylesheet" href="/css/skeleton.css">
+<link rel="stylesheet" href="/css/custom.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="mono-log">
+<title>Haskell勉強中 - mono-log</title>
+</head>
+<body>
+
+<div class="container">
+
+	<header role="banner">
+		<div class="header-logo">
+			<a href="/"><img src="/images/love.png" width="60" height="60"></a>
+		</div>
+		
+	</header>
+
+
+	<main role="main">
+		<article itemscope itemtype="http://schema.org/BlogPosting">
+			<h1 class="entry-title" itemprop="headline">Haskell勉強中</h1>
+			<span class="entry-meta"><time itemprop="datePublished" datetime="2013-11-23">November 23, 2013</time></span>
+			<section itemprop="entry-text">
+				
+
+<p>2週間くらい前からHaskell勉強中。</p>
+
+<p>各種言語使ってきて、今の本業(Objective-C)や一番得意な言語(C#)以外にも久々に手を出したいなと思って以下を検討。</p>
+
+<ul>
+<li>LL系(Pythonなど)をもう少し自由に使えるように
+
+<ul>
+<li>ベターな書き方やモジュール知らずに冗長な記述になっていそう</li>
+<li>日頃の自動化が捗りそう</li>
+</ul></li>
+<li>ネイティブ系
+
+<ul>
+<li>C言語が最低限しか書けない上に段々忘れていったりもしている</li>
+<li>ネイティブ系(コンパイル型・非VM)で書かなきゃいけない時とか手駒がない</li>
+<li>とはいいつつCもC++も積極的に書きたくないのでやるとしたら下記のいずれか</li>
+<li>Go</li>
+<li>D言語</li>
+</ul></li>
+<li>関数型
+
+<ul>
+<li>C#でLINQとかラムダ式とか慣れたけど、関数型の書き方を一部取り入れたオブジェクト指向という感じで、純粋関数型言語を学びたい</li>
+<li><a href="https://github.com/jgm/pandoc">pandoc</a>というドキュメント変換ツールのソース理解とか改変とかしたいと思いつつHaskellで書かれていて全然分からない</li>
+</ul></li>
+</ul>
+
+<!-- more -->
+
+<p>まあどれでも良いかなあと思いつつ、Scalaとかも勉強したいとか思っていたのもあり関数型かなあと、とりあえずKindleで安く手に入る<a href="http://www.amazon.co.jp/gp/product/B00BOBYZTQ/ref=as_li_ss_tl?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=B00BOBYZTQ&amp;linkCode=as2&amp;tag=mono0926-22">Guide to ScalaーScalaプログラミング入門</a>をざっと読んだ。
+結果、C#と大して変わらず(Scalaの方がより関数型っぽいけど)、ちゃんと勉強するなら純粋関数型言語だなあと思い、pandocの理解にも繋がるしHaskellを勉強することに。</p>
+
+<p>コンパイル型といえども、記述もシンプルでコンパイル簡単なので、今Pythonとかで簡単な自動化スクリプト書いている代替にもなるかなと。</p>
+
+<h2 id="勉強計画:4be2e2a58585e27ee20ac6c578385219">勉強計画</h2>
+
+<h3 id="すごいhaskellたのしく学ぼう-http-www-amazon-co-jp-gp-product-b009ro80xy-ref-as-li-ss-tl-ie-utf8-camp-247-creative-7399-creativeasin-b009ro80xy-linkcode-as2-tag-mono0926-22:4be2e2a58585e27ee20ac6c578385219"><a href="http://www.amazon.co.jp/gp/product/B009RO80XY/ref=as_li_ss_tl?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=B009RO80XY&amp;linkCode=as2&amp;tag=mono0926-22">すごいHaskellたのしく学ぼう!</a></h3>
+
+<p>少し前に話題になっていたこの本をまず読むことに。
+洋書にするか迷ったけど、せっかく和書のKindle版もあるのでそれに頼った。</p>
+
+<p>そして、オンライン版はフリーで読めることもさっき知ったり：<a href="http://learnyouahaskell.com/">Learn You a Haskell for Great Good!</a></p>
+
+<p>フリーということは…と思って探したら、<a href="https://github.com/igstan/learn-you-a-haskell-kindle.git">Kindle用のファイルを生成出来るプロジェクト</a>もあったり。
+ただ、本に出てくるソースコード集が見つからず、まあいいか。</p>
+
+<p>本の前半は、Haskellの構文に慣れるのに少し苦労しつつ、後半のアプリカティブのあたりでけっこう理解が怪しくなってきた（´-ω-｀）
+理論が理解出来ていなくてしっくりこないところが一部あるものの、コードの挙動などは何とか読み解けているのでまだなんとかいけるはず。</p>
+
+<h3 id="その後:4be2e2a58585e27ee20ac6c578385219">その後</h3>
+
+<p><a href="http://www.amazon.com/gp/product/B00DWJ1BIG/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00DWJ1BIG&amp;linkCode=as2&amp;tag=mono0926-20">Parallel and Concurrent Programming in Haskell</a>が面白そうなので、次に読みたいところ。並列/並行処理周りがまだ弱い気がするのでその勉強もかねて。</p>
+
+<p>あと、個人的に同じ本を繰り返し読むのが苦手(それが大事なのは理解している)なので、代わりに<a href="http://itpro.nikkeibp.co.jp/article/COLUMN/20060915/248215/">本物のプログラマはHaskellを使う</a>とか読んで曖昧なところの理解を深めて行ければ。</p>
+
+<h2 id="実行環境:4be2e2a58585e27ee20ac6c578385219">実行環境</h2>
+
+<h3 id="ghcインストール:4be2e2a58585e27ee20ac6c578385219">GHCインストール</h3>
+
+<p>色々処理系があるようだけど、標準のGHCを導入。
+よく分からないけど、Homebrewで良いかと、以下を実行してインストール。
+Mavericksなどの場合は環境によっては前もって<a href="https://developer.apple.com/downloads/index.action">Command Line Tools</a>のインストールをしないとビルド失敗したりするはず。</p>
+
+<pre><code>brew update
+brew install haskell
+brew install haskell-platform # これがなんだか理解していない
+</code></pre>
+
+<p>これで、ターミナルで<code>ghci</code>と打つと、Haskellのインタプリターが起動するはず。
+今まで、わざわざファイルで書く必要の無い書き捨ての込み入った計算はPythonのインタプリターでやっていた(そこまでする必要の無い程度ならAlfredの電卓で)けど、これからはghciでやろうかなと。</p>
+
+<p>コンパイルは<code>ghc --make hoge.hs</code>だけで出来るので、簡単。<code>hs hoge.hs</code>と打つと、以下実行してくれるオレオレコマンドかエイリアスか作ったらさらに手軽になりそう。</p>
+
+<pre><code>ghc --make hoge.hs
+./hoge
+</code></pre>
+
+<h3 id="ideの導入:4be2e2a58585e27ee20ac6c578385219">IDEの導入</h3>
+
+<p><a href="http://neue.cc/2010/01/04_233.html">neue cc - Haskell用IDE 「Leksah」の紹介と導入方法</a>を見てLeksahをインストールすることに。
+すごく簡単なプログラムならSublime Textでもいいかなと思いつつ、やはりちゃんとした補完機能など欲しいので。</p>
+
+<p>インストール直後に出てくるダイアログのソースのパスには、Homebrewでのインストール時にダウンロードされていた以下のソースをどこかに展開したディレクトリを指定すると標準ライブラリのメタデータ作ったりソース参照が楽になったりするみたい。</p>
+
+<pre><code>/Library/Caches/Homebrew/ghc-7.6.3.tar.bz2
+</code></pre>
+
+<p>Candyオプション(一部の文字が数学的記号に置換表示される)がインストール直後は文字化けしていたけど、お気に入りの<a href="http://save.sys.t.u-tokyo.ac.jp/~yusa/fonts/ricty.html">Ricty</a>にしたら直った。</p>
+
+<p>実は本を読んでいただけで、まだほとんどコード書いていないけど、そろそろ書き慣れていきたいところ。
+何か目先の題材が欲しいけど思いつかず（´・ω・｀）</p>
+
+<p>テスト書くと言語仕様とか挙動とかの理解がけっこう捗るので、そこらへんも調べつつ進めていきたいところ。
+とりあえずLeksahのサンプルコードがQuickCheck(prep_の接頭辞がテスト対象になる)を使っててそれでよいかなと。</p>
+
+<p>久々にブログ書いたけど、Octopress + 自動化したおかげで、Webページをコピーする時以外キーボードだけで書けてなかなか快適（´-ω-｀）</p>
+
+			</section>
+		</article>
+	</main>
+
+
+	<footer role="contentinfo">
+		<div class="hr"></div>
+		<div class="footer-link">
+			<a href="mailto:mono0926@gmail.com" target="_blank">Email</a></span>
+			<a href="https://twitter.com/_mono" target="_blank">Twitter</a></span>
+			<a href="https://www.facebook.com/mono0926" target="_blank">Facebook</a></span>
+			<a href="https://github.com/mono0926" target="_blank">GitHub</a></span>
+		</div>
+		<div class="copyright">Copyright &copy; Masayuki Ono All right reserved.</div>
+	</footer>
+
+</div>
+
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-11434295-7', 'auto');
+	ga('send', 'pageview');
+</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>

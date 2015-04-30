@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google Reader on mono-log</title>
+    <link>http://mono0926.com/categories/google-reader/</link>
+    <description>Recent content in Google Reader on mono-log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 07 Jul 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://mono0926.com/categories/google-reader/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Google Readerが終わって…</title>
+      <link>http://mono0926.com/blog/2013/07/07/2013-07-07-google-reader-feedly/</link>
+      <pubDate>Sun, 07 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2013/07/07/2013-07-07-google-reader-feedly/</guid>
+      <description>
+
+&lt;p&gt;一日に500-1000件消費するくらいのRSSリーダーヘビーユーザーでしたが、意外と困っていません。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Google Reader 終わる前
+
+&lt;ul&gt;
+&lt;li&gt;iPhone: Byline + たまにReeder&lt;/li&gt;
+&lt;li&gt;iPad: 同上&lt;/li&gt;
+&lt;li&gt;Mac: Reeder&lt;/li&gt;
+&lt;li&gt;Web: Google Reader (Windows環境の時など、たまーに見る程度)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Google Reader 終わった後
+
+&lt;ul&gt;
+&lt;li&gt;iPhone: Byline + たまにReeder&lt;/li&gt;
+&lt;li&gt;iPad: Byline (Reeder未対応)&lt;/li&gt;
+&lt;li&gt;Mac: FeedlyのWebアプリ (Reeder未対応)&lt;/li&gt;
+&lt;li&gt;Web: FeedlyのWebアプリ&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;と、あまり変わって無い上に、FeedlyのWebアプリの操作感(どこを押せば何が出来るかなど)にあまり慣れていないものの、J(次)・K(前)・V(新しいページで記事開く)のショートカットが一緒なことに気づいてからはほぼノンストレスです（´-ω-｀）&lt;/p&gt;
+
+&lt;p&gt;ただ、やっぱりMacでReederを使ってサクサク見ていた感じには劣るので、早くReeder for Macがアップデートされてほしいところです（´・ω・｀）&lt;/p&gt;
+
+&lt;p&gt;…とは別にこの機会に、SmartNewsで大衆ネタ・ゴシップ系などは拾い読みしているので、RSSリーダーは技術系ネタに絞って整理したいなとかも考えていたり。なかなか面倒ですが（´-ω-｀）&lt;/p&gt;
+
+&lt;h3 id=&#34;追記:3e0eefccea77dc8779fe56ddd0c26dae&#34;&gt;追記&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/readkit/id588726889?l=en&amp;amp;mt=12&#34;&gt;ReadKit&lt;/a&gt; というアプリが素晴らしく、常用し始めましたヽ(・ω・｀）&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

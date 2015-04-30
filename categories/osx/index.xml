@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Osx on mono-log</title>
+    <link>http://mono0926.com/categories/osx/</link>
+    <description>Recent content in Osx on mono-log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 06 May 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://mono0926.com/categories/osx/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>OSXの開発環境を整えた</title>
+      <link>http://mono0926.com/blog/2014/05/06/2014-05-06-renew/</link>
+      <pubDate>Tue, 06 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2014/05/06/2014-05-06-renew/</guid>
+      <description>
+
+&lt;p&gt;Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。
+Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイッチしたいなとか思ったのが発端。&lt;br /&gt;
+参考: &lt;a href=&#34;http://rdepf.hatenablog.jp/entry/2014/03/07/122337&#34;&gt;Node.jsのコールバック地獄をPromiseやGeneratorを使って解消する - HackerNews翻訳してみた&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;わりと&lt;code&gt;brew install XXX&lt;/code&gt;で雑に各種環境インストールしてたので、これを気に色々直した。&lt;/p&gt;
+
+&lt;h2 id=&#34;homebrewアンインストール:7734430ffcb52dde0b2feea4f6d9b0a4&#34;&gt;Homebrewアンインストール&lt;/h2&gt;
+
+&lt;p&gt;ゴミが残るのいやだったので、&lt;a href=&#34;https://gist.github.com/mxcl/1173223&#34;&gt;Uninstall Homebrew&lt;/a&gt;でhomebrewをアンインストール。&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;brewfile導入:7734430ffcb52dde0b2feea4f6d9b0a4&#34;&gt;Brewfile導入&lt;/h2&gt;
+
+&lt;p&gt;以下など見て便利そうだと思っていたので、Brewfile導入。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.1x1.jp/blog/2014/04/how-to-setup-application-on-osx.html&#34;&gt;Mac OSX をクリーンインストールしてからの環境構築メモ - Shin x blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.livedoor.jp/sonots/archives/35251881.html&#34;&gt;「BrewfileでHomebrewパッケージを管理する」をやってみた - sonots:blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tnakamura.hatenablog.com/entry/2014/04/29/113727&#34;&gt;MacBook にインストールしているアプリやツールをメモする代わりに Brewfile を作った - present&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;これだけで一気にインストール出来てとても便利。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;brew bundle
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;僕の：&lt;a href=&#34;https://github.com/mono0926/Environment/blob/master/OSX/Brewfile&#34;&gt;Environment/OSX/Brewfile at master · mono0926/Environment&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;今後も、Homebrewで何か新しくインストールするときメンテナンスしていくようにしよう。&lt;/p&gt;
+
+&lt;h2 id=&#34;その他開発環境:7734430ffcb52dde0b2feea4f6d9b0a4&#34;&gt;その他開発環境&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;brew install XXX&lt;/code&gt;で適当にインストールせずに、バージョンの切り替えが容易なようにした。
+いくつか種類あったけど、基本後発のを導入してみた。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Python: &lt;a href=&#34;https://github.com/yyuu/pyenv&#34;&gt;yyuu/pyenv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ruby: &lt;a href=&#34;https://github.com/sstephenson/rbenv&#34;&gt;sstephenson/rbenv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Node.js: &lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;creationix/nvm&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;nvmはzshとの相性悪くて日本では&lt;a href=&#34;https://github.com/hokaccha/nodebrew&#34;&gt;hokaccha/nodebrew&lt;/a&gt;がけっこう人気っぽかったけど特に問題無かったのでnvmにした。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;諸々雑なところがあるけど、&lt;a href=&#34;https://github.com/mono0926/Environment/tree/master/OSX&#34;&gt;Environment/OSX at master · mono0926/Environment&lt;/a&gt;でセットアップスクリプト管理。&lt;/p&gt;
+
+&lt;h2 id=&#34;ide導入:7734430ffcb52dde0b2feea4f6d9b0a4&#34;&gt;IDE導入&lt;/h2&gt;
+
+&lt;p&gt;スクリプト系言語は、最近はわりとSublime Textで書いていたけど、やっぱり補完がもう少し聞いてくれないと厳しいので、なるべくIDE使うようにしようと思う。&lt;br /&gt;
+IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれば捗るかなと。&lt;br /&gt;
+今まではNetBeansかたまにEclipseだったけど、乗り換え。少しずつ慣れていこう（´-ω-｀）&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.jetbrains.com/webstorm/&#34;&gt;WebStorm :: The smartest JavaScript IDE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.jetbrains.com/ruby/&#34;&gt;Ruby on Rails IDE :: JetBrains RubyMine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.jetbrains.com/pycharm/&#34;&gt;Python IDE &amp;amp; Django IDE for Web developers : JetBrains PyCharm&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;CE版は無料&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

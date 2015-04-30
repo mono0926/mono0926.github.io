@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+<link rel="stylesheet" href="/css/normalize.css">
+<link rel="stylesheet" href="/css/skeleton.css">
+<link rel="stylesheet" href="/css/custom.css">
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="mono-log">
+<title>OSX 10.10(Yosemite)やiOS 8にアップデートして困ったこと - mono-log</title>
+</head>
+<body>
+
+<div class="container">
+
+	<header role="banner">
+		<div class="header-logo">
+			<a href="/"><img src="/images/love.png" width="60" height="60"></a>
+		</div>
+		
+	</header>
+
+
+	<main role="main">
+		<article itemscope itemtype="http://schema.org/BlogPosting">
+			<h1 class="entry-title" itemprop="headline">OSX 10.10(Yosemite)やiOS 8にアップデートして困ったこと</h1>
+			<span class="entry-meta"><time itemprop="datePublished" datetime="2014-06-04">June 04, 2014</time></span>
+			<section itemprop="entry-text">
+				
+
+<p>例のごとく、何も考えずにメインマシンをOSX 10.10(Yosemite)・iOS 8にしてしまいましたが、いくつか細かいトラブルが。
+でも概ね問題無く使えていて満足（´-ω-｀）</p>
+
+<p>NDAに気をつけつつ困ったことや解決法など(　´･‿･｀)</p>
+
+<h2 id="osx-10-10-yosemite-にアップデートして困ったこと:d24f6b228d4e78712f5f56df9a72be21">OSX 10.10(Yosemite)にアップデートして困ったこと</h2>
+
+<h3 id="pckeyboardhack-https-github-com-tekezo-pckeyboardhack-が起動しない:d24f6b228d4e78712f5f56df9a72be21"><a href="https://github.com/tekezo/PCKeyboardHack">PCKeyboardHack</a>が起動しない</h3>
+
+<h4 id="追記-pckeyboardhack-10-7-0-https-pqrs-org-macosx-keyremap4macbook-files-pckeyboardhack-10-7-0-dmg-がリリースされました:d24f6b228d4e78712f5f56df9a72be21">【追記】<a href="https://pqrs.org/macosx/keyremap4macbook/files/PCKeyboardHack-10.7.0.dmg">PCKeyboardHack-10.7.0</a>がリリースされました！</h4>
+
+<p>去年もこれで困ったことを思い出しました。
+Realforceでスペースの両隣のキーでの日本語入力切り替えが効かずにとても不便です。
+Apple純正キーボードだと問題ないですが。</p>
+
+<p>と思いつつ、Issuesを覗いたら、<a href="https://github.com/tekezo/PCKeyboardHack/issues/31">Add 10.10 support #31</a>ですんなり解決(　´･‿･｀)</p>
+
+<p>何も考えずこれを打ったら問題無く動くように。</p>
+
+<pre><code>sudo /sbin/kextload '/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboardHack.10.9.signed.kext'
+</code></pre>
+
+<h3 id="bettertouchtool-http-blog-boastr-net-が起動しない:d24f6b228d4e78712f5f56df9a72be21"><a href="http://blog.boastr.net/">BetterTouchTool</a>が起動しない</h3>
+
+<!-- more -->
+
+<h4 id="追記-yosemite対応版のbettertouchtool-http-boastr-net-releases-btt0-997-zip-がダウンロード出来るようになりました:d24f6b228d4e78712f5f56df9a72be21">【追記】<a href="http://boastr.net/releases/btt0.997.zip">Yosemite対応版のBetterTouchTool</a>がダウンロード出来るようになりました！</h4>
+
+<p>これも<a href="http://blog.boastr.net/os-x-10-10-yosemite/">OS X 10.10 Yosemite » BetterTouchTool, BetterSnapTool &amp; SecondBar</a>にすでに記事が上がっていて、現時点ではまだダウンロード出来ないけどまもなく対応版がリリースされる模様。</p>
+
+<blockquote>
+<p>BetterTouchTool crashes on startup, but I already identified the issue and will fix it tomorrow.</p>
+</blockquote>
+
+<p><a href="http://www.alfredapp.com/">Alfred</a>も、Keynotes直後にすぐこんなポスト投稿するなど、どこも動きが速くて素晴らしい(　´･‿･｀)</p>
+
+<p><blockquote class="twitter-tweet" lang="en"><p>Calm down everybody, Alfred isn’t going anywhere (but up) in OS X Yosemite :) <a href="http://t.co/wh1mMnxrkt">http://t.co/wh1mMnxrkt</a></p>&mdash; Alfred App (@alfredapp) <a href="https://twitter.com/alfredapp/statuses/473517537939185665">June 2, 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<p>ただ、Yosemiteはインストールにすごく時間がかかって、残り4分で数十分固まったようになった(大量のファイルコピーなどしている模様・同様の報告多数)ので、失敗したかと思いけっこう怖かったです(　´･‿･｀)</p>
+
+<h3 id="homebrewが動かなくなってしまった:d24f6b228d4e78712f5f56df9a72be21">Homebrewが動かなくなってしまった</h3>
+
+<pre><code>/usr/local/bin/brew: /usr/local/Library/brew.rb: /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby: bad interpreter: No such file or directory
+</code></pre>
+
+<p><code>brew doctor</code>さえ動かない状態。</p>
+
+<p>ログに書いてあるとおりSystemのRubyのバージョンが変わったのかーと思いつつ、<code>/usr/local/Library/brew.rb</code>の以下の<code>1.8</code>の箇所を<code>2.0</code>にすれば直った。</p>
+
+<pre><code>#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -W0
+</code></pre>
+
+<p>しかし、この編集後に<code>brew update</code>をすると、ローカルの変更が原因でPULL出来ないと怒られる（´-ω-｀）
+とはいえ、この編集をしないとbrewコマンド自体効かないし…と困りつつ、<code>2.0</code>に編集して<code>brew update</code>するや否や<code>1.8</code>に戻せばPULLのタイミングでは変更無し状態になってうまくいった(　´･‿･｀)
+ちょっと不便だけど、そんなにする操作じゃないし、こんな運用でしばらく我慢しよう(　´･‿･｀)</p>
+
+<h3 id="sleepでクラッシュ-sleep時にクラッシュしたのは偶然だったっぽい:d24f6b228d4e78712f5f56df9a72be21"><del>Sleepでクラッシュ</del>Sleep時にクラッシュしたのは偶然だったっぽい</h3>
+
+<p>まだきちんと確かめてないけど、Sleep後に起こそうとしたら再起動がかかって、こんなログが出てた。
+Sleep後だったのは偶然かも。</p>
+
+<pre><code>panic(cpu 7 caller 0xffffff801600f06c): &quot;TLB invalidation IPI timeout: &quot; &quot;CPU(s) failed to respond to interrupts, unresponsive CPU bitmap: 0x3d, NMIPI acks: orig: 0x0, now: 0x0&quot;@/SourceCache/xnu/xnu-2738.0.0.0.5/osfmk/x86_64/pmap.c:2470
+</code></pre>
+
+<h2 id="ios-8にアップデートして困ったこと:d24f6b228d4e78712f5f56df9a72be21">iOS 8にアップデートして困ったこと</h2>
+
+<h3 id="iphoneで-1password-https-agilebits-com-onepassword-が同期できなくなってクラッシュする:d24f6b228d4e78712f5f56df9a72be21">iPhoneで<a href="https://agilebits.com/onepassword">1Password</a>が同期できなくなってクラッシュする</h3>
+
+<h4 id="追記-ios8で1passwordが使えるようになった-monohub-http-mono0926-com-blog-2014-06-13-password-で解決-ω:d24f6b228d4e78712f5f56df9a72be21">【追記】<a href="http://mono0926.com/blog/2014/06/13/password/">iOS8で1Passwordが使えるようになった - monoHub</a>で解決（｀・ω・´）</h4>
+
+<p>けっこう依存度が高いので、これけっこう困る(　´･‿･｀)
+Beta版使っているのが悪いししばらく我慢かなあと思っていたら、すでに問題認識しているらしく、わりと前向きな対応してもらえそうな雰囲気(　´･‿･｀)
+ついでに秋くらいに指紋認証でアンロックも実装してくれることを期待(　´･‿･｀)</p>
+
+<p><blockquote class="twitter-tweet" lang="en"><p>iOS 8 folks, there sure are a lot of you using the beta! I’m a bit…broken. Sorry. My devs are working on it!&#10;&#10;[…]</p>&mdash; 1Password Beta (@1PasswordBeta) <a href="https://twitter.com/1PasswordBeta/statuses/473747191228399616">June 3, 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+
+<h3 id="lineスタンプが買えない-使えない:d24f6b228d4e78712f5f56df9a72be21">LINEスタンプが買えない・使えない</h3>
+
+<p>買おうとするとエラーになってしまうし、使おうとすると進捗ダイアログが終わらない（´-ω-｀）けっこう困る（´-ω-｀）
+<a href="http://a.scn.jp/s/0VrEMIHAB">申請中の個人スタンプ</a>も買えないし使えなくなりそう（´・д・｀）
+これに関しては調べても困っている人はいても解決手段は現状無さそう。</p>
+
+<p>とりあえずパソコン版でしのごう（´-ω-｀）Yosemite上のLINEは問題無いし。</p>
+
+<h3 id="tweetbot:d24f6b228d4e78712f5f56df9a72be21">Tweetbot</h3>
+
+<p>UI周りかなりがんばってるのが裏目に出て、動作がボロボロ。
+特に、URLをPocketに保存出来ないのがつらたん。
+困っている人が他にもいるという程度しか情報無かったので、とりあえずEchofonでしのごう(　´･‿･｀)</p>
+
+<p>iOS 8については、あとはクラッシュ率が高いとかですかね。
+NDAで細かいところは書けないけど、使用感も特に大きな変化無く(　´･‿･｀)</p>
+
+<p>というわけで、ちょくちょく問題はありつつ、最新の環境楽しめているので、アップデートして良かった(　´･‿･｀)
+趣味みたいなもののあので、仮想環境とか検証機とかで試しても個人的にはあまり意味がなく、やはり普段マシンで楽しんでこそと思う(　´･‿･｀)</p>
+
+			</section>
+		</article>
+	</main>
+
+
+	<footer role="contentinfo">
+		<div class="hr"></div>
+		<div class="footer-link">
+			<a href="mailto:mono0926@gmail.com" target="_blank">Email</a></span>
+			<a href="https://twitter.com/_mono" target="_blank">Twitter</a></span>
+			<a href="https://www.facebook.com/mono0926" target="_blank">Facebook</a></span>
+			<a href="https://github.com/mono0926" target="_blank">GitHub</a></span>
+		</div>
+		<div class="copyright">Copyright &copy; Masayuki Ono All right reserved.</div>
+	</footer>
+
+</div>
+
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-11434295-7', 'auto');
+	ga('send', 'pageview');
+</script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</body>
+</html>
