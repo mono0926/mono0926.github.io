@@ -2,14 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://localhost:60278/</loc>
-    <lastmod>2015-04-30T16:30:21+09:00</lastmod>
+    <loc>http://mono0926.com/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:60278/blog/2015/04/30/test/</loc>
-    <lastmod>2015-04-30T16:30:21+09:00</lastmod>
   </url>
   
 </urlset>
