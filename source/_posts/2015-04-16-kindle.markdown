@@ -1,9 +1,0 @@
----
-layout: post
-title: "kindle"
-date: 2015-04-16 22:13
-comments: true
-categories: kindle
----
-
-日米アカウントを結合して以前より便利に
