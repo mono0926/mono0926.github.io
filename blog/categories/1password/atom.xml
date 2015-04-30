@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 1password | monoHub]]></title>
+  <link href="http://mono0926.github.io/blog/categories/1password/atom.xml" rel="self"/>
+  <link href="http://mono0926.github.io/"/>
+  <updated>2015-04-30T14:20:29+09:00</updated>
+  <id>http://mono0926.github.io/</id>
+  <author>
+    <name><![CDATA[Masayuki Ono]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[iOS8で1Passwordが使えるようになった]]></title>
+    <link href="http://mono0926.github.io/blog/2014/06/13/password/"/>
+    <updated>2014-06-13T07:36:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2014/06/13/password</id>
+    <content type="html"><![CDATA[<p><a href="http://mono0926.com/blog/2014/06/04/yosemite/">OSX 10.10(Yosemite)やiOS 8にアップデートして困ったこと &ndash; monoHub</a>で書いた通り、iOS 8にして以来、<a href="https://agilebits.com/onepassword/ios">1Password</a>が使えなくてつらたんでした（´-ω-｀）</p>
+
+<p>しかし、ベータ版なら使えるという情報が。</p>
+
+<blockquote class="twitter-tweet" lang="en"><p>4.5.3b1 (iOS) is now available, and resolves some of the issues with iOS 8.</p>&mdash; 1Password Beta (@1PasswordBeta) <a href="https://twitter.com/1PasswordBeta/statuses/474335765720494081">June 4, 2014</a></blockquote>
+
+
+<script async src="http://mono0926.github.io//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>そこで、数日前に<a href="https://agilebits.com/beta_signups/newsletter">AgileBits Beta Newsletter</a>に登録して待っていたら、今日メールが届きました。</p>
+
+<p>それに従って、HockyApp ConfigのProfileをインストールした後、1Passwordのベータ版がインストール出来ました。</p>
+
+<p><img src="/images/post/1password.png" alt="love" /></p>
+
+<p>つらくない(　´･‿･｀)</p>
+
+<p><a href="http://bit.ly/love-stamp">http://bit.ly/love-stamp</a></p>
+]]></content>
+  </entry>
+  
+</feed>

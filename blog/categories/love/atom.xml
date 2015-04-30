@@ -4,7 +4,7 @@
   <title><![CDATA[Category: love | monoHub]]></title>
   <link href="http://mono0926.github.io/blog/categories/love/atom.xml" rel="self"/>
   <link href="http://mono0926.github.io/"/>
-  <updated>2014-05-14T20:19:14+09:00</updated>
+  <updated>2015-04-30T14:20:29+09:00</updated>
   <id>http://mono0926.github.io/</id>
   <author>
     <name><![CDATA[Masayuki Ono]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[SwiftでラヴさんWEBアルバムを開くだけのアプリ作った]]></title>
+    <link href="http://mono0926.github.io/blog/2014/06/03/swift/"/>
+    <updated>2014-06-03T12:57:00+09:00</updated>
+    <id>http://mono0926.github.io/blog/2014/06/03/swift</id>
+    <content type="html"><![CDATA[<p>昼休みに、<a href="https://developer.apple.com/swift/">Swift</a>で、<a href="https://github.com/mono0926/SwiftSample">ラヴさんWEBアルバムを開くだけのアプリ</a>作った。</p>
+
+<p>Swiftもそうだけど、Xcode 6も色々変わってて面白い(　´･‿･｀)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[ラヴさんスタンプをLINE Creators Marketに申請してみた]]></title>
