@@ -3,13 +3,8 @@
   
   <url>
     <loc>http://mono0926.com/</loc>
-    <lastmod>2015-04-30T00:00:00+00:00</lastmod>
+    <lastmod>2014-10-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://mono0926.com/blog/2015/04/30/2015-04-30-hoge/</loc>
-    <lastmod>2015-04-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -53,12 +48,12 @@
   </url>
   
   <url>
-    <loc>http://mono0926.com/blog/2014/06/04/2014-06-04-stamp/</loc>
+    <loc>http://mono0926.com/blog/2014/06/04/2014-06-04-yosemite/</loc>
     <lastmod>2014-06-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://mono0926.com/blog/2014/06/04/2014-06-04-yosemite/</loc>
+    <loc>http://mono0926.com/blog/2014/06/04/2014-06-04-stamp/</loc>
     <lastmod>2014-06-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -178,17 +173,17 @@
   </url>
   
   <url>
+    <loc>http://mono0926.com/blog/2013/07/07/2013-07-07-octopress-alfred/</loc>
+    <lastmod>2013-07-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://mono0926.com/blog/2013/07/07/2013-07-07-github_octopress_blog/</loc>
     <lastmod>2013-07-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://mono0926.com/blog/2013/07/07/2013-07-07-google-reader-feedly/</loc>
-    <lastmod>2013-07-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://mono0926.com/blog/2013/07/07/2013-07-07-octopress-alfred/</loc>
     <lastmod>2013-07-07T00:00:00+00:00</lastmod>
   </url>
   
