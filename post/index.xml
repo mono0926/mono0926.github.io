@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on monoHub</title>
-    <link>http://localhost:1313/post/</link>
+    <link>http://localhost:60278/post/</link>
     <description>Recent content in Posts on monoHub</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
     <lastBuildDate>Thu, 30 Apr 2015 16:30:21 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:60278/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>test</title>
-      <link>http://localhost:1313/blog/2015/04/30/test/</link>
+      <link>http://localhost:60278/blog/2015/04/30/test/</link>
       <pubDate>Thu, 30 Apr 2015 16:30:21 +0900</pubDate>
       
-      <guid>http://localhost:1313/blog/2015/04/30/test/</guid>
+      <guid>http://localhost:60278/blog/2015/04/30/test/</guid>
       <description></description>
     </item>
     
