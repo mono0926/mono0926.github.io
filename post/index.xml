@@ -6,8 +6,26 @@
     <description>Recent content in Posts on mono-log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 31 Oct 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2015 09:07:02 +0900</lastBuildDate>
     <atom:link href="http://mono0926.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>fuga</title>
+      <link>http://mono0926.com/blog/2015/05/01/fuga/</link>
+      <pubDate>Fri, 01 May 2015 09:07:02 +0900</pubDate>
+      
+      <guid>http://mono0926.com/blog/2015/05/01/fuga/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>http://mono0926.com/blog/2015/05/01/hugo/</link>
+      <pubDate>Fri, 01 May 2015 08:44:32 +0900</pubDate>
+      
+      <guid>http://mono0926.com/blog/2015/05/01/hugo/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>SourceTreeでブランチ名をコミットメッセージの先頭に自動挿入</title>
@@ -712,169 +730,6 @@ GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分�
 &lt;a href=&#34;https://github.com/go-lang-plugin-org/go-lang-idea-plugin/issues/25&#34;&gt;Support for debugging · Issue #25 · go-lang-plugin-org/go-lang-idea-plugin&lt;/a&gt;を見ると、GAEプロジェクトのみ対応？？よく分からない（´-ω-｀）&lt;/p&gt;
 
 &lt;p&gt;あと、&lt;a href=&#34;https://twitter.com/yabuchin_y&#34;&gt;ıɥɔınʎ (yabuchin_y) on Twitter&lt;/a&gt;さんに&lt;a href=&#34;https://gophercasts.io/&#34;&gt;GopherCasts&lt;/a&gt;を教えてもらった(　´･‿･｀)&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>OSXの開発環境を整えた</title>
-      <link>http://mono0926.com/blog/2014/05/06/renew/</link>
-      <pubDate>Tue, 06 May 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://mono0926.com/blog/2014/05/06/renew/</guid>
-      <description>
-
-&lt;p&gt;Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。
-Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイッチしたいなとか思ったのが発端。&lt;br /&gt;
-参考: &lt;a href=&#34;http://rdepf.hatenablog.jp/entry/2014/03/07/122337&#34;&gt;Node.jsのコールバック地獄をPromiseやGeneratorを使って解消する - HackerNews翻訳してみた&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;わりと&lt;code&gt;brew install XXX&lt;/code&gt;で雑に各種環境インストールしてたので、これを気に色々直した。&lt;/p&gt;
-
-&lt;h2 id=&#34;homebrewアンインストール:e4940d6974c012c0c770280b21490de7&#34;&gt;Homebrewアンインストール&lt;/h2&gt;
-
-&lt;p&gt;ゴミが残るのいやだったので、&lt;a href=&#34;https://gist.github.com/mxcl/1173223&#34;&gt;Uninstall Homebrew&lt;/a&gt;でhomebrewをアンインストール。&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&#34;brewfile導入:e4940d6974c012c0c770280b21490de7&#34;&gt;Brewfile導入&lt;/h2&gt;
-
-&lt;p&gt;以下など見て便利そうだと思っていたので、Brewfile導入。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.1x1.jp/blog/2014/04/how-to-setup-application-on-osx.html&#34;&gt;Mac OSX をクリーンインストールしてからの環境構築メモ - Shin x blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.livedoor.jp/sonots/archives/35251881.html&#34;&gt;「BrewfileでHomebrewパッケージを管理する」をやってみた - sonots:blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://tnakamura.hatenablog.com/entry/2014/04/29/113727&#34;&gt;MacBook にインストールしているアプリやツールをメモする代わりに Brewfile を作った - present&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;これだけで一気にインストール出来てとても便利。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;brew bundle
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;僕の：&lt;a href=&#34;https://github.com/mono0926/Environment/blob/master/OSX/Brewfile&#34;&gt;Environment/OSX/Brewfile at master · mono0926/Environment&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;今後も、Homebrewで何か新しくインストールするときメンテナンスしていくようにしよう。&lt;/p&gt;
-
-&lt;h2 id=&#34;その他開発環境:e4940d6974c012c0c770280b21490de7&#34;&gt;その他開発環境&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;brew install XXX&lt;/code&gt;で適当にインストールせずに、バージョンの切り替えが容易なようにした。
-いくつか種類あったけど、基本後発のを導入してみた。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Python: &lt;a href=&#34;https://github.com/yyuu/pyenv&#34;&gt;yyuu/pyenv&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Ruby: &lt;a href=&#34;https://github.com/sstephenson/rbenv&#34;&gt;sstephenson/rbenv&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Node.js: &lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;creationix/nvm&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;nvmはzshとの相性悪くて日本では&lt;a href=&#34;https://github.com/hokaccha/nodebrew&#34;&gt;hokaccha/nodebrew&lt;/a&gt;がけっこう人気っぽかったけど特に問題無かったのでnvmにした。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;諸々雑なところがあるけど、&lt;a href=&#34;https://github.com/mono0926/Environment/tree/master/OSX&#34;&gt;Environment/OSX at master · mono0926/Environment&lt;/a&gt;でセットアップスクリプト管理。&lt;/p&gt;
-
-&lt;h2 id=&#34;ide導入:e4940d6974c012c0c770280b21490de7&#34;&gt;IDE導入&lt;/h2&gt;
-
-&lt;p&gt;スクリプト系言語は、最近はわりとSublime Textで書いていたけど、やっぱり補完がもう少し聞いてくれないと厳しいので、なるべくIDE使うようにしようと思う。&lt;br /&gt;
-IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれば捗るかなと。&lt;br /&gt;
-今まではNetBeansかたまにEclipseだったけど、乗り換え。少しずつ慣れていこう（´-ω-｀）&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.jetbrains.com/webstorm/&#34;&gt;WebStorm :: The smartest JavaScript IDE&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.jetbrains.com/ruby/&#34;&gt;Ruby on Rails IDE :: JetBrains RubyMine&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.jetbrains.com/pycharm/&#34;&gt;Python IDE &amp;amp; Django IDE for Web developers : JetBrains PyCharm&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;CE版は無料&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>IRKitで遊び始めた〜とりあえずTerminalで操作〜</title>
-      <link>http://mono0926.com/blog/2014/05/05/irkit/</link>
-      <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://mono0926.com/blog/2014/05/05/irkit/</guid>
-      <description>
-
-&lt;p&gt;冬場忙しかったりで既存アプリで部屋のリモコン登録する程度しかいじれてなかったけど、最近ようやく落ち着いてきたので、&lt;a href=&#34;http://www.amazon.co.jp/gp/product/B00H91KK26/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=B00H91KK26&amp;amp;linkCode=as2&amp;amp;tag=mono0926-22&#34;&gt;IRKit&lt;/a&gt;で遊んでみる(　´･‿･｀)&lt;/p&gt;
-
-&lt;h2 id=&#34;セットアップ:b1567300f9c156a049940414df8efe7b&#34;&gt;セットアップ&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://getirkit.com/&#34;&gt;IRKit - Open Source WiFi Connected Infrared Remote Controller&lt;/a&gt;を参考に、諸々設定。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# dns-sdコマンドで、IRKitのインスタンス名取得。
-Pro:b4 mono$ dns-sd -B _irkit._tcp
-Browsing for _irkit._tcp
-DATE: ---Mon 05 May 2014---
-14:41:16.669  ...STARTING...
-Timestamp     A/R    Flags  if Domain               Service Type         Instance Name
-14:41:16.880  Add        2   4 local.               _irkit._tcp.         iRKitA2C4
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;!-- more --&gt;
-
-&lt;pre&gt;&lt;code&gt;# インスタンス名から、IPアドレス取得
-Pro:b4 mono$ dns-sd -G v4 irkita2c4.local
-DATE: ---Mon 05 May 2014---
-14:41:43.565  ...STARTING...
-Timestamp     A/R Flags if Hostname                               Address                                      TTL
-14:41:43.566  Add     2  4 irkita2c4.local.                       192.168.0.4                                  10
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;# IPアドレスからMACアドレスを調べる(もっとスマートなやり方ある？)
-# とりあえずping
-Pro:~ mono$ ping 192.168.0.4
-PING 192.168.0.4 (192.168.0.4): 56 data bytes
-64 bytes from 192.168.0.4: icmp_seq=0 ttl=255 time=3.958 ms
-# arpで確認
-Pro:~ mono$ arp -a
-? (192.168.0.4) at 20:f8:5e:a6:a2:c4 on en0 ifscope [ethernet]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;ルーターの設定で、固定IPを今さらながら割り当ててみる。
-これで、家の中では安心して&lt;code&gt;192.168.0.4&lt;/code&gt;でアクセス出来るようになった（´-ω-｀）&lt;/p&gt;
-
-&lt;h2 id=&#34;terminalから操作:b1567300f9c156a049940414df8efe7b&#34;&gt;Terminalから操作&lt;/h2&gt;
-
-&lt;p&gt;普通にリモコンを操作して、その赤外線の範囲内にIRKitが入っていると、青いライトが点滅して、赤外線の信号を取得したことを示してくれる。&lt;/p&gt;
-
-&lt;p&gt;そこで、curlすると、その信号が分かる。
-うちのNECのLEDシーリングライトのオンオフボタンを押した後だとこんな感じ。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Pro:~ mono$ curl -i http://192.168.0.4/messages
-HTTP/1.0 200 OK
-Access-Control-Allow-Origin: *
-Server: IRKit/1.3.5.0.gce6ac15
-Content-Type: text/plain
-
-{&amp;quot;format&amp;quot;:&amp;quot;raw&amp;quot;,&amp;quot;freq&amp;quot;:38,&amp;quot;data&amp;quot;:[17421,9061,935,1232,1037,3458,1037,1232,935,1232,935,1232,1037,1190,1037,1190,1037,3458,1037,3458,1037,1037,1037,3458,1037,3458,1037,1150,1037,3341,1073,3341,1073,1232,935,3458,935,3458,935,1232,1037,3341,935,1190,1073,3458,935,1190,1002,3458,1073,1073,1073,1190,1037,3458,1037,1190,1190,3228,968,1190,1073,3341,1073,1190,1002]}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;これをPOSTすれば、リモコンオンオフボタンと同じ信号をIRKitが発行してくれる。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;curl -i http://192.168.0.4/messages -d &#39;{&amp;quot;format&amp;quot;:&amp;quot;raw&amp;quot;,&amp;quot;freq&amp;quot;:38,&amp;quot;data&amp;quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;つまり、これをaliasなりシェルスクリプトにしておけば、もうそれだけでキーボードでライトのオンオフが出来るようになる。&lt;/p&gt;
-
-&lt;p&gt;楽ちん過ぎる、素晴らしい（´-ω-｀）&lt;/p&gt;
-
-&lt;p&gt;ちなみに、うちではこんな風に部屋の真ん中あたりの壁に、両面テープ付けて配置してる。これでも、受信感度の悪い一部機器は反応しなかったりで悩み中。
-その機器は、添付のリモコンでもけっこう近くで方向もけっこう合わせないと反応しないので、IRKitのせいではないのだけれど。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/irkit.jpg&#34; alt=&#34;irkit&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;8,000円切る価格で完成度高くて、色々弄りやすいの素晴らしい(　´･‿･｀)&lt;/p&gt;
-
-&lt;iframe src=&#34;http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=mono0926-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B00H91KK26&#34; style=&#34;width:120px;height:240px;&#34; scrolling=&#34;no&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;リモコンが付いていないサーキュレーターとかは、この、コンセントのオンオフをリモコンで切り替えられるやつを買おうかな（´-ω-｀）&lt;/p&gt;
-
-&lt;iframe src=&#34;http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=mono0926-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B0013L6ACM&#34; style=&#34;width:120px;height:240px;&#34; scrolling=&#34;no&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;外からアクセス出来るようにしたり、WEBアプリやiPhoneアプリでもっと便利にしていきたいところ(　´･‿･｀)&lt;/p&gt;
 </description>
     </item>
     

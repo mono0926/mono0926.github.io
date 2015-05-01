@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Golang on mono-log</title>
-    <link>http://mono0926.com/categories/golang/</link>
-    <description>Recent content in Golang on mono-log</description>
+    <title>Cookpad on mono-log</title>
+    <link>http://mono0926.com/categories/cookpad/</link>
+    <description>Recent content in Cookpad on mono-log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Mon, 20 Oct 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://mono0926.com/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://mono0926.com/categories/cookpad/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>クックパッド第5回 開発コンテスト24に参戦した話</title>
@@ -176,63 +176,6 @@ error出たときのハンドリングとして統一的にやっていたので
 皆さん(特にやぶさん)、お疲れさまでした。&lt;br /&gt;
 つらたんでしたが、楽しかったです、Goの勉強にもなったし(　´･‿･｀)&lt;br /&gt;
 24時間コンテスト系はきついですが、また似たようなの参戦しましょう。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>golangの環境構築</title>
-      <link>http://mono0926.com/blog/2014/05/13/golang/</link>
-      <pubDate>Tue, 13 May 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://mono0926.com/blog/2014/05/13/golang/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/GoCon/GoCon/blob/master/2014spring.rst&#34;&gt;GoCon/2014spring.rst at master · GoCon/GoCon&lt;/a&gt;に備えて、とりあえずgolangのセットアップと、暇なときに&lt;a href=&#34;http://tour.golang.org/#1&#34;&gt;A Tour of Go&lt;/a&gt;をやっておこうかと(　´･‿･｀)&lt;/p&gt;
-
-&lt;h2 id=&#34;gvmセットアップ:ed67c3356329c447f68f2ff6b67b3daf&#34;&gt;gvmセットアップ&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/moovweb/gvm&#34;&gt;moovweb/gvm&lt;/a&gt;に書いてある通りにやった。
-mercurialのインストールが必要だったので、Brewfileに追記しておいた。&lt;/p&gt;
-
-&lt;p&gt;あと、&lt;code&gt;gvm install go1&lt;/code&gt;に失敗したので、&lt;a href=&#34;https://github.com/moovweb/gvm/issues/38#issuecomment-39842170&#34;&gt;Issues on OSX · Issue #38 · moovweb/gvm&lt;/a&gt;に書いてある対応で何とかなった。&lt;/p&gt;
-
-&lt;p&gt;普通に&lt;code&gt;brew install go&lt;/code&gt;のが楽だけど、ちょっとがんばった（´-ω-｀）&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&#34;実行:ed67c3356329c447f68f2ff6b67b3daf&#34;&gt;実行&lt;/h2&gt;
-
-&lt;p&gt;以下を実行。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;package main
-import &amp;quot;fmt&amp;quot;
-func main() {
-    fmt.Printf(&amp;quot;Hello world!&amp;quot;)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://mono0926.com/blog/2014/05/06/renew/&#34;&gt;OSXの開発環境を整えた - monoHub&lt;/a&gt;でJetBrainのIDEいくつかインストールしてたけど、&lt;a href=&#34;http://www.jetbrains.com/idea/&#34;&gt;IntelliJ IDEA — The Best Java and Polyglot IDE&lt;/a&gt;で全部包含してるのね、情弱つらたん（´-ω-｀）&lt;/p&gt;
-
-&lt;p&gt;まあそこそこのお値段だし、適当に色々試用して、良かったら最終的にUltimate Edtion買おうかな（´-ω-｀）
-Web StormでもGoのプラグインインストール出来たけど、SDKの設定とかうまく出来なかったりぐぐったりして出た説明と違うからCommunity Edition版のIntelliJでやった。&lt;/p&gt;
-
-&lt;p&gt;実行できたけど、&lt;code&gt;go build hoge.go&lt;/code&gt;で生成されるような実行ファイルが生成出来なくて謎(　´･‿･｀)&lt;br /&gt;
-GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分からなくてつらたん（´-ω-｀）&lt;/p&gt;
-
-&lt;h3 id=&#34;解決:ed67c3356329c447f68f2ff6b67b3daf&#34;&gt;解決&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/go-lang-plugin-org/go-lang-idea-plugin/blob/master/Missing%20ENV.md&#34;&gt;go-lang-idea-plugin/Missing ENV.md at master · go-lang-plugin-org/go-lang-idea-plugin&lt;/a&gt;を参考に設定したら、警告ダイアログが出なくなった。&lt;/li&gt;
-&lt;li&gt;Run Configurationsで、Build before runにチェックを付けてディレクトリをbinに設定したら、実行ファイルも生成されるようになった。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/go.png&#34; alt=&#34;go&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;ただ、多分IntelliJがGoのデバッグ実行に対応していない？(無反応)のがつらたん（´-ω-｀）
-&lt;a href=&#34;https://github.com/go-lang-plugin-org/go-lang-idea-plugin/issues/25&#34;&gt;Support for debugging · Issue #25 · go-lang-plugin-org/go-lang-idea-plugin&lt;/a&gt;を見ると、GAEプロジェクトのみ対応？？よく分からない（´-ω-｀）&lt;/p&gt;
-
-&lt;p&gt;あと、&lt;a href=&#34;https://twitter.com/yabuchin_y&#34;&gt;ıɥɔınʎ (yabuchin_y) on Twitter&lt;/a&gt;さんに&lt;a href=&#34;https://gophercasts.io/&#34;&gt;GopherCasts&lt;/a&gt;を教えてもらった(　´･‿･｀)&lt;/p&gt;
 </description>
     </item>
     

@@ -6,8 +6,35 @@
     <description>Recent content on mono-log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 31 Oct 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2015 09:10:21 +0900</lastBuildDate>
     <atom:link href="http://mono0926.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>about</title>
+      <link>http://mono0926.com/page/about/</link>
+      <pubDate>Fri, 01 May 2015 09:10:21 +0900</pubDate>
+      
+      <guid>http://mono0926.com/page/about/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fuga</title>
+      <link>http://mono0926.com/blog/2015/05/01/fuga/</link>
+      <pubDate>Fri, 01 May 2015 09:07:02 +0900</pubDate>
+      
+      <guid>http://mono0926.com/blog/2015/05/01/fuga/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>http://mono0926.com/blog/2015/05/01/hugo/</link>
+      <pubDate>Fri, 01 May 2015 08:44:32 +0900</pubDate>
+      
+      <guid>http://mono0926.com/blog/2015/05/01/hugo/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>SourceTreeでブランチ名をコミットメッセージの先頭に自動挿入</title>
@@ -655,174 +682,6 @@ NDAで細かいところは書けないけど、使用感も特に大きな変�
 &lt;script src=&#34;https://gist.github.com/mono0926/2e8b58d3003f1fcbfa1c.js&#34;&gt;&lt;/script&gt;
 
 &lt;script src=&#34;https://gist.github.com/mono0926/780a92e2fe8c7c80e80f.js&#34;&gt;&lt;/script&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>golangの環境構築</title>
-      <link>http://mono0926.com/blog/2014/05/13/golang/</link>
-      <pubDate>Tue, 13 May 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://mono0926.com/blog/2014/05/13/golang/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/GoCon/GoCon/blob/master/2014spring.rst&#34;&gt;GoCon/2014spring.rst at master · GoCon/GoCon&lt;/a&gt;に備えて、とりあえずgolangのセットアップと、暇なときに&lt;a href=&#34;http://tour.golang.org/#1&#34;&gt;A Tour of Go&lt;/a&gt;をやっておこうかと(　´･‿･｀)&lt;/p&gt;
-
-&lt;h2 id=&#34;gvmセットアップ:ed67c3356329c447f68f2ff6b67b3daf&#34;&gt;gvmセットアップ&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/moovweb/gvm&#34;&gt;moovweb/gvm&lt;/a&gt;に書いてある通りにやった。
-mercurialのインストールが必要だったので、Brewfileに追記しておいた。&lt;/p&gt;
-
-&lt;p&gt;あと、&lt;code&gt;gvm install go1&lt;/code&gt;に失敗したので、&lt;a href=&#34;https://github.com/moovweb/gvm/issues/38#issuecomment-39842170&#34;&gt;Issues on OSX · Issue #38 · moovweb/gvm&lt;/a&gt;に書いてある対応で何とかなった。&lt;/p&gt;
-
-&lt;p&gt;普通に&lt;code&gt;brew install go&lt;/code&gt;のが楽だけど、ちょっとがんばった（´-ω-｀）&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&#34;実行:ed67c3356329c447f68f2ff6b67b3daf&#34;&gt;実行&lt;/h2&gt;
-
-&lt;p&gt;以下を実行。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;package main
-import &amp;quot;fmt&amp;quot;
-func main() {
-    fmt.Printf(&amp;quot;Hello world!&amp;quot;)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://mono0926.com/blog/2014/05/06/renew/&#34;&gt;OSXの開発環境を整えた - monoHub&lt;/a&gt;でJetBrainのIDEいくつかインストールしてたけど、&lt;a href=&#34;http://www.jetbrains.com/idea/&#34;&gt;IntelliJ IDEA — The Best Java and Polyglot IDE&lt;/a&gt;で全部包含してるのね、情弱つらたん（´-ω-｀）&lt;/p&gt;
-
-&lt;p&gt;まあそこそこのお値段だし、適当に色々試用して、良かったら最終的にUltimate Edtion買おうかな（´-ω-｀）
-Web StormでもGoのプラグインインストール出来たけど、SDKの設定とかうまく出来なかったりぐぐったりして出た説明と違うからCommunity Edition版のIntelliJでやった。&lt;/p&gt;
-
-&lt;p&gt;実行できたけど、&lt;code&gt;go build hoge.go&lt;/code&gt;で生成されるような実行ファイルが生成出来なくて謎(　´･‿･｀)&lt;br /&gt;
-GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分からなくてつらたん（´-ω-｀）&lt;/p&gt;
-
-&lt;h3 id=&#34;解決:ed67c3356329c447f68f2ff6b67b3daf&#34;&gt;解決&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/go-lang-plugin-org/go-lang-idea-plugin/blob/master/Missing%20ENV.md&#34;&gt;go-lang-idea-plugin/Missing ENV.md at master · go-lang-plugin-org/go-lang-idea-plugin&lt;/a&gt;を参考に設定したら、警告ダイアログが出なくなった。&lt;/li&gt;
-&lt;li&gt;Run Configurationsで、Build before runにチェックを付けてディレクトリをbinに設定したら、実行ファイルも生成されるようになった。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/go.png&#34; alt=&#34;go&#34; /&gt;
-&lt;/p&gt;
-
-&lt;p&gt;ただ、多分IntelliJがGoのデバッグ実行に対応していない？(無反応)のがつらたん（´-ω-｀）
-&lt;a href=&#34;https://github.com/go-lang-plugin-org/go-lang-idea-plugin/issues/25&#34;&gt;Support for debugging · Issue #25 · go-lang-plugin-org/go-lang-idea-plugin&lt;/a&gt;を見ると、GAEプロジェクトのみ対応？？よく分からない（´-ω-｀）&lt;/p&gt;
-
-&lt;p&gt;あと、&lt;a href=&#34;https://twitter.com/yabuchin_y&#34;&gt;ıɥɔınʎ (yabuchin_y) on Twitter&lt;/a&gt;さんに&lt;a href=&#34;https://gophercasts.io/&#34;&gt;GopherCasts&lt;/a&gt;を教えてもらった(　´･‿･｀)&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>OSXの開発環境を整えた</title>
-      <link>http://mono0926.com/blog/2014/05/06/renew/</link>
-      <pubDate>Tue, 06 May 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://mono0926.com/blog/2014/05/06/renew/</guid>
-      <description>
-
-&lt;p&gt;Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。
-Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイッチしたいなとか思ったのが発端。&lt;br /&gt;
-参考: &lt;a href=&#34;http://rdepf.hatenablog.jp/entry/2014/03/07/122337&#34;&gt;Node.jsのコールバック地獄をPromiseやGeneratorを使って解消する - HackerNews翻訳してみた&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;わりと&lt;code&gt;brew install XXX&lt;/code&gt;で雑に各種環境インストールしてたので、これを気に色々直した。&lt;/p&gt;
-
-&lt;h2 id=&#34;homebrewアンインストール:e4940d6974c012c0c770280b21490de7&#34;&gt;Homebrewアンインストール&lt;/h2&gt;
-
-&lt;p&gt;ゴミが残るのいやだったので、&lt;a href=&#34;https://gist.github.com/mxcl/1173223&#34;&gt;Uninstall Homebrew&lt;/a&gt;でhomebrewをアンインストール。&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&#34;brewfile導入:e4940d6974c012c0c770280b21490de7&#34;&gt;Brewfile導入&lt;/h2&gt;
-
-&lt;p&gt;以下など見て便利そうだと思っていたので、Brewfile導入。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.1x1.jp/blog/2014/04/how-to-setup-application-on-osx.html&#34;&gt;Mac OSX をクリーンインストールしてからの環境構築メモ - Shin x blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.livedoor.jp/sonots/archives/35251881.html&#34;&gt;「BrewfileでHomebrewパッケージを管理する」をやってみた - sonots:blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://tnakamura.hatenablog.com/entry/2014/04/29/113727&#34;&gt;MacBook にインストールしているアプリやツールをメモする代わりに Brewfile を作った - present&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;これだけで一気にインストール出来てとても便利。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;brew bundle
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;僕の：&lt;a href=&#34;https://github.com/mono0926/Environment/blob/master/OSX/Brewfile&#34;&gt;Environment/OSX/Brewfile at master · mono0926/Environment&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;今後も、Homebrewで何か新しくインストールするときメンテナンスしていくようにしよう。&lt;/p&gt;
-
-&lt;h2 id=&#34;その他開発環境:e4940d6974c012c0c770280b21490de7&#34;&gt;その他開発環境&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;brew install XXX&lt;/code&gt;で適当にインストールせずに、バージョンの切り替えが容易なようにした。
-いくつか種類あったけど、基本後発のを導入してみた。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Python: &lt;a href=&#34;https://github.com/yyuu/pyenv&#34;&gt;yyuu/pyenv&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Ruby: &lt;a href=&#34;https://github.com/sstephenson/rbenv&#34;&gt;sstephenson/rbenv&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Node.js: &lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;creationix/nvm&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;nvmはzshとの相性悪くて日本では&lt;a href=&#34;https://github.com/hokaccha/nodebrew&#34;&gt;hokaccha/nodebrew&lt;/a&gt;がけっこう人気っぽかったけど特に問題無かったのでnvmにした。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;諸々雑なところがあるけど、&lt;a href=&#34;https://github.com/mono0926/Environment/tree/master/OSX&#34;&gt;Environment/OSX at master · mono0926/Environment&lt;/a&gt;でセットアップスクリプト管理。&lt;/p&gt;
-
-&lt;h2 id=&#34;ide導入:e4940d6974c012c0c770280b21490de7&#34;&gt;IDE導入&lt;/h2&gt;
-
-&lt;p&gt;スクリプト系言語は、最近はわりとSublime Textで書いていたけど、やっぱり補完がもう少し聞いてくれないと厳しいので、なるべくIDE使うようにしようと思う。&lt;br /&gt;
-IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれば捗るかなと。&lt;br /&gt;
-今まではNetBeansかたまにEclipseだったけど、乗り換え。少しずつ慣れていこう（´-ω-｀）&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.jetbrains.com/webstorm/&#34;&gt;WebStorm :: The smartest JavaScript IDE&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.jetbrains.com/ruby/&#34;&gt;Ruby on Rails IDE :: JetBrains RubyMine&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.jetbrains.com/pycharm/&#34;&gt;Python IDE &amp;amp; Django IDE for Web developers : JetBrains PyCharm&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;CE版は無料&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Node.jsのIRKitライブラリあったから試してみた</title>
-      <link>http://mono0926.com/blog/2014/05/05/irkit-nodejs/</link>
-      <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://mono0926.com/blog/2014/05/05/irkit-nodejs/</guid>
-      <description>
-
-&lt;p&gt;せっかく&lt;a href=&#34;http://www.amazon.com/gp/product/B00HSO6YD8/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B00HSO6YD8&amp;amp;linkCode=as2&amp;amp;tag=mono0926-20&amp;amp;linkId=SIVQ46LXCW3PK3IO&#34;&gt;Node.js the Right Way: Practical, Server-Side JavaScript That Scales [Kindle Edition]&lt;/a&gt;でNode.jsを勉強したので、IRKitをNode.jsの勉強題材に出来ないかなと思って、とりあえずNode.jsのクライアントライブラリ無いかな？と探したらあったので、叩いてみた。&lt;/p&gt;
-
-&lt;h3 id=&#34;dameleon-node-irkit-https-github-com-dameleon-node-irkit:fb9e6c9b3f57a37d5b1579e678201432&#34;&gt;&lt;a href=&#34;https://github.com/dameleon/node-irkit&#34;&gt;dameleon/node-irkit&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;元々IRKitのAPIがシンプルなので、あまりNode.jsを使う必然性感じないけど、まあ勉強に（´-ω-｀）&lt;/p&gt;
-
-&lt;p&gt;本1冊やったとはいえ、色々まだ不慣れなので、コード読解にも良いかも。
-ドキュメントは無いものの、テストはちゃんと書かれていたので、それを参考に使ってみた。&lt;/p&gt;
-
-&lt;p&gt;まずはインストール。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;npm install node-irkit
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;とりあえずlocalApiを使ってみた。
-実行する度に、部屋の電気がオンオフされて煩わしいので、テストは違う信号でやろうと思ったなう（´-ω-｀）&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;const
-    irkit = require(&#39;node-irkit&#39;),
-    localApi = irkit.getLocalApi(&amp;quot;http://192.168.0.4&amp;quot;),
-    myRoomLight = &#39;{&amp;quot;format&amp;quot;:&amp;quot;raw&amp;quot;,&amp;quot;freq&amp;quot;:38,&amp;quot;data&amp;quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}&#39;,
-    myRoomLightMessage = JSON.parse(myRoomLight);
-localApi.postMessages(myRoomLightMessage, function(err, res) {
-    console.log(res); //空
-});
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
