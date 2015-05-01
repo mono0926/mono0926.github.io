@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on mono-log</title>
+    <link>http://mono0926.com/categories/programming/</link>
+    <description>Recent content in Programming on mono-log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 20 Oct 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://mono0926.com/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>クックパッド第5回 開発コンテスト24に参戦した話</title>
+      <link>http://mono0926.com/blog/2014/10/20/cookpad/</link>
+      <pubDate>Mon, 20 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2014/10/20/cookpad/</guid>
+      <description>
+
+&lt;p&gt;先日も&lt;a href=&#34;http://isucon.net/&#34;&gt;ISUCONコンテスト予選&lt;/a&gt;に出たばかりですが、土日(10月18-19日)に
+&lt;a href=&#34;https://info.cookpad.com/24contest_5&#34;&gt;クックパッドの「第5回 開発コンテスト24」&lt;/a&gt;に参戦しました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://kinen.yabuchin.com/&#34;&gt;勝手にアニバーサリー ～なんでもない日を、あの人との記念日に。～&lt;/a&gt;が成果物です。
+ちなみに、タイトルは僕が初め適当に提案したのが意外と良かったらしくそのまま採用されました（｀・ω・´）&lt;/p&gt;
+
+&lt;h2 id=&#34;メンバー:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;メンバー&lt;/h2&gt;
+
+&lt;p&gt;こんな感じのバランスの良いメンバーが集まりました(　´･‿･｀)&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/mono0926&#34;&gt;僕&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iOSアプリか適当なGoコード書く予定 (結果Goコード書いてた)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/yuichi.yabu&#34;&gt;やぶさん&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;サーバーサイド(普段Scala使ってるけど、今回はGo)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/sayaka.yabu.7&#34;&gt;の奥さん&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.nssol.nssmc.com/press/2014/20141009_110001.html&#34;&gt;Data Veraci&lt;/a&gt;を作った方 (前職の先輩)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/3is.sheep&#34;&gt;ひつじさん&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;yah○○のデザイナーさん&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/nozomi.fuzimoto&#34;&gt;のんたん☆&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;恵比寿のデザイナーさん&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;僕が平均年齢くらいの華やかなメンバーでした。&lt;/p&gt;
+
+&lt;h2 id=&#34;当日まで:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;当日まで&lt;/h2&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;レポジトリ作成: &lt;a href=&#34;https://github.com/SYM-CONTEST/Cookpad2014&#34;&gt;SYM-CONTEST/Cookpad2014&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Facebookイベント作成: &lt;a href=&#34;https://www.facebook.com/events/718375174865939/&#34;&gt;クックパッド 第5回 開発コンテスト24&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Slack用意
+
+&lt;ul&gt;
+&lt;li&gt;自宅警備もする必要があるので、オンライン上でやりとりして開発&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;yah○○のBASE6で打ち合わせ(ひつじさんからのご招待)
+
+&lt;ul&gt;
+&lt;li&gt;ここで&lt;a href=&#34;https://www.facebook.com/nozomi.fuzimoto&#34;&gt;のんたん☆&lt;/a&gt;の参戦決定（｀・ω・´）&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/base6_1.jpg&#34; alt=&#34;&#34; /&gt;
+
+&lt;img src=&#34;http://mono0926.com/images/post/base6_2.jpg&#34; alt=&#34;&#34; /&gt;
+
+&lt;img src=&#34;http://mono0926.com/images/post/base6_3.jpg&#34; alt=&#34;&#34; /&gt;
+
+&lt;img src=&#34;http://mono0926.com/images/post/base6_4.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&#34;当日:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;当日&lt;/h2&gt;
+
+&lt;p&gt;去年も&lt;a href=&#34;http://about.me/yomei&#34;&gt;余命チェッカー&lt;/a&gt;で参戦してたので、大体勝手は分かっていました。&lt;/p&gt;
+
+&lt;h3 id=&#34;朝9時:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;朝9時&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://info.cookpad.com/24contest_5&#34;&gt;クックパッドの「第5回 開発コンテスト24」&lt;/a&gt;をリロードして、お題が「誰かと話すキッカケを作るサービス」であることを把握。&lt;/p&gt;
+
+&lt;p&gt;元々、10時までに作るネタが決まらなかったら解散というオレオレレギュレーションをやっていたので、時間を気にしつつネタ出し。&lt;br /&gt;
+けっこう良いアイディアが出るものの、コンテスト受けしそうか微妙な感じで、なかなか収束せず。&lt;br /&gt;
+雰囲気的に10時過ぎてもそのまま続行することにして、最低午前中にという感じで結果、過去に何かつながりがあってご無沙汰な人間関係を、勝手に記念日をでっちあげて祝うことで結びつけるサービスになりました。&lt;/p&gt;
+
+&lt;p&gt;具体的には、Twitterで過去に絡んだ人たちに、そのやり取りのキーワードを抽出して○○記念日のメッセージを投げるみたいな。
+(Twitterに限らずもっと膨らませたかったけど、実装コストの兼ね合いもあり)&lt;/p&gt;
+
+&lt;h3 id=&#34;1日目昼:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;1日目昼&lt;/h3&gt;
+
+&lt;p&gt;作るものが決まったので、もう少し仕様や画面を詰めるような相談をしたり、出来るところは実装始めたり。&lt;/p&gt;
+
+&lt;h4 id=&#34;やぶさん達はいつの間にかお寿司屋さん行ってました-д:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;やぶさん達はいつの間にかお寿司屋さん行ってました（´・д・｀）&lt;/h4&gt;
+
+&lt;p&gt;僕は不慣れなGo言語での以下の2点の実装法を手短に調べて、うんいけそうみたいな感触を得ました。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Twitter認証
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mrjones/oauth&#34;&gt;mrjones/oauth&lt;/a&gt;採用&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Twitter APIで過去のやり取りを取得
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ChimeraCoder/anaconda&#34;&gt;ChimeraCoder/anaconda&lt;/a&gt;採用&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;そんなこんなで、Googleハングアウト使いながら、みんなで色々お話しつつ作業。&lt;/p&gt;
+
+&lt;p&gt;夕方くらいに、それぞれ私用・仕事・昼寝などで散らばってしまいました（´・ω・｀）&lt;/p&gt;
+
+&lt;p&gt;僕はキャラクター &lt;a href=&#34;https://twitter.com/kinenn_bi&#34;&gt;アニバちゃんのTwitterアカウント&lt;/a&gt;作って遊んだりしてました(　´･‿･｀)&lt;/p&gt;
+
+&lt;h3 id=&#34;1日目夜:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;1日目夜&lt;/h3&gt;
+
+&lt;p&gt;夜になると、またみんな戻ってきて、僕も黙々と実装。&lt;br /&gt;
+Twitter認証周りはやぶさんにお願いして、僕は過去のやり取りを取得して良い感じの記念日を作るところをガリガリGoで書いていました。&lt;/p&gt;
+
+&lt;h3 id=&#34;深夜:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;深夜&lt;/h3&gt;
+
+&lt;p&gt;引き続きみんなゴリゴリ実装したりデザイン作ったり。&lt;/p&gt;
+
+&lt;p&gt;2時くらいに、やぶさん実装とのインターフェース決めて、1時間くらいそのあたり仕上げて寝ました(一番乗り)。&lt;/p&gt;
+
+&lt;p&gt;寝る間際に&lt;a href=&#34;https://twitter.com/kinenn_bi&#34;&gt;アニバちゃん&lt;/a&gt;で置き土産残したら、ひどいことになったようです(　´･‿･｀)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/misawa.png&#34; alt=&#34;&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;2日目朝:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;2日目朝&lt;/h3&gt;
+
+&lt;p&gt;7時くらいに起きました。&lt;br /&gt;
+やぶさん(完徹)以外は皆寝てました。&lt;br /&gt;
+やぶさんは一部うまく行かないところあって泣きそうでした。&lt;/p&gt;
+
+&lt;p&gt;僕の実装の問題もあったり、結合後のテストでバグ出たところの対応したり。&lt;br /&gt;
+あと、記念日抽出ロジックの改良などして、ギリギリ9時くらいに収束。&lt;/p&gt;
+
+&lt;p&gt;Goは基本的に型セーフで変更がしやすかったです。&lt;/p&gt;
+
+&lt;p&gt;30分くらい前にフォームの入力し始めるドタバタ感がありつつ、無事に応募完了。&lt;/p&gt;
+
+&lt;h3 id=&#34;9時の提出後のドタバタ:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;9時の提出後のドタバタ&lt;/h3&gt;
+
+&lt;p&gt;なんかよく落ちるみたいな問題があって、対応。
+特に、僕が&lt;code&gt;log.Fatalln&lt;/code&gt;しちゃってたのがインパクト大きかった模様。&lt;/p&gt;
+
+&lt;p&gt;開発時はこれで良かったかもだけど、リリースしたので、取り急ぎ&lt;code&gt;log.Println&lt;/code&gt;に変更。
+error出たときのハンドリングとして統一的にやっていたので、対応は一瞬でした。
+(&lt;code&gt;log.Println&lt;/code&gt;がこの文脈で適切かはよく分からなかったがとりあえず落とさないように)&lt;/p&gt;
+
+&lt;p&gt;あと一部例外系に対応したりして、けっこう安定。&lt;/p&gt;
+
+&lt;p&gt;と思いきや、まだ1箇所認証周りで落ちるところがあとで発覚して、あまり深く調べず今でもまだ直ってません（´・ω・｀）&lt;/p&gt;
+
+&lt;h3 id=&#34;結果:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;結果&lt;/h3&gt;
+
+&lt;p&gt;2日目夕方くらいに発表されましたが、入選ならずで残念でした。&lt;br /&gt;
+ちょくちょくサービスダウンしてて不安定だったのが響いたかも（´-ω-｀）&lt;br /&gt;
+皆さん(特にやぶさん)、お疲れさまでした。&lt;br /&gt;
+つらたんでしたが、楽しかったです、Goの勉強にもなったし(　´･‿･｀)&lt;br /&gt;
+24時間コンテスト系はきついですが、また似たようなの参戦しましょう。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TypeScript・AngularJS・Jade・Stylusでサンプルコード</title>
+      <link>http://mono0926.com/blog/2014/05/14/angularjs/</link>
+      <pubDate>Wed, 14 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2014/05/14/angularjs/</guid>
+      <description>
+
+&lt;p&gt;最近Web系の勉強してて、Node.js・Express・Redis・Herokuなどサーバーサイド周り弄ってたけど、そろそろフロントエンドもという感じで色々やってみた。&lt;/p&gt;
+
+&lt;h3 id=&#34;サンプル置いとく-http-ice-me-herokuapp-com-angular:cd1b7a9a52bc143e9e26faa4af35e3f6&#34;&gt;&lt;a href=&#34;http://ice-me.herokuapp.com/angular#/&#34;&gt;サンプル置いとく&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;AngularJSはけっこうリッチなライブラリで、全部身につけるのはしばらくかかりそうだけど、今日主要な機能はざっくり書けるようになった感(　´･‿･｀)
+&lt;a href=&#34;http://vuejs.org/&#34;&gt;Vue.js&lt;/a&gt;と迷ったけど、&lt;a href=&#34;https://github.com/borisyankov/DefinitelyTyped&#34;&gt;borisyankov/DefinitelyTyped&lt;/a&gt;にまだ無かったし、とりあえず今メジャーなAngularJSやっとこうか、という感じ。&lt;/p&gt;
+
+&lt;p&gt;JadeとStylusは記法いくつか覚えらればわりとサクサク書けて、気に入った。これ系いくつかあるけど、どれがいいんですかね。あまり比較検討せずに決めてしまった。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;AngularJS: MVW(Model-View-Whatever)フレームワークというらしい。Whatever=厳密に定義しない、みたいな意味らしい。JS・HTML周りのスパゲッティコード解消。MV*とかはともかく、とりあえずバインディング機構あるのが嬉しい。&lt;/li&gt;
+&lt;li&gt;Jade: HTMLの簡易記法 + αの機能&lt;/li&gt;
+&lt;li&gt;Stylus: SASS・LESSの後発版みたいな感じ？&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;資料:cd1b7a9a52bc143e9e26faa4af35e3f6&#34;&gt;資料&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/opengl-8080/items/2fe0a20c314b1c824cc5&#34;&gt;AngularJS使い方メモ - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/icoxfog417/items/2ac773c33a8b34288551&#34;&gt;AngularJS - お前のAngular.jsはもうMVCではない。と言われないためのTutorial - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/zoetro/items/a45dbc18bb2b22e944b2&#34;&gt;AngularJSのMVWパターンを理解する - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.angularjs.org/guide/concepts&#34;&gt;AngularJS: Developer Guide: Conceptual Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/sasaplus1/items/189560f80cf337d40fdf&#34;&gt;Node.js - Jadeの記法について（あまりまとまっていない） - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://naltatis.github.io/jade-syntax-docs/&#34;&gt;Jade Template Syntax Documentation by Example&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;一気に色々やると破綻しそうかと心配だったけど、意外とスムーズに出来たのは良かった。&lt;/p&gt;
+
+&lt;p&gt;AngularJS、&lt;a href=&#34;http://qiita.com/opengl-8080/items/2fe0a20c314b1c824cc5&#34;&gt;AngularJS使い方メモ - Qiita&lt;/a&gt;の「ページの一部に動的にテンプレートを読み込む」くらいまでで、まだシングルページアプリケーション周りの機能は終えてないから、また続きやろう（´-ω-｀）&lt;/p&gt;
+
+&lt;h2 id=&#34;コード:cd1b7a9a52bc143e9e26faa4af35e3f6&#34;&gt;コード&lt;/h2&gt;
+
+&lt;script src=&#34;https://gist.github.com/mono0926/30e00a6a26498eff5973.js&#34;&gt;&lt;/script&gt;
+
+&lt;script src=&#34;https://gist.github.com/mono0926/2e8b58d3003f1fcbfa1c.js&#34;&gt;&lt;/script&gt;
+
+&lt;script src=&#34;https://gist.github.com/mono0926/780a92e2fe8c7c80e80f.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>golangの環境構築</title>
+      <link>http://mono0926.com/blog/2014/05/13/golang/</link>
+      <pubDate>Tue, 13 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2014/05/13/golang/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/GoCon/GoCon/blob/master/2014spring.rst&#34;&gt;GoCon/2014spring.rst at master · GoCon/GoCon&lt;/a&gt;に備えて、とりあえずgolangのセットアップと、暇なときに&lt;a href=&#34;http://tour.golang.org/#1&#34;&gt;A Tour of Go&lt;/a&gt;をやっておこうかと(　´･‿･｀)&lt;/p&gt;
+
+&lt;h2 id=&#34;gvmセットアップ:ed67c3356329c447f68f2ff6b67b3daf&#34;&gt;gvmセットアップ&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/moovweb/gvm&#34;&gt;moovweb/gvm&lt;/a&gt;に書いてある通りにやった。
+mercurialのインストールが必要だったので、Brewfileに追記しておいた。&lt;/p&gt;
+
+&lt;p&gt;あと、&lt;code&gt;gvm install go1&lt;/code&gt;に失敗したので、&lt;a href=&#34;https://github.com/moovweb/gvm/issues/38#issuecomment-39842170&#34;&gt;Issues on OSX · Issue #38 · moovweb/gvm&lt;/a&gt;に書いてある対応で何とかなった。&lt;/p&gt;
+
+&lt;p&gt;普通に&lt;code&gt;brew install go&lt;/code&gt;のが楽だけど、ちょっとがんばった（´-ω-｀）&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;実行:ed67c3356329c447f68f2ff6b67b3daf&#34;&gt;実行&lt;/h2&gt;
+
+&lt;p&gt;以下を実行。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;package main
+import &amp;quot;fmt&amp;quot;
+func main() {
+    fmt.Printf(&amp;quot;Hello world!&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://mono0926.com/blog/2014/05/06/renew/&#34;&gt;OSXの開発環境を整えた - monoHub&lt;/a&gt;でJetBrainのIDEいくつかインストールしてたけど、&lt;a href=&#34;http://www.jetbrains.com/idea/&#34;&gt;IntelliJ IDEA — The Best Java and Polyglot IDE&lt;/a&gt;で全部包含してるのね、情弱つらたん（´-ω-｀）&lt;/p&gt;
+
+&lt;p&gt;まあそこそこのお値段だし、適当に色々試用して、良かったら最終的にUltimate Edtion買おうかな（´-ω-｀）
+Web StormでもGoのプラグインインストール出来たけど、SDKの設定とかうまく出来なかったりぐぐったりして出た説明と違うからCommunity Edition版のIntelliJでやった。&lt;/p&gt;
+
+&lt;p&gt;実行できたけど、&lt;code&gt;go build hoge.go&lt;/code&gt;で生成されるような実行ファイルが生成出来なくて謎(　´･‿･｀)&lt;br /&gt;
+GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分からなくてつらたん（´-ω-｀）&lt;/p&gt;
+
+&lt;h3 id=&#34;解決:ed67c3356329c447f68f2ff6b67b3daf&#34;&gt;解決&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/go-lang-plugin-org/go-lang-idea-plugin/blob/master/Missing%20ENV.md&#34;&gt;go-lang-idea-plugin/Missing ENV.md at master · go-lang-plugin-org/go-lang-idea-plugin&lt;/a&gt;を参考に設定したら、警告ダイアログが出なくなった。&lt;/li&gt;
+&lt;li&gt;Run Configurationsで、Build before runにチェックを付けてディレクトリをbinに設定したら、実行ファイルも生成されるようになった。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/go.png&#34; alt=&#34;go&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;ただ、多分IntelliJがGoのデバッグ実行に対応していない？(無反応)のがつらたん（´-ω-｀）
+&lt;a href=&#34;https://github.com/go-lang-plugin-org/go-lang-idea-plugin/issues/25&#34;&gt;Support for debugging · Issue #25 · go-lang-plugin-org/go-lang-idea-plugin&lt;/a&gt;を見ると、GAEプロジェクトのみ対応？？よく分からない（´-ω-｀）&lt;/p&gt;
+
+&lt;p&gt;あと、&lt;a href=&#34;https://twitter.com/yabuchin_y&#34;&gt;ıɥɔınʎ (yabuchin_y) on Twitter&lt;/a&gt;さんに&lt;a href=&#34;https://gophercasts.io/&#34;&gt;GopherCasts&lt;/a&gt;を教えてもらった(　´･‿･｀)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Haskell勉強中</title>
+      <link>http://mono0926.com/blog/2013/11/23/haskell/</link>
+      <pubDate>Sat, 23 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2013/11/23/haskell/</guid>
+      <description>
+
+&lt;p&gt;2週間くらい前からHaskell勉強中。&lt;/p&gt;
+
+&lt;p&gt;各種言語使ってきて、今の本業(Objective-C)や一番得意な言語(C#)以外にも久々に手を出したいなと思って以下を検討。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;LL系(Pythonなど)をもう少し自由に使えるように
+
+&lt;ul&gt;
+&lt;li&gt;ベターな書き方やモジュール知らずに冗長な記述になっていそう&lt;/li&gt;
+&lt;li&gt;日頃の自動化が捗りそう&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ネイティブ系
+
+&lt;ul&gt;
+&lt;li&gt;C言語が最低限しか書けない上に段々忘れていったりもしている&lt;/li&gt;
+&lt;li&gt;ネイティブ系(コンパイル型・非VM)で書かなきゃいけない時とか手駒がない&lt;/li&gt;
+&lt;li&gt;とはいいつつCもC++も積極的に書きたくないのでやるとしたら下記のいずれか&lt;/li&gt;
+&lt;li&gt;Go&lt;/li&gt;
+&lt;li&gt;D言語&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;関数型
+
+&lt;ul&gt;
+&lt;li&gt;C#でLINQとかラムダ式とか慣れたけど、関数型の書き方を一部取り入れたオブジェクト指向という感じで、純粋関数型言語を学びたい&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jgm/pandoc&#34;&gt;pandoc&lt;/a&gt;というドキュメント変換ツールのソース理解とか改変とかしたいと思いつつHaskellで書かれていて全然分からない&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;まあどれでも良いかなあと思いつつ、Scalaとかも勉強したいとか思っていたのもあり関数型かなあと、とりあえずKindleで安く手に入る&lt;a href=&#34;http://www.amazon.co.jp/gp/product/B00BOBYZTQ/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=B00BOBYZTQ&amp;amp;linkCode=as2&amp;amp;tag=mono0926-22&#34;&gt;Guide to ScalaーScalaプログラミング入門&lt;/a&gt;をざっと読んだ。
+結果、C#と大して変わらず(Scalaの方がより関数型っぽいけど)、ちゃんと勉強するなら純粋関数型言語だなあと思い、pandocの理解にも繋がるしHaskellを勉強することに。&lt;/p&gt;
+
+&lt;p&gt;コンパイル型といえども、記述もシンプルでコンパイル簡単なので、今Pythonとかで簡単な自動化スクリプト書いている代替にもなるかなと。&lt;/p&gt;
+
+&lt;h2 id=&#34;勉強計画:7ecb4046cd87d8ce2aec99271f135471&#34;&gt;勉強計画&lt;/h2&gt;
+
+&lt;h3 id=&#34;すごいhaskellたのしく学ぼう-http-www-amazon-co-jp-gp-product-b009ro80xy-ref-as-li-ss-tl-ie-utf8-camp-247-creative-7399-creativeasin-b009ro80xy-linkcode-as2-tag-mono0926-22:7ecb4046cd87d8ce2aec99271f135471&#34;&gt;&lt;a href=&#34;http://www.amazon.co.jp/gp/product/B009RO80XY/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=B009RO80XY&amp;amp;linkCode=as2&amp;amp;tag=mono0926-22&#34;&gt;すごいHaskellたのしく学ぼう!&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;少し前に話題になっていたこの本をまず読むことに。
+洋書にするか迷ったけど、せっかく和書のKindle版もあるのでそれに頼った。&lt;/p&gt;
+
+&lt;p&gt;そして、オンライン版はフリーで読めることもさっき知ったり：&lt;a href=&#34;http://learnyouahaskell.com/&#34;&gt;Learn You a Haskell for Great Good!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;フリーということは…と思って探したら、&lt;a href=&#34;https://github.com/igstan/learn-you-a-haskell-kindle.git&#34;&gt;Kindle用のファイルを生成出来るプロジェクト&lt;/a&gt;もあったり。
+ただ、本に出てくるソースコード集が見つからず、まあいいか。&lt;/p&gt;
+
+&lt;p&gt;本の前半は、Haskellの構文に慣れるのに少し苦労しつつ、後半のアプリカティブのあたりでけっこう理解が怪しくなってきた（´-ω-｀）
+理論が理解出来ていなくてしっくりこないところが一部あるものの、コードの挙動などは何とか読み解けているのでまだなんとかいけるはず。&lt;/p&gt;
+
+&lt;h3 id=&#34;その後:7ecb4046cd87d8ce2aec99271f135471&#34;&gt;その後&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.amazon.com/gp/product/B00DWJ1BIG/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B00DWJ1BIG&amp;amp;linkCode=as2&amp;amp;tag=mono0926-20&#34;&gt;Parallel and Concurrent Programming in Haskell&lt;/a&gt;が面白そうなので、次に読みたいところ。並列/並行処理周りがまだ弱い気がするのでその勉強もかねて。&lt;/p&gt;
+
+&lt;p&gt;あと、個人的に同じ本を繰り返し読むのが苦手(それが大事なのは理解している)なので、代わりに&lt;a href=&#34;http://itpro.nikkeibp.co.jp/article/COLUMN/20060915/248215/&#34;&gt;本物のプログラマはHaskellを使う&lt;/a&gt;とか読んで曖昧なところの理解を深めて行ければ。&lt;/p&gt;
+
+&lt;h2 id=&#34;実行環境:7ecb4046cd87d8ce2aec99271f135471&#34;&gt;実行環境&lt;/h2&gt;
+
+&lt;h3 id=&#34;ghcインストール:7ecb4046cd87d8ce2aec99271f135471&#34;&gt;GHCインストール&lt;/h3&gt;
+
+&lt;p&gt;色々処理系があるようだけど、標準のGHCを導入。
+よく分からないけど、Homebrewで良いかと、以下を実行してインストール。
+Mavericksなどの場合は環境によっては前もって&lt;a href=&#34;https://developer.apple.com/downloads/index.action&#34;&gt;Command Line Tools&lt;/a&gt;のインストールをしないとビルド失敗したりするはず。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;brew update
+brew install haskell
+brew install haskell-platform # これがなんだか理解していない
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これで、ターミナルで&lt;code&gt;ghci&lt;/code&gt;と打つと、Haskellのインタプリターが起動するはず。
+今まで、わざわざファイルで書く必要の無い書き捨ての込み入った計算はPythonのインタプリターでやっていた(そこまでする必要の無い程度ならAlfredの電卓で)けど、これからはghciでやろうかなと。&lt;/p&gt;
+
+&lt;p&gt;コンパイルは&lt;code&gt;ghc --make hoge.hs&lt;/code&gt;だけで出来るので、簡単。&lt;code&gt;hs hoge.hs&lt;/code&gt;と打つと、以下実行してくれるオレオレコマンドかエイリアスか作ったらさらに手軽になりそう。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ghc --make hoge.hs
+./hoge
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;ideの導入:7ecb4046cd87d8ce2aec99271f135471&#34;&gt;IDEの導入&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://neue.cc/2010/01/04_233.html&#34;&gt;neue cc - Haskell用IDE 「Leksah」の紹介と導入方法&lt;/a&gt;を見てLeksahをインストールすることに。
+すごく簡単なプログラムならSublime Textでもいいかなと思いつつ、やはりちゃんとした補完機能など欲しいので。&lt;/p&gt;
+
+&lt;p&gt;インストール直後に出てくるダイアログのソースのパスには、Homebrewでのインストール時にダウンロードされていた以下のソースをどこかに展開したディレクトリを指定すると標準ライブラリのメタデータ作ったりソース参照が楽になったりするみたい。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/Library/Caches/Homebrew/ghc-7.6.3.tar.bz2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Candyオプション(一部の文字が数学的記号に置換表示される)がインストール直後は文字化けしていたけど、お気に入りの&lt;a href=&#34;http://save.sys.t.u-tokyo.ac.jp/~yusa/fonts/ricty.html&#34;&gt;Ricty&lt;/a&gt;にしたら直った。&lt;/p&gt;
+
+&lt;p&gt;実は本を読んでいただけで、まだほとんどコード書いていないけど、そろそろ書き慣れていきたいところ。
+何か目先の題材が欲しいけど思いつかず（´・ω・｀）&lt;/p&gt;
+
+&lt;p&gt;テスト書くと言語仕様とか挙動とかの理解がけっこう捗るので、そこらへんも調べつつ進めていきたいところ。
+とりあえずLeksahのサンプルコードがQuickCheck(prep_の接頭辞がテスト対象になる)を使っててそれでよいかなと。&lt;/p&gt;
+
+&lt;p&gt;久々にブログ書いたけど、Octopress + 自動化したおかげで、Webページをコピーする時以外キーボードだけで書けてなかなか快適（´-ω-｀）&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>iOS7対応記事のまとめ</title>
+      <link>http://mono0926.com/blog/2013/09/21/ios7/</link>
+      <pubDate>Sat, 21 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2013/09/21/ios7/</guid>
+      <description>&lt;p&gt;iOS7関連のNDA解禁ということで、色々記事が増えてきたので、メモ。
+少しずつ追記していきながら、落ち着いたところで、集約したような記事書くかも。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://koogawa.hateblo.jp/entry/2013/09/19/025424&#34;&gt;iOS 7対応事例 FastCheckin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://laboyukai.blogspot.jp/2013/09/ios6ios7.html&#34;&gt;iOS6からiOS7への対応&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://skyarts.com/blog/jp/skyarts/?p=29327&#34;&gt;iOS 7向けアプリ開発時の注意点&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/monoqlo/items/cfc3aa018a5cb7df0deb&#34;&gt;iOS7でNavigationBarに入れたSearchBarにキャンセルボタンを出現させる方法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/hanapage/items/7d58293f5f7234437d79&#34;&gt;iOS6 -&amp;gt; iOS7変更対応&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/ne_ko_/items/5da4b2a247e65431c7cf&#34;&gt;iOS &lt;sup&gt;6&lt;/sup&gt;&amp;frasl;&lt;sub&gt;7&lt;/sub&gt; で UILabel などの見た目がずれるよ〜とお嘆きのあなたへ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/y_matsuwitter/items/bd41493f098dfa984f2b&#34;&gt;CocoapodsとXcode5の組み合わせでエラー出た+解決した&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://d.hatena.ne.jp/Kazzz/20130923/p1&#34;&gt;iOS7でステータスバーが被る問題への対応&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.livedoor.jp/tek_nishi/archives/8069300.html&#34;&gt;iOS7のarm64対応でやったこと&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/yimajo/items/7051af0919b5286aecfe&#34;&gt;iOS7でナビゲーションバーやステータスバーの文字色を変える&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/jazzsasori/items/cbd4650684a4f715e199&#34;&gt;iOS 7 でステータスバーを隠す方法&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>GingerをAlfredで使えるようにしてみた</title>
+      <link>http://mono0926.com/blog/2013/08/04/ginger/</link>
+      <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2013/08/04/ginger/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://mono0926.com/blog/2013/08/03/ginger/&#34;&gt;Ginger APIをPythonで叩いてみた&lt;/a&gt;の続き。&lt;/p&gt;
+
+&lt;p&gt;元々はAlfredで英文校正が出来るようにしたかったので、ここからが本番。&lt;/p&gt;
+
+&lt;h3 id=&#34;完成版:6982ba537ea9b38026c6dcf8fa9c1024&#34;&gt;完成版&lt;/h3&gt;
+
+&lt;p&gt;こんなのが出来たという紹介から。&lt;/p&gt;
+
+&lt;h4 id=&#34;校正:6982ba537ea9b38026c6dcf8fa9c1024&#34;&gt;校正&lt;/h4&gt;
+
+&lt;p&gt;ginger というキーワードに続けて英文を打つと、正してくれる。(この場合、冠詞aの抜けが正される。)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/ginger1.png&#34; alt=&#34;ginger&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h4 id=&#34;改善候補一覧:6982ba537ea9b38026c6dcf8fa9c1024&#34;&gt;改善候補一覧&lt;/h4&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;rephraseというキーワードに続けて適当な英文を打つと、より自然な言い回し候補を出してくれる。
+&amp;ldquo;Thank you for your reply&amp;rdquo;は、メールの返信とかでよく使うけど、ワンパターン化を避けたい時とかに使えそう。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/ginger2.png&#34; alt=&#34;ginger&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;ともに、選択状態でエンターを押すと、クリップボードにコピーされて、フォーカスの当たっているアプリにペーストされるので、適当にメールとかエディタとか使いながら自然と正しそうな英文が打てるようになるはず。&lt;/p&gt;
+
+&lt;h3 id=&#34;alfredのworkflowの作り方:6982ba537ea9b38026c6dcf8fa9c1024&#34;&gt;AlfredのWorkflowの作り方&lt;/h3&gt;
+
+&lt;p&gt;一応&lt;a href=&#34;http://support.alfredapp.com/workflows&#34;&gt;ドキュメント&lt;/a&gt;はあるけど、肝心なところが書かれていなかったりして、&lt;a href=&#34;http://www.alfredforum.com/forum/3-share-your-workflows/&#34;&gt;フォーラム&lt;/a&gt;で聞いたり、既存のWorkflowのソースを読んで作り方を学ばなければいけない感じ。
+作り方自体は基本簡単だけど、ちょくちょくはまりどころがあって苦労する。&lt;/p&gt;
+
+&lt;h4 id=&#34;キーワードの受け取り:6982ba537ea9b38026c6dcf8fa9c1024&#34;&gt;キーワードの受け取り&lt;/h4&gt;
+
+&lt;p&gt;{query}というキーワードでアクセス出来るので、それをスクリプトに引数ととして渡すのが一般的。&lt;/p&gt;
+
+&lt;h4 id=&#34;結果の表示:6982ba537ea9b38026c6dcf8fa9c1024&#34;&gt;結果の表示&lt;/h4&gt;
+
+&lt;p&gt;処理終了時にnotification飛ばしたり、クリップボードにコピーとかはWorkflowのエディタでパーツをつなぎ合わせたりするだけで簡単だけど、上の例みたいに一覧するのはどうやるのかと思っていたら、XMLで標準出力するらしい。
+関係ないechoやprint文があると壊れるので注意。
+ここらへんも、既存のソース読み解いてやっと分かった。それも不慣れなPHPソースがけっこう多くてアレ。&lt;/p&gt;
+
+&lt;p&gt;こんな感じのXMLを標準出力すると、Itemの数だけ一覧される。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; ?&amp;gt;
+&amp;lt;items&amp;gt;
+  &amp;lt;item arg=&amp;quot;I am a programmer and writing bad English. I am Japanese.&amp;quot; uid=&amp;quot;d78b56b0-fcb7-11e2-9787-e80688cb3920&amp;quot;&amp;gt;
+    &amp;lt;title&amp;gt;I am a programmer and writing bad English. I am Japanese.&amp;lt;/title&amp;gt;
+    &amp;lt;subtitle&amp;gt;Gingered sentence&amp;lt;/subtitle&amp;gt;
+    &amp;lt;icon/&amp;gt;
+  &amp;lt;/item&amp;gt;
+&amp;lt;/items&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これも適当に文字列置換したりして作れるけど、PythonでXML組み立てて作る簡単なモジュール作って再利用できるようにしておいた。
+ここらへんの下回りがけっこうこなれていない感。&lt;/p&gt;
+
+&lt;h4 id=&#34;インストール可能なパッケージの作り方:6982ba537ea9b38026c6dcf8fa9c1024&#34;&gt;インストール可能なパッケージの作り方&lt;/h4&gt;
+
+&lt;p&gt;配布されているworkflowは、*.alfredworkflowという形式で、ダブルクリックでインストールできる。&lt;/p&gt;
+
+&lt;p&gt;簡単なやり方は自分のworkflowを右クリックしてExportすること。&lt;/p&gt;
+
+&lt;p&gt;逆にscript群からコマンドで作りたい場合は、必要なファイルをzip化して拡張子を変えればよい。
+info.plistが必要で、それは多分コマンドラインじゃ作れないから、やっぱり最初はExportの過程が必要だけど、コードとか別管理したいならコマンドラインで修正版作るのがよさげな気がする。&lt;/p&gt;
+
+&lt;p&gt;適当にpackage作成スクリプト書いた。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cp ginger/info.plist .
+cp ginger/*.png .
+zip ginger.zip ginger_driver.py ginger/*.py info.plist *.png workflow/*.py
+rm info.plist *.png
+mv ginger.zip ginger.alfredworkflow
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;こんな管理で良いのか若干謎。&lt;/p&gt;
+
+&lt;p&gt;以上、&lt;a href=&#34;https://github.com/mono0926/AlfredWorkflow&#34;&gt;GitHub&lt;/a&gt;で管理するようにした。
+今までworkflowの作り方がよく分からない部分があったり管理が適当だったりしたけど、これからはもっとサクサク作れそう。&lt;/p&gt;
+
+&lt;p&gt;今回の成果物：&lt;a href=&#34;https://github.com/mono0926/AlfredWorkflow/raw/master/ginger.alfredworkflow&#34;&gt;Ginger Workflow&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>iOSからDropbox Sync APIを使ってみる</title>
+      <link>http://mono0926.com/blog/2013/07/19/dropbox/</link>
+      <pubDate>Fri, 19 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2013/07/19/dropbox/</guid>
+      <description>
+
+&lt;h3 id=&#34;dropbox-sync-apiとは:5a095f130cba82d011abb7c589e20dcb&#34;&gt;Dropbox Sync APIとは&lt;/h3&gt;
+
+&lt;h3 id=&#34;サンプルとドキュメント:5a095f130cba82d011abb7c589e20dcb&#34;&gt;サンプルとドキュメント&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;サンプル
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.dropbox.com/developers/datastore/sdks/ios&#34;&gt;Datastore API SDKs&lt;/a&gt;からSDKダウンロードすると同梱されてる&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ドキュメント
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.dropbox.com/developers/datastore/docs/ios&#34;&gt;Datastore API for iOS Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;チュートリアル
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.dropbox.com/developers/sync/start/ios&#34;&gt;Using the Sync API on iOS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;サンプル起動:5a095f130cba82d011abb7c589e20dcb&#34;&gt;サンプル起動&lt;/h3&gt;
+
+&lt;h4 id=&#34;files-examplesのサンプル:5a095f130cba82d011abb7c589e20dcb&#34;&gt;Files Examplesのサンプル&lt;/h4&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
