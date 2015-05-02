@@ -6,8 +6,27 @@
     <description>Recent content in Ios on mono-log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 21 Sep 2013 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Oct 2014 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://mono0926.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>iOS 8/Swift エンジニア勉強会資料公開しました</title>
+      <link>http://mono0926.com/blog/2014/10/05/swift-lt/</link>
+      <pubDate>Sun, 05 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2014/10/05/swift-lt/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://connpass.com/event/8629/&#34;&gt;iOS 8/Swift エンジニア勉強会&lt;/a&gt;が台風で延期になったので、手元にいつまでもあってもしょうもないので資料公開しました(　´･‿･｀)&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/39879908&#34; width=&#34;427&#34; height=&#34;356&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;https://www.slideshare.net/mono0926/lt-yahoo&#34; title=&#34;Xcode 6で利用可能になった ベクター画像リソースを 深掘り&#34; target=&#34;_blank&#34;&gt;Xcode 6で利用可能になった ベクター画像リソースを 深掘り&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;http://www.slideshare.net/mono0926&#34; target=&#34;_blank&#34;&gt;Masayuki Ono&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;延期つらたん&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/tsuratan.png&#34; alt=&#34;&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;↑LINEクリエイターズスタンプとして&lt;a href=&#34;http://bit.ly/love-stamp&#34;&gt;公開中です&lt;/a&gt;。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>iOS7対応記事のまとめ</title>

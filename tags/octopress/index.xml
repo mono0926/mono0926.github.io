@@ -73,5 +73,101 @@ $ rake generate
 </description>
     </item>
     
+    <item>
+      <title>Octopressへの投稿やdeployをAlfredのWorkflowで</title>
+      <link>http://mono0926.com/blog/2013/07/07/octopress-alfred/</link>
+      <pubDate>Sun, 07 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2013/07/07/octopress-alfred/</guid>
+      <description>
+
+&lt;p&gt;今日初めてOctopressを触ったら、けっこう気に入ったので、さらに気軽に書ける環境を整えれば捗るのではと思い、AlfredのWorkflowを作ってみました。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# deploy用
+OCTOPATH=&#39;/Documents/Git/Private/octopress&#39;
+cd ~/$OCTOPATH
+rake gen_deploy
+git add .
+git commit -m &amp;quot;deployed via workflow.&amp;quot;
+git push
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;# 投稿用
+OCTOPATH=&#39;/Documents/Git/Private/octopress&#39;
+cd ~/$OCTOPATH
+OCTOPOST=$(rake new_post[$1]| grep -o &#39;source/_posts/.*&#39;)
+open ~/$OCTOPATH/$OCTOPOST
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;すんなり出来るかと思いきや、これだけでは動かず、&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;In my bash script I had to add some extras because Alfred runs the bash script in a subshell and in this subshell the rvm environment is not available by default.
+&lt;a href=&#34;http://tooh.github.io/blog/2013/04/23/Alfred_workflow_for_Octopress/&#34;&gt;Alfred Workflow for Octopress&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;とある通り、下記のような設定をする必要があったようです。
+かなりハマりました（´-ω-｀）
+よく分からないけど、別ファイルにしたら動かないので、とりあえず全て冒頭にこれを挟みました（´-ω-｀）&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;pre&gt;&lt;code&gt;# rv設定
+if [[ -s &amp;quot;$HOME/.rvm/scripts/rvm&amp;quot; ]] ; then
+	source &amp;quot;$HOME/.rvm/scripts/rvm&amp;quot;
+fi
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;さらに一応previewコマンドも作成&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;if [[ -s &amp;quot;$HOME/.rvm/scripts/rvm&amp;quot; ]] ; then
+	source &amp;quot;$HOME/.rvm/scripts/rvm&amp;quot;
+fi
+OCTOPATH=&#39;/Documents/Git/Private/octopress&#39;
+
+cd ~/$OCTOPATH
+rake generate
+# open in a browser
+open http://localhost:4000/
+rake preview
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;こちらはコマンドを実行するだけではウインドウが開かれずプロセスがゾンビ状態になってしまうので、Alfredで呼び出す時に&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;open -a Terminal.app preview.sh
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;と少しだけ工夫。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/Temikus/alfred-octopress/blob/master/post.sh&#34;&gt;Temikus/alfred-octopress&lt;/a&gt; など、同じようなもの作っている人もいたり。&lt;/p&gt;
+
+&lt;p&gt;とりあえず、これでいつでもランチャー起動して&lt;code&gt;post titleなど&lt;/code&gt;と入力すると、記事が生成されて開かれて、書き終わったら&lt;code&gt;preview&lt;/code&gt;で確認して、&lt;code&gt;deploy&lt;/code&gt;実行すればサイトへの反映とレポジトリへのPushが行われる便利な環境が出来ました。
+(Alfredのテーマもかっこよくして遊んでました。)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/post.png&#34; alt=&#34;post workflow&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h4 id=&#34;octopress気に入ったけど:641b1723ac00cebbf1ffb348bd5d5d56&#34;&gt;Octopress気に入ったけど…&lt;/h4&gt;
+
+&lt;p&gt;Qiitaもよく見たらMarkdownでかなり使いやすそう。
+色々ツールもあるし。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://kobito.qiita.com/&#34;&gt;Kobito&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Qiitaに投稿出来るクライアントアプリ。同時にGistにスニペット登録も可能。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.gistboxapp.com/&#34;&gt;GistBox&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Gist用Webアプリ。Chrome App版はネイティブっぽい操作感。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;最近久しく何も書いてなかったけど、あまり脈絡の無い雑多メモなどはこちらで、技術系TipsはQiitaあたりにまとめる習慣付けたい（´・ω・｀）&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

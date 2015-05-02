@@ -6,8 +6,111 @@
     <description>Recent content in Programming on mono-log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 20 Oct 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 31 Oct 2014 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://mono0926.com/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>SourceTreeでブランチ名をコミットメッセージの先頭に自動挿入</title>
+      <link>http://mono0926.com/blog/2014/10/31/sourcetree/</link>
+      <pubDate>Fri, 31 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2014/10/31/sourcetree/</guid>
+      <description>
+
+&lt;p&gt;Git便利ですね。今やこれ無しで開発は無理、というレベルです。&lt;/p&gt;
+
+&lt;p&gt;そんな日々使っているGitですが、何かしらのツールでタスクやIssueを作ってそのIDをfeatureブランチ名としている運用は多いと思います。&lt;/p&gt;
+
+&lt;p&gt;その場合、コミットメッセージにそのIDが含まれているとコミットとタスクを紐づけてくれるので、コミットメッセージの先頭にブランチ名を挿入することが多いはずです。&lt;/p&gt;
+
+&lt;p&gt;それを打つのが一々面倒だしたまにミスして違うタスクに紐付かれちゃうし、で少し困っていました。&lt;/p&gt;
+
+&lt;p&gt;コマンドラインで作業している場合は、以下のようなにGitの&lt;code&gt;prepare-commit-msg&lt;/code&gt;フックを利用することで、コミットメッセージ作成時に自動挿入させることが可能です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/ykyk1218/items/4c17eef472ae8c31991f&#34;&gt;Gitでcommitした時にブランチ名をcommitメッセージに自動でいれる - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ただ、SourceTreeで試そうとしたら、動いてくれず、調べたところ非対応のようです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://answers.atlassian.com/questions/169399/sourcetree-and-git-prepare-commit-msg&#34;&gt;SourceTree and git prepare-commit-msg - Atlassian Answers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/yabuchin_y&#34;&gt;@yabuchin_y&lt;/a&gt;さんに相談したら、&lt;code&gt;commit-msg&lt;/code&gt;で書き換えてしまえばいけるのでは？ということで作ってもらえました。&lt;/p&gt;
+
+&lt;p&gt;(僕はこの時点で、&lt;code&gt;commit-msg&lt;/code&gt;はバリデーションフェーズ的なもので、書き換えは不可能なのでは？と思って諦めてしまいそうでした。)&lt;/p&gt;
+
+&lt;h2 id=&#34;設定手順:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;設定手順&lt;/h2&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h3 id=&#34;コミットメッセージのテンプレートを作成して指定の文章が自動挿入されるようにする:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;コミットメッセージのテンプレートを作成して指定の文章が自動挿入されるようにする&lt;/h3&gt;
+
+&lt;p&gt;以下を、特定のレポジトリルートで実行。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# $HOME/.gitmessage.txtの置き場所は自由です
+# グローバルな設定としたい場合は、--globalオプションを付ける
+git config commit.template $HOME/.gitmessage.txt
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;# .gitmessage.txtの中身(末尾に半角スペースを入れておくこと推奨)
+[branchname]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これで、コミットメッセージ作成時に、&lt;code&gt;[branchname]&lt;/code&gt;が先頭に自動挿入されます。&lt;/p&gt;
+
+&lt;h3 id=&#34;コミット後に-branchname-がブランチ名へ書き換えられるようにする:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;コミット後に[branchname]がブランチ名へ書き換えられるようにする&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;commit-msg&lt;/code&gt;フックを利用します。&lt;/p&gt;
+
+&lt;p&gt;以下を特定のレポジトリの&lt;code&gt;.git/hooks/commit-msg&lt;/code&gt;として配置します。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/usr/bin/env ruby
+message_file = ARGV[0]
+message = File.read(message_file, :encoding =&amp;gt; Encoding::UTF_8)
+
+current_branch = `git branch | grep &#39;*&#39;`.chomp.sub(&#39;* &#39;, &#39;&#39;)
+current_branch = current_branch[current_branch.rindex(&amp;quot;/&amp;quot;)+1 .. current_branch.length]
+
+newmessage = message.sub(/\[branchname\]/, current_branch)
+
+File.write(message_file, newmessage)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;feature/hoge/#35&lt;/code&gt;などとなっている場合、&lt;code&gt;[branchname]&lt;/code&gt;部分が&lt;code&gt;#35&lt;/code&gt;と置換されるような処理をしています。
+用途に応じて適宜書き換えてください。&lt;/p&gt;
+
+&lt;h2 id=&#34;挙動:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;挙動&lt;/h2&gt;
+
+&lt;p&gt;文章だけではイメージが沸きにくいかもしれないので、スクリーンショット貼っておきます。&lt;/p&gt;
+
+&lt;h3 id=&#34;コミットメッセージを入れようとすると先頭に-branchname-が自動挿入:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;コミットメッセージを入れようとすると先頭に[branchname]が自動挿入&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/st1.png&#34; alt=&#34;&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;そのままその後にメッセージを入れてコミットします。&lt;/p&gt;
+
+&lt;h3 id=&#34;branchname-が置換されてブランチ名になってくれます:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;[branchname]が置換されてブランチ名になってくれます&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/st2.png&#34; alt=&#34;&#34; /&gt;
+&lt;/p&gt;
+
+&lt;h2 id=&#34;実際に使って見て:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;実際に使って見て&lt;/h2&gt;
+
+&lt;p&gt;先週から活用し初めましたがすこぶる快適です(　´･‿･｀)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://twitter.com/yabuchin_y&#34;&gt;@yabuchin_y&lt;/a&gt;さん、ありがとうございました(　´･‿･｀)&lt;/p&gt;
+
+&lt;h3 id=&#34;参考リンク:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;参考リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://git-scm.com/book/ja/v1/Git-%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA-Git-%E3%83%95%E3%83%83%E3%82%AF&#34;&gt;Git - Git フック&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/khlizard/items/dfe1ec9d82c0ed5da7c6&#34;&gt;Git hooks まとめ - Qiita&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>クックパッド第5回 開発コンテスト24に参戦した話</title>
@@ -180,6 +283,128 @@ error出たときのハンドリングとして統一的にやっていたので
     </item>
     
     <item>
+      <title>iOS 8/Swift エンジニア勉強会資料公開しました</title>
+      <link>http://mono0926.com/blog/2014/10/05/swift-lt/</link>
+      <pubDate>Sun, 05 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2014/10/05/swift-lt/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://connpass.com/event/8629/&#34;&gt;iOS 8/Swift エンジニア勉強会&lt;/a&gt;が台風で延期になったので、手元にいつまでもあってもしょうもないので資料公開しました(　´･‿･｀)&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/39879908&#34; width=&#34;427&#34; height=&#34;356&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;https://www.slideshare.net/mono0926/lt-yahoo&#34; title=&#34;Xcode 6で利用可能になった ベクター画像リソースを 深掘り&#34; target=&#34;_blank&#34;&gt;Xcode 6で利用可能になった ベクター画像リソースを 深掘り&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;http://www.slideshare.net/mono0926&#34; target=&#34;_blank&#34;&gt;Masayuki Ono&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;延期つらたん&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/tsuratan.png&#34; alt=&#34;&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;↑LINEクリエイターズスタンプとして&lt;a href=&#34;http://bit.ly/love-stamp&#34;&gt;公開中です&lt;/a&gt;。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>iTunesの動画や音楽の再生スピードを変える方法</title>
+      <link>http://mono0926.com/blog/2014/06/11/quicktime/</link>
+      <pubDate>Wed, 11 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2014/06/11/quicktime/</guid>
+      <description>
+
+&lt;p&gt;iPhoneのPodcastアプリでは再生スピードをコントロール出来て便利なのに、iTunesではその機能が無いので、AppleScriptなど使って出来るようにしてみた。
+本当はiTunesに閉じて実現したいところだけど、それはちょっと難しそう。&lt;/p&gt;
+
+&lt;h2 id=&#34;quicktime-player-7のインストール:2f8c250e353e1b3ac334d422e8922532&#34;&gt;QuickTime Player 7のインストール&lt;/h2&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;新しめのOSXに標準インストールされているQuickTimeはかっこいいけど機能がしょぼいので、再生スピードを変えるにはQuickTime Player 7をインストールする必要がある。&lt;/p&gt;
+
+&lt;p&gt;幸いまだ&lt;a href=&#34;http://support.apple.com/kb/DL923?viewlocale=ja_JP&#34;&gt;QuickTime Player 7&lt;/a&gt;からダウンロード出来る。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;QuickTim 7 は、 Snow Leopard および OS X Lion 上で QTVR、対話型の QuickTime ムービー、MIDI などの古いメディアフォーマットをサポートしています。また、QuickTime Pro の機能を有効にするための QuickTime 7 Pro の登録コードを使用できます。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;とりあえずQucikTime 7をインストールして、「Show A/V Control」(Command + K)で再生スピードなどコントロール出来るウインドウが開くので、機能的にはここまでで完結。&lt;/p&gt;
+
+&lt;h2 id=&#34;automatorでアプリ化:2f8c250e353e1b3ac334d422e8922532&#34;&gt;Automatorでアプリ化&lt;/h2&gt;
+
+&lt;p&gt;上記までだと、一々ファイルをFinderで開いて、QuickTime Player 7で起動するという手順が必要なので、Automatorを使って省力化してみる。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;tell application &amp;quot;iTunes&amp;quot;
+	pause
+	--iTunesで選択中・再生中のファイルおよびその再生位置を保持
+	set my_track to location of selection
+	set my_seconds to player position
+end tell
+tell application &amp;quot;QuickTime Player 7&amp;quot;
+	open my_track
+	set my_movie to first document
+	set ts to time scale of my_movie
+	--とりあえず1.5倍に
+	set rate of my_movie to 1.5
+end tell
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これをアプリとして保存してDockなどの配置しておけば、iTunesで曲を選択中あるいは再生中の状態で、実行するとQuick Time 7が起動して、その曲を1.5倍速再生してくれる。アプリ形式だと、倍速の数字を指定するパスが無いが、「Show A/V Control」ウインドウを開けば一応あとから変更可能。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/mono0926/AppleScript&#34;&gt;GitHub&lt;/a&gt;の&lt;a href=&#34;https://github.com/mono0926/AppleScript/raw/master/ChangeSpeed.zip&#34;&gt;ChangeSpeed&lt;/a&gt;からダウンロードできます。&lt;/p&gt;
+
+&lt;h2 id=&#34;alfredのworkflow化:2f8c250e353e1b3ac334d422e8922532&#34;&gt;AlfredのWorkflow化&lt;/h2&gt;
+
+&lt;p&gt;Automatorでアプリ化の方法だと、Dockクリックしたりが面倒なのと、倍速の数字を与えられないので、それをAlfredのWorkflowで解消。
+コードとしては、上記のものに、Alfredのオプション引数を与えるようにした(無指定の場合は同じく1.5倍速)程度でほとんどそのまま。
+AppleScriptを実行するWorkflowを新規作成するだけ。
+個人的にはこっちを使おうかな。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/mono0926/AlfredWorkflow&#34;&gt;GitHub&lt;/a&gt;の&lt;a href=&#34;https://github.com/mono0926/AlfredWorkflow/raw/master/changeSpeed/ChangeITunesSpeed.alfredworkflow&#34;&gt;ChangeITunesSpeed.alfredworkflow&lt;/a&gt;からダウンロード出来ます。&lt;/p&gt;
+
+&lt;p&gt;今まで出来なくて不便に感じていたMac上での可変速再生が実現して、満足（´-ω-｀）&lt;/p&gt;
+
+&lt;p&gt;YosemiteでJavaScriptでAppleScript書けるようになったので、リリースしたら書き換えたい(　´･‿･｀)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SwiftでラヴさんWEBアルバムを開くだけのアプリ作った</title>
+      <link>http://mono0926.com/blog/2014/06/03/swift/</link>
+      <pubDate>Tue, 03 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2014/06/03/swift/</guid>
+      <description>&lt;p&gt;昼休みに、&lt;a href=&#34;https://developer.apple.com/swift/&#34;&gt;Swift&lt;/a&gt;で、&lt;a href=&#34;https://github.com/mono0926/SwiftSample&#34;&gt;ラヴさんWEBアルバムを開くだけのアプリ&lt;/a&gt;作った。&lt;/p&gt;
+
+&lt;p&gt;Swiftもそうだけど、Xcode 6も色々変わってて面白い(　´･‿･｀)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>NodeJS &#43; Express &#43; Stylus &#43; Jade &#43; AngularJS &#43; Redisなどなどで、簡単なTODOアプリ</title>
+      <link>http://mono0926.com/blog/2014/05/26/todo/</link>
+      <pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2014/05/26/todo/</guid>
+      <description>&lt;p&gt;NodeJS + Express + Stylus + Jade + AngularJS + Redisなどなどで、&lt;a href=&#34;http://ice-me.herokuapp.com/todos&#34;&gt;簡単なTODOアプリ&lt;/a&gt;作った。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/gp/product/484433588X/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=484433588X&amp;amp;linkCode=as2&amp;amp;tag=mono0926-22&#34;&gt;TypeScriptリファレンス Ver.1.0対応&lt;/a&gt;のサンプルを参考に、アレンジした感じ(オリジナルはSQLiteなど使用)。&lt;/p&gt;
+
+&lt;p&gt;Redisでのデータの持ち方は&lt;a href=&#34;http://redis.shibu.jp/tutorial/&#34;&gt;ケーススタディ — redis 2.0.3 documentation&lt;/a&gt;である程度分かったけど、なかなか迷うところや困るところも多いので、Redis入門読んでじっくり勉強中。
+&lt;a href=&#34;http://ice-me.herokuapp.com/todos&#34;&gt;TODOアプリ&lt;/a&gt;では、なんとか動作自体は出来たけど、ちょっとしっくり来ないところもあったり。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/gp/product/B00HSC64P8/ref=as_li_ss_il?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=B00HSC64P8&amp;linkCode=as2&amp;tag=mono0926-22&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B00HSC64P8&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=mono0926-22&#34; &gt;&lt;/a&gt;&lt;img src=&#34;http://ir-jp.amazon-adsystem.com/e/ir?t=mono0926-22&amp;l=as2&amp;o=9&amp;a=B00HSC64P8&#34; width=&#34;1&#34; height=&#34;1&#34; border=&#34;0&#34; alt=&#34;&#34; style=&#34;border:none !important; margin:0px !important;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;「Redis入門」というタイトルだけど、原書は&lt;a href=&#34;http://www.amazon.com/gp/product/1617290858/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1617290858&amp;amp;linkCode=as2&amp;amp;tag=mono0926-20&amp;amp;linkId=TTS6QNHCUFJDJESI&#34;&gt;Redis in Action&lt;/a&gt;なだけあって、けっこう歯ごたえのある内容。一通り理解して手を動かせば、RedisやKVSのパラダイムに慣れられそう。&lt;/p&gt;
+
+&lt;p&gt;サーバーサイドは外部モジュール使ってるけど(&lt;code&gt;import xxx = require(&#39;yyy&#39;)&lt;/code&gt;形式)、クライアント側は内部モジュール形式で書いて手動で下記を実行して連結しているのも微妙なので、改善したい（´-ω-｀）他はWebStormで普通に実行したり、herokuへのデプロイはGitのPUSHで出来て楽なのだけれど（´-ω-｀）&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;tsc @compile.tscparams
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;AngularJSとJadeのおかげで、HTML部分がすごくクリーンになっているのはとても良い感じ(　´･‿･｀)&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/mono0926/3ee7f4c5016e88a6c6a3.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
       <title>TypeScript・AngularJS・Jade・Stylusでサンプルコード</title>
       <link>http://mono0926.com/blog/2014/05/14/angularjs/</link>
       <pubDate>Wed, 14 May 2014 00:00:00 +0000</pubDate>
@@ -283,6 +508,285 @@ GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分�
 &lt;a href=&#34;https://github.com/go-lang-plugin-org/go-lang-idea-plugin/issues/25&#34;&gt;Support for debugging · Issue #25 · go-lang-plugin-org/go-lang-idea-plugin&lt;/a&gt;を見ると、GAEプロジェクトのみ対応？？よく分からない（´-ω-｀）&lt;/p&gt;
 
 &lt;p&gt;あと、&lt;a href=&#34;https://twitter.com/yabuchin_y&#34;&gt;ıɥɔınʎ (yabuchin_y) on Twitter&lt;/a&gt;さんに&lt;a href=&#34;https://gophercasts.io/&#34;&gt;GopherCasts&lt;/a&gt;を教えてもらった(　´･‿･｀)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>OSXの開発環境を整えた</title>
+      <link>http://mono0926.com/blog/2014/05/06/renew/</link>
+      <pubDate>Tue, 06 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2014/05/06/renew/</guid>
+      <description>
+
+&lt;p&gt;Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。
+Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイッチしたいなとか思ったのが発端。&lt;br /&gt;
+参考: &lt;a href=&#34;http://rdepf.hatenablog.jp/entry/2014/03/07/122337&#34;&gt;Node.jsのコールバック地獄をPromiseやGeneratorを使って解消する - HackerNews翻訳してみた&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;わりと&lt;code&gt;brew install XXX&lt;/code&gt;で雑に各種環境インストールしてたので、これを気に色々直した。&lt;/p&gt;
+
+&lt;h2 id=&#34;homebrewアンインストール:e4940d6974c012c0c770280b21490de7&#34;&gt;Homebrewアンインストール&lt;/h2&gt;
+
+&lt;p&gt;ゴミが残るのいやだったので、&lt;a href=&#34;https://gist.github.com/mxcl/1173223&#34;&gt;Uninstall Homebrew&lt;/a&gt;でhomebrewをアンインストール。&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;brewfile導入:e4940d6974c012c0c770280b21490de7&#34;&gt;Brewfile導入&lt;/h2&gt;
+
+&lt;p&gt;以下など見て便利そうだと思っていたので、Brewfile導入。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.1x1.jp/blog/2014/04/how-to-setup-application-on-osx.html&#34;&gt;Mac OSX をクリーンインストールしてからの環境構築メモ - Shin x blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.livedoor.jp/sonots/archives/35251881.html&#34;&gt;「BrewfileでHomebrewパッケージを管理する」をやってみた - sonots:blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://tnakamura.hatenablog.com/entry/2014/04/29/113727&#34;&gt;MacBook にインストールしているアプリやツールをメモする代わりに Brewfile を作った - present&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;これだけで一気にインストール出来てとても便利。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;brew bundle
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;僕の：&lt;a href=&#34;https://github.com/mono0926/Environment/blob/master/OSX/Brewfile&#34;&gt;Environment/OSX/Brewfile at master · mono0926/Environment&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;今後も、Homebrewで何か新しくインストールするときメンテナンスしていくようにしよう。&lt;/p&gt;
+
+&lt;h2 id=&#34;その他開発環境:e4940d6974c012c0c770280b21490de7&#34;&gt;その他開発環境&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;brew install XXX&lt;/code&gt;で適当にインストールせずに、バージョンの切り替えが容易なようにした。
+いくつか種類あったけど、基本後発のを導入してみた。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Python: &lt;a href=&#34;https://github.com/yyuu/pyenv&#34;&gt;yyuu/pyenv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ruby: &lt;a href=&#34;https://github.com/sstephenson/rbenv&#34;&gt;sstephenson/rbenv&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Node.js: &lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;creationix/nvm&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;nvmはzshとの相性悪くて日本では&lt;a href=&#34;https://github.com/hokaccha/nodebrew&#34;&gt;hokaccha/nodebrew&lt;/a&gt;がけっこう人気っぽかったけど特に問題無かったのでnvmにした。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;諸々雑なところがあるけど、&lt;a href=&#34;https://github.com/mono0926/Environment/tree/master/OSX&#34;&gt;Environment/OSX at master · mono0926/Environment&lt;/a&gt;でセットアップスクリプト管理。&lt;/p&gt;
+
+&lt;h2 id=&#34;ide導入:e4940d6974c012c0c770280b21490de7&#34;&gt;IDE導入&lt;/h2&gt;
+
+&lt;p&gt;スクリプト系言語は、最近はわりとSublime Textで書いていたけど、やっぱり補完がもう少し聞いてくれないと厳しいので、なるべくIDE使うようにしようと思う。&lt;br /&gt;
+IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれば捗るかなと。&lt;br /&gt;
+今まではNetBeansかたまにEclipseだったけど、乗り換え。少しずつ慣れていこう（´-ω-｀）&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.jetbrains.com/webstorm/&#34;&gt;WebStorm :: The smartest JavaScript IDE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.jetbrains.com/ruby/&#34;&gt;Ruby on Rails IDE :: JetBrains RubyMine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.jetbrains.com/pycharm/&#34;&gt;Python IDE &amp;amp; Django IDE for Web developers : JetBrains PyCharm&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;CE版は無料&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IRKitで遊び始めた〜とりあえずTerminalで操作〜</title>
+      <link>http://mono0926.com/blog/2014/05/05/irkit/</link>
+      <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2014/05/05/irkit/</guid>
+      <description>
+
+&lt;p&gt;冬場忙しかったりで既存アプリで部屋のリモコン登録する程度しかいじれてなかったけど、最近ようやく落ち着いてきたので、&lt;a href=&#34;http://www.amazon.co.jp/gp/product/B00H91KK26/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=B00H91KK26&amp;amp;linkCode=as2&amp;amp;tag=mono0926-22&#34;&gt;IRKit&lt;/a&gt;で遊んでみる(　´･‿･｀)&lt;/p&gt;
+
+&lt;h2 id=&#34;セットアップ:b1567300f9c156a049940414df8efe7b&#34;&gt;セットアップ&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://getirkit.com/&#34;&gt;IRKit - Open Source WiFi Connected Infrared Remote Controller&lt;/a&gt;を参考に、諸々設定。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# dns-sdコマンドで、IRKitのインスタンス名取得。
+Pro:b4 mono$ dns-sd -B _irkit._tcp
+Browsing for _irkit._tcp
+DATE: ---Mon 05 May 2014---
+14:41:16.669  ...STARTING...
+Timestamp     A/R    Flags  if Domain               Service Type         Instance Name
+14:41:16.880  Add        2   4 local.               _irkit._tcp.         iRKitA2C4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;!-- more --&gt;
+
+&lt;pre&gt;&lt;code&gt;# インスタンス名から、IPアドレス取得
+Pro:b4 mono$ dns-sd -G v4 irkita2c4.local
+DATE: ---Mon 05 May 2014---
+14:41:43.565  ...STARTING...
+Timestamp     A/R Flags if Hostname                               Address                                      TTL
+14:41:43.566  Add     2  4 irkita2c4.local.                       192.168.0.4                                  10
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;# IPアドレスからMACアドレスを調べる(もっとスマートなやり方ある？)
+# とりあえずping
+Pro:~ mono$ ping 192.168.0.4
+PING 192.168.0.4 (192.168.0.4): 56 data bytes
+64 bytes from 192.168.0.4: icmp_seq=0 ttl=255 time=3.958 ms
+# arpで確認
+Pro:~ mono$ arp -a
+? (192.168.0.4) at 20:f8:5e:a6:a2:c4 on en0 ifscope [ethernet]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;ルーターの設定で、固定IPを今さらながら割り当ててみる。
+これで、家の中では安心して&lt;code&gt;192.168.0.4&lt;/code&gt;でアクセス出来るようになった（´-ω-｀）&lt;/p&gt;
+
+&lt;h2 id=&#34;terminalから操作:b1567300f9c156a049940414df8efe7b&#34;&gt;Terminalから操作&lt;/h2&gt;
+
+&lt;p&gt;普通にリモコンを操作して、その赤外線の範囲内にIRKitが入っていると、青いライトが点滅して、赤外線の信号を取得したことを示してくれる。&lt;/p&gt;
+
+&lt;p&gt;そこで、curlすると、その信号が分かる。
+うちのNECのLEDシーリングライトのオンオフボタンを押した後だとこんな感じ。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Pro:~ mono$ curl -i http://192.168.0.4/messages
+HTTP/1.0 200 OK
+Access-Control-Allow-Origin: *
+Server: IRKit/1.3.5.0.gce6ac15
+Content-Type: text/plain
+
+{&amp;quot;format&amp;quot;:&amp;quot;raw&amp;quot;,&amp;quot;freq&amp;quot;:38,&amp;quot;data&amp;quot;:[17421,9061,935,1232,1037,3458,1037,1232,935,1232,935,1232,1037,1190,1037,1190,1037,3458,1037,3458,1037,1037,1037,3458,1037,3458,1037,1150,1037,3341,1073,3341,1073,1232,935,3458,935,3458,935,1232,1037,3341,935,1190,1073,3458,935,1190,1002,3458,1073,1073,1073,1190,1037,3458,1037,1190,1190,3228,968,1190,1073,3341,1073,1190,1002]}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これをPOSTすれば、リモコンオンオフボタンと同じ信号をIRKitが発行してくれる。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;curl -i http://192.168.0.4/messages -d &#39;{&amp;quot;format&amp;quot;:&amp;quot;raw&amp;quot;,&amp;quot;freq&amp;quot;:38,&amp;quot;data&amp;quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;つまり、これをaliasなりシェルスクリプトにしておけば、もうそれだけでキーボードでライトのオンオフが出来るようになる。&lt;/p&gt;
+
+&lt;p&gt;楽ちん過ぎる、素晴らしい（´-ω-｀）&lt;/p&gt;
+
+&lt;p&gt;ちなみに、うちではこんな風に部屋の真ん中あたりの壁に、両面テープ付けて配置してる。これでも、受信感度の悪い一部機器は反応しなかったりで悩み中。
+その機器は、添付のリモコンでもけっこう近くで方向もけっこう合わせないと反応しないので、IRKitのせいではないのだけれど。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/irkit.jpg&#34; alt=&#34;irkit&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;8,000円切る価格で完成度高くて、色々弄りやすいの素晴らしい(　´･‿･｀)&lt;/p&gt;
+
+&lt;iframe src=&#34;http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=mono0926-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B00H91KK26&#34; style=&#34;width:120px;height:240px;&#34; scrolling=&#34;no&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;リモコンが付いていないサーキュレーターとかは、この、コンセントのオンオフをリモコンで切り替えられるやつを買おうかな（´-ω-｀）&lt;/p&gt;
+
+&lt;iframe src=&#34;http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=mono0926-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B0013L6ACM&#34; style=&#34;width:120px;height:240px;&#34; scrolling=&#34;no&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;外からアクセス出来るようにしたり、WEBアプリやiPhoneアプリでもっと便利にしていきたいところ(　´･‿･｀)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>IRKitに外からアクセス出来るようにした</title>
+      <link>http://mono0926.com/blog/2014/05/05/irkit-remote/</link>
+      <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2014/05/05/irkit-remote/</guid>
+      <description>
+
+&lt;p&gt;前回の&lt;a href=&#34;http://mono0926.com/blog/2014/05/05/irkit/&#34;&gt;IRKitで遊び始めた〜とりあえずTerminalで操作〜 - monoHub&lt;/a&gt;の続き。&lt;/p&gt;
+
+&lt;p&gt;前回触った&lt;a href=&#34;http://getirkit.com/#IRKit-Device-API&#34;&gt;IRKit Device HTTP API&lt;/a&gt;は同じWiFi内から操作するためのもので、外からアクセスするときは&lt;a href=&#34;http://getirkit.com/#IRKit-Internet-API&#34;&gt;IRKit Internet HTTP API&lt;/a&gt;を叩くことになる。&lt;/p&gt;
+
+&lt;h2 id=&#34;irkit-internet-http-apiを叩けるように準備:a4ad3d8d5b83373b6f000eb6be4ade0b&#34;&gt;IRKit Internet HTTP APIを叩けるように準備&lt;/h2&gt;
+
+&lt;p&gt;まずは、clienttokenを取得。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Pro:~ mono$ curl -i http://192.168.0.4/keys -d &#39;&#39;
+HTTP/1.0 200 OK
+Access-Control-Allow-Origin: *
+Server: IRKit/1.3.5.0.gce6ac15
+Content-Type: text/plain
+
+{&amp;quot;clienttoken&amp;quot;:&amp;quot;**************************&amp;quot;} #伏せています
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;取得したclienttokenを元に、deviceidとclientkeyを取得。&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;pre&gt;&lt;code&gt;Pro:~ mono$ curl -i -d &amp;quot;clienttoken=**************************&amp;quot; &amp;quot;https://api.getirkit.com/1/keys&amp;quot;
+HTTP/1.1 200 OK
+Server: ngx_openresty
+Date: Mon, 05 May 2014 06:44:32 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 94
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: X-Requested-With
+X-Content-Type-Options: nosniff
+
+{&amp;quot;deviceid&amp;quot;:&amp;quot;XXXXXXXXXXXXXXXXXXXXXX&amp;quot;,&amp;quot;clientkey&amp;quot;:&amp;quot;YYYYYYYYYYYYYYYYYYYYY&amp;quot;} #伏せています
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;internet-http-apiを使ってみる:a4ad3d8d5b83373b6f000eb6be4ade0b&#34;&gt;Internet HTTP APIを使ってみる&lt;/h2&gt;
+
+&lt;p&gt;deviceid・clientkey・家のライトのオンオフ信号を&lt;a href=&#34;https://api.getirkit.com/1/messages&#34;&gt;https://api.getirkit.com/1/messages&lt;/a&gt; にポストすると、ちゃんと反応した、素晴らしい(　´･‿･｀)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;curl -i &amp;quot;https://api.getirkit.com/1/messages&amp;quot; \
+     -d &#39;clientkey=YYYYYYYYYYYYYYYYYYYYY&#39; \
+     -d &#39;deviceid=XXXXXXXXXXXXXXXXXXXXXX&#39; \
+     -d &#39;message={&amp;quot;format&amp;quot;:&amp;quot;raw&amp;quot;,&amp;quot;freq&amp;quot;:38,&amp;quot;data&amp;quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上記操作で、IRKitサーバーがIRKit端末にアクセス出来るようになって、認証すれば外部から操作出来るようになるって感じかなあ。
+特に、deviceid・clientkeyは漏れるとまずいですね（´-ω-｀）&lt;/p&gt;
+
+&lt;h2 id=&#34;ついでにapikeyを取得:a4ad3d8d5b83373b6f000eb6be4ade0b&#34;&gt;ついでにapiKeyを取得&lt;/h2&gt;
+
+&lt;p&gt;iPhoneアプリを作ったりするのに使う用のkeyを取得するAPIもあったので、ついでに叩いてみた。
+入力したメールアドレスに確認メールが来て、無事にapiKeyゲット。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Pro:~ mono$ curl -i -d &amp;quot;email=xxxxxx@gmail.com&amp;quot; &amp;quot;https://api.getirkit.com/1/apps&amp;quot;
+HTTP/1.1 200 OK
+Server: ngx_openresty
+Date: Mon, 05 May 2014 07:00:31 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 92
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: X-Requested-With
+X-Content-Type-Options: nosniff
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;このapiKitと&lt;a href=&#34;https://github.com/irkit/ios-sdk&#34;&gt;irkit/ios-sdk&lt;/a&gt;でiPhoneアプリ簡単に作れるみたいだけど、&lt;a href=&#34;https://github.com/irkit/ios-sdk&#34;&gt;irkit/ios-sdk&lt;/a&gt;とかでけっこう充分だったりするし、どうしよう（´-ω-｀）&lt;br /&gt;
+やるならiBeaconと組み合わせたいけど、手軽で安いのがまだない感じ（´-ω-｀）&lt;br /&gt;
+&lt;a href=&#34;http://estimote.com/&#34;&gt;Estimote Beacons — real world context for your apps&lt;/a&gt;は洗練されてる感じだけど、$99/3個と割高感が否めない（´-ω-｀）&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Node.jsのIRKitライブラリあったから試してみた</title>
+      <link>http://mono0926.com/blog/2014/05/05/irkit-nodejs/</link>
+      <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2014/05/05/irkit-nodejs/</guid>
+      <description>
+
+&lt;p&gt;せっかく&lt;a href=&#34;http://www.amazon.com/gp/product/B00HSO6YD8/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B00HSO6YD8&amp;amp;linkCode=as2&amp;amp;tag=mono0926-20&amp;amp;linkId=SIVQ46LXCW3PK3IO&#34;&gt;Node.js the Right Way: Practical, Server-Side JavaScript That Scales [Kindle Edition]&lt;/a&gt;でNode.jsを勉強したので、IRKitをNode.jsの勉強題材に出来ないかなと思って、とりあえずNode.jsのクライアントライブラリ無いかな？と探したらあったので、叩いてみた。&lt;/p&gt;
+
+&lt;h3 id=&#34;dameleon-node-irkit-https-github-com-dameleon-node-irkit:fb9e6c9b3f57a37d5b1579e678201432&#34;&gt;&lt;a href=&#34;https://github.com/dameleon/node-irkit&#34;&gt;dameleon/node-irkit&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;元々IRKitのAPIがシンプルなので、あまりNode.jsを使う必然性感じないけど、まあ勉強に（´-ω-｀）&lt;/p&gt;
+
+&lt;p&gt;本1冊やったとはいえ、色々まだ不慣れなので、コード読解にも良いかも。
+ドキュメントは無いものの、テストはちゃんと書かれていたので、それを参考に使ってみた。&lt;/p&gt;
+
+&lt;p&gt;まずはインストール。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;npm install node-irkit
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;とりあえずlocalApiを使ってみた。
+実行する度に、部屋の電気がオンオフされて煩わしいので、テストは違う信号でやろうと思ったなう（´-ω-｀）&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;const
+    irkit = require(&#39;node-irkit&#39;),
+    localApi = irkit.getLocalApi(&amp;quot;http://192.168.0.4&amp;quot;),
+    myRoomLight = &#39;{&amp;quot;format&amp;quot;:&amp;quot;raw&amp;quot;,&amp;quot;freq&amp;quot;:38,&amp;quot;data&amp;quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}&#39;,
+    myRoomLightMessage = JSON.parse(myRoomLight);
+localApi.postMessages(myRoomLightMessage, function(err, res) {
+    console.log(res); //空
+});
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
@@ -508,42 +1012,6 @@ mv ginger.zip ginger.alfredworkflow
 今までworkflowの作り方がよく分からない部分があったり管理が適当だったりしたけど、これからはもっとサクサク作れそう。&lt;/p&gt;
 
 &lt;p&gt;今回の成果物：&lt;a href=&#34;https://github.com/mono0926/AlfredWorkflow/raw/master/ginger.alfredworkflow&#34;&gt;Ginger Workflow&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>iOSからDropbox Sync APIを使ってみる</title>
-      <link>http://mono0926.com/blog/2013/07/19/dropbox/</link>
-      <pubDate>Fri, 19 Jul 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://mono0926.com/blog/2013/07/19/dropbox/</guid>
-      <description>
-
-&lt;h3 id=&#34;dropbox-sync-apiとは:5a095f130cba82d011abb7c589e20dcb&#34;&gt;Dropbox Sync APIとは&lt;/h3&gt;
-
-&lt;h3 id=&#34;サンプルとドキュメント:5a095f130cba82d011abb7c589e20dcb&#34;&gt;サンプルとドキュメント&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;サンプル
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.dropbox.com/developers/datastore/sdks/ios&#34;&gt;Datastore API SDKs&lt;/a&gt;からSDKダウンロードすると同梱されてる&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ドキュメント
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.dropbox.com/developers/datastore/docs/ios&#34;&gt;Datastore API for iOS Documentation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;チュートリアル
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.dropbox.com/developers/sync/start/ios&#34;&gt;Using the Sync API on iOS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;サンプル起動:5a095f130cba82d011abb7c589e20dcb&#34;&gt;サンプル起動&lt;/h3&gt;
-
-&lt;h4 id=&#34;files-examplesのサンプル:5a095f130cba82d011abb7c589e20dcb&#34;&gt;Files Examplesのサンプル&lt;/h4&gt;
 </description>
     </item>
     

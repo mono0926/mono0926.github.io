@@ -13,16 +13,6 @@
   </url>
   
   <url>
-    <loc>http://mono0926.com/blog/2015/05/01/fuga/</loc>
-    <lastmod>2015-05-01T09:07:02+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://mono0926.com/blog/2015/05/01/hugo/</loc>
-    <lastmod>2015-05-01T08:44:32+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://mono0926.com/blog/2014/10/31/sourcetree/</loc>
     <lastmod>2014-10-31T00:00:00+00:00</lastmod>
   </url>
@@ -93,12 +83,12 @@
   </url>
   
   <url>
-    <loc>http://mono0926.com/blog/2014/05/05/irkit-remote/</loc>
+    <loc>http://mono0926.com/blog/2014/05/05/irkit-nodejs/</loc>
     <lastmod>2014-05-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://mono0926.com/blog/2014/05/05/irkit-nodejs/</loc>
+    <loc>http://mono0926.com/blog/2014/05/05/irkit-remote/</loc>
     <lastmod>2014-05-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -130,11 +120,6 @@
   <url>
     <loc>http://mono0926.com/blog/2013/09/21/ios7/</loc>
     <lastmod>2013-09-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://mono0926.com/blog/2013/09/09/python/</loc>
-    <lastmod>2013-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
