@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ライフハック on mono-log</title>
+    <link>http://mono0926.com/categories/%E3%83%A9%E3%82%A4%E3%83%95%E3%83%8F%E3%83%83%E3%82%AF/</link>
+    <description>Recent content in ライフハック on mono-log</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 13 Jun 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://mono0926.com/categories/%E3%83%A9%E3%82%A4%E3%83%95%E3%83%8F%E3%83%83%E3%82%AF/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>iOS8で1Passwordが使えるようになった</title>
+      <link>http://mono0926.com/blog/2014/06/13/password/</link>
+      <pubDate>Fri, 13 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2014/06/13/password/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://mono0926.com/blog/2014/06/04/yosemite/&#34;&gt;OSX 10.10(Yosemite)やiOS 8にアップデートして困ったこと - monoHub&lt;/a&gt;で書いた通り、iOS 8にして以来、&lt;a href=&#34;https://agilebits.com/onepassword/ios&#34;&gt;1Password&lt;/a&gt;が使えなくてつらたんでした（´-ω-｀）&lt;/p&gt;
+
+&lt;p&gt;しかし、ベータ版なら使えるという情報が。&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;en&#34;&gt;&lt;p&gt;4.5.3b1 (iOS) is now available, and resolves some of the issues with iOS 8.&lt;/p&gt;&amp;mdash; 1Password Beta (@1PasswordBeta) &lt;a href=&#34;https://twitter.com/1PasswordBeta/statuses/474335765720494081&#34;&gt;June 4, 2014&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;そこで、数日前に&lt;a href=&#34;https://agilebits.com/beta_signups/newsletter&#34;&gt;AgileBits Beta Newsletter&lt;/a&gt;に登録して待っていたら、今日メールが届きました。&lt;/p&gt;
+
+&lt;p&gt;それに従って、HockyApp ConfigのProfileをインストールした後、1Passwordのベータ版がインストール出来ました。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/1password.png&#34; alt=&#34;love&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;つらくない(　´･‿･｀)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://bit.ly/love-stamp&#34;&gt;http://bit.ly/love-stamp&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>OSX 10.10(Yosemite)やiOS 8にアップデートして困ったこと</title>
+      <link>http://mono0926.com/blog/2014/06/04/yosemite/</link>
+      <pubDate>Wed, 04 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2014/06/04/yosemite/</guid>
+      <description>
+
+&lt;p&gt;例のごとく、何も考えずにメインマシンをOSX 10.10(Yosemite)・iOS 8にしてしまいましたが、いくつか細かいトラブルが。
+でも概ね問題無く使えていて満足（´-ω-｀）&lt;/p&gt;
+
+&lt;p&gt;NDAに気をつけつつ困ったことや解決法など(　´･‿･｀)&lt;/p&gt;
+
+&lt;h2 id=&#34;osx-10-10-yosemite-にアップデートして困ったこと:f2238a5657d5384caa3f8d23d6640654&#34;&gt;OSX 10.10(Yosemite)にアップデートして困ったこと&lt;/h2&gt;
+
+&lt;h3 id=&#34;pckeyboardhack-https-github-com-tekezo-pckeyboardhack-が起動しない:f2238a5657d5384caa3f8d23d6640654&#34;&gt;&lt;a href=&#34;https://github.com/tekezo/PCKeyboardHack&#34;&gt;PCKeyboardHack&lt;/a&gt;が起動しない&lt;/h3&gt;
+
+&lt;h4 id=&#34;追記-pckeyboardhack-10-7-0-https-pqrs-org-macosx-keyremap4macbook-files-pckeyboardhack-10-7-0-dmg-がリリースされました:f2238a5657d5384caa3f8d23d6640654&#34;&gt;【追記】&lt;a href=&#34;https://pqrs.org/macosx/keyremap4macbook/files/PCKeyboardHack-10.7.0.dmg&#34;&gt;PCKeyboardHack-10.7.0&lt;/a&gt;がリリースされました！&lt;/h4&gt;
+
+&lt;p&gt;去年もこれで困ったことを思い出しました。
+Realforceでスペースの両隣のキーでの日本語入力切り替えが効かずにとても不便です。
+Apple純正キーボードだと問題ないですが。&lt;/p&gt;
+
+&lt;p&gt;と思いつつ、Issuesを覗いたら、&lt;a href=&#34;https://github.com/tekezo/PCKeyboardHack/issues/31&#34;&gt;Add 10.10 support #31&lt;/a&gt;ですんなり解決(　´･‿･｀)&lt;/p&gt;
+
+&lt;p&gt;何も考えずこれを打ったら問題無く動くように。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo /sbin/kextload &#39;/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboardHack.10.9.signed.kext&#39;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;bettertouchtool-http-blog-boastr-net-が起動しない:f2238a5657d5384caa3f8d23d6640654&#34;&gt;&lt;a href=&#34;http://blog.boastr.net/&#34;&gt;BetterTouchTool&lt;/a&gt;が起動しない&lt;/h3&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h4 id=&#34;追記-yosemite対応版のbettertouchtool-http-boastr-net-releases-btt0-997-zip-がダウンロード出来るようになりました:f2238a5657d5384caa3f8d23d6640654&#34;&gt;【追記】&lt;a href=&#34;http://boastr.net/releases/btt0.997.zip&#34;&gt;Yosemite対応版のBetterTouchTool&lt;/a&gt;がダウンロード出来るようになりました！&lt;/h4&gt;
+
+&lt;p&gt;これも&lt;a href=&#34;http://blog.boastr.net/os-x-10-10-yosemite/&#34;&gt;OS X 10.10 Yosemite » BetterTouchTool, BetterSnapTool &amp;amp; SecondBar&lt;/a&gt;にすでに記事が上がっていて、現時点ではまだダウンロード出来ないけどまもなく対応版がリリースされる模様。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;BetterTouchTool crashes on startup, but I already identified the issue and will fix it tomorrow.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.alfredapp.com/&#34;&gt;Alfred&lt;/a&gt;も、Keynotes直後にすぐこんなポスト投稿するなど、どこも動きが速くて素晴らしい(　´･‿･｀)&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;en&#34;&gt;&lt;p&gt;Calm down everybody, Alfred isn’t going anywhere (but up) in OS X Yosemite :) &lt;a href=&#34;http://t.co/wh1mMnxrkt&#34;&gt;http://t.co/wh1mMnxrkt&lt;/a&gt;&lt;/p&gt;&amp;mdash; Alfred App (@alfredapp) &lt;a href=&#34;https://twitter.com/alfredapp/statuses/473517537939185665&#34;&gt;June 2, 2014&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;ただ、Yosemiteはインストールにすごく時間がかかって、残り4分で数十分固まったようになった(大量のファイルコピーなどしている模様・同様の報告多数)ので、失敗したかと思いけっこう怖かったです(　´･‿･｀)&lt;/p&gt;
+
+&lt;h3 id=&#34;homebrewが動かなくなってしまった:f2238a5657d5384caa3f8d23d6640654&#34;&gt;Homebrewが動かなくなってしまった&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;/usr/local/bin/brew: /usr/local/Library/brew.rb: /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby: bad interpreter: No such file or directory
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;code&gt;brew doctor&lt;/code&gt;さえ動かない状態。&lt;/p&gt;
+
+&lt;p&gt;ログに書いてあるとおりSystemのRubyのバージョンが変わったのかーと思いつつ、&lt;code&gt;/usr/local/Library/brew.rb&lt;/code&gt;の以下の&lt;code&gt;1.8&lt;/code&gt;の箇所を&lt;code&gt;2.0&lt;/code&gt;にすれば直った。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -W0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;しかし、この編集後に&lt;code&gt;brew update&lt;/code&gt;をすると、ローカルの変更が原因でPULL出来ないと怒られる（´-ω-｀）
+とはいえ、この編集をしないとbrewコマンド自体効かないし…と困りつつ、&lt;code&gt;2.0&lt;/code&gt;に編集して&lt;code&gt;brew update&lt;/code&gt;するや否や&lt;code&gt;1.8&lt;/code&gt;に戻せばPULLのタイミングでは変更無し状態になってうまくいった(　´･‿･｀)
+ちょっと不便だけど、そんなにする操作じゃないし、こんな運用でしばらく我慢しよう(　´･‿･｀)&lt;/p&gt;
+
+&lt;h3 id=&#34;sleepでクラッシュ-sleep時にクラッシュしたのは偶然だったっぽい:f2238a5657d5384caa3f8d23d6640654&#34;&gt;&lt;del&gt;Sleepでクラッシュ&lt;/del&gt;Sleep時にクラッシュしたのは偶然だったっぽい&lt;/h3&gt;
+
+&lt;p&gt;まだきちんと確かめてないけど、Sleep後に起こそうとしたら再起動がかかって、こんなログが出てた。
+Sleep後だったのは偶然かも。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;panic(cpu 7 caller 0xffffff801600f06c): &amp;quot;TLB invalidation IPI timeout: &amp;quot; &amp;quot;CPU(s) failed to respond to interrupts, unresponsive CPU bitmap: 0x3d, NMIPI acks: orig: 0x0, now: 0x0&amp;quot;@/SourceCache/xnu/xnu-2738.0.0.0.5/osfmk/x86_64/pmap.c:2470
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;ios-8にアップデートして困ったこと:f2238a5657d5384caa3f8d23d6640654&#34;&gt;iOS 8にアップデートして困ったこと&lt;/h2&gt;
+
+&lt;h3 id=&#34;iphoneで-1password-https-agilebits-com-onepassword-が同期できなくなってクラッシュする:f2238a5657d5384caa3f8d23d6640654&#34;&gt;iPhoneで&lt;a href=&#34;https://agilebits.com/onepassword&#34;&gt;1Password&lt;/a&gt;が同期できなくなってクラッシュする&lt;/h3&gt;
+
+&lt;h4 id=&#34;追記-ios8で1passwordが使えるようになった-monohub-http-mono0926-com-blog-2014-06-13-password-で解決-ω:f2238a5657d5384caa3f8d23d6640654&#34;&gt;【追記】&lt;a href=&#34;http://mono0926.com/blog/2014/06/13/password/&#34;&gt;iOS8で1Passwordが使えるようになった - monoHub&lt;/a&gt;で解決（｀・ω・´）&lt;/h4&gt;
+
+&lt;p&gt;けっこう依存度が高いので、これけっこう困る(　´･‿･｀)
+Beta版使っているのが悪いししばらく我慢かなあと思っていたら、すでに問題認識しているらしく、わりと前向きな対応してもらえそうな雰囲気(　´･‿･｀)
+ついでに秋くらいに指紋認証でアンロックも実装してくれることを期待(　´･‿･｀)&lt;/p&gt;
+
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;en&#34;&gt;&lt;p&gt;iOS 8 folks, there sure are a lot of you using the beta! I’m a bit…broken. Sorry. My devs are working on it!&amp;#10;&amp;#10;[…]&lt;/p&gt;&amp;mdash; 1Password Beta (@1PasswordBeta) &lt;a href=&#34;https://twitter.com/1PasswordBeta/statuses/473747191228399616&#34;&gt;June 3, 2014&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;lineスタンプが買えない-使えない:f2238a5657d5384caa3f8d23d6640654&#34;&gt;LINEスタンプが買えない・使えない&lt;/h3&gt;
+
+&lt;p&gt;買おうとするとエラーになってしまうし、使おうとすると進捗ダイアログが終わらない（´-ω-｀）けっこう困る（´-ω-｀）
+&lt;a href=&#34;http://a.scn.jp/s/0VrEMIHAB&#34;&gt;申請中の個人スタンプ&lt;/a&gt;も買えないし使えなくなりそう（´・д・｀）
+これに関しては調べても困っている人はいても解決手段は現状無さそう。&lt;/p&gt;
+
+&lt;p&gt;とりあえずパソコン版でしのごう（´-ω-｀）Yosemite上のLINEは問題無いし。&lt;/p&gt;
+
+&lt;h3 id=&#34;tweetbot:f2238a5657d5384caa3f8d23d6640654&#34;&gt;Tweetbot&lt;/h3&gt;
+
+&lt;p&gt;UI周りかなりがんばってるのが裏目に出て、動作がボロボロ。
+特に、URLをPocketに保存出来ないのがつらたん。
+困っている人が他にもいるという程度しか情報無かったので、とりあえずEchofonでしのごう(　´･‿･｀)&lt;/p&gt;
+
+&lt;p&gt;iOS 8については、あとはクラッシュ率が高いとかですかね。
+NDAで細かいところは書けないけど、使用感も特に大きな変化無く(　´･‿･｀)&lt;/p&gt;
+
+&lt;p&gt;というわけで、ちょくちょく問題はありつつ、最新の環境楽しめているので、アップデートして良かった(　´･‿･｀)
+趣味みたいなもののあので、仮想環境とか検証機とかで試しても個人的にはあまり意味がなく、やはり普段マシンで楽しんでこそと思う(　´･‿･｀)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>RescueTimeを昨日から使い始めた</title>
+      <link>http://mono0926.com/blog/2014/05/29/rescuetime/</link>
+      <pubDate>Thu, 29 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2014/05/29/rescuetime/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.rescuetime.com&#34;&gt;RescueTime&lt;/a&gt;を昨日から使い始めたけど、素晴らしい。
+多少カスタマイズ出来るけど、ほぼ初期設定で、すごく良い感じにデスクワークの統計を取ってくれる。
+そんなのがあるとかは、&lt;a href=&#34;http://www.lifehacker.jp/2009/03/rescuetime.html&#34;&gt;『RescueTime』で、お仕事状況をすべてチェック（無料） : ライフハッカー［日本版］&lt;/a&gt;などで知りつつスルーしてたけど、&lt;a href=&#34;https://twitter.com/PocketHits&#34;&gt;PocketHits (PocketHits) on Twitter&lt;/a&gt;で流れてきた&lt;a href=&#34;http://www.businessinsider.com/productivity-hacks-from-startup-execs-2014-5?utm_source=pocket&amp;amp;utm_medium=twitter&amp;amp;utm_campaign=pockethits&#34;&gt;Productivity Hacks From Startup Execs - Business Insider&lt;/a&gt;を見て試してみたらはまった感じ。&lt;/p&gt;
+
+&lt;p&gt;学生時代にライフログの研究していたのもあって、こういう生活のデジタルデータを集めるのはすごく興味がありました。
+でも、例えばわりと最近流行りの腕に巻いて生活強度を計るようなデバイスとかGPSで移動経路を取得するのは、結局運動パターン的には平日ほぼ毎日変わり映えの無いものに帰着するし、たまに動くと別にデータを見せられるまでもなく自覚しているし、という感じでしっくり来なかった。&lt;/p&gt;
+
+&lt;p&gt;しかし、日々のデスクワークをデータで表示してくれるのは、けっこう変化あって面白いし、自分の行動へのフィードバックにもなると感じたり。&lt;/p&gt;
+
+&lt;p&gt;本日の活動はこんな感じ。
+フルでパソコンに向かっていると1時間当たりの分母は60分になるけど、移動中や退席中などデスクを離れていると分母自体が減ります。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/RescueTime.png&#34; alt=&#34;RescueTime&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;今朝は自宅で4時くらいから開発系作業とまったりニュース記事閲覧をして、会社に移動して仕事しつつ、ちょっとニュース見て息抜きしてまた仕事復帰して昼休みになり、昼休み明けはゆるめに仕事開始しつつ、夕方前後に再びピークに持っていって帰るみたいな感じで、かなりキレイにログが取れてる。&lt;/p&gt;
+
+&lt;p&gt;今日はXXXが多すぎたなとか、今日はよくがんばったとか、あるいは週や月の統計を見るとさらに色々自分のペースを客観的に見れそうで楽しみ。&lt;/p&gt;
+
+&lt;p&gt;ここまで良い感じに見せられると、productivityやsoftware developmentの数値を上げてハイスコア狙いたくなるなど、ゲーミフィケーション的な要素もあったり。&lt;/p&gt;
+
+&lt;p&gt;目標も自分で設定出来て、今日は、生産的な時間・開発に費やせた時間・気が散った時間、ともに目標値を超えて良かった。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/summary.png&#34; alt=&#34;summary&#34; /&gt;
+&lt;/p&gt;
+
+&lt;p&gt;というわけで、しばらく続けようと思う。
+続けること自体は何の負担も無くて素晴らしい。
+ただ、スコアを高く維持しようとしてると、捗る一方疲れてきそうな懸念もあり（´-ω-｀）&lt;/p&gt;
+
+&lt;p&gt;時間を気にしすぎると、ただいるだけで実際の成果を伴わないとかありがちだけど(残業代目当ての無駄な残業など)、これはその質自体も評価されるから、自然とそれも防げるような感じになっているように思う。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Mac Proの新モデル(通称ゴミ箱)を買うことにした</title>
+      <link>http://mono0926.com/blog/2013/10/27/mac-pro/</link>
+      <pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2013/10/27/mac-pro/</guid>
+      <description>
+
+&lt;p&gt;今持っているMac Proの2010年モデルももう丸3年以上経っていたり、2011年モデルのMac mini(サーバー用)も切り捨てて1本化したいなと思ってたところに、新Mac Proが発表されて、ちょっと考えてたらほしくなってしまった。&lt;/p&gt;
+
+&lt;h2 id=&#34;購買意欲がそそられた理由:bd86cf0b57a7ccb27fc58e68a5ddc1e2&#34;&gt;購買意欲がそそられた理由&lt;/h2&gt;
+
+&lt;p&gt;省電力というのが意外と一番大きな理由。
+Mac Proの消費電力が、アイドル時に43 Wということで、常時起動でも700円/月程度で、Mac miniの用途をMac Proに一本化できそう。&lt;/p&gt;
+
+&lt;p&gt;新Mac Proを常時起動にすると、Mac Pro1台で下記の用途全てまかなえる。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;普段利用(OSX)&lt;/li&gt;
+&lt;li&gt;OSXサーバー&lt;/li&gt;
+&lt;li&gt;Windows開発機&lt;/li&gt;
+&lt;li&gt;Windowsサーバー&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;また必要に応じてiPadやWindows RT機からリモートアクセスとかすると、家には1台 + 持ち歩き用に安価軽量なモバイル端末という、組み合わせができる。
+常時起動なので、ファイルや音楽・動画などメディア系リソースへのアクセスもいつでも出来るし。&lt;/p&gt;
+
+&lt;p&gt;今、SSD・フルHDのそこそこ良いWindowsノートも持っているけど、これも次の買い換えでSurface(非Pro)とかにしたりで持ち運び楽かつ買い換えコストも抑えられる。
+そもそも、iPad AirとかでWindows開発環境にアクセスすればいいので、Windowsのモバイル端末は不要になるかも(もちろんネット環境悪いところでは制約が出るけど)。&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;ネック:bd86cf0b57a7ccb27fc58e68a5ddc1e2&#34;&gt;ネック&lt;/h2&gt;
+
+&lt;p&gt;後述のお金の問題に加えて、以下の作業が面倒。&lt;/p&gt;
+
+&lt;h3 id=&#34;増設したhdd:bd86cf0b57a7ccb27fc58e68a5ddc1e2&#34;&gt;増設したHDD&lt;/h3&gt;
+
+&lt;p&gt;Mac Proに入れているSSD(256GB)x2・HDD(2TB)x2・HDD(3TB)x1を、新Mac Proだと外に出して繋がないと行けなくなる(SSDのうち1台はメインドライブなので不要だけど)。
+そのケース・ドライブを用意したりとか、その配線が微妙かなあとか、ちょっと悩みどころ。&lt;/p&gt;
+
+&lt;h3 id=&#34;旧ブログ-http-mono-comp-com:bd86cf0b57a7ccb27fc58e68a5ddc1e2&#34;&gt;&lt;a href=&#34;http://mono-comp.com/&#34;&gt;旧ブログ&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;今Mac miniで動かしている、IIS + WordPressで構築した&lt;a href=&#34;http://mono-comp.com/&#34;&gt;旧ブログ&lt;/a&gt; の移行が面倒。
+そもそももう更新していないので畳むか、変換スクリプト書いて、こちらのブログに移行してもよいかも。&lt;/p&gt;
+
+&lt;h3 id=&#34;その他windowsサーバー環境移行:bd86cf0b57a7ccb27fc58e68a5ddc1e2&#34;&gt;その他Windowsサーバー環境移行&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://apps.microsoft.com/windows/ja-jp/app/amazon-sales-rank/17848073-edbd-462d-abb8-2f77d2a2aadf&#34;&gt;Amazon Sales Rank&lt;/a&gt;のサーバー環境の移行は、1・2時間くらいで出来そう。&lt;/p&gt;
+
+&lt;p&gt;少し前まで、Windows系のソース管理は自前のTFSでやっていたけど、それもGitHubに移行したのであとは特に必要な作業無さそう。&lt;/p&gt;
+
+&lt;p&gt;そして、新Mac Proに乗り換えたら仮想マシン立てるつもりなので、その後の移行作業はとても楽になるはず。&lt;/p&gt;
+
+&lt;h2 id=&#34;移行コスト:bd86cf0b57a7ccb27fc58e68a5ddc1e2&#34;&gt;移行コスト&lt;/h2&gt;
+
+&lt;p&gt;計算してみたら、デスクトップ系のMac製品は中古相場もあまり高くなく、思っていたよりかかる模様。
+Mac Proはヤフオク見るともっと相場高いので、そちらもありかも。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;新Mac Pro：カスタマイズオーダーや、自分でカスタマイズしたり外付け用ドライブ含めて、〜40万円&lt;/li&gt;
+&lt;li&gt;Apple Mac Pro MC560J/A (Mid 2010)売却：〜5.8万円 (じゃんぱら価格)&lt;/li&gt;
+&lt;li&gt;Mac mini MC815J/A (Mid 2011)売却：〜3.1万円 (じゃんぱら価格)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;計〜30万円程度かかるので、けっこう高い（´-ω-｀）&lt;/p&gt;
+
+&lt;h2 id=&#34;結論:bd86cf0b57a7ccb27fc58e68a5ddc1e2&#34;&gt;結論&lt;/h2&gt;
+
+&lt;p&gt;「Mac Proの新モデル(通称ゴミ箱)を買うことにした」ものの、今はまだ買わない。
+会社のMacBook Pro Retina 15インチ(2012年モデル)と良くも悪くもほぼ性能一緒で快適なので、上記の1台で色々な用途をまかなえること以外は、あまり買い換える理由ないというのが大きい。
+OSも、ハードウェア性能を要求するどころか、逆に同じハードでも快適に動く方向にシフトしてきているし。&lt;/p&gt;
+
+&lt;p&gt;というわけで、キリよく5年くらい経った2015年夏くらいに買い換えたい。
+今のMac Proも20万円ちょっと + 色々増設で30万円近くしたけど、5で割るとそんなに高くないし、次のモデルも5年くらい十分持つだろうし、基本的に高価なモバイル端末買わずに済むようになるかなとか考えるとけっこうありかと。&lt;/p&gt;
+
+&lt;p&gt;あと、ヤフオクに強気価格(箱無し・メモリ16GB増設済みで15万円など)で出しておいて、運良く売れたら買い換えというのもやろうと思っていたり。
+さすがに手元にMacマシンが無くなるときついので、12月になってMac Proが発売されたらにしよう。&lt;/p&gt;
+
+&lt;p&gt;とりあえず3年ちょっと、何一つトラブル無く動いているのは素晴らしいし、外観もかっこいいので、またMac Pro買おうと思った次第。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>電子書籍自費出版系情報まとめ</title>
+      <link>http://mono0926.com/blog/2013/07/14/self-publish/</link>
+      <pubDate>Sun, 14 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2013/07/14/self-publish/</guid>
+      <description>
+
+&lt;p&gt;最近、電子書籍系のアプリ開発中で、色々調べています。
+ちょっと情報が頭に乗り切らなくなってきたので、整理。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;ツール:29d39068894f9575b7fcbc6ff21c444e&#34;&gt;ツール&lt;/h3&gt;
+
+&lt;h4 id=&#34;kindlegen-http-www-amazon-com-gp-feature-html-ie-utf8-docid-1000765211:29d39068894f9575b7fcbc6ff21c444e&#34;&gt;&lt;a href=&#34;http://www.amazon.com/gp/feature.html?ie=UTF8&amp;amp;docId=1000765211&#34;&gt;Kindlegen&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Amazon謹製の、HTMLやEPUB形式からMobi形式に変換するツール。
+成果物は、MacなどのKindleアプリでも見られるし、&lt;a href=&#34;http://www.amazon.com/gp/feature.html/ref=amb_link_359603222_5?ie=UTF8&amp;amp;docId=1000765261&amp;amp;pf_rd_m=ATVPDKIKX0DER&amp;amp;pf_rd_s=center-8&amp;amp;pf_rd_r=05Y1JB4SCG6HF48FKJFX&amp;amp;pf_rd_t=1401&amp;amp;pf_rd_p=1342416142&amp;amp;pf_rd_i=1000765211&#34;&gt;Kindle Previewer&lt;/a&gt;で、各プラットフォームでの動作チェック可能。&lt;/p&gt;
+
+&lt;p&gt;クラス構造を一旦HTMLに落とし込んで、Mobi形式にエクスポートするところまでは出来たけど、いくつか警告が出てたりしてまだ対処出来ていない状態。
+あと、ライセンス的にアプリのサーバー側で使ったりOKなのか気になる。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;リファレンスなど
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf&#34;&gt;Amazon Kindle Publishing Guidelines&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;和訳：&lt;a href=&#34;http://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines_JP.pdf&#34;&gt;Amazon Kindle パブリッシング・ガイドライン&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;pandoc-http-johnmacfarlane-net-pandoc:29d39068894f9575b7fcbc6ff21c444e&#34;&gt;&lt;a href=&#34;http://johnmacfarlane.net/pandoc/&#34;&gt;Pandoc&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;ドキュメント形式変換ツール。Markdown, HTMLなどからEPUB, PFDなどなどなど色々変換可能。
+Linux, Mac, Windowsなどに対応。&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;リファレンスなど
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jgm/pandoc&#34;&gt;ソース(GitHub)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://johnmacfarlane.net/pandoc/README.html&#34;&gt;Pandoc User’s Guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;使い方がたくさん書いてある。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;例えばMarkdown形式からEPUB形式にしたいときの、タイトルや筆者などのメタ情報とかこう書いたりするらしい。まだ色々調べ中。
+これを使って、クラス構造をEPUB形式でエクスポートできるところまでは出来たけど、細かい詰めがまだまだ（´-ω-｀）縦書きとか出来るのだろうか…。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;% title
+% author(s) (separated by semicolons)
+% date
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;参考
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/sky_y/items/80bcd0f353ef5b8980ee&#34;&gt;多様なフォーマットに対応！ドキュメント変換ツールPandocを知ろう&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;素晴らしい説明&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://d.hatena.ne.jp/tweeeety/20130607/1370591989&#34;&gt;githubとかにあるMarkdown形式のﾌｧｲﾙをhtmlとかEPUBとかに変換する&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;本:29d39068894f9575b7fcbc6ff21c444e&#34;&gt;本&lt;/h3&gt;
+
+&lt;h4 id=&#34;amazon和書:29d39068894f9575b7fcbc6ff21c444e&#34;&gt;Amazon和書&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.co.jp/gp/product/B009XKLTGW/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=B009XKLTGW&amp;amp;linkCode=as2&amp;amp;tag=mono0926-22&#34;&gt;Kindle自費出版ガイド 米アマゾンの先例から学ぶ電子書籍の作り方&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Google Documentを使った作成法指南&lt;/li&gt;
+&lt;li&gt;Webで最新版を無料公開中：&lt;a href=&#34;http://kdpguide.hatenablog.com/entry/2013/03/25/234230&#34;&gt;「Kindle 自費出版ガイド 米アマゾンの先例から学ぶ 電子書籍の作り方」(前半)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;amp;bc1=000000&amp;amp;IS2=1&amp;amp;bg1=FFFFFF&amp;amp;fc1=000000&amp;amp;lc1=0000FF&amp;amp;t=mono0926-22&amp;amp;o=9&amp;amp;p=8&amp;amp;l=as4&amp;amp;m=amazon&amp;amp;f=ifr&amp;amp;ref=ss_til&amp;amp;asins=B00AGZ1X3C&#34;&gt;アマゾンで売る！　一番簡単な電子書籍の作り方&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Google Documentは参考程度に、aozoraEpub3やSigilを利用&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.co.jp/gp/product/B00DNRE77O/ref=wms_ohs_product?ie=UTF8&amp;amp;psc=1&#34;&gt;一万冊売ってわかった！電子書籍を売る方法&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;世界一周紀行など書いている人の本。ライブドアブログのEPUBエクスポートを利用。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;うーん、作り方がバラバラ。わりとGoogle Documentで作るのが多数派な印象だけど。
+みんなGUIベースだから直接は利用できないけど、参考程度に読んでる。&lt;/p&gt;
+
+&lt;h4 id=&#34;amazon洋書:29d39068894f9575b7fcbc6ff21c444e&#34;&gt;Amazon洋書&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/Building-Your-Book-Kindle-ebook/dp/B007URVZJ6/ref=sr_1_1?s=digital-text&amp;amp;ie=UTF8&amp;amp;qid=1373770883&amp;amp;sr=1-1&amp;amp;keywords=kindlegen&#34;&gt;Building Your Book for Kindle&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;無料の公式本。Word系のアプリで作ってHTML出力して、アップロードするところまでで、かなりボリューム少ないけど、一読しておいた方が良い内容。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://rcm-na.amazon-adsystem.com/e/cm?lt1=_blank&amp;amp;bc1=000000&amp;amp;IS2=1&amp;amp;bg1=FFFFFF&amp;amp;fc1=000000&amp;amp;lc1=0000FF&amp;amp;t=mono0926-20&amp;amp;o=1&amp;amp;p=8&amp;amp;l=as4&amp;amp;m=amazon&amp;amp;f=ifr&amp;amp;ref=ss_til&amp;amp;asins=B009G2JMRK&#34;&gt;The eBook Design and Development Guide&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;まだほとんど読んでないけど、Kindlegen周りの使い方中心に詳しく書いてありそう。&lt;/li&gt;
+&lt;li&gt;Webで公開中：&lt;a href=&#34;http://bbebooksthailand.com/bb-epub-kindlegen-tutorial.html&#34;&gt;The eBook Design and Development Guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://rcm-na.amazon-adsystem.com/e/cm?lt1=_blank&amp;amp;bc1=000000&amp;amp;IS2=1&amp;amp;bg1=FFFFFF&amp;amp;fc1=000000&amp;amp;lc1=0000FF&amp;amp;t=mono0926-20&amp;amp;o=1&amp;amp;p=8&amp;amp;l=as4&amp;amp;m=amazon&amp;amp;f=ifr&amp;amp;ref=ss_til&amp;amp;asins=B006SBRA1M&#34;&gt;Kindle Formatting Formula: Convert Your Book into a Kindle eBook Format in Less than an Hour&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;中身見てない。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://rcm-na.amazon-adsystem.com/e/cm?lt1=_blank&amp;amp;bc1=000000&amp;amp;IS2=1&amp;amp;bg1=FFFFFF&amp;amp;fc1=000000&amp;amp;lc1=0000FF&amp;amp;t=mono0926-20&amp;amp;o=1&amp;amp;p=8&amp;amp;l=as4&amp;amp;m=amazon&amp;amp;f=ifr&amp;amp;ref=ss_til&amp;amp;asins=B004MDLKKK&#34;&gt;How to Publish and Sell Your Article on the Kindle: 12 Tips for Short Documents&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;中身見てない。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;json周りの開発用ライブラリ-ios-net:29d39068894f9575b7fcbc6ff21c444e&#34;&gt;JSON周りの開発用ライブラリ(iOS, .NET)&lt;/h3&gt;
+
+&lt;p&gt;iPhoneアプリで編集してサーバー(ASP.NET)で変換して返すみたいなことをしているけど、その場合やっぱりJSONでのやり取りかなということで、以下が手軽に出来るようにしたかった。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Objective-CのクラスからJSONへ変換&lt;/li&gt;
+&lt;li&gt;JSONからC#のクラスへマッピング&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;objective-cのクラスからjsonへ変換:29d39068894f9575b7fcbc6ff21c444e&#34;&gt;Objective-CのクラスからJSONへ変換&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/github/Mantle&#34;&gt;Mantle&lt;/a&gt;というライブラリでさくっとできた。もちろんCocoaPods対応なので導入も楽。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;JSON化したいクラスで&lt;code&gt;MTLModel&amp;lt;MTLJSONSerializing&amp;gt;&lt;/code&gt;を継承&lt;/li&gt;
+&lt;li&gt;オブジェクトのプロパティ名とJSONのプロパティ名のマッピング&lt;/li&gt;
+&lt;li&gt;配列構造のプロパティに対しては、その定義&lt;/li&gt;
+&lt;li&gt;上記の設定をしとけば定型的な数行でJSON化&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script src=&#34;https://gist.github.com/mono0926/5992878.js&#34;&gt;&lt;/script&gt;
+
+&lt;script src=&#34;https://gist.github.com/mono0926/5992916.js&#34;&gt;&lt;/script&gt;
+
+&lt;h4 id=&#34;jsonからc-のクラスへマッピング:29d39068894f9575b7fcbc6ff21c444e&#34;&gt;JSONからC#のクラスへマッピング&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://neue.cc/2011/12/10_357.html&#34;&gt;.NETの標準シリアライザ(XML/JSON)の使い分けまとめ&lt;/a&gt; にあるとおり、&lt;code&gt;DataContractJsonSerializer&lt;/code&gt;を使用。
+ちなみに上記サイトは僕の作ったこのブックマークレットで目に優しくなります。
+&lt;script src=&#34;https://gist.github.com/mono0926/5992885.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;基本的にはクラスに&lt;code&gt;DataContract&lt;/code&gt;属性、プロパティに&lt;code&gt;DataMember&lt;/code&gt;を付けるだけと楽ちん（´-ω-｀）
+強いていえば、大文字小文字マッピングの設定を忘れずに。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-csharp&#34;&gt;[DataMember(Name = &amp;quot;title&amp;quot;)]
+public string Title { get; set; }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;その他リンク:29d39068894f9575b7fcbc6ff21c444e&#34;&gt;その他リンク&lt;/h3&gt;
+
+&lt;p&gt;色々調べる中で目に入ったリンクなど。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://conv.denshochan.com/&#34;&gt;でんでんコンバーター&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Markdown形式のファイルをアップロードすると、ePubに変換してくれるサイト。正直、このAPIが叩けるようになると、変換周りを自前で作らなくてよくなって楽なのだけれど…（´-ω-｀）&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://ebook.itmedia.co.jp/ebook/articles/1107/25/news019.html&#34;&gt;無料で使えるEPUB 3作成ソフト／サービスガイド&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;FUSEe β&lt;/li&gt;
+&lt;li&gt;epubpack&lt;/li&gt;
+&lt;li&gt;MyBooks.jp&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://nakusou.zatunen.com/sigil.html&#34;&gt;GoogleのSigilパワー&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://code.google.com/p/sigil/&#34;&gt;sigil&lt;/a&gt;というアプリを使う。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://sigil.tsukaikata.info/&#34;&gt;Sigilの使い方&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://iphone.f-tools.net/E-book-Jisui/ePub-Free-Sakusei.html&#34;&gt;ePubをフリーで作成できるソフト&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;chanLP使った方式&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&#34;所感:29d39068894f9575b7fcbc6ff21c444e&#34;&gt;所感&lt;/h3&gt;
+
+&lt;p&gt;色々調べごとが多くて、開発自体がなかなか進まない（´-ω-｀）&lt;/p&gt;
+
+&lt;p&gt;あと、&lt;a href=&#34;https://www.dropbox.com/developers&#34;&gt;Dropbox API&lt;/a&gt; が今回良い感じに組み合わせられそうで、ちょっと検討中。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Google Readerが終わって…</title>
+      <link>http://mono0926.com/blog/2013/07/07/google-reader-feedly/</link>
+      <pubDate>Sun, 07 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://mono0926.com/blog/2013/07/07/google-reader-feedly/</guid>
+      <description>
+
+&lt;p&gt;一日に500-1000件消費するくらいのRSSリーダーヘビーユーザーでしたが、意外と困っていません。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Google Reader 終わる前
+
+&lt;ul&gt;
+&lt;li&gt;iPhone: Byline + たまにReeder&lt;/li&gt;
+&lt;li&gt;iPad: 同上&lt;/li&gt;
+&lt;li&gt;Mac: Reeder&lt;/li&gt;
+&lt;li&gt;Web: Google Reader (Windows環境の時など、たまーに見る程度)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Google Reader 終わった後
+
+&lt;ul&gt;
+&lt;li&gt;iPhone: Byline + たまにReeder&lt;/li&gt;
+&lt;li&gt;iPad: Byline (Reeder未対応)&lt;/li&gt;
+&lt;li&gt;Mac: FeedlyのWebアプリ (Reeder未対応)&lt;/li&gt;
+&lt;li&gt;Web: FeedlyのWebアプリ&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;と、あまり変わって無い上に、FeedlyのWebアプリの操作感(どこを押せば何が出来るかなど)にあまり慣れていないものの、J(次)・K(前)・V(新しいページで記事開く)のショートカットが一緒なことに気づいてからはほぼノンストレスです（´-ω-｀）&lt;/p&gt;
+
+&lt;p&gt;ただ、やっぱりMacでReederを使ってサクサク見ていた感じには劣るので、早くReeder for Macがアップデートされてほしいところです（´・ω・｀）&lt;/p&gt;
+
+&lt;p&gt;…とは別にこの機会に、SmartNewsで大衆ネタ・ゴシップ系などは拾い読みしているので、RSSリーダーは技術系ネタに絞って整理したいなとかも考えていたり。なかなか面倒ですが（´-ω-｀）&lt;/p&gt;
+
+&lt;h3 id=&#34;追記:305f2f0f4b009ad31238ab19e9085379&#34;&gt;追記&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://itunes.apple.com/jp/app/readkit/id588726889?l=en&amp;amp;mt=12&#34;&gt;ReadKit&lt;/a&gt; というアプリが素晴らしく、常用し始めましたヽ(・ω・｀）&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

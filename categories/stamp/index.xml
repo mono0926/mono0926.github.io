@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Stamp on mono-log</title>
-    <link>http://mono0926.com/categories/stamp/</link>
+    <link>http://localhost:1313/categories/stamp/</link>
     <description>Recent content in Stamp on mono-log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Thu, 17 Apr 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://mono0926.com/categories/stamp/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/stamp/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>ラヴさんスタンプをLINE Creators Marketに申請してみた</title>
-      <link>http://mono0926.com/blog/2014/04/17/love-stamp/</link>
+      <link>http://localhost:1313/blog/2014/04/17/love-stamp/</link>
       <pubDate>Thu, 17 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/04/17/love-stamp/</guid>
+      <guid>http://localhost:1313/blog/2014/04/17/love-stamp/</guid>
       <description>&lt;p&gt;2月下旬に発表され、本日受付を開始した&lt;a href=&#34;https://creator.line.me/&#34;&gt;LINE Creators Market&lt;/a&gt;に、自作スタンプを申請してみました。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/love_stamp.png&#34; alt=&#34;ラヴさんスタンプ&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/post/love_stamp.png&#34; alt=&#34;ラヴさんスタンプ&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;思えば、3月上旬くらいに、当時IllustratorやPhotoshopを勉強していたこともあり、その演習にちょうどいいのでは？と思いつき、挫折しそうと思いつつ着手したのが始まりでした。&lt;/p&gt;
