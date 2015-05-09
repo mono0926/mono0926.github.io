@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on mono-log</title>
-    <link>http://mono0926.com/post/</link>
+    <link>http://localhost:1313/post/</link>
     <description>Recent content in Posts on mono-log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 03 May 2015 22:30:05 +0900</lastBuildDate>
-    <atom:link href="http://mono0926.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Apple Watchを手に入れたのでiPhone 6 Plusとの付き合い方を見直してみる</title>
-      <link>http://mono0926.com/blog/2015/05/03/apple-watch-iphone-6plus/</link>
+      <link>http://localhost:1313/post/apple-watch-iphone-6plus/</link>
       <pubDate>Sun, 03 May 2015 22:30:05 +0900</pubDate>
       
-      <guid>http://mono0926.com/blog/2015/05/03/apple-watch-iphone-6plus/</guid>
+      <guid>http://localhost:1313/post/apple-watch-iphone-6plus/</guid>
       <description>
 
 &lt;p&gt;忌々しき2015/04/10 16時1分、予約戦線で失敗したため、Apple新製品4年ぶり2度目くらいに初日入手ならずな結果に終わってしまったApple Watchですが、一昨日ようやく手に入りました。
 まだ3日目ですが、トップクラスに使い倒した自信ありますʕ ·ᴥ·ʔ&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/apple-watch.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/post/apple-watch.jpg&#34; alt=&#34;&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;ちなみにモデルは、42mmスペースグレイアルミニウムケース・ブラックスポーツバンドと、結果的にダントツ一番人気となったやつです。&lt;/p&gt;
@@ -40,7 +40,7 @@
 
 &lt;p&gt;ちなみに、僕の取ったソリューションは「常に手に持つ」でした。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/left-hand.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/post/left-hand.jpg&#34; alt=&#34;&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;歩き移動中はもちろん、ランニング中も手に持つ運用で、かなり慣れてきたとはいえ何とかしたいなとずっと思っていました（´・ω・｀）&lt;/p&gt;
@@ -73,7 +73,7 @@
 &lt;p&gt;6 Plusが充分入ってケーブルとかちょっとしたものも追加で入るちょうど良いサイズ感です。
 分厚くなく、かといってペラペラな感じでも無いのも良いです。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/iphone-6plus-case.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/post/iphone-6plus-case.jpg&#34; alt=&#34;&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;以前、7インチタブレット(Nexes 7)で同様の試みをしたことがあったのですが、その時は腰に7インチ端末をぶら下げることはやはり無理があることを悟って撤退しました。&lt;/p&gt;
@@ -105,7 +105,7 @@
 &lt;p&gt;わりと形が見えちゃう程度にはパンパンですが、素材がよく伸びるので、出し入れも楽だし装着負荷も低いです(　´･‿･｀)
 ちょっと高めですが、とても良い買い物でした。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/west-case.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/post/west-case.jpg&#34; alt=&#34;&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://qiita.com/abe-perorist&#34;&gt;あのabe-perorist&lt;/a&gt;もフルマラソン用に購入して良い感じだったとのことです:&lt;br /&gt;
@@ -120,10 +120,10 @@
     
     <item>
       <title>SourceTreeでブランチ名をコミットメッセージの先頭に自動挿入</title>
-      <link>http://mono0926.com/blog/2014/10/31/sourcetree/</link>
+      <link>http://localhost:1313/post/sourcetree/</link>
       <pubDate>Fri, 31 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/10/31/sourcetree/</guid>
+      <guid>http://localhost:1313/post/sourcetree/</guid>
       <description>
 
 &lt;p&gt;Git便利ですね。今やこれ無しで開発は無理、というレベルです。&lt;/p&gt;
@@ -196,14 +196,14 @@ File.write(message_file, newmessage)
 
 &lt;h3 id=&#34;コミットメッセージを入れようとすると先頭に-branchname-が自動挿入:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;コミットメッセージを入れようとすると先頭に[branchname]が自動挿入&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/st1.png&#34; alt=&#34;&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/post/st1.png&#34; alt=&#34;&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;そのままその後にメッセージを入れてコミットします。&lt;/p&gt;
 
 &lt;h3 id=&#34;branchname-が置換されてブランチ名になってくれます:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;[branchname]が置換されてブランチ名になってくれます&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/st2.png&#34; alt=&#34;&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/post/st2.png&#34; alt=&#34;&#34; /&gt;
 &lt;/p&gt;
 
 &lt;h2 id=&#34;実際に使って見て:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;実際に使って見て&lt;/h2&gt;
@@ -223,10 +223,10 @@ File.write(message_file, newmessage)
     
     <item>
       <title>クックパッド第5回 開発コンテスト24に参戦した話</title>
-      <link>http://mono0926.com/blog/2014/10/20/cookpad/</link>
+      <link>http://localhost:1313/post/cookpad/</link>
       <pubDate>Mon, 20 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/10/20/cookpad/</guid>
+      <guid>http://localhost:1313/post/cookpad/</guid>
       <description>
 
 &lt;p&gt;先日も&lt;a href=&#34;http://isucon.net/&#34;&gt;ISUCONコンテスト予選&lt;/a&gt;に出たばかりですが、土日(10月18-19日)に
@@ -288,13 +288,13 @@ File.write(message_file, newmessage)
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/base6_1.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/post/base6_1.jpg&#34; alt=&#34;&#34; /&gt;
 
-&lt;img src=&#34;http://mono0926.com/images/post/base6_2.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://localhost:1313/images/post/base6_2.jpg&#34; alt=&#34;&#34; /&gt;
 
-&lt;img src=&#34;http://mono0926.com/images/post/base6_3.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://localhost:1313/images/post/base6_3.jpg&#34; alt=&#34;&#34; /&gt;
 
-&lt;img src=&#34;http://mono0926.com/images/post/base6_4.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;http://localhost:1313/images/post/base6_4.jpg&#34; alt=&#34;&#34; /&gt;
 &lt;/p&gt;
 
 &lt;h2 id=&#34;当日:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;当日&lt;/h2&gt;
@@ -352,7 +352,7 @@ Twitter認証周りはやぶさんにお願いして、僕は過去のやり取�
 
 &lt;p&gt;寝る間際に&lt;a href=&#34;https://twitter.com/kinenn_bi&#34;&gt;アニバちゃん&lt;/a&gt;で置き土産残したら、ひどいことになったようです(　´･‿･｀)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/misawa.png&#34; alt=&#34;&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/post/misawa.png&#34; alt=&#34;&#34; /&gt;
 &lt;/p&gt;
 
 &lt;h3 id=&#34;2日目朝:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;2日目朝&lt;/h3&gt;
@@ -393,17 +393,17 @@ error出たときのハンドリングとして統一的にやっていたので
     
     <item>
       <title>iOS 8/Swift エンジニア勉強会資料公開しました</title>
-      <link>http://mono0926.com/blog/2014/10/05/swift-lt/</link>
+      <link>http://localhost:1313/post/swift-lt/</link>
       <pubDate>Sun, 05 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/10/05/swift-lt/</guid>
+      <guid>http://localhost:1313/post/swift-lt/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://connpass.com/event/8629/&#34;&gt;iOS 8/Swift エンジニア勉強会&lt;/a&gt;が台風で延期になったので、手元にいつまでもあってもしょうもないので資料公開しました(　´･‿･｀)&lt;/p&gt;
 
 &lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/39879908&#34; width=&#34;427&#34; height=&#34;356&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;https://www.slideshare.net/mono0926/lt-yahoo&#34; title=&#34;Xcode 6で利用可能になった ベクター画像リソースを 深掘り&#34; target=&#34;_blank&#34;&gt;Xcode 6で利用可能になった ベクター画像リソースを 深掘り&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;http://www.slideshare.net/mono0926&#34; target=&#34;_blank&#34;&gt;Masayuki Ono&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
 
 &lt;p&gt;延期つらたん&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/tsuratan.png&#34; alt=&#34;&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/post/tsuratan.png&#34; alt=&#34;&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;↑LINEクリエイターズスタンプとして&lt;a href=&#34;http://bit.ly/love-stamp&#34;&gt;公開中です&lt;/a&gt;。&lt;/p&gt;
@@ -412,14 +412,14 @@ error出たときのハンドリングとして統一的にやっていたので
     
     <item>
       <title>ラヴ様LINEスタンプ6月売り上げ</title>
-      <link>http://mono0926.com/blog/2014/07/01/stamp/</link>
+      <link>http://localhost:1313/post/stamp/</link>
       <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/07/01/stamp/</guid>
+      <guid>http://localhost:1313/post/stamp/</guid>
       <description>&lt;p&gt;先月6月の4日昼から公開された愛犬ラヴ様のLINEスタンプですが、6月売り上げが確定しました。
 &lt;a href=&#34;http://bit.ly/love-stamp&#34;&gt;http://bit.ly/love-stamp&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/stamp3.png&#34; alt=&#34;stamp&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/post/stamp3.png&#34; alt=&#34;stamp&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;収益10,000円を超えた段階で、振り込み対象になるようですが、おかげさまで12,716円と無事に超えることが出来ました。
@@ -432,10 +432,10 @@ error出たときのハンドリングとして統一的にやっていたので
     
     <item>
       <title>iOS8で1Passwordが使えるようになった</title>
-      <link>http://mono0926.com/blog/2014/06/13/password/</link>
+      <link>http://localhost:1313/post/password/</link>
       <pubDate>Fri, 13 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/06/13/password/</guid>
+      <guid>http://localhost:1313/post/password/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://mono0926.com/blog/2014/06/04/yosemite/&#34;&gt;OSX 10.10(Yosemite)やiOS 8にアップデートして困ったこと - monoHub&lt;/a&gt;で書いた通り、iOS 8にして以来、&lt;a href=&#34;https://agilebits.com/onepassword/ios&#34;&gt;1Password&lt;/a&gt;が使えなくてつらたんでした（´-ω-｀）&lt;/p&gt;
 
 &lt;p&gt;しかし、ベータ版なら使えるという情報が。&lt;/p&gt;
@@ -447,7 +447,7 @@ error出たときのハンドリングとして統一的にやっていたので
 
 &lt;p&gt;それに従って、HockyApp ConfigのProfileをインストールした後、1Passwordのベータ版がインストール出来ました。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/1password.png&#34; alt=&#34;love&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/post/1password.png&#34; alt=&#34;love&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;つらくない(　´･‿･｀)&lt;/p&gt;
@@ -458,10 +458,10 @@ error出たときのハンドリングとして統一的にやっていたので
     
     <item>
       <title>iTunesの動画や音楽の再生スピードを変える方法</title>
-      <link>http://mono0926.com/blog/2014/06/11/quicktime/</link>
+      <link>http://localhost:1313/post/quicktime/</link>
       <pubDate>Wed, 11 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/06/11/quicktime/</guid>
+      <guid>http://localhost:1313/post/quicktime/</guid>
       <description>
 
 &lt;p&gt;iPhoneのPodcastアプリでは再生スピードをコントロール出来て便利なのに、iTunesではその機能が無いので、AppleScriptなど使って出来るようにしてみた。
@@ -521,10 +521,10 @@ AppleScriptを実行するWorkflowを新規作成するだけ。
     
     <item>
       <title>OSX 10.10(Yosemite)やiOS 8にアップデートして困ったこと</title>
-      <link>http://mono0926.com/blog/2014/06/04/yosemite/</link>
+      <link>http://localhost:1313/post/yosemite/</link>
       <pubDate>Wed, 04 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/06/04/yosemite/</guid>
+      <guid>http://localhost:1313/post/yosemite/</guid>
       <description>
 
 &lt;p&gt;例のごとく、何も考えずにメインマシンをOSX 10.10(Yosemite)・iOS 8にしてしまいましたが、いくつか細かいトラブルが。
@@ -629,10 +629,10 @@ NDAで細かいところは書けないけど、使用感も特に大きな変�
     
     <item>
       <title>SwiftでラヴさんWEBアルバムを開くだけのアプリ作った</title>
-      <link>http://mono0926.com/blog/2014/06/03/swift/</link>
+      <link>http://localhost:1313/post/swift/</link>
       <pubDate>Tue, 03 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/06/03/swift/</guid>
+      <guid>http://localhost:1313/post/swift/</guid>
       <description>&lt;p&gt;昼休みに、&lt;a href=&#34;https://developer.apple.com/swift/&#34;&gt;Swift&lt;/a&gt;で、&lt;a href=&#34;https://github.com/mono0926/SwiftSample&#34;&gt;ラヴさんWEBアルバムを開くだけのアプリ&lt;/a&gt;作った。&lt;/p&gt;
 
 &lt;p&gt;Swiftもそうだけど、Xcode 6も色々変わってて面白い(　´･‿･｀)&lt;/p&gt;
@@ -641,10 +641,10 @@ NDAで細かいところは書けないけど、使用感も特に大きな変�
     
     <item>
       <title>RescueTimeを昨日から使い始めた</title>
-      <link>http://mono0926.com/blog/2014/05/29/rescuetime/</link>
+      <link>http://localhost:1313/post/rescuetime/</link>
       <pubDate>Thu, 29 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/29/rescuetime/</guid>
+      <guid>http://localhost:1313/post/rescuetime/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.rescuetime.com&#34;&gt;RescueTime&lt;/a&gt;を昨日から使い始めたけど、素晴らしい。
 多少カスタマイズ出来るけど、ほぼ初期設定で、すごく良い感じにデスクワークの統計を取ってくれる。
 そんなのがあるとかは、&lt;a href=&#34;http://www.lifehacker.jp/2009/03/rescuetime.html&#34;&gt;『RescueTime』で、お仕事状況をすべてチェック（無料） : ライフハッカー［日本版］&lt;/a&gt;などで知りつつスルーしてたけど、&lt;a href=&#34;https://twitter.com/PocketHits&#34;&gt;PocketHits (PocketHits) on Twitter&lt;/a&gt;で流れてきた&lt;a href=&#34;http://www.businessinsider.com/productivity-hacks-from-startup-execs-2014-5?utm_source=pocket&amp;amp;utm_medium=twitter&amp;amp;utm_campaign=pockethits&#34;&gt;Productivity Hacks From Startup Execs - Business Insider&lt;/a&gt;を見て試してみたらはまった感じ。&lt;/p&gt;
@@ -657,7 +657,7 @@ NDAで細かいところは書けないけど、使用感も特に大きな変�
 &lt;p&gt;本日の活動はこんな感じ。
 フルでパソコンに向かっていると1時間当たりの分母は60分になるけど、移動中や退席中などデスクを離れていると分母自体が減ります。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/RescueTime.png&#34; alt=&#34;RescueTime&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/post/RescueTime.png&#34; alt=&#34;RescueTime&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;今朝は自宅で4時くらいから開発系作業とまったりニュース記事閲覧をして、会社に移動して仕事しつつ、ちょっとニュース見て息抜きしてまた仕事復帰して昼休みになり、昼休み明けはゆるめに仕事開始しつつ、夕方前後に再びピークに持っていって帰るみたいな感じで、かなりキレイにログが取れてる。&lt;/p&gt;
@@ -668,7 +668,7 @@ NDAで細かいところは書けないけど、使用感も特に大きな変�
 
 &lt;p&gt;目標も自分で設定出来て、今日は、生産的な時間・開発に費やせた時間・気が散った時間、ともに目標値を超えて良かった。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/summary.png&#34; alt=&#34;summary&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/post/summary.png&#34; alt=&#34;summary&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;というわけで、しばらく続けようと思う。
@@ -681,10 +681,10 @@ NDAで細かいところは書けないけど、使用感も特に大きな変�
     
     <item>
       <title>NodeJS &#43; Express &#43; Stylus &#43; Jade &#43; AngularJS &#43; Redisなどなどで、簡単なTODOアプリ</title>
-      <link>http://mono0926.com/blog/2014/05/26/todo/</link>
+      <link>http://localhost:1313/post/todo/</link>
       <pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/26/todo/</guid>
+      <guid>http://localhost:1313/post/todo/</guid>
       <description>&lt;p&gt;NodeJS + Express + Stylus + Jade + AngularJS + Redisなどなどで、&lt;a href=&#34;http://ice-me.herokuapp.com/todos&#34;&gt;簡単なTODOアプリ&lt;/a&gt;作った。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/gp/product/484433588X/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=484433588X&amp;amp;linkCode=as2&amp;amp;tag=mono0926-22&#34;&gt;TypeScriptリファレンス Ver.1.0対応&lt;/a&gt;のサンプルを参考に、アレンジした感じ(オリジナルはSQLiteなど使用)。&lt;/p&gt;
@@ -709,10 +709,10 @@ NDAで細かいところは書けないけど、使用感も特に大きな変�
     
     <item>
       <title>TypeScript・AngularJS・Jade・Stylusでサンプルコード</title>
-      <link>http://mono0926.com/blog/2014/05/14/angularjs/</link>
+      <link>http://localhost:1313/post/angularjs/</link>
       <pubDate>Wed, 14 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/14/angularjs/</guid>
+      <guid>http://localhost:1313/post/angularjs/</guid>
       <description>
 
 &lt;p&gt;最近Web系の勉強してて、Node.js・Express・Redis・Herokuなどサーバーサイド周り弄ってたけど、そろそろフロントエンドもという感じで色々やってみた。&lt;/p&gt;
@@ -759,10 +759,10 @@ NDAで細かいところは書けないけど、使用感も特に大きな変�
     
     <item>
       <title>golangの環境構築</title>
-      <link>http://mono0926.com/blog/2014/05/13/golang/</link>
+      <link>http://localhost:1313/post/golang/</link>
       <pubDate>Tue, 13 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/13/golang/</guid>
+      <guid>http://localhost:1313/post/golang/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/GoCon/GoCon/blob/master/2014spring.rst&#34;&gt;GoCon/2014spring.rst at master · GoCon/GoCon&lt;/a&gt;に備えて、とりあえずgolangのセットアップと、暇なときに&lt;a href=&#34;http://tour.golang.org/#1&#34;&gt;A Tour of Go&lt;/a&gt;をやっておこうかと(　´･‿･｀)&lt;/p&gt;
@@ -804,7 +804,7 @@ GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分�
 &lt;li&gt;Run Configurationsで、Build before runにチェックを付けてディレクトリをbinに設定したら、実行ファイルも生成されるようになった。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/go.png&#34; alt=&#34;go&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/post/go.png&#34; alt=&#34;go&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;ただ、多分IntelliJがGoのデバッグ実行に対応していない？(無反応)のがつらたん（´-ω-｀）
@@ -816,10 +816,10 @@ GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分�
     
     <item>
       <title>OSXの開発環境を整えた</title>
-      <link>http://mono0926.com/blog/2014/05/06/renew/</link>
+      <link>http://localhost:1313/post/renew/</link>
       <pubDate>Tue, 06 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/06/renew/</guid>
+      <guid>http://localhost:1313/post/renew/</guid>
       <description>
 
 &lt;p&gt;Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。
@@ -890,10 +890,10 @@ IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれ
     
     <item>
       <title>IRKitで遊び始めた〜とりあえずTerminalで操作〜</title>
-      <link>http://mono0926.com/blog/2014/05/05/irkit/</link>
+      <link>http://localhost:1313/post/irkit/</link>
       <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/05/irkit/</guid>
+      <guid>http://localhost:1313/post/irkit/</guid>
       <description>
 
 &lt;p&gt;冬場忙しかったりで既存アプリで部屋のリモコン登録する程度しかいじれてなかったけど、最近ようやく落ち着いてきたので、&lt;a href=&#34;http://www.amazon.co.jp/gp/product/B00H91KK26/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=B00H91KK26&amp;amp;linkCode=as2&amp;amp;tag=mono0926-22&#34;&gt;IRKit&lt;/a&gt;で遊んでみる(　´･‿･｀)&lt;/p&gt;
@@ -962,7 +962,7 @@ Content-Type: text/plain
 &lt;p&gt;ちなみに、うちではこんな風に部屋の真ん中あたりの壁に、両面テープ付けて配置してる。これでも、受信感度の悪い一部機器は反応しなかったりで悩み中。
 その機器は、添付のリモコンでもけっこう近くで方向もけっこう合わせないと反応しないので、IRKitのせいではないのだけれど。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/irkit.jpg&#34; alt=&#34;irkit&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/post/irkit.jpg&#34; alt=&#34;irkit&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;8,000円切る価格で完成度高くて、色々弄りやすいの素晴らしい(　´･‿･｀)&lt;/p&gt;

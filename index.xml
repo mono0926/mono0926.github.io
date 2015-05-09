@@ -11,10 +11,10 @@
     
     <item>
       <title>Apple Watchを手に入れたのでiPhone 6 Plusとの付き合い方を見直してみる</title>
-      <link>http://mono0926.com/blog/2015/05/03/apple-watch-iphone-6plus/</link>
+      <link>http://mono0926.com/gadget/apple-watch-iphone-6plus/</link>
       <pubDate>Sun, 03 May 2015 22:30:05 +0900</pubDate>
       
-      <guid>http://mono0926.com/blog/2015/05/03/apple-watch-iphone-6plus/</guid>
+      <guid>http://mono0926.com/gadget/apple-watch-iphone-6plus/</guid>
       <description>
 
 &lt;p&gt;忌々しき2015/04/10 16時1分、予約戦線で失敗したため、Apple新製品4年ぶり2度目くらいに初日入手ならずな結果に終わってしまったApple Watchですが、一昨日ようやく手に入りました。
@@ -129,10 +129,10 @@
     
     <item>
       <title>SourceTreeでブランチ名をコミットメッセージの先頭に自動挿入</title>
-      <link>http://mono0926.com/blog/2014/10/31/sourcetree/</link>
+      <link>http://mono0926.com/programming/sourcetree/</link>
       <pubDate>Fri, 31 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/10/31/sourcetree/</guid>
+      <guid>http://mono0926.com/programming/sourcetree/</guid>
       <description>
 
 &lt;p&gt;Git便利ですね。今やこれ無しで開発は無理、というレベルです。&lt;/p&gt;
@@ -232,10 +232,10 @@ File.write(message_file, newmessage)
     
     <item>
       <title>クックパッド第5回 開発コンテスト24に参戦した話</title>
-      <link>http://mono0926.com/blog/2014/10/20/cookpad/</link>
+      <link>http://mono0926.com/programming/cookpad/</link>
       <pubDate>Mon, 20 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/10/20/cookpad/</guid>
+      <guid>http://mono0926.com/programming/cookpad/</guid>
       <description>
 
 &lt;p&gt;先日も&lt;a href=&#34;http://isucon.net/&#34;&gt;ISUCONコンテスト予選&lt;/a&gt;に出たばかりですが、土日(10月18-19日)に
@@ -402,10 +402,10 @@ error出たときのハンドリングとして統一的にやっていたので
     
     <item>
       <title>iOS 8/Swift エンジニア勉強会資料公開しました</title>
-      <link>http://mono0926.com/blog/2014/10/05/swift-lt/</link>
+      <link>http://mono0926.com/programming/swift-lt/</link>
       <pubDate>Sun, 05 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/10/05/swift-lt/</guid>
+      <guid>http://mono0926.com/programming/swift-lt/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://connpass.com/event/8629/&#34;&gt;iOS 8/Swift エンジニア勉強会&lt;/a&gt;が台風で延期になったので、手元にいつまでもあってもしょうもないので資料公開しました(　´･‿･｀)&lt;/p&gt;
 
 &lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/39879908&#34; width=&#34;427&#34; height=&#34;356&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;https://www.slideshare.net/mono0926/lt-yahoo&#34; title=&#34;Xcode 6で利用可能になった ベクター画像リソースを 深掘り&#34; target=&#34;_blank&#34;&gt;Xcode 6で利用可能になった ベクター画像リソースを 深掘り&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;http://www.slideshare.net/mono0926&#34; target=&#34;_blank&#34;&gt;Masayuki Ono&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
@@ -421,10 +421,10 @@ error出たときのハンドリングとして統一的にやっていたので
     
     <item>
       <title>ラヴ様LINEスタンプ6月売り上げ</title>
-      <link>http://mono0926.com/blog/2014/07/01/stamp/</link>
+      <link>http://mono0926.com/line-stamp/stamp/</link>
       <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/07/01/stamp/</guid>
+      <guid>http://mono0926.com/line-stamp/stamp/</guid>
       <description>&lt;p&gt;先月6月の4日昼から公開された愛犬ラヴ様のLINEスタンプですが、6月売り上げが確定しました。
 &lt;a href=&#34;http://bit.ly/love-stamp&#34;&gt;http://bit.ly/love-stamp&lt;/a&gt;&lt;/p&gt;
 
@@ -441,10 +441,10 @@ error出たときのハンドリングとして統一的にやっていたので
     
     <item>
       <title>iOS8で1Passwordが使えるようになった</title>
-      <link>http://mono0926.com/blog/2014/06/13/password/</link>
+      <link>http://mono0926.com/lifehack/password/</link>
       <pubDate>Fri, 13 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/06/13/password/</guid>
+      <guid>http://mono0926.com/lifehack/password/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://mono0926.com/blog/2014/06/04/yosemite/&#34;&gt;OSX 10.10(Yosemite)やiOS 8にアップデートして困ったこと - monoHub&lt;/a&gt;で書いた通り、iOS 8にして以来、&lt;a href=&#34;https://agilebits.com/onepassword/ios&#34;&gt;1Password&lt;/a&gt;が使えなくてつらたんでした（´-ω-｀）&lt;/p&gt;
 
 &lt;p&gt;しかし、ベータ版なら使えるという情報が。&lt;/p&gt;
@@ -467,10 +467,10 @@ error出たときのハンドリングとして統一的にやっていたので
     
     <item>
       <title>iTunesの動画や音楽の再生スピードを変える方法</title>
-      <link>http://mono0926.com/blog/2014/06/11/quicktime/</link>
+      <link>http://mono0926.com/programming/quicktime/</link>
       <pubDate>Wed, 11 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/06/11/quicktime/</guid>
+      <guid>http://mono0926.com/programming/quicktime/</guid>
       <description>
 
 &lt;p&gt;iPhoneのPodcastアプリでは再生スピードをコントロール出来て便利なのに、iTunesではその機能が無いので、AppleScriptなど使って出来るようにしてみた。
@@ -530,10 +530,10 @@ AppleScriptを実行するWorkflowを新規作成するだけ。
     
     <item>
       <title>OSX 10.10(Yosemite)やiOS 8にアップデートして困ったこと</title>
-      <link>http://mono0926.com/blog/2014/06/04/yosemite/</link>
+      <link>http://mono0926.com/lifehack/yosemite/</link>
       <pubDate>Wed, 04 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/06/04/yosemite/</guid>
+      <guid>http://mono0926.com/lifehack/yosemite/</guid>
       <description>
 
 &lt;p&gt;例のごとく、何も考えずにメインマシンをOSX 10.10(Yosemite)・iOS 8にしてしまいましたが、いくつか細かいトラブルが。
@@ -638,10 +638,10 @@ NDAで細かいところは書けないけど、使用感も特に大きな変�
     
     <item>
       <title>SwiftでラヴさんWEBアルバムを開くだけのアプリ作った</title>
-      <link>http://mono0926.com/blog/2014/06/03/swift/</link>
+      <link>http://mono0926.com/programming/swift/</link>
       <pubDate>Tue, 03 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/06/03/swift/</guid>
+      <guid>http://mono0926.com/programming/swift/</guid>
       <description>&lt;p&gt;昼休みに、&lt;a href=&#34;https://developer.apple.com/swift/&#34;&gt;Swift&lt;/a&gt;で、&lt;a href=&#34;https://github.com/mono0926/SwiftSample&#34;&gt;ラヴさんWEBアルバムを開くだけのアプリ&lt;/a&gt;作った。&lt;/p&gt;
 
 &lt;p&gt;Swiftもそうだけど、Xcode 6も色々変わってて面白い(　´･‿･｀)&lt;/p&gt;
@@ -650,10 +650,10 @@ NDAで細かいところは書けないけど、使用感も特に大きな変�
     
     <item>
       <title>RescueTimeを昨日から使い始めた</title>
-      <link>http://mono0926.com/blog/2014/05/29/rescuetime/</link>
+      <link>http://mono0926.com/lifehack/rescuetime/</link>
       <pubDate>Thu, 29 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/29/rescuetime/</guid>
+      <guid>http://mono0926.com/lifehack/rescuetime/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.rescuetime.com&#34;&gt;RescueTime&lt;/a&gt;を昨日から使い始めたけど、素晴らしい。
 多少カスタマイズ出来るけど、ほぼ初期設定で、すごく良い感じにデスクワークの統計を取ってくれる。
 そんなのがあるとかは、&lt;a href=&#34;http://www.lifehacker.jp/2009/03/rescuetime.html&#34;&gt;『RescueTime』で、お仕事状況をすべてチェック（無料） : ライフハッカー［日本版］&lt;/a&gt;などで知りつつスルーしてたけど、&lt;a href=&#34;https://twitter.com/PocketHits&#34;&gt;PocketHits (PocketHits) on Twitter&lt;/a&gt;で流れてきた&lt;a href=&#34;http://www.businessinsider.com/productivity-hacks-from-startup-execs-2014-5?utm_source=pocket&amp;amp;utm_medium=twitter&amp;amp;utm_campaign=pockethits&#34;&gt;Productivity Hacks From Startup Execs - Business Insider&lt;/a&gt;を見て試してみたらはまった感じ。&lt;/p&gt;
@@ -690,10 +690,10 @@ NDAで細かいところは書けないけど、使用感も特に大きな変�
     
     <item>
       <title>NodeJS &#43; Express &#43; Stylus &#43; Jade &#43; AngularJS &#43; Redisなどなどで、簡単なTODOアプリ</title>
-      <link>http://mono0926.com/blog/2014/05/26/todo/</link>
+      <link>http://mono0926.com/programming/todo/</link>
       <pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/26/todo/</guid>
+      <guid>http://mono0926.com/programming/todo/</guid>
       <description>&lt;p&gt;NodeJS + Express + Stylus + Jade + AngularJS + Redisなどなどで、&lt;a href=&#34;http://ice-me.herokuapp.com/todos&#34;&gt;簡単なTODOアプリ&lt;/a&gt;作った。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/gp/product/484433588X/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=484433588X&amp;amp;linkCode=as2&amp;amp;tag=mono0926-22&#34;&gt;TypeScriptリファレンス Ver.1.0対応&lt;/a&gt;のサンプルを参考に、アレンジした感じ(オリジナルはSQLiteなど使用)。&lt;/p&gt;
@@ -718,10 +718,10 @@ NDAで細かいところは書けないけど、使用感も特に大きな変�
     
     <item>
       <title>TypeScript・AngularJS・Jade・Stylusでサンプルコード</title>
-      <link>http://mono0926.com/blog/2014/05/14/angularjs/</link>
+      <link>http://mono0926.com/programming/angularjs/</link>
       <pubDate>Wed, 14 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/14/angularjs/</guid>
+      <guid>http://mono0926.com/programming/angularjs/</guid>
       <description>
 
 &lt;p&gt;最近Web系の勉強してて、Node.js・Express・Redis・Herokuなどサーバーサイド周り弄ってたけど、そろそろフロントエンドもという感じで色々やってみた。&lt;/p&gt;
@@ -768,10 +768,10 @@ NDAで細かいところは書けないけど、使用感も特に大きな変�
     
     <item>
       <title>golangの環境構築</title>
-      <link>http://mono0926.com/blog/2014/05/13/golang/</link>
+      <link>http://mono0926.com/programming/golang/</link>
       <pubDate>Tue, 13 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/13/golang/</guid>
+      <guid>http://mono0926.com/programming/golang/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/GoCon/GoCon/blob/master/2014spring.rst&#34;&gt;GoCon/2014spring.rst at master · GoCon/GoCon&lt;/a&gt;に備えて、とりあえずgolangのセットアップと、暇なときに&lt;a href=&#34;http://tour.golang.org/#1&#34;&gt;A Tour of Go&lt;/a&gt;をやっておこうかと(　´･‿･｀)&lt;/p&gt;
@@ -825,10 +825,10 @@ GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分�
     
     <item>
       <title>OSXの開発環境を整えた</title>
-      <link>http://mono0926.com/blog/2014/05/06/renew/</link>
+      <link>http://mono0926.com/programming/renew/</link>
       <pubDate>Tue, 06 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/06/renew/</guid>
+      <guid>http://mono0926.com/programming/renew/</guid>
       <description>
 
 &lt;p&gt;Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。

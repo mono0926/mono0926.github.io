@@ -11,10 +11,10 @@
     
     <item>
       <title>NodeJS &#43; Express &#43; Stylus &#43; Jade &#43; AngularJS &#43; Redisなどなどで、簡単なTODOアプリ</title>
-      <link>http://mono0926.com/blog/2014/05/26/todo/</link>
+      <link>http://mono0926.com/programming/todo/</link>
       <pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/26/todo/</guid>
+      <guid>http://mono0926.com/programming/todo/</guid>
       <description>&lt;p&gt;NodeJS + Express + Stylus + Jade + AngularJS + Redisなどなどで、&lt;a href=&#34;http://ice-me.herokuapp.com/todos&#34;&gt;簡単なTODOアプリ&lt;/a&gt;作った。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/gp/product/484433588X/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=484433588X&amp;amp;linkCode=as2&amp;amp;tag=mono0926-22&#34;&gt;TypeScriptリファレンス Ver.1.0対応&lt;/a&gt;のサンプルを参考に、アレンジした感じ(オリジナルはSQLiteなど使用)。&lt;/p&gt;
@@ -39,10 +39,10 @@
     
     <item>
       <title>IRKitで遊び始めた〜とりあえずTerminalで操作〜</title>
-      <link>http://mono0926.com/blog/2014/05/05/irkit/</link>
+      <link>http://mono0926.com/programming/irkit/</link>
       <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/05/irkit/</guid>
+      <guid>http://mono0926.com/programming/irkit/</guid>
       <description>
 
 &lt;p&gt;冬場忙しかったりで既存アプリで部屋のリモコン登録する程度しかいじれてなかったけど、最近ようやく落ち着いてきたので、&lt;a href=&#34;http://www.amazon.co.jp/gp/product/B00H91KK26/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=B00H91KK26&amp;amp;linkCode=as2&amp;amp;tag=mono0926-22&#34;&gt;IRKit&lt;/a&gt;で遊んでみる(　´･‿･｀)&lt;/p&gt;
@@ -128,10 +128,10 @@ Content-Type: text/plain
     
     <item>
       <title>Node.jsのIRKitライブラリあったから試してみた</title>
-      <link>http://mono0926.com/blog/2014/05/05/irkit-nodejs/</link>
+      <link>http://mono0926.com/programming/irkit-nodejs/</link>
       <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/05/irkit-nodejs/</guid>
+      <guid>http://mono0926.com/programming/irkit-nodejs/</guid>
       <description>
 
 &lt;p&gt;せっかく&lt;a href=&#34;http://www.amazon.com/gp/product/B00HSO6YD8/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=B00HSO6YD8&amp;amp;linkCode=as2&amp;amp;tag=mono0926-20&amp;amp;linkId=SIVQ46LXCW3PK3IO&#34;&gt;Node.js the Right Way: Practical, Server-Side JavaScript That Scales [Kindle Edition]&lt;/a&gt;でNode.jsを勉強したので、IRKitをNode.jsの勉強題材に出来ないかなと思って、とりあえずNode.jsのクライアントライブラリ無いかな？と探したらあったので、叩いてみた。&lt;/p&gt;

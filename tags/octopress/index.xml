@@ -11,10 +11,10 @@
     
     <item>
       <title>GitHub &#43; Octopressでブログ作ってみた</title>
-      <link>http://mono0926.com/blog/2013/07/07/github_octopress_blog/</link>
+      <link>http://mono0926.com/blog/github_octopress_blog/</link>
       <pubDate>Sun, 07 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2013/07/07/github_octopress_blog/</guid>
+      <guid>http://mono0926.com/blog/github_octopress_blog/</guid>
       <description>
 
 &lt;p&gt;Markdownで書けてなかなか良い感じかもしれない（´-ω-｀）&lt;/p&gt;
@@ -75,10 +75,10 @@ $ rake generate
     
     <item>
       <title>Octopressへの投稿やdeployをAlfredのWorkflowで</title>
-      <link>http://mono0926.com/blog/2013/07/07/octopress-alfred/</link>
+      <link>http://mono0926.com/blog/octopress-alfred/</link>
       <pubDate>Sun, 07 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2013/07/07/octopress-alfred/</guid>
+      <guid>http://mono0926.com/blog/octopress-alfred/</guid>
       <description>
 
 &lt;p&gt;今日初めてOctopressを触ったら、けっこう気に入ったので、さらに気軽に書ける環境を整えれば捗るのではと思い、AlfredのWorkflowを作ってみました。&lt;/p&gt;

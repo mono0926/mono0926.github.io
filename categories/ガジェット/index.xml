@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ガジェット on mono-log</title>
-    <link>http://mono0926.com/categories/%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88/</link>
+    <link>http://localhost:1313/categories/%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88/</link>
     <description>Recent content in ガジェット on mono-log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 03 May 2015 22:30:05 +0900</lastBuildDate>
-    <atom:link href="http://mono0926.com/categories/%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/%E3%82%AC%E3%82%B8%E3%82%A7%E3%83%83%E3%83%88/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Apple Watchを手に入れたのでiPhone 6 Plusとの付き合い方を見直してみる</title>
-      <link>http://mono0926.com/blog/2015/05/03/apple-watch-iphone-6plus/</link>
+      <link>http://localhost:1313/post/apple-watch-iphone-6plus/</link>
       <pubDate>Sun, 03 May 2015 22:30:05 +0900</pubDate>
       
-      <guid>http://mono0926.com/blog/2015/05/03/apple-watch-iphone-6plus/</guid>
+      <guid>http://localhost:1313/post/apple-watch-iphone-6plus/</guid>
       <description>
 
 &lt;p&gt;忌々しき2015/04/10 16時1分、予約戦線で失敗したため、Apple新製品4年ぶり2度目くらいに初日入手ならずな結果に終わってしまったApple Watchですが、一昨日ようやく手に入りました。
 まだ3日目ですが、トップクラスに使い倒した自信ありますʕ ·ᴥ·ʔ&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/apple-watch.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/post/apple-watch.jpg&#34; alt=&#34;&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;ちなみにモデルは、42mmスペースグレイアルミニウムケース・ブラックスポーツバンドと、結果的にダントツ一番人気となったやつです。&lt;/p&gt;
@@ -40,7 +40,7 @@
 
 &lt;p&gt;ちなみに、僕の取ったソリューションは「常に手に持つ」でした。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/left-hand.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/post/left-hand.jpg&#34; alt=&#34;&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;歩き移動中はもちろん、ランニング中も手に持つ運用で、かなり慣れてきたとはいえ何とかしたいなとずっと思っていました（´・ω・｀）&lt;/p&gt;
@@ -73,7 +73,7 @@
 &lt;p&gt;6 Plusが充分入ってケーブルとかちょっとしたものも追加で入るちょうど良いサイズ感です。
 分厚くなく、かといってペラペラな感じでも無いのも良いです。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/iphone-6plus-case.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/post/iphone-6plus-case.jpg&#34; alt=&#34;&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;以前、7インチタブレット(Nexes 7)で同様の試みをしたことがあったのですが、その時は腰に7インチ端末をぶら下げることはやはり無理があることを悟って撤退しました。&lt;/p&gt;
@@ -105,7 +105,7 @@
 &lt;p&gt;わりと形が見えちゃう程度にはパンパンですが、素材がよく伸びるので、出し入れも楽だし装着負荷も低いです(　´･‿･｀)
 ちょっと高めですが、とても良い買い物でした。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/west-case.jpg&#34; alt=&#34;&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/post/west-case.jpg&#34; alt=&#34;&#34; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://qiita.com/abe-perorist&#34;&gt;あのabe-perorist&lt;/a&gt;もフルマラソン用に購入して良い感じだったとのことです:&lt;br /&gt;

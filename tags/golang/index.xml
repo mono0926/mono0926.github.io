@@ -11,10 +11,10 @@
     
     <item>
       <title>クックパッド第5回 開発コンテスト24に参戦した話</title>
-      <link>http://mono0926.com/blog/2014/10/20/cookpad/</link>
+      <link>http://mono0926.com/programming/cookpad/</link>
       <pubDate>Mon, 20 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/10/20/cookpad/</guid>
+      <guid>http://mono0926.com/programming/cookpad/</guid>
       <description>
 
 &lt;p&gt;先日も&lt;a href=&#34;http://isucon.net/&#34;&gt;ISUCONコンテスト予選&lt;/a&gt;に出たばかりですが、土日(10月18-19日)に
@@ -181,10 +181,10 @@ error出たときのハンドリングとして統一的にやっていたので
     
     <item>
       <title>golangの環境構築</title>
-      <link>http://mono0926.com/blog/2014/05/13/golang/</link>
+      <link>http://mono0926.com/programming/golang/</link>
       <pubDate>Tue, 13 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/13/golang/</guid>
+      <guid>http://mono0926.com/programming/golang/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/GoCon/GoCon/blob/master/2014spring.rst&#34;&gt;GoCon/2014spring.rst at master · GoCon/GoCon&lt;/a&gt;に備えて、とりあえずgolangのセットアップと、暇なときに&lt;a href=&#34;http://tour.golang.org/#1&#34;&gt;A Tour of Go&lt;/a&gt;をやっておこうかと(　´･‿･｀)&lt;/p&gt;

@@ -11,10 +11,10 @@
     
     <item>
       <title>SourceTreeでブランチ名をコミットメッセージの先頭に自動挿入</title>
-      <link>http://mono0926.com/blog/2014/10/31/sourcetree/</link>
+      <link>http://mono0926.com/programming/sourcetree/</link>
       <pubDate>Fri, 31 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/10/31/sourcetree/</guid>
+      <guid>http://mono0926.com/programming/sourcetree/</guid>
       <description>
 
 &lt;p&gt;Git便利ですね。今やこれ無しで開発は無理、というレベルです。&lt;/p&gt;

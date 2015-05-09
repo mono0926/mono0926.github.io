@@ -11,10 +11,10 @@
     
     <item>
       <title>iOSからDropbox Sync APIを使ってみる</title>
-      <link>http://mono0926.com/blog/2013/07/19/dropbox/</link>
+      <link>http://mono0926.com/programming/dropbox/</link>
       <pubDate>Fri, 19 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2013/07/19/dropbox/</guid>
+      <guid>http://mono0926.com/programming/dropbox/</guid>
       <description>
 
 &lt;h3 id=&#34;dropbox-sync-apiとは:5a095f130cba82d011abb7c589e20dcb&#34;&gt;Dropbox Sync APIとは&lt;/h3&gt;

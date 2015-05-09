@@ -11,10 +11,10 @@
     
     <item>
       <title>OSXの開発環境を整えた</title>
-      <link>http://mono0926.com/blog/2014/05/06/renew/</link>
+      <link>http://mono0926.com/programming/renew/</link>
       <pubDate>Tue, 06 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2014/05/06/renew/</guid>
+      <guid>http://mono0926.com/programming/renew/</guid>
       <description>
 
 &lt;p&gt;Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。
@@ -85,10 +85,10 @@ IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれ
     
     <item>
       <title>iOS7対応記事のまとめ</title>
-      <link>http://mono0926.com/blog/2013/09/21/ios7/</link>
+      <link>http://mono0926.com/programming/ios7/</link>
       <pubDate>Sat, 21 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/blog/2013/09/21/ios7/</guid>
+      <guid>http://mono0926.com/programming/ios7/</guid>
       <description>&lt;p&gt;iOS7関連のNDA解禁ということで、色々記事が増えてきたので、メモ。
 少しずつ追記していきながら、落ち着いたところで、集約したような記事書くかも。&lt;/p&gt;
 
