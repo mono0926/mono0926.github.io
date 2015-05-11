@@ -114,7 +114,7 @@ Content-Type: text/plain
 
 &lt;p&gt;まずは、clienttokenを取得。&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;Pro:~ mono$ curl -i http://192.168.0.4/keys -d &#39;&#39;
+&lt;pre&gt;&lt;code&gt;Pro:~ mono$ curl -i &amp;quot;http://192.168.0.4/keys&amp;quot; -d &#39;&#39;
 HTTP/1.0 200 OK
 Access-Control-Allow-Origin: *
 Server: IRKit/1.3.5.0.gce6ac15
