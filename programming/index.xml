@@ -87,15 +87,13 @@ File.write(message_file, newmessage)
 
 &lt;h3 id=&#34;コミットメッセージを入れようとすると先頭に-branchname-が自動挿入:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;コミットメッセージを入れようとすると先頭に[branchname]が自動挿入&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/st1.png&#34; alt=&#34;&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/st1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;そのままその後にメッセージを入れてコミットします。&lt;/p&gt;
 
 &lt;h3 id=&#34;branchname-が置換されてブランチ名になってくれます:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;[branchname]が置換されてブランチ名になってくれます&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/st2.png&#34; alt=&#34;&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/st2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;実際に使って見て:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;実際に使って見て&lt;/h2&gt;
 
@@ -180,13 +178,9 @@ File.write(message_file, newmessage)
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/base6_1.jpg&#34; alt=&#34;&#34; /&gt;
-
 &lt;img src=&#34;http://mono0926.com/images/post/base6_2.jpg&#34; alt=&#34;&#34; /&gt;
-
 &lt;img src=&#34;http://mono0926.com/images/post/base6_3.jpg&#34; alt=&#34;&#34; /&gt;
-
-&lt;img src=&#34;http://mono0926.com/images/post/base6_4.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;/p&gt;
+&lt;img src=&#34;http://mono0926.com/images/post/base6_4.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;当日:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;当日&lt;/h2&gt;
 
@@ -243,8 +237,7 @@ Twitter認証周りはやぶさんにお願いして、僕は過去のやり取�
 
 &lt;p&gt;寝る間際に&lt;a href=&#34;https://twitter.com/kinenn_bi&#34;&gt;アニバちゃん&lt;/a&gt;で置き土産残したら、ひどいことになったようです(　´･‿･｀)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/misawa.png&#34; alt=&#34;&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/misawa.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;2日目朝:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;2日目朝&lt;/h3&gt;
 
@@ -294,8 +287,7 @@ error出たときのハンドリングとして統一的にやっていたので
 
 &lt;p&gt;延期つらたん&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/tsuratan.png&#34; alt=&#34;&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/tsuratan.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;↑LINEクリエイターズスタンプとして&lt;a href=&#34;http://bit.ly/love-stamp&#34;&gt;公開中です&lt;/a&gt;。&lt;/p&gt;
 </description>
@@ -501,8 +493,7 @@ GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分�
 &lt;li&gt;Run Configurationsで、Build before runにチェックを付けてディレクトリをbinに設定したら、実行ファイルも生成されるようになった。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/go.png&#34; alt=&#34;go&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/go.png&#34; alt=&#34;go&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;ただ、多分IntelliJがGoのデバッグ実行に対応していない？(無反応)のがつらたん（´-ω-｀）
 &lt;a href=&#34;https://github.com/go-lang-plugin-org/go-lang-idea-plugin/issues/25&#34;&gt;Support for debugging · Issue #25 · go-lang-plugin-org/go-lang-idea-plugin&lt;/a&gt;を見ると、GAEプロジェクトのみ対応？？よく分からない（´-ω-｀）&lt;/p&gt;
@@ -659,8 +650,7 @@ Content-Type: text/plain
 &lt;p&gt;ちなみに、うちではこんな風に部屋の真ん中あたりの壁に、両面テープ付けて配置してる。これでも、受信感度の悪い一部機器は反応しなかったりで悩み中。
 その機器は、添付のリモコンでもけっこう近くで方向もけっこう合わせないと反応しないので、IRKitのせいではないのだけれど。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/irkit.jpg&#34; alt=&#34;irkit&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/irkit.jpg&#34; alt=&#34;irkit&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;8,000円切る価格で完成度高くて、色々弄りやすいの素晴らしい(　´･‿･｀)&lt;/p&gt;
 
@@ -943,8 +933,7 @@ brew install haskell-platform # これがなんだか理解していない
 
 &lt;p&gt;ginger というキーワードに続けて英文を打つと、正してくれる。(この場合、冠詞aの抜けが正される。)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/ginger1.png&#34; alt=&#34;ginger&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/ginger1.png&#34; alt=&#34;ginger&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;改善候補一覧:6982ba537ea9b38026c6dcf8fa9c1024&#34;&gt;改善候補一覧&lt;/h4&gt;
 
@@ -953,8 +942,7 @@ brew install haskell-platform # これがなんだか理解していない
 &lt;p&gt;rephraseというキーワードに続けて適当な英文を打つと、より自然な言い回し候補を出してくれる。
 &amp;ldquo;Thank you for your reply&amp;rdquo;は、メールの返信とかでよく使うけど、ワンパターン化を避けたい時とかに使えそう。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/ginger2.png&#34; alt=&#34;ginger&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/ginger2.png&#34; alt=&#34;ginger&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;ともに、選択状態でエンターを押すと、クリップボードにコピーされて、フォーカスの当たっているアプリにペーストされるので、適当にメールとかエディタとか使いながら自然と正しそうな英文が打てるようになるはず。&lt;/p&gt;
 

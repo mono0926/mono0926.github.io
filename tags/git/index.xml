@@ -87,15 +87,13 @@ File.write(message_file, newmessage)
 
 &lt;h3 id=&#34;コミットメッセージを入れようとすると先頭に-branchname-が自動挿入:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;コミットメッセージを入れようとすると先頭に[branchname]が自動挿入&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/st1.png&#34; alt=&#34;&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/st1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;そのままその後にメッセージを入れてコミットします。&lt;/p&gt;
 
 &lt;h3 id=&#34;branchname-が置換されてブランチ名になってくれます:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;[branchname]が置換されてブランチ名になってくれます&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/st2.png&#34; alt=&#34;&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/st2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;実際に使って見て:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;実際に使って見て&lt;/h2&gt;
 

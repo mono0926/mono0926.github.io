@@ -144,8 +144,7 @@ rake preview
 &lt;p&gt;とりあえず、これでいつでもランチャー起動して&lt;code&gt;post titleなど&lt;/code&gt;と入力すると、記事が生成されて開かれて、書き終わったら&lt;code&gt;preview&lt;/code&gt;で確認して、&lt;code&gt;deploy&lt;/code&gt;実行すればサイトへの反映とレポジトリへのPushが行われる便利な環境が出来ました。
 (Alfredのテーマもかっこよくして遊んでました。)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/post.png&#34; alt=&#34;post workflow&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/post.png&#34; alt=&#34;post workflow&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;octopress気に入ったけど:641b1723ac00cebbf1ffb348bd5d5d56&#34;&gt;Octopress気に入ったけど…&lt;/h4&gt;
 

@@ -20,8 +20,7 @@
 &lt;p&gt;忌々しき2015/04/10 16時1分、予約戦線で失敗したため、Apple新製品4年ぶり2度目くらいに初日入手ならずな結果に終わってしまったApple Watchですが、一昨日ようやく手に入りました。
 まだ3日目ですが、トップクラスに使い倒した自信ありますʕ ·ᴥ·ʔ&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/apple-watch.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/apple-watch.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;ちなみにモデルは、42mmスペースグレイアルミニウムケース・ブラックスポーツバンドと、結果的にダントツ一番人気となったやつです。&lt;/p&gt;
 
@@ -40,8 +39,7 @@
 
 &lt;p&gt;ちなみに、僕の取ったソリューションは「常に手に持つ」でした。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/left-hand.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/left-hand.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;歩き移動中はもちろん、ランニング中も手に持つ運用で、かなり慣れてきたとはいえ何とかしたいなとずっと思っていました（´・ω・｀）&lt;/p&gt;
 
@@ -73,8 +71,7 @@
 &lt;p&gt;6 Plusが充分入ってケーブルとかちょっとしたものも追加で入るちょうど良いサイズ感です。
 分厚くなく、かといってペラペラな感じでも無いのも良いです。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/iphone-6plus-case.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/iphone-6plus-case.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;以前、7インチタブレット(Nexes 7)で同様の試みをしたことがあったのですが、その時は腰に7インチ端末をぶら下げることはやはり無理があることを悟って撤退しました。&lt;/p&gt;
 
@@ -105,8 +102,7 @@
 &lt;p&gt;わりと形が見えちゃう程度にはパンパンですが、素材がよく伸びるので、出し入れも楽だし装着負荷も低いです(　´･‿･｀)
 ちょっと高めですが、とても良い買い物でした。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/west-case.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/west-case.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://qiita.com/abe-perorist&#34;&gt;あのabe-perorist&lt;/a&gt;もフルマラソン用に購入して良い感じだったとのことです:&lt;br /&gt;
 &lt;a href=&#34;http://ookami.tokyo/blog/archives/986&#34;&gt;めっちゃ余裕だとドヤっていた僕が、人生で初めてフルマラソンに参加してきた | わおーん&lt;/a&gt;&lt;/p&gt;
@@ -124,7 +120,57 @@
       <pubDate>Fri, 01 May 2015 09:10:21 +0900</pubDate>
       
       <guid>http://mono0926.com/page/about/</guid>
-      <description></description>
+      <description>
+
+&lt;p&gt;ソフトウェアエンジニアで、今はメインはiOSアプリ開発(Swift)です。
+その前はWindows系開発メインでやっていて、今でもC#などは好きでたまにサーバーサイドなど書いたりしてます。&lt;/p&gt;
+
+&lt;h1 id=&#34;各種リンク:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;各種リンク&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/mono0926&#34;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://twitter.com/_mono&#34;&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://qiita.com/mono0926&#34;&gt;Qiita&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2015年6月くらいからたくさん記事書き始めました&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mono0926&#34;&gt;GitHub&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;プライベートレポジトリ含めるとほぼ毎日コミットしてます&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;開発したアプリ-サービス:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;開発したアプリ・サービス&lt;/h1&gt;
+
+&lt;h2 id=&#34;join-us-http-joinus30-com:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;&lt;a href=&#34;http://joinus30.com/&#34;&gt;JOIN US&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;チーフエンジニアとして、iOS版アプリ + 開発全般やってます。
+最近は、統計・機械学習あたりにも手を出そうかと(　´･‿･｀)&lt;/p&gt;
+
+&lt;h2 id=&#34;player-http-www-playerapp-tokyo:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;&lt;a href=&#34;http://www.playerapp.tokyo/&#34;&gt;Player!&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;2015年にAppStoreで、ベスト新着アプリ・iOS 9オススメアプリ・2015年ベストアプリに選ばれたアプリのiOS版を作り上げました。
+メイン開発からは退きましたが、今でも週末にコミットしています。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/about/2015_app_store_feature.jpeg&#34; alt=&#34;2015 App Store Feature&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;scene-http-scn-jp:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;&lt;a href=&#34;http://scn.jp/&#34;&gt;Scene&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;世界100万ユーザーの写真整理・共有アプリのiOS版作っていました。
+この頃までObjective-Cがっつり書いてましたが、それ以降はSwiftメインです。&lt;/p&gt;
+
+&lt;h1 id=&#34;その他:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;その他&lt;/h1&gt;
+
+&lt;h2 id=&#34;lineクリエイターズスタンプ:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;LINEクリエイターズスタンプ&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://store.line.me/stickershop/product/1000854&#34;&gt;ラヴさんスタンプ&lt;/a&gt;をLINEクリエイターズスタンプ受付初日に申請して、1,000個くらい売れました。&lt;/p&gt;
+
+&lt;h2 id=&#34;モノサー-https-www-facebook-com-groups-229270203845340:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;&lt;a href=&#34;https://www.facebook.com/groups/229270203845340/&#34;&gt;モノサー&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;テニスサークルぽいの作って、神奈川〜東京でテニスしてます。&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -205,15 +251,13 @@ File.write(message_file, newmessage)
 
 &lt;h3 id=&#34;コミットメッセージを入れようとすると先頭に-branchname-が自動挿入:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;コミットメッセージを入れようとすると先頭に[branchname]が自動挿入&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/st1.png&#34; alt=&#34;&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/st1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;そのままその後にメッセージを入れてコミットします。&lt;/p&gt;
 
 &lt;h3 id=&#34;branchname-が置換されてブランチ名になってくれます:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;[branchname]が置換されてブランチ名になってくれます&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/st2.png&#34; alt=&#34;&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/st2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;実際に使って見て:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;実際に使って見て&lt;/h2&gt;
 
@@ -298,13 +342,9 @@ File.write(message_file, newmessage)
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/base6_1.jpg&#34; alt=&#34;&#34; /&gt;
-
 &lt;img src=&#34;http://mono0926.com/images/post/base6_2.jpg&#34; alt=&#34;&#34; /&gt;
-
 &lt;img src=&#34;http://mono0926.com/images/post/base6_3.jpg&#34; alt=&#34;&#34; /&gt;
-
-&lt;img src=&#34;http://mono0926.com/images/post/base6_4.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;/p&gt;
+&lt;img src=&#34;http://mono0926.com/images/post/base6_4.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;当日:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;当日&lt;/h2&gt;
 
@@ -361,8 +401,7 @@ Twitter認証周りはやぶさんにお願いして、僕は過去のやり取�
 
 &lt;p&gt;寝る間際に&lt;a href=&#34;https://twitter.com/kinenn_bi&#34;&gt;アニバちゃん&lt;/a&gt;で置き土産残したら、ひどいことになったようです(　´･‿･｀)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/misawa.png&#34; alt=&#34;&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/misawa.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;2日目朝:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;2日目朝&lt;/h3&gt;
 
@@ -412,8 +451,7 @@ error出たときのハンドリングとして統一的にやっていたので
 
 &lt;p&gt;延期つらたん&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/tsuratan.png&#34; alt=&#34;&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/tsuratan.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;↑LINEクリエイターズスタンプとして&lt;a href=&#34;http://bit.ly/love-stamp&#34;&gt;公開中です&lt;/a&gt;。&lt;/p&gt;
 </description>
@@ -428,8 +466,7 @@ error出たときのハンドリングとして統一的にやっていたので
       <description>&lt;p&gt;先月6月の4日昼から公開された愛犬ラヴ様のLINEスタンプですが、6月売り上げが確定しました。
 &lt;a href=&#34;http://bit.ly/love-stamp&#34;&gt;http://bit.ly/love-stamp&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/stamp3.png&#34; alt=&#34;stamp&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/stamp3.png&#34; alt=&#34;stamp&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;収益10,000円を超えた段階で、振り込み対象になるようですが、おかげさまで12,716円と無事に超えることが出来ました。
 買っていただいた方、ありがとうございます。&lt;/p&gt;
@@ -456,8 +493,7 @@ error出たときのハンドリングとして統一的にやっていたので
 
 &lt;p&gt;それに従って、HockyApp ConfigのProfileをインストールした後、1Passwordのベータ版がインストール出来ました。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/1password.png&#34; alt=&#34;love&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/1password.png&#34; alt=&#34;love&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;つらくない(　´･‿･｀)&lt;/p&gt;
 
@@ -666,8 +702,7 @@ NDAで細かいところは書けないけど、使用感も特に大きな変�
 &lt;p&gt;本日の活動はこんな感じ。
 フルでパソコンに向かっていると1時間当たりの分母は60分になるけど、移動中や退席中などデスクを離れていると分母自体が減ります。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/RescueTime.png&#34; alt=&#34;RescueTime&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/RescueTime.png&#34; alt=&#34;RescueTime&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;今朝は自宅で4時くらいから開発系作業とまったりニュース記事閲覧をして、会社に移動して仕事しつつ、ちょっとニュース見て息抜きしてまた仕事復帰して昼休みになり、昼休み明けはゆるめに仕事開始しつつ、夕方前後に再びピークに持っていって帰るみたいな感じで、かなりキレイにログが取れてる。&lt;/p&gt;
 
@@ -677,8 +712,7 @@ NDAで細かいところは書けないけど、使用感も特に大きな変�
 
 &lt;p&gt;目標も自分で設定出来て、今日は、生産的な時間・開発に費やせた時間・気が散った時間、ともに目標値を超えて良かった。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/summary.png&#34; alt=&#34;summary&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/summary.png&#34; alt=&#34;summary&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;というわけで、しばらく続けようと思う。
 続けること自体は何の負担も無くて素晴らしい。
@@ -813,8 +847,7 @@ GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分�
 &lt;li&gt;Run Configurationsで、Build before runにチェックを付けてディレクトリをbinに設定したら、実行ファイルも生成されるようになった。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/go.png&#34; alt=&#34;go&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/go.png&#34; alt=&#34;go&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;ただ、多分IntelliJがGoのデバッグ実行に対応していない？(無反応)のがつらたん（´-ω-｀）
 &lt;a href=&#34;https://github.com/go-lang-plugin-org/go-lang-idea-plugin/issues/25&#34;&gt;Support for debugging · Issue #25 · go-lang-plugin-org/go-lang-idea-plugin&lt;/a&gt;を見ると、GAEプロジェクトのみ対応？？よく分からない（´-ω-｀）&lt;/p&gt;
