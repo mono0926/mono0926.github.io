@@ -2,36 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ios7 on mono-log</title>
-    <link>http://mono0926.com/tags/ios7/</link>
+    <link>https://mono0926.com/tags/ios7/</link>
     <description>Recent content in Ios7 on mono-log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
+    <copyright>Masayuki Ono All right reserved.</copyright>
     <lastBuildDate>Sat, 21 Sep 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://mono0926.com/tags/ios7/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://mono0926.com/tags/ios7/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>iOS7対応記事のまとめ</title>
-      <link>http://mono0926.com/programming/ios7/</link>
+      <link>https://mono0926.com/programming/ios7/</link>
       <pubDate>Sat, 21 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/programming/ios7/</guid>
-      <description>&lt;p&gt;iOS7関連のNDA解禁ということで、色々記事が増えてきたので、メモ。
-少しずつ追記していきながら、落ち着いたところで、集約したような記事書くかも。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://koogawa.hateblo.jp/entry/2013/09/19/025424&#34;&gt;iOS 7対応事例 FastCheckin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://laboyukai.blogspot.jp/2013/09/ios6ios7.html&#34;&gt;iOS6からiOS7への対応&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://skyarts.com/blog/jp/skyarts/?p=29327&#34;&gt;iOS 7向けアプリ開発時の注意点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://qiita.com/monoqlo/items/cfc3aa018a5cb7df0deb&#34;&gt;iOS7でNavigationBarに入れたSearchBarにキャンセルボタンを出現させる方法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://qiita.com/hanapage/items/7d58293f5f7234437d79&#34;&gt;iOS6 -&amp;gt; iOS7変更対応&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://qiita.com/ne_ko_/items/5da4b2a247e65431c7cf&#34;&gt;iOS &lt;sup&gt;6&lt;/sup&gt;&amp;frasl;&lt;sub&gt;7&lt;/sub&gt; で UILabel などの見た目がずれるよ〜とお嘆きのあなたへ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://qiita.com/y_matsuwitter/items/bd41493f098dfa984f2b&#34;&gt;CocoapodsとXcode5の組み合わせでエラー出た+解決した&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://d.hatena.ne.jp/Kazzz/20130923/p1&#34;&gt;iOS7でステータスバーが被る問題への対応&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.livedoor.jp/tek_nishi/archives/8069300.html&#34;&gt;iOS7のarm64対応でやったこと&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://qiita.com/yimajo/items/7051af0919b5286aecfe&#34;&gt;iOS7でナビゲーションバーやステータスバーの文字色を変える&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://qiita.com/jazzsasori/items/cbd4650684a4f715e199&#34;&gt;iOS 7 でステータスバーを隠す方法&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <guid>https://mono0926.com/programming/ios7/</guid>
+      <description>iOS7関連のNDA解禁ということで、色々記事が増えてきたので、メモ。 少しずつ追記していきながら、落ち着いたところで、集約したような記事書くかも。
+ iOS 7対応事例 FastCheckin iOS6からiOS7への対応 iOS 7向けアプリ開発時の注意点 iOS7でNavigationBarに入れたSearchBarにキャンセルボタンを出現させる方法 iOS6 -&amp;gt; iOS7変更対応 iOS 6&amp;frasl;7 で UILabel などの見た目がずれるよ〜とお嘆きのあなたへ CocoapodsとXcode5の組み合わせでエラー出た+解決した iOS7でステータスバーが被る問題への対応 iOS7のarm64対応でやったこと iOS7でナビゲーションバーやステータスバーの文字色を変える iOS 7 でステータスバーを隠す方法  </description>
     </item>
     
   </channel>

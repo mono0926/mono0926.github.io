@@ -2,110 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Osx on mono-log</title>
-    <link>http://mono0926.com/tags/osx/</link>
+    <link>https://mono0926.com/tags/osx/</link>
     <description>Recent content in Osx on mono-log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
+    <copyright>Masayuki Ono All right reserved.</copyright>
     <lastBuildDate>Tue, 06 May 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://mono0926.com/tags/osx/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://mono0926.com/tags/osx/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>OSXの開発環境を整えた</title>
-      <link>http://mono0926.com/programming/renew/</link>
+      <link>https://mono0926.com/programming/renew/</link>
       <pubDate>Tue, 06 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/programming/renew/</guid>
-      <description>
-
-&lt;p&gt;Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。
-Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイッチしたいなとか思ったのが発端。&lt;br /&gt;
-参考: &lt;a href=&#34;http://rdepf.hatenablog.jp/entry/2014/03/07/122337&#34;&gt;Node.jsのコールバック地獄をPromiseやGeneratorを使って解消する - HackerNews翻訳してみた&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;わりと&lt;code&gt;brew install XXX&lt;/code&gt;で雑に各種環境インストールしてたので、これを気に色々直した。&lt;/p&gt;
-
-&lt;h2 id=&#34;homebrewアンインストール:e4940d6974c012c0c770280b21490de7&#34;&gt;Homebrewアンインストール&lt;/h2&gt;
-
-&lt;p&gt;ゴミが残るのいやだったので、&lt;a href=&#34;https://gist.github.com/mxcl/1173223&#34;&gt;Uninstall Homebrew&lt;/a&gt;でhomebrewをアンインストール。&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&#34;brewfile導入:e4940d6974c012c0c770280b21490de7&#34;&gt;Brewfile導入&lt;/h2&gt;
-
-&lt;p&gt;以下など見て便利そうだと思っていたので、Brewfile導入。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.1x1.jp/blog/2014/04/how-to-setup-application-on-osx.html&#34;&gt;Mac OSX をクリーンインストールしてからの環境構築メモ - Shin x blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.livedoor.jp/sonots/archives/35251881.html&#34;&gt;「BrewfileでHomebrewパッケージを管理する」をやってみた - sonots:blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://tnakamura.hatenablog.com/entry/2014/04/29/113727&#34;&gt;MacBook にインストールしているアプリやツールをメモする代わりに Brewfile を作った - present&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;これだけで一気にインストール出来てとても便利。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;brew bundle
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;僕の：&lt;a href=&#34;https://github.com/mono0926/Environment/blob/master/OSX/Brewfile&#34;&gt;Environment/OSX/Brewfile at master · mono0926/Environment&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;今後も、Homebrewで何か新しくインストールするときメンテナンスしていくようにしよう。&lt;/p&gt;
-
-&lt;h2 id=&#34;その他開発環境:e4940d6974c012c0c770280b21490de7&#34;&gt;その他開発環境&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;brew install XXX&lt;/code&gt;で適当にインストールせずに、バージョンの切り替えが容易なようにした。
-いくつか種類あったけど、基本後発のを導入してみた。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Python: &lt;a href=&#34;https://github.com/yyuu/pyenv&#34;&gt;yyuu/pyenv&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Ruby: &lt;a href=&#34;https://github.com/sstephenson/rbenv&#34;&gt;sstephenson/rbenv&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Node.js: &lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;creationix/nvm&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;nvmはzshとの相性悪くて日本では&lt;a href=&#34;https://github.com/hokaccha/nodebrew&#34;&gt;hokaccha/nodebrew&lt;/a&gt;がけっこう人気っぽかったけど特に問題無かったのでnvmにした。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;諸々雑なところがあるけど、&lt;a href=&#34;https://github.com/mono0926/Environment/tree/master/OSX&#34;&gt;Environment/OSX at master · mono0926/Environment&lt;/a&gt;でセットアップスクリプト管理。&lt;/p&gt;
-
-&lt;h2 id=&#34;ide導入:e4940d6974c012c0c770280b21490de7&#34;&gt;IDE導入&lt;/h2&gt;
-
-&lt;p&gt;スクリプト系言語は、最近はわりとSublime Textで書いていたけど、やっぱり補完がもう少し聞いてくれないと厳しいので、なるべくIDE使うようにしようと思う。&lt;br /&gt;
-IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれば捗るかなと。&lt;br /&gt;
-今まではNetBeansかたまにEclipseだったけど、乗り換え。少しずつ慣れていこう（´-ω-｀）&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.jetbrains.com/webstorm/&#34;&gt;WebStorm :: The smartest JavaScript IDE&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.jetbrains.com/ruby/&#34;&gt;Ruby on Rails IDE :: JetBrains RubyMine&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.jetbrains.com/pycharm/&#34;&gt;Python IDE &amp;amp; Django IDE for Web developers : JetBrains PyCharm&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;CE版は無料&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <guid>https://mono0926.com/programming/renew/</guid>
+      <description> Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。 Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイッチしたいなとか思ったのが発端。
+参考: Node.jsのコールバック地獄をPromiseやGeneratorを使って解消する - HackerNews翻訳してみた
+わりとbrew install XXXで雑に各種環境インストールしてたので、これを気に色々直した。
+Homebrewアンインストール ゴミが残るのいやだったので、Uninstall Homebrewでhomebrewをアンインストール。
+Brewfile導入 以下など見て便利そうだと思っていたので、Brewfile導入。
+ Mac OSX をクリーンインストールしてからの環境構築メモ - Shin x blog 「BrewfileでHomebrewパッケージを管理する」をやってみた - sonots:blog MacBook にインストールしているアプリやツールをメモする代わりに Brewfile を作った - present  これだけで一気にインストール出来てとても便利。
+brew bundle  僕の：Environment/OSX/Brewfile at master · mono0926/Environment
+今後も、Homebrewで何か新しくインストールするときメンテナンスしていくようにしよう。
+その他開発環境 brew install XXXで適当にインストールせずに、バージョンの切り替えが容易なようにした。 いくつか種類あったけど、基本後発のを導入してみた。
+ Python: yyuu/pyenv Ruby: sstephenson/rbenv Node.js: creationix/nvm  nvmはzshとの相性悪くて日本ではhokaccha/nodebrewがけっこう人気っぽかったけど特に問題無かったのでnvmにした。   諸々雑なところがあるけど、Environment/OSX at master · mono0926/Environmentでセットアップスクリプト管理。
+IDE導入 スクリプト系言語は、最近はわりとSublime Textで書いていたけど、やっぱり補完がもう少し聞いてくれないと厳しいので、なるべくIDE使うようにしようと思う。
+IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれば捗るかなと。
+今まではNetBeansかたまにEclipseだったけど、乗り換え。少しずつ慣れていこう（´-ω-｀）
+ WebStorm :: The smartest JavaScript IDE Ruby on Rails IDE :: JetBrains RubyMine Python IDE &amp;amp; Django IDE for Web developers : JetBrains PyCharm  CE版は無料   </description>
     </item>
     
     <item>
       <title>iOS7対応記事のまとめ</title>
-      <link>http://mono0926.com/programming/ios7/</link>
+      <link>https://mono0926.com/programming/ios7/</link>
       <pubDate>Sat, 21 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/programming/ios7/</guid>
-      <description>&lt;p&gt;iOS7関連のNDA解禁ということで、色々記事が増えてきたので、メモ。
-少しずつ追記していきながら、落ち着いたところで、集約したような記事書くかも。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://koogawa.hateblo.jp/entry/2013/09/19/025424&#34;&gt;iOS 7対応事例 FastCheckin&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://laboyukai.blogspot.jp/2013/09/ios6ios7.html&#34;&gt;iOS6からiOS7への対応&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://skyarts.com/blog/jp/skyarts/?p=29327&#34;&gt;iOS 7向けアプリ開発時の注意点&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://qiita.com/monoqlo/items/cfc3aa018a5cb7df0deb&#34;&gt;iOS7でNavigationBarに入れたSearchBarにキャンセルボタンを出現させる方法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://qiita.com/hanapage/items/7d58293f5f7234437d79&#34;&gt;iOS6 -&amp;gt; iOS7変更対応&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://qiita.com/ne_ko_/items/5da4b2a247e65431c7cf&#34;&gt;iOS &lt;sup&gt;6&lt;/sup&gt;&amp;frasl;&lt;sub&gt;7&lt;/sub&gt; で UILabel などの見た目がずれるよ〜とお嘆きのあなたへ&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://qiita.com/y_matsuwitter/items/bd41493f098dfa984f2b&#34;&gt;CocoapodsとXcode5の組み合わせでエラー出た+解決した&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://d.hatena.ne.jp/Kazzz/20130923/p1&#34;&gt;iOS7でステータスバーが被る問題への対応&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.livedoor.jp/tek_nishi/archives/8069300.html&#34;&gt;iOS7のarm64対応でやったこと&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://qiita.com/yimajo/items/7051af0919b5286aecfe&#34;&gt;iOS7でナビゲーションバーやステータスバーの文字色を変える&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://qiita.com/jazzsasori/items/cbd4650684a4f715e199&#34;&gt;iOS 7 でステータスバーを隠す方法&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <guid>https://mono0926.com/programming/ios7/</guid>
+      <description>iOS7関連のNDA解禁ということで、色々記事が増えてきたので、メモ。 少しずつ追記していきながら、落ち着いたところで、集約したような記事書くかも。
+ iOS 7対応事例 FastCheckin iOS6からiOS7への対応 iOS 7向けアプリ開発時の注意点 iOS7でNavigationBarに入れたSearchBarにキャンセルボタンを出現させる方法 iOS6 -&amp;gt; iOS7変更対応 iOS 6&amp;frasl;7 で UILabel などの見た目がずれるよ〜とお嘆きのあなたへ CocoapodsとXcode5の組み合わせでエラー出た+解決した iOS7でステータスバーが被る問題への対応 iOS7のarm64対応でやったこと iOS7でナビゲーションバーやステータスバーの文字色を変える iOS 7 でステータスバーを隠す方法  </description>
     </item>
     
   </channel>

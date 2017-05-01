@@ -2,945 +2,504 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mono-log</title>
-    <link>http://mono0926.com/</link>
+    <link>https://mono0926.com/</link>
     <description>Recent content on mono-log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
+    <copyright>Masayuki Ono All right reserved.</copyright>
     <lastBuildDate>Mon, 01 Aug 2016 09:10:21 +0900</lastBuildDate>
-    <atom:link href="http://mono0926.com/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://mono0926.com/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>プロフィール</title>
-      <link>http://mono0926.com/page/about/</link>
+      <link>https://mono0926.com/page/about/</link>
       <pubDate>Mon, 01 Aug 2016 09:10:21 +0900</pubDate>
       
-      <guid>http://mono0926.com/page/about/</guid>
-      <description>
-
-&lt;p&gt;ソフトウェアエンジニアで、今はメインはiOSアプリ開発(Swift)です。&lt;br /&gt;
-その前はWindows系開発メインでやっていて、今でもC#などは好きでたまにサーバーサイドなど書いたりしてます。&lt;br /&gt;
-&lt;code&gt;mono&lt;/code&gt;系のIDと犬アイコンで活動してます(　´･‿･｀)&lt;/p&gt;
-
-&lt;h2 id=&#34;各種リンク:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;各種リンク&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.wantedly.com/users/438148&#34;&gt;Wantedlyプロフィール&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/mono0926&#34;&gt;Facebook&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://twitter.com/_mono&#34;&gt;Twitter: @_mono&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://qiita.com/mono0926&#34;&gt;Qiita&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;2015年6月くらいからたくさん記事書き始めました&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/mono0926&#34;&gt;GitHub&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;プライベートレポジトリ含めるとほぼ毎日コミットしてます&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://medium.com/@mono0926&#34;&gt;Medium&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;最近使い始めて、Qiitaじゃ微妙なネタを書いてます。(なのでこのブログはほとんど使わず…。)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;開発したアプリ-サービス:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;開発したアプリ・サービス&lt;/h2&gt;
-
-&lt;h3 id=&#34;join-us-http-joinus30-com:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;&lt;a href=&#34;http://joinus30.com/&#34;&gt;JOIN US&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;チーフエンジニアとして、iOS版アプリ + 開発全般やってます。&lt;br /&gt;
-2015年10月にジョインして、iOS版アプリは全部書き直して11月にバージョン3.0としてリリースしました！&lt;br /&gt;
-最近は、統計・機械学習あたりにも手を出そうかと(　´･‿･｀)&lt;/p&gt;
-
-&lt;h3 id=&#34;player-http-www-playerapp-tokyo:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;&lt;a href=&#34;http://www.playerapp.tokyo/&#34;&gt;Player!&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;2015年にAppStoreで、ベスト新着アプリ・iOS 9オススメアプリ・2015年ベストアプリに選ばれたアプリのiOS版を作り上げました。&lt;br /&gt;
-メイン開発からは退きましたが、今でも週末にコミットしています。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/about/2015_app_store_feature.jpeg&#34; alt=&#34;2015 App Store Feature&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;scene-http-scn-jp:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;&lt;a href=&#34;http://scn.jp/&#34;&gt;Scene&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;世界100万ユーザーの写真整理・共有アプリのiOS版作っていました。&lt;br /&gt;
-この頃までObjective-Cがっつり書いてましたが、それ以降はSwiftメインです。&lt;/p&gt;
-
-&lt;h2 id=&#34;その他:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;その他&lt;/h2&gt;
-
-&lt;h3 id=&#34;lineクリエイターズスタンプ:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;LINEクリエイターズスタンプ&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://store.line.me/stickershop/product/1000854&#34;&gt;ラヴさんスタンプ&lt;/a&gt;をLINEクリエイターズスタンプ受付初日に申請して、1,000個くらい売れました。&lt;/p&gt;
-
-&lt;p&gt;買っていただけると嬉しいです(　´･‿･｀)&lt;br /&gt;
-ギフト希望の場合はご連絡くださいヽ(・ω・｀）&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/about/onegai.png&#34; alt=&#34;2015 App Store Feature&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;モノサー-https-www-facebook-com-groups-229270203845340:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;&lt;a href=&#34;https://www.facebook.com/groups/229270203845340/&#34;&gt;モノサー&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;テニスサークルぽいの作って、神奈川〜東京でテニスしてます。&lt;/p&gt;
-</description>
+      <guid>https://mono0926.com/page/about/</guid>
+      <description>ソフトウェアエンジニアで、今はメインはiOSアプリ開発(Swift)です。
+その前はWindows系開発メインでやっていて、今でもC#などは好きでたまにサーバーサイドなど書いたりしてます。
+mono系のIDと犬アイコンで活動してます(　´･‿･｀)
+各種リンク  Wantedlyプロフィール Facebook Twitter: @_mono Qiita  2015年6月くらいからたくさん記事書き始めました  GitHub  プライベートレポジトリ含めるとほぼ毎日コミットしてます  Medium  最近使い始めて、Qiitaじゃ微妙なネタを書いてます。(なのでこのブログはほとんど使わず…。)   開発したアプリ・サービス JOIN US チーフエンジニアとして、iOS版アプリ + 開発全般やってます。
+2015年10月にジョインして、iOS版アプリは全部書き直して11月にバージョン3.0としてリリースしました！
+最近は、統計・機械学習あたりにも手を出そうかと(　´･‿･｀)
+Player! 2015年にAppStoreで、ベスト新着アプリ・iOS 9オススメアプリ・2015年ベストアプリに選ばれたアプリのiOS版を作り上げました。
+メイン開発からは退きましたが、今でも週末にコミットしています。
+Scene 世界100万ユーザーの写真整理・共有アプリのiOS版作っていました。
+この頃までObjective-Cがっつり書いてましたが、それ以降はSwiftメインです。
+その他 LINEクリエイターズスタンプ ラヴさんスタンプをLINEクリエイターズスタンプ受付初日に申請して、1,000個くらい売れました。
+買っていただけると嬉しいです(　´･‿･｀)
+ギフト希望の場合はご連絡くださいヽ(・ω・｀）
+モノサー テニスサークルぽいの作って、神奈川〜東京でテニスしてます。</description>
     </item>
     
     <item>
       <title>Apple Watchを手に入れたのでiPhone 6 Plusとの付き合い方を見直してみる</title>
-      <link>http://mono0926.com/gadget/apple-watch-iphone-6plus/</link>
+      <link>https://mono0926.com/gadget/apple-watch-iphone-6plus/</link>
       <pubDate>Sun, 03 May 2015 22:30:05 +0900</pubDate>
       
-      <guid>http://mono0926.com/gadget/apple-watch-iphone-6plus/</guid>
-      <description>
-
-&lt;p&gt;忌々しき2015/04/10 16時1分、予約戦線で失敗したため、Apple新製品4年ぶり2度目くらいに初日入手ならずな結果に終わってしまったApple Watchですが、一昨日ようやく手に入りました。
-まだ3日目ですが、トップクラスに使い倒した自信ありますʕ ·ᴥ·ʔ&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/apple-watch.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;ちなみにモデルは、42mmスペースグレイアルミニウムケース・ブラックスポーツバンドと、結果的にダントツ一番人気となったやつです。&lt;/p&gt;
-
-&lt;p&gt;Apple Watchは諸々の理由でかなり気に入っていて(とは言え高すぎるとは思っている)、それらについて記事書きたいところですが、とりあえずiPhone 6 Plusとの付き合い方を見直したことに焦点を絞って書きたいと思います。&lt;/p&gt;
-
-&lt;h2 id=&#34;iphone-6-plusとのこれまでの付き合い方:ec0913dfd619170d0a971f0d0004e9ca&#34;&gt;iPhone 6 Plusとのこれまでの付き合い方&lt;/h2&gt;
-
-&lt;p&gt;iPhone 6 Plus、大きな画面で毎日かなり愛用しているのですが、やはりポケットの収まりの悪さがかなりネックでした。&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;ポケット小さい場合だと立っててもポケットからはみ出し気味だし、座ると太股などと干渉して机の上などに置かざるを得ないです。&lt;br /&gt;
-ポケット大きい場合でも、自転車とかはすぽっと抜けそうだったり、走ったりすると吹っ飛びそうです。&lt;br /&gt;
-このあたり、5sまでは全く問題無く、多分6でもギリギリOKでしょうが、残念ながら6 Plusはその閾値を超えてしまいました。&lt;br /&gt;
-その分、画面の情報量の多さだったり、特にランドスケープにした時にPC用Webビューも問題なく見られるなど、機能的な魅力も1つ頭抜けていると思っています。&lt;/p&gt;
-
-&lt;p&gt;ちなみに、僕の取ったソリューションは「常に手に持つ」でした。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/left-hand.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;歩き移動中はもちろん、ランニング中も手に持つ運用で、かなり慣れてきたとはいえ何とかしたいなとずっと思っていました（´・ω・｀）&lt;/p&gt;
-
-&lt;p&gt;そんな中、Apple Watch併用によって、6 Plusを取り出す機会減って相性抜群、みたいな感想をよく目にするようになりました。&lt;/p&gt;
-
-&lt;p&gt;へー、と思いながらようやくApple Watchが届いて弄ったところ期待以上の使用感で、これは是非6 Plus運用含めてスマート化しなくては、と思うようになりました。&lt;/p&gt;
-
-&lt;h2 id=&#34;6-plusの手持ち運用解消:ec0913dfd619170d0a971f0d0004e9ca&#34;&gt;6 Plusの手持ち運用解消&lt;/h2&gt;
-
-&lt;p&gt;苦悩の結果、手で常に持つ運用に至ってしまっていた理由は以下(　´･‿･｀)&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;(A) 日常的に、ポケットに収まらない(特に座った時)&lt;/li&gt;
-&lt;li&gt;(B) 主にランニング時、ポケットには入るものの、大きさ・重さなどのせいで吹っ飛びそうだし邪魔&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;それぞれ解決した感があります(　´･‿･｀)&lt;/p&gt;
-
-&lt;h3 id=&#34;a-日常的に-ポケットに収まらない-特に座った時:ec0913dfd619170d0a971f0d0004e9ca&#34;&gt;(A) 日常的に、ポケットに収まらない(特に座った時)&lt;/h3&gt;
-
-&lt;p&gt;バッグはあまり持ちたく無い派(手ぶら派)なので、それ以外の方法で考えます。&lt;/p&gt;
-
-&lt;p&gt;そこで導入したのがこの2つ&lt;/p&gt;
-
-&lt;iframe src=&#34;http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=mono0926-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B00OQ4BWXU&#34; style=&#34;width:120px;height:240px;&#34; scrolling=&#34;no&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
-
-&lt;iframe src=&#34;http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=mono0926-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B004WHU7XM&#34; style=&#34;width:120px;height:240px;&#34; scrolling=&#34;no&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;6 Plusが充分入ってケーブルとかちょっとしたものも追加で入るちょうど良いサイズ感です。
-分厚くなく、かといってペラペラな感じでも無いのも良いです。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/iphone-6plus-case.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;以前、7インチタブレット(Nexes 7)で同様の試みをしたことがあったのですが、その時は腰に7インチ端末をぶら下げることはやはり無理があることを悟って撤退しました。&lt;/p&gt;
-
-&lt;p&gt;ただ、今回iPhone 6 Plusおよびそれにジャストサイズなケースで試したら良い感じでした(　´･‿･｀)
-ブラブラしてもよいけど手軽に脱着したい場合はカラビナ、密着度あげたい場合はベルトに通すのが良いですね。&lt;/p&gt;
-
-&lt;h3 id=&#34;b-主にランニング時-ポケットには入るものの大きさ-重さなどのせいで吹っ飛びそう:ec0913dfd619170d0a971f0d0004e9ca&#34;&gt;(B) 主にランニング時、ポケットには入るものの大きさ・重さなどのせいで吹っ飛びそう&lt;/h3&gt;
-
-&lt;p&gt;「iPhone ランニング」などで調べると、アームバンドがよく検索に引っかかりますが、以前いくつか使ってみた感想としては微妙でした。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ケースに入れるのや装着が面倒&lt;/li&gt;
-&lt;li&gt;取り出しがしにくい
-
-&lt;ul&gt;
-&lt;li&gt;Apple Watchがあるとはいえ、信号待ちなどでこみ入った操作したい時にぱっと取り出せると便利&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;さらに、iPhone 6 Plusは腕に付けるには大きすぎます(´・︵・｀)&lt;/p&gt;
-
-&lt;p&gt;というわけで、色々探した結果、このスポーツウエストポーチを試しに買ってみたらジャストフィットでした。
-1件、6 Plusで使えないというレビューがありましたが、全く問題無かったです。
-見えないように装着しつつ普段利用でも良いかも？と思える程度にはしっくりきてます。&lt;/p&gt;
-
-&lt;iframe src=&#34;http://rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;bc1=000000&amp;IS2=1&amp;bg1=FFFFFF&amp;fc1=000000&amp;lc1=0000FF&amp;t=mono0926-22&amp;o=9&amp;p=8&amp;l=as4&amp;m=amazon&amp;f=ifr&amp;ref=ss_til&amp;asins=B00JF9EAHQ&#34; style=&#34;width:120px;height:240px;&#34; scrolling=&#34;no&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;わりと形が見えちゃう程度にはパンパンですが、素材がよく伸びるので、出し入れも楽だし装着負荷も低いです(　´･‿･｀)
-ちょっと高めですが、とても良い買い物でした。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/west-case.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://qiita.com/abe-perorist&#34;&gt;あのabe-perorist&lt;/a&gt;もフルマラソン用に購入して良い感じだったとのことです:&lt;br /&gt;
-&lt;a href=&#34;http://ookami.tokyo/blog/archives/986&#34;&gt;めっちゃ余裕だとドヤっていた僕が、人生で初めてフルマラソンに参加してきた | わおーん&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;apple-watch単体運用:ec0913dfd619170d0a971f0d0004e9ca&#34;&gt;Apple Watch単体運用&lt;/h4&gt;
-
-&lt;p&gt;あるいは、Apple Watchに音楽同期すれば単体で再生出来るしワークアウトも出来るので、Bluetoothイヤフォンと組み合わせてiPhone持たずでも良さそうです。&lt;br /&gt;
-テニスするときも、これまではポケットにiPhone無いと不便だしとは言え嵩張るしで困っていたけど、Watchだけで済みそうʕ ·ᴥ·ʔ 時間測ったりするのにも便利。&lt;/p&gt;
-</description>
+      <guid>https://mono0926.com/gadget/apple-watch-iphone-6plus/</guid>
+      <description>忌々しき2015/04/10 16時1分、予約戦線で失敗したため、Apple新製品4年ぶり2度目くらいに初日入手ならずな結果に終わってしまったApple Watchですが、一昨日ようやく手に入りました。 まだ3日目ですが、トップクラスに使い倒した自信ありますʕ ·ᴥ·ʔ
+ちなみにモデルは、42mmスペースグレイアルミニウムケース・ブラックスポーツバンドと、結果的にダントツ一番人気となったやつです。
+Apple Watchは諸々の理由でかなり気に入っていて(とは言え高すぎるとは思っている)、それらについて記事書きたいところですが、とりあえずiPhone 6 Plusとの付き合い方を見直したことに焦点を絞って書きたいと思います。
+iPhone 6 Plusとのこれまでの付き合い方 iPhone 6 Plus、大きな画面で毎日かなり愛用しているのですが、やはりポケットの収まりの悪さがかなりネックでした。
+ポケット小さい場合だと立っててもポケットからはみ出し気味だし、座ると太股などと干渉して机の上などに置かざるを得ないです。
+ポケット大きい場合でも、自転車とかはすぽっと抜けそうだったり、走ったりすると吹っ飛びそうです。
+このあたり、5sまでは全く問題無く、多分6でもギリギリOKでしょうが、残念ながら6 Plusはその閾値を超えてしまいました。
+その分、画面の情報量の多さだったり、特にランドスケープにした時にPC用Webビューも問題なく見られるなど、機能的な魅力も1つ頭抜けていると思っています。
+ちなみに、僕の取ったソリューションは「常に手に持つ」でした。
+歩き移動中はもちろん、ランニング中も手に持つ運用で、かなり慣れてきたとはいえ何とかしたいなとずっと思っていました（´・ω・｀）
+そんな中、Apple Watch併用によって、6 Plusを取り出す機会減って相性抜群、みたいな感想をよく目にするようになりました。
+へー、と思いながらようやくApple Watchが届いて弄ったところ期待以上の使用感で、これは是非6 Plus運用含めてスマート化しなくては、と思うようになりました。
+6 Plusの手持ち運用解消 苦悩の結果、手で常に持つ運用に至ってしまっていた理由は以下(　´･‿･｀)
+ (A) 日常的に、ポケットに収まらない(特に座った時) (B) 主にランニング時、ポケットには入るものの、大きさ・重さなどのせいで吹っ飛びそうだし邪魔  それぞれ解決した感があります(　´･‿･｀)
+(A) 日常的に、ポケットに収まらない(特に座った時) バッグはあまり持ちたく無い派(手ぶら派)なので、それ以外の方法で考えます。
+そこで導入したのがこの2つ
+  6 Plusが充分入ってケーブルとかちょっとしたものも追加で入るちょうど良いサイズ感です。 分厚くなく、かといってペラペラな感じでも無いのも良いです。
+以前、7インチタブレット(Nexes 7)で同様の試みをしたことがあったのですが、その時は腰に7インチ端末をぶら下げることはやはり無理があることを悟って撤退しました。
+ただ、今回iPhone 6 Plusおよびそれにジャストサイズなケースで試したら良い感じでした(　´･‿･｀) ブラブラしてもよいけど手軽に脱着したい場合はカラビナ、密着度あげたい場合はベルトに通すのが良いですね。
+(B) 主にランニング時、ポケットには入るものの大きさ・重さなどのせいで吹っ飛びそう 「iPhone ランニング」などで調べると、アームバンドがよく検索に引っかかりますが、以前いくつか使ってみた感想としては微妙でした。
+ ケースに入れるのや装着が面倒 取り出しがしにくい  Apple Watchがあるとはいえ、信号待ちなどでこみ入った操作したい時にぱっと取り出せると便利   さらに、iPhone 6 Plusは腕に付けるには大きすぎます(´・︵・｀)</description>
     </item>
     
     <item>
       <title>SourceTreeでブランチ名をコミットメッセージの先頭に自動挿入</title>
-      <link>http://mono0926.com/programming/sourcetree/</link>
+      <link>https://mono0926.com/programming/sourcetree/</link>
       <pubDate>Fri, 31 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/programming/sourcetree/</guid>
-      <description>
-
-&lt;p&gt;Git便利ですね。今やこれ無しで開発は無理、というレベルです。&lt;/p&gt;
-
-&lt;p&gt;そんな日々使っているGitですが、何かしらのツールでタスクやIssueを作ってそのIDをfeatureブランチ名としている運用は多いと思います。&lt;/p&gt;
-
-&lt;p&gt;その場合、コミットメッセージにそのIDが含まれているとコミットとタスクを紐づけてくれるので、コミットメッセージの先頭にブランチ名を挿入することが多いはずです。&lt;/p&gt;
-
-&lt;p&gt;それを打つのが一々面倒だしたまにミスして違うタスクに紐付かれちゃうし、で少し困っていました。&lt;/p&gt;
-
-&lt;p&gt;コマンドラインで作業している場合は、以下のようなにGitの&lt;code&gt;prepare-commit-msg&lt;/code&gt;フックを利用することで、コミットメッセージ作成時に自動挿入させることが可能です。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://qiita.com/ykyk1218/items/4c17eef472ae8c31991f&#34;&gt;Gitでcommitした時にブランチ名をcommitメッセージに自動でいれる - Qiita&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;ただ、SourceTreeで試そうとしたら、動いてくれず、調べたところ非対応のようです。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://answers.atlassian.com/questions/169399/sourcetree-and-git-prepare-commit-msg&#34;&gt;SourceTree and git prepare-commit-msg - Atlassian Answers&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/yabuchin_y&#34;&gt;@yabuchin_y&lt;/a&gt;さんに相談したら、&lt;code&gt;commit-msg&lt;/code&gt;で書き換えてしまえばいけるのでは？ということで作ってもらえました。&lt;/p&gt;
-
-&lt;p&gt;(僕はこの時点で、&lt;code&gt;commit-msg&lt;/code&gt;はバリデーションフェーズ的なもので、書き換えは不可能なのでは？と思って諦めてしまいそうでした。)&lt;/p&gt;
-
-&lt;h2 id=&#34;設定手順:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;設定手順&lt;/h2&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h3 id=&#34;コミットメッセージのテンプレートを作成して指定の文章が自動挿入されるようにする:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;コミットメッセージのテンプレートを作成して指定の文章が自動挿入されるようにする&lt;/h3&gt;
-
-&lt;p&gt;以下を、特定のレポジトリルートで実行。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;# $HOME/.gitmessage.txtの置き場所は自由です
-# グローバルな設定としたい場合は、--globalオプションを付ける
-git config commit.template $HOME/.gitmessage.txt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;# .gitmessage.txtの中身(末尾に半角スペースを入れておくこと推奨)
-[branchname]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;これで、コミットメッセージ作成時に、&lt;code&gt;[branchname]&lt;/code&gt;が先頭に自動挿入されます。&lt;/p&gt;
-
-&lt;h3 id=&#34;コミット後に-branchname-がブランチ名へ書き換えられるようにする:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;コミット後に[branchname]がブランチ名へ書き換えられるようにする&lt;/h3&gt;
-
-&lt;p&gt;&lt;code&gt;commit-msg&lt;/code&gt;フックを利用します。&lt;/p&gt;
-
-&lt;p&gt;以下を特定のレポジトリの&lt;code&gt;.git/hooks/commit-msg&lt;/code&gt;として配置します。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/usr/bin/env ruby
-message_file = ARGV[0]
-message = File.read(message_file, :encoding =&amp;gt; Encoding::UTF_8)
-
-current_branch = `git branch | grep &#39;*&#39;`.chomp.sub(&#39;* &#39;, &#39;&#39;)
-current_branch = current_branch[current_branch.rindex(&amp;quot;/&amp;quot;)+1 .. current_branch.length]
-
-newmessage = message.sub(/\[branchname\]/, current_branch)
-
-File.write(message_file, newmessage)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;feature/hoge/#35&lt;/code&gt;などとなっている場合、&lt;code&gt;[branchname]&lt;/code&gt;部分が&lt;code&gt;#35&lt;/code&gt;と置換されるような処理をしています。
-用途に応じて適宜書き換えてください。&lt;/p&gt;
-
-&lt;h2 id=&#34;挙動:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;挙動&lt;/h2&gt;
-
-&lt;p&gt;文章だけではイメージが沸きにくいかもしれないので、スクリーンショット貼っておきます。&lt;/p&gt;
-
-&lt;h3 id=&#34;コミットメッセージを入れようとすると先頭に-branchname-が自動挿入:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;コミットメッセージを入れようとすると先頭に[branchname]が自動挿入&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/st1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;そのままその後にメッセージを入れてコミットします。&lt;/p&gt;
-
-&lt;h3 id=&#34;branchname-が置換されてブランチ名になってくれます:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;[branchname]が置換されてブランチ名になってくれます&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/st2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;実際に使って見て:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;実際に使って見て&lt;/h2&gt;
-
-&lt;p&gt;先週から活用し初めましたがすこぶる快適です(　´･‿･｀)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://twitter.com/yabuchin_y&#34;&gt;@yabuchin_y&lt;/a&gt;さん、ありがとうございました(　´･‿･｀)&lt;/p&gt;
-
-&lt;h3 id=&#34;参考リンク:b7d90e2e13aa6322b9aebb9b23477bed&#34;&gt;参考リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://git-scm.com/book/ja/v1/Git-%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA-Git-%E3%83%95%E3%83%83%E3%82%AF&#34;&gt;Git - Git フック&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://qiita.com/khlizard/items/dfe1ec9d82c0ed5da7c6&#34;&gt;Git hooks まとめ - Qiita&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <guid>https://mono0926.com/programming/sourcetree/</guid>
+      <description>Git便利ですね。今やこれ無しで開発は無理、というレベルです。
+そんな日々使っているGitですが、何かしらのツールでタスクやIssueを作ってそのIDをfeatureブランチ名としている運用は多いと思います。
+その場合、コミットメッセージにそのIDが含まれているとコミットとタスクを紐づけてくれるので、コミットメッセージの先頭にブランチ名を挿入することが多いはずです。
+それを打つのが一々面倒だしたまにミスして違うタスクに紐付かれちゃうし、で少し困っていました。
+コマンドラインで作業している場合は、以下のようなにGitのprepare-commit-msgフックを利用することで、コミットメッセージ作成時に自動挿入させることが可能です。
+ Gitでcommitした時にブランチ名をcommitメッセージに自動でいれる - Qiita  ただ、SourceTreeで試そうとしたら、動いてくれず、調べたところ非対応のようです。
+ SourceTree and git prepare-commit-msg - Atlassian Answers  @yabuchin_yさんに相談したら、commit-msgで書き換えてしまえばいけるのでは？ということで作ってもらえました。
+(僕はこの時点で、commit-msgはバリデーションフェーズ的なもので、書き換えは不可能なのでは？と思って諦めてしまいそうでした。)
+設定手順 コミットメッセージのテンプレートを作成して指定の文章が自動挿入されるようにする 以下を、特定のレポジトリルートで実行。
+# $HOME/.gitmessage.txtの置き場所は自由です # グローバルな設定としたい場合は、--globalオプションを付ける git config commit.template $HOME/.gitmessage.txt  # .gitmessage.txtの中身(末尾に半角スペースを入れておくこと推奨) [branchname]  これで、コミットメッセージ作成時に、[branchname]が先頭に自動挿入されます。
+コミット後に[branchname]がブランチ名へ書き換えられるようにする commit-msgフックを利用します。
+以下を特定のレポジトリの.git/hooks/commit-msgとして配置します。
+#!/usr/bin/env ruby message_file = ARGV[0] message = File.read(message_file, :encoding =&amp;gt; Encoding::UTF_8) current_branch = `git branch | grep &#39;*&#39;`.chomp.sub(&#39;* &#39;, &#39;&#39;) current_branch = current_branch[current_branch.rindex(&amp;quot;/&amp;quot;)+1 .. current_branch.length] newmessage = message.</description>
     </item>
     
     <item>
       <title>クックパッド第5回 開発コンテスト24に参戦した話</title>
-      <link>http://mono0926.com/programming/cookpad/</link>
+      <link>https://mono0926.com/programming/cookpad/</link>
       <pubDate>Mon, 20 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/programming/cookpad/</guid>
-      <description>
-
-&lt;p&gt;先日も&lt;a href=&#34;http://isucon.net/&#34;&gt;ISUCONコンテスト予選&lt;/a&gt;に出たばかりですが、土日(10月18-19日)に
-&lt;a href=&#34;https://info.cookpad.com/24contest_5&#34;&gt;クックパッドの「第5回 開発コンテスト24」&lt;/a&gt;に参戦しました。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://kinen.yabuchin.com/&#34;&gt;勝手にアニバーサリー ～なんでもない日を、あの人との記念日に。～&lt;/a&gt;が成果物です。
-ちなみに、タイトルは僕が初め適当に提案したのが意外と良かったらしくそのまま採用されました（｀・ω・´）&lt;/p&gt;
-
-&lt;h2 id=&#34;メンバー:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;メンバー&lt;/h2&gt;
-
-&lt;p&gt;こんな感じのバランスの良いメンバーが集まりました(　´･‿･｀)&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/mono0926&#34;&gt;僕&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;iOSアプリか適当なGoコード書く予定 (結果Goコード書いてた)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/yuichi.yabu&#34;&gt;やぶさん&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;サーバーサイド(普段Scala使ってるけど、今回はGo)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/sayaka.yabu.7&#34;&gt;の奥さん&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.nssol.nssmc.com/press/2014/20141009_110001.html&#34;&gt;Data Veraci&lt;/a&gt;を作った方 (前職の先輩)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/3is.sheep&#34;&gt;ひつじさん&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;yah○○のデザイナーさん&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/nozomi.fuzimoto&#34;&gt;のんたん☆&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;恵比寿のデザイナーさん&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;僕が平均年齢くらいの華やかなメンバーでした。&lt;/p&gt;
-
-&lt;h2 id=&#34;当日まで:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;当日まで&lt;/h2&gt;
-
-&lt;!-- more --&gt;
-
-&lt;ul&gt;
-&lt;li&gt;レポジトリ作成: &lt;a href=&#34;https://github.com/SYM-CONTEST/Cookpad2014&#34;&gt;SYM-CONTEST/Cookpad2014&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Facebookイベント作成: &lt;a href=&#34;https://www.facebook.com/events/718375174865939/&#34;&gt;クックパッド 第5回 開発コンテスト24&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Slack用意
-
-&lt;ul&gt;
-&lt;li&gt;自宅警備もする必要があるので、オンライン上でやりとりして開発&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;yah○○のBASE6で打ち合わせ(ひつじさんからのご招待)
-
-&lt;ul&gt;
-&lt;li&gt;ここで&lt;a href=&#34;https://www.facebook.com/nozomi.fuzimoto&#34;&gt;のんたん☆&lt;/a&gt;の参戦決定（｀・ω・´）&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/base6_1.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://mono0926.com/images/post/base6_2.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://mono0926.com/images/post/base6_3.jpg&#34; alt=&#34;&#34; /&gt;
-&lt;img src=&#34;http://mono0926.com/images/post/base6_4.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;当日:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;当日&lt;/h2&gt;
-
-&lt;p&gt;去年も&lt;a href=&#34;http://about.me/yomei&#34;&gt;余命チェッカー&lt;/a&gt;で参戦してたので、大体勝手は分かっていました。&lt;/p&gt;
-
-&lt;h3 id=&#34;朝9時:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;朝9時&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://info.cookpad.com/24contest_5&#34;&gt;クックパッドの「第5回 開発コンテスト24」&lt;/a&gt;をリロードして、お題が「誰かと話すキッカケを作るサービス」であることを把握。&lt;/p&gt;
-
-&lt;p&gt;元々、10時までに作るネタが決まらなかったら解散というオレオレレギュレーションをやっていたので、時間を気にしつつネタ出し。&lt;br /&gt;
-けっこう良いアイディアが出るものの、コンテスト受けしそうか微妙な感じで、なかなか収束せず。&lt;br /&gt;
-雰囲気的に10時過ぎてもそのまま続行することにして、最低午前中にという感じで結果、過去に何かつながりがあってご無沙汰な人間関係を、勝手に記念日をでっちあげて祝うことで結びつけるサービスになりました。&lt;/p&gt;
-
-&lt;p&gt;具体的には、Twitterで過去に絡んだ人たちに、そのやり取りのキーワードを抽出して○○記念日のメッセージを投げるみたいな。
-(Twitterに限らずもっと膨らませたかったけど、実装コストの兼ね合いもあり)&lt;/p&gt;
-
-&lt;h3 id=&#34;1日目昼:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;1日目昼&lt;/h3&gt;
-
-&lt;p&gt;作るものが決まったので、もう少し仕様や画面を詰めるような相談をしたり、出来るところは実装始めたり。&lt;/p&gt;
-
-&lt;h4 id=&#34;やぶさん達はいつの間にかお寿司屋さん行ってました-д:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;やぶさん達はいつの間にかお寿司屋さん行ってました（´・д・｀）&lt;/h4&gt;
-
-&lt;p&gt;僕は不慣れなGo言語での以下の2点の実装法を手短に調べて、うんいけそうみたいな感触を得ました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Twitter認証
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/mrjones/oauth&#34;&gt;mrjones/oauth&lt;/a&gt;採用&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Twitter APIで過去のやり取りを取得
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ChimeraCoder/anaconda&#34;&gt;ChimeraCoder/anaconda&lt;/a&gt;採用&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;そんなこんなで、Googleハングアウト使いながら、みんなで色々お話しつつ作業。&lt;/p&gt;
-
-&lt;p&gt;夕方くらいに、それぞれ私用・仕事・昼寝などで散らばってしまいました（´・ω・｀）&lt;/p&gt;
-
-&lt;p&gt;僕はキャラクター &lt;a href=&#34;https://twitter.com/kinenn_bi&#34;&gt;アニバちゃんのTwitterアカウント&lt;/a&gt;作って遊んだりしてました(　´･‿･｀)&lt;/p&gt;
-
-&lt;h3 id=&#34;1日目夜:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;1日目夜&lt;/h3&gt;
-
-&lt;p&gt;夜になると、またみんな戻ってきて、僕も黙々と実装。&lt;br /&gt;
-Twitter認証周りはやぶさんにお願いして、僕は過去のやり取りを取得して良い感じの記念日を作るところをガリガリGoで書いていました。&lt;/p&gt;
-
-&lt;h3 id=&#34;深夜:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;深夜&lt;/h3&gt;
-
-&lt;p&gt;引き続きみんなゴリゴリ実装したりデザイン作ったり。&lt;/p&gt;
-
-&lt;p&gt;2時くらいに、やぶさん実装とのインターフェース決めて、1時間くらいそのあたり仕上げて寝ました(一番乗り)。&lt;/p&gt;
-
-&lt;p&gt;寝る間際に&lt;a href=&#34;https://twitter.com/kinenn_bi&#34;&gt;アニバちゃん&lt;/a&gt;で置き土産残したら、ひどいことになったようです(　´･‿･｀)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/misawa.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;2日目朝:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;2日目朝&lt;/h3&gt;
-
-&lt;p&gt;7時くらいに起きました。&lt;br /&gt;
-やぶさん(完徹)以外は皆寝てました。&lt;br /&gt;
-やぶさんは一部うまく行かないところあって泣きそうでした。&lt;/p&gt;
-
-&lt;p&gt;僕の実装の問題もあったり、結合後のテストでバグ出たところの対応したり。&lt;br /&gt;
-あと、記念日抽出ロジックの改良などして、ギリギリ9時くらいに収束。&lt;/p&gt;
-
-&lt;p&gt;Goは基本的に型セーフで変更がしやすかったです。&lt;/p&gt;
-
-&lt;p&gt;30分くらい前にフォームの入力し始めるドタバタ感がありつつ、無事に応募完了。&lt;/p&gt;
-
-&lt;h3 id=&#34;9時の提出後のドタバタ:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;9時の提出後のドタバタ&lt;/h3&gt;
-
-&lt;p&gt;なんかよく落ちるみたいな問題があって、対応。
-特に、僕が&lt;code&gt;log.Fatalln&lt;/code&gt;しちゃってたのがインパクト大きかった模様。&lt;/p&gt;
-
-&lt;p&gt;開発時はこれで良かったかもだけど、リリースしたので、取り急ぎ&lt;code&gt;log.Println&lt;/code&gt;に変更。
-error出たときのハンドリングとして統一的にやっていたので、対応は一瞬でした。
-(&lt;code&gt;log.Println&lt;/code&gt;がこの文脈で適切かはよく分からなかったがとりあえず落とさないように)&lt;/p&gt;
-
-&lt;p&gt;あと一部例外系に対応したりして、けっこう安定。&lt;/p&gt;
-
-&lt;p&gt;と思いきや、まだ1箇所認証周りで落ちるところがあとで発覚して、あまり深く調べず今でもまだ直ってません（´・ω・｀）&lt;/p&gt;
-
-&lt;h3 id=&#34;結果:f57d1d9478fed8af6fe1d25111c4512b&#34;&gt;結果&lt;/h3&gt;
-
-&lt;p&gt;2日目夕方くらいに発表されましたが、入選ならずで残念でした。&lt;br /&gt;
-ちょくちょくサービスダウンしてて不安定だったのが響いたかも（´-ω-｀）&lt;br /&gt;
-皆さん(特にやぶさん)、お疲れさまでした。&lt;br /&gt;
-つらたんでしたが、楽しかったです、Goの勉強にもなったし(　´･‿･｀)&lt;br /&gt;
-24時間コンテスト系はきついですが、また似たようなの参戦しましょう。&lt;/p&gt;
-</description>
+      <guid>https://mono0926.com/programming/cookpad/</guid>
+      <description>先日もISUCONコンテスト予選に出たばかりですが、土日(10月18-19日)に クックパッドの「第5回 開発コンテスト24」に参戦しました。
+勝手にアニバーサリー ～なんでもない日を、あの人との記念日に。～が成果物です。 ちなみに、タイトルは僕が初め適当に提案したのが意外と良かったらしくそのまま採用されました（｀・ω・´）
+メンバー こんな感じのバランスの良いメンバーが集まりました(　´･‿･｀)
+ 僕  iOSアプリか適当なGoコード書く予定 (結果Goコード書いてた)  やぶさん  サーバーサイド(普段Scala使ってるけど、今回はGo)  の奥さん  Data Veraciを作った方 (前職の先輩)  ひつじさん  yah○○のデザイナーさん  のんたん☆  恵比寿のデザイナーさん   僕が平均年齢くらいの華やかなメンバーでした。
+当日まで  レポジトリ作成: SYM-CONTEST/Cookpad2014 Facebookイベント作成: クックパッド 第5回 開発コンテスト24 Slack用意  自宅警備もする必要があるので、オンライン上でやりとりして開発  yah○○のBASE6で打ち合わせ(ひつじさんからのご招待)  ここでのんたん☆の参戦決定（｀・ω・´）   当日 去年も余命チェッカーで参戦してたので、大体勝手は分かっていました。
+朝9時 クックパッドの「第5回 開発コンテスト24」をリロードして、お題が「誰かと話すキッカケを作るサービス」であることを把握。
+元々、10時までに作るネタが決まらなかったら解散というオレオレレギュレーションをやっていたので、時間を気にしつつネタ出し。
+けっこう良いアイディアが出るものの、コンテスト受けしそうか微妙な感じで、なかなか収束せず。
+雰囲気的に10時過ぎてもそのまま続行することにして、最低午前中にという感じで結果、過去に何かつながりがあってご無沙汰な人間関係を、勝手に記念日をでっちあげて祝うことで結びつけるサービスになりました。
+具体的には、Twitterで過去に絡んだ人たちに、そのやり取りのキーワードを抽出して○○記念日のメッセージを投げるみたいな。 (Twitterに限らずもっと膨らませたかったけど、実装コストの兼ね合いもあり)
+1日目昼 作るものが決まったので、もう少し仕様や画面を詰めるような相談をしたり、出来るところは実装始めたり。
+やぶさん達はいつの間にかお寿司屋さん行ってました（´・д・｀） 僕は不慣れなGo言語での以下の2点の実装法を手短に調べて、うんいけそうみたいな感触を得ました。
+ Twitter認証  mrjones/oauth採用  Twitter APIで過去のやり取りを取得  ChimeraCoder/anaconda採用   そんなこんなで、Googleハングアウト使いながら、みんなで色々お話しつつ作業。</description>
     </item>
     
     <item>
       <title>iOS 8/Swift エンジニア勉強会資料公開しました</title>
-      <link>http://mono0926.com/programming/swift-lt/</link>
+      <link>https://mono0926.com/programming/swift-lt/</link>
       <pubDate>Sun, 05 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/programming/swift-lt/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://connpass.com/event/8629/&#34;&gt;iOS 8/Swift エンジニア勉強会&lt;/a&gt;が台風で延期になったので、手元にいつまでもあってもしょうもないので資料公開しました(　´･‿･｀)&lt;/p&gt;
-
-&lt;p&gt;&lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/39879908&#34; width=&#34;427&#34; height=&#34;356&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;https://www.slideshare.net/mono0926/lt-yahoo&#34; title=&#34;Xcode 6で利用可能になった ベクター画像リソースを 深掘り&#34; target=&#34;_blank&#34;&gt;Xcode 6で利用可能になった ベクター画像リソースを 深掘り&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;http://www.slideshare.net/mono0926&#34; target=&#34;_blank&#34;&gt;Masayuki Ono&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
-
-&lt;p&gt;延期つらたん&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/tsuratan.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;↑LINEクリエイターズスタンプとして&lt;a href=&#34;http://bit.ly/love-stamp&#34;&gt;公開中です&lt;/a&gt;。&lt;/p&gt;
-</description>
+      <guid>https://mono0926.com/programming/swift-lt/</guid>
+      <description>iOS 8/Swift エンジニア勉強会が台風で延期になったので、手元にいつまでもあってもしょうもないので資料公開しました(　´･‿･｀)
+  Xcode 6で利用可能になった ベクター画像リソースを 深掘り  from Masayuki Ono 
+延期つらたん
+↑LINEクリエイターズスタンプとして公開中です。</description>
     </item>
     
     <item>
       <title>ラヴ様LINEスタンプ6月売り上げ</title>
-      <link>http://mono0926.com/line-stamp/stamp/</link>
+      <link>https://mono0926.com/line-stamp/stamp/</link>
       <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/line-stamp/stamp/</guid>
-      <description>&lt;p&gt;先月6月の4日昼から公開された愛犬ラヴ様のLINEスタンプですが、6月売り上げが確定しました。
-&lt;a href=&#34;http://bit.ly/love-stamp&#34;&gt;http://bit.ly/love-stamp&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/stamp3.png&#34; alt=&#34;stamp&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;収益10,000円を超えた段階で、振り込み対象になるようですが、おかげさまで12,716円と無事に超えることが出来ました。
-買っていただいた方、ありがとうございます。&lt;/p&gt;
-
-&lt;p&gt;平均471円/日と、500円/日には届かないものの、淡々と売れ続けていて、嬉しいです。
-若干売れ行きが落ち込み気味ですが、今月どうなりますかね（´-ω-｀）&lt;/p&gt;
-</description>
+      <guid>https://mono0926.com/line-stamp/stamp/</guid>
+      <description>先月6月の4日昼から公開された愛犬ラヴ様のLINEスタンプですが、6月売り上げが確定しました。 http://bit.ly/love-stamp
+収益10,000円を超えた段階で、振り込み対象になるようですが、おかげさまで12,716円と無事に超えることが出来ました。 買っていただいた方、ありがとうございます。
+平均471円/日と、500円/日には届かないものの、淡々と売れ続けていて、嬉しいです。 若干売れ行きが落ち込み気味ですが、今月どうなりますかね（´-ω-｀）</description>
     </item>
     
     <item>
       <title>iOS8で1Passwordが使えるようになった</title>
-      <link>http://mono0926.com/lifehack/password/</link>
+      <link>https://mono0926.com/lifehack/password/</link>
       <pubDate>Fri, 13 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/lifehack/password/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://mono0926.com/blog/2014/06/04/yosemite/&#34;&gt;OSX 10.10(Yosemite)やiOS 8にアップデートして困ったこと - monoHub&lt;/a&gt;で書いた通り、iOS 8にして以来、&lt;a href=&#34;https://agilebits.com/onepassword/ios&#34;&gt;1Password&lt;/a&gt;が使えなくてつらたんでした（´-ω-｀）&lt;/p&gt;
-
-&lt;p&gt;しかし、ベータ版なら使えるという情報が。&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;en&#34;&gt;&lt;p&gt;4.5.3b1 (iOS) is now available, and resolves some of the issues with iOS 8.&lt;/p&gt;&amp;mdash; 1Password Beta (@1PasswordBeta) &lt;a href=&#34;https://twitter.com/1PasswordBeta/statuses/474335765720494081&#34;&gt;June 4, 2014&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;そこで、数日前に&lt;a href=&#34;https://agilebits.com/beta_signups/newsletter&#34;&gt;AgileBits Beta Newsletter&lt;/a&gt;に登録して待っていたら、今日メールが届きました。&lt;/p&gt;
-
-&lt;p&gt;それに従って、HockyApp ConfigのProfileをインストールした後、1Passwordのベータ版がインストール出来ました。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/1password.png&#34; alt=&#34;love&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;つらくない(　´･‿･｀)&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://bit.ly/love-stamp&#34;&gt;http://bit.ly/love-stamp&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>https://mono0926.com/lifehack/password/</guid>
+      <description>OSX 10.10(Yosemite)やiOS 8にアップデートして困ったこと - monoHubで書いた通り、iOS 8にして以来、1Passwordが使えなくてつらたんでした（´-ω-｀）
+しかし、ベータ版なら使えるという情報が。
+4.5.3b1 (iOS) is now available, and resolves some of the issues with iOS 8.
+&amp;mdash; 1Password Beta (@1PasswordBeta) June 4, 2014 
+そこで、数日前にAgileBits Beta Newsletterに登録して待っていたら、今日メールが届きました。
+それに従って、HockyApp ConfigのProfileをインストールした後、1Passwordのベータ版がインストール出来ました。
+つらくない(　´･‿･｀)
+http://bit.ly/love-stamp</description>
     </item>
     
     <item>
       <title>iTunesの動画や音楽の再生スピードを変える方法</title>
-      <link>http://mono0926.com/programming/quicktime/</link>
+      <link>https://mono0926.com/programming/quicktime/</link>
       <pubDate>Wed, 11 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/programming/quicktime/</guid>
-      <description>
-
-&lt;p&gt;iPhoneのPodcastアプリでは再生スピードをコントロール出来て便利なのに、iTunesではその機能が無いので、AppleScriptなど使って出来るようにしてみた。
-本当はiTunesに閉じて実現したいところだけど、それはちょっと難しそう。&lt;/p&gt;
-
-&lt;h2 id=&#34;quicktime-player-7のインストール:2f8c250e353e1b3ac334d422e8922532&#34;&gt;QuickTime Player 7のインストール&lt;/h2&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;新しめのOSXに標準インストールされているQuickTimeはかっこいいけど機能がしょぼいので、再生スピードを変えるにはQuickTime Player 7をインストールする必要がある。&lt;/p&gt;
-
-&lt;p&gt;幸いまだ&lt;a href=&#34;http://support.apple.com/kb/DL923?viewlocale=ja_JP&#34;&gt;QuickTime Player 7&lt;/a&gt;からダウンロード出来る。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;QuickTim 7 は、 Snow Leopard および OS X Lion 上で QTVR、対話型の QuickTime ムービー、MIDI などの古いメディアフォーマットをサポートしています。また、QuickTime Pro の機能を有効にするための QuickTime 7 Pro の登録コードを使用できます。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;とりあえずQucikTime 7をインストールして、「Show A/V Control」(Command + K)で再生スピードなどコントロール出来るウインドウが開くので、機能的にはここまでで完結。&lt;/p&gt;
-
-&lt;h2 id=&#34;automatorでアプリ化:2f8c250e353e1b3ac334d422e8922532&#34;&gt;Automatorでアプリ化&lt;/h2&gt;
-
-&lt;p&gt;上記までだと、一々ファイルをFinderで開いて、QuickTime Player 7で起動するという手順が必要なので、Automatorを使って省力化してみる。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;tell application &amp;quot;iTunes&amp;quot;
-	pause
-	--iTunesで選択中・再生中のファイルおよびその再生位置を保持
-	set my_track to location of selection
-	set my_seconds to player position
-end tell
-tell application &amp;quot;QuickTime Player 7&amp;quot;
-	open my_track
-	set my_movie to first document
-	set ts to time scale of my_movie
-	--とりあえず1.5倍に
-	set rate of my_movie to 1.5
-end tell
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;これをアプリとして保存してDockなどの配置しておけば、iTunesで曲を選択中あるいは再生中の状態で、実行するとQuick Time 7が起動して、その曲を1.5倍速再生してくれる。アプリ形式だと、倍速の数字を指定するパスが無いが、「Show A/V Control」ウインドウを開けば一応あとから変更可能。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/mono0926/AppleScript&#34;&gt;GitHub&lt;/a&gt;の&lt;a href=&#34;https://github.com/mono0926/AppleScript/raw/master/ChangeSpeed.zip&#34;&gt;ChangeSpeed&lt;/a&gt;からダウンロードできます。&lt;/p&gt;
-
-&lt;h2 id=&#34;alfredのworkflow化:2f8c250e353e1b3ac334d422e8922532&#34;&gt;AlfredのWorkflow化&lt;/h2&gt;
-
-&lt;p&gt;Automatorでアプリ化の方法だと、Dockクリックしたりが面倒なのと、倍速の数字を与えられないので、それをAlfredのWorkflowで解消。
-コードとしては、上記のものに、Alfredのオプション引数を与えるようにした(無指定の場合は同じく1.5倍速)程度でほとんどそのまま。
-AppleScriptを実行するWorkflowを新規作成するだけ。
-個人的にはこっちを使おうかな。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/mono0926/AlfredWorkflow&#34;&gt;GitHub&lt;/a&gt;の&lt;a href=&#34;https://github.com/mono0926/AlfredWorkflow/raw/master/changeSpeed/ChangeITunesSpeed.alfredworkflow&#34;&gt;ChangeITunesSpeed.alfredworkflow&lt;/a&gt;からダウンロード出来ます。&lt;/p&gt;
-
-&lt;p&gt;今まで出来なくて不便に感じていたMac上での可変速再生が実現して、満足（´-ω-｀）&lt;/p&gt;
-
-&lt;p&gt;YosemiteでJavaScriptでAppleScript書けるようになったので、リリースしたら書き換えたい(　´･‿･｀)&lt;/p&gt;
-</description>
+      <guid>https://mono0926.com/programming/quicktime/</guid>
+      <description>iPhoneのPodcastアプリでは再生スピードをコントロール出来て便利なのに、iTunesではその機能が無いので、AppleScriptなど使って出来るようにしてみた。 本当はiTunesに閉じて実現したいところだけど、それはちょっと難しそう。
+QuickTime Player 7のインストール 新しめのOSXに標準インストールされているQuickTimeはかっこいいけど機能がしょぼいので、再生スピードを変えるにはQuickTime Player 7をインストールする必要がある。
+幸いまだQuickTime Player 7からダウンロード出来る。
+ QuickTim 7 は、 Snow Leopard および OS X Lion 上で QTVR、対話型の QuickTime ムービー、MIDI などの古いメディアフォーマットをサポートしています。また、QuickTime Pro の機能を有効にするための QuickTime 7 Pro の登録コードを使用できます。
+ とりあえずQucikTime 7をインストールして、「Show A/V Control」(Command + K)で再生スピードなどコントロール出来るウインドウが開くので、機能的にはここまでで完結。
+Automatorでアプリ化 上記までだと、一々ファイルをFinderで開いて、QuickTime Player 7で起動するという手順が必要なので、Automatorを使って省力化してみる。
+tell application &amp;quot;iTunes&amp;quot; pause --iTunesで選択中・再生中のファイルおよびその再生位置を保持 set my_track to location of selection set my_seconds to player position end tell tell application &amp;quot;QuickTime Player 7&amp;quot; open my_track set my_movie to first document set ts to time scale of my_movie --とりあえず1.</description>
     </item>
     
     <item>
       <title>OSX 10.10(Yosemite)やiOS 8にアップデートして困ったこと</title>
-      <link>http://mono0926.com/lifehack/yosemite/</link>
+      <link>https://mono0926.com/lifehack/yosemite/</link>
       <pubDate>Wed, 04 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/lifehack/yosemite/</guid>
-      <description>
-
-&lt;p&gt;例のごとく、何も考えずにメインマシンをOSX 10.10(Yosemite)・iOS 8にしてしまいましたが、いくつか細かいトラブルが。
-でも概ね問題無く使えていて満足（´-ω-｀）&lt;/p&gt;
-
-&lt;p&gt;NDAに気をつけつつ困ったことや解決法など(　´･‿･｀)&lt;/p&gt;
-
-&lt;h2 id=&#34;osx-10-10-yosemite-にアップデートして困ったこと:f2238a5657d5384caa3f8d23d6640654&#34;&gt;OSX 10.10(Yosemite)にアップデートして困ったこと&lt;/h2&gt;
-
-&lt;h3 id=&#34;pckeyboardhack-https-github-com-tekezo-pckeyboardhack-が起動しない:f2238a5657d5384caa3f8d23d6640654&#34;&gt;&lt;a href=&#34;https://github.com/tekezo/PCKeyboardHack&#34;&gt;PCKeyboardHack&lt;/a&gt;が起動しない&lt;/h3&gt;
-
-&lt;h4 id=&#34;追記-pckeyboardhack-10-7-0-https-pqrs-org-macosx-keyremap4macbook-files-pckeyboardhack-10-7-0-dmg-がリリースされました:f2238a5657d5384caa3f8d23d6640654&#34;&gt;【追記】&lt;a href=&#34;https://pqrs.org/macosx/keyremap4macbook/files/PCKeyboardHack-10.7.0.dmg&#34;&gt;PCKeyboardHack-10.7.0&lt;/a&gt;がリリースされました！&lt;/h4&gt;
-
-&lt;p&gt;去年もこれで困ったことを思い出しました。
-Realforceでスペースの両隣のキーでの日本語入力切り替えが効かずにとても不便です。
-Apple純正キーボードだと問題ないですが。&lt;/p&gt;
-
-&lt;p&gt;と思いつつ、Issuesを覗いたら、&lt;a href=&#34;https://github.com/tekezo/PCKeyboardHack/issues/31&#34;&gt;Add 10.10 support #31&lt;/a&gt;ですんなり解決(　´･‿･｀)&lt;/p&gt;
-
-&lt;p&gt;何も考えずこれを打ったら問題無く動くように。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo /sbin/kextload &#39;/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboardHack.10.9.signed.kext&#39;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;bettertouchtool-http-blog-boastr-net-が起動しない:f2238a5657d5384caa3f8d23d6640654&#34;&gt;&lt;a href=&#34;http://blog.boastr.net/&#34;&gt;BetterTouchTool&lt;/a&gt;が起動しない&lt;/h3&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h4 id=&#34;追記-yosemite対応版のbettertouchtool-http-boastr-net-releases-btt0-997-zip-がダウンロード出来るようになりました:f2238a5657d5384caa3f8d23d6640654&#34;&gt;【追記】&lt;a href=&#34;http://boastr.net/releases/btt0.997.zip&#34;&gt;Yosemite対応版のBetterTouchTool&lt;/a&gt;がダウンロード出来るようになりました！&lt;/h4&gt;
-
-&lt;p&gt;これも&lt;a href=&#34;http://blog.boastr.net/os-x-10-10-yosemite/&#34;&gt;OS X 10.10 Yosemite » BetterTouchTool, BetterSnapTool &amp;amp; SecondBar&lt;/a&gt;にすでに記事が上がっていて、現時点ではまだダウンロード出来ないけどまもなく対応版がリリースされる模様。&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;BetterTouchTool crashes on startup, but I already identified the issue and will fix it tomorrow.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.alfredapp.com/&#34;&gt;Alfred&lt;/a&gt;も、Keynotes直後にすぐこんなポスト投稿するなど、どこも動きが速くて素晴らしい(　´･‿･｀)&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;en&#34;&gt;&lt;p&gt;Calm down everybody, Alfred isn’t going anywhere (but up) in OS X Yosemite :) &lt;a href=&#34;http://t.co/wh1mMnxrkt&#34;&gt;http://t.co/wh1mMnxrkt&lt;/a&gt;&lt;/p&gt;&amp;mdash; Alfred App (@alfredapp) &lt;a href=&#34;https://twitter.com/alfredapp/statuses/473517537939185665&#34;&gt;June 2, 2014&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;ただ、Yosemiteはインストールにすごく時間がかかって、残り4分で数十分固まったようになった(大量のファイルコピーなどしている模様・同様の報告多数)ので、失敗したかと思いけっこう怖かったです(　´･‿･｀)&lt;/p&gt;
-
-&lt;h3 id=&#34;homebrewが動かなくなってしまった:f2238a5657d5384caa3f8d23d6640654&#34;&gt;Homebrewが動かなくなってしまった&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;/usr/local/bin/brew: /usr/local/Library/brew.rb: /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby: bad interpreter: No such file or directory
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;code&gt;brew doctor&lt;/code&gt;さえ動かない状態。&lt;/p&gt;
-
-&lt;p&gt;ログに書いてあるとおりSystemのRubyのバージョンが変わったのかーと思いつつ、&lt;code&gt;/usr/local/Library/brew.rb&lt;/code&gt;の以下の&lt;code&gt;1.8&lt;/code&gt;の箇所を&lt;code&gt;2.0&lt;/code&gt;にすれば直った。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -W0
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;しかし、この編集後に&lt;code&gt;brew update&lt;/code&gt;をすると、ローカルの変更が原因でPULL出来ないと怒られる（´-ω-｀）
-とはいえ、この編集をしないとbrewコマンド自体効かないし…と困りつつ、&lt;code&gt;2.0&lt;/code&gt;に編集して&lt;code&gt;brew update&lt;/code&gt;するや否や&lt;code&gt;1.8&lt;/code&gt;に戻せばPULLのタイミングでは変更無し状態になってうまくいった(　´･‿･｀)
-ちょっと不便だけど、そんなにする操作じゃないし、こんな運用でしばらく我慢しよう(　´･‿･｀)&lt;/p&gt;
-
-&lt;h3 id=&#34;sleepでクラッシュ-sleep時にクラッシュしたのは偶然だったっぽい:f2238a5657d5384caa3f8d23d6640654&#34;&gt;&lt;del&gt;Sleepでクラッシュ&lt;/del&gt;Sleep時にクラッシュしたのは偶然だったっぽい&lt;/h3&gt;
-
-&lt;p&gt;まだきちんと確かめてないけど、Sleep後に起こそうとしたら再起動がかかって、こんなログが出てた。
-Sleep後だったのは偶然かも。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;panic(cpu 7 caller 0xffffff801600f06c): &amp;quot;TLB invalidation IPI timeout: &amp;quot; &amp;quot;CPU(s) failed to respond to interrupts, unresponsive CPU bitmap: 0x3d, NMIPI acks: orig: 0x0, now: 0x0&amp;quot;@/SourceCache/xnu/xnu-2738.0.0.0.5/osfmk/x86_64/pmap.c:2470
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;ios-8にアップデートして困ったこと:f2238a5657d5384caa3f8d23d6640654&#34;&gt;iOS 8にアップデートして困ったこと&lt;/h2&gt;
-
-&lt;h3 id=&#34;iphoneで-1password-https-agilebits-com-onepassword-が同期できなくなってクラッシュする:f2238a5657d5384caa3f8d23d6640654&#34;&gt;iPhoneで&lt;a href=&#34;https://agilebits.com/onepassword&#34;&gt;1Password&lt;/a&gt;が同期できなくなってクラッシュする&lt;/h3&gt;
-
-&lt;h4 id=&#34;追記-ios8で1passwordが使えるようになった-monohub-http-mono0926-com-blog-2014-06-13-password-で解決-ω:f2238a5657d5384caa3f8d23d6640654&#34;&gt;【追記】&lt;a href=&#34;http://mono0926.com/blog/2014/06/13/password/&#34;&gt;iOS8で1Passwordが使えるようになった - monoHub&lt;/a&gt;で解決（｀・ω・´）&lt;/h4&gt;
-
-&lt;p&gt;けっこう依存度が高いので、これけっこう困る(　´･‿･｀)
-Beta版使っているのが悪いししばらく我慢かなあと思っていたら、すでに問題認識しているらしく、わりと前向きな対応してもらえそうな雰囲気(　´･‿･｀)
-ついでに秋くらいに指紋認証でアンロックも実装してくれることを期待(　´･‿･｀)&lt;/p&gt;
-
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;en&#34;&gt;&lt;p&gt;iOS 8 folks, there sure are a lot of you using the beta! I’m a bit…broken. Sorry. My devs are working on it!&amp;#10;&amp;#10;[…]&lt;/p&gt;&amp;mdash; 1Password Beta (@1PasswordBeta) &lt;a href=&#34;https://twitter.com/1PasswordBeta/statuses/473747191228399616&#34;&gt;June 3, 2014&lt;/a&gt;&lt;/blockquote&gt;
-&lt;script async src=&#34;//platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;lineスタンプが買えない-使えない:f2238a5657d5384caa3f8d23d6640654&#34;&gt;LINEスタンプが買えない・使えない&lt;/h3&gt;
-
-&lt;p&gt;買おうとするとエラーになってしまうし、使おうとすると進捗ダイアログが終わらない（´-ω-｀）けっこう困る（´-ω-｀）
-&lt;a href=&#34;http://a.scn.jp/s/0VrEMIHAB&#34;&gt;申請中の個人スタンプ&lt;/a&gt;も買えないし使えなくなりそう（´・д・｀）
-これに関しては調べても困っている人はいても解決手段は現状無さそう。&lt;/p&gt;
-
-&lt;p&gt;とりあえずパソコン版でしのごう（´-ω-｀）Yosemite上のLINEは問題無いし。&lt;/p&gt;
-
-&lt;h3 id=&#34;tweetbot:f2238a5657d5384caa3f8d23d6640654&#34;&gt;Tweetbot&lt;/h3&gt;
-
-&lt;p&gt;UI周りかなりがんばってるのが裏目に出て、動作がボロボロ。
-特に、URLをPocketに保存出来ないのがつらたん。
-困っている人が他にもいるという程度しか情報無かったので、とりあえずEchofonでしのごう(　´･‿･｀)&lt;/p&gt;
-
-&lt;p&gt;iOS 8については、あとはクラッシュ率が高いとかですかね。
-NDAで細かいところは書けないけど、使用感も特に大きな変化無く(　´･‿･｀)&lt;/p&gt;
-
-&lt;p&gt;というわけで、ちょくちょく問題はありつつ、最新の環境楽しめているので、アップデートして良かった(　´･‿･｀)
-趣味みたいなもののあので、仮想環境とか検証機とかで試しても個人的にはあまり意味がなく、やはり普段マシンで楽しんでこそと思う(　´･‿･｀)&lt;/p&gt;
-</description>
+      <guid>https://mono0926.com/lifehack/yosemite/</guid>
+      <description>例のごとく、何も考えずにメインマシンをOSX 10.10(Yosemite)・iOS 8にしてしまいましたが、いくつか細かいトラブルが。 でも概ね問題無く使えていて満足（´-ω-｀）
+NDAに気をつけつつ困ったことや解決法など(　´･‿･｀)
+OSX 10.10(Yosemite)にアップデートして困ったこと PCKeyboardHackが起動しない 【追記】PCKeyboardHack-10.7.0がリリースされました！ 去年もこれで困ったことを思い出しました。 Realforceでスペースの両隣のキーでの日本語入力切り替えが効かずにとても不便です。 Apple純正キーボードだと問題ないですが。
+と思いつつ、Issuesを覗いたら、Add 10.10 support #31ですんなり解決(　´･‿･｀)
+何も考えずこれを打ったら問題無く動くように。
+sudo /sbin/kextload &#39;/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboardHack.10.9.signed.kext&#39;  BetterTouchToolが起動しない 【追記】Yosemite対応版のBetterTouchToolがダウンロード出来るようになりました！ これもOS X 10.10 Yosemite » BetterTouchTool, BetterSnapTool &amp;amp; SecondBarにすでに記事が上がっていて、現時点ではまだダウンロード出来ないけどまもなく対応版がリリースされる模様。
+ BetterTouchTool crashes on startup, but I already identified the issue and will fix it tomorrow.
+ Alfredも、Keynotes直後にすぐこんなポスト投稿するなど、どこも動きが速くて素晴らしい(　´･‿･｀)
+Calm down everybody, Alfred isn’t going anywhere (but up) in OS X Yosemite :) http://t.co/wh1mMnxrkt
+&amp;mdash; Alfred App (@alfredapp) June 2, 2014</description>
     </item>
     
     <item>
       <title>SwiftでラヴさんWEBアルバムを開くだけのアプリ作った</title>
-      <link>http://mono0926.com/programming/swift/</link>
+      <link>https://mono0926.com/programming/swift/</link>
       <pubDate>Tue, 03 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/programming/swift/</guid>
-      <description>&lt;p&gt;昼休みに、&lt;a href=&#34;https://developer.apple.com/swift/&#34;&gt;Swift&lt;/a&gt;で、&lt;a href=&#34;https://github.com/mono0926/SwiftSample&#34;&gt;ラヴさんWEBアルバムを開くだけのアプリ&lt;/a&gt;作った。&lt;/p&gt;
-
-&lt;p&gt;Swiftもそうだけど、Xcode 6も色々変わってて面白い(　´･‿･｀)&lt;/p&gt;
-</description>
+      <guid>https://mono0926.com/programming/swift/</guid>
+      <description>昼休みに、Swiftで、ラヴさんWEBアルバムを開くだけのアプリ作った。
+Swiftもそうだけど、Xcode 6も色々変わってて面白い(　´･‿･｀)</description>
     </item>
     
     <item>
       <title>RescueTimeを昨日から使い始めた</title>
-      <link>http://mono0926.com/lifehack/rescuetime/</link>
+      <link>https://mono0926.com/lifehack/rescuetime/</link>
       <pubDate>Thu, 29 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/lifehack/rescuetime/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.rescuetime.com&#34;&gt;RescueTime&lt;/a&gt;を昨日から使い始めたけど、素晴らしい。
-多少カスタマイズ出来るけど、ほぼ初期設定で、すごく良い感じにデスクワークの統計を取ってくれる。
-そんなのがあるとかは、&lt;a href=&#34;http://www.lifehacker.jp/2009/03/rescuetime.html&#34;&gt;『RescueTime』で、お仕事状況をすべてチェック（無料） : ライフハッカー［日本版］&lt;/a&gt;などで知りつつスルーしてたけど、&lt;a href=&#34;https://twitter.com/PocketHits&#34;&gt;PocketHits (PocketHits) on Twitter&lt;/a&gt;で流れてきた&lt;a href=&#34;http://www.businessinsider.com/productivity-hacks-from-startup-execs-2014-5?utm_source=pocket&amp;amp;utm_medium=twitter&amp;amp;utm_campaign=pockethits&#34;&gt;Productivity Hacks From Startup Execs - Business Insider&lt;/a&gt;を見て試してみたらはまった感じ。&lt;/p&gt;
-
-&lt;p&gt;学生時代にライフログの研究していたのもあって、こういう生活のデジタルデータを集めるのはすごく興味がありました。
-でも、例えばわりと最近流行りの腕に巻いて生活強度を計るようなデバイスとかGPSで移動経路を取得するのは、結局運動パターン的には平日ほぼ毎日変わり映えの無いものに帰着するし、たまに動くと別にデータを見せられるまでもなく自覚しているし、という感じでしっくり来なかった。&lt;/p&gt;
-
-&lt;p&gt;しかし、日々のデスクワークをデータで表示してくれるのは、けっこう変化あって面白いし、自分の行動へのフィードバックにもなると感じたり。&lt;/p&gt;
-
-&lt;p&gt;本日の活動はこんな感じ。
-フルでパソコンに向かっていると1時間当たりの分母は60分になるけど、移動中や退席中などデスクを離れていると分母自体が減ります。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/RescueTime.png&#34; alt=&#34;RescueTime&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;今朝は自宅で4時くらいから開発系作業とまったりニュース記事閲覧をして、会社に移動して仕事しつつ、ちょっとニュース見て息抜きしてまた仕事復帰して昼休みになり、昼休み明けはゆるめに仕事開始しつつ、夕方前後に再びピークに持っていって帰るみたいな感じで、かなりキレイにログが取れてる。&lt;/p&gt;
-
-&lt;p&gt;今日はXXXが多すぎたなとか、今日はよくがんばったとか、あるいは週や月の統計を見るとさらに色々自分のペースを客観的に見れそうで楽しみ。&lt;/p&gt;
-
-&lt;p&gt;ここまで良い感じに見せられると、productivityやsoftware developmentの数値を上げてハイスコア狙いたくなるなど、ゲーミフィケーション的な要素もあったり。&lt;/p&gt;
-
-&lt;p&gt;目標も自分で設定出来て、今日は、生産的な時間・開発に費やせた時間・気が散った時間、ともに目標値を超えて良かった。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/summary.png&#34; alt=&#34;summary&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;というわけで、しばらく続けようと思う。
-続けること自体は何の負担も無くて素晴らしい。
-ただ、スコアを高く維持しようとしてると、捗る一方疲れてきそうな懸念もあり（´-ω-｀）&lt;/p&gt;
-
-&lt;p&gt;時間を気にしすぎると、ただいるだけで実際の成果を伴わないとかありがちだけど(残業代目当ての無駄な残業など)、これはその質自体も評価されるから、自然とそれも防げるような感じになっているように思う。&lt;/p&gt;
-</description>
+      <guid>https://mono0926.com/lifehack/rescuetime/</guid>
+      <description>RescueTimeを昨日から使い始めたけど、素晴らしい。 多少カスタマイズ出来るけど、ほぼ初期設定で、すごく良い感じにデスクワークの統計を取ってくれる。 そんなのがあるとかは、『RescueTime』で、お仕事状況をすべてチェック（無料） : ライフハッカー［日本版］などで知りつつスルーしてたけど、PocketHits (PocketHits) on Twitterで流れてきたProductivity Hacks From Startup Execs - Business Insiderを見て試してみたらはまった感じ。
+学生時代にライフログの研究していたのもあって、こういう生活のデジタルデータを集めるのはすごく興味がありました。 でも、例えばわりと最近流行りの腕に巻いて生活強度を計るようなデバイスとかGPSで移動経路を取得するのは、結局運動パターン的には平日ほぼ毎日変わり映えの無いものに帰着するし、たまに動くと別にデータを見せられるまでもなく自覚しているし、という感じでしっくり来なかった。
+しかし、日々のデスクワークをデータで表示してくれるのは、けっこう変化あって面白いし、自分の行動へのフィードバックにもなると感じたり。
+本日の活動はこんな感じ。 フルでパソコンに向かっていると1時間当たりの分母は60分になるけど、移動中や退席中などデスクを離れていると分母自体が減ります。
+今朝は自宅で4時くらいから開発系作業とまったりニュース記事閲覧をして、会社に移動して仕事しつつ、ちょっとニュース見て息抜きしてまた仕事復帰して昼休みになり、昼休み明けはゆるめに仕事開始しつつ、夕方前後に再びピークに持っていって帰るみたいな感じで、かなりキレイにログが取れてる。
+今日はXXXが多すぎたなとか、今日はよくがんばったとか、あるいは週や月の統計を見るとさらに色々自分のペースを客観的に見れそうで楽しみ。
+ここまで良い感じに見せられると、productivityやsoftware developmentの数値を上げてハイスコア狙いたくなるなど、ゲーミフィケーション的な要素もあったり。
+目標も自分で設定出来て、今日は、生産的な時間・開発に費やせた時間・気が散った時間、ともに目標値を超えて良かった。
+というわけで、しばらく続けようと思う。 続けること自体は何の負担も無くて素晴らしい。 ただ、スコアを高く維持しようとしてると、捗る一方疲れてきそうな懸念もあり（´-ω-｀）
+時間を気にしすぎると、ただいるだけで実際の成果を伴わないとかありがちだけど(残業代目当ての無駄な残業など)、これはその質自体も評価されるから、自然とそれも防げるような感じになっているように思う。</description>
     </item>
     
     <item>
       <title>NodeJS &#43; Express &#43; Stylus &#43; Jade &#43; AngularJS &#43; Redisなどなどで、簡単なTODOアプリ</title>
-      <link>http://mono0926.com/programming/todo/</link>
+      <link>https://mono0926.com/programming/todo/</link>
       <pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/programming/todo/</guid>
-      <description>&lt;p&gt;NodeJS + Express + Stylus + Jade + AngularJS + Redisなどなどで、&lt;a href=&#34;http://ice-me.herokuapp.com/todos&#34;&gt;簡単なTODOアプリ&lt;/a&gt;作った。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/gp/product/484433588X/ref=as_li_ss_tl?ie=UTF8&amp;amp;camp=247&amp;amp;creative=7399&amp;amp;creativeASIN=484433588X&amp;amp;linkCode=as2&amp;amp;tag=mono0926-22&#34;&gt;TypeScriptリファレンス Ver.1.0対応&lt;/a&gt;のサンプルを参考に、アレンジした感じ(オリジナルはSQLiteなど使用)。&lt;/p&gt;
-
-&lt;p&gt;Redisでのデータの持ち方は&lt;a href=&#34;http://redis.shibu.jp/tutorial/&#34;&gt;ケーススタディ — redis 2.0.3 documentation&lt;/a&gt;である程度分かったけど、なかなか迷うところや困るところも多いので、Redis入門読んでじっくり勉強中。
-&lt;a href=&#34;http://ice-me.herokuapp.com/todos&#34;&gt;TODOアプリ&lt;/a&gt;では、なんとか動作自体は出来たけど、ちょっとしっくり来ないところもあったり。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/gp/product/B00HSC64P8/ref=as_li_ss_il?ie=UTF8&amp;camp=247&amp;creative=7399&amp;creativeASIN=B00HSC64P8&amp;linkCode=as2&amp;tag=mono0926-22&#34;&gt;&lt;img border=&#34;0&#34; src=&#34;http://ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B00HSC64P8&amp;Format=_SL160_&amp;ID=AsinImage&amp;MarketPlace=JP&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=mono0926-22&#34; &gt;&lt;/a&gt;&lt;img src=&#34;http://ir-jp.amazon-adsystem.com/e/ir?t=mono0926-22&amp;l=as2&amp;o=9&amp;a=B00HSC64P8&#34; width=&#34;1&#34; height=&#34;1&#34; border=&#34;0&#34; alt=&#34;&#34; style=&#34;border:none !important; margin:0px !important;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;「Redis入門」というタイトルだけど、原書は&lt;a href=&#34;http://www.amazon.com/gp/product/1617290858/ref=as_li_tl?ie=UTF8&amp;amp;camp=1789&amp;amp;creative=390957&amp;amp;creativeASIN=1617290858&amp;amp;linkCode=as2&amp;amp;tag=mono0926-20&amp;amp;linkId=TTS6QNHCUFJDJESI&#34;&gt;Redis in Action&lt;/a&gt;なだけあって、けっこう歯ごたえのある内容。一通り理解して手を動かせば、RedisやKVSのパラダイムに慣れられそう。&lt;/p&gt;
-
-&lt;p&gt;サーバーサイドは外部モジュール使ってるけど(&lt;code&gt;import xxx = require(&#39;yyy&#39;)&lt;/code&gt;形式)、クライアント側は内部モジュール形式で書いて手動で下記を実行して連結しているのも微妙なので、改善したい（´-ω-｀）他はWebStormで普通に実行したり、herokuへのデプロイはGitのPUSHで出来て楽なのだけれど（´-ω-｀）&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;tsc @compile.tscparams
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;AngularJSとJadeのおかげで、HTML部分がすごくクリーンになっているのはとても良い感じ(　´･‿･｀)&lt;/p&gt;
-
-&lt;script src=&#34;https://gist.github.com/mono0926/3ee7f4c5016e88a6c6a3.js&#34;&gt;&lt;/script&gt;
-</description>
+      <guid>https://mono0926.com/programming/todo/</guid>
+      <description>NodeJS + Express + Stylus + Jade + AngularJS + Redisなどなどで、簡単なTODOアプリ作った。
+TypeScriptリファレンス Ver.1.0対応のサンプルを参考に、アレンジした感じ(オリジナルはSQLiteなど使用)。
+Redisでのデータの持ち方はケーススタディ — redis 2.0.3 documentationである程度分かったけど、なかなか迷うところや困るところも多いので、Redis入門読んでじっくり勉強中。 TODOアプリでは、なんとか動作自体は出来たけど、ちょっとしっくり来ないところもあったり。
+「Redis入門」というタイトルだけど、原書はRedis in Actionなだけあって、けっこう歯ごたえのある内容。一通り理解して手を動かせば、RedisやKVSのパラダイムに慣れられそう。
+サーバーサイドは外部モジュール使ってるけど(import xxx = require(&#39;yyy&#39;)形式)、クライアント側は内部モジュール形式で書いて手動で下記を実行して連結しているのも微妙なので、改善したい（´-ω-｀）他はWebStormで普通に実行したり、herokuへのデプロイはGitのPUSHで出来て楽なのだけれど（´-ω-｀）
+tsc @compile.tscparams  AngularJSとJadeのおかげで、HTML部分がすごくクリーンになっているのはとても良い感じ(　´･‿･｀)
+ </description>
     </item>
     
     <item>
       <title>TypeScript・AngularJS・Jade・Stylusでサンプルコード</title>
-      <link>http://mono0926.com/programming/angularjs/</link>
+      <link>https://mono0926.com/programming/angularjs/</link>
       <pubDate>Wed, 14 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/programming/angularjs/</guid>
-      <description>
-
-&lt;p&gt;最近Web系の勉強してて、Node.js・Express・Redis・Herokuなどサーバーサイド周り弄ってたけど、そろそろフロントエンドもという感じで色々やってみた。&lt;/p&gt;
-
-&lt;h3 id=&#34;サンプル置いとく-http-ice-me-herokuapp-com-angular:cd1b7a9a52bc143e9e26faa4af35e3f6&#34;&gt;&lt;a href=&#34;http://ice-me.herokuapp.com/angular#/&#34;&gt;サンプル置いとく&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;AngularJSはけっこうリッチなライブラリで、全部身につけるのはしばらくかかりそうだけど、今日主要な機能はざっくり書けるようになった感(　´･‿･｀)
-&lt;a href=&#34;http://vuejs.org/&#34;&gt;Vue.js&lt;/a&gt;と迷ったけど、&lt;a href=&#34;https://github.com/borisyankov/DefinitelyTyped&#34;&gt;borisyankov/DefinitelyTyped&lt;/a&gt;にまだ無かったし、とりあえず今メジャーなAngularJSやっとこうか、という感じ。&lt;/p&gt;
-
-&lt;p&gt;JadeとStylusは記法いくつか覚えらればわりとサクサク書けて、気に入った。これ系いくつかあるけど、どれがいいんですかね。あまり比較検討せずに決めてしまった。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;AngularJS: MVW(Model-View-Whatever)フレームワークというらしい。Whatever=厳密に定義しない、みたいな意味らしい。JS・HTML周りのスパゲッティコード解消。MV*とかはともかく、とりあえずバインディング機構あるのが嬉しい。&lt;/li&gt;
-&lt;li&gt;Jade: HTMLの簡易記法 + αの機能&lt;/li&gt;
-&lt;li&gt;Stylus: SASS・LESSの後発版みたいな感じ？&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&#34;資料:cd1b7a9a52bc143e9e26faa4af35e3f6&#34;&gt;資料&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://qiita.com/opengl-8080/items/2fe0a20c314b1c824cc5&#34;&gt;AngularJS使い方メモ - Qiita&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://qiita.com/icoxfog417/items/2ac773c33a8b34288551&#34;&gt;AngularJS - お前のAngular.jsはもうMVCではない。と言われないためのTutorial - Qiita&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://qiita.com/zoetro/items/a45dbc18bb2b22e944b2&#34;&gt;AngularJSのMVWパターンを理解する - Qiita&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.angularjs.org/guide/concepts&#34;&gt;AngularJS: Developer Guide: Conceptual Overview&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://qiita.com/sasaplus1/items/189560f80cf337d40fdf&#34;&gt;Node.js - Jadeの記法について（あまりまとまっていない） - Qiita&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://naltatis.github.io/jade-syntax-docs/&#34;&gt;Jade Template Syntax Documentation by Example&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;一気に色々やると破綻しそうかと心配だったけど、意外とスムーズに出来たのは良かった。&lt;/p&gt;
-
-&lt;p&gt;AngularJS、&lt;a href=&#34;http://qiita.com/opengl-8080/items/2fe0a20c314b1c824cc5&#34;&gt;AngularJS使い方メモ - Qiita&lt;/a&gt;の「ページの一部に動的にテンプレートを読み込む」くらいまでで、まだシングルページアプリケーション周りの機能は終えてないから、また続きやろう（´-ω-｀）&lt;/p&gt;
-
-&lt;h2 id=&#34;コード:cd1b7a9a52bc143e9e26faa4af35e3f6&#34;&gt;コード&lt;/h2&gt;
-
-&lt;script src=&#34;https://gist.github.com/mono0926/30e00a6a26498eff5973.js&#34;&gt;&lt;/script&gt;
-
-&lt;script src=&#34;https://gist.github.com/mono0926/2e8b58d3003f1fcbfa1c.js&#34;&gt;&lt;/script&gt;
-
-&lt;script src=&#34;https://gist.github.com/mono0926/780a92e2fe8c7c80e80f.js&#34;&gt;&lt;/script&gt;
-</description>
+      <guid>https://mono0926.com/programming/angularjs/</guid>
+      <description> 最近Web系の勉強してて、Node.js・Express・Redis・Herokuなどサーバーサイド周り弄ってたけど、そろそろフロントエンドもという感じで色々やってみた。
+サンプル置いとく AngularJSはけっこうリッチなライブラリで、全部身につけるのはしばらくかかりそうだけど、今日主要な機能はざっくり書けるようになった感(　´･‿･｀) Vue.jsと迷ったけど、borisyankov/DefinitelyTypedにまだ無かったし、とりあえず今メジャーなAngularJSやっとこうか、という感じ。
+JadeとStylusは記法いくつか覚えらればわりとサクサク書けて、気に入った。これ系いくつかあるけど、どれがいいんですかね。あまり比較検討せずに決めてしまった。
+ AngularJS: MVW(Model-View-Whatever)フレームワークというらしい。Whatever=厳密に定義しない、みたいな意味らしい。JS・HTML周りのスパゲッティコード解消。MV*とかはともかく、とりあえずバインディング機構あるのが嬉しい。 Jade: HTMLの簡易記法 + αの機能 Stylus: SASS・LESSの後発版みたいな感じ？  資料  AngularJS使い方メモ - Qiita AngularJS - お前のAngular.jsはもうMVCではない。と言われないためのTutorial - Qiita AngularJSのMVWパターンを理解する - Qiita AngularJS: Developer Guide: Conceptual Overview Node.js - Jadeの記法について（あまりまとまっていない） - Qiita Jade Template Syntax Documentation by Example  一気に色々やると破綻しそうかと心配だったけど、意外とスムーズに出来たのは良かった。
+AngularJS、AngularJS使い方メモ - Qiitaの「ページの一部に動的にテンプレートを読み込む」くらいまでで、まだシングルページアプリケーション周りの機能は終えてないから、また続きやろう（´-ω-｀）
+コード    </description>
     </item>
     
     <item>
       <title>golangの環境構築</title>
-      <link>http://mono0926.com/programming/golang/</link>
+      <link>https://mono0926.com/programming/golang/</link>
       <pubDate>Tue, 13 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/programming/golang/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/GoCon/GoCon/blob/master/2014spring.rst&#34;&gt;GoCon/2014spring.rst at master · GoCon/GoCon&lt;/a&gt;に備えて、とりあえずgolangのセットアップと、暇なときに&lt;a href=&#34;http://tour.golang.org/#1&#34;&gt;A Tour of Go&lt;/a&gt;をやっておこうかと(　´･‿･｀)&lt;/p&gt;
-
-&lt;h2 id=&#34;gvmセットアップ:ed67c3356329c447f68f2ff6b67b3daf&#34;&gt;gvmセットアップ&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://github.com/moovweb/gvm&#34;&gt;moovweb/gvm&lt;/a&gt;に書いてある通りにやった。
-mercurialのインストールが必要だったので、Brewfileに追記しておいた。&lt;/p&gt;
-
-&lt;p&gt;あと、&lt;code&gt;gvm install go1&lt;/code&gt;に失敗したので、&lt;a href=&#34;https://github.com/moovweb/gvm/issues/38#issuecomment-39842170&#34;&gt;Issues on OSX · Issue #38 · moovweb/gvm&lt;/a&gt;に書いてある対応で何とかなった。&lt;/p&gt;
-
-&lt;p&gt;普通に&lt;code&gt;brew install go&lt;/code&gt;のが楽だけど、ちょっとがんばった（´-ω-｀）&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&#34;実行:ed67c3356329c447f68f2ff6b67b3daf&#34;&gt;実行&lt;/h2&gt;
-
-&lt;p&gt;以下を実行。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;package main
-import &amp;quot;fmt&amp;quot;
-func main() {
-    fmt.Printf(&amp;quot;Hello world!&amp;quot;)
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://mono0926.com/blog/2014/05/06/renew/&#34;&gt;OSXの開発環境を整えた - monoHub&lt;/a&gt;でJetBrainのIDEいくつかインストールしてたけど、&lt;a href=&#34;http://www.jetbrains.com/idea/&#34;&gt;IntelliJ IDEA — The Best Java and Polyglot IDE&lt;/a&gt;で全部包含してるのね、情弱つらたん（´-ω-｀）&lt;/p&gt;
-
-&lt;p&gt;まあそこそこのお値段だし、適当に色々試用して、良かったら最終的にUltimate Edtion買おうかな（´-ω-｀）
-Web StormでもGoのプラグインインストール出来たけど、SDKの設定とかうまく出来なかったりぐぐったりして出た説明と違うからCommunity Edition版のIntelliJでやった。&lt;/p&gt;
-
-&lt;p&gt;実行できたけど、&lt;code&gt;go build hoge.go&lt;/code&gt;で生成されるような実行ファイルが生成出来なくて謎(　´･‿･｀)&lt;br /&gt;
-GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分からなくてつらたん（´-ω-｀）&lt;/p&gt;
-
-&lt;h3 id=&#34;解決:ed67c3356329c447f68f2ff6b67b3daf&#34;&gt;解決&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/go-lang-plugin-org/go-lang-idea-plugin/blob/master/Missing%20ENV.md&#34;&gt;go-lang-idea-plugin/Missing ENV.md at master · go-lang-plugin-org/go-lang-idea-plugin&lt;/a&gt;を参考に設定したら、警告ダイアログが出なくなった。&lt;/li&gt;
-&lt;li&gt;Run Configurationsで、Build before runにチェックを付けてディレクトリをbinに設定したら、実行ファイルも生成されるようになった。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/go.png&#34; alt=&#34;go&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;ただ、多分IntelliJがGoのデバッグ実行に対応していない？(無反応)のがつらたん（´-ω-｀）
-&lt;a href=&#34;https://github.com/go-lang-plugin-org/go-lang-idea-plugin/issues/25&#34;&gt;Support for debugging · Issue #25 · go-lang-plugin-org/go-lang-idea-plugin&lt;/a&gt;を見ると、GAEプロジェクトのみ対応？？よく分からない（´-ω-｀）&lt;/p&gt;
-
-&lt;p&gt;あと、&lt;a href=&#34;https://twitter.com/yabuchin_y&#34;&gt;ıɥɔınʎ (yabuchin_y) on Twitter&lt;/a&gt;さんに&lt;a href=&#34;https://gophercasts.io/&#34;&gt;GopherCasts&lt;/a&gt;を教えてもらった(　´･‿･｀)&lt;/p&gt;
-</description>
+      <guid>https://mono0926.com/programming/golang/</guid>
+      <description>GoCon/2014spring.rst at master · GoCon/GoConに備えて、とりあえずgolangのセットアップと、暇なときにA Tour of Goをやっておこうかと(　´･‿･｀)
+gvmセットアップ moovweb/gvmに書いてある通りにやった。 mercurialのインストールが必要だったので、Brewfileに追記しておいた。
+あと、gvm install go1に失敗したので、Issues on OSX · Issue #38 · moovweb/gvmに書いてある対応で何とかなった。
+普通にbrew install goのが楽だけど、ちょっとがんばった（´-ω-｀）
+実行 以下を実行。
+package main import &amp;quot;fmt&amp;quot; func main() { fmt.Printf(&amp;quot;Hello world!&amp;quot;) }  OSXの開発環境を整えた - monoHubでJetBrainのIDEいくつかインストールしてたけど、IntelliJ IDEA — The Best Java and Polyglot IDEで全部包含してるのね、情弱つらたん（´-ω-｀）
+まあそこそこのお値段だし、適当に色々試用して、良かったら最終的にUltimate Edtion買おうかな（´-ω-｀） Web StormでもGoのプラグインインストール出来たけど、SDKの設定とかうまく出来なかったりぐぐったりして出た説明と違うからCommunity Edition版のIntelliJでやった。
+実行できたけど、go build hoge.goで生成されるような実行ファイルが生成出来なくて謎(　´･‿･｀)
+GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分からなくてつらたん（´-ω-｀）
+解決  go-lang-idea-plugin/Missing ENV.md at master · go-lang-plugin-org/go-lang-idea-pluginを参考に設定したら、警告ダイアログが出なくなった。 Run Configurationsで、Build before runにチェックを付けてディレクトリをbinに設定したら、実行ファイルも生成されるようになった。  ただ、多分IntelliJがGoのデバッグ実行に対応していない？(無反応)のがつらたん（´-ω-｀） Support for debugging · Issue #25 · go-lang-plugin-org/go-lang-idea-pluginを見ると、GAEプロジェクトのみ対応？？よく分からない（´-ω-｀）</description>
     </item>
     
     <item>
       <title>OSXの開発環境を整えた</title>
-      <link>http://mono0926.com/programming/renew/</link>
+      <link>https://mono0926.com/programming/renew/</link>
       <pubDate>Tue, 06 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/programming/renew/</guid>
-      <description>
-
-&lt;p&gt;Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。
-Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイッチしたいなとか思ったのが発端。&lt;br /&gt;
-参考: &lt;a href=&#34;http://rdepf.hatenablog.jp/entry/2014/03/07/122337&#34;&gt;Node.jsのコールバック地獄をPromiseやGeneratorを使って解消する - HackerNews翻訳してみた&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;わりと&lt;code&gt;brew install XXX&lt;/code&gt;で雑に各種環境インストールしてたので、これを気に色々直した。&lt;/p&gt;
-
-&lt;h2 id=&#34;homebrewアンインストール:e4940d6974c012c0c770280b21490de7&#34;&gt;Homebrewアンインストール&lt;/h2&gt;
-
-&lt;p&gt;ゴミが残るのいやだったので、&lt;a href=&#34;https://gist.github.com/mxcl/1173223&#34;&gt;Uninstall Homebrew&lt;/a&gt;でhomebrewをアンインストール。&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&#34;brewfile導入:e4940d6974c012c0c770280b21490de7&#34;&gt;Brewfile導入&lt;/h2&gt;
-
-&lt;p&gt;以下など見て便利そうだと思っていたので、Brewfile導入。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.1x1.jp/blog/2014/04/how-to-setup-application-on-osx.html&#34;&gt;Mac OSX をクリーンインストールしてからの環境構築メモ - Shin x blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.livedoor.jp/sonots/archives/35251881.html&#34;&gt;「BrewfileでHomebrewパッケージを管理する」をやってみた - sonots:blog&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://tnakamura.hatenablog.com/entry/2014/04/29/113727&#34;&gt;MacBook にインストールしているアプリやツールをメモする代わりに Brewfile を作った - present&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;これだけで一気にインストール出来てとても便利。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;brew bundle
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;僕の：&lt;a href=&#34;https://github.com/mono0926/Environment/blob/master/OSX/Brewfile&#34;&gt;Environment/OSX/Brewfile at master · mono0926/Environment&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;今後も、Homebrewで何か新しくインストールするときメンテナンスしていくようにしよう。&lt;/p&gt;
-
-&lt;h2 id=&#34;その他開発環境:e4940d6974c012c0c770280b21490de7&#34;&gt;その他開発環境&lt;/h2&gt;
-
-&lt;p&gt;&lt;code&gt;brew install XXX&lt;/code&gt;で適当にインストールせずに、バージョンの切り替えが容易なようにした。
-いくつか種類あったけど、基本後発のを導入してみた。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Python: &lt;a href=&#34;https://github.com/yyuu/pyenv&#34;&gt;yyuu/pyenv&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Ruby: &lt;a href=&#34;https://github.com/sstephenson/rbenv&#34;&gt;sstephenson/rbenv&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Node.js: &lt;a href=&#34;https://github.com/creationix/nvm&#34;&gt;creationix/nvm&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;nvmはzshとの相性悪くて日本では&lt;a href=&#34;https://github.com/hokaccha/nodebrew&#34;&gt;hokaccha/nodebrew&lt;/a&gt;がけっこう人気っぽかったけど特に問題無かったのでnvmにした。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;諸々雑なところがあるけど、&lt;a href=&#34;https://github.com/mono0926/Environment/tree/master/OSX&#34;&gt;Environment/OSX at master · mono0926/Environment&lt;/a&gt;でセットアップスクリプト管理。&lt;/p&gt;
-
-&lt;h2 id=&#34;ide導入:e4940d6974c012c0c770280b21490de7&#34;&gt;IDE導入&lt;/h2&gt;
-
-&lt;p&gt;スクリプト系言語は、最近はわりとSublime Textで書いていたけど、やっぱり補完がもう少し聞いてくれないと厳しいので、なるべくIDE使うようにしようと思う。&lt;br /&gt;
-IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれば捗るかなと。&lt;br /&gt;
-今まではNetBeansかたまにEclipseだったけど、乗り換え。少しずつ慣れていこう（´-ω-｀）&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.jetbrains.com/webstorm/&#34;&gt;WebStorm :: The smartest JavaScript IDE&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.jetbrains.com/ruby/&#34;&gt;Ruby on Rails IDE :: JetBrains RubyMine&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.jetbrains.com/pycharm/&#34;&gt;Python IDE &amp;amp; Django IDE for Web developers : JetBrains PyCharm&lt;/a&gt;
-
-&lt;ul&gt;
-&lt;li&gt;CE版は無料&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <guid>https://mono0926.com/programming/renew/</guid>
+      <description> Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。 Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイッチしたいなとか思ったのが発端。
+参考: Node.jsのコールバック地獄をPromiseやGeneratorを使って解消する - HackerNews翻訳してみた
+わりとbrew install XXXで雑に各種環境インストールしてたので、これを気に色々直した。
+Homebrewアンインストール ゴミが残るのいやだったので、Uninstall Homebrewでhomebrewをアンインストール。
+Brewfile導入 以下など見て便利そうだと思っていたので、Brewfile導入。
+ Mac OSX をクリーンインストールしてからの環境構築メモ - Shin x blog 「BrewfileでHomebrewパッケージを管理する」をやってみた - sonots:blog MacBook にインストールしているアプリやツールをメモする代わりに Brewfile を作った - present  これだけで一気にインストール出来てとても便利。
+brew bundle  僕の：Environment/OSX/Brewfile at master · mono0926/Environment
+今後も、Homebrewで何か新しくインストールするときメンテナンスしていくようにしよう。
+その他開発環境 brew install XXXで適当にインストールせずに、バージョンの切り替えが容易なようにした。 いくつか種類あったけど、基本後発のを導入してみた。
+ Python: yyuu/pyenv Ruby: sstephenson/rbenv Node.js: creationix/nvm  nvmはzshとの相性悪くて日本ではhokaccha/nodebrewがけっこう人気っぽかったけど特に問題無かったのでnvmにした。   諸々雑なところがあるけど、Environment/OSX at master · mono0926/Environmentでセットアップスクリプト管理。
+IDE導入 スクリプト系言語は、最近はわりとSublime Textで書いていたけど、やっぱり補完がもう少し聞いてくれないと厳しいので、なるべくIDE使うようにしようと思う。
+IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれば捗るかなと。
+今まではNetBeansかたまにEclipseだったけど、乗り換え。少しずつ慣れていこう（´-ω-｀）
+ WebStorm :: The smartest JavaScript IDE Ruby on Rails IDE :: JetBrains RubyMine Python IDE &amp;amp; Django IDE for Web developers : JetBrains PyCharm  CE版は無料   </description>
+    </item>
+    
+    <item>
+      <title>IRKitで遊び始めた〜とりあえずTerminalで操作〜</title>
+      <link>https://mono0926.com/programming/irkit/</link>
+      <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://mono0926.com/programming/irkit/</guid>
+      <description>冬場忙しかったりで既存アプリで部屋のリモコン登録する程度しかいじれてなかったけど、最近ようやく落ち着いてきたので、IRKitで遊んでみる(　´･‿･｀)
+セットアップ IRKit - Open Source WiFi Connected Infrared Remote Controllerを参考に、諸々設定。
+# dns-sdコマンドで、IRKitのインスタンス名取得。 Pro:b4 mono$ dns-sd -B _irkit._tcp Browsing for _irkit._tcp DATE: ---Mon 05 May 2014--- 14:41:16.669 ...STARTING... Timestamp A/R Flags if Domain Service Type Instance Name 14:41:16.880 Add 2 4 local. _irkit._tcp. iRKitA2C4  # インスタンス名から、IPアドレス取得 Pro:b4 mono$ dns-sd -G v4 irkita2c4.local DATE: ---Mon 05 May 2014--- 14:41:43.565 ...STARTING... Timestamp A/R Flags if Hostname Address TTL 14:41:43.566 Add 2 4 irkita2c4.</description>
+    </item>
+    
+    <item>
+      <title>IRKitに外からアクセス出来るようにした</title>
+      <link>https://mono0926.com/programming/irkit-remote/</link>
+      <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://mono0926.com/programming/irkit-remote/</guid>
+      <description>前回のIRKitで遊び始めた〜とりあえずTerminalで操作〜 - monoHubの続き。
+前回触ったIRKit Device HTTP APIは同じWiFi内から操作するためのもので、外からアクセスするときはIRKit Internet HTTP APIを叩くことになる。
+IRKit Internet HTTP APIを叩けるように準備 まずは、clienttokenを取得。
+Pro:~ mono$ curl -i &amp;quot;http://192.168.0.4/keys&amp;quot; -d &#39;&#39; HTTP/1.0 200 OK Access-Control-Allow-Origin: * Server: IRKit/1.3.5.0.gce6ac15 Content-Type: text/plain {&amp;quot;clienttoken&amp;quot;:&amp;quot;**************************&amp;quot;} #伏せています  取得したclienttokenを元に、deviceidとclientkeyを取得。
+Pro:~ mono$ curl -i -d &amp;quot;clienttoken=**************************&amp;quot; &amp;quot;https://api.getirkit.com/1/keys&amp;quot; HTTP/1.1 200 OK Server: ngx_openresty Date: Mon, 05 May 2014 06:44:32 GMT Content-Type: application/json; charset=utf-8 Content-Length: 94 Connection: keep-alive Access-Control-Allow-Origin: * Access-Control-Allow-Headers: X-Requested-With X-Content-Type-Options: nosniff {&amp;quot;deviceid&amp;quot;:&amp;quot;XXXXXXXXXXXXXXXXXXXXXX&amp;quot;,&amp;quot;clientkey&amp;quot;:&amp;quot;YYYYYYYYYYYYYYYYYYYYY&amp;quot;} #伏せています  Internet HTTP APIを使ってみる deviceid・clientkey・家のライトのオンオフ信号をhttps://api.</description>
+    </item>
+    
+    <item>
+      <title>Node.jsのIRKitライブラリあったから試してみた</title>
+      <link>https://mono0926.com/programming/irkit-nodejs/</link>
+      <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://mono0926.com/programming/irkit-nodejs/</guid>
+      <description> せっかくNode.js the Right Way: Practical, Server-Side JavaScript That Scales [Kindle Edition]でNode.jsを勉強したので、IRKitをNode.jsの勉強題材に出来ないかなと思って、とりあえずNode.jsのクライアントライブラリ無いかな？と探したらあったので、叩いてみた。
+dameleon/node-irkit 元々IRKitのAPIがシンプルなので、あまりNode.jsを使う必然性感じないけど、まあ勉強に（´-ω-｀）
+本1冊やったとはいえ、色々まだ不慣れなので、コード読解にも良いかも。 ドキュメントは無いものの、テストはちゃんと書かれていたので、それを参考に使ってみた。
+まずはインストール。
+npm install node-irkit  とりあえずlocalApiを使ってみた。 実行する度に、部屋の電気がオンオフされて煩わしいので、テストは違う信号でやろうと思ったなう（´-ω-｀）
+const irkit = require(&#39;node-irkit&#39;), localApi = irkit.getLocalApi(&amp;quot;http://192.168.0.4&amp;quot;), myRoomLight = &#39;{&amp;quot;format&amp;quot;:&amp;quot;raw&amp;quot;,&amp;quot;freq&amp;quot;:38,&amp;quot;data&amp;quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}&#39;, myRoomLightMessage = JSON.parse(myRoomLight); localApi.postMessages(myRoomLightMessage, function(err, res) { console.log(res); //空 });  </description>
+    </item>
+    
+    <item>
+      <title>ラヴさんスタンプをLINE Creators Marketに申請してみた</title>
+      <link>https://mono0926.com/line-stamp/love-stamp/</link>
+      <pubDate>Thu, 17 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://mono0926.com/line-stamp/love-stamp/</guid>
+      <description>2月下旬に発表され、本日受付を開始したLINE Creators Marketに、自作スタンプを申請してみました。
+思えば、3月上旬くらいに、当時IllustratorやPhotoshopを勉強していたこともあり、その演習にちょうどいいのでは？と思いつき、挫折しそうと思いつつ着手したのが始まりでした。
+朝3時前に起きて出社前に5枚くらい描く時もあれば、しばらく間が空いてしまう時もありつつ。 そんなにスムーズに絵を描けない中、40枚は正直すごくしんどかったです（´-ω-｀）
+なんやかんやで、色々な人に励まされたり助けて貰いながら、完成にこぎつけられてとても嬉しいです(　´･‿･｀)
+色々雑なところがありつつ、申請は通ってほしいなー、というところです。 無事に5月にマーケットに上がることを祈ります。 改良アップデートや続編とかも作りたいなーと思ったり。 今回はローンチリリースを目指していたため締め切りがつらたんだったけど、次はもう少しゆとりをもってやりたいところです（´-ω-｀）
+ラヴさんスタンプ公開アルバムを勤めている会社のサービス「Scene ありそうでなかった、写真アプリ」のアルバムとして作ったので、そこでパラパラスタンプ見たりフィードバックとかいただけたら嬉しいです(　´･‿･｀)</description>
+    </item>
+    
+    <item>
+      <title>オーム社セールで色々買ってみた</title>
+      <link>https://mono0926.com/book/ohmsha/</link>
+      <pubDate>Thu, 12 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://mono0926.com/book/ohmsha/</guid>
+      <description> 今日12時までのオーム社セールで色々買ってみた。
+数学・統計系 大学とかで勉強したものの、忘れたり応用できていなかったりするので。
+ プログラミングのための線形代数 数学チュートリアル やさしく語る 確率統計 入門 統計学 ―検定から多変量解析・実験計画法まで― Excelで学ぶ統計解析入門 Excel2013/2010対応版  Excelでちゃちゃっと出来るのは大事だと思う   読み物系 本当はKindleで読みたい類の本だけど（´-ω-｀）
+ 情熱プログラマー ソフトウェア開発者の幸せな生き方 ソフトウェアの世界でキャリアを築く Making it Big in Software  その他  マスタリングTCP/IP 入門編 第5版  第4版持ってて自炊済みだけど、安いし新しいのも欲しくなった   </description>
+    </item>
+    
+    <item>
+      <title>Haskell勉強中</title>
+      <link>https://mono0926.com/programming/haskell/</link>
+      <pubDate>Sat, 23 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://mono0926.com/programming/haskell/</guid>
+      <description>2週間くらい前からHaskell勉強中。
+各種言語使ってきて、今の本業(Objective-C)や一番得意な言語(C#)以外にも久々に手を出したいなと思って以下を検討。
+ LL系(Pythonなど)をもう少し自由に使えるように  ベターな書き方やモジュール知らずに冗長な記述になっていそう 日頃の自動化が捗りそう  ネイティブ系  C言語が最低限しか書けない上に段々忘れていったりもしている ネイティブ系(コンパイル型・非VM)で書かなきゃいけない時とか手駒がない とはいいつつCもC++も積極的に書きたくないのでやるとしたら下記のいずれか Go D言語  関数型  C#でLINQとかラムダ式とか慣れたけど、関数型の書き方を一部取り入れたオブジェクト指向という感じで、純粋関数型言語を学びたい pandocというドキュメント変換ツールのソース理解とか改変とかしたいと思いつつHaskellで書かれていて全然分からない   まあどれでも良いかなあと思いつつ、Scalaとかも勉強したいとか思っていたのもあり関数型かなあと、とりあえずKindleで安く手に入るGuide to ScalaーScalaプログラミング入門をざっと読んだ。 結果、C#と大して変わらず(Scalaの方がより関数型っぽいけど)、ちゃんと勉強するなら純粋関数型言語だなあと思い、pandocの理解にも繋がるしHaskellを勉強することに。
+コンパイル型といえども、記述もシンプルでコンパイル簡単なので、今Pythonとかで簡単な自動化スクリプト書いている代替にもなるかなと。
+勉強計画 すごいHaskellたのしく学ぼう! 少し前に話題になっていたこの本をまず読むことに。 洋書にするか迷ったけど、せっかく和書のKindle版もあるのでそれに頼った。
+そして、オンライン版はフリーで読めることもさっき知ったり：Learn You a Haskell for Great Good!
+フリーということは…と思って探したら、Kindle用のファイルを生成出来るプロジェクトもあったり。 ただ、本に出てくるソースコード集が見つからず、まあいいか。
+本の前半は、Haskellの構文に慣れるのに少し苦労しつつ、後半のアプリカティブのあたりでけっこう理解が怪しくなってきた（´-ω-｀） 理論が理解出来ていなくてしっくりこないところが一部あるものの、コードの挙動などは何とか読み解けているのでまだなんとかいけるはず。
+その後 Parallel and Concurrent Programming in Haskellが面白そうなので、次に読みたいところ。並列/並行処理周りがまだ弱い気がするのでその勉強もかねて。
+あと、個人的に同じ本を繰り返し読むのが苦手(それが大事なのは理解している)なので、代わりに本物のプログラマはHaskellを使うとか読んで曖昧なところの理解を深めて行ければ。
+実行環境 GHCインストール 色々処理系があるようだけど、標準のGHCを導入。 よく分からないけど、Homebrewで良いかと、以下を実行してインストール。 Mavericksなどの場合は環境によっては前もってCommand Line Toolsのインストールをしないとビルド失敗したりするはず。
+brew update brew install haskell brew install haskell-platform # これがなんだか理解していない  これで、ターミナルでghciと打つと、Haskellのインタプリターが起動するはず。 今まで、わざわざファイルで書く必要の無い書き捨ての込み入った計算はPythonのインタプリターでやっていた(そこまでする必要の無い程度ならAlfredの電卓で)けど、これからはghciでやろうかなと。</description>
+    </item>
+    
+    <item>
+      <title>Mac Proの新モデル(通称ゴミ箱)を買うことにした</title>
+      <link>https://mono0926.com/lifehack/mac-pro/</link>
+      <pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://mono0926.com/lifehack/mac-pro/</guid>
+      <description>今持っているMac Proの2010年モデルももう丸3年以上経っていたり、2011年モデルのMac mini(サーバー用)も切り捨てて1本化したいなと思ってたところに、新Mac Proが発表されて、ちょっと考えてたらほしくなってしまった。
+購買意欲がそそられた理由 省電力というのが意外と一番大きな理由。 Mac Proの消費電力が、アイドル時に43 Wということで、常時起動でも700円/月程度で、Mac miniの用途をMac Proに一本化できそう。
+新Mac Proを常時起動にすると、Mac Pro1台で下記の用途全てまかなえる。
+ 普段利用(OSX) OSXサーバー Windows開発機 Windowsサーバー  また必要に応じてiPadやWindows RT機からリモートアクセスとかすると、家には1台 + 持ち歩き用に安価軽量なモバイル端末という、組み合わせができる。 常時起動なので、ファイルや音楽・動画などメディア系リソースへのアクセスもいつでも出来るし。
+今、SSD・フルHDのそこそこ良いWindowsノートも持っているけど、これも次の買い換えでSurface(非Pro)とかにしたりで持ち運び楽かつ買い換えコストも抑えられる。 そもそも、iPad AirとかでWindows開発環境にアクセスすればいいので、Windowsのモバイル端末は不要になるかも(もちろんネット環境悪いところでは制約が出るけど)。
+ネック 後述のお金の問題に加えて、以下の作業が面倒。
+増設したHDD Mac Proに入れているSSD(256GB)x2・HDD(2TB)x2・HDD(3TB)x1を、新Mac Proだと外に出して繋がないと行けなくなる(SSDのうち1台はメインドライブなので不要だけど)。 そのケース・ドライブを用意したりとか、その配線が微妙かなあとか、ちょっと悩みどころ。
+旧ブログ 今Mac miniで動かしている、IIS + WordPressで構築した旧ブログ の移行が面倒。 そもそももう更新していないので畳むか、変換スクリプト書いて、こちらのブログに移行してもよいかも。
+その他Windowsサーバー環境移行 Amazon Sales Rankのサーバー環境の移行は、1・2時間くらいで出来そう。
+少し前まで、Windows系のソース管理は自前のTFSでやっていたけど、それもGitHubに移行したのであとは特に必要な作業無さそう。
+そして、新Mac Proに乗り換えたら仮想マシン立てるつもりなので、その後の移行作業はとても楽になるはず。
+移行コスト 計算してみたら、デスクトップ系のMac製品は中古相場もあまり高くなく、思っていたよりかかる模様。 Mac Proはヤフオク見るともっと相場高いので、そちらもありかも。
+ 新Mac Pro：カスタマイズオーダーや、自分でカスタマイズしたり外付け用ドライブ含めて、〜40万円 Apple Mac Pro MC560J/A (Mid 2010)売却：〜5.8万円 (じゃんぱら価格) Mac mini MC815J/A (Mid 2011)売却：〜3.1万円 (じゃんぱら価格)  計〜30万円程度かかるので、けっこう高い（´-ω-｀）</description>
+    </item>
+    
+    <item>
+      <title>iOS7対応記事のまとめ</title>
+      <link>https://mono0926.com/programming/ios7/</link>
+      <pubDate>Sat, 21 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://mono0926.com/programming/ios7/</guid>
+      <description>iOS7関連のNDA解禁ということで、色々記事が増えてきたので、メモ。 少しずつ追記していきながら、落ち着いたところで、集約したような記事書くかも。
+ iOS 7対応事例 FastCheckin iOS6からiOS7への対応 iOS 7向けアプリ開発時の注意点 iOS7でNavigationBarに入れたSearchBarにキャンセルボタンを出現させる方法 iOS6 -&amp;gt; iOS7変更対応 iOS 6&amp;frasl;7 で UILabel などの見た目がずれるよ〜とお嘆きのあなたへ CocoapodsとXcode5の組み合わせでエラー出た+解決した iOS7でステータスバーが被る問題への対応 iOS7のarm64対応でやったこと iOS7でナビゲーションバーやステータスバーの文字色を変える iOS 7 でステータスバーを隠す方法  </description>
+    </item>
+    
+    <item>
+      <title>GingerをAlfredで使えるようにしてみた</title>
+      <link>https://mono0926.com/programming/ginger/</link>
+      <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://mono0926.com/programming/ginger/</guid>
+      <description>Ginger APIをPythonで叩いてみたの続き。
+元々はAlfredで英文校正が出来るようにしたかったので、ここからが本番。
+完成版 こんなのが出来たという紹介から。
+校正 ginger というキーワードに続けて英文を打つと、正してくれる。(この場合、冠詞aの抜けが正される。)
+改善候補一覧 rephraseというキーワードに続けて適当な英文を打つと、より自然な言い回し候補を出してくれる。 &amp;ldquo;Thank you for your reply&amp;rdquo;は、メールの返信とかでよく使うけど、ワンパターン化を避けたい時とかに使えそう。
+ともに、選択状態でエンターを押すと、クリップボードにコピーされて、フォーカスの当たっているアプリにペーストされるので、適当にメールとかエディタとか使いながら自然と正しそうな英文が打てるようになるはず。
+AlfredのWorkflowの作り方 一応ドキュメントはあるけど、肝心なところが書かれていなかったりして、フォーラムで聞いたり、既存のWorkflowのソースを読んで作り方を学ばなければいけない感じ。 作り方自体は基本簡単だけど、ちょくちょくはまりどころがあって苦労する。
+キーワードの受け取り {query}というキーワードでアクセス出来るので、それをスクリプトに引数ととして渡すのが一般的。
+結果の表示 処理終了時にnotification飛ばしたり、クリップボードにコピーとかはWorkflowのエディタでパーツをつなぎ合わせたりするだけで簡単だけど、上の例みたいに一覧するのはどうやるのかと思っていたら、XMLで標準出力するらしい。 関係ないechoやprint文があると壊れるので注意。 ここらへんも、既存のソース読み解いてやっと分かった。それも不慣れなPHPソースがけっこう多くてアレ。
+こんな感じのXMLを標準出力すると、Itemの数だけ一覧される。
+&amp;lt;?xml version=&amp;quot;1.0&amp;quot; ?&amp;gt; &amp;lt;items&amp;gt; &amp;lt;item arg=&amp;quot;I am a programmer and writing bad English. I am Japanese.&amp;quot; uid=&amp;quot;d78b56b0-fcb7-11e2-9787-e80688cb3920&amp;quot;&amp;gt; &amp;lt;title&amp;gt;I am a programmer and writing bad English. I am Japanese.&amp;lt;/title&amp;gt; &amp;lt;subtitle&amp;gt;Gingered sentence&amp;lt;/subtitle&amp;gt; &amp;lt;icon/&amp;gt; &amp;lt;/item&amp;gt; &amp;lt;/items&amp;gt;  これも適当に文字列置換したりして作れるけど、PythonでXML組み立てて作る簡単なモジュール作って再利用できるようにしておいた。 ここらへんの下回りがけっこうこなれていない感。
+インストール可能なパッケージの作り方 配布されているworkflowは、*.alfredworkflowという形式で、ダブルクリックでインストールできる。
+簡単なやり方は自分のworkflowを右クリックしてExportすること。
+逆にscript群からコマンドで作りたい場合は、必要なファイルをzip化して拡張子を変えればよい。 info.plistが必要で、それは多分コマンドラインじゃ作れないから、やっぱり最初はExportの過程が必要だけど、コードとか別管理したいならコマンドラインで修正版作るのがよさげな気がする。
+適当にpackage作成スクリプト書いた。
+cp ginger/info.</description>
+    </item>
+    
+    <item>
+      <title>Leap Motionが届いた</title>
+      <link>https://mono0926.com/gadget/leap-motion/</link>
+      <pubDate>Thu, 25 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://mono0926.com/gadget/leap-motion/</guid>
+      <description>Leap Motionを買ってみた。
+多分1年ちょっと前に指先を1/100ミリ単位で捉える3Dモーション入力機器 LEAP、70ドルで予約受付開始 (動画)などの記事を見て、コンセプト動画なのか実動画像なのか知らないけど、すごいなーと思って放置してたけど、今週けっこう話題になってて、記事とか読んでたらいつの間にかポチってた感じ。
+ハード的には、劣化版Kinect？とかも思ったけど、対象距離が近距離なKinect for Windowsは少しお高いし、設置の制約あるし、とか思ってとりあえず今回はこっち。 KinectはごくたまにXboxで遊んだりと、なかなか好きなデバイス。
+Leap Motionって何？とかどんなことできるの？とかについては下の動画見れば大体分かる。 
+届くまで 実は、いいなーと思いつつも購入をためらっていたけど、偶然[BetterTouchTool]()のアップデートが走ってリリース文章見ていたら、Leap Motionの文字があって、「おっ!」と思いそのまま買ってしまった感じ。 今見たら、紹介ブログがあった。 元々愛用しているツールだけど、こういう早くて先進的な対応は好感度上がる。 OSもアプリもわりとリリース文には目を通している(利用者目線でも開発目線でも読んでいるとけっこう有用に思う)けど、良いきっかけになってよかった。
+この購入サイトで購入。 PayPal決済でトータル1万円弱。カード決済用のトータル表示より安かったような(見間違えかも)。
+入荷や発送の関係でしばらく待つかなーと思っていたら、翌朝発送しましたメールが来てびっくり。 FedExという郵送会社だった。 たまに海外購入はするけど、多分初めての利用。 翌々日に届くとのこと。お早い。
+というわけで、一昨日の晩に頼んだLeap Motionが到着。
+簡単なレビュー 詳細なレビューとかはすでにけっこうあるので、下記参照。
+ Leap Motion は本当に革新的なUIデバイスなのか? 本体レビューとその雑感【@maskin】 手と指の動きを感知して奥行きまで含めた立体的な操作ができる「Leap Motion」は一体何がすごいのかまとめ  開封まで シンプルな箱。
+本体とUSBケーブルとしょぼい冊子だけ。
+ガムくらいの大きさ。
+セットアップ マニュアル無いから適当にググったら、このセットアップサイトでドライバ&amp;amp;アプリをインストールするとのこと。(あとで見たらボール紙みたいなものにそのURL書いてあったけど)
+そこにたどり着けばすごく簡単で、ぽちぽちっと適当にインストールしてチュートリアルで試用する感じ。
+どうやって使おう とりあえずBetterTouchToolと組み合わせて、良い感じに普段使い出来ないか試してみてるところ。 人差し指をクルクルすると、音量上げ下げしたり、手を叩くとスリープするようにしたりして、意外と実用的に使えそう。
+↓YouTubeにアップしてみた。
+ セッティングはMagic Trackpadのジェスチャー登録するような感じでとても簡単。若干認識が微妙だけど、ハードウェア性能とソフトウェアとどっちのせいかは不明。現状でもそんなに悪くないし、今後のソフトウェア改良に期待は持てる感じはしてる。
+あと、アプリストア「Airspace」とかのアプリで遊んでみようとも思うけど、ゲーム系はすぐ飽きちゃいそう…（´-ω-｀）
+というわけでまだあまり弄れてないけど、これから色々遊んでみたり、開発にも手を出していきたいなと思ったり。
+開発リソースはけっこう整っている感。 これ系の開発は結構前にカメラ + OpenCVを少しやった程度だったりして、個人的にはけっこう苦労しそうだけど（´-ω-｀）
+ SDK Documentation  C++ Java Python C# JavaScript Objective-C (この一覧には明記されていないけど対応してる)  Forums LeapMotion(YouTube) C#開発者から見たLeap Motion開発のファースト・インプレッション Developing for Leap Motion in C# Tutorial (video, slides and code) JavaScriptでLeapMotionアプリを作る方法  Windows 8を操作しているデモ動画 なかなか操作の相性が良さそう。動画を見ただけだと実はタッチよりも快適？とか思ったり。</description>
+    </item>
+    
+    <item>
+      <title>iOSからDropbox Sync APIを使ってみる</title>
+      <link>https://mono0926.com/programming/dropbox/</link>
+      <pubDate>Fri, 19 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://mono0926.com/programming/dropbox/</guid>
+      <description> Dropbox Sync APIとは サンプルとドキュメント  サンプル  Datastore API SDKsからSDKダウンロードすると同梱されてる  ドキュメント  Datastore API for iOS Documentation  チュートリアル  Using the Sync API on iOS   サンプル起動 Files Examplesのサンプル </description>
+    </item>
+    
+    <item>
+      <title>電子書籍自費出版系情報まとめ</title>
+      <link>https://mono0926.com/lifehack/self-publish/</link>
+      <pubDate>Sun, 14 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://mono0926.com/lifehack/self-publish/</guid>
+      <description>最近、電子書籍系のアプリ開発中で、色々調べています。 ちょっと情報が頭に乗り切らなくなってきたので、整理。
+ツール Kindlegen Amazon謹製の、HTMLやEPUB形式からMobi形式に変換するツール。 成果物は、MacなどのKindleアプリでも見られるし、Kindle Previewerで、各プラットフォームでの動作チェック可能。
+クラス構造を一旦HTMLに落とし込んで、Mobi形式にエクスポートするところまでは出来たけど、いくつか警告が出てたりしてまだ対処出来ていない状態。 あと、ライセンス的にアプリのサーバー側で使ったりOKなのか気になる。
+ リファレンスなど  Amazon Kindle Publishing Guidelines 和訳：Amazon Kindle パブリッシング・ガイドライン   Pandoc ドキュメント形式変換ツール。Markdown, HTMLなどからEPUB, PFDなどなどなど色々変換可能。 Linux, Mac, Windowsなどに対応。
+ リファレンスなど  ソース(GitHub) Pandoc User’s Guide 使い方がたくさん書いてある。   例えばMarkdown形式からEPUB形式にしたいときの、タイトルや筆者などのメタ情報とかこう書いたりするらしい。まだ色々調べ中。 これを使って、クラス構造をEPUB形式でエクスポートできるところまでは出来たけど、細かい詰めがまだまだ（´-ω-｀）縦書きとか出来るのだろうか…。
+% title % author(s) (separated by semicolons) % date   参考  多様なフォーマットに対応！ドキュメント変換ツールPandocを知ろう 素晴らしい説明 githubとかにあるMarkdown形式のﾌｧｲﾙをhtmlとかEPUBとかに変換する   本 Amazon和書  Kindle自費出版ガイド 米アマゾンの先例から学ぶ電子書籍の作り方  Google Documentを使った作成法指南 Webで最新版を無料公開中：「Kindle 自費出版ガイド 米アマゾンの先例から学ぶ 電子書籍の作り方」(前半)  アマゾンで売る！　一番簡単な電子書籍の作り方  Google Documentは参考程度に、aozoraEpub3やSigilを利用  一万冊売ってわかった！電子書籍を売る方法  世界一周紀行など書いている人の本。ライブドアブログのEPUBエクスポートを利用。   うーん、作り方がバラバラ。わりとGoogle Documentで作るのが多数派な印象だけど。 みんなGUIベースだから直接は利用できないけど、参考程度に読んでる。</description>
+    </item>
+    
+    <item>
+      <title>GitHub &#43; Octopressでブログ作ってみた</title>
+      <link>https://mono0926.com/blog/github_octopress_blog/</link>
+      <pubDate>Sun, 07 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://mono0926.com/blog/github_octopress_blog/</guid>
+      <description> Markdownで書けてなかなか良い感じかもしれない（´-ω-｀）
+導入手順 ここらへん参考に。
+ GitHub pages + Octopressの導入  最初は適当にMacに入っているRuby 1.7.3やHomebrewで入れた2系でインストールしようとしたらはまって結局Ruby 1.9.3にしたので、初めから素直に従った方がよさげです。  rvmの導入がうまくできなかったので、それだけこれを参考に。  (OS X::Mountain Lion) RVMでRubyの環境構築メモ   個人的な運用  imathis/octopressからForkしてそのままソース管理として利用  下書きなどあっても人に見られちゃうからBitbucket使うっていう人が多いらしいですが、あまり気にならないのでGitHubで一元管理  setup_github_pages と入力して、GitHub上のこのページ にデプロイされるように  テーマの変更 テーマは、imathis/octopressから選べますが、あまり有名じゃないので、そんなに選択肢無いです。凝るなら自分で作るべきですかね。 こぎれいなテーマを適当に選んで使っています。 導入は簡単で、上記から選んで、下のコマンドですぐ反映されます。
+$ cd octopress $ git clone GIT_URL .themes/THEME_NAME $ rake install[&#39;THEME_NAME&#39;] $ rake generate  Markdown 初めて書いた なかなか便利ですね(　´･‿･｀) このあたりよくまとまっててよかったです。
+ Markdown記法 チートシート QA@ITで使えるMarkdown記法  </description>
+    </item>
+    
+    <item>
+      <title>Google Readerが終わって…</title>
+      <link>https://mono0926.com/lifehack/google-reader-feedly/</link>
+      <pubDate>Sun, 07 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://mono0926.com/lifehack/google-reader-feedly/</guid>
+      <description>一日に500-1000件消費するくらいのRSSリーダーヘビーユーザーでしたが、意外と困っていません。
+ Google Reader 終わる前  iPhone: Byline + たまにReeder iPad: 同上 Mac: Reeder Web: Google Reader (Windows環境の時など、たまーに見る程度)  Google Reader 終わった後  iPhone: Byline + たまにReeder iPad: Byline (Reeder未対応) Mac: FeedlyのWebアプリ (Reeder未対応) Web: FeedlyのWebアプリ   と、あまり変わって無い上に、FeedlyのWebアプリの操作感(どこを押せば何が出来るかなど)にあまり慣れていないものの、J(次)・K(前)・V(新しいページで記事開く)のショートカットが一緒なことに気づいてからはほぼノンストレスです（´-ω-｀）
+ただ、やっぱりMacでReederを使ってサクサク見ていた感じには劣るので、早くReeder for Macがアップデートされてほしいところです（´・ω・｀）
+…とは別にこの機会に、SmartNewsで大衆ネタ・ゴシップ系などは拾い読みしているので、RSSリーダーは技術系ネタに絞って整理したいなとかも考えていたり。なかなか面倒ですが（´-ω-｀）
+追記 ReadKit というアプリが素晴らしく、常用し始めましたヽ(・ω・｀）</description>
+    </item>
+    
+    <item>
+      <title>Octopressへの投稿やdeployをAlfredのWorkflowで</title>
+      <link>https://mono0926.com/blog/octopress-alfred/</link>
+      <pubDate>Sun, 07 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://mono0926.com/blog/octopress-alfred/</guid>
+      <description>今日初めてOctopressを触ったら、けっこう気に入ったので、さらに気軽に書ける環境を整えれば捗るのではと思い、AlfredのWorkflowを作ってみました。
+# deploy用 OCTOPATH=&#39;/Documents/Git/Private/octopress&#39; cd ~/$OCTOPATH rake gen_deploy git add . git commit -m &amp;quot;deployed via workflow.&amp;quot; git push  # 投稿用 OCTOPATH=&#39;/Documents/Git/Private/octopress&#39; cd ~/$OCTOPATH OCTOPOST=$(rake new_post[$1]| grep -o &#39;source/_posts/.*&#39;) open ~/$OCTOPATH/$OCTOPOST  すんなり出来るかと思いきや、これだけでは動かず、
+ In my bash script I had to add some extras because Alfred runs the bash script in a subshell and in this subshell the rvm environment is not available by default. Alfred Workflow for Octopress</description>
     </item>
     
   </channel>

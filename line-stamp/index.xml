@@ -2,56 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Line-stamps on mono-log</title>
-    <link>http://mono0926.com/line-stamp/</link>
+    <link>https://mono0926.com/line-stamp/</link>
     <description>Recent content in Line-stamps on mono-log</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
+    <copyright>Masayuki Ono All right reserved.</copyright>
     <lastBuildDate>Tue, 01 Jul 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://mono0926.com/line-stamp/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://mono0926.com/line-stamp/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>ラヴ様LINEスタンプ6月売り上げ</title>
-      <link>http://mono0926.com/line-stamp/stamp/</link>
+      <link>https://mono0926.com/line-stamp/stamp/</link>
       <pubDate>Tue, 01 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/line-stamp/stamp/</guid>
-      <description>&lt;p&gt;先月6月の4日昼から公開された愛犬ラヴ様のLINEスタンプですが、6月売り上げが確定しました。
-&lt;a href=&#34;http://bit.ly/love-stamp&#34;&gt;http://bit.ly/love-stamp&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/stamp3.png&#34; alt=&#34;stamp&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;収益10,000円を超えた段階で、振り込み対象になるようですが、おかげさまで12,716円と無事に超えることが出来ました。
-買っていただいた方、ありがとうございます。&lt;/p&gt;
-
-&lt;p&gt;平均471円/日と、500円/日には届かないものの、淡々と売れ続けていて、嬉しいです。
-若干売れ行きが落ち込み気味ですが、今月どうなりますかね（´-ω-｀）&lt;/p&gt;
-</description>
+      <guid>https://mono0926.com/line-stamp/stamp/</guid>
+      <description>先月6月の4日昼から公開された愛犬ラヴ様のLINEスタンプですが、6月売り上げが確定しました。 http://bit.ly/love-stamp
+収益10,000円を超えた段階で、振り込み対象になるようですが、おかげさまで12,716円と無事に超えることが出来ました。 買っていただいた方、ありがとうございます。
+平均471円/日と、500円/日には届かないものの、淡々と売れ続けていて、嬉しいです。 若干売れ行きが落ち込み気味ですが、今月どうなりますかね（´-ω-｀）</description>
     </item>
     
     <item>
       <title>ラヴさんスタンプをLINE Creators Marketに申請してみた</title>
-      <link>http://mono0926.com/line-stamp/love-stamp/</link>
+      <link>https://mono0926.com/line-stamp/love-stamp/</link>
       <pubDate>Thu, 17 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://mono0926.com/line-stamp/love-stamp/</guid>
-      <description>&lt;p&gt;2月下旬に発表され、本日受付を開始した&lt;a href=&#34;https://creator.line.me/&#34;&gt;LINE Creators Market&lt;/a&gt;に、自作スタンプを申請してみました。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://mono0926.com/images/post/love_stamp.png&#34; alt=&#34;ラヴさんスタンプ&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;思えば、3月上旬くらいに、当時IllustratorやPhotoshopを勉強していたこともあり、その演習にちょうどいいのでは？と思いつき、挫折しそうと思いつつ着手したのが始まりでした。&lt;/p&gt;
-
-&lt;p&gt;朝3時前に起きて出社前に5枚くらい描く時もあれば、しばらく間が空いてしまう時もありつつ。
-そんなにスムーズに絵を描けない中、40枚は正直すごくしんどかったです（´-ω-｀）&lt;/p&gt;
-
-&lt;p&gt;なんやかんやで、色々な人に励まされたり助けて貰いながら、完成にこぎつけられてとても嬉しいです(　´･‿･｀)&lt;/p&gt;
-
-&lt;p&gt;色々雑なところがありつつ、申請は通ってほしいなー、というところです。
-無事に5月にマーケットに上がることを祈ります。
-改良アップデートや続編とかも作りたいなーと思ったり。
-今回はローンチリリースを目指していたため締め切りがつらたんだったけど、次はもう少しゆとりをもってやりたいところです（´-ω-｀）&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://a.scn.jp/s/0VrEMIHAB&#34;&gt;ラヴさんスタンプ公開アルバム&lt;/a&gt;を勤めている会社のサービス&lt;a href=&#34;http://www.scn.jp/&#34;&gt;「Scene ありそうでなかった、写真アプリ」&lt;/a&gt;のアルバムとして作ったので、そこでパラパラスタンプ見たりフィードバックとかいただけたら嬉しいです(　´･‿･｀)&lt;/p&gt;
-</description>
+      <guid>https://mono0926.com/line-stamp/love-stamp/</guid>
+      <description>2月下旬に発表され、本日受付を開始したLINE Creators Marketに、自作スタンプを申請してみました。
+思えば、3月上旬くらいに、当時IllustratorやPhotoshopを勉強していたこともあり、その演習にちょうどいいのでは？と思いつき、挫折しそうと思いつつ着手したのが始まりでした。
+朝3時前に起きて出社前に5枚くらい描く時もあれば、しばらく間が空いてしまう時もありつつ。 そんなにスムーズに絵を描けない中、40枚は正直すごくしんどかったです（´-ω-｀）
+なんやかんやで、色々な人に励まされたり助けて貰いながら、完成にこぎつけられてとても嬉しいです(　´･‿･｀)
+色々雑なところがありつつ、申請は通ってほしいなー、というところです。 無事に5月にマーケットに上がることを祈ります。 改良アップデートや続編とかも作りたいなーと思ったり。 今回はローンチリリースを目指していたため締め切りがつらたんだったけど、次はもう少しゆとりをもってやりたいところです（´-ω-｀）
+ラヴさんスタンプ公開アルバムを勤めている会社のサービス「Scene ありそうでなかった、写真アプリ」のアルバムとして作ったので、そこでパラパラスタンプ見たりフィードバックとかいただけたら嬉しいです(　´･‿･｀)</description>
     </item>
     
   </channel>
