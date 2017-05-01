@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:title" content="GingerをAlfredで使えるようにしてみた">
 <meta property="og:type" content="article"/>
-<meta property="og:url" content="http://mono0926.com/programming/ginger/"/>
+<meta property="og:url" content="https://mono0926.com/programming/ginger/"/>
+<script src="https://cdn.apple-livephotoskit.com/lpk/1/livephotoskit.js"></script>
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
 <link rel="stylesheet" href="/css/normalize.css">
 <link rel="stylesheet" href="/css/skeleton.css">
@@ -41,13 +42,13 @@
 			<span class="entry-meta"><time itemprop="datePublished" datetime="2013-08-04">August 04, 2013</time></span>
 
             <div>
-    <div class="fb-like" data-href="http://mono0926.com/programming/ginger/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+    <div class="fb-like" data-href="https://mono0926.com/programming/ginger/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
 
     <div style="margin-top: 5px;">
 
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="_mono" data-hashtags="mono-log">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-        <a href="http://b.hatena.ne.jp/entry/http://mono0926.com/programming/ginger/" class="hatena-bookmark-button" data-hatena-bookmark-title="GingerをAlfredで使えるようにしてみた" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+        <a href="http://b.hatena.ne.jp/entry/https://mono0926.com/programming/ginger/" class="hatena-bookmark-button" data-hatena-bookmark-title="GingerをAlfredで使えるようにしてみた" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
 
         <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
     <script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
@@ -62,17 +63,17 @@
 
 <p>元々はAlfredで英文校正が出来るようにしたかったので、ここからが本番。</p>
 
-<h3 id="完成版:6982ba537ea9b38026c6dcf8fa9c1024">完成版</h3>
+<h3 id="完成版">完成版</h3>
 
 <p>こんなのが出来たという紹介から。</p>
 
-<h4 id="校正:6982ba537ea9b38026c6dcf8fa9c1024">校正</h4>
+<h4 id="校正">校正</h4>
 
 <p>ginger というキーワードに続けて英文を打つと、正してくれる。(この場合、冠詞aの抜けが正される。)</p>
 
 <p><img src="/images/post/ginger1.png" alt="ginger" /></p>
 
-<h4 id="改善候補一覧:6982ba537ea9b38026c6dcf8fa9c1024">改善候補一覧</h4>
+<h4 id="改善候補一覧">改善候補一覧</h4>
 
 <!-- more -->
 
@@ -83,16 +84,16 @@
 
 <p>ともに、選択状態でエンターを押すと、クリップボードにコピーされて、フォーカスの当たっているアプリにペーストされるので、適当にメールとかエディタとか使いながら自然と正しそうな英文が打てるようになるはず。</p>
 
-<h3 id="alfredのworkflowの作り方:6982ba537ea9b38026c6dcf8fa9c1024">AlfredのWorkflowの作り方</h3>
+<h3 id="alfredのworkflowの作り方">AlfredのWorkflowの作り方</h3>
 
 <p>一応<a href="http://support.alfredapp.com/workflows">ドキュメント</a>はあるけど、肝心なところが書かれていなかったりして、<a href="http://www.alfredforum.com/forum/3-share-your-workflows/">フォーラム</a>で聞いたり、既存のWorkflowのソースを読んで作り方を学ばなければいけない感じ。
 作り方自体は基本簡単だけど、ちょくちょくはまりどころがあって苦労する。</p>
 
-<h4 id="キーワードの受け取り:6982ba537ea9b38026c6dcf8fa9c1024">キーワードの受け取り</h4>
+<h4 id="キーワードの受け取り">キーワードの受け取り</h4>
 
 <p>{query}というキーワードでアクセス出来るので、それをスクリプトに引数ととして渡すのが一般的。</p>
 
-<h4 id="結果の表示:6982ba537ea9b38026c6dcf8fa9c1024">結果の表示</h4>
+<h4 id="結果の表示">結果の表示</h4>
 
 <p>処理終了時にnotification飛ばしたり、クリップボードにコピーとかはWorkflowのエディタでパーツをつなぎ合わせたりするだけで簡単だけど、上の例みたいに一覧するのはどうやるのかと思っていたら、XMLで標準出力するらしい。
 関係ないechoやprint文があると壊れるので注意。
@@ -113,7 +114,7 @@
 <p>これも適当に文字列置換したりして作れるけど、PythonでXML組み立てて作る簡単なモジュール作って再利用できるようにしておいた。
 ここらへんの下回りがけっこうこなれていない感。</p>
 
-<h4 id="インストール可能なパッケージの作り方:6982ba537ea9b38026c6dcf8fa9c1024">インストール可能なパッケージの作り方</h4>
+<h4 id="インストール可能なパッケージの作り方">インストール可能なパッケージの作り方</h4>
 
 <p>配布されているworkflowは、*.alfredworkflowという形式で、ダブルクリックでインストールできる。</p>
 
@@ -143,13 +144,13 @@ mv ginger.zip ginger.alfredworkflow
 	</main>
 
     <div>
-    <div class="fb-like" data-href="http://mono0926.com/programming/ginger/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+    <div class="fb-like" data-href="https://mono0926.com/programming/ginger/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
 
     <div style="margin-top: 5px;">
 
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="_mono" data-hashtags="mono-log">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-        <a href="http://b.hatena.ne.jp/entry/http://mono0926.com/programming/ginger/" class="hatena-bookmark-button" data-hatena-bookmark-title="GingerをAlfredで使えるようにしてみた" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+        <a href="http://b.hatena.ne.jp/entry/https://mono0926.com/programming/ginger/" class="hatena-bookmark-button" data-hatena-bookmark-title="GingerをAlfredで使えるようにしてみた" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
 
         <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
     <script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>

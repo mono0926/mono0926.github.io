@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta property="og:title" content="OSXの開発環境を整えた">
 <meta property="og:type" content="article"/>
-<meta property="og:url" content="http://mono0926.com/programming/renew/"/>
+<meta property="og:url" content="https://mono0926.com/programming/renew/"/>
+<script src="https://cdn.apple-livephotoskit.com/lpk/1/livephotoskit.js"></script>
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
 <link rel="stylesheet" href="/css/normalize.css">
 <link rel="stylesheet" href="/css/skeleton.css">
@@ -41,13 +42,13 @@
 			<span class="entry-meta"><time itemprop="datePublished" datetime="2014-05-06">May 06, 2014</time></span>
 
             <div>
-    <div class="fb-like" data-href="http://mono0926.com/programming/renew/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+    <div class="fb-like" data-href="https://mono0926.com/programming/renew/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
 
     <div style="margin-top: 5px;">
 
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="_mono" data-hashtags="mono-log">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-        <a href="http://b.hatena.ne.jp/entry/http://mono0926.com/programming/renew/" class="hatena-bookmark-button" data-hatena-bookmark-title="OSXの開発環境を整えた" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+        <a href="http://b.hatena.ne.jp/entry/https://mono0926.com/programming/renew/" class="hatena-bookmark-button" data-hatena-bookmark-title="OSXの開発環境を整えた" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
 
         <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
     <script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
@@ -64,13 +65,13 @@ Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイ�
 
 <p>わりと<code>brew install XXX</code>で雑に各種環境インストールしてたので、これを気に色々直した。</p>
 
-<h2 id="homebrewアンインストール:e4940d6974c012c0c770280b21490de7">Homebrewアンインストール</h2>
+<h2 id="homebrewアンインストール">Homebrewアンインストール</h2>
 
 <p>ゴミが残るのいやだったので、<a href="https://gist.github.com/mxcl/1173223">Uninstall Homebrew</a>でhomebrewをアンインストール。</p>
 
 <!-- more -->
 
-<h2 id="brewfile導入:e4940d6974c012c0c770280b21490de7">Brewfile導入</h2>
+<h2 id="brewfile導入">Brewfile導入</h2>
 
 <p>以下など見て便利そうだと思っていたので、Brewfile導入。</p>
 
@@ -89,7 +90,7 @@ Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイ�
 
 <p>今後も、Homebrewで何か新しくインストールするときメンテナンスしていくようにしよう。</p>
 
-<h2 id="その他開発環境:e4940d6974c012c0c770280b21490de7">その他開発環境</h2>
+<h2 id="その他開発環境">その他開発環境</h2>
 
 <p><code>brew install XXX</code>で適当にインストールせずに、バージョンの切り替えが容易なようにした。
 いくつか種類あったけど、基本後発のを導入してみた。</p>
@@ -106,7 +107,7 @@ Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイ�
 
 <p>諸々雑なところがあるけど、<a href="https://github.com/mono0926/Environment/tree/master/OSX">Environment/OSX at master · mono0926/Environment</a>でセットアップスクリプト管理。</p>
 
-<h2 id="ide導入:e4940d6974c012c0c770280b21490de7">IDE導入</h2>
+<h2 id="ide導入">IDE導入</h2>
 
 <p>スクリプト系言語は、最近はわりとSublime Textで書いていたけど、やっぱり補完がもう少し聞いてくれないと厳しいので、なるべくIDE使うようにしようと思う。<br />
 IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれば捗るかなと。<br />
@@ -127,13 +128,13 @@ IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれ
 	</main>
 
     <div>
-    <div class="fb-like" data-href="http://mono0926.com/programming/renew/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+    <div class="fb-like" data-href="https://mono0926.com/programming/renew/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
 
     <div style="margin-top: 5px;">
 
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="_mono" data-hashtags="mono-log">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-        <a href="http://b.hatena.ne.jp/entry/http://mono0926.com/programming/renew/" class="hatena-bookmark-button" data-hatena-bookmark-title="OSXの開発環境を整えた" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+        <a href="http://b.hatena.ne.jp/entry/https://mono0926.com/programming/renew/" class="hatena-bookmark-button" data-hatena-bookmark-title="OSXの開発環境を整えた" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
 
         <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
     <script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
