@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mono0926.com/programming/live-photos/</loc>
+    <lastmod>2017-05-01T10:13:29+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mono0926.com/page/about/</loc>
     <lastmod>2016-08-01T09:10:21+09:00</lastmod>
   </url>
@@ -393,7 +398,7 @@
   
   <url>
     <loc>https://mono0926.com/programming/</loc>
-    <lastmod>2014-10-31T00:00:00+00:00</lastmod>
+    <lastmod>2017-05-01T10:13:29+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -477,7 +482,7 @@
   
   <url>
     <loc>https://mono0926.com/</loc>
-    <lastmod>2016-08-01T09:10:21+09:00</lastmod>
+    <lastmod>2017-05-01T10:13:29+09:00</lastmod>
     <priority>0</priority>
   </url>
   
