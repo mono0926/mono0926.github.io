@@ -165,11 +165,38 @@
     </item>
     
     <item>
+      <title>AngularJS</title>
+      <link>https://mono0926.com/tags/angularjs/</link>
+      <pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://mono0926.com/tags/angularjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Express</title>
       <link>https://mono0926.com/tags/express/</link>
       <pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate>
       
       <guid>https://mono0926.com/tags/express/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jade</title>
+      <link>https://mono0926.com/tags/jade/</link>
+      <pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://mono0926.com/tags/jade/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NodeJS</title>
+      <link>https://mono0926.com/tags/nodejs/</link>
+      <pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://mono0926.com/tags/nodejs/</guid>
       <description></description>
     </item>
     
@@ -183,34 +210,7 @@
     </item>
     
     <item>
-      <title>angularjs</title>
-      <link>https://mono0926.com/tags/angularjs/</link>
-      <pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://mono0926.com/tags/angularjs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>jade</title>
-      <link>https://mono0926.com/tags/jade/</link>
-      <pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://mono0926.com/tags/jade/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>nodejs</title>
-      <link>https://mono0926.com/tags/nodejs/</link>
-      <pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://mono0926.com/tags/nodejs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>stylus</title>
+      <title>Stylus</title>
       <link>https://mono0926.com/tags/stylus/</link>
       <pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate>
       
