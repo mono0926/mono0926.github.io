@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on mono0926.com</title>
@@ -165,7 +165,7 @@
     </item>
     
     <item>
-      <title>AngularJS</title>
+      <title>angularjs</title>
       <link>https://mono0926.com/tags/angularjs/</link>
       <pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate>
       
@@ -183,7 +183,7 @@
     </item>
     
     <item>
-      <title>Jade</title>
+      <title>jade</title>
       <link>https://mono0926.com/tags/jade/</link>
       <pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate>
       
@@ -192,7 +192,7 @@
     </item>
     
     <item>
-      <title>NodeJS</title>
+      <title>nodejs</title>
       <link>https://mono0926.com/tags/nodejs/</link>
       <pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate>
       
@@ -210,7 +210,7 @@
     </item>
     
     <item>
-      <title>Stylus</title>
+      <title>stylus</title>
       <link>https://mono0926.com/tags/stylus/</link>
       <pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate>
       
@@ -318,20 +318,20 @@
     </item>
     
     <item>
-      <title>Xcode</title>
-      <link>https://mono0926.com/tags/xcode/</link>
-      <pubDate>Sat, 21 Sep 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://mono0926.com/tags/xcode/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>iOS7</title>
       <link>https://mono0926.com/tags/ios7/</link>
       <pubDate>Sat, 21 Sep 2013 00:00:00 +0000</pubDate>
       
       <guid>https://mono0926.com/tags/ios7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Xcode</title>
+      <link>https://mono0926.com/tags/xcode/</link>
+      <pubDate>Sat, 21 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://mono0926.com/tags/xcode/</guid>
       <description></description>
     </item>
     

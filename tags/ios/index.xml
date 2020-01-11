@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ios on mono0926.com</title>
@@ -18,7 +18,6 @@
       
       <guid>https://mono0926.com/programming/swift-lt/</guid>
       <description>iOS 8/Swift エンジニア勉強会が台風で延期になったので、手元にいつまでもあってもしょうもないので資料公開しました(　´･‿･｀)
-  Xcode 6で利用可能になった ベクター画像リソースを 深掘り  from Masayuki Ono 
 延期つらたん
 ↑LINEクリエイターズスタンプとして公開中です。</description>
     </item>
@@ -30,7 +29,7 @@
       
       <guid>https://mono0926.com/programming/ios7/</guid>
       <description>iOS7関連のNDA解禁ということで、色々記事が増えてきたので、メモ。 少しずつ追記していきながら、落ち着いたところで、集約したような記事書くかも。
- iOS 7対応事例 FastCheckin iOS6からiOS7への対応 iOS 7向けアプリ開発時の注意点 iOS7でNavigationBarに入れたSearchBarにキャンセルボタンを出現させる方法 iOS6 -&amp;gt; iOS7変更対応 iOS 6&amp;frasl;7 で UILabel などの見た目がずれるよ〜とお嘆きのあなたへ CocoapodsとXcode5の組み合わせでエラー出た+解決した iOS7でステータスバーが被る問題への対応 iOS7のarm64対応でやったこと iOS7でナビゲーションバーやステータスバーの文字色を変える iOS 7 でステータスバーを隠す方法  </description>
+ iOS 7対応事例 FastCheckin iOS6からiOS7への対応 iOS 7向けアプリ開発時の注意点 iOS7でNavigationBarに入れたSearchBarにキャンセルボタンを出現させる方法 iOS6 -&amp;gt; iOS7変更対応 iOS 6/7 で UILabel などの見た目がずれるよ〜とお嘆きのあなたへ CocoapodsとXcode5の組み合わせでエラー出た+解決した iOS7でステータスバーが被る問題への対応 iOS7のarm64対応でやったこと iOS7でナビゲーションバーやステータスバーの文字色を変える iOS 7 でステータスバーを隠す方法  </description>
     </item>
     
   </channel>

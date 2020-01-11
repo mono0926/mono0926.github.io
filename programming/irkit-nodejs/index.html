@@ -45,25 +45,15 @@
 
 
             <section itemprop="entry-text">
-				
-
-<p>せっかく<a href="http://www.amazon.com/gp/product/B00HSO6YD8/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00HSO6YD8&amp;linkCode=as2&amp;tag=mono0926-20&amp;linkId=SIVQ46LXCW3PK3IO">Node.js the Right Way: Practical, Server-Side JavaScript That Scales [Kindle Edition]</a>でNode.jsを勉強したので、IRKitをNode.jsの勉強題材に出来ないかなと思って、とりあえずNode.jsのクライアントライブラリ無いかな？と探したらあったので、叩いてみた。</p>
-
-<h3 id="dameleon-node-irkit-https-github-com-dameleon-node-irkit"><a href="https://github.com/dameleon/node-irkit">dameleon/node-irkit</a></h3>
-
+				<p>せっかく<a href="http://www.amazon.com/gp/product/B00HSO6YD8/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00HSO6YD8&amp;linkCode=as2&amp;tag=mono0926-20&amp;linkId=SIVQ46LXCW3PK3IO">Node.js the Right Way: Practical, Server-Side JavaScript That Scales [Kindle Edition]</a>でNode.jsを勉強したので、IRKitをNode.jsの勉強題材に出来ないかなと思って、とりあえずNode.jsのクライアントライブラリ無いかな？と探したらあったので、叩いてみた。</p>
+<h3 id="dameleonnode-irkithttpsgithubcomdameleonnode-irkit"><a href="https://github.com/dameleon/node-irkit">dameleon/node-irkit</a></h3>
 <p>元々IRKitのAPIがシンプルなので、あまりNode.jsを使う必然性感じないけど、まあ勉強に（´-ω-｀）</p>
-
 <p>本1冊やったとはいえ、色々まだ不慣れなので、コード読解にも良いかも。
 ドキュメントは無いものの、テストはちゃんと書かれていたので、それを参考に使ってみた。</p>
-
 <p>まずはインストール。</p>
-
 <pre><code>npm install node-irkit
-</code></pre>
-
-<p>とりあえずlocalApiを使ってみた。
+</code></pre><p>とりあえずlocalApiを使ってみた。
 実行する度に、部屋の電気がオンオフされて煩わしいので、テストは違う信号でやろうと思ったなう（´-ω-｀）</p>
-
 <pre><code>const
     irkit = require('node-irkit'),
     localApi = irkit.getLocalApi(&quot;http://192.168.0.4&quot;),
@@ -73,7 +63,6 @@ localApi.postMessages(myRoomLightMessage, function(err, res) {
     console.log(res); //空
 });
 </code></pre>
-
 			</section>
 		</article>
 	</main>

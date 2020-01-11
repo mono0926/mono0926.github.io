@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>github on mono0926.com</title>
@@ -17,10 +17,10 @@
       <pubDate>Sun, 07 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>https://mono0926.com/blog/github_octopress_blog/</guid>
-      <description> Markdownで書けてなかなか良い感じかもしれない（´-ω-｀）
+      <description>Markdownで書けてなかなか良い感じかもしれない（´-ω-｀）
 導入手順 ここらへん参考に。
- GitHub pages + Octopressの導入  最初は適当にMacに入っているRuby 1.7.3やHomebrewで入れた2系でインストールしようとしたらはまって結局Ruby 1.9.3にしたので、初めから素直に従った方がよさげです。  rvmの導入がうまくできなかったので、それだけこれを参考に。  (OS X::Mountain Lion) RVMでRubyの環境構築メモ   個人的な運用  imathis/octopressからForkしてそのままソース管理として利用  下書きなどあっても人に見られちゃうからBitbucket使うっていう人が多いらしいですが、あまり気にならないのでGitHubで一元管理  setup_github_pages と入力して、GitHub上のこのページ にデプロイされるように  テーマの変更 テーマは、imathis/octopressから選べますが、あまり有名じゃないので、そんなに選択肢無いです。凝るなら自分で作るべきですかね。 こぎれいなテーマを適当に選んで使っています。 導入は簡単で、上記から選んで、下のコマンドですぐ反映されます。
-$ cd octopress $ git clone GIT_URL .themes/THEME_NAME $ rake install[&#39;THEME_NAME&#39;] $ rake generate  Markdown 初めて書いた なかなか便利ですね(　´･‿･｀) このあたりよくまとまっててよかったです。
+ GitHub pages + Octopressの導入  最初は適当にMacに入っているRuby 1.7.3やHomebrewで入れた2系でインストールしようとしたらはまって結局Ruby 1.9.3にしたので、初めから素直に従った方がよさげです。   rvmの導入がうまくできなかったので、それだけこれを参考に。  (OS X::Mountain Lion) RVMでRubyの環境構築メモ    個人的な運用  imathis/octopressからForkしてそのままソース管理として利用  下書きなどあっても人に見られちゃうからBitbucket使うっていう人が多いらしいですが、あまり気にならないのでGitHubで一元管理   setup_github_pages と入力して、GitHub上のこのページ にデプロイされるように  テーマの変更 テーマは、imathis/octopressから選べますが、あまり有名じゃないので、そんなに選択肢無いです。凝るなら自分で作るべきですかね。 こぎれいなテーマを適当に選んで使っています。 導入は簡単で、上記から選んで、下のコマンドですぐ反映されます。
+$ cd octopress $ git clone GIT_URL .themes/THEME_NAME $ rake install[&#39;THEME_NAME&#39;] $ rake generate Markdown 初めて書いた なかなか便利ですね(　´･‿･｀) このあたりよくまとまっててよかったです。
  Markdown記法 チートシート QA@ITで使えるMarkdown記法  </description>
     </item>
     

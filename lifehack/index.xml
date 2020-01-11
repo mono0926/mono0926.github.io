@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lifehacks on mono0926.com</title>
@@ -19,8 +19,6 @@
       <guid>https://mono0926.com/lifehack/password/</guid>
       <description>OSX 10.10(Yosemite)やiOS 8にアップデートして困ったこと - monoHubで書いた通り、iOS 8にして以来、1Passwordが使えなくてつらたんでした（´-ω-｀）
 しかし、ベータ版なら使えるという情報が。
-4.5.3b1 (iOS) is now available, and resolves some of the issues with iOS 8.
-&amp;mdash; 1Password Beta (@1PasswordBeta) June 4, 2014 
 そこで、数日前にAgileBits Beta Newsletterに登録して待っていたら、今日メールが届きました。
 それに従って、HockyApp ConfigのProfileをインストールした後、1Passwordのベータ版がインストール出来ました。
 つらくない(　´･‿･｀)
@@ -38,11 +36,13 @@ NDAに気をつけつつ困ったことや解決法など(　´･‿･｀)
 OSX 10.10(Yosemite)にアップデートして困ったこと PCKeyboardHackが起動しない 【追記】PCKeyboardHack-10.7.0がリリースされました！ 去年もこれで困ったことを思い出しました。 Realforceでスペースの両隣のキーでの日本語入力切り替えが効かずにとても不便です。 Apple純正キーボードだと問題ないですが。
 と思いつつ、Issuesを覗いたら、Add 10.10 support #31ですんなり解決(　´･‿･｀)
 何も考えずこれを打ったら問題無く動くように。
-sudo /sbin/kextload &#39;/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboardHack.10.9.signed.kext&#39;  BetterTouchToolが起動しない 【追記】Yosemite対応版のBetterTouchToolがダウンロード出来るようになりました！ これもOS X 10.10 Yosemite » BetterTouchTool, BetterSnapTool &amp;amp; SecondBarにすでに記事が上がっていて、現時点ではまだダウンロード出来ないけどまもなく対応版がリリースされる模様。
+sudo /sbin/kextload &#39;/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboardHack.10.9.signed.kext&#39; BetterTouchToolが起動しない 【追記】Yosemite対応版のBetterTouchToolがダウンロード出来るようになりました！ これもOS X 10.10 Yosemite » BetterTouchTool, BetterSnapTool &amp;amp; SecondBarにすでに記事が上がっていて、現時点ではまだダウンロード出来ないけどまもなく対応版がリリースされる模様。
  BetterTouchTool crashes on startup, but I already identified the issue and will fix it tomorrow.
  Alfredも、Keynotes直後にすぐこんなポスト投稿するなど、どこも動きが速くて素晴らしい(　´･‿･｀)
-Calm down everybody, Alfred isn’t going anywhere (but up) in OS X Yosemite :) http://t.co/wh1mMnxrkt
-&amp;mdash; Alfred App (@alfredapp) June 2, 2014</description>
+ただ、Yosemiteはインストールにすごく時間がかかって、残り4分で数十分固まったようになった(大量のファイルコピーなどしている模様・同様の報告多数)ので、失敗したかと思いけっこう怖かったです(　´･‿･｀)
+Homebrewが動かなくなってしまった /usr/local/bin/brew: /usr/local/Library/brew.rb: /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby: bad interpreter: No such file or directory brew doctorさえ動かない状態。
+ログに書いてあるとおりSystemのRubyのバージョンが変わったのかーと思いつつ、/usr/local/Library/brew.rbの以下の1.8の箇所を2.0にすれば直った。
+#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -W0 しかし、この編集後にbrew updateをすると、ローカルの変更が原因でPULL出来ないと怒られる（´-ω-｀） とはいえ、この編集をしないとbrewコマンド自体効かないし…と困りつつ、2.</description>
     </item>
     
     <item>
@@ -91,11 +91,11 @@ Calm down everybody, Alfred isn’t going anywhere (but up) in OS X Yosemite :) 
       
       <guid>https://mono0926.com/lifehack/self-publish/</guid>
       <description>最近、電子書籍系のアプリ開発中で、色々調べています。 ちょっと情報が頭に乗り切らなくなってきたので、整理。
-ツール Kindlegen Amazon謹製の、HTMLやEPUB形式からMobi形式に変換するツール。 成果物は、MacなどのKindleアプリでも見られるし、Kindle Previewerで、各プラットフォームでの動作チェック可能。
+ ツール Kindlegen Amazon謹製の、HTMLやEPUB形式からMobi形式に変換するツール。 成果物は、MacなどのKindleアプリでも見られるし、Kindle Previewerで、各プラットフォームでの動作チェック可能。
 クラス構造を一旦HTMLに落とし込んで、Mobi形式にエクスポートするところまでは出来たけど、いくつか警告が出てたりしてまだ対処出来ていない状態。 あと、ライセンス的にアプリのサーバー側で使ったりOKなのか気になる。
- リファレンスなど  Amazon Kindle Publishing Guidelines 和訳：Amazon Kindle パブリッシング・ガイドライン   Pandoc ドキュメント形式変換ツール。Markdown, HTMLなどからEPUB, PFDなどなどなど色々変換可能。 Linux, Mac, Windowsなどに対応。
- リファレンスなど  ソース(GitHub) Pandoc User’s Guide 使い方がたくさん書いてある。   例えばMarkdown形式からEPUB形式にしたいときの、タイトルや筆者などのメタ情報とかこう書いたりするらしい。まだ色々調べ中。 これを使って、クラス構造をEPUB形式でエクスポートできるところまでは出来たけど、細かい詰めがまだまだ（´-ω-｀）縦書きとか出来るのだろうか…。
-% title % author(s) (separated by semicolons) % date   参考  多様なフォーマットに対応！ドキュメント変換ツールPandocを知ろう 素晴らしい説明 githubとかにあるMarkdown形式のﾌｧｲﾙをhtmlとかEPUBとかに変換する   本 Amazon和書  Kindle自費出版ガイド 米アマゾンの先例から学ぶ電子書籍の作り方  Google Documentを使った作成法指南 Webで最新版を無料公開中：「Kindle 自費出版ガイド 米アマゾンの先例から学ぶ 電子書籍の作り方」(前半)  アマゾンで売る！　一番簡単な電子書籍の作り方  Google Documentは参考程度に、aozoraEpub3やSigilを利用  一万冊売ってわかった！電子書籍を売る方法  世界一周紀行など書いている人の本。ライブドアブログのEPUBエクスポートを利用。   うーん、作り方がバラバラ。わりとGoogle Documentで作るのが多数派な印象だけど。 みんなGUIベースだから直接は利用できないけど、参考程度に読んでる。</description>
+ リファレンスなど  Amazon Kindle Publishing Guidelines  和訳：Amazon Kindle パブリッシング・ガイドライン      Pandoc ドキュメント形式変換ツール。Markdown, HTMLなどからEPUB, PFDなどなどなど色々変換可能。 Linux, Mac, Windowsなどに対応。
+ リファレンスなど  ソース(GitHub) Pandoc User’s Guide  使い方がたくさん書いてある。      例えばMarkdown形式からEPUB形式にしたいときの、タイトルや筆者などのメタ情報とかこう書いたりするらしい。まだ色々調べ中。 これを使って、クラス構造をEPUB形式でエクスポートできるところまでは出来たけど、細かい詰めがまだまだ（´-ω-｀）縦書きとか出来るのだろうか…。
+% title % author(s) (separated by semicolons) % date  参考  多様なフォーマットに対応！ドキュメント変換ツールPandocを知ろう  素晴らしい説明   githubとかにあるMarkdown形式のﾌｧｲﾙをhtmlとかEPUBとかに変換する     本 Amazon和書  Kindle自費出版ガイド 米アマゾンの先例から学ぶ電子書籍の作り方  Google Documentを使った作成法指南 Webで最新版を無料公開中：「Kindle 自費出版ガイド 米アマゾンの先例から学ぶ 電子書籍の作り方」(前半)   アマゾンで売る！　一番簡単な電子書籍の作り方  Google Documentは参考程度に、aozoraEpub3やSigilを利用   一万冊売ってわかった！電子書籍を売る方法  世界一周紀行など書いている人の本。ライブドアブログのEPUBエクスポートを利用。    うーん、作り方がバラバラ。わりとGoogle Documentで作るのが多数派な印象だけど。 みんなGUIベースだから直接は利用できないけど、参考程度に読んでる。</description>
     </item>
     
     <item>
@@ -105,7 +105,7 @@ Calm down everybody, Alfred isn’t going anywhere (but up) in OS X Yosemite :) 
       
       <guid>https://mono0926.com/lifehack/google-reader-feedly/</guid>
       <description>一日に500-1000件消費するくらいのRSSリーダーヘビーユーザーでしたが、意外と困っていません。
- Google Reader 終わる前  iPhone: Byline + たまにReeder iPad: 同上 Mac: Reeder Web: Google Reader (Windows環境の時など、たまーに見る程度)  Google Reader 終わった後  iPhone: Byline + たまにReeder iPad: Byline (Reeder未対応) Mac: FeedlyのWebアプリ (Reeder未対応) Web: FeedlyのWebアプリ   と、あまり変わって無い上に、FeedlyのWebアプリの操作感(どこを押せば何が出来るかなど)にあまり慣れていないものの、J(次)・K(前)・V(新しいページで記事開く)のショートカットが一緒なことに気づいてからはほぼノンストレスです（´-ω-｀）
+ Google Reader 終わる前  iPhone: Byline + たまにReeder iPad: 同上 Mac: Reeder Web: Google Reader (Windows環境の時など、たまーに見る程度)   Google Reader 終わった後  iPhone: Byline + たまにReeder iPad: Byline (Reeder未対応) Mac: FeedlyのWebアプリ (Reeder未対応) Web: FeedlyのWebアプリ    と、あまり変わって無い上に、FeedlyのWebアプリの操作感(どこを押せば何が出来るかなど)にあまり慣れていないものの、J(次)・K(前)・V(新しいページで記事開く)のショートカットが一緒なことに気づいてからはほぼノンストレスです（´-ω-｀）
 ただ、やっぱりMacでReederを使ってサクサク見ていた感じには劣るので、早くReeder for Macがアップデートされてほしいところです（´・ω・｀）
 …とは別にこの機会に、SmartNewsで大衆ネタ・ゴシップ系などは拾い読みしているので、RSSリーダーは技術系ネタに絞って整理したいなとかも考えていたり。なかなか面倒ですが（´-ω-｀）
 追記 ReadKit というアプリが素晴らしく、常用し始めましたヽ(・ω・｀）</description>

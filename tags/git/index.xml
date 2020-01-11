@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on mono0926.com</title>
@@ -26,10 +26,10 @@
  SourceTree and git prepare-commit-msg - Atlassian Answers  @yabuchin_yさんに相談したら、commit-msgで書き換えてしまえばいけるのでは？ということで作ってもらえました。
 (僕はこの時点で、commit-msgはバリデーションフェーズ的なもので、書き換えは不可能なのでは？と思って諦めてしまいそうでした。)
 設定手順 コミットメッセージのテンプレートを作成して指定の文章が自動挿入されるようにする 以下を、特定のレポジトリルートで実行。
-# $HOME/.gitmessage.txtの置き場所は自由です # グローバルな設定としたい場合は、--globalオプションを付ける git config commit.template $HOME/.gitmessage.txt  # .gitmessage.txtの中身(末尾に半角スペースを入れておくこと推奨) [branchname]  これで、コミットメッセージ作成時に、[branchname]が先頭に自動挿入されます。
+# $HOME/.gitmessage.txtの置き場所は自由です # グローバルな設定としたい場合は、--globalオプションを付ける git config commit.template $HOME/.gitmessage.txt # .gitmessage.txtの中身(末尾に半角スペースを入れておくこと推奨) [branchname] これで、コミットメッセージ作成時に、[branchname] が先頭に自動挿入されます。
 コミット後に[branchname]がブランチ名へ書き換えられるようにする commit-msgフックを利用します。
 以下を特定のレポジトリの.git/hooks/commit-msgとして配置します。
-#!/usr/bin/env ruby message_file = ARGV[0] message = File.read(message_file, :encoding =&amp;gt; Encoding::UTF_8) current_branch = `git branch | grep &#39;*&#39;`.chomp.sub(&#39;* &#39;, &#39;&#39;) current_branch = current_branch[current_branch.rindex(&amp;quot;/&amp;quot;)+1 .. current_branch.length] newmessage = message.</description>
+#!/usr/bin/env ruby message_file = ARGV[0] message = File.read(message_file, :encoding =&amp;gt; Encoding::UTF_8) current_branch = `git branch | grep &#39;*&#39;`.chomp.sub(&#39;* &#39;, &#39;&#39;) current_branch = current_branch[current_branch.rindex(&amp;quot;/&amp;quot;)+1 .. current_branch.length] newmessage = message.sub(/\[branchname\]/, current_branch) File.</description>
     </item>
     
   </channel>

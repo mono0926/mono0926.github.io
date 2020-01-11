@@ -45,52 +45,33 @@
 
 
             <section itemprop="entry-text">
-				
-
-<p><a href="https://github.com/GoCon/GoCon/blob/master/2014spring.rst">GoCon/2014spring.rst at master · GoCon/GoCon</a>に備えて、とりあえずgolangのセットアップと、暇なときに<a href="http://tour.golang.org/#1">A Tour of Go</a>をやっておこうかと(　´･‿･｀)</p>
-
-<h2 id="gvmセットアップ">gvmセットアップ</h2>
-
+				<p><a href="https://github.com/GoCon/GoCon/blob/master/2014spring.rst">GoCon/2014spring.rst at master · GoCon/GoCon</a>に備えて、とりあえずgolangのセットアップと、暇なときに<a href="http://tour.golang.org/#1">A Tour of Go</a>をやっておこうかと(　´･‿･｀)</p>
+<h2 id="gvm">gvmセットアップ</h2>
 <p><a href="https://github.com/moovweb/gvm">moovweb/gvm</a>に書いてある通りにやった。
 mercurialのインストールが必要だったので、Brewfileに追記しておいた。</p>
-
 <p>あと、<code>gvm install go1</code>に失敗したので、<a href="https://github.com/moovweb/gvm/issues/38#issuecomment-39842170">Issues on OSX · Issue #38 · moovweb/gvm</a>に書いてある対応で何とかなった。</p>
-
 <p>普通に<code>brew install go</code>のが楽だけど、ちょっとがんばった（´-ω-｀）</p>
-
-<!-- more -->
-
-<h2 id="実行">実行</h2>
-
+<!-- raw HTML omitted -->
+<h2 id="heading">実行</h2>
 <p>以下を実行。</p>
-
 <pre><code>package main
 import &quot;fmt&quot;
 func main() {
     fmt.Printf(&quot;Hello world!&quot;)
 }
-</code></pre>
-
-<p><a href="http://mono0926.com/blog/2014/05/06/renew/">OSXの開発環境を整えた - monoHub</a>でJetBrainのIDEいくつかインストールしてたけど、<a href="http://www.jetbrains.com/idea/">IntelliJ IDEA — The Best Java and Polyglot IDE</a>で全部包含してるのね、情弱つらたん（´-ω-｀）</p>
-
+</code></pre><p><a href="http://mono0926.com/blog/2014/05/06/renew/">OSXの開発環境を整えた - monoHub</a>でJetBrainのIDEいくつかインストールしてたけど、<a href="http://www.jetbrains.com/idea/">IntelliJ IDEA — The Best Java and Polyglot IDE</a>で全部包含してるのね、情弱つらたん（´-ω-｀）</p>
 <p>まあそこそこのお値段だし、適当に色々試用して、良かったら最終的にUltimate Edtion買おうかな（´-ω-｀）
 Web StormでもGoのプラグインインストール出来たけど、SDKの設定とかうまく出来なかったりぐぐったりして出た説明と違うからCommunity Edition版のIntelliJでやった。</p>
-
-<p>実行できたけど、<code>go build hoge.go</code>で生成されるような実行ファイルが生成出来なくて謎(　´･‿･｀)<br />
+<p>実行できたけど、<code>go build hoge.go</code>で生成されるような実行ファイルが生成出来なくて謎(　´･‿･｀)<br>
 GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分からなくてつらたん（´-ω-｀）</p>
-
-<h3 id="解決">解決</h3>
-
+<h3 id="heading-1">解決</h3>
 <ul>
 <li><a href="https://github.com/go-lang-plugin-org/go-lang-idea-plugin/blob/master/Missing%20ENV.md">go-lang-idea-plugin/Missing ENV.md at master · go-lang-plugin-org/go-lang-idea-plugin</a>を参考に設定したら、警告ダイアログが出なくなった。</li>
 <li>Run Configurationsで、Build before runにチェックを付けてディレクトリをbinに設定したら、実行ファイルも生成されるようになった。</li>
 </ul>
-
-<p><img src="/images/post/go.png" alt="go" /></p>
-
+<p><img src="/images/post/go.png" alt="go"></p>
 <p>ただ、多分IntelliJがGoのデバッグ実行に対応していない？(無反応)のがつらたん（´-ω-｀）
 <a href="https://github.com/go-lang-plugin-org/go-lang-idea-plugin/issues/25">Support for debugging · Issue #25 · go-lang-plugin-org/go-lang-idea-plugin</a>を見ると、GAEプロジェクトのみ対応？？よく分からない（´-ω-｀）</p>
-
 <p>あと、<a href="https://twitter.com/yabuchin_y">ıɥɔınʎ (yabuchin_y) on Twitter</a>さんに<a href="https://gophercasts.io/">GopherCasts</a>を教えてもらった(　´･‿･｀)</p>
 
 			</section>

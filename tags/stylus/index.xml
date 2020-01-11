@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Stylus on mono0926.com</title>
+    <title>stylus on mono0926.com</title>
     <link>https://mono0926.com/tags/stylus/</link>
-    <description>Recent content in Stylus on mono0926.com</description>
+    <description>Recent content in stylus on mono0926.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Mon, 26 May 2014 00:00:00 +0000</lastBuildDate>
@@ -22,8 +22,7 @@ TypeScriptリファレンス Ver.1.0対応のサンプルを参考に、アレ�
 Redisでのデータの持ち方はケーススタディ — redis 2.0.3 documentationである程度分かったけど、なかなか迷うところや困るところも多いので、Redis入門読んでじっくり勉強中。 TODOアプリでは、なんとか動作自体は出来たけど、ちょっとしっくり来ないところもあったり。
 「Redis入門」というタイトルだけど、原書はRedis in Actionなだけあって、けっこう歯ごたえのある内容。一通り理解して手を動かせば、RedisやKVSのパラダイムに慣れられそう。
 サーバーサイドは外部モジュール使ってるけど(import xxx = require(&#39;yyy&#39;)形式)、クライアント側は内部モジュール形式で書いて手動で下記を実行して連結しているのも微妙なので、改善したい（´-ω-｀）他はWebStormで普通に実行したり、herokuへのデプロイはGitのPUSHで出来て楽なのだけれど（´-ω-｀）
-tsc @compile.tscparams  AngularJSとJadeのおかげで、HTML部分がすごくクリーンになっているのはとても良い感じ(　´･‿･｀)
- </description>
+tsc @compile.tscparams AngularJSとJadeのおかげで、HTML部分がすごくクリーンになっているのはとても良い感じ(　´･‿･｀)</description>
     </item>
     
     <item>
@@ -32,12 +31,12 @@ tsc @compile.tscparams  AngularJSとJadeのおかげで、HTML部分がすごく
       <pubDate>Wed, 14 May 2014 00:00:00 +0000</pubDate>
       
       <guid>https://mono0926.com/programming/angularjs/</guid>
-      <description> 最近Web系の勉強してて、Node.js・Express・Redis・Herokuなどサーバーサイド周り弄ってたけど、そろそろフロントエンドもという感じで色々やってみた。
+      <description>最近Web系の勉強してて、Node.js・Express・Redis・Herokuなどサーバーサイド周り弄ってたけど、そろそろフロントエンドもという感じで色々やってみた。
 サンプル置いとく AngularJSはけっこうリッチなライブラリで、全部身につけるのはしばらくかかりそうだけど、今日主要な機能はざっくり書けるようになった感(　´･‿･｀) Vue.jsと迷ったけど、borisyankov/DefinitelyTypedにまだ無かったし、とりあえず今メジャーなAngularJSやっとこうか、という感じ。
 JadeとStylusは記法いくつか覚えらればわりとサクサク書けて、気に入った。これ系いくつかあるけど、どれがいいんですかね。あまり比較検討せずに決めてしまった。
  AngularJS: MVW(Model-View-Whatever)フレームワークというらしい。Whatever=厳密に定義しない、みたいな意味らしい。JS・HTML周りのスパゲッティコード解消。MV*とかはともかく、とりあえずバインディング機構あるのが嬉しい。 Jade: HTMLの簡易記法 + αの機能 Stylus: SASS・LESSの後発版みたいな感じ？  資料  AngularJS使い方メモ - Qiita AngularJS - お前のAngular.jsはもうMVCではない。と言われないためのTutorial - Qiita AngularJSのMVWパターンを理解する - Qiita AngularJS: Developer Guide: Conceptual Overview Node.js - Jadeの記法について（あまりまとまっていない） - Qiita Jade Template Syntax Documentation by Example  一気に色々やると破綻しそうかと心配だったけど、意外とスムーズに出来たのは良かった。
 AngularJS、AngularJS使い方メモ - Qiitaの「ページの一部に動的にテンプレートを読み込む」くらいまでで、まだシングルページアプリケーション周りの機能は終えてないから、また続きやろう（´-ω-｀）
-コード    </description>
+コード </description>
     </item>
     
   </channel>

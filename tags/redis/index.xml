@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Redis on mono0926.com</title>
@@ -22,8 +22,7 @@ TypeScriptリファレンス Ver.1.0対応のサンプルを参考に、アレ�
 Redisでのデータの持ち方はケーススタディ — redis 2.0.3 documentationである程度分かったけど、なかなか迷うところや困るところも多いので、Redis入門読んでじっくり勉強中。 TODOアプリでは、なんとか動作自体は出来たけど、ちょっとしっくり来ないところもあったり。
 「Redis入門」というタイトルだけど、原書はRedis in Actionなだけあって、けっこう歯ごたえのある内容。一通り理解して手を動かせば、RedisやKVSのパラダイムに慣れられそう。
 サーバーサイドは外部モジュール使ってるけど(import xxx = require(&#39;yyy&#39;)形式)、クライアント側は内部モジュール形式で書いて手動で下記を実行して連結しているのも微妙なので、改善したい（´-ω-｀）他はWebStormで普通に実行したり、herokuへのデプロイはGitのPUSHで出来て楽なのだけれど（´-ω-｀）
-tsc @compile.tscparams  AngularJSとJadeのおかげで、HTML部分がすごくクリーンになっているのはとても良い感じ(　´･‿･｀)
- </description>
+tsc @compile.tscparams AngularJSとJadeのおかげで、HTML部分がすごくクリーンになっているのはとても良い感じ(　´･‿･｀)</description>
     </item>
     
   </channel>

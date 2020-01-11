@@ -45,57 +45,33 @@
 
 
             <section itemprop="entry-text">
-				
-
-<p>Git便利ですね。今やこれ無しで開発は無理、というレベルです。</p>
-
+				<p>Git便利ですね。今やこれ無しで開発は無理、というレベルです。</p>
 <p>そんな日々使っているGitですが、何かしらのツールでタスクやIssueを作ってそのIDをfeatureブランチ名としている運用は多いと思います。</p>
-
 <p>その場合、コミットメッセージにそのIDが含まれているとコミットとタスクを紐づけてくれるので、コミットメッセージの先頭にブランチ名を挿入することが多いはずです。</p>
-
 <p>それを打つのが一々面倒だしたまにミスして違うタスクに紐付かれちゃうし、で少し困っていました。</p>
-
 <p>コマンドラインで作業している場合は、以下のようなにGitの<code>prepare-commit-msg</code>フックを利用することで、コミットメッセージ作成時に自動挿入させることが可能です。</p>
-
 <ul>
 <li><a href="http://qiita.com/ykyk1218/items/4c17eef472ae8c31991f">Gitでcommitした時にブランチ名をcommitメッセージに自動でいれる - Qiita</a></li>
 </ul>
-
 <p>ただ、SourceTreeで試そうとしたら、動いてくれず、調べたところ非対応のようです。</p>
-
 <ul>
 <li><a href="https://answers.atlassian.com/questions/169399/sourcetree-and-git-prepare-commit-msg">SourceTree and git prepare-commit-msg - Atlassian Answers</a></li>
 </ul>
-
 <p><a href="https://twitter.com/yabuchin_y">@yabuchin_y</a>さんに相談したら、<code>commit-msg</code>で書き換えてしまえばいけるのでは？ということで作ってもらえました。</p>
-
 <p>(僕はこの時点で、<code>commit-msg</code>はバリデーションフェーズ的なもので、書き換えは不可能なのでは？と思って諦めてしまいそうでした。)</p>
-
-<h2 id="設定手順">設定手順</h2>
-
-<!-- more -->
-
-<h3 id="コミットメッセージのテンプレートを作成して指定の文章が自動挿入されるようにする">コミットメッセージのテンプレートを作成して指定の文章が自動挿入されるようにする</h3>
-
+<h2 id="heading">設定手順</h2>
+<!-- raw HTML omitted -->
+<h3 id="heading-1">コミットメッセージのテンプレートを作成して指定の文章が自動挿入されるようにする</h3>
 <p>以下を、特定のレポジトリルートで実行。</p>
-
 <pre><code># $HOME/.gitmessage.txtの置き場所は自由です
 # グローバルな設定としたい場合は、--globalオプションを付ける
 git config commit.template $HOME/.gitmessage.txt
-</code></pre>
-
-<pre><code># .gitmessage.txtの中身(末尾に半角スペースを入れておくこと推奨)
+</code></pre><pre><code># .gitmessage.txtの中身(末尾に半角スペースを入れておくこと推奨)
 [branchname]
-</code></pre>
-
-<p>これで、コミットメッセージ作成時に、<code>[branchname]</code>が先頭に自動挿入されます。</p>
-
-<h3 id="コミット後に-branchname-がブランチ名へ書き換えられるようにする">コミット後に[branchname]がブランチ名へ書き換えられるようにする</h3>
-
+</code></pre><p>これで、コミットメッセージ作成時に、<code>[branchname] </code>が先頭に自動挿入されます。</p>
+<h3 id="branchname">コミット後に[branchname]がブランチ名へ書き換えられるようにする</h3>
 <p><code>commit-msg</code>フックを利用します。</p>
-
 <p>以下を特定のレポジトリの<code>.git/hooks/commit-msg</code>として配置します。</p>
-
 <pre><code>#!/usr/bin/env ruby
 message_file = ARGV[0]
 message = File.read(message_file, :encoding =&gt; Encoding::UTF_8)
@@ -106,33 +82,19 @@ current_branch = current_branch[current_branch.rindex(&quot;/&quot;)+1 .. curren
 newmessage = message.sub(/\[branchname\]/, current_branch)
 
 File.write(message_file, newmessage)
-</code></pre>
-
-<p><code>feature/hoge/#35</code>などとなっている場合、<code>[branchname]</code>部分が<code>#35</code>と置換されるような処理をしています。
+</code></pre><p><code>feature/hoge/#35</code>などとなっている場合、<code>[branchname]</code>部分が<code>#35</code>と置換されるような処理をしています。
 用途に応じて適宜書き換えてください。</p>
-
-<h2 id="挙動">挙動</h2>
-
+<h2 id="heading-2">挙動</h2>
 <p>文章だけではイメージが沸きにくいかもしれないので、スクリーンショット貼っておきます。</p>
-
-<h3 id="コミットメッセージを入れようとすると先頭に-branchname-が自動挿入">コミットメッセージを入れようとすると先頭に[branchname]が自動挿入</h3>
-
-<p><img src="/images/post/st1.png" alt="" /></p>
-
+<h3 id="branchname-1">コミットメッセージを入れようとすると先頭に[branchname]が自動挿入</h3>
+<p><img src="/images/post/st1.png" alt=""></p>
 <p>そのままその後にメッセージを入れてコミットします。</p>
-
-<h3 id="branchname-が置換されてブランチ名になってくれます">[branchname]が置換されてブランチ名になってくれます</h3>
-
-<p><img src="/images/post/st2.png" alt="" /></p>
-
-<h2 id="実際に使って見て">実際に使って見て</h2>
-
+<h3 id="branchname-2">[branchname]が置換されてブランチ名になってくれます</h3>
+<p><img src="/images/post/st2.png" alt=""></p>
+<h2 id="heading-3">実際に使って見て</h2>
 <p>先週から活用し初めましたがすこぶる快適です(　´･‿･｀)</p>
-
 <p><a href="https://twitter.com/yabuchin_y">@yabuchin_y</a>さん、ありがとうございました(　´･‿･｀)</p>
-
-<h3 id="参考リンク">参考リンク</h3>
-
+<h3 id="heading-4">参考リンク</h3>
 <ul>
 <li><a href="http://git-scm.com/book/ja/v1/Git-%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA-Git-%E3%83%95%E3%83%83%E3%82%AF">Git - Git フック</a></li>
 <li><a href="http://qiita.com/khlizard/items/dfe1ec9d82c0ed5da7c6">Git hooks まとめ - Qiita</a></li>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ios8 on mono0926.com</title>
@@ -19,8 +19,6 @@
       <guid>https://mono0926.com/lifehack/password/</guid>
       <description>OSX 10.10(Yosemite)やiOS 8にアップデートして困ったこと - monoHubで書いた通り、iOS 8にして以来、1Passwordが使えなくてつらたんでした（´-ω-｀）
 しかし、ベータ版なら使えるという情報が。
-4.5.3b1 (iOS) is now available, and resolves some of the issues with iOS 8.
-&amp;mdash; 1Password Beta (@1PasswordBeta) June 4, 2014 
 そこで、数日前にAgileBits Beta Newsletterに登録して待っていたら、今日メールが届きました。
 それに従って、HockyApp ConfigのProfileをインストールした後、1Passwordのベータ版がインストール出来ました。
 つらくない(　´･‿･｀)

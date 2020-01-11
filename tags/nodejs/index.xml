@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>NodeJS on mono0926.com</title>
+    <title>nodejs on mono0926.com</title>
     <link>https://mono0926.com/tags/nodejs/</link>
-    <description>Recent content in NodeJS on mono0926.com</description>
+    <description>Recent content in nodejs on mono0926.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Mon, 26 May 2014 00:00:00 +0000</lastBuildDate>
@@ -22,8 +22,7 @@ TypeScriptリファレンス Ver.1.0対応のサンプルを参考に、アレ�
 Redisでのデータの持ち方はケーススタディ — redis 2.0.3 documentationである程度分かったけど、なかなか迷うところや困るところも多いので、Redis入門読んでじっくり勉強中。 TODOアプリでは、なんとか動作自体は出来たけど、ちょっとしっくり来ないところもあったり。
 「Redis入門」というタイトルだけど、原書はRedis in Actionなだけあって、けっこう歯ごたえのある内容。一通り理解して手を動かせば、RedisやKVSのパラダイムに慣れられそう。
 サーバーサイドは外部モジュール使ってるけど(import xxx = require(&#39;yyy&#39;)形式)、クライアント側は内部モジュール形式で書いて手動で下記を実行して連結しているのも微妙なので、改善したい（´-ω-｀）他はWebStormで普通に実行したり、herokuへのデプロイはGitのPUSHで出来て楽なのだけれど（´-ω-｀）
-tsc @compile.tscparams  AngularJSとJadeのおかげで、HTML部分がすごくクリーンになっているのはとても良い感じ(　´･‿･｀)
- </description>
+tsc @compile.tscparams AngularJSとJadeのおかげで、HTML部分がすごくクリーンになっているのはとても良い感じ(　´･‿･｀)</description>
     </item>
     
     <item>
@@ -34,7 +33,7 @@ tsc @compile.tscparams  AngularJSとJadeのおかげで、HTML部分がすごく
       <guid>https://mono0926.com/programming/irkit/</guid>
       <description>冬場忙しかったりで既存アプリで部屋のリモコン登録する程度しかいじれてなかったけど、最近ようやく落ち着いてきたので、IRKitで遊んでみる(　´･‿･｀)
 セットアップ IRKit - Open Source WiFi Connected Infrared Remote Controllerを参考に、諸々設定。
-# dns-sdコマンドで、IRKitのインスタンス名取得。 Pro:b4 mono$ dns-sd -B _irkit._tcp Browsing for _irkit._tcp DATE: ---Mon 05 May 2014--- 14:41:16.669 ...STARTING... Timestamp A/R Flags if Domain Service Type Instance Name 14:41:16.880 Add 2 4 local. _irkit._tcp. iRKitA2C4  # インスタンス名から、IPアドレス取得 Pro:b4 mono$ dns-sd -G v4 irkita2c4.local DATE: ---Mon 05 May 2014--- 14:41:43.565 ...STARTING... Timestamp A/R Flags if Hostname Address TTL 14:41:43.566 Add 2 4 irkita2c4.</description>
+# dns-sdコマンドで、IRKitのインスタンス名取得。 Pro:b4 mono$ dns-sd -B _irkit._tcp Browsing for _irkit._tcp DATE: ---Mon 05 May 2014--- 14:41:16.669 ...STARTING... Timestamp A/R Flags if Domain Service Type Instance Name 14:41:16.880 Add 2 4 local. _irkit._tcp. iRKitA2C4 # インスタンス名から、IPアドレス取得 Pro:b4 mono$ dns-sd -G v4 irkita2c4.local DATE: ---Mon 05 May 2014--- 14:41:43.565 ...STARTING... Timestamp A/R Flags if Hostname Address TTL 14:41:43.566 Add 2 4 irkita2c4.</description>
     </item>
     
     <item>
@@ -43,12 +42,12 @@ tsc @compile.tscparams  AngularJSとJadeのおかげで、HTML部分がすごく
       <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
       
       <guid>https://mono0926.com/programming/irkit-nodejs/</guid>
-      <description> せっかくNode.js the Right Way: Practical, Server-Side JavaScript That Scales [Kindle Edition]でNode.jsを勉強したので、IRKitをNode.jsの勉強題材に出来ないかなと思って、とりあえずNode.jsのクライアントライブラリ無いかな？と探したらあったので、叩いてみた。
+      <description>せっかくNode.js the Right Way: Practical, Server-Side JavaScript That Scales [Kindle Edition]でNode.jsを勉強したので、IRKitをNode.jsの勉強題材に出来ないかなと思って、とりあえずNode.jsのクライアントライブラリ無いかな？と探したらあったので、叩いてみた。
 dameleon/node-irkit 元々IRKitのAPIがシンプルなので、あまりNode.jsを使う必然性感じないけど、まあ勉強に（´-ω-｀）
 本1冊やったとはいえ、色々まだ不慣れなので、コード読解にも良いかも。 ドキュメントは無いものの、テストはちゃんと書かれていたので、それを参考に使ってみた。
 まずはインストール。
-npm install node-irkit  とりあえずlocalApiを使ってみた。 実行する度に、部屋の電気がオンオフされて煩わしいので、テストは違う信号でやろうと思ったなう（´-ω-｀）
-const irkit = require(&#39;node-irkit&#39;), localApi = irkit.getLocalApi(&amp;quot;http://192.168.0.4&amp;quot;), myRoomLight = &#39;{&amp;quot;format&amp;quot;:&amp;quot;raw&amp;quot;,&amp;quot;freq&amp;quot;:38,&amp;quot;data&amp;quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}&#39;, myRoomLightMessage = JSON.parse(myRoomLight); localApi.postMessages(myRoomLightMessage, function(err, res) { console.log(res); //空 });  </description>
+npm install node-irkit とりあえずlocalApiを使ってみた。 実行する度に、部屋の電気がオンオフされて煩わしいので、テストは違う信号でやろうと思ったなう（´-ω-｀）
+const irkit = require(&#39;node-irkit&#39;), localApi = irkit.getLocalApi(&amp;quot;http://192.168.0.4&amp;quot;), myRoomLight = &#39;{&amp;quot;format&amp;quot;:&amp;quot;raw&amp;quot;,&amp;quot;freq&amp;quot;:38,&amp;quot;data&amp;quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}&#39;, myRoomLightMessage = JSON.parse(myRoomLight); localApi.postMessages(myRoomLightMessage, function(err, res) { console.log(res); //空 }); </description>
     </item>
     
   </channel>

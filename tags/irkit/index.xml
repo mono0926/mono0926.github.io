@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>irkit on mono0926.com</title>
@@ -19,7 +19,7 @@
       <guid>https://mono0926.com/programming/irkit/</guid>
       <description>冬場忙しかったりで既存アプリで部屋のリモコン登録する程度しかいじれてなかったけど、最近ようやく落ち着いてきたので、IRKitで遊んでみる(　´･‿･｀)
 セットアップ IRKit - Open Source WiFi Connected Infrared Remote Controllerを参考に、諸々設定。
-# dns-sdコマンドで、IRKitのインスタンス名取得。 Pro:b4 mono$ dns-sd -B _irkit._tcp Browsing for _irkit._tcp DATE: ---Mon 05 May 2014--- 14:41:16.669 ...STARTING... Timestamp A/R Flags if Domain Service Type Instance Name 14:41:16.880 Add 2 4 local. _irkit._tcp. iRKitA2C4  # インスタンス名から、IPアドレス取得 Pro:b4 mono$ dns-sd -G v4 irkita2c4.local DATE: ---Mon 05 May 2014--- 14:41:43.565 ...STARTING... Timestamp A/R Flags if Hostname Address TTL 14:41:43.566 Add 2 4 irkita2c4.</description>
+# dns-sdコマンドで、IRKitのインスタンス名取得。 Pro:b4 mono$ dns-sd -B _irkit._tcp Browsing for _irkit._tcp DATE: ---Mon 05 May 2014--- 14:41:16.669 ...STARTING... Timestamp A/R Flags if Domain Service Type Instance Name 14:41:16.880 Add 2 4 local. _irkit._tcp. iRKitA2C4 # インスタンス名から、IPアドレス取得 Pro:b4 mono$ dns-sd -G v4 irkita2c4.local DATE: ---Mon 05 May 2014--- 14:41:43.565 ...STARTING... Timestamp A/R Flags if Hostname Address TTL 14:41:43.566 Add 2 4 irkita2c4.</description>
     </item>
     
     <item>
@@ -31,8 +31,8 @@
       <description>前回のIRKitで遊び始めた〜とりあえずTerminalで操作〜 - monoHubの続き。
 前回触ったIRKit Device HTTP APIは同じWiFi内から操作するためのもので、外からアクセスするときはIRKit Internet HTTP APIを叩くことになる。
 IRKit Internet HTTP APIを叩けるように準備 まずは、clienttokenを取得。
-Pro:~ mono$ curl -i &amp;quot;http://192.168.0.4/keys&amp;quot; -d &#39;&#39; HTTP/1.0 200 OK Access-Control-Allow-Origin: * Server: IRKit/1.3.5.0.gce6ac15 Content-Type: text/plain {&amp;quot;clienttoken&amp;quot;:&amp;quot;**************************&amp;quot;} #伏せています  取得したclienttokenを元に、deviceidとclientkeyを取得。
-Pro:~ mono$ curl -i -d &amp;quot;clienttoken=**************************&amp;quot; &amp;quot;https://api.getirkit.com/1/keys&amp;quot; HTTP/1.1 200 OK Server: ngx_openresty Date: Mon, 05 May 2014 06:44:32 GMT Content-Type: application/json; charset=utf-8 Content-Length: 94 Connection: keep-alive Access-Control-Allow-Origin: * Access-Control-Allow-Headers: X-Requested-With X-Content-Type-Options: nosniff {&amp;quot;deviceid&amp;quot;:&amp;quot;XXXXXXXXXXXXXXXXXXXXXX&amp;quot;,&amp;quot;clientkey&amp;quot;:&amp;quot;YYYYYYYYYYYYYYYYYYYYY&amp;quot;} #伏せています  Internet HTTP APIを使ってみる deviceid・clientkey・家のライトのオンオフ信号をhttps://api.</description>
+Pro:~ mono$ curl -i &amp;quot;http://192.168.0.4/keys&amp;quot; -d &#39;&#39; HTTP/1.0 200 OK Access-Control-Allow-Origin: * Server: IRKit/1.3.5.0.gce6ac15 Content-Type: text/plain {&amp;quot;clienttoken&amp;quot;:&amp;quot;**************************&amp;quot;} #伏せています 取得したclienttokenを元に、deviceidとclientkeyを取得。
+Pro:~ mono$ curl -i -d &amp;quot;clienttoken=**************************&amp;quot; &amp;quot;https://api.getirkit.com/1/keys&amp;quot; HTTP/1.1 200 OK Server: ngx_openresty Date: Mon, 05 May 2014 06:44:32 GMT Content-Type: application/json; charset=utf-8 Content-Length: 94 Connection: keep-alive Access-Control-Allow-Origin: * Access-Control-Allow-Headers: X-Requested-With X-Content-Type-Options: nosniff {&amp;quot;deviceid&amp;quot;:&amp;quot;XXXXXXXXXXXXXXXXXXXXXX&amp;quot;,&amp;quot;clientkey&amp;quot;:&amp;quot;YYYYYYYYYYYYYYYYYYYYY&amp;quot;} #伏せています Internet HTTP APIを使ってみる deviceid・clientkey・家のライトのオンオフ信号をhttps://api.</description>
     </item>
     
     <item>
@@ -41,12 +41,12 @@ Pro:~ mono$ curl -i -d &amp;quot;clienttoken=**************************&amp;quot
       <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
       
       <guid>https://mono0926.com/programming/irkit-nodejs/</guid>
-      <description> せっかくNode.js the Right Way: Practical, Server-Side JavaScript That Scales [Kindle Edition]でNode.jsを勉強したので、IRKitをNode.jsの勉強題材に出来ないかなと思って、とりあえずNode.jsのクライアントライブラリ無いかな？と探したらあったので、叩いてみた。
+      <description>せっかくNode.js the Right Way: Practical, Server-Side JavaScript That Scales [Kindle Edition]でNode.jsを勉強したので、IRKitをNode.jsの勉強題材に出来ないかなと思って、とりあえずNode.jsのクライアントライブラリ無いかな？と探したらあったので、叩いてみた。
 dameleon/node-irkit 元々IRKitのAPIがシンプルなので、あまりNode.jsを使う必然性感じないけど、まあ勉強に（´-ω-｀）
 本1冊やったとはいえ、色々まだ不慣れなので、コード読解にも良いかも。 ドキュメントは無いものの、テストはちゃんと書かれていたので、それを参考に使ってみた。
 まずはインストール。
-npm install node-irkit  とりあえずlocalApiを使ってみた。 実行する度に、部屋の電気がオンオフされて煩わしいので、テストは違う信号でやろうと思ったなう（´-ω-｀）
-const irkit = require(&#39;node-irkit&#39;), localApi = irkit.getLocalApi(&amp;quot;http://192.168.0.4&amp;quot;), myRoomLight = &#39;{&amp;quot;format&amp;quot;:&amp;quot;raw&amp;quot;,&amp;quot;freq&amp;quot;:38,&amp;quot;data&amp;quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}&#39;, myRoomLightMessage = JSON.parse(myRoomLight); localApi.postMessages(myRoomLightMessage, function(err, res) { console.log(res); //空 });  </description>
+npm install node-irkit とりあえずlocalApiを使ってみた。 実行する度に、部屋の電気がオンオフされて煩わしいので、テストは違う信号でやろうと思ったなう（´-ω-｀）
+const irkit = require(&#39;node-irkit&#39;), localApi = irkit.getLocalApi(&amp;quot;http://192.168.0.4&amp;quot;), myRoomLight = &#39;{&amp;quot;format&amp;quot;:&amp;quot;raw&amp;quot;,&amp;quot;freq&amp;quot;:38,&amp;quot;data&amp;quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}&#39;, myRoomLightMessage = JSON.parse(myRoomLight); localApi.postMessages(myRoomLightMessage, function(err, res) { console.log(res); //空 }); </description>
     </item>
     
   </channel>

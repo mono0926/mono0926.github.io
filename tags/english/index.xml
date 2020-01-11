@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>english on mono0926.com</title>
@@ -21,18 +21,18 @@
 元々はAlfredで英文校正が出来るようにしたかったので、ここからが本番。
 完成版 こんなのが出来たという紹介から。
 校正 ginger というキーワードに続けて英文を打つと、正してくれる。(この場合、冠詞aの抜けが正される。)
-改善候補一覧 rephraseというキーワードに続けて適当な英文を打つと、より自然な言い回し候補を出してくれる。 &amp;ldquo;Thank you for your reply&amp;rdquo;は、メールの返信とかでよく使うけど、ワンパターン化を避けたい時とかに使えそう。
+改善候補一覧 rephraseというキーワードに続けて適当な英文を打つと、より自然な言い回し候補を出してくれる。 &amp;ldquo;Thank you for your reply&amp;quot;は、メールの返信とかでよく使うけど、ワンパターン化を避けたい時とかに使えそう。
 ともに、選択状態でエンターを押すと、クリップボードにコピーされて、フォーカスの当たっているアプリにペーストされるので、適当にメールとかエディタとか使いながら自然と正しそうな英文が打てるようになるはず。
 AlfredのWorkflowの作り方 一応ドキュメントはあるけど、肝心なところが書かれていなかったりして、フォーラムで聞いたり、既存のWorkflowのソースを読んで作り方を学ばなければいけない感じ。 作り方自体は基本簡単だけど、ちょくちょくはまりどころがあって苦労する。
 キーワードの受け取り {query}というキーワードでアクセス出来るので、それをスクリプトに引数ととして渡すのが一般的。
 結果の表示 処理終了時にnotification飛ばしたり、クリップボードにコピーとかはWorkflowのエディタでパーツをつなぎ合わせたりするだけで簡単だけど、上の例みたいに一覧するのはどうやるのかと思っていたら、XMLで標準出力するらしい。 関係ないechoやprint文があると壊れるので注意。 ここらへんも、既存のソース読み解いてやっと分かった。それも不慣れなPHPソースがけっこう多くてアレ。
 こんな感じのXMLを標準出力すると、Itemの数だけ一覧される。
-&amp;lt;?xml version=&amp;quot;1.0&amp;quot; ?&amp;gt; &amp;lt;items&amp;gt; &amp;lt;item arg=&amp;quot;I am a programmer and writing bad English. I am Japanese.&amp;quot; uid=&amp;quot;d78b56b0-fcb7-11e2-9787-e80688cb3920&amp;quot;&amp;gt; &amp;lt;title&amp;gt;I am a programmer and writing bad English. I am Japanese.&amp;lt;/title&amp;gt; &amp;lt;subtitle&amp;gt;Gingered sentence&amp;lt;/subtitle&amp;gt; &amp;lt;icon/&amp;gt; &amp;lt;/item&amp;gt; &amp;lt;/items&amp;gt;  これも適当に文字列置換したりして作れるけど、PythonでXML組み立てて作る簡単なモジュール作って再利用できるようにしておいた。 ここらへんの下回りがけっこうこなれていない感。
+&amp;lt;?xml version=&amp;quot;1.0&amp;quot; ?&amp;gt; &amp;lt;items&amp;gt; &amp;lt;item arg=&amp;quot;I am a programmer and writing bad English. I am Japanese.&amp;quot; uid=&amp;quot;d78b56b0-fcb7-11e2-9787-e80688cb3920&amp;quot;&amp;gt; &amp;lt;title&amp;gt;I am a programmer and writing bad English. I am Japanese.&amp;lt;/title&amp;gt; &amp;lt;subtitle&amp;gt;Gingered sentence&amp;lt;/subtitle&amp;gt; &amp;lt;icon/&amp;gt; &amp;lt;/item&amp;gt; &amp;lt;/items&amp;gt; これも適当に文字列置換したりして作れるけど、PythonでXML組み立てて作る簡単なモジュール作って再利用できるようにしておいた。 ここらへんの下回りがけっこうこなれていない感。
 インストール可能なパッケージの作り方 配布されているworkflowは、*.alfredworkflowという形式で、ダブルクリックでインストールできる。
 簡単なやり方は自分のworkflowを右クリックしてExportすること。
 逆にscript群からコマンドで作りたい場合は、必要なファイルをzip化して拡張子を変えればよい。 info.plistが必要で、それは多分コマンドラインじゃ作れないから、やっぱり最初はExportの過程が必要だけど、コードとか別管理したいならコマンドラインで修正版作るのがよさげな気がする。
 適当にpackage作成スクリプト書いた。
-cp ginger/info.</description>
+cp ginger/info.plist . cp ginger/*.</description>
     </item>
     
   </channel>

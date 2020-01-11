@@ -45,10 +45,7 @@
 
 
             <section itemprop="entry-text">
-				
-
-<p>今日初めてOctopressを触ったら、けっこう気に入ったので、さらに気軽に書ける環境を整えれば捗るのではと思い、AlfredのWorkflowを作ってみました。</p>
-
+				<p>今日初めてOctopressを触ったら、けっこう気に入ったので、さらに気軽に書ける環境を整えれば捗るのではと思い、AlfredのWorkflowを作ってみました。</p>
 <pre><code># deploy用
 OCTOPATH='/Documents/Git/Private/octopress'
 cd ~/$OCTOPATH
@@ -56,36 +53,25 @@ rake gen_deploy
 git add .
 git commit -m &quot;deployed via workflow.&quot;
 git push
-</code></pre>
-
-<pre><code># 投稿用
+</code></pre><pre><code># 投稿用
 OCTOPATH='/Documents/Git/Private/octopress'
 cd ~/$OCTOPATH
 OCTOPOST=$(rake new_post[$1]| grep -o 'source/_posts/.*')
 open ~/$OCTOPATH/$OCTOPOST
-</code></pre>
-
-<p>すんなり出来るかと思いきや、これだけでは動かず、</p>
-
+</code></pre><p>すんなり出来るかと思いきや、これだけでは動かず、</p>
 <blockquote>
 <p>In my bash script I had to add some extras because Alfred runs the bash script in a subshell and in this subshell the rvm environment is not available by default.
 <a href="http://tooh.github.io/blog/2013/04/23/Alfred_workflow_for_Octopress/">Alfred Workflow for Octopress</a></p>
 </blockquote>
-
 <p>とある通り、下記のような設定をする必要があったようです。
 かなりハマりました（´-ω-｀）
 よく分からないけど、別ファイルにしたら動かないので、とりあえず全て冒頭にこれを挟みました（´-ω-｀）</p>
-
-<!-- more -->
-
+<!-- raw HTML omitted -->
 <pre><code># rv設定
 if [[ -s &quot;$HOME/.rvm/scripts/rvm&quot; ]] ; then
 	source &quot;$HOME/.rvm/scripts/rvm&quot;
 fi
-</code></pre>
-
-<p>さらに一応previewコマンドも作成</p>
-
+</code></pre><p>さらに一応previewコマンドも作成</p>
 <pre><code>if [[ -s &quot;$HOME/.rvm/scripts/rvm&quot; ]] ; then
 	source &quot;$HOME/.rvm/scripts/rvm&quot;
 fi
@@ -96,40 +82,28 @@ rake generate
 # open in a browser
 open http://localhost:4000/
 rake preview
-</code></pre>
-
-<p>こちらはコマンドを実行するだけではウインドウが開かれずプロセスがゾンビ状態になってしまうので、Alfredで呼び出す時に</p>
-
+</code></pre><p>こちらはコマンドを実行するだけではウインドウが開かれずプロセスがゾンビ状態になってしまうので、Alfredで呼び出す時に</p>
 <pre><code>open -a Terminal.app preview.sh
-</code></pre>
-
-<p>と少しだけ工夫。</p>
-
+</code></pre><p>と少しだけ工夫。</p>
 <p><a href="https://github.com/Temikus/alfred-octopress/blob/master/post.sh">Temikus/alfred-octopress</a> など、同じようなもの作っている人もいたり。</p>
-
 <p>とりあえず、これでいつでもランチャー起動して<code>post titleなど</code>と入力すると、記事が生成されて開かれて、書き終わったら<code>preview</code>で確認して、<code>deploy</code>実行すればサイトへの反映とレポジトリへのPushが行われる便利な環境が出来ました。
 (Alfredのテーマもかっこよくして遊んでました。)</p>
-
-<p><img src="/images/post/post.png" alt="post workflow" /></p>
-
-<h4 id="octopress気に入ったけど">Octopress気に入ったけど…</h4>
-
+<p><img src="/images/post/post.png" alt="post workflow"></p>
+<h4 id="octopress">Octopress気に入ったけど…</h4>
 <p>Qiitaもよく見たらMarkdownでかなり使いやすそう。
 色々ツールもあるし。</p>
-
 <ul>
 <li><a href="http://kobito.qiita.com/">Kobito</a>
-
 <ul>
 <li>Qiitaに投稿出来るクライアントアプリ。同時にGistにスニペット登録も可能。</li>
-</ul></li>
+</ul>
+</li>
 <li><a href="http://www.gistboxapp.com/">GistBox</a>
-
 <ul>
 <li>Gist用Webアプリ。Chrome App版はネイティブっぽい操作感。</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <p>最近久しく何も書いてなかったけど、あまり脈絡の無い雑多メモなどはこちらで、技術系TipsはQiitaあたりにまとめる習慣付けたい（´・ω・｀）</p>
 
 			</section>

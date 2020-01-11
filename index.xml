@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mono0926.com</title>
@@ -18,11 +18,8 @@
       
       <guid>https://mono0926.com/page/job/</guid>
       <description>プロフィール 🐶 mono  - mono0926.com およびそのリンク先などご覧ください。
-得意技術は次の通りです(2019年7月更新)。
- Swiftを用いたiOSアプリ開発  iOSアプリ開発業務経験: 7年 Swift歴: 5年  Firebase全般  GCP(Google Cloud Platform)もある程度  Flutterアプリ開発  1年くらいだが、最近はiOSネイティブより触れる時間が長くメインスキルになりつつある 執筆記事: Flutter 🇯🇵 – Medium Androidネイティブ知識が関わってくると多少厳しくなってくるがFlutterはAndroidで詰まることが稀なのであまり問題と感じていない( + 必要に応じてAndroidネイティブ開発もキャッチアップするイメージ)   できること  サービスの仕様検討・デザインからサーバーサイド・iOSネイティブアプリ(Flutter使えばAndroidも)までの一気通貫した開発  もちろん、デザインなどは専任には劣るが、開発的にコスパ良いデザインができるなど強みにもなり得る  サーバーサイドはFirebase(+GCP)以外もできなくはないが、新規開発なら大抵のケースでそれがもっとも効率よく高品質なものを作れると思って専念している その他、ソフトウェア開発の一通りのことを自分だけでこなせると思っていて、必要に応じて別の技術も活用中  ただ、Webフロント周りは技術的に俯瞰できるような知識は持っているつもりなものの、実際のプロダクション開発は現時点ではできるレベルではない   現在の状況 平日フルコミットで稼働中。
-副業相談 以下でも募集していますが、直接メールでの相談や各種SNSアカウントからでの相談でもOKです。
- mono0926へ開発相談する - Stargzr _mono さんのジョブカード | Catcher（キャッチャー）  前提条件としては以下を想定しています。 余暇や現収入とのバランス・税金考慮などで、現在高めの単価を設定しています。
- 単価は 20,000円/時 を希望  要相談で 12,000円/時 程度も検討 案件相談段階で、要した時間ベースで 6,000円/時  予めこちらから打診してその段階でNGなら打ち切りで、もちろんお金も請求いたしません   トータルで週あたり最大4時間程度を目安  今は本業以外はほぼ何も抱えていない状態  技術顧問の場合、例えば月あたり定額30万円で15時間以内の実稼働時間目安(あるいはこの半分くらい)などであれば、まず金銭的条件としては請けられる 仕事を請けられる時間帯は、基本的には休日メインで、場合によっては平日夜などの対応も可能 移動コストなど削減のため極力リモート対応を希望  メインの仕事もここ数年フルリモート   現状では割ける時間も限られているので、コーディング作業などよりも例えばFirebase・Flutterなどを実際に使う上でのノウハウの共有・アドバイスなどの方がバリューを提供しやすいと思っています。</description>
+得意技術は次の通りです(2020年1月更新)。
+ Flutterアプリ開発  2年くらいだが、最近はiOSネイティブより触れる時間が長く最も得意な技術分野になりつつある 執筆記事: Flutter 🇯🇵 – Medium   Firebase全般  GCP(Google Cloud Platform)もある程度   Swiftを用いたiOSアプリ開発  iOSアプリ開発業務経験: 7年 Swift歴: 5年    できること  サービスの仕様検討・デザインからサーバーサイド・iOSネイティブアプリ(Flutter使えばAndroidも)までの一気通貫した開発  もちろん、デザインなどは専任には劣るが、開発的にコスパ良いデザインができるなど強みにもなり得る   サーバーサイドはFirebase(+GCP)以外もできなくはないが、新規開発なら大抵のケースでそれがもっとも効率よく高品質なものを作れると思って専念している その他、ソフトウェア開発の一通りのことを自分だけでこなせると思っていて、必要に応じて別の技術も活用中  ただ、Webフロント周りは技術的に俯瞰できるような知識は持っているつもりなものの、実際のプロダクション開発は現時点ではできるレベルではない    お仕事の相談 こちらをご参照ください: https://gist.github.com/mono0926/5e8d214b09eeec5bb85765d2aec03202</description>
     </item>
     
     <item>
@@ -31,8 +28,7 @@
       <pubDate>Mon, 01 May 2017 10:13:29 +0900</pubDate>
       
       <guid>https://mono0926.com/programming/live-photos/</guid>
-      <description>イッヌ🐶
- </description>
+      <description>イッヌ🐶</description>
     </item>
     
     <item>
@@ -42,7 +38,7 @@
       
       <guid>https://mono0926.com/page/about/</guid>
       <description>ソフトウェアエンジニアで、今はメインはiOSアプリ開発(Swift)です。Firebaseも得意です。 mono系のIDと犬アイコンで活動してます(　´･‿･｀)
-各種リンク 技術系記事  Medium Qiita  プロフィールなど  Stack Overflow プロフィール GitHub  レジュメ  Facebook Wantedlyプロフィール  開発したアプリ・サービス iGhost  iGhost - キャラチャット iActor - キャラになろう  日々の直接のユーザーサポート・会社の資金面など以外の、開発に関わることすべてを現在1人で担当しています。
+各種リンク 技術系記事  Medium Qiita  プロフィールなど  Stack Overflow プロフィール GitHub  レジュメ   Facebook Wantedlyプロフィール  開発したアプリ・サービス iGhost  iGhost - キャラチャット iActor - キャラになろう  日々の直接のユーザーサポート・会社の資金面など以外の、開発に関わることすべてを現在1人で担当しています。
  サーバーサイド(Firebase・GCP) iOSアプリ2本(Swift) デザイン(Sketch) データ分析(BigQuery・Data Studio) 要件定義  2018年2月のリリースから半年で、2アプリ合わせてApp Storeでのレビューは1,000件・平均評価4.65程度の高評価となっています。
 JOIN US チーフエンジニアとして、iOS版アプリ + 開発全般やってます。 2015年10月にジョインして、iOS版アプリは全部書き直して11月にバージョン3.0としてリリースしました！ 最近は、統計・機械学習あたりにも手を出そうかと(　´･‿･｀)
 Player! 2015年にAppStoreで、ベスト新着アプリ・iOS 9オススメアプリ・2015年ベストアプリに選ばれたアプリのiOS版を作り上げました。 メイン開発からは退きましたが、今でも週末にコミットしています。
@@ -74,11 +70,11 @@ iPhone 6 Plusとのこれまでの付き合い方 iPhone 6 Plus、大きな画�
  (A) 日常的に、ポケットに収まらない(特に座った時) (B) 主にランニング時、ポケットには入るものの、大きさ・重さなどのせいで吹っ飛びそうだし邪魔  それぞれ解決した感があります(　´･‿･｀)
 (A) 日常的に、ポケットに収まらない(特に座った時) バッグはあまり持ちたく無い派(手ぶら派)なので、それ以外の方法で考えます。
 そこで導入したのがこの2つ
-  6 Plusが充分入ってケーブルとかちょっとしたものも追加で入るちょうど良いサイズ感です。 分厚くなく、かといってペラペラな感じでも無いのも良いです。
+6 Plusが充分入ってケーブルとかちょっとしたものも追加で入るちょうど良いサイズ感です。 分厚くなく、かといってペラペラな感じでも無いのも良いです。
 以前、7インチタブレット(Nexes 7)で同様の試みをしたことがあったのですが、その時は腰に7インチ端末をぶら下げることはやはり無理があることを悟って撤退しました。
 ただ、今回iPhone 6 Plusおよびそれにジャストサイズなケースで試したら良い感じでした(　´･‿･｀) ブラブラしてもよいけど手軽に脱着したい場合はカラビナ、密着度あげたい場合はベルトに通すのが良いですね。
 (B) 主にランニング時、ポケットには入るものの大きさ・重さなどのせいで吹っ飛びそう 「iPhone ランニング」などで調べると、アームバンドがよく検索に引っかかりますが、以前いくつか使ってみた感想としては微妙でした。
- ケースに入れるのや装着が面倒 取り出しがしにくい  Apple Watchがあるとはいえ、信号待ちなどでこみ入った操作したい時にぱっと取り出せると便利   さらに、iPhone 6 Plusは腕に付けるには大きすぎます(´・︵・｀)</description>
+ ケースに入れるのや装着が面倒 取り出しがしにくい  Apple Watchがあるとはいえ、信号待ちなどでこみ入った操作したい時にぱっと取り出せると便利    さらに、iPhone 6 Plusは腕に付けるには大きすぎます(´・︵・｀)</description>
     </item>
     
     <item>
@@ -96,10 +92,10 @@ iPhone 6 Plusとのこれまでの付き合い方 iPhone 6 Plus、大きな画�
  SourceTree and git prepare-commit-msg - Atlassian Answers  @yabuchin_yさんに相談したら、commit-msgで書き換えてしまえばいけるのでは？ということで作ってもらえました。
 (僕はこの時点で、commit-msgはバリデーションフェーズ的なもので、書き換えは不可能なのでは？と思って諦めてしまいそうでした。)
 設定手順 コミットメッセージのテンプレートを作成して指定の文章が自動挿入されるようにする 以下を、特定のレポジトリルートで実行。
-# $HOME/.gitmessage.txtの置き場所は自由です # グローバルな設定としたい場合は、--globalオプションを付ける git config commit.template $HOME/.gitmessage.txt  # .gitmessage.txtの中身(末尾に半角スペースを入れておくこと推奨) [branchname]  これで、コミットメッセージ作成時に、[branchname]が先頭に自動挿入されます。
+# $HOME/.gitmessage.txtの置き場所は自由です # グローバルな設定としたい場合は、--globalオプションを付ける git config commit.template $HOME/.gitmessage.txt # .gitmessage.txtの中身(末尾に半角スペースを入れておくこと推奨) [branchname] これで、コミットメッセージ作成時に、[branchname] が先頭に自動挿入されます。
 コミット後に[branchname]がブランチ名へ書き換えられるようにする commit-msgフックを利用します。
 以下を特定のレポジトリの.git/hooks/commit-msgとして配置します。
-#!/usr/bin/env ruby message_file = ARGV[0] message = File.read(message_file, :encoding =&amp;gt; Encoding::UTF_8) current_branch = `git branch | grep &#39;*&#39;`.chomp.sub(&#39;* &#39;, &#39;&#39;) current_branch = current_branch[current_branch.rindex(&amp;quot;/&amp;quot;)+1 .. current_branch.length] newmessage = message.</description>
+#!/usr/bin/env ruby message_file = ARGV[0] message = File.read(message_file, :encoding =&amp;gt; Encoding::UTF_8) current_branch = `git branch | grep &#39;*&#39;`.chomp.sub(&#39;* &#39;, &#39;&#39;) current_branch = current_branch[current_branch.rindex(&amp;quot;/&amp;quot;)+1 .. current_branch.length] newmessage = message.sub(/\[branchname\]/, current_branch) File.</description>
     </item>
     
     <item>
@@ -111,16 +107,14 @@ iPhone 6 Plusとのこれまでの付き合い方 iPhone 6 Plus、大きな画�
       <description>先日もISUCONコンテスト予選に出たばかりですが、土日(10月18-19日)に クックパッドの「第5回 開発コンテスト24」に参戦しました。
 勝手にアニバーサリー ～なんでもない日を、あの人との記念日に。～が成果物です。 ちなみに、タイトルは僕が初め適当に提案したのが意外と良かったらしくそのまま採用されました（｀・ω・´）
 メンバー こんな感じのバランスの良いメンバーが集まりました(　´･‿･｀)
- 僕  iOSアプリか適当なGoコード書く予定 (結果Goコード書いてた)  やぶさん  サーバーサイド(普段Scala使ってるけど、今回はGo)  の奥さん  Data Veraciを作った方 (前職の先輩)  ひつじさん  yah○○のデザイナーさん  のんたん☆  恵比寿のデザイナーさん   僕が平均年齢くらいの華やかなメンバーでした。
-当日まで  レポジトリ作成: SYM-CONTEST/Cookpad2014 Facebookイベント作成: クックパッド 第5回 開発コンテスト24 Slack用意  自宅警備もする必要があるので、オンライン上でやりとりして開発  yah○○のBASE6で打ち合わせ(ひつじさんからのご招待)  ここでのんたん☆の参戦決定（｀・ω・´）   当日 去年も余命チェッカーで参戦してたので、大体勝手は分かっていました。
+ 僕  iOSアプリか適当なGoコード書く予定 (結果Goコード書いてた)   やぶさん  サーバーサイド(普段Scala使ってるけど、今回はGo)   の奥さん  Data Veraciを作った方 (前職の先輩)   ひつじさん  yah○○のデザイナーさん   のんたん☆  恵比寿のデザイナーさん    僕が平均年齢くらいの華やかなメンバーでした。
+当日まで  レポジトリ作成: SYM-CONTEST/Cookpad2014 Facebookイベント作成: クックパッド 第5回 開発コンテスト24 Slack用意  自宅警備もする必要があるので、オンライン上でやりとりして開発   yah○○のBASE6で打ち合わせ(ひつじさんからのご招待)  ここでのんたん☆の参戦決定（｀・ω・´）    当日 去年も余命チェッカーで参戦してたので、大体勝手は分かっていました。
 朝9時 クックパッドの「第5回 開発コンテスト24」をリロードして、お題が「誰かと話すキッカケを作るサービス」であることを把握。
 元々、10時までに作るネタが決まらなかったら解散というオレオレレギュレーションをやっていたので、時間を気にしつつネタ出し。
 けっこう良いアイディアが出るものの、コンテスト受けしそうか微妙な感じで、なかなか収束せず。
 雰囲気的に10時過ぎてもそのまま続行することにして、最低午前中にという感じで結果、過去に何かつながりがあってご無沙汰な人間関係を、勝手に記念日をでっちあげて祝うことで結びつけるサービスになりました。
 具体的には、Twitterで過去に絡んだ人たちに、そのやり取りのキーワードを抽出して○○記念日のメッセージを投げるみたいな。 (Twitterに限らずもっと膨らませたかったけど、実装コストの兼ね合いもあり)
-1日目昼 作るものが決まったので、もう少し仕様や画面を詰めるような相談をしたり、出来るところは実装始めたり。
-やぶさん達はいつの間にかお寿司屋さん行ってました（´・д・｀） 僕は不慣れなGo言語での以下の2点の実装法を手短に調べて、うんいけそうみたいな感触を得ました。
- Twitter認証  mrjones/oauth採用  Twitter APIで過去のやり取りを取得  ChimeraCoder/anaconda採用   そんなこんなで、Googleハングアウト使いながら、みんなで色々お話しつつ作業。</description>
+1日目昼 作るものが決まったので、もう少し仕様や画面を詰めるような相談をしたり、出来るところは実装始めたり。</description>
     </item>
     
     <item>
@@ -130,7 +124,6 @@ iPhone 6 Plusとのこれまでの付き合い方 iPhone 6 Plus、大きな画�
       
       <guid>https://mono0926.com/programming/swift-lt/</guid>
       <description>iOS 8/Swift エンジニア勉強会が台風で延期になったので、手元にいつまでもあってもしょうもないので資料公開しました(　´･‿･｀)
-  Xcode 6で利用可能になった ベクター画像リソースを 深掘り  from Masayuki Ono 
 延期つらたん
 ↑LINEクリエイターズスタンプとして公開中です。</description>
     </item>
@@ -154,8 +147,6 @@ iPhone 6 Plusとのこれまでの付き合い方 iPhone 6 Plus、大きな画�
       <guid>https://mono0926.com/lifehack/password/</guid>
       <description>OSX 10.10(Yosemite)やiOS 8にアップデートして困ったこと - monoHubで書いた通り、iOS 8にして以来、1Passwordが使えなくてつらたんでした（´-ω-｀）
 しかし、ベータ版なら使えるという情報が。
-4.5.3b1 (iOS) is now available, and resolves some of the issues with iOS 8.
-&amp;mdash; 1Password Beta (@1PasswordBeta) June 4, 2014 
 そこで、数日前にAgileBits Beta Newsletterに登録して待っていたら、今日メールが届きました。
 それに従って、HockyApp ConfigのProfileをインストールした後、1Passwordのベータ版がインストール出来ました。
 つらくない(　´･‿･｀)
@@ -188,11 +179,13 @@ NDAに気をつけつつ困ったことや解決法など(　´･‿･｀)
 OSX 10.10(Yosemite)にアップデートして困ったこと PCKeyboardHackが起動しない 【追記】PCKeyboardHack-10.7.0がリリースされました！ 去年もこれで困ったことを思い出しました。 Realforceでスペースの両隣のキーでの日本語入力切り替えが効かずにとても不便です。 Apple純正キーボードだと問題ないですが。
 と思いつつ、Issuesを覗いたら、Add 10.10 support #31ですんなり解決(　´･‿･｀)
 何も考えずこれを打ったら問題無く動くように。
-sudo /sbin/kextload &#39;/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboardHack.10.9.signed.kext&#39;  BetterTouchToolが起動しない 【追記】Yosemite対応版のBetterTouchToolがダウンロード出来るようになりました！ これもOS X 10.10 Yosemite » BetterTouchTool, BetterSnapTool &amp;amp; SecondBarにすでに記事が上がっていて、現時点ではまだダウンロード出来ないけどまもなく対応版がリリースされる模様。
+sudo /sbin/kextload &#39;/Applications/PCKeyboardHack.app/Contents/Library/PCKeyboardHack.10.9.signed.kext&#39; BetterTouchToolが起動しない 【追記】Yosemite対応版のBetterTouchToolがダウンロード出来るようになりました！ これもOS X 10.10 Yosemite » BetterTouchTool, BetterSnapTool &amp;amp; SecondBarにすでに記事が上がっていて、現時点ではまだダウンロード出来ないけどまもなく対応版がリリースされる模様。
  BetterTouchTool crashes on startup, but I already identified the issue and will fix it tomorrow.
  Alfredも、Keynotes直後にすぐこんなポスト投稿するなど、どこも動きが速くて素晴らしい(　´･‿･｀)
-Calm down everybody, Alfred isn’t going anywhere (but up) in OS X Yosemite :) http://t.co/wh1mMnxrkt
-&amp;mdash; Alfred App (@alfredapp) June 2, 2014</description>
+ただ、Yosemiteはインストールにすごく時間がかかって、残り4分で数十分固まったようになった(大量のファイルコピーなどしている模様・同様の報告多数)ので、失敗したかと思いけっこう怖かったです(　´･‿･｀)
+Homebrewが動かなくなってしまった /usr/local/bin/brew: /usr/local/Library/brew.rb: /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby: bad interpreter: No such file or directory brew doctorさえ動かない状態。
+ログに書いてあるとおりSystemのRubyのバージョンが変わったのかーと思いつつ、/usr/local/Library/brew.rbの以下の1.8の箇所を2.0にすれば直った。
+#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -W0 しかし、この編集後にbrew updateをすると、ローカルの変更が原因でPULL出来ないと怒られる（´-ω-｀） とはいえ、この編集をしないとbrewコマンド自体効かないし…と困りつつ、2.</description>
     </item>
     
     <item>
@@ -234,8 +227,7 @@ TypeScriptリファレンス Ver.1.0対応のサンプルを参考に、アレ�
 Redisでのデータの持ち方はケーススタディ — redis 2.0.3 documentationである程度分かったけど、なかなか迷うところや困るところも多いので、Redis入門読んでじっくり勉強中。 TODOアプリでは、なんとか動作自体は出来たけど、ちょっとしっくり来ないところもあったり。
 「Redis入門」というタイトルだけど、原書はRedis in Actionなだけあって、けっこう歯ごたえのある内容。一通り理解して手を動かせば、RedisやKVSのパラダイムに慣れられそう。
 サーバーサイドは外部モジュール使ってるけど(import xxx = require(&#39;yyy&#39;)形式)、クライアント側は内部モジュール形式で書いて手動で下記を実行して連結しているのも微妙なので、改善したい（´-ω-｀）他はWebStormで普通に実行したり、herokuへのデプロイはGitのPUSHで出来て楽なのだけれど（´-ω-｀）
-tsc @compile.tscparams  AngularJSとJadeのおかげで、HTML部分がすごくクリーンになっているのはとても良い感じ(　´･‿･｀)
- </description>
+tsc @compile.tscparams AngularJSとJadeのおかげで、HTML部分がすごくクリーンになっているのはとても良い感じ(　´･‿･｀)</description>
     </item>
     
     <item>
@@ -244,12 +236,12 @@ tsc @compile.tscparams  AngularJSとJadeのおかげで、HTML部分がすごく
       <pubDate>Wed, 14 May 2014 00:00:00 +0000</pubDate>
       
       <guid>https://mono0926.com/programming/angularjs/</guid>
-      <description> 最近Web系の勉強してて、Node.js・Express・Redis・Herokuなどサーバーサイド周り弄ってたけど、そろそろフロントエンドもという感じで色々やってみた。
+      <description>最近Web系の勉強してて、Node.js・Express・Redis・Herokuなどサーバーサイド周り弄ってたけど、そろそろフロントエンドもという感じで色々やってみた。
 サンプル置いとく AngularJSはけっこうリッチなライブラリで、全部身につけるのはしばらくかかりそうだけど、今日主要な機能はざっくり書けるようになった感(　´･‿･｀) Vue.jsと迷ったけど、borisyankov/DefinitelyTypedにまだ無かったし、とりあえず今メジャーなAngularJSやっとこうか、という感じ。
 JadeとStylusは記法いくつか覚えらればわりとサクサク書けて、気に入った。これ系いくつかあるけど、どれがいいんですかね。あまり比較検討せずに決めてしまった。
  AngularJS: MVW(Model-View-Whatever)フレームワークというらしい。Whatever=厳密に定義しない、みたいな意味らしい。JS・HTML周りのスパゲッティコード解消。MV*とかはともかく、とりあえずバインディング機構あるのが嬉しい。 Jade: HTMLの簡易記法 + αの機能 Stylus: SASS・LESSの後発版みたいな感じ？  資料  AngularJS使い方メモ - Qiita AngularJS - お前のAngular.jsはもうMVCではない。と言われないためのTutorial - Qiita AngularJSのMVWパターンを理解する - Qiita AngularJS: Developer Guide: Conceptual Overview Node.js - Jadeの記法について（あまりまとまっていない） - Qiita Jade Template Syntax Documentation by Example  一気に色々やると破綻しそうかと心配だったけど、意外とスムーズに出来たのは良かった。
 AngularJS、AngularJS使い方メモ - Qiitaの「ページの一部に動的にテンプレートを読み込む」くらいまでで、まだシングルページアプリケーション周りの機能は終えてないから、また続きやろう（´-ω-｀）
-コード    </description>
+コード </description>
     </item>
     
     <item>
@@ -263,7 +255,7 @@ gvmセットアップ moovweb/gvmに書いてある通りにやった。 mercuri
 あと、gvm install go1に失敗したので、Issues on OSX · Issue #38 · moovweb/gvmに書いてある対応で何とかなった。
 普通にbrew install goのが楽だけど、ちょっとがんばった（´-ω-｀）
 実行 以下を実行。
-package main import &amp;quot;fmt&amp;quot; func main() { fmt.Printf(&amp;quot;Hello world!&amp;quot;) }  OSXの開発環境を整えた - monoHubでJetBrainのIDEいくつかインストールしてたけど、IntelliJ IDEA — The Best Java and Polyglot IDEで全部包含してるのね、情弱つらたん（´-ω-｀）
+package main import &amp;quot;fmt&amp;quot; func main() { fmt.Printf(&amp;quot;Hello world!&amp;quot;) } OSXの開発環境を整えた - monoHubでJetBrainのIDEいくつかインストールしてたけど、IntelliJ IDEA — The Best Java and Polyglot IDEで全部包含してるのね、情弱つらたん（´-ω-｀）
 まあそこそこのお値段だし、適当に色々試用して、良かったら最終的にUltimate Edtion買おうかな（´-ω-｀） Web StormでもGoのプラグインインストール出来たけど、SDKの設定とかうまく出来なかったりぐぐったりして出た説明と違うからCommunity Edition版のIntelliJでやった。
 実行できたけど、go build hoge.goで生成されるような実行ファイルが生成出来なくて謎(　´･‿･｀)
 GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分からなくてつらたん（´-ω-｀）
@@ -276,20 +268,20 @@ GOROOT・GOPATHもどこで設定すべきかとかその役割とかよく分�
       <pubDate>Tue, 06 May 2014 00:00:00 +0000</pubDate>
       
       <guid>https://mono0926.com/programming/renew/</guid>
-      <description> Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。 Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイッチしたいなとか思ったのが発端。
+      <description>Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。 Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイッチしたいなとか思ったのが発端。
 参考: Node.jsのコールバック地獄をPromiseやGeneratorを使って解消する - HackerNews翻訳してみた
 わりとbrew install XXXで雑に各種環境インストールしてたので、これを気に色々直した。
 Homebrewアンインストール ゴミが残るのいやだったので、Uninstall Homebrewでhomebrewをアンインストール。
 Brewfile導入 以下など見て便利そうだと思っていたので、Brewfile導入。
  Mac OSX をクリーンインストールしてからの環境構築メモ - Shin x blog 「BrewfileでHomebrewパッケージを管理する」をやってみた - sonots:blog MacBook にインストールしているアプリやツールをメモする代わりに Brewfile を作った - present  これだけで一気にインストール出来てとても便利。
-brew bundle  僕の：Environment/OSX/Brewfile at master · mono0926/Environment
+brew bundle 僕の：Environment/OSX/Brewfile at master · mono0926/Environment
 今後も、Homebrewで何か新しくインストールするときメンテナンスしていくようにしよう。
 その他開発環境 brew install XXXで適当にインストールせずに、バージョンの切り替えが容易なようにした。 いくつか種類あったけど、基本後発のを導入してみた。
- Python: yyuu/pyenv Ruby: sstephenson/rbenv Node.js: creationix/nvm  nvmはzshとの相性悪くて日本ではhokaccha/nodebrewがけっこう人気っぽかったけど特に問題無かったのでnvmにした。   諸々雑なところがあるけど、Environment/OSX at master · mono0926/Environmentでセットアップスクリプト管理。
+ Python: yyuu/pyenv Ruby: sstephenson/rbenv Node.js: creationix/nvm  nvmはzshとの相性悪くて日本ではhokaccha/nodebrewがけっこう人気っぽかったけど特に問題無かったのでnvmにした。    諸々雑なところがあるけど、Environment/OSX at master · mono0926/Environmentでセットアップスクリプト管理。
 IDE導入 スクリプト系言語は、最近はわりとSublime Textで書いていたけど、やっぱり補完がもう少し聞いてくれないと厳しいので、なるべくIDE使うようにしようと思う。
 IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれば捗るかなと。
 今まではNetBeansかたまにEclipseだったけど、乗り換え。少しずつ慣れていこう（´-ω-｀）
- WebStorm :: The smartest JavaScript IDE Ruby on Rails IDE :: JetBrains RubyMine Python IDE &amp;amp; Django IDE for Web developers : JetBrains PyCharm  CE版は無料   </description>
+ WebStorm :: The smartest JavaScript IDE Ruby on Rails IDE :: JetBrains RubyMine Python IDE &amp;amp; Django IDE for Web developers : JetBrains PyCharm  CE版は無料    </description>
     </item>
     
     <item>
@@ -300,7 +292,7 @@ IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれ
       <guid>https://mono0926.com/programming/irkit/</guid>
       <description>冬場忙しかったりで既存アプリで部屋のリモコン登録する程度しかいじれてなかったけど、最近ようやく落ち着いてきたので、IRKitで遊んでみる(　´･‿･｀)
 セットアップ IRKit - Open Source WiFi Connected Infrared Remote Controllerを参考に、諸々設定。
-# dns-sdコマンドで、IRKitのインスタンス名取得。 Pro:b4 mono$ dns-sd -B _irkit._tcp Browsing for _irkit._tcp DATE: ---Mon 05 May 2014--- 14:41:16.669 ...STARTING... Timestamp A/R Flags if Domain Service Type Instance Name 14:41:16.880 Add 2 4 local. _irkit._tcp. iRKitA2C4  # インスタンス名から、IPアドレス取得 Pro:b4 mono$ dns-sd -G v4 irkita2c4.local DATE: ---Mon 05 May 2014--- 14:41:43.565 ...STARTING... Timestamp A/R Flags if Hostname Address TTL 14:41:43.566 Add 2 4 irkita2c4.</description>
+# dns-sdコマンドで、IRKitのインスタンス名取得。 Pro:b4 mono$ dns-sd -B _irkit._tcp Browsing for _irkit._tcp DATE: ---Mon 05 May 2014--- 14:41:16.669 ...STARTING... Timestamp A/R Flags if Domain Service Type Instance Name 14:41:16.880 Add 2 4 local. _irkit._tcp. iRKitA2C4 # インスタンス名から、IPアドレス取得 Pro:b4 mono$ dns-sd -G v4 irkita2c4.local DATE: ---Mon 05 May 2014--- 14:41:43.565 ...STARTING... Timestamp A/R Flags if Hostname Address TTL 14:41:43.566 Add 2 4 irkita2c4.</description>
     </item>
     
     <item>
@@ -312,8 +304,8 @@ IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれ
       <description>前回のIRKitで遊び始めた〜とりあえずTerminalで操作〜 - monoHubの続き。
 前回触ったIRKit Device HTTP APIは同じWiFi内から操作するためのもので、外からアクセスするときはIRKit Internet HTTP APIを叩くことになる。
 IRKit Internet HTTP APIを叩けるように準備 まずは、clienttokenを取得。
-Pro:~ mono$ curl -i &amp;quot;http://192.168.0.4/keys&amp;quot; -d &#39;&#39; HTTP/1.0 200 OK Access-Control-Allow-Origin: * Server: IRKit/1.3.5.0.gce6ac15 Content-Type: text/plain {&amp;quot;clienttoken&amp;quot;:&amp;quot;**************************&amp;quot;} #伏せています  取得したclienttokenを元に、deviceidとclientkeyを取得。
-Pro:~ mono$ curl -i -d &amp;quot;clienttoken=**************************&amp;quot; &amp;quot;https://api.getirkit.com/1/keys&amp;quot; HTTP/1.1 200 OK Server: ngx_openresty Date: Mon, 05 May 2014 06:44:32 GMT Content-Type: application/json; charset=utf-8 Content-Length: 94 Connection: keep-alive Access-Control-Allow-Origin: * Access-Control-Allow-Headers: X-Requested-With X-Content-Type-Options: nosniff {&amp;quot;deviceid&amp;quot;:&amp;quot;XXXXXXXXXXXXXXXXXXXXXX&amp;quot;,&amp;quot;clientkey&amp;quot;:&amp;quot;YYYYYYYYYYYYYYYYYYYYY&amp;quot;} #伏せています  Internet HTTP APIを使ってみる deviceid・clientkey・家のライトのオンオフ信号をhttps://api.</description>
+Pro:~ mono$ curl -i &amp;quot;http://192.168.0.4/keys&amp;quot; -d &#39;&#39; HTTP/1.0 200 OK Access-Control-Allow-Origin: * Server: IRKit/1.3.5.0.gce6ac15 Content-Type: text/plain {&amp;quot;clienttoken&amp;quot;:&amp;quot;**************************&amp;quot;} #伏せています 取得したclienttokenを元に、deviceidとclientkeyを取得。
+Pro:~ mono$ curl -i -d &amp;quot;clienttoken=**************************&amp;quot; &amp;quot;https://api.getirkit.com/1/keys&amp;quot; HTTP/1.1 200 OK Server: ngx_openresty Date: Mon, 05 May 2014 06:44:32 GMT Content-Type: application/json; charset=utf-8 Content-Length: 94 Connection: keep-alive Access-Control-Allow-Origin: * Access-Control-Allow-Headers: X-Requested-With X-Content-Type-Options: nosniff {&amp;quot;deviceid&amp;quot;:&amp;quot;XXXXXXXXXXXXXXXXXXXXXX&amp;quot;,&amp;quot;clientkey&amp;quot;:&amp;quot;YYYYYYYYYYYYYYYYYYYYY&amp;quot;} #伏せています Internet HTTP APIを使ってみる deviceid・clientkey・家のライトのオンオフ信号をhttps://api.</description>
     </item>
     
     <item>
@@ -322,12 +314,12 @@ Pro:~ mono$ curl -i -d &amp;quot;clienttoken=**************************&amp;quot
       <pubDate>Mon, 05 May 2014 00:00:00 +0000</pubDate>
       
       <guid>https://mono0926.com/programming/irkit-nodejs/</guid>
-      <description> せっかくNode.js the Right Way: Practical, Server-Side JavaScript That Scales [Kindle Edition]でNode.jsを勉強したので、IRKitをNode.jsの勉強題材に出来ないかなと思って、とりあえずNode.jsのクライアントライブラリ無いかな？と探したらあったので、叩いてみた。
+      <description>せっかくNode.js the Right Way: Practical, Server-Side JavaScript That Scales [Kindle Edition]でNode.jsを勉強したので、IRKitをNode.jsの勉強題材に出来ないかなと思って、とりあえずNode.jsのクライアントライブラリ無いかな？と探したらあったので、叩いてみた。
 dameleon/node-irkit 元々IRKitのAPIがシンプルなので、あまりNode.jsを使う必然性感じないけど、まあ勉強に（´-ω-｀）
 本1冊やったとはいえ、色々まだ不慣れなので、コード読解にも良いかも。 ドキュメントは無いものの、テストはちゃんと書かれていたので、それを参考に使ってみた。
 まずはインストール。
-npm install node-irkit  とりあえずlocalApiを使ってみた。 実行する度に、部屋の電気がオンオフされて煩わしいので、テストは違う信号でやろうと思ったなう（´-ω-｀）
-const irkit = require(&#39;node-irkit&#39;), localApi = irkit.getLocalApi(&amp;quot;http://192.168.0.4&amp;quot;), myRoomLight = &#39;{&amp;quot;format&amp;quot;:&amp;quot;raw&amp;quot;,&amp;quot;freq&amp;quot;:38,&amp;quot;data&amp;quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}&#39;, myRoomLightMessage = JSON.parse(myRoomLight); localApi.postMessages(myRoomLightMessage, function(err, res) { console.log(res); //空 });  </description>
+npm install node-irkit とりあえずlocalApiを使ってみた。 実行する度に、部屋の電気がオンオフされて煩わしいので、テストは違う信号でやろうと思ったなう（´-ω-｀）
+const irkit = require(&#39;node-irkit&#39;), localApi = irkit.getLocalApi(&amp;quot;http://192.168.0.4&amp;quot;), myRoomLight = &#39;{&amp;quot;format&amp;quot;:&amp;quot;raw&amp;quot;,&amp;quot;freq&amp;quot;:38,&amp;quot;data&amp;quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}&#39;, myRoomLightMessage = JSON.parse(myRoomLight); localApi.postMessages(myRoomLightMessage, function(err, res) { console.log(res); //空 }); </description>
     </item>
     
     <item>
@@ -350,10 +342,10 @@ const irkit = require(&#39;node-irkit&#39;), localApi = irkit.getLocalApi(&amp;q
       <pubDate>Thu, 12 Dec 2013 00:00:00 +0000</pubDate>
       
       <guid>https://mono0926.com/book/ohmsha/</guid>
-      <description> 今日12時までのオーム社セールで色々買ってみた。
+      <description>今日12時までのオーム社セールで色々買ってみた。
 数学・統計系 大学とかで勉強したものの、忘れたり応用できていなかったりするので。
- プログラミングのための線形代数 数学チュートリアル やさしく語る 確率統計 入門 統計学 ―検定から多変量解析・実験計画法まで― Excelで学ぶ統計解析入門 Excel2013/2010対応版  Excelでちゃちゃっと出来るのは大事だと思う   読み物系 本当はKindleで読みたい類の本だけど（´-ω-｀）
- 情熱プログラマー ソフトウェア開発者の幸せな生き方 ソフトウェアの世界でキャリアを築く Making it Big in Software  その他  マスタリングTCP/IP 入門編 第5版  第4版持ってて自炊済みだけど、安いし新しいのも欲しくなった   </description>
+ プログラミングのための線形代数 数学チュートリアル やさしく語る 確率統計 入門 統計学 ―検定から多変量解析・実験計画法まで― Excelで学ぶ統計解析入門 Excel2013/2010対応版  Excelでちゃちゃっと出来るのは大事だと思う    読み物系 本当はKindleで読みたい類の本だけど（´-ω-｀）
+ 情熱プログラマー ソフトウェア開発者の幸せな生き方 ソフトウェアの世界でキャリアを築く Making it Big in Software  その他  マスタリングTCP/IP 入門編 第5版  第4版持ってて自炊済みだけど、安いし新しいのも欲しくなった    </description>
     </item>
     
     <item>
@@ -364,7 +356,7 @@ const irkit = require(&#39;node-irkit&#39;), localApi = irkit.getLocalApi(&amp;q
       <guid>https://mono0926.com/programming/haskell/</guid>
       <description>2週間くらい前からHaskell勉強中。
 各種言語使ってきて、今の本業(Objective-C)や一番得意な言語(C#)以外にも久々に手を出したいなと思って以下を検討。
- LL系(Pythonなど)をもう少し自由に使えるように  ベターな書き方やモジュール知らずに冗長な記述になっていそう 日頃の自動化が捗りそう  ネイティブ系  C言語が最低限しか書けない上に段々忘れていったりもしている ネイティブ系(コンパイル型・非VM)で書かなきゃいけない時とか手駒がない とはいいつつCもC++も積極的に書きたくないのでやるとしたら下記のいずれか Go D言語  関数型  C#でLINQとかラムダ式とか慣れたけど、関数型の書き方を一部取り入れたオブジェクト指向という感じで、純粋関数型言語を学びたい pandocというドキュメント変換ツールのソース理解とか改変とかしたいと思いつつHaskellで書かれていて全然分からない   まあどれでも良いかなあと思いつつ、Scalaとかも勉強したいとか思っていたのもあり関数型かなあと、とりあえずKindleで安く手に入るGuide to ScalaーScalaプログラミング入門をざっと読んだ。 結果、C#と大して変わらず(Scalaの方がより関数型っぽいけど)、ちゃんと勉強するなら純粋関数型言語だなあと思い、pandocの理解にも繋がるしHaskellを勉強することに。
+ LL系(Pythonなど)をもう少し自由に使えるように  ベターな書き方やモジュール知らずに冗長な記述になっていそう 日頃の自動化が捗りそう   ネイティブ系  C言語が最低限しか書けない上に段々忘れていったりもしている ネイティブ系(コンパイル型・非VM)で書かなきゃいけない時とか手駒がない とはいいつつCもC++も積極的に書きたくないのでやるとしたら下記のいずれか  Go D言語     関数型  C#でLINQとかラムダ式とか慣れたけど、関数型の書き方を一部取り入れたオブジェクト指向という感じで、純粋関数型言語を学びたい pandocというドキュメント変換ツールのソース理解とか改変とかしたいと思いつつHaskellで書かれていて全然分からない    まあどれでも良いかなあと思いつつ、Scalaとかも勉強したいとか思っていたのもあり関数型かなあと、とりあえずKindleで安く手に入るGuide to ScalaーScalaプログラミング入門をざっと読んだ。 結果、C#と大して変わらず(Scalaの方がより関数型っぽいけど)、ちゃんと勉強するなら純粋関数型言語だなあと思い、pandocの理解にも繋がるしHaskellを勉強することに。
 コンパイル型といえども、記述もシンプルでコンパイル簡単なので、今Pythonとかで簡単な自動化スクリプト書いている代替にもなるかなと。
 勉強計画 すごいHaskellたのしく学ぼう! 少し前に話題になっていたこの本をまず読むことに。 洋書にするか迷ったけど、せっかく和書のKindle版もあるのでそれに頼った。
 そして、オンライン版はフリーで読めることもさっき知ったり：Learn You a Haskell for Great Good!
@@ -373,7 +365,7 @@ const irkit = require(&#39;node-irkit&#39;), localApi = irkit.getLocalApi(&amp;q
 その後 Parallel and Concurrent Programming in Haskellが面白そうなので、次に読みたいところ。並列/並行処理周りがまだ弱い気がするのでその勉強もかねて。
 あと、個人的に同じ本を繰り返し読むのが苦手(それが大事なのは理解している)なので、代わりに本物のプログラマはHaskellを使うとか読んで曖昧なところの理解を深めて行ければ。
 実行環境 GHCインストール 色々処理系があるようだけど、標準のGHCを導入。 よく分からないけど、Homebrewで良いかと、以下を実行してインストール。 Mavericksなどの場合は環境によっては前もってCommand Line Toolsのインストールをしないとビルド失敗したりするはず。
-brew update brew install haskell brew install haskell-platform # これがなんだか理解していない  これで、ターミナルでghciと打つと、Haskellのインタプリターが起動するはず。 今まで、わざわざファイルで書く必要の無い書き捨ての込み入った計算はPythonのインタプリターでやっていた(そこまでする必要の無い程度ならAlfredの電卓で)けど、これからはghciでやろうかなと。</description>
+brew update brew install haskell brew install haskell-platform # これがなんだか理解していない これで、ターミナルでghciと打つと、Haskellのインタプリターが起動するはず。 今まで、わざわざファイルで書く必要の無い書き捨ての込み入った計算はPythonのインタプリターでやっていた(そこまでする必要の無い程度ならAlfredの電卓で)けど、これからはghciでやろうかなと。</description>
     </item>
     
     <item>
@@ -404,7 +396,7 @@ brew update brew install haskell brew install haskell-platform # これがなん
       
       <guid>https://mono0926.com/programming/ios7/</guid>
       <description>iOS7関連のNDA解禁ということで、色々記事が増えてきたので、メモ。 少しずつ追記していきながら、落ち着いたところで、集約したような記事書くかも。
- iOS 7対応事例 FastCheckin iOS6からiOS7への対応 iOS 7向けアプリ開発時の注意点 iOS7でNavigationBarに入れたSearchBarにキャンセルボタンを出現させる方法 iOS6 -&amp;gt; iOS7変更対応 iOS 6&amp;frasl;7 で UILabel などの見た目がずれるよ〜とお嘆きのあなたへ CocoapodsとXcode5の組み合わせでエラー出た+解決した iOS7でステータスバーが被る問題への対応 iOS7のarm64対応でやったこと iOS7でナビゲーションバーやステータスバーの文字色を変える iOS 7 でステータスバーを隠す方法  </description>
+ iOS 7対応事例 FastCheckin iOS6からiOS7への対応 iOS 7向けアプリ開発時の注意点 iOS7でNavigationBarに入れたSearchBarにキャンセルボタンを出現させる方法 iOS6 -&amp;gt; iOS7変更対応 iOS 6/7 で UILabel などの見た目がずれるよ〜とお嘆きのあなたへ CocoapodsとXcode5の組み合わせでエラー出た+解決した iOS7でステータスバーが被る問題への対応 iOS7のarm64対応でやったこと iOS7でナビゲーションバーやステータスバーの文字色を変える iOS 7 でステータスバーを隠す方法  </description>
     </item>
     
     <item>
@@ -417,18 +409,18 @@ brew update brew install haskell brew install haskell-platform # これがなん
 元々はAlfredで英文校正が出来るようにしたかったので、ここからが本番。
 完成版 こんなのが出来たという紹介から。
 校正 ginger というキーワードに続けて英文を打つと、正してくれる。(この場合、冠詞aの抜けが正される。)
-改善候補一覧 rephraseというキーワードに続けて適当な英文を打つと、より自然な言い回し候補を出してくれる。 &amp;ldquo;Thank you for your reply&amp;rdquo;は、メールの返信とかでよく使うけど、ワンパターン化を避けたい時とかに使えそう。
+改善候補一覧 rephraseというキーワードに続けて適当な英文を打つと、より自然な言い回し候補を出してくれる。 &amp;ldquo;Thank you for your reply&amp;quot;は、メールの返信とかでよく使うけど、ワンパターン化を避けたい時とかに使えそう。
 ともに、選択状態でエンターを押すと、クリップボードにコピーされて、フォーカスの当たっているアプリにペーストされるので、適当にメールとかエディタとか使いながら自然と正しそうな英文が打てるようになるはず。
 AlfredのWorkflowの作り方 一応ドキュメントはあるけど、肝心なところが書かれていなかったりして、フォーラムで聞いたり、既存のWorkflowのソースを読んで作り方を学ばなければいけない感じ。 作り方自体は基本簡単だけど、ちょくちょくはまりどころがあって苦労する。
 キーワードの受け取り {query}というキーワードでアクセス出来るので、それをスクリプトに引数ととして渡すのが一般的。
 結果の表示 処理終了時にnotification飛ばしたり、クリップボードにコピーとかはWorkflowのエディタでパーツをつなぎ合わせたりするだけで簡単だけど、上の例みたいに一覧するのはどうやるのかと思っていたら、XMLで標準出力するらしい。 関係ないechoやprint文があると壊れるので注意。 ここらへんも、既存のソース読み解いてやっと分かった。それも不慣れなPHPソースがけっこう多くてアレ。
 こんな感じのXMLを標準出力すると、Itemの数だけ一覧される。
-&amp;lt;?xml version=&amp;quot;1.0&amp;quot; ?&amp;gt; &amp;lt;items&amp;gt; &amp;lt;item arg=&amp;quot;I am a programmer and writing bad English. I am Japanese.&amp;quot; uid=&amp;quot;d78b56b0-fcb7-11e2-9787-e80688cb3920&amp;quot;&amp;gt; &amp;lt;title&amp;gt;I am a programmer and writing bad English. I am Japanese.&amp;lt;/title&amp;gt; &amp;lt;subtitle&amp;gt;Gingered sentence&amp;lt;/subtitle&amp;gt; &amp;lt;icon/&amp;gt; &amp;lt;/item&amp;gt; &amp;lt;/items&amp;gt;  これも適当に文字列置換したりして作れるけど、PythonでXML組み立てて作る簡単なモジュール作って再利用できるようにしておいた。 ここらへんの下回りがけっこうこなれていない感。
+&amp;lt;?xml version=&amp;quot;1.0&amp;quot; ?&amp;gt; &amp;lt;items&amp;gt; &amp;lt;item arg=&amp;quot;I am a programmer and writing bad English. I am Japanese.&amp;quot; uid=&amp;quot;d78b56b0-fcb7-11e2-9787-e80688cb3920&amp;quot;&amp;gt; &amp;lt;title&amp;gt;I am a programmer and writing bad English. I am Japanese.&amp;lt;/title&amp;gt; &amp;lt;subtitle&amp;gt;Gingered sentence&amp;lt;/subtitle&amp;gt; &amp;lt;icon/&amp;gt; &amp;lt;/item&amp;gt; &amp;lt;/items&amp;gt; これも適当に文字列置換したりして作れるけど、PythonでXML組み立てて作る簡単なモジュール作って再利用できるようにしておいた。 ここらへんの下回りがけっこうこなれていない感。
 インストール可能なパッケージの作り方 配布されているworkflowは、*.alfredworkflowという形式で、ダブルクリックでインストールできる。
 簡単なやり方は自分のworkflowを右クリックしてExportすること。
 逆にscript群からコマンドで作りたい場合は、必要なファイルをzip化して拡張子を変えればよい。 info.plistが必要で、それは多分コマンドラインじゃ作れないから、やっぱり最初はExportの過程が必要だけど、コードとか別管理したいならコマンドラインで修正版作るのがよさげな気がする。
 適当にpackage作成スクリプト書いた。
-cp ginger/info.</description>
+cp ginger/info.plist . cp ginger/*.</description>
     </item>
     
     <item>
@@ -440,8 +432,8 @@ cp ginger/info.</description>
       <description>Leap Motionを買ってみた。
 多分1年ちょっと前に指先を1/100ミリ単位で捉える3Dモーション入力機器 LEAP、70ドルで予約受付開始 (動画)などの記事を見て、コンセプト動画なのか実動画像なのか知らないけど、すごいなーと思って放置してたけど、今週けっこう話題になってて、記事とか読んでたらいつの間にかポチってた感じ。
 ハード的には、劣化版Kinect？とかも思ったけど、対象距離が近距離なKinect for Windowsは少しお高いし、設置の制約あるし、とか思ってとりあえず今回はこっち。 KinectはごくたまにXboxで遊んだりと、なかなか好きなデバイス。
-Leap Motionって何？とかどんなことできるの？とかについては下の動画見れば大体分かる。 
-届くまで 実は、いいなーと思いつつも購入をためらっていたけど、偶然[BetterTouchTool]()のアップデートが走ってリリース文章見ていたら、Leap Motionの文字があって、「おっ!」と思いそのまま買ってしまった感じ。 今見たら、紹介ブログがあった。 元々愛用しているツールだけど、こういう早くて先進的な対応は好感度上がる。 OSもアプリもわりとリリース文には目を通している(利用者目線でも開発目線でも読んでいるとけっこう有用に思う)けど、良いきっかけになってよかった。
+Leap Motionって何？とかどんなことできるの？とかについては下の動画見れば大体分かる。
+届くまで 実は、いいなーと思いつつも購入をためらっていたけど、偶然BetterTouchToolのアップデートが走ってリリース文章見ていたら、Leap Motionの文字があって、「おっ!」と思いそのまま買ってしまった感じ。 今見たら、紹介ブログがあった。 元々愛用しているツールだけど、こういう早くて先進的な対応は好感度上がる。 OSもアプリもわりとリリース文には目を通している(利用者目線でも開発目線でも読んでいるとけっこう有用に思う)けど、良いきっかけになってよかった。
 この購入サイトで購入。 PayPal決済でトータル1万円弱。カード決済用のトータル表示より安かったような(見間違えかも)。
 入荷や発送の関係でしばらく待つかなーと思っていたら、翌朝発送しましたメールが来てびっくり。 FedExという郵送会社だった。 たまに海外購入はするけど、多分初めての利用。 翌々日に届くとのこと。お早い。
 というわけで、一昨日の晩に頼んだLeap Motionが到着。
@@ -453,11 +445,11 @@ Leap Motionって何？とかどんなことできるの？とかについては
 そこにたどり着けばすごく簡単で、ぽちぽちっと適当にインストールしてチュートリアルで試用する感じ。
 どうやって使おう とりあえずBetterTouchToolと組み合わせて、良い感じに普段使い出来ないか試してみてるところ。 人差し指をクルクルすると、音量上げ下げしたり、手を叩くとスリープするようにしたりして、意外と実用的に使えそう。
 ↓YouTubeにアップしてみた。
- セッティングはMagic Trackpadのジェスチャー登録するような感じでとても簡単。若干認識が微妙だけど、ハードウェア性能とソフトウェアとどっちのせいかは不明。現状でもそんなに悪くないし、今後のソフトウェア改良に期待は持てる感じはしてる。
+セッティングはMagic Trackpadのジェスチャー登録するような感じでとても簡単。若干認識が微妙だけど、ハードウェア性能とソフトウェアとどっちのせいかは不明。現状でもそんなに悪くないし、今後のソフトウェア改良に期待は持てる感じはしてる。
 あと、アプリストア「Airspace」とかのアプリで遊んでみようとも思うけど、ゲーム系はすぐ飽きちゃいそう…（´-ω-｀）
 というわけでまだあまり弄れてないけど、これから色々遊んでみたり、開発にも手を出していきたいなと思ったり。
 開発リソースはけっこう整っている感。 これ系の開発は結構前にカメラ + OpenCVを少しやった程度だったりして、個人的にはけっこう苦労しそうだけど（´-ω-｀）
- SDK Documentation  C++ Java Python C# JavaScript Objective-C (この一覧には明記されていないけど対応してる)  Forums LeapMotion(YouTube) C#開発者から見たLeap Motion開発のファースト・インプレッション Developing for Leap Motion in C# Tutorial (video, slides and code) JavaScriptでLeapMotionアプリを作る方法  Windows 8を操作しているデモ動画 なかなか操作の相性が良さそう。動画を見ただけだと実はタッチよりも快適？とか思ったり。</description>
+ SDK Documentation  C++ Java Python C# JavaScript Objective-C (この一覧には明記されていないけど対応してる)   Forums LeapMotion(YouTube) C#開発者から見たLeap Motion開発のファースト・インプレッション Developing for Leap Motion in C# Tutorial (video, slides and code) JavaScriptでLeapMotionアプリを作る方法  Windows 8を操作しているデモ動画 なかなか操作の相性が良さそう。動画を見ただけだと実はタッチよりも快適？とか思ったり。</description>
     </item>
     
     <item>
@@ -466,7 +458,7 @@ Leap Motionって何？とかどんなことできるの？とかについては
       <pubDate>Fri, 19 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>https://mono0926.com/programming/dropbox/</guid>
-      <description> Dropbox Sync APIとは サンプルとドキュメント  サンプル  Datastore API SDKsからSDKダウンロードすると同梱されてる  ドキュメント  Datastore API for iOS Documentation  チュートリアル  Using the Sync API on iOS   サンプル起動 Files Examplesのサンプル </description>
+      <description>Dropbox Sync APIとは サンプルとドキュメント  サンプル  Datastore API SDKsからSDKダウンロードすると同梱されてる   ドキュメント  Datastore API for iOS Documentation   チュートリアル  Using the Sync API on iOS    サンプル起動 Files Examplesのサンプル </description>
     </item>
     
     <item>
@@ -476,11 +468,11 @@ Leap Motionって何？とかどんなことできるの？とかについては
       
       <guid>https://mono0926.com/lifehack/self-publish/</guid>
       <description>最近、電子書籍系のアプリ開発中で、色々調べています。 ちょっと情報が頭に乗り切らなくなってきたので、整理。
-ツール Kindlegen Amazon謹製の、HTMLやEPUB形式からMobi形式に変換するツール。 成果物は、MacなどのKindleアプリでも見られるし、Kindle Previewerで、各プラットフォームでの動作チェック可能。
+ ツール Kindlegen Amazon謹製の、HTMLやEPUB形式からMobi形式に変換するツール。 成果物は、MacなどのKindleアプリでも見られるし、Kindle Previewerで、各プラットフォームでの動作チェック可能。
 クラス構造を一旦HTMLに落とし込んで、Mobi形式にエクスポートするところまでは出来たけど、いくつか警告が出てたりしてまだ対処出来ていない状態。 あと、ライセンス的にアプリのサーバー側で使ったりOKなのか気になる。
- リファレンスなど  Amazon Kindle Publishing Guidelines 和訳：Amazon Kindle パブリッシング・ガイドライン   Pandoc ドキュメント形式変換ツール。Markdown, HTMLなどからEPUB, PFDなどなどなど色々変換可能。 Linux, Mac, Windowsなどに対応。
- リファレンスなど  ソース(GitHub) Pandoc User’s Guide 使い方がたくさん書いてある。   例えばMarkdown形式からEPUB形式にしたいときの、タイトルや筆者などのメタ情報とかこう書いたりするらしい。まだ色々調べ中。 これを使って、クラス構造をEPUB形式でエクスポートできるところまでは出来たけど、細かい詰めがまだまだ（´-ω-｀）縦書きとか出来るのだろうか…。
-% title % author(s) (separated by semicolons) % date   参考  多様なフォーマットに対応！ドキュメント変換ツールPandocを知ろう 素晴らしい説明 githubとかにあるMarkdown形式のﾌｧｲﾙをhtmlとかEPUBとかに変換する   本 Amazon和書  Kindle自費出版ガイド 米アマゾンの先例から学ぶ電子書籍の作り方  Google Documentを使った作成法指南 Webで最新版を無料公開中：「Kindle 自費出版ガイド 米アマゾンの先例から学ぶ 電子書籍の作り方」(前半)  アマゾンで売る！　一番簡単な電子書籍の作り方  Google Documentは参考程度に、aozoraEpub3やSigilを利用  一万冊売ってわかった！電子書籍を売る方法  世界一周紀行など書いている人の本。ライブドアブログのEPUBエクスポートを利用。   うーん、作り方がバラバラ。わりとGoogle Documentで作るのが多数派な印象だけど。 みんなGUIベースだから直接は利用できないけど、参考程度に読んでる。</description>
+ リファレンスなど  Amazon Kindle Publishing Guidelines  和訳：Amazon Kindle パブリッシング・ガイドライン      Pandoc ドキュメント形式変換ツール。Markdown, HTMLなどからEPUB, PFDなどなどなど色々変換可能。 Linux, Mac, Windowsなどに対応。
+ リファレンスなど  ソース(GitHub) Pandoc User’s Guide  使い方がたくさん書いてある。      例えばMarkdown形式からEPUB形式にしたいときの、タイトルや筆者などのメタ情報とかこう書いたりするらしい。まだ色々調べ中。 これを使って、クラス構造をEPUB形式でエクスポートできるところまでは出来たけど、細かい詰めがまだまだ（´-ω-｀）縦書きとか出来るのだろうか…。
+% title % author(s) (separated by semicolons) % date  参考  多様なフォーマットに対応！ドキュメント変換ツールPandocを知ろう  素晴らしい説明   githubとかにあるMarkdown形式のﾌｧｲﾙをhtmlとかEPUBとかに変換する     本 Amazon和書  Kindle自費出版ガイド 米アマゾンの先例から学ぶ電子書籍の作り方  Google Documentを使った作成法指南 Webで最新版を無料公開中：「Kindle 自費出版ガイド 米アマゾンの先例から学ぶ 電子書籍の作り方」(前半)   アマゾンで売る！　一番簡単な電子書籍の作り方  Google Documentは参考程度に、aozoraEpub3やSigilを利用   一万冊売ってわかった！電子書籍を売る方法  世界一周紀行など書いている人の本。ライブドアブログのEPUBエクスポートを利用。    うーん、作り方がバラバラ。わりとGoogle Documentで作るのが多数派な印象だけど。 みんなGUIベースだから直接は利用できないけど、参考程度に読んでる。</description>
     </item>
     
     <item>
@@ -489,10 +481,10 @@ Leap Motionって何？とかどんなことできるの？とかについては
       <pubDate>Sun, 07 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>https://mono0926.com/blog/github_octopress_blog/</guid>
-      <description> Markdownで書けてなかなか良い感じかもしれない（´-ω-｀）
+      <description>Markdownで書けてなかなか良い感じかもしれない（´-ω-｀）
 導入手順 ここらへん参考に。
- GitHub pages + Octopressの導入  最初は適当にMacに入っているRuby 1.7.3やHomebrewで入れた2系でインストールしようとしたらはまって結局Ruby 1.9.3にしたので、初めから素直に従った方がよさげです。  rvmの導入がうまくできなかったので、それだけこれを参考に。  (OS X::Mountain Lion) RVMでRubyの環境構築メモ   個人的な運用  imathis/octopressからForkしてそのままソース管理として利用  下書きなどあっても人に見られちゃうからBitbucket使うっていう人が多いらしいですが、あまり気にならないのでGitHubで一元管理  setup_github_pages と入力して、GitHub上のこのページ にデプロイされるように  テーマの変更 テーマは、imathis/octopressから選べますが、あまり有名じゃないので、そんなに選択肢無いです。凝るなら自分で作るべきですかね。 こぎれいなテーマを適当に選んで使っています。 導入は簡単で、上記から選んで、下のコマンドですぐ反映されます。
-$ cd octopress $ git clone GIT_URL .themes/THEME_NAME $ rake install[&#39;THEME_NAME&#39;] $ rake generate  Markdown 初めて書いた なかなか便利ですね(　´･‿･｀) このあたりよくまとまっててよかったです。
+ GitHub pages + Octopressの導入  最初は適当にMacに入っているRuby 1.7.3やHomebrewで入れた2系でインストールしようとしたらはまって結局Ruby 1.9.3にしたので、初めから素直に従った方がよさげです。   rvmの導入がうまくできなかったので、それだけこれを参考に。  (OS X::Mountain Lion) RVMでRubyの環境構築メモ    個人的な運用  imathis/octopressからForkしてそのままソース管理として利用  下書きなどあっても人に見られちゃうからBitbucket使うっていう人が多いらしいですが、あまり気にならないのでGitHubで一元管理   setup_github_pages と入力して、GitHub上のこのページ にデプロイされるように  テーマの変更 テーマは、imathis/octopressから選べますが、あまり有名じゃないので、そんなに選択肢無いです。凝るなら自分で作るべきですかね。 こぎれいなテーマを適当に選んで使っています。 導入は簡単で、上記から選んで、下のコマンドですぐ反映されます。
+$ cd octopress $ git clone GIT_URL .themes/THEME_NAME $ rake install[&#39;THEME_NAME&#39;] $ rake generate Markdown 初めて書いた なかなか便利ですね(　´･‿･｀) このあたりよくまとまっててよかったです。
  Markdown記法 チートシート QA@ITで使えるMarkdown記法  </description>
     </item>
     
@@ -503,7 +495,7 @@ $ cd octopress $ git clone GIT_URL .themes/THEME_NAME $ rake install[&#39;THEME_
       
       <guid>https://mono0926.com/lifehack/google-reader-feedly/</guid>
       <description>一日に500-1000件消費するくらいのRSSリーダーヘビーユーザーでしたが、意外と困っていません。
- Google Reader 終わる前  iPhone: Byline + たまにReeder iPad: 同上 Mac: Reeder Web: Google Reader (Windows環境の時など、たまーに見る程度)  Google Reader 終わった後  iPhone: Byline + たまにReeder iPad: Byline (Reeder未対応) Mac: FeedlyのWebアプリ (Reeder未対応) Web: FeedlyのWebアプリ   と、あまり変わって無い上に、FeedlyのWebアプリの操作感(どこを押せば何が出来るかなど)にあまり慣れていないものの、J(次)・K(前)・V(新しいページで記事開く)のショートカットが一緒なことに気づいてからはほぼノンストレスです（´-ω-｀）
+ Google Reader 終わる前  iPhone: Byline + たまにReeder iPad: 同上 Mac: Reeder Web: Google Reader (Windows環境の時など、たまーに見る程度)   Google Reader 終わった後  iPhone: Byline + たまにReeder iPad: Byline (Reeder未対応) Mac: FeedlyのWebアプリ (Reeder未対応) Web: FeedlyのWebアプリ    と、あまり変わって無い上に、FeedlyのWebアプリの操作感(どこを押せば何が出来るかなど)にあまり慣れていないものの、J(次)・K(前)・V(新しいページで記事開く)のショートカットが一緒なことに気づいてからはほぼノンストレスです（´-ω-｀）
 ただ、やっぱりMacでReederを使ってサクサク見ていた感じには劣るので、早くReeder for Macがアップデートされてほしいところです（´・ω・｀）
 …とは別にこの機会に、SmartNewsで大衆ネタ・ゴシップ系などは拾い読みしているので、RSSリーダーは技術系ネタに絞って整理したいなとかも考えていたり。なかなか面倒ですが（´-ω-｀）
 追記 ReadKit というアプリが素晴らしく、常用し始めましたヽ(・ω・｀）</description>
@@ -516,8 +508,9 @@ $ cd octopress $ git clone GIT_URL .themes/THEME_NAME $ rake install[&#39;THEME_
       
       <guid>https://mono0926.com/blog/octopress-alfred/</guid>
       <description>今日初めてOctopressを触ったら、けっこう気に入ったので、さらに気軽に書ける環境を整えれば捗るのではと思い、AlfredのWorkflowを作ってみました。
-# deploy用 OCTOPATH=&#39;/Documents/Git/Private/octopress&#39; cd ~/$OCTOPATH rake gen_deploy git add . git commit -m &amp;quot;deployed via workflow.&amp;quot; git push  # 投稿用 OCTOPATH=&#39;/Documents/Git/Private/octopress&#39; cd ~/$OCTOPATH OCTOPOST=$(rake new_post[$1]| grep -o &#39;source/_posts/.*&#39;) open ~/$OCTOPATH/$OCTOPOST  すんなり出来るかと思いきや、これだけでは動かず、
- In my bash script I had to add some extras because Alfred runs the bash script in a subshell and in this subshell the rvm environment is not available by default. Alfred Workflow for Octopress</description>
+# deploy用 OCTOPATH=&#39;/Documents/Git/Private/octopress&#39; cd ~/$OCTOPATH rake gen_deploy git add . git commit -m &amp;quot;deployed via workflow.&amp;quot; git push # 投稿用 OCTOPATH=&#39;/Documents/Git/Private/octopress&#39; cd ~/$OCTOPATH OCTOPOST=$(rake new_post[$1]| grep -o &#39;source/_posts/.*&#39;) open ~/$OCTOPATH/$OCTOPOST すんなり出来るかと思いきや、これだけでは動かず、
+ In my bash script I had to add some extras because Alfred runs the bash script in a subshell and in this subshell the rvm environment is not available by default. Alfred Workflow for Octopress
+ とある通り、下記のような設定をする必要があったようです。 かなりハマりました（´-ω-｀） よく分からないけど、別ファイルにしたら動かないので、とりあえず全て冒頭にこれを挟みました（´-ω-｀）</description>
     </item>
     
   </channel>

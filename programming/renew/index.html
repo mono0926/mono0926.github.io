@@ -45,70 +45,49 @@
 
 
             <section itemprop="entry-text">
-				
-
-<p>Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。
-Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイッチしたいなとか思ったのが発端。<br />
+				<p>Node.jsで色々遊ぼうと思いつつ、開発環境がけっこう汚れていることに気づいたので、整理。
+Node.jsのgenerator使いたくて、バージョン0.11系と0.10系をスイッチしたいなとか思ったのが発端。<br>
 参考: <a href="http://rdepf.hatenablog.jp/entry/2014/03/07/122337">Node.jsのコールバック地獄をPromiseやGeneratorを使って解消する - HackerNews翻訳してみた</a></p>
-
 <p>わりと<code>brew install XXX</code>で雑に各種環境インストールしてたので、これを気に色々直した。</p>
-
-<h2 id="homebrewアンインストール">Homebrewアンインストール</h2>
-
+<h2 id="homebrew">Homebrewアンインストール</h2>
 <p>ゴミが残るのいやだったので、<a href="https://gist.github.com/mxcl/1173223">Uninstall Homebrew</a>でhomebrewをアンインストール。</p>
-
-<!-- more -->
-
-<h2 id="brewfile導入">Brewfile導入</h2>
-
+<!-- raw HTML omitted -->
+<h2 id="brewfile">Brewfile導入</h2>
 <p>以下など見て便利そうだと思っていたので、Brewfile導入。</p>
-
 <ul>
 <li><a href="http://www.1x1.jp/blog/2014/04/how-to-setup-application-on-osx.html">Mac OSX をクリーンインストールしてからの環境構築メモ - Shin x blog</a></li>
 <li><a href="http://blog.livedoor.jp/sonots/archives/35251881.html">「BrewfileでHomebrewパッケージを管理する」をやってみた - sonots:blog</a></li>
 <li><a href="http://tnakamura.hatenablog.com/entry/2014/04/29/113727">MacBook にインストールしているアプリやツールをメモする代わりに Brewfile を作った - present</a></li>
 </ul>
-
 <p>これだけで一気にインストール出来てとても便利。</p>
-
 <pre><code>brew bundle
-</code></pre>
-
-<p>僕の：<a href="https://github.com/mono0926/Environment/blob/master/OSX/Brewfile">Environment/OSX/Brewfile at master · mono0926/Environment</a></p>
-
+</code></pre><p>僕の：<a href="https://github.com/mono0926/Environment/blob/master/OSX/Brewfile">Environment/OSX/Brewfile at master · mono0926/Environment</a></p>
 <p>今後も、Homebrewで何か新しくインストールするときメンテナンスしていくようにしよう。</p>
-
-<h2 id="その他開発環境">その他開発環境</h2>
-
+<h2 id="heading">その他開発環境</h2>
 <p><code>brew install XXX</code>で適当にインストールせずに、バージョンの切り替えが容易なようにした。
 いくつか種類あったけど、基本後発のを導入してみた。</p>
-
 <ul>
 <li>Python: <a href="https://github.com/yyuu/pyenv">yyuu/pyenv</a></li>
 <li>Ruby: <a href="https://github.com/sstephenson/rbenv">sstephenson/rbenv</a></li>
 <li>Node.js: <a href="https://github.com/creationix/nvm">creationix/nvm</a>
-
 <ul>
 <li>nvmはzshとの相性悪くて日本では<a href="https://github.com/hokaccha/nodebrew">hokaccha/nodebrew</a>がけっこう人気っぽかったけど特に問題無かったのでnvmにした。</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <p>諸々雑なところがあるけど、<a href="https://github.com/mono0926/Environment/tree/master/OSX">Environment/OSX at master · mono0926/Environment</a>でセットアップスクリプト管理。</p>
-
-<h2 id="ide導入">IDE導入</h2>
-
-<p>スクリプト系言語は、最近はわりとSublime Textで書いていたけど、やっぱり補完がもう少し聞いてくれないと厳しいので、なるべくIDE使うようにしようと思う。<br />
-IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれば捗るかなと。<br />
+<h2 id="ide">IDE導入</h2>
+<p>スクリプト系言語は、最近はわりとSublime Textで書いていたけど、やっぱり補完がもう少し聞いてくれないと厳しいので、なるべくIDE使うようにしようと思う。<br>
+IDEに慣れるのもそこそこコストだけど、JetBrain系で統一すれば捗るかなと。<br>
 今まではNetBeansかたまにEclipseだったけど、乗り換え。少しずつ慣れていこう（´-ω-｀）</p>
-
 <ul>
 <li><a href="http://www.jetbrains.com/webstorm/">WebStorm :: The smartest JavaScript IDE</a></li>
 <li><a href="http://www.jetbrains.com/ruby/">Ruby on Rails IDE :: JetBrains RubyMine</a></li>
 <li><a href="http://www.jetbrains.com/pycharm/">Python IDE &amp; Django IDE for Web developers : JetBrains PyCharm</a>
-
 <ul>
 <li>CE版は無料</li>
-</ul></li>
+</ul>
+</li>
 </ul>
 
 			</section>

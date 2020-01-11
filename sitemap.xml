@@ -1,17 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://mono0926.com/page/</loc>
+    <loc>https://mono0926.com/</loc>
     <lastmod>2019-07-18T13:25:44+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mono0926.com/</loc>
+    <loc>https://mono0926.com/page/</loc>
     <lastmod>2019-07-18T13:25:44+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -25,21 +23,18 @@
   </url>
   
   <url>
+    <loc>https://mono0926.com/tags/live-photos/</loc>
+    <lastmod>2017-05-01T10:13:29+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mono0926.com/programming/</loc>
     <lastmod>2017-05-01T10:13:29+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mono0926.com/tags/</loc>
     <lastmod>2017-05-01T10:13:29+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mono0926.com/tags/live-photos/</loc>
-    <lastmod>2017-05-01T10:13:29+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -53,27 +48,33 @@
   </url>
   
   <url>
-    <loc>https://mono0926.com/gadget/</loc>
-    <lastmod>2015-05-03T22:30:05+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://mono0926.com/tags/apple-watch/</loc>
     <lastmod>2015-05-03T22:30:05+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mono0926.com/tags/exercise/</loc>
     <lastmod>2015-05-03T22:30:05+09:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mono0926.com/gadget/</loc>
+    <lastmod>2015-05-03T22:30:05+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://mono0926.com/tags/iphone/</loc>
     <lastmod>2015-05-03T22:30:05+09:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mono0926.com/tags/git/</loc>
+    <lastmod>2014-10-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mono0926.com/tags/sourcetree/</loc>
+    <lastmod>2014-10-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -82,33 +83,18 @@
   </url>
   
   <url>
-    <loc>https://mono0926.com/tags/git/</loc>
-    <lastmod>2014-10-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mono0926.com/tags/sourcetree/</loc>
-    <lastmod>2014-10-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://mono0926.com/tags/contest/</loc>
     <lastmod>2014-10-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mono0926.com/tags/cookpad/</loc>
     <lastmod>2014-10-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mono0926.com/tags/golang/</loc>
     <lastmod>2014-10-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -117,32 +103,28 @@
   </url>
   
   <url>
+    <loc>https://mono0926.com/tags/ios/</loc>
+    <lastmod>2014-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mono0926.com/programming/swift-lt/</loc>
     <lastmod>2014-10-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mono0926.com/tags/ios/</loc>
-    <lastmod>2014-10-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://mono0926.com/tags/line/</loc>
+    <lastmod>2014-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mono0926.com/line-stamp/</loc>
     <lastmod>2014-07-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mono0926.com/tags/line/</loc>
-    <lastmod>2014-07-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mono0926.com/tags/stamp/</loc>
     <lastmod>2014-07-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -153,13 +135,11 @@
   <url>
     <loc>https://mono0926.com/tags/1password/</loc>
     <lastmod>2014-06-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mono0926.com/lifehack/</loc>
+    <loc>https://mono0926.com/tags/ios8/</loc>
     <lastmod>2014-06-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -168,9 +148,8 @@
   </url>
   
   <url>
-    <loc>https://mono0926.com/tags/ios8/</loc>
+    <loc>https://mono0926.com/lifehack/</loc>
     <lastmod>2014-06-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -184,20 +163,23 @@
   </url>
   
   <url>
-    <loc>https://mono0926.com/programming/swift/</loc>
-    <lastmod>2014-06-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://mono0926.com/tags/love/</loc>
     <lastmod>2014-06-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mono0926.com/tags/swift/</loc>
     <lastmod>2014-06-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mono0926.com/programming/swift/</loc>
+    <lastmod>2014-06-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mono0926.com/tags/rescuetime/</loc>
+    <lastmod>2014-05-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -206,33 +188,23 @@
   </url>
   
   <url>
-    <loc>https://mono0926.com/tags/rescuetime/</loc>
-    <lastmod>2014-05-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://mono0926.com/tags/angularjs/</loc>
     <lastmod>2014-05-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mono0926.com/tags/express/</loc>
     <lastmod>2014-05-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mono0926.com/tags/jade/</loc>
     <lastmod>2014-05-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mono0926.com/tags/nodejs/</loc>
     <lastmod>2014-05-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -243,13 +215,11 @@
   <url>
     <loc>https://mono0926.com/tags/redis/</loc>
     <lastmod>2014-05-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mono0926.com/tags/stylus/</loc>
     <lastmod>2014-05-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -263,14 +233,18 @@
   </url>
   
   <url>
+    <loc>https://mono0926.com/tags/osx/</loc>
+    <lastmod>2014-05-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mono0926.com/programming/renew/</loc>
     <lastmod>2014-05-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mono0926.com/tags/osx/</loc>
-    <lastmod>2014-05-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://mono0926.com/tags/irkit/</loc>
+    <lastmod>2014-05-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -289,56 +263,43 @@
   </url>
   
   <url>
-    <loc>https://mono0926.com/tags/irkit/</loc>
-    <lastmod>2014-05-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://mono0926.com/line-stamp/love-stamp/</loc>
     <lastmod>2014-04-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mono0926.com/book/</loc>
+    <loc>https://mono0926.com/tags/book/</loc>
     <lastmod>2013-12-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mono0926.com/tags/book/</loc>
+    <loc>https://mono0926.com/book/</loc>
     <lastmod>2013-12-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mono0926.com/tags/excel/</loc>
     <lastmod>2013-12-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mono0926.com/tags/haskell/</loc>
     <lastmod>2013-12-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mono0926.com/tags/math/</loc>
     <lastmod>2013-12-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mono0926.com/tags/software/</loc>
     <lastmod>2013-12-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mono0926.com/tags/statistics/</loc>
     <lastmod>2013-12-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -349,13 +310,11 @@
   <url>
     <loc>https://mono0926.com/tags/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</loc>
     <lastmod>2013-12-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mono0926.com/tags/c#/</loc>
     <lastmod>2013-11-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -366,7 +325,6 @@
   <url>
     <loc>https://mono0926.com/tags/scala/</loc>
     <lastmod>2013-11-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -375,15 +333,8 @@
   </url>
   
   <url>
-    <loc>https://mono0926.com/tags/xcode/</loc>
-    <lastmod>2013-09-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://mono0926.com/tags/ios7/</loc>
     <lastmod>2013-09-21T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -392,32 +343,33 @@
   </url>
   
   <url>
-    <loc>https://mono0926.com/programming/ginger/</loc>
-    <lastmod>2013-08-04T00:00:00+00:00</lastmod>
+    <loc>https://mono0926.com/tags/xcode/</loc>
+    <lastmod>2013-09-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mono0926.com/tags/alfred/</loc>
     <lastmod>2013-08-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mono0926.com/tags/english/</loc>
     <lastmod>2013-08-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mono0926.com/tags/ginger/</loc>
     <lastmod>2013-08-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mono0926.com/programming/ginger/</loc>
+    <lastmod>2013-08-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mono0926.com/tags/python/</loc>
     <lastmod>2013-08-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -428,19 +380,16 @@
   <url>
     <loc>https://mono0926.com/tags/leap_motion/</loc>
     <lastmod>2013-07-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mono0926.com/tags/api/</loc>
     <lastmod>2013-07-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mono0926.com/tags/dropbox/</loc>
     <lastmod>2013-07-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -456,11 +405,20 @@
   <url>
     <loc>https://mono0926.com/blog/</loc>
     <lastmod>2013-07-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mono0926.com/tags/github/</loc>
+    <lastmod>2013-07-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mono0926.com/blog/github_octopress_blog/</loc>
+    <lastmod>2013-07-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mono0926.com/tags/google/</loc>
     <lastmod>2013-07-07T00:00:00+00:00</lastmod>
   </url>
   
@@ -470,37 +428,22 @@
   </url>
   
   <url>
+    <loc>https://mono0926.com/tags/octopress/</loc>
+    <lastmod>2013-07-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mono0926.com/blog/octopress-alfred/</loc>
     <lastmod>2013-07-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mono0926.com/tags/github/</loc>
-    <lastmod>2013-07-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mono0926.com/tags/google/</loc>
-    <lastmod>2013-07-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mono0926.com/tags/octopress/</loc>
-    <lastmod>2013-07-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://mono0926.com/tags/reader/</loc>
     <lastmod>2013-07-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mono0926.com/categories/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>
