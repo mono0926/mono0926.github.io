@@ -22,6 +22,7 @@
 		<div class="header-logo">
 			<a href="/"><img src="/images/love_logo.png" width="60" height="60"></a>
 		</div>
+		<div style="color:#CC3333;line-height: 400%">⚠️このサイトはあまりメンテナンスされておりません⚠️</div>
 		
 	</header>
 
@@ -47,7 +48,7 @@
             <section itemprop="entry-text">
 				<p>iPhoneのPodcastアプリでは再生スピードをコントロール出来て便利なのに、iTunesではその機能が無いので、AppleScriptなど使って出来るようにしてみた。
 本当はiTunesに閉じて実現したいところだけど、それはちょっと難しそう。</p>
-<h2 id="quicktime-player-7">QuickTime Player 7のインストール</h2>
+<h2 id="quicktime-player-7のインストール">QuickTime Player 7のインストール</h2>
 <!-- raw HTML omitted -->
 <p>新しめのOSXに標準インストールされているQuickTimeはかっこいいけど機能がしょぼいので、再生スピードを変えるにはQuickTime Player 7をインストールする必要がある。</p>
 <p>幸いまだ<a href="http://support.apple.com/kb/DL923?viewlocale=ja_JP">QuickTime Player 7</a>からダウンロード出来る。</p>
@@ -55,9 +56,9 @@
 <p>QuickTim 7 は、 Snow Leopard および OS X Lion 上で QTVR、対話型の QuickTime ムービー、MIDI などの古いメディアフォーマットをサポートしています。また、QuickTime Pro の機能を有効にするための QuickTime 7 Pro の登録コードを使用できます。</p>
 </blockquote>
 <p>とりあえずQucikTime 7をインストールして、「Show A/V Control」(Command + K)で再生スピードなどコントロール出来るウインドウが開くので、機能的にはここまでで完結。</p>
-<h2 id="automator">Automatorでアプリ化</h2>
+<h2 id="automatorでアプリ化">Automatorでアプリ化</h2>
 <p>上記までだと、一々ファイルをFinderで開いて、QuickTime Player 7で起動するという手順が必要なので、Automatorを使って省力化してみる。</p>
-<pre><code>tell application &quot;iTunes&quot;
+<pre tabindex="0"><code>tell application &quot;iTunes&quot;
 	pause
 	--iTunesで選択中・再生中のファイルおよびその再生位置を保持
 	set my_track to location of selection
@@ -72,7 +73,7 @@ tell application &quot;QuickTime Player 7&quot;
 end tell
 </code></pre><p>これをアプリとして保存してDockなどの配置しておけば、iTunesで曲を選択中あるいは再生中の状態で、実行するとQuick Time 7が起動して、その曲を1.5倍速再生してくれる。アプリ形式だと、倍速の数字を指定するパスが無いが、「Show A/V Control」ウインドウを開けば一応あとから変更可能。</p>
 <p><a href="https://github.com/mono0926/AppleScript">GitHub</a>の<a href="https://github.com/mono0926/AppleScript/raw/master/ChangeSpeed.zip">ChangeSpeed</a>からダウンロードできます。</p>
-<h2 id="alfredworkflow">AlfredのWorkflow化</h2>
+<h2 id="alfredのworkflow化">AlfredのWorkflow化</h2>
 <p>Automatorでアプリ化の方法だと、Dockクリックしたりが面倒なのと、倍速の数字を与えられないので、それをAlfredのWorkflowで解消。
 コードとしては、上記のものに、Alfredのオプション引数を与えるようにした(無指定の場合は同じく1.5倍速)程度でほとんどそのまま。
 AppleScriptを実行するWorkflowを新規作成するだけ。

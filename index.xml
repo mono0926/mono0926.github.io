@@ -6,19 +6,15 @@
     <description>Recent content on mono0926.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 18 Jul 2019 13:25:44 +0900</lastBuildDate>
-    
-	<atom:link href="https://mono0926.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 18 Jul 2019 13:25:44 +0900</lastBuildDate><atom:link href="https://mono0926.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>仕事依頼の相談</title>
       <link>https://mono0926.com/page/job/</link>
       <pubDate>Thu, 18 Jul 2019 13:25:44 +0900</pubDate>
       
       <guid>https://mono0926.com/page/job/</guid>
-      <description>プロフィール 🐶 mono  - mono0926.com およびそのリンク先などご覧ください。
-得意技術は次の通りです(2020年1月更新)。
+      <description>⚠️ 最新のプロフィール・お仕事募集要項などはこちらのリンク先をご参照ください  以下、2020年1月更新:
+プロフィール 🐶 mono  - mono0926.com およびそのリンク先などご覧ください。
  Flutterアプリ開発  キャリア2年くらいだが、長年メインで取り組んでいたiOSネイティブ開発より得意な技術分野になった 執筆記事: Flutter 🇯🇵 – Medium   Firebase全般  GCP(Google Cloud Platform)もある程度   Swiftを用いたiOSアプリ開発  iOSアプリ開発業務経験: 7年 Swift歴: 5年    できること  サービスの仕様検討・デザインからサーバーサイド・iOSネイティブアプリ(Flutter使えばAndroidも)までの一気通貫した開発  もちろん、デザインなどは専任には劣るが、開発的にコスパ良いデザインができるなど強みにもなり得る   サーバーサイドはFirebase(+GCP)以外もできなくはないが、新規開発なら大抵のケースでそれがもっとも効率よく高品質なものを作れると思って専念している その他、ソフトウェア開発の一通りのことを自分だけでこなせると思っていて、必要に応じて別の技術も活用中  ただ、Webフロント周りは技術的に俯瞰できるような知識は持っているつもりなものの、実際のプロダクション開発は現時点ではできるレベルではない    お仕事の相談 こちらをご参照ください: https://gist.github.com/mono0926/5e8d214b09eeec5bb85765d2aec03202</description>
     </item>
     
@@ -37,12 +33,13 @@
       <pubDate>Mon, 01 Aug 2016 09:10:21 +0900</pubDate>
       
       <guid>https://mono0926.com/page/about/</guid>
-      <description>ソフトウェアエンジニアで、今はメインはiOSアプリ開発(Swift)です。Firebaseも得意です。 mono系のIDと犬アイコンで活動してます(　´･‿･｀)
+      <description>⚠️ 最新のプロフィール・お仕事募集要項などはこちらのリンク先をご参照ください  以下、2020年1月更新:
+ソフトウェアエンジニアで、今はメインはiOSアプリ開発(Swift)です。Firebaseも得意です。 mono系のIDと犬アイコンで活動してます(　´･‿･｀)
 仕事依頼の相談は下記までお願いします:
  仕事依頼の相談 - mono0926.com  および、そのリンク先: https://gist.github.com/mono0926/5e8d214b09eeec5bb85765d2aec03202    各種リンク 技術系記事  Medium Qiita  プロフィールなど  Stack Overflow プロフィール GitHub  レジュメ   Facebook Wantedlyプロフィール  開発したアプリ・サービス 2019年夏頃までのものを掲載しています。
 iGhost ※ サービス終了しました(詳細: [締切済] 2019年8月以降のお仕事を大募集 🐶 — Firebase / Flutter / iOS / Swift / SwiftUI)
  iGhost - キャラチャット iActor - キャラになろう  日々の直接のユーザーサポート・会社の資金面など以外の、開発に関わることすべてを現在1人で担当しています。
- サーバーサイド(Firebase・GCP) iOSアプリ2本(Swift) デザイン(Sketch) データ分析(BigQuery・Data Studio) 要件定義  2018年2月のリリースから半年で、2アプリ合わせてApp Storeでのレビューは1,000件・平均評価4.65程度の高評価となっています。</description>
+ サーバーサイド(Firebase・GCP) iOSアプリ2本(Swift) デザイン(Sketch) データ分析(BigQuery・Data Studio) 要件定義  2018年2月のリリースから半年で、2アプリ合わせてApp Storeでのレビューは1,000件・平均評価4.</description>
     </item>
     
     <item>

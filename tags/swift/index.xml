@@ -6,11 +6,7 @@
     <description>Recent content in swift on mono0926.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 03 Jun 2014 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://mono0926.com/tags/swift/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 03 Jun 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://mono0926.com/tags/swift/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SwiftでラヴさんWEBアルバムを開くだけのアプリ作った</title>
       <link>https://mono0926.com/programming/swift/</link>

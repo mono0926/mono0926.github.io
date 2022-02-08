@@ -6,11 +6,7 @@
     <description>Recent content in sourcetree on mono0926.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 31 Oct 2014 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://mono0926.com/tags/sourcetree/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 31 Oct 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://mono0926.com/tags/sourcetree/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SourceTreeでブランチ名をコミットメッセージの先頭に自動挿入</title>
       <link>https://mono0926.com/programming/sourcetree/</link>

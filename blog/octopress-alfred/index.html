@@ -22,6 +22,7 @@
 		<div class="header-logo">
 			<a href="/"><img src="/images/love_logo.png" width="60" height="60"></a>
 		</div>
+		<div style="color:#CC3333;line-height: 400%">⚠️このサイトはあまりメンテナンスされておりません⚠️</div>
 		
 	</header>
 
@@ -46,14 +47,14 @@
 
             <section itemprop="entry-text">
 				<p>今日初めてOctopressを触ったら、けっこう気に入ったので、さらに気軽に書ける環境を整えれば捗るのではと思い、AlfredのWorkflowを作ってみました。</p>
-<pre><code># deploy用
+<pre tabindex="0"><code># deploy用
 OCTOPATH='/Documents/Git/Private/octopress'
 cd ~/$OCTOPATH
 rake gen_deploy
 git add .
 git commit -m &quot;deployed via workflow.&quot;
 git push
-</code></pre><pre><code># 投稿用
+</code></pre><pre tabindex="0"><code># 投稿用
 OCTOPATH='/Documents/Git/Private/octopress'
 cd ~/$OCTOPATH
 OCTOPOST=$(rake new_post[$1]| grep -o 'source/_posts/.*')
@@ -67,12 +68,12 @@ open ~/$OCTOPATH/$OCTOPOST
 かなりハマりました（´-ω-｀）
 よく分からないけど、別ファイルにしたら動かないので、とりあえず全て冒頭にこれを挟みました（´-ω-｀）</p>
 <!-- raw HTML omitted -->
-<pre><code># rv設定
+<pre tabindex="0"><code># rv設定
 if [[ -s &quot;$HOME/.rvm/scripts/rvm&quot; ]] ; then
 	source &quot;$HOME/.rvm/scripts/rvm&quot;
 fi
 </code></pre><p>さらに一応previewコマンドも作成</p>
-<pre><code>if [[ -s &quot;$HOME/.rvm/scripts/rvm&quot; ]] ; then
+<pre tabindex="0"><code>if [[ -s &quot;$HOME/.rvm/scripts/rvm&quot; ]] ; then
 	source &quot;$HOME/.rvm/scripts/rvm&quot;
 fi
 OCTOPATH='/Documents/Git/Private/octopress'
@@ -83,13 +84,13 @@ rake generate
 open http://localhost:4000/
 rake preview
 </code></pre><p>こちらはコマンドを実行するだけではウインドウが開かれずプロセスがゾンビ状態になってしまうので、Alfredで呼び出す時に</p>
-<pre><code>open -a Terminal.app preview.sh
+<pre tabindex="0"><code>open -a Terminal.app preview.sh
 </code></pre><p>と少しだけ工夫。</p>
 <p><a href="https://github.com/Temikus/alfred-octopress/blob/master/post.sh">Temikus/alfred-octopress</a> など、同じようなもの作っている人もいたり。</p>
 <p>とりあえず、これでいつでもランチャー起動して<code>post titleなど</code>と入力すると、記事が生成されて開かれて、書き終わったら<code>preview</code>で確認して、<code>deploy</code>実行すればサイトへの反映とレポジトリへのPushが行われる便利な環境が出来ました。
 (Alfredのテーマもかっこよくして遊んでました。)</p>
 <p><img src="/images/post/post.png" alt="post workflow"></p>
-<h4 id="octopress">Octopress気に入ったけど…</h4>
+<h4 id="octopress気に入ったけど">Octopress気に入ったけど…</h4>
 <p>Qiitaもよく見たらMarkdownでかなり使いやすそう。
 色々ツールもあるし。</p>
 <ul>

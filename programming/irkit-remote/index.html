@@ -22,6 +22,7 @@
 		<div class="header-logo">
 			<a href="/"><img src="/images/love_logo.png" width="60" height="60"></a>
 		</div>
+		<div style="color:#CC3333;line-height: 400%">⚠️このサイトはあまりメンテナンスされておりません⚠️</div>
 		
 	</header>
 
@@ -47,9 +48,9 @@
             <section itemprop="entry-text">
 				<p>前回の<a href="http://mono0926.com/blog/2014/05/05/irkit/">IRKitで遊び始めた〜とりあえずTerminalで操作〜 - monoHub</a>の続き。</p>
 <p>前回触った<a href="http://getirkit.com/#IRKit-Device-API">IRKit Device HTTP API</a>は同じWiFi内から操作するためのもので、外からアクセスするときは<a href="http://getirkit.com/#IRKit-Internet-API">IRKit Internet HTTP API</a>を叩くことになる。</p>
-<h2 id="irkit-internet-http-api">IRKit Internet HTTP APIを叩けるように準備</h2>
+<h2 id="irkit-internet-http-apiを叩けるように準備">IRKit Internet HTTP APIを叩けるように準備</h2>
 <p>まずは、clienttokenを取得。</p>
-<pre><code>Pro:~ mono$ curl -i &quot;http://192.168.0.4/keys&quot; -d ''
+<pre tabindex="0"><code>Pro:~ mono$ curl -i &quot;http://192.168.0.4/keys&quot; -d ''
 HTTP/1.0 200 OK
 Access-Control-Allow-Origin: *
 Server: IRKit/1.3.5.0.gce6ac15
@@ -58,7 +59,7 @@ Content-Type: text/plain
 {&quot;clienttoken&quot;:&quot;**************************&quot;} #伏せています
 </code></pre><p>取得したclienttokenを元に、deviceidとclientkeyを取得。</p>
 <!-- raw HTML omitted -->
-<pre><code>Pro:~ mono$ curl -i -d &quot;clienttoken=**************************&quot; &quot;https://api.getirkit.com/1/keys&quot;
+<pre tabindex="0"><code>Pro:~ mono$ curl -i -d &quot;clienttoken=**************************&quot; &quot;https://api.getirkit.com/1/keys&quot;
 HTTP/1.1 200 OK
 Server: ngx_openresty
 Date: Mon, 05 May 2014 06:44:32 GMT
@@ -70,18 +71,18 @@ Access-Control-Allow-Headers: X-Requested-With
 X-Content-Type-Options: nosniff
 
 {&quot;deviceid&quot;:&quot;XXXXXXXXXXXXXXXXXXXXXX&quot;,&quot;clientkey&quot;:&quot;YYYYYYYYYYYYYYYYYYYYY&quot;} #伏せています
-</code></pre><h2 id="internet-http-api">Internet HTTP APIを使ってみる</h2>
+</code></pre><h2 id="internet-http-apiを使ってみる">Internet HTTP APIを使ってみる</h2>
 <p>deviceid・clientkey・家のライトのオンオフ信号をhttps://api.getirkit.com/1/messages にポストすると、ちゃんと反応した、素晴らしい(　´･‿･｀)</p>
-<pre><code>curl -i &quot;https://api.getirkit.com/1/messages&quot; \
+<pre tabindex="0"><code>curl -i &quot;https://api.getirkit.com/1/messages&quot; \
      -d 'clientkey=YYYYYYYYYYYYYYYYYYYYY' \
      -d 'deviceid=XXXXXXXXXXXXXXXXXXXXXX' \
      -d 'message={&quot;format&quot;:&quot;raw&quot;,&quot;freq&quot;:38,&quot;data&quot;:[17421,9061,1037,1232,935,3458,935,1190,1073,1190,1073,1190,1190,1190,1073,1190,935,3458,1037,3341,1037,1190,935,3458,1002,3458,1002,1111,1111,3341,968,3458,968,1150,1150,3458,1037,3341,1037,1275,1002,3458,1002,1190,1037,3341,1037,1150,1150,3341,1037,1190,935,1275,935,3458,1037,1190,1002,3458,1037,1232,935,3458,1111,1111,1111]}'
 </code></pre><p>上記操作で、IRKitサーバーがIRKit端末にアクセス出来るようになって、認証すれば外部から操作出来るようになるって感じかなあ。
 特に、deviceid・clientkeyは漏れるとまずいですね（´-ω-｀）</p>
-<h2 id="apikey">ついでにapiKeyを取得</h2>
+<h2 id="ついでにapikeyを取得">ついでにapiKeyを取得</h2>
 <p>iPhoneアプリを作ったりするのに使う用のkeyを取得するAPIもあったので、ついでに叩いてみた。
 入力したメールアドレスに確認メールが来て、無事にapiKeyゲット。</p>
-<pre><code>Pro:~ mono$ curl -i -d &quot;email=xxxxxx@gmail.com&quot; &quot;https://api.getirkit.com/1/apps&quot;
+<pre tabindex="0"><code>Pro:~ mono$ curl -i -d &quot;email=xxxxxx@gmail.com&quot; &quot;https://api.getirkit.com/1/apps&quot;
 HTTP/1.1 200 OK
 Server: ngx_openresty
 Date: Mon, 05 May 2014 07:00:31 GMT

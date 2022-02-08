@@ -22,6 +22,7 @@
 		<div class="header-logo">
 			<a href="/"><img src="/images/love_logo.png" width="60" height="60"></a>
 		</div>
+		<div style="color:#CC3333;line-height: 400%">⚠️このサイトはあまりメンテナンスされておりません⚠️</div>
 		
 	</header>
 
@@ -47,28 +48,28 @@
             <section itemprop="entry-text">
 				<p><a href="/blog/2013/08/03/ginger/">Ginger APIをPythonで叩いてみた</a>の続き。</p>
 <p>元々はAlfredで英文校正が出来るようにしたかったので、ここからが本番。</p>
-<h3 id="heading">完成版</h3>
+<h3 id="完成版">完成版</h3>
 <p>こんなのが出来たという紹介から。</p>
-<h4 id="heading-1">校正</h4>
+<h4 id="校正">校正</h4>
 <p>ginger というキーワードに続けて英文を打つと、正してくれる。(この場合、冠詞aの抜けが正される。)</p>
 <p><img src="/images/post/ginger1.png" alt="ginger"></p>
-<h4 id="heading-2">改善候補一覧</h4>
+<h4 id="改善候補一覧">改善候補一覧</h4>
 <!-- raw HTML omitted -->
 <p>rephraseというキーワードに続けて適当な英文を打つと、より自然な言い回し候補を出してくれる。
 &ldquo;Thank you for your reply&quot;は、メールの返信とかでよく使うけど、ワンパターン化を避けたい時とかに使えそう。</p>
 <p><img src="/images/post/ginger2.png" alt="ginger"></p>
 <p>ともに、選択状態でエンターを押すと、クリップボードにコピーされて、フォーカスの当たっているアプリにペーストされるので、適当にメールとかエディタとか使いながら自然と正しそうな英文が打てるようになるはず。</p>
-<h3 id="alfredworkflow">AlfredのWorkflowの作り方</h3>
+<h3 id="alfredのworkflowの作り方">AlfredのWorkflowの作り方</h3>
 <p>一応<a href="http://support.alfredapp.com/workflows">ドキュメント</a>はあるけど、肝心なところが書かれていなかったりして、<a href="http://www.alfredforum.com/forum/3-share-your-workflows/">フォーラム</a>で聞いたり、既存のWorkflowのソースを読んで作り方を学ばなければいけない感じ。
 作り方自体は基本簡単だけど、ちょくちょくはまりどころがあって苦労する。</p>
-<h4 id="heading-3">キーワードの受け取り</h4>
+<h4 id="キーワードの受け取り">キーワードの受け取り</h4>
 <p>{query}というキーワードでアクセス出来るので、それをスクリプトに引数ととして渡すのが一般的。</p>
-<h4 id="heading-4">結果の表示</h4>
+<h4 id="結果の表示">結果の表示</h4>
 <p>処理終了時にnotification飛ばしたり、クリップボードにコピーとかはWorkflowのエディタでパーツをつなぎ合わせたりするだけで簡単だけど、上の例みたいに一覧するのはどうやるのかと思っていたら、XMLで標準出力するらしい。
 関係ないechoやprint文があると壊れるので注意。
 ここらへんも、既存のソース読み解いてやっと分かった。それも不慣れなPHPソースがけっこう多くてアレ。</p>
 <p>こんな感じのXMLを標準出力すると、Itemの数だけ一覧される。</p>
-<pre><code>&lt;?xml version=&quot;1.0&quot; ?&gt;
+<pre tabindex="0"><code>&lt;?xml version=&quot;1.0&quot; ?&gt;
 &lt;items&gt;
   &lt;item arg=&quot;I am a programmer and writing bad English. I am Japanese.&quot; uid=&quot;d78b56b0-fcb7-11e2-9787-e80688cb3920&quot;&gt;
     &lt;title&gt;I am a programmer and writing bad English. I am Japanese.&lt;/title&gt;
@@ -78,13 +79,13 @@
 &lt;/items&gt;
 </code></pre><p>これも適当に文字列置換したりして作れるけど、PythonでXML組み立てて作る簡単なモジュール作って再利用できるようにしておいた。
 ここらへんの下回りがけっこうこなれていない感。</p>
-<h4 id="heading-5">インストール可能なパッケージの作り方</h4>
+<h4 id="インストール可能なパッケージの作り方">インストール可能なパッケージの作り方</h4>
 <p>配布されているworkflowは、*.alfredworkflowという形式で、ダブルクリックでインストールできる。</p>
 <p>簡単なやり方は自分のworkflowを右クリックしてExportすること。</p>
 <p>逆にscript群からコマンドで作りたい場合は、必要なファイルをzip化して拡張子を変えればよい。
 info.plistが必要で、それは多分コマンドラインじゃ作れないから、やっぱり最初はExportの過程が必要だけど、コードとか別管理したいならコマンドラインで修正版作るのがよさげな気がする。</p>
 <p>適当にpackage作成スクリプト書いた。</p>
-<pre><code>cp ginger/info.plist .
+<pre tabindex="0"><code>cp ginger/info.plist .
 cp ginger/*.png .
 zip ginger.zip ginger_driver.py ginger/*.py info.plist *.png workflow/*.py
 rm info.plist *.png

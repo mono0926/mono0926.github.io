@@ -6,11 +6,7 @@
     <description>Recent content in Tags on mono0926.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 01 May 2017 10:13:29 +0900</lastBuildDate>
-    
-	<atom:link href="https://mono0926.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 01 May 2017 10:13:29 +0900</lastBuildDate><atom:link href="https://mono0926.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>live-photos</title>
       <link>https://mono0926.com/tags/live-photos/</link>
@@ -93,7 +89,7 @@
     </item>
     
     <item>
-      <title>ios</title>
+      <title>iOS</title>
       <link>https://mono0926.com/tags/ios/</link>
       <pubDate>Sun, 05 Oct 2014 00:00:00 +0000</pubDate>
       
@@ -192,7 +188,7 @@
     </item>
     
     <item>
-      <title>NodeJS</title>
+      <title>nodejs</title>
       <link>https://mono0926.com/tags/nodejs/</link>
       <pubDate>Mon, 26 May 2014 00:00:00 +0000</pubDate>
       
@@ -219,7 +215,7 @@
     </item>
     
     <item>
-      <title>osx</title>
+      <title>OSX</title>
       <link>https://mono0926.com/tags/osx/</link>
       <pubDate>Tue, 06 May 2014 00:00:00 +0000</pubDate>
       
